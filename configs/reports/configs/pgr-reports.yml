@@ -302,7 +302,7 @@ ReportDefinitions:
     to_char(to_timestamp(TRUNC(CAST(eg_pgr_service.createdtime AS bigint) / 1000)), 'DD/MM/YYYY') AS date, 
     (SELECT boundary_def.name FROM (VALUES tbl_boundary) AS boundary_def(name,code) where code=eg_pgr_address.mohalla) as locality, 
     eg_user.name, 
-    phone, 
+    eg_pgr_service.phone, 
     eg_pgr_service.landmark, 
     housenoandstreetname as address, 
     description, 
