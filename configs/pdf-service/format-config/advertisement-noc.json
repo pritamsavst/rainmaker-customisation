@@ -1,0 +1,312 @@
+{
+  "key":"advertisement-noc",
+  "config":{
+    
+  "content":[
+    {
+      "text": "MUNICIPAL CORPORATION CHANDIGARH",
+      "alignment": "center",
+	  "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "underline": true,
+	  "decoration": "underline",
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "(OSD-II/ADVT. Branch)",
+      "alignment": "center",
+	  "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "underline": true,
+	  "decoration": "underline",
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "TO",
+      "alignment": "left",
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "{{variable2}}",
+      "alignment": "left"
+    },
+	{
+      "text": "{{variable11}}",
+      "alignment": "left"
+    },
+	{
+      "text": "Application No - {{variable3}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+    {
+      "text": "Dated - {{variable4}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Subject: Permission for displaying advertisement at {{variable5}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Reference your application on the subject noted above",
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Consequent upon the approval of the Chief Administrator-cum-Commissioner, Municipal Corporation, Chandigarh, permission is hereby granted permission to display branding/advertisements at the venue i.e. {{variable6}} on {{variable7}} to {{variable8}}. The payment of Rs. {{variable9}} as the ground rent/ advertisement fees have been received on {{variable10}} under Chandigarh Advertisement Control Order, 1954 with subject to the following terms & conditions: -",
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   1. No advertisement or sky -sign shall be put up as is considered by the Chief Administrator to offend against good taste, decency and public morals.",
+	  "margin": [
+        0,
+        15,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   2. All advertisement displayed and any land used for the display of advertisement shall be maintained in a clean and tidy condition to the satisfaction of the Chief Administrator",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   3. No advertisement shall be sited or displayed to obstruct the vision of drivers of vehicular traffic or to hinder the ready interpretation of any road traffic sign, railway or air signal.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   4. Permission will be valid for display of banner of the above mentioned size at designated placed only.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   5. Banner/Advertisement should be removed immediate after the completion of permission period.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   6. No inconvenience should be caused to the General Public on account of the permission.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   7. The Chief Administrator cum Commissioner, Municipal Corporation, Chandigarh reserves the right to cancel the booking without assigning reason in public interest.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   8. If the Banners/Hoardings/Advertisement shall not remove within the period mention in the letter then you will  be liable to pay a sum equal to 25% of the fees due as a penalty, in addition to any other action as per rule.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "   9. The Chief Administrator shall not be liable to any damage caused to any property through the fall of any advertisement board or any appurtenance or fixture thereof.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Officer on Special Duty- II,",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,25,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Municipal Corporation, Chandigarh.",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Dated: {{variable1}}",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+      "text": "This letter is electronically generated, and no signature is required.",
+	  "style" : "receipt-footer"
+    }
+	],
+  "styles": {
+    "pt-reciept-citizen-subheader": {
+      "fontSize": 10,
+      "bold": true,
+      "margin": [
+        0,
+        16,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "pt-reciept-citizen-table": {
+      "fontSize": 10,
+      "color": "#484848"
+    },
+    "receipt-assess-table": {
+      "fontSize": 10,
+      "color": "#484848",
+      "margin": [
+        0,
+        8,
+        0,
+        0
+      ]
+    },
+    "receipt-assess-table-header": {
+      "bold": true,
+      "fillColor": "#D8D8D8",
+      "color": "#484848"
+    },
+    "receipt-header-details": {
+      "fontSize": 9,
+      "margin": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "receipt-table-key": {
+      "color": "#484848",
+      "bold": true
+    },
+    "receipt-table-value": {
+      "color": "#484848"
+    },
+    "receipt-logo-header": {
+      "color": "#484848",
+      "fontSize": 16,
+      "bold": true,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-logo-sub-header": {
+      "color": "#484848",
+      "fontSize": 13,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-footer": {
+      "color": "#484848",
+      "fontSize": 10,
+      "margin": [
+        0,
+        50,
+        0,
+        5
+      ]
+    }
+  }
+  }
+}

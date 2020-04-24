@@ -1,0 +1,263 @@
+{
+  "key":"sellmeat-noc",
+  "config":{
+    
+  "content":[
+    {
+      "text": "MUNICIPAL CORPORATION CHANDIGARH",
+      "alignment": "center",
+	  "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "underline": true,
+	  "decoration": "underline",
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "TO",
+      "alignment": "left",
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "{{variable6}}",
+      "alignment": "left"
+    },
+	{
+      "text": "{{variable2}}",
+      "alignment": "left"
+    },
+	{
+      "text": "Application No - {{variable3}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+    {
+      "text": "Dated - {{variable4}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Subject: Issue of No Objection certificate for obtaining license to sell meat, fish and poultry.",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "(Under Provision of the Food Safety and Standards Regulations, 2014, Part - IV of Schedule – IV)",
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Reference your application dated {{variable4}} on the subject cited above.",
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Inspection has been carried out by the office. You are hereby issued NOC for obtaining license to sell jhatka/halal meat (sheep/goat/pig), fish and poultry or packed/frozen meat (sheep/goat/pig), fish and poultry only at premises {{variable5}}.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Further it is intimated that all the conditions of the NOC shall be fulfilled throughout failing which the issued NOC will be treated as withdrawn without further notice and action as deemed fit will be initiated.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "This NOC is not to be used as a Proof of occupation/possession of the Building/Shop and be used for obtaining License only.",
+	  "color": "#000000",
+      "fontSize": 8,
+      "bold": true,
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Estate Officer / Commissioner ",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,25,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Municipal Corporation, Chandigarh.",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Dated: {{variable1}}",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+      "text": "This letter is electronically generated, and no signature is required.",
+	  "style" : "receipt-footer"
+    },
+	{"text":"Conditions  for issue of No Objection Certificate","fontSize": 12,"decoration": "underline","margin": [0,20,0,0],"alignment": "center", "bold": "true", "pageBreak": "before"} ,
+	{"text":"No premises shall be issued NOC to obtain license for sale of meat, fish and poultry unless:-","margin": [0,20,0,0]} ,
+	{"text":"a) It has a floor made of impervious and non-slippery material.","margin": [0,20,0,0]} ,
+	{"text":"b) Its walls upto a height of minimum 5 feet from the floor level shall be made of Impervious concrete material (e.g.glazed tiles or hygienic panels etc.)and ceiling is properly plasted and lime washed."},
+	{"text":"c) It is provided with adequate light and ventillation."} ,
+	{"text":"d) Except in the case of packed or frozen meat, fish and poultry,it is provided „vith a drain and the whole floor is so sloped to allow all liquids to flow of by the drain to the city sewer."},
+	{"text":"e) There should be provision of continous supply of potable water inside premises."} ,
+	{"text":"f) It has no direct communication between premises and any place used as a living or sleeping room."} ,
+	{"text":"g) The minimum distance between the meat shop and any place of worship should not be less than 50mtrs.The condition of 100 rosters distance will apply in case the premises situated directly opposite to the entry gate of religious place of any community."} ,
+	{"text":"h) All the fittings in the shop shall be non-corroding and non -rusting type."} ,
+	{"text":"I) Washbasin made of stainless steel/porcelain shall be provided."} ,
+	{"text":"J) The premises shall be air conditioned."} ,
+	{"text":"k) A sign board indicating the type of meat sold shall be displayed prominently i.e.JhatkaMalal."} ,
+	{"text":"I) Proof of possession (rent agreement to be submitted with application for NOC."} ,
+	{"text":"m) Failure to comply with any of these conditions or any other condition laid down by Licensing Authority may result in cancellation of NOC by the appropriate authority."} ,
+	{"text":"n) Grant of NOC shall not protect the licensee for violation of provisions of the capital of Punjab Development and regulation Act, 1952 and rules framed thereunder or any other law."}
+	],
+  "styles": {
+    "pt-reciept-citizen-subheader": {
+      "fontSize": 10,
+      "bold": true,
+      "margin": [
+        0,
+        16,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "pt-reciept-citizen-table": {
+      "fontSize": 10,
+      "color": "#484848"
+    },
+    "receipt-assess-table": {
+      "fontSize": 10,
+      "color": "#484848",
+      "margin": [
+        0,
+        8,
+        0,
+        0
+      ]
+    },
+    "receipt-assess-table-header": {
+      "bold": true,
+      "fillColor": "#D8D8D8",
+      "color": "#484848"
+    },
+    "receipt-header-details": {
+      "fontSize": 9,
+      "margin": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "receipt-table-key": {
+      "color": "#484848",
+      "bold": true
+    },
+    "receipt-table-value": {
+      "color": "#484848"
+    },
+    "receipt-logo-header": {
+      "color": "#484848",
+      "fontSize": 16,
+      "bold": true,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-logo-sub-header": {
+      "color": "#484848",
+      "fontSize": 13,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-footer": {
+	  "align":"bottom",
+      "color": "#484848",
+      "fontSize": 10,
+      "margin": [
+        0,
+        50,
+        0,
+        5
+      ]
+    }
+  }
+  }
+}

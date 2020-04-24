@@ -1,0 +1,393 @@
+{
+  "key":"road-noc",
+  "config":{
+    
+  "content":[
+    {
+      "text": "MUNICIPAL CORPORATION CHANDIGARH",
+      "alignment": "center",
+	  "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "underline": true,
+	  "decoration": "underline",
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "TO",
+      "alignment": "left",
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "{{variable2}}",
+      "alignment": "left"
+    },
+	{
+      "text": "{{variable11}}",
+      "alignment": "left"
+    },
+	{
+      "text": "Application No - {{variable3}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        20,
+        0,
+        0
+      ]
+    },
+    {
+      "text": "Dated - {{variable4}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "Subject: Permission for Road cut for {{variable5}} in {{variable6}}",
+      "color": "#484848",
+      "fontSize": 12,
+      "bold": true,
+	  "margin": [
+        0,
+        30,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "As requested by you and recommended by the Road division and approval accorded by the competent authority. Sanction is hereby accorded for permission of road cut as stated on subject cited above with time limit of 1 (One) Month from issue of this letter to your agency with the following terms & conditions.",
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "1. The PBG as a security against satisfactory completion of work by agency for a period of 6 months over and above the project completion period. In case of time over runs for completion of the works, the Bank Guarantee shall be renewed/got tended by the applicant corresponding to the revised complete period +6 months. The applicant shall obtain formal permission for time extension from the MCC. However, PGB will be immediately returned on satisfactory completion of work by agency.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "2. The agency/contractor will carry out GPR survey along with route where the duct has to be laid for detection of existing utility. The date for utility collected through GPR survey would be unconditionally shared with MCC free of cost.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "3. Permission granted to the agency/contractor will not be transferrable and will be applicable only for the period for which it has been granted.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "4. If required, the MCC can direct the Contractor/Agency to change the optical fiber cable in stipulated time period or shift the cable to other area and the applicant license shall be bound to do the same for which all the expenses would borne by the contractor/agency.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "5. Responsibility of the public safety will lie with Contractor/Agency during establishment or post establishment of Mast. Pole and laying of cable, during its maintenance or other related activities. The contractor/agency shall take all necessary safety steps and measures while executing the work and they will indemnify the MCC against any accident and damage caused to lie or property during execution and post execution. It will be your responsibility to maintain the caution board and other reflective signs on the both sides of the road cut/pavement cut or at site of work.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "6. The contractor/agency of any 3rd party will not be allowed to display any advertisement on the Mast and Pole without permission of MCC.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "7. No trees should be cut and underground services also not be affected. No damage should occur to the existing cycle tract/other amenities. In case of any damage to the essential Municipal services i.e. Water supply, sewerage system, and telecommunication lines, electricity supply etc., it will be the responsibility of the contractor/agency to inform MCC within 24 hours. In case of failure of non-reporting then the Bank Guarantee will be immediately forfeited. If the actual amount of the damage is more than the amount of Bank Guarantee, then the same shall be recovered from the agency.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "8. An agreement will be executed between the contractor/agency and MCC regarding compliance of all the terms and conditions.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "9. Contractor/Agency will give a notice of 15 days with route details prior to trenching for fresh or maintenance/repair works. A separate performance Bank Guarantee for maintenance/repair will be furnished by the contractor/agency. Supervision of the repair will be done by Staff of M.C to their entire satisfaction in case of restoration done by agency.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "10. For construction on RCC manhole, the structure will be designed as per the norms of the Indian Road Congress. The agency will be reasonable for the maintenance and upkeep of the manholes from time to time. If any manhole comes in the way of approved alignment of any proposed water supply, sewerage of any other service, the agency will be bound to shift or remove the manhole/cable and make changes at its own cost.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "11. No damage should occur to already laid cables wires of the difference telecom licensed companies.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "12. The proposed line of Optical Overlay Access Network should lay in the road reservation",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "13. The minimum distance from the building line should not be less than 3-0” and O.F.C. should be laid at 1 meter. Depth below ground level.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "14. The execution of works is only allowed on working hours/days and our road staff may be informed well in time for proper supervision.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "15. The manholes shall be in alignment with the cable route and its location shall be near junctions/crossing as possible",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "16. No road cut/tile even Pucca & Katcha cut is allowed at the front side of showroom/SCF/SCO/Booths etc. Only backsides of the showrooms are allowed to put the service/laying OFC i.e. on Pucca & Katcha portion.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "17. No cut in the roads which have been carpeted recently this year shall be allowed in case of any requirement. The approach of private/Govt. Houses Organizations would not be broken.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "18. The sand filling is to be made wherever digging is involved with proper watering and compaction.",
+	  "margin": [
+        0,
+        5,
+        0,
+        0
+      ]
+    },
+	{
+      "text": "The sanction is accorded in view of payment already deposited to Chandigarh Municipality account dt {{variable7}} for {{variable8}} and BG amounting to RS {{variable9}} dt {{variable10}} . Before start of the work the officials of Road division may be intimated for their supervision.",
+	  "margin": [
+        0,
+        10,
+        0,
+        0
+      ]
+    },
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "The Executive Engineer,",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,25,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Road Division,",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Municipal Corporation, Chandigarh.",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+		"columns": [	
+			{
+				"width": 300,
+				"text":" "
+			},
+			{
+				"text": "Dated: {{variable1}}",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
+				"margin": [0,0,0,0]
+			}
+		]
+	},
+	{
+      "text": "This letter is electronically generated, and no signature is required.",
+	  "style" : "receipt-footer"
+    }
+	],
+  "styles": {
+    "pt-reciept-citizen-subheader": {
+      "fontSize": 10,
+      "bold": true,
+      "margin": [
+        0,
+        16,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "pt-reciept-citizen-table": {
+      "fontSize": 10,
+      "color": "#484848"
+    },
+    "receipt-assess-table": {
+      "fontSize": 10,
+      "color": "#484848",
+      "margin": [
+        0,
+        8,
+        0,
+        0
+      ]
+    },
+    "receipt-assess-table-header": {
+      "bold": true,
+      "fillColor": "#D8D8D8",
+      "color": "#484848"
+    },
+    "receipt-header-details": {
+      "fontSize": 9,
+      "margin": [
+        0,
+        0,
+        0,
+        8
+      ],
+      "color": "#484848"
+    },
+    "receipt-table-key": {
+      "color": "#484848",
+      "bold": true
+    },
+    "receipt-table-value": {
+      "color": "#484848"
+    },
+    "receipt-logo-header": {
+      "color": "#484848",
+      "fontSize": 16,
+      "bold": true,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-logo-sub-header": {
+      "color": "#484848",
+      "fontSize": 13,
+      "decoration": "underline",
+      "decorationColor": "#484848"
+    },
+    "receipt-footer": {
+      "color": "#484848",
+      "fontSize": 10,
+      "margin": [
+        0,
+        50,
+        0,
+        5
+      ]
+    }
+  }
+  }
+}
