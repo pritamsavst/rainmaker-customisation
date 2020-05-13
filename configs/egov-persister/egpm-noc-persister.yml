@@ -1,0 +1,129 @@
+serviceMaps:
+ serviceName: pm-services
+ mappings:
+ - version: 1.0
+   description: pm-services save data
+   fromTopic: save-noc-transitions
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO egpm_noc_application( application_uuid, tenant_id, noc_number, applicant_name, house_number, sector, applied_date, application_type, application_status, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+         basePath: NOCApplications.*
+         jsonMaps:
+          - jsonPath: $.NOCApplications.*.applicationUuid
+
+          - jsonPath: $.NOCApplications.*.tenantId
+
+          - jsonPath: $.NOCApplications.*.nocNumber
+
+          - jsonPath: $.NOCApplications.*.applicantName
+
+          - jsonPath: $.NOCApplications.*.houseNo
+
+          - jsonPath: $.NOCApplications.*.sector
+
+          - jsonPath: $.NOCApplications.*.appliedDate
+
+          - jsonPath: $.NOCApplications.*.applicationType
+
+          - jsonPath: $.NOCApplications.*.applicationStatus
+
+          - jsonPath: $.NOCApplications.*.isActive
+
+          - jsonPath: $.NOCApplications.*.createdBy
+
+          - jsonPath: $.NOCApplications.*.createdTime
+
+          - jsonPath: $.NOCApplications.*.lastModifiedBy
+
+          - jsonPath: $.NOCApplications.*.lastModifiedTime
+          
+       - query: INSERT INTO egpm_noc_application_detail( application_detail_uuid, application_uuid, application_detail, is_active, created_by, created_time, last_modified_by, last_modified_time,tenant_id) VALUES (?,?,to_json(?::json),?,?,?,?,?,?);
+         basePath: NOCApplications.*.nocApplicationDetails
+         jsonMaps:
+          - jsonPath: $.NOCApplications.*.nocApplicationDetails.applicationDetailUuid
+
+          - jsonPath: $.NOCApplications.*.applicationUuid
+
+          - jsonPath: $.NOCApplications.*.nocApplicationDetails.applicationDetail
+
+          - jsonPath: $.NOCApplications.*.nocApplicationDetails.isActive
+
+          - jsonPath: $.NOCApplications.*.createdBy
+
+          - jsonPath: $.NOCApplications.*.createdTime
+
+          - jsonPath: $.NOCApplications.*.lastModifiedBy
+
+          - jsonPath: $.NOCApplications.*.lastModifiedTime
+          
+          - jsonPath: $.NOCApplications.*.tenantId
+          
+       - query: INSERT INTO egpm_noc_application_remark (remark_id,application_uuid, application_status, remark, remark_by,
+            is_active, created_by,created_time, last_modified_by,last_modified_time,tenant_id)VALUES(?,?,?,?,?,?,?,?,?,?,?);
+         basePath: NOCApplications.*.nocApplicationRemark
+         jsonMaps:
+         -  jsonPath: $.NOCApplications.*.nocApplicationRemark.remarkId
+         -  jsonPath: $.NOCApplications.*.applicationUuid
+         -  jsonPath: $.NOCApplications.*.applicationStatus
+         -  jsonPath: $.NOCApplications.*.nocApplicationRemark.remark
+         -  jsonPath: $.NOCApplications.*.nocApplicationRemark.remarkBy
+         -  jsonPath: $.NOCApplications.*.nocApplicationRemark.isActive
+         -  jsonPath: $.NOCApplications.*.createdBy
+         -  jsonPath: $.NOCApplications.*.createdTime
+            type: LONG
+         -  jsonPath: $.NOCApplications.*.lastModifiedBy         
+         -  jsonPath: $.NOCApplications.*.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.NOCApplications.*.tenantId          
+
+ - version: 1.0
+   description: pm-services remark data
+   fromTopic: save-nocapprovereject-transitions
+   isTransaction: true
+   queryMaps:
+      -  query: INSERT INTO egpm_noc_application_remark (remark_id,application_uuid, application_status, remark, remark_by,
+            is_active, created_by,created_time, last_modified_by,last_modified_time, document_detail,tenant_id)VALUES(?,?,?,?,?,?,?,?,?,?,to_json(?::json),?);
+         basePath: $.NOCApplicationRemark.*
+         jsonMaps:
+         -  jsonPath: $.NOCApplicationRemark.*.remarkId
+         -  jsonPath: $.NOCApplicationRemark.*.applicationUuid
+         -  jsonPath: $.NOCApplicationRemark.*.applicationStatus
+         -  jsonPath: $.NOCApplicationRemark.*.remark
+         -  jsonPath: $.NOCApplicationRemark.*.remarkBy
+         -  jsonPath: $.NOCApplicationRemark.*.isActive
+         -  jsonPath: $.NOCApplicationRemark.*.createdBy
+         -  jsonPath: $.NOCApplicationRemark.*.createdTime
+            type: LONG
+         -  jsonPath: $.NOCApplicationRemark.*.lastModifiedBy         
+         -  jsonPath: $.NOCApplicationRemark.*.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.NOCApplicationRemark.*.documentId
+         -  jsonPath: $.NOCApplicationRemark.*.tenantId          
+        
+          
+ - version: 1.0
+   description: pm-sevices update transitions
+   fromTopic: update-noc-approve-reject-transitions
+   isTransaction: true
+   queryMaps:
+      -  query: UPDATE egpm_noc_application_remark set is_active=false where application_uuid=?;
+         basePath: $.NOCApplicationRemark.*
+         jsonMaps:
+         -  jsonPath: $.NOCApplicationRemark.*.applicationUuid
+          
+ - version: 1.0
+   fromTopic: update-noc-approve-reject-main-transitions
+   queryMaps:
+      -  query: UPDATE egpm_noc_application set application_status=?, amount=?, last_modified_by=?, last_modified_time=?,gst_amount=?,performance_bank_guarantee=?,total_amount=? where application_uuid=?;
+         basePath: $.NOCApplications.*
+         jsonMaps:
+         -  jsonPath: $.NOCApplications.*.applicationStatus
+         -  jsonPath: $.NOCApplications.*.amount
+         -  jsonPath: $.NOCApplications.*.lastModifiedBy           
+         -  jsonPath: $.NOCApplications.*.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.NOCApplications.*.gstAmount
+         -  jsonPath: $.NOCApplications.*.performanceBankGuarantee   
+         -  jsonPath: $.NOCApplications.*.totalamount     
+         -  jsonPath: $.NOCApplications.*.applicationUuid

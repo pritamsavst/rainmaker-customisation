@@ -1,0 +1,75 @@
+serviceMaps:
+ serviceName: egov-workflow-v2
+ mappings:
+ - version: 1.0
+   description: Persists workflow processInstanceFromRequest details in eg_workflow_v2  table
+   fromTopic: update-noc-transitions
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE  egpm_noc_application set applicant_name=?,house_number=?,sector=?,application_status=? where noc_number=?;
+         basePath: NOCApplications.*
+         jsonMaps:
+       
+         - jsonPath: $.NOCApplications.*.applicantName
+
+         - jsonPath: $.NOCApplications.*.houseNo
+
+         - jsonPath: $.NOCApplications.*.sector	
+         
+         - jsonPath: $.NOCApplications.*.applicationStatus
+
+         - jsonPath: $.NOCApplications.*.nocNumber
+         
+          
+ - version: 1.0
+   description: Persists workflow processInstanceFromRequest details in eg_workflow_v2 table
+   fromTopic: delete-noc-transitions
+   isTransaction: true
+   queryMaps:
+
+      - query: update egpm_noc_application_detail set is_active=false  where application_detail_uuid=?
+        basePath: NOCApplicationDetails.*
+        jsonMaps:       
+         - jsonPath: $.NOCApplicationDetails.*.applicationDetailUuid
+         
+
+ - version: 1.0
+   description: Persists workflow processInstanceFromRequest details in eg_workflow_v2 table
+   fromTopic: update-noc-details-transitions
+   isTransaction: true
+   queryMaps:
+
+      - query: INSERT INTO egpm_noc_application_detail(application_detail_uuid, application_uuid, application_detail, is_active, created_by, created_time, last_modified_by, last_modified_time,tenant_id) VALUES (?,?,to_json(?::json),?,?,?,?,?,?);
+        basePath: NOCApplicationDetails.*
+        jsonMaps:    
+       
+         - jsonPath: $.NOCApplicationDetails.*.applicationDetailUuid
+         
+         - jsonPath: $.NOCApplicationDetails.*.applicationUuid
+                 
+         - jsonPath: $.NOCApplicationDetails.*.applicationDetail
+         
+         - jsonPath: $.NOCApplicationDetails.*.isActive
+         
+         - jsonPath: $.NOCApplicationDetails.*.createdBy
+         
+         - jsonPath: $.NOCApplicationDetails.*.createdTime
+         
+         - jsonPath: $.NOCApplicationDetails.*.lastModifiedBy
+         
+         - jsonPath: $.NOCApplicationDetails.*.lastModifiedTime
+
+         - jsonPath: $.NOCApplicationDetails.*.tenantId         
+         
+         
+ - version: 1.0
+   description: Persists workflow processInstanceFromRequest details in eg_workflow_v2 table
+   fromTopic: update-noc-applicationDetails-transitions
+   isTransaction: true
+   queryMaps:
+      - query: update egpm_noc_application_detail set application_detail=to_json(?::json)  where application_uuid=?
+        basePath: NOCApplicationDetail
+        jsonMaps:       
+         - jsonPath: $.NOCApplicationDetail.applicationDetail
+         - jsonPath: $.NOCApplicationDetail.applicationUuid

@@ -1,0 +1,70 @@
+serviceMaps:
+   serviceName: NOC PriceBook Update
+   mappings:
+   -  version: 1.0
+      name: NOC PriceBook Update
+      description: update pricebook
+      fromTopic: update-opms-priceBookMasterDate
+      queryMaps:
+      -  query: update egpm_noc_price_book SET effective_to_date =? WHERE price_book_id=? 
+         basePath: $.NOCPriceBook.*
+         jsonMaps:
+         -  jsonPath: $.NOCPriceBook.*.effectiveToDate
+            type: DATE
+         -  jsonPath: $.NOCPriceBook.*.priceBookId
+         
+      -  query: delete from egpm_noc_price_book where effective_from_date>? 
+         basePath: $.NOCPriceBook.*
+         jsonMaps:
+         -  jsonPath: $.NOCPriceBook.*.effectiveToDate
+            type: DATE         
+         
+   -  version: 1.0
+      name: NOC PriceBook Update
+      description: update pricebook
+      fromTopic: update-opms-priceBookMaster
+      queryMaps:
+      -  query: UPDATE egpm_noc_price_book SET perday_price=?, perweek_price=?, permonth_price=?,annual_price=?, fixed_price=? WHERE application_type=? and tenant_id=? and category_id=? and sub_category_id=?;
+         basePath: $.NOCPriceBook.*
+         jsonMaps:
+         -  jsonPath: $.NOCPriceBook.*.perDayPrice
+         -  jsonPath: $.NOCPriceBook.*.perWeekPrice
+         -  jsonPath: $.NOCPriceBook.*.perMonthPrice
+         -  jsonPath: $.NOCPriceBook.*.annualPrice
+         -  jsonPath: $.NOCPriceBook.*.fixedPrice
+         -  jsonPath: $.NOCPriceBook.*.applicationType
+         -  jsonPath: $.NOCPriceBook.*.tenantId
+         -  jsonPath: $.NOCPriceBook.*.categoryId
+         -  jsonPath: $.NOCPriceBook.*.subCategoryId          
+          
+   -  version: 1.0
+      name: NOC PriceBook Insert
+      description: update pricebook
+      fromTopic: insert-opms-priceBookMaster
+      queryMaps:
+      -  query: INSERT INTO public.egpm_noc_price_book(price_book_id, application_type, category_id, sub_category_id, min_sqft, max_sqft, perday_price, perweek_price, permonth_price,annual_price, fixed_price, effective_from_date, effective_to_date,tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time, calculation_sequence, calculation_type)VALUES (?, ?, ?, ?,?, ?, ?, ?, ?,?, ?, ?, ?,?, ?, ?, ?, ?,?, ?, ?);
+         basePath: $.NOCPriceBook.*
+         jsonMaps:
+         -  jsonPath: $.NOCPriceBook.*.priceBookId
+         -  jsonPath: $.NOCPriceBook.*.applicationType
+         -  jsonPath: $.NOCPriceBook.*.categoryId
+         -  jsonPath: $.NOCPriceBook.*.subCategoryId
+         -  jsonPath: $.NOCPriceBook.*.minSqft
+         -  jsonPath: $.NOCPriceBook.*.maxSqft
+         -  jsonPath: $.NOCPriceBook.*.perDayPrice
+         -  jsonPath: $.NOCPriceBook.*.perWeekPrice
+         -  jsonPath: $.NOCPriceBook.*.perMonthPrice
+         -  jsonPath: $.NOCPriceBook.*.annualPrice
+         -  jsonPath: $.NOCPriceBook.*.fixedPrice
+         -  jsonPath: $.NOCPriceBook.*.effectiveFromDate
+            type: DATE
+         -  jsonPath: $.NOCPriceBook.*.effectiveyToDate
+            type: DATE
+         -  jsonPath: $.NOCPriceBook.*.tenantId
+         -  jsonPath: $.NOCPriceBook.*.isActive
+         -  jsonPath: $.NOCPriceBook.*.createdBy
+         -  jsonPath: $.NOCPriceBook.*.createdTime
+         -  jsonPath: $.NOCPriceBook.*.lastModifiedBy
+         -  jsonPath: $.NOCPriceBook.*.lastModifiedTime
+         -  jsonPath: $.NOCPriceBook.*.calculationSequence
+         -  jsonPath: $.NOCPriceBook.*.calculationType
