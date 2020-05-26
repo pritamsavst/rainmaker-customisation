@@ -1,0 +1,87 @@
+{
+
+   "key":"road-noc",
+   "DataConfigs": {
+      "serviceName": "pm-services",
+      "version": "1.0.0",
+      "baseKeyPath": "$.nocApplicationDetail.*",
+      "entityIdPath":"$.applicationId",
+      "isCommonTableBorderRequired":true,
+      "mappings": [
+         {
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$.approveDate"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable2",
+                        "value":{
+                           "path":"$.applicantName"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable3",
+                        "value":{
+                             "path":"$.applicationId"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable4",
+                       "value":{
+                            "path":"$.date"                           
+                        } 
+                     },
+					 {
+                        "variable": "variable5",
+                        "value": {
+                             "path":"$.purposeOfRoadCutting"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable6",
+                        "value":{
+                           "path":"$.roadCutAddress"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable7",
+                        "value":{
+                             "path":"$.depositDate"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable8",
+                       "value":{
+                            "path":"$.depositAmount"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable9",
+                       "value":{
+                            "path":"$.bgAmount"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable10",
+                       "value":{
+                            "path":"$.bgDate"                           
+                        } 
+                     },            
+                     {
+                        "variable":"variable11",
+                        "value":{
+                           "path":"$.applicantNameAddress"                            
+                        }  
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
