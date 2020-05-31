@@ -1,0 +1,87 @@
+{
+
+   "key":"advertisement-noc",
+   "DataConfigs": {
+      "serviceName": "pm-services",
+      "version": "1.0.0",
+      "baseKeyPath": "$.nocApplicationDetail.*",
+      "entityIdPath":"$.applicationId",
+      "isCommonTableBorderRequired":true,
+      "mappings": [
+         {
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$.approvedDate"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable2",
+                        "value":{
+                           "path":"$.applicantName"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable3",
+                        "value":{
+                             "path":"$.applicationId"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable4",
+                       "value":{
+                            "path":"$.applicationDate"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable5",
+                       "value":{
+                            "path":"$.advertisementSiteDetails"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable6",
+                       "value":{
+                            "path":"$.locationOfAdvertisement"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable7",
+                       "value":{
+                            "path":"$.advertisementFromDate"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable8",
+                       "value":{
+                            "path":"$.advertisementToDate"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable9",
+                       "value":{
+                            "path":"$.systemPayment"                           
+                        } 
+                     },
+                     {
+                       "variable": "variable10",
+                       "value":{
+                            "path":"$.paymentReceivedDate"                           
+                        } 
+                     },            
+                     {
+                        "variable":"variable11",
+                        "value":{
+                           "path":"$.applicantNameAddress"                            
+                        }  
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

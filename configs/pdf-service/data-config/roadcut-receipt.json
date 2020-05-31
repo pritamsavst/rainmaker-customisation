@@ -1,0 +1,81 @@
+{
+
+   "key":"roadcut-receipt",
+   "DataConfigs": {
+      "serviceName": "pm-services",
+      "version": "1.0.0",
+      "baseKeyPath": "$.nocApplicationDetail.*",
+      "entityIdPath":"$.applicationId",
+      "isCommonTableBorderRequired":true,
+      "mappings": [
+         {
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$.totalAmount"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable2",
+                        "value":{
+                           "path":"$.amountinword"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable3",
+                        "value":{
+                             "path":"$.dateofpayment"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable4",
+                       "value":{
+                            "path":"$.bgAmount"                           
+                        } 
+                     },            
+                     {
+                        "variable":"variable5",
+                        "value":{
+                           "path":"$.applicantName"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable6",
+                        "value":{
+                             "path":"$.applicationId"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable7",
+                       "value":{
+                            "path":"$.gstamount"                           
+                        } 
+                     },            
+                     {
+                        "variable":"variable8",
+                        "value":{
+                           "path":"$.applicantNameAddress"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable9",
+                        "value":{
+                             "path":"$.charges"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable10",
+                       "value":{
+                            "path":"$.bgAmountinword"                           
+                        } 
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

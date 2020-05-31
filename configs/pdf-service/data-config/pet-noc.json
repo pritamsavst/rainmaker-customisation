@@ -1,0 +1,51 @@
+{
+
+   "key":"pet-noc",
+   "DataConfigs": {
+      "serviceName": "pm-services",
+      "version": "1.0.0",
+      "baseKeyPath": "$.nocApplicationDetail.*",
+      "entityIdPath":"$.applicationId",
+      "isCommonTableBorderRequired":true,
+      "mappings": [
+         {
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$.approveDate"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable2",
+                        "value":{
+                           "path":"$.applicantNameAddress"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable3",
+                        "value":{
+                             "path":"$.applicationId"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable4",
+                       "value":{
+                            "path":"$.applicationDate"                           
+                        } 
+                     },
+					 {
+                       "variable": "variable5",
+                       "value":{
+                            "path":"$.applicantName"                           
+                        } 
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

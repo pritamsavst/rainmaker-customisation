@@ -1,0 +1,81 @@
+{
+
+   "key":"advertisement-receipt",
+   "DataConfigs": {
+      "serviceName": "pm-services",
+      "version": "1.0.0",
+      "baseKeyPath": "$.nocApplicationDetail.*",
+      "entityIdPath":"$.applicationId",
+      "isCommonTableBorderRequired":true,
+      "mappings": [
+         {
+            "mappings": [
+               {
+                  "direct": [
+                     {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$.totalAmount"                              
+                        }
+                     },            
+                     {
+                        "variable":"variable2",
+                        "value":{
+                           "path":"$.GSTIN"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable3",
+                        "value":{
+                             "path":"$.amountinword"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable4",
+                       "value":{
+                            "path":"$.AdvertismentCharges"                           
+                        } 
+                     },            
+                     {
+                        "variable":"variable5",
+                        "value":{
+                           "path":"$.dateofpayment"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable6",
+                        "value":{
+                             "path":"$.applicantName"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable7",
+                       "value":{
+                            "path":"$.applicationId"                           
+                        } 
+                     },            
+                     {
+                        "variable":"variable8",
+                        "value":{
+                           "path":"$.gstamount"                            
+                        }  
+                     },
+                     {
+                        "variable": "variable9",
+                        "value":{
+                             "path":"$.applicantNameAddress"                           
+                         } 
+                     },
+                     {
+                       "variable": "variable10",
+                       "value":{
+                            "path":"$.applicationDate"                           
+                        } 
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}
