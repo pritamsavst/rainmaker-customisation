@@ -1,0 +1,181 @@
+ReportDefinitions:
+- reportName: MISEventLocalityWiseReport
+  summary: Locality Wise report
+  version: 1.0.0
+  moduleName: prscp-services
+  sourceColumns:
+  - name: localityname
+    label: report.prscp.localityname
+    type: string
+    source: prscp-services
+    total: false
+  - name: totalevents
+    label: report.prscp.totalevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: ongoingevents
+    label: report.prscp.ongoingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: upcommingevents
+    label: report.prscp.upcommingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: closedevents
+    label: report.prscp.closedevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: cancelledevnets
+    label: report.prscp.cancelledevnets
+    type: string
+    source: prscp-services
+    total: false
+  additionalConfig:
+    reportTitle: reports.prscp.MISSummaryReport.title
+  query: select COALESCE(locality_name,'') localityname, count(1) totalevents, count(((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') between TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS')) and event_status<>'CANCELLED') or null) as ongoingevents, count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') < TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as upcommingevents,count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') > TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as closedevents, count(event_status='CANCELLED' or null) as cancelledevnets from egpr_event_detail where tenant_id=$tenantid and module_code=$moduleCode and DATE(to_char(TO_TIMESTAMP(created_time / 1000),'yyyy-mm-dd')) between DATE($fromDate) and DATE($toDate) and COALESCE(locality_name,'') = case when (Trim($localityName))<>'' then (Trim($localityName)) else COALESCE(locality_name,'') end group by tenant_id,module_code, COALESCE(locality_name,'')
+  
+- reportName: MISNumberOfEventReportReport
+  summary: Number of Event Report Department Wise report
+  version: 1.0.0
+  moduleName: prscp-services
+  sourceColumns:
+  - name: departmentname
+    label: report.prscp.departmentname
+    type: string
+    source: prscp-services
+    total: false
+  - name: totalevents
+    label: report.prscp.totalevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: ongoingevents
+    label: report.prscp.ongoingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: upcommingevents
+    label: report.prscp.upcommingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: closedevents
+    label: report.prscp.closedevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: cancelledevnets
+    label: report.prscp.cancelledevnets
+    type: string
+    source: prscp-services
+    total: false
+  - name: uploadeddocument
+    label: report.prscp.uploadeddocument
+    type: string
+    source: prscp-services
+    total: false
+  additionalConfig:
+    reportTitle: reports.prscp.MISSummaryReport.title
+  query: select COALESCE(a.organizer_department_name,'') as departmentname, count(1) totalevents, count(((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') between TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS')) and event_status<>'CANCELLED') or null) as ongoingevents, count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') < TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as upcommingevents,count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') > TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as closedevents, count(event_status='CANCELLED' or null) as cancelledevnets, sum(coalesce(b.uploaded_document,0)) as uploadeddocument from egpr_event_detail as a left join (select event_detail_uuid,tenant_id,module_code, sum(json_array_length(uploaded_document)) as uploaded_document from egpr_library group by event_detail_uuid,tenant_id,module_code) as b on a.event_detail_uuid=b.event_detail_uuid  and  a.tenant_id=b.tenant_id and a.module_code=b.module_code where a.tenant_id=$tenantid and a.module_code=$moduleCode and COALESCE(a.organizer_department_name,'') = case when $departmentName<>'' then $departmentName else COALESCE(a.organizer_department_name,'') end	and DATE(to_char(now() - interval '1 year','yyyy-mm-dd')) <= DATE(to_char(TO_TIMESTAMP(created_time / 1000),'yyyy-mm-dd')) group by a.tenant_id, a.module_code, COALESCE(a.organizer_department_name,'')
+  
+- reportName: MISTimeSeriesDepartmentReportReport
+  summary: Time Series Report Aggregated By Department
+  version: 1.0.0
+  moduleName: prscp-services
+  sourceColumns:
+  - name: departmentname
+    label: report.prscp.departmentname
+    type: string
+    source: prscp-services
+    total: false
+  - name: year
+    label: report.prscp.year
+    type: string
+    source: prscp-services
+    total: false
+  - name: month
+    label: report.prscp.month
+    type: string
+    source: prscp-services
+    total: false
+  - name: totalevents
+    label: report.prscp.totalevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: ongoingevents
+    label: report.prscp.ongoingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: upcommingevents
+    label: report.prscp.upcommingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: closedevents
+    label: report.prscp.closedevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: cancelledevnets
+    label: report.prscp.cancelledevnets
+    type: string
+    source: prscp-services
+    total: false
+  additionalConfig:
+    reportTitle: reports.prscp.MISSummaryReport.title
+  query: select COALESCE(organizer_department_name,'') as departmentname, EXTRACT(YEAR from TO_TIMESTAMP(created_time / 1000)) as year, EXTRACT(MONTH from TO_TIMESTAMP(created_time / 1000)) as month, count(1) totalevents, count(((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') between TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS')) and event_status<>'CANCELLED') or null) as ongoingevents, count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') < TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as upcommingevents,count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') > TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as closedevents, count(event_status='CANCELLED' or null) as cancelledevnets from egpr_event_detail where tenant_id=$tenantid and module_code=$moduleCode and EXTRACT(YEAR from TO_TIMESTAMP(created_time / 1000)) in ($year) and EXTRACT(MONTH from TO_TIMESTAMP(created_time / 1000)) in ($month) group by tenant_id,module_code,COALESCE(organizer_department_name,''),EXTRACT(YEAR from TO_TIMESTAMP(created_time / 1000)), EXTRACT(MONTH from TO_TIMESTAMP(created_time / 1000))
+  
+- reportName: MISTimeSeriesEventTypeReportReport
+  summary: Time Series Report Aggregated By Event Type
+  version: 1.0.0
+  moduleName: prscp-services
+  sourceColumns:
+  - name: eventtype
+    label: report.prscp.eventtype
+    type: string
+    source: prscp-services
+    total: false
+  - name: year
+    label: report.prscp.year
+    type: string
+    source: prscp-services
+    total: false
+  - name: month
+    label: report.prscp.month
+    type: string
+    source: prscp-services
+    total: false
+  - name: totalevents
+    label: report.prscp.totalevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: ongoingevents
+    label: report.prscp.ongoingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: upcommingevents
+    label: report.prscp.upcommingevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: closedevents
+    label: report.prscp.closedevents
+    type: string
+    source: prscp-services
+    total: false
+  - name: cancelledevnets
+    label: report.prscp.cancelledevnets
+    type: string
+    source: prscp-services
+    total: false
+  additionalConfig:
+    reportTitle: reports.prscp.MISSummaryReport.title
+  query: select COALESCE(event_type,'') as eventtype, EXTRACT(YEAR from TO_TIMESTAMP(created_time / 1000)) as year, EXTRACT(MONTH from TO_TIMESTAMP(created_time / 1000)) as month, count(1) totalevents, count(((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') between TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS')) and event_status<>'CANCELLED') or null) as ongoingevents, count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') < TO_TIMESTAMP(concat(to_char(start_date, 'YYYY-MM-DD'),' ',start_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as upcommingevents,count((TO_TIMESTAMP(to_char(CURRENT_TIMESTAMP, 'YYYY-MM-DD HH24:MI:SS'),'YYYY-MM-DD HH24:MI:SS') > TO_TIMESTAMP(concat(to_char(end_date, 'YYYY-MM-DD'),' ',end_time), 'YYYY-MM-DD HH24:MI:SS') and event_status<>'CANCELLED') or null) as closedevents, count(event_status='CANCELLED' or null) as cancelledevnets from egpr_event_detail where tenant_id=$tenantid and module_code=$moduleCode and EXTRACT(YEAR from TO_TIMESTAMP(created_time / 1000)) in ($year) and EXTRACT(MONTH from TO_TIMESTAMP(created_time / 1000)) in ($month) group by tenant_id,module_code,COALESCE(event_type,''),EXTRACT(YEAR from TO_TIMESTAMP(created_time / 1000)), EXTRACT(MONTH from TO_TIMESTAMP(created_time / 1000))
