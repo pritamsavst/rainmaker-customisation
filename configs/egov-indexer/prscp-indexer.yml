@@ -1,0 +1,263 @@
+ServiceMaps:
+ serviceName: Public Relation and Sport Culture Program
+ version: 1.0.0
+ mappings:
+  - topic: prscp-services-save-device-detail
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-device-detail-index-v1
+      type: device-source
+      id: $.sourceUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-save-event-detail
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-index-v1
+      type: prscp-services-event
+      id: $.eventDetailUuid, $.eventId , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+   
+  - topic: prscp-services-update-event-detail
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-index-v1
+      type: prscp-services-event
+      id: $.eventDetailUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-event-status
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-status-index-v1
+      type: prscp-services-event
+      id: $.eventDetailUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody      
+
+  - topic: prscp-services-save-event-guest
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-guest-index-v1
+      type: event-guest
+      id: $.eventGuestUuid, $.eventDetailUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-event-template-guest
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-guest-index-v1
+      type: event-guest
+      id: $.eventDetailUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-save-event-template
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-template-index-v1
+      type:  event-guest-template
+      id: $.eventDetailUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-event-template
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-template-index-v1
+      type: event-guest-template
+      id:  $.notificationTemplateUuid, $.eventDetailUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-event-notification
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-event-notification-index-v1
+      type: event-invitation-notification
+      id: $.notificationTemplateUuid, $.eventDetailUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-pressnote-sent-guest-acknowledgement
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-pressnote-sent-guest-acknowledgement-index-v1
+      type: guest-acknowledgement
+      id: $.pressNoteUuid,$.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-tender-sent-guest-acknowledgement
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-tender-sent-guest-acknowledgement-index-v1
+      type: guest-acknowledgement
+      id: $.tenderNoticeUuid,$.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-events-sent-guest-acknowledgement
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-events-sent-guest-acknowledgement-index-v1
+      type: guest-acknowledgement
+      id: $.eventDetailUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody      
+ 
+  - topic: prscp-services-save-invitations-resent-history
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-invitations-resent-history-index-v1
+      type: invitations-resent-history
+      id: $.notificationResendUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-save-library
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-library-index-v1
+      type: library
+      id: $.libraryUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+      
+  - topic: prscp-services-save-pressnote-topic
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-pressnote-topic-index-v1
+      type: press-note
+      id:  $.pressNoteUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+      
+  - topic: prscp-services-update-pressnote-topic
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-pressnote-topic-index-v1
+      type: press-note
+      id:  $.pressNoteUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody      
+
+  - topic:  prscp-services-save-committee
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-committee-index-v1
+      type: event-committee
+      id: $.committeeUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-committee
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-committee-index-v1
+      type: event-committee
+      id: $.committeeUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-save-pressmaster
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-pressmaster-index-v1
+      type: event-press-master
+      id: $.pressMasterUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-pressmaster
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-pressmaster-index-v1
+      type: event-press-master
+      id: $.pressMasterUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+	  
+  - topic: persister-notification-resend-transitions
+    configKey: INDEX
+    indexes:
+    - name: persister-notification-resend-transitions-index-v1
+      type: persister-notification-resend-transitions
+      id: $.notificationResendUuid, $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-save-tender-notice
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-tender-notice-index-v1
+      type: tender
+      id: $.tenderNoticeUuid,$.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-tender-notice
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-tender-notice-index-v1
+      type: tender
+      id: $.tenderNoticeUuid,$.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-update-tender-notice-template
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-tender-notice-template-index-v1
+      type: tender
+      id: $.notificationTemplateUuid , $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody      
+ 
+  - topic: prscp-services-update-tender-notice-publish
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-tender-notice-publish-index-v1
+      type: tender
+      id: $.notificationTemplateUuid $.tenderNoticeUuid, $.tenantId
+      isBulk: false
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
+
+  - topic: prscp-services-save-tender-notice-map-press
+    configKey: INDEX
+    indexes:
+    - name: prscp-services-tender-notice-map-press-index-v1
+      type: tender
+      id:  $.tenderNoticeUuid , $.tenantId
+      isBulk: true
+      timeStampField: $.RequestBody.createdTime
+      jsonPath: $.RequestBody
