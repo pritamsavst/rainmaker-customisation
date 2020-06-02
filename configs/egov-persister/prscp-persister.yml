@@ -1,0 +1,745 @@
+serviceMaps:
+   serviceName: Public Relation and Sport Culture Program
+   mappings:
+   -  version: 1.0
+      name: Device Source
+      description: Request - Device Source
+      fromTopic: prscp-services-save-device-detail
+      queryMaps:
+      -  query: INSERT INTO eg_device_source_detail(source_uuid,module_type,device_type,module_code,device_details,tenant_id,created_by,
+            created_time) VALUES(?,?,?,?,to_json(?::json),?,?,?);
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.sourceUuid
+         -  jsonPath: $.RequestBody.moduleType
+         -  jsonPath: $.RequestBody.deviceType
+         -  jsonPath: $.RequestBody.moduleCode
+         -  jsonPath: $.RequestBody.deviceDetails
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+            type: LONG
+   -  version: 1.0
+      name: Notification Resend History
+      description: Notification Resend History
+      fromTopic: persister-notification-resend-transitions
+      queryMaps:
+      -  query: INSERT INTO egpr_notification_resend_history(notification_resend_uuid,module_code,notification_mapped_uuid,module_name,receiver_uuid,receiver_name,receiver_email,receiver_mobile,
+            tenant_id,resent_by,resent_time) VALUES(?,?,?,?,?,?,?,?,?,?,?);
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.notificationResendUuid
+         -  jsonPath: $.RequestBody.*.moduleCode
+         -  jsonPath: $.RequestBody.*.notificationMappedUuid
+         -  jsonPath: $.RequestBody.*.moduleName
+         -  jsonPath: $.RequestBody.*.receiverUuid
+         -  jsonPath: $.RequestBody.*.receiverName
+         -  jsonPath: $.RequestBody.*.receiverEmail
+         -  jsonPath: $.RequestBody.*.receiverMobile
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.resentBy
+         -  jsonPath: $.RequestBody.*.resentTime
+            type: LONG
+   -  version: 1.0
+      description: pr-services save data
+      fromTopic: prscp-services-save-event-detail
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.egpr_event_detail(event_detail_uuid, event_title, event_location, sector,organizer_department_name,organizer_user_uuid,
+            organizer_user_name, facebook_url, twitter_url,instagram_url, start_date, start_time, end_date, end_time, event_description,event_type,event_budget,
+            committee_uuid, event_status,is_active, created_by, created_time, last_modified_by, last_modified_time,event_id,
+            tenant_id,event_image,locality_name,module_code,source_uuid) VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?::time,
+            ?,?::time, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?,to_json(?::json),?,?,?);
+         basePath: RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.eventDetailUuid
+         -  jsonPath: $.RequestBody.eventTitle
+         -  jsonPath: $.RequestBody.eventLocation
+         -  jsonPath: $.RequestBody.sector
+         -  jsonPath: $.RequestBody.organizerDepartmentName
+         -  jsonPath: $.RequestBody.organizerDepartmentUserUuid
+         -  jsonPath: $.RequestBody.organizerUsernName
+         -  jsonPath: $.RequestBody.facebookUrl
+         -  jsonPath: $.RequestBody.twitterUrl
+         -  jsonPath: $.RequestBody.instagramUrl
+         -  jsonPath: $.RequestBody.startDate
+            type: DATE
+            dbType: DATE
+         -  jsonPath: $.RequestBody.startTime
+         -  jsonPath: $.RequestBody.endDate
+            type: DATE
+            dbType: DATE
+         -  jsonPath: $.RequestBody.endTime
+         -  jsonPath: $.RequestBody.eventDescription
+         -  jsonPath: $.RequestBody.eventType
+         -  jsonPath: $.RequestBody.eventBudget
+         -  jsonPath: $.RequestBody.committeeUuid
+         -  jsonPath: $.RequestBody.eventStatus
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+         -  jsonPath: $.RequestBody.eventId
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.eventString
+         -  jsonPath: $.RequestBody.area
+         -  jsonPath: $.RequestBody.moduleCode
+         -  jsonPath: $.RequestBody.sourceUuid
+   -  version: 1.0
+      description: pr-services update data
+      fromTopic: prscp-services-update-event-detail
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE public.egpr_event_detail SET  event_title=?,event_image=to_json(?::json),start_date=?, start_time=?::time,
+            end_date=?, end_time=?::time, event_location=?, sector=?,organizer_department_name=?, organizer_user_name=?,  facebook_url=?,
+            twitter_url=?, instagram_url=?, event_description=?, event_type=?, event_budget=?, committee_uuid=?, event_status=?,
+            is_active=?,last_modified_by=?, last_modified_time=?,locality_name=? where event_detail_uuid=?;
+         basePath: RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.eventTitle
+         -  jsonPath: $.RequestBody.eventString
+         -  jsonPath: $.RequestBody.startDate
+            type: DATE
+            dbType: DATE
+         -  jsonPath: $.RequestBody.startTime
+         -  jsonPath: $.RequestBody.endDate
+            type: DATE
+            dbType: DATE
+         -  jsonPath: $.RequestBody.endTime
+         -  jsonPath: $.RequestBody.eventLocation
+         -  jsonPath: $.RequestBody.sector
+         -  jsonPath: $.RequestBody.organizerDepartmentName
+         -  jsonPath: $.RequestBody.organizerUsernName
+         -  jsonPath: $.RequestBody.facebookUrl
+         -  jsonPath: $.RequestBody.twitterUrl
+         -  jsonPath: $.RequestBody.instagramUrl
+         -  jsonPath: $.RequestBody.eventDescription
+         -  jsonPath: $.RequestBody.eventType
+         -  jsonPath: $.RequestBody.eventBudget
+         -  jsonPath: $.RequestBody.committeeUuid
+         -  jsonPath: $.RequestBody.eventStatus
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedDate
+         -  jsonPath: $.RequestBody.area
+         -  jsonPath: $.RequestBody.eventDetailUuid
+   -  version: 1.0
+      name: Public Relation
+      description: update event status details in egpr_event_detail
+      fromTopic: prscp-services-update-event-status
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE egpr_event_detail SET event_status=?, last_modified_by=?, last_modified_time=? WHERE event_detail_uuid
+            =?;
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.eventStatus
+         -  jsonPath: $.RequestBody.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.lastModifiedTime
+         -  jsonPath: $.RequestBody.*.eventDetailUuid
+   -  version: 1.0
+      name: Event Guest List
+      description: create Invitation Guest List
+      fromTopic: prscp-services-save-event-guest
+      queryMaps:
+      -  query: INSERT INTO egpr_event_guestlist (event_guest_uuid,event_detail_uuid, event_guest_type,department_uuid,department_name,user_uuid,
+            guest_name, guest_email, guest_mobile, sent_flag,is_active, created_by,created_time, last_modified_by,last_modified_time,tenant_id,module_code,source_uuid)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.eventGuestUuid
+         -  jsonPath: $.RequestBody.*.eventDetailUuid
+         -  jsonPath: $.RequestBody.*.eventGuestType
+         -  jsonPath: $.RequestBody.*.departmentName
+         -  jsonPath: $.RequestBody.*.departmentUuid
+         -  jsonPath: $.RequestBody.*.userUuid
+         -  jsonPath: $.RequestBody.*.guestName
+         -  jsonPath: $.RequestBody.*.guestEmail
+         -  jsonPath: $.RequestBody.*.guestMobile
+         -  jsonPath: $.RequestBody.*.sentFlag
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.createdBy
+         -  jsonPath: $.RequestBody.*.createdTime
+            type: LONG
+         -  jsonPath: $.RequestBody.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+         -  jsonPath: $.RequestBody.*.sourceUuid
+   -  version: 1.0
+      name: Event Guest List
+      description: Delete Invitation Guest
+      fromTopic: prscp-services-delete-event-guest
+      queryMaps:
+      -  query: UPDATE egpr_event_guestlist set is_active=?,last_modified_by=?,last_modified_time=? where event_guest_uuid=?
+            and event_detail_uuid=? and tenant_id=? and module_code=?;
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.createdBy
+         -  jsonPath: $.RequestBody.*.createdTime
+            type: LONG
+         -  jsonPath: $.RequestBody.*.eventGuestUuid
+         -  jsonPath: $.RequestBody.*.eventDetailUuid
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+   -  version: 1.0
+      name: Event Template
+      description: create Invitation Template
+      fromTopic: prscp-services-save-event-template
+      queryMaps:
+      -  query: INSERT INTO egpr_notification_template (notification_template_uuid,template_mapped_uuid,email_content,document_attachment,
+            sms_content, created_by,created_time, last_modified_by,last_modified_time,tenant_id,module_code,template_type)VALUES(?,?,to_json(?::json),to_json(?::json),?,?,?,?,?,?,?,?);
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.eventDetailUuid
+         -  jsonPath: $.RequestBody.emailContent
+         -  jsonPath: $.RequestBody.setdoc
+         -  jsonPath: $.RequestBody.smsContent
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+            type: LONG
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.moduleCode
+         -  jsonPath: $.RequestBody.templateType
+   -  version: 1.0
+      name: Event Template
+      description: create Invitation Template
+      fromTopic: prscp-services-update-event-template
+      queryMaps:
+      -  query: UPDATE egpr_notification_template set email_content=to_json(?::json),document_attachment=to_json(?::json),
+            sms_content=?, last_modified_by=?,last_modified_time=? where notification_template_uuid=? and template_mapped_uuid=?
+            and tenant_id=? and module_code=? and template_type=?;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.emailContent
+         -  jsonPath: $.RequestBody.setdoc
+         -  jsonPath: $.RequestBody.smsContent
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.templateMappedUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.moduleCode
+         -  jsonPath: $.RequestBody.templateType
+   -  version: 1.0
+      name: Event Guest List
+      description: Update Event Templates and mark sent flag as sent true
+      fromTopic: prscp-services-update-event-template-guest
+      queryMaps:
+      -  query: UPDATE egpr_event_guestlist set notification_template_uuid=?,sent_flag=?,last_modified_by=?,last_modified_time=?
+            where event_detail_uuid=? and tenant_id=? and created_by=? and sent_flag=false and module_code=?;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.sentFlag
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.eventDetailUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.moduleCode
+   -  version: 1.0
+      name: Event Details
+      description: Update Event - Notification Template Uuid
+      fromTopic: prscp-services-update-event-notification
+      queryMaps:
+      -  query: UPDATE egpr_event_detail set notification_template_uuid=? where event_detail_uuid=? and tenant_id=? and is_active=?
+            and module_code=?;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.eventDetailUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.moduleCode
+   -  version: 1.0
+      name: Press Note Guest
+      description: Update Press Note Map - mark sent flag as sent true
+      fromTopic: prscp-services-update-pressnote-sent-guest-acknowledgement
+      queryMaps:
+      -  query: UPDATE egpr_map_press_note set notify_status=? where press_note_uuid=? and tenant_id=?  and module_code=?
+            and is_active=true;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.notifyStatus
+         -  jsonPath: $.RequestBody.pressNoteUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.moduleCode
+   -  version: 1.0
+      name: Tender Notice Guest
+      description: Update Tender Notice Map - mark sent flag as sent true
+      fromTopic: prscp-services-update-tender-sent-guest-acknowledgement
+      queryMaps:
+      -  query: UPDATE egpr_map_tender_press set notify_status=? where tender_notice_uuid=? and tenant_id=?  and module_code=?
+            and is_active=true;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.notifyStatus
+         -  jsonPath: $.RequestBody.tenderNoticeUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.moduleCode
+   -  version: 1.0
+      name: Event Guest
+      description: Update Event - mark sent flag as sent true
+      fromTopic: prscp-services-update-events-sent-guest-acknowledgement
+      queryMaps:
+      -  query: UPDATE egpr_event_guestlist set sent_flag=? where event_detail_uuid=? and tenant_id=? and created_by=? and
+            sent_flag=false and module_code=?;
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.sentFlag
+         -  jsonPath: $.RequestBody.*.eventDetailUuid
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.createdBy
+         -  jsonPath: $.RequestBody.*.moduleCode
+   -  version: 1.0
+      name: Notification Resend History
+      description: Notification Resend History
+      fromTopic: prscp-services-save-invitations-resent-history
+      queryMaps:
+      -  query: INSERT INTO egpr_notification_resend_history(notification_resend_uuid,module_code,notification_mapped_uuid,module_name,receiver_uuid,receiver_name,receiver_email,receiver_mobile,
+            tenant_id,resent_by,resent_time) VALUES(?,?,?,?,?,?,?,?,?,?,?);
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.notificationResendUuid
+         -  jsonPath: $.RequestBody.*.moduleCode
+         -  jsonPath: $.RequestBody.*.notificationMappedUuid
+         -  jsonPath: $.RequestBody.*.moduleName
+         -  jsonPath: $.RequestBody.*.receiverUuid
+         -  jsonPath: $.RequestBody.*.receiverName
+         -  jsonPath: $.RequestBody.*.receiverEmail
+         -  jsonPath: $.RequestBody.*.receiverMobile
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.resentBy
+         -  jsonPath: $.RequestBody.*.resentTime
+            type: LONG
+   -  version: 1.0
+      name: Press Master
+      description: create Press Master
+      fromTopic: prscp-services-save-pressmaster
+      queryMaps:
+      -  query: INSERT INTO egpr_press_master (press_master_uuid,personnel_name, press_type, publication_name, email, mobile,
+            is_active, created_by,created_time, last_modified_by,last_modified_time,tenant_id,module_code)VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.pressMasterUuid
+         -  jsonPath: $.RequestBody.personnelName
+         -  jsonPath: $.RequestBody.pressType
+         -  jsonPath: $.RequestBody.publicationName
+         -  jsonPath: $.RequestBody.email
+         -  jsonPath: $.RequestBody.mobile
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+            type: LONG
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+   -  version: 1.0
+      description: Update Press Master
+      fromTopic: prscp-services-update-pressmaster
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE egpr_press_master set personnel_name=?,press_type=?,publication_name=?,email=?,mobile=?,last_modified_by=?,last_modified_time=?
+            where press_master_uuid=? and tenant_id=? and module_code=?;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.personnelName
+         -  jsonPath: $.RequestBody.pressType
+         -  jsonPath: $.RequestBody.publicationName
+         -  jsonPath: $.RequestBody.email
+         -  jsonPath: $.RequestBody.mobile
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.pressMasterUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+   -  version: 1.0
+      description: Delete Press Master
+      fromTopic: prscp-services-delete-pressmaster
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE egpr_press_master set is_active=?,last_modified_by=?,last_modified_time=? where press_master_uuid=?
+            and tenant_id=? and module_code=?;
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.RequestBody.pressMasterUuid
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+   -  version: 1.0
+      name: Create Tender
+      description: create tender
+      fromTopic: prscp-services-save-tender-notice
+      queryMaps:
+      -  query: INSERT INTO public.egpr_tender_notice(tender_notice_uuid,tender_subject, tender_date, file_number, note_content,
+            tender_notice_status, is_active, created_by, created_time, last_modified_by, last_modified_time, tenant_id,tender_document,module_code,tender_notice_id,source_uuid)
+            VALUES (?,?, ?::date, ?, ?, ?, ?, ?, ?, ?, ?, ?,to_json(?::json),?,?,?);
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.tenderNoticeUuid
+         -  jsonPath: $.RequestBody.tenderSubject
+         -  jsonPath: $.RequestBody.tenderDate
+            type: Long
+         -  jsonPath: $.RequestBody.fileNumber
+         -  jsonPath: $.RequestBody.noteContent
+         -  jsonPath: $.RequestBody.tenderNoticeStatus
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+            type: Long
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: Long
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.tenderDocumentList
+         -  jsonPath: $.RequestBody.moduleCode
+         -  jsonPath: $.RequestBody.tenderNoticeId
+         -  jsonPath: $.RequestBody.sourceUuid
+   -  version: 1.0
+      name: Update Tender
+      description: Update tender
+      fromTopic: prscp-services-update-tender-notice
+      queryMaps:
+      -  query: UPDATE public.egpr_tender_notice set tender_subject=?, tender_date=?::date, file_number=?, note_content=?,
+            tender_document=to_json(?::json), last_modified_by=?, last_modified_time=? where tenant_id=? and tender_notice_uuid=?
+            and module_code=?
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.tenderSubject
+         -  jsonPath: $.RequestBody.tenderDate
+         -  jsonPath: $.RequestBody.fileNumber
+         -  jsonPath: $.RequestBody.noteContent
+         -  jsonPath: $.RequestBody.tenderDocumentList
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+            type: Long
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.tenderNoticeUuid
+         -  jsonPath: $.RequestBody.moduleCode
+   -  version: 1.0
+      name: Update Notification Tender
+      description: Update Notification tender
+      fromTopic: prscp-services-update-tender-notice-template
+      queryMaps:
+      -  query: UPDATE egpr_notification_template set  email_content=to_json(?::json), sms_content=?,document_attachment=to_json(?::json),
+            last_modified_by=?, last_modified_time=? where tenant_id=? and template_type=? and module_code=? and notification_template_uuid=?
+         basePath: RequestBody.Template
+         jsonMaps:
+         -  jsonPath: $.RequestBody.Template.emailContent
+         -  jsonPath: $.RequestBody.Template.smsContent
+         -  jsonPath: $.RequestBody.Template.setdoc
+         -  jsonPath: $.RequestBody.Template.lastModifiedBy
+         -  jsonPath: $.RequestBody.Template.lastModifiedTime
+            type: Long
+         -  jsonPath: $.RequestBody.Template.tenantId
+         -  jsonPath: $.RequestBody.Template.templateType
+         -  jsonPath: $.RequestBody.Template.moduleCode
+         -  jsonPath: $.RequestBody.Template.notificationTemplateUuid
+   -  version: 1.0
+      name: Update Published Tender
+      description: Update Published tender
+      fromTopic: prscp-services-update-tender-notice-publish
+      queryMaps:
+      -  query: INSERT INTO egpr_notification_template(notification_template_uuid, email_content, sms_content, created_by,
+            created_time, last_modified_by, last_modified_time, tenant_id, template_type, document_attachment, module_code,template_mapped_uuid)
+            VALUES (?, to_json(?::json), ?, ?, ?, ?, ?, ?, ?, to_json(?::json), ?,?);
+         basePath: RequestBody.Template
+         jsonMaps:
+         -  jsonPath: $.RequestBody.Template.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.Template.emailContent
+         -  jsonPath: $.RequestBody.Template.smsContent
+         -  jsonPath: $.RequestBody.Template.createdBy
+         -  jsonPath: $.RequestBody.Template.createdTime
+            type: Long
+         -  jsonPath: $.RequestBody.Template.lastModifiedBy
+         -  jsonPath: $.RequestBody.Template.lastModifiedTime
+            type: Long
+         -  jsonPath: $.RequestBody.Template.tenantId
+         -  jsonPath: $.RequestBody.Template.templateType
+         -  jsonPath: $.RequestBody.Template.setdoc
+         -  jsonPath: $.RequestBody.Template.moduleCode
+         -  jsonPath: $.RequestBody.Template.templateMappedUuid
+      -  query: UPDATE public.egpr_tender_notice set notification_template_uuid=?, tender_notice_status=?, last_modified_by=?,
+            last_modified_time=? where tenant_id=? and tender_notice_uuid=? and module_code=?
+         basePath: RequestBody.TenderNotice
+         jsonMaps:
+         -  jsonPath: $.RequestBody.TenderNotice.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.TenderNotice.tenderNoticeStatus
+         -  jsonPath: $.RequestBody.TenderNotice.lastModifiedBy
+         -  jsonPath: $.RequestBody.TenderNotice.lastModifiedTime
+            type: Long
+         -  jsonPath: $.RequestBody.TenderNotice.tenantId
+         -  jsonPath: $.RequestBody.TenderNotice.tenderNoticeUuid
+         -  jsonPath: $.RequestBody.TenderNotice.moduleCode
+   -  version: 1.0
+      name: Insert Published Tender map-press
+      description: Insert Published Tender map-press
+      fromTopic: prscp-services-save-tender-notice-map-press
+      isTransaction: true
+      queryMaps:
+      -  query: Delete from egpr_map_tender_press where tender_notice_uuid=? and tenant_id=? and module_code=?
+         basePath: RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.tenderNoticeUuid
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+      -  query: INSERT INTO public.egpr_map_tender_press(map_tender_press_uuid, press_master_uuid, tender_notice_uuid, notify_status,
+            is_active, created_by, created_time, last_modified_by, last_modified_time, tenant_id, module_code) VALUES (?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.mapTenderPressUuid
+         -  jsonPath: $.RequestBody.*.pressMasterUuid
+         -  jsonPath: $.RequestBody.*.tenderNoticeUuid
+         -  jsonPath: $.RequestBody.*.notifyStatus
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.createdBy
+         -  jsonPath: $.RequestBody.*.createdTime
+            type: Long
+         -  jsonPath: $.RequestBody.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.lastModifiedTime
+            type: Long
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+   -  version: 1.0
+      description: pr-services save data
+      fromTopic: prscp-services-save-library
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.egpr_library(library_uuid, event_detail_uuid, document_type, uploaded_document, is_active,
+            created_by, created_time, tenant_id,module_code,source_uuid)VALUES (?, ?, ?,to_json(?::json),?, ?, ?,?,?,?);
+         basePath: RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.libraryUuid
+         -  jsonPath: $.RequestBody.*.eventDetailUuid
+         -  jsonPath: $.RequestBody.*.documentType
+         -  jsonPath: $.RequestBody.*.documentId
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.createdBy
+         -  jsonPath: $.RequestBody.*.createdTime
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+         -  jsonPath: $.RequestBody.*.sourceUuid
+   -  version: 1.0
+      description: pr-services save data
+      fromTopic: prscp-services-delete-library
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE public.egpr_library SET is_active=?,last_modified_by=?,last_modified_time=? WHERE event_detail_uuid=?
+            and uploaded_document::text=? and tenant_id=? and module_code=?;
+         basePath: RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.isActive
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+         -  jsonPath: $.RequestBody.eventDetailUuid
+         -  jsonPath: $.RequestBody.documentId
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.moduleCode
+   -  version: 1.0
+      description: pr-services save data
+      fromTopic: prscp-services-save-pressnote-topic
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.egpr_notification_template(notification_template_uuid, email_content, sms_content, created_by,created_time,tenant_id,document_attachment,module_code,template_mapped_uuid,template_type)
+            VALUES (?,to_json(?::json), ?, ?,?,?,to_json(?::json),?,?,?);
+         basePath: RequestBody.NotificationTemplate
+         jsonMaps:
+         -  jsonPath: $.RequestBody.NotificationTemplate.notificationTemplateUuid
+         -  jsonPath: $.RequestBody.NotificationTemplate.emailContent
+         -  jsonPath: $.RequestBody.NotificationTemplate.smsContent
+         -  jsonPath: $.RequestBody.NotificationTemplate.createdBy
+         -  jsonPath: $.RequestBody.NotificationTemplate.createdTime
+         -  jsonPath: $.RequestBody.NotificationTemplate.tenantId
+         -  jsonPath: $.RequestBody.NotificationTemplate.setdoc
+         -  jsonPath: $.RequestBody.NotificationTemplate.moduleCode
+         -  jsonPath: $.RequestBody.NotificationTemplate.templateMappedUuid
+         -  jsonPath: $.RequestBody.NotificationTemplate.templateType
+      -  query: INSERT INTO public.egpr_press_note(press_note_uuid, press_note_subject, press_note_date, file_number, notification_template_uuid,
+            is_active, created_by, created_time, tenant_id, note_content,module_code,source_uuid) VALUES (?, ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?,?);
+         basePath: RequestBody.PressNote
+         jsonMaps:
+         -  jsonPath: $.RequestBody.PressNote.pressNoteUuid
+         -  jsonPath: $.RequestBody.PressNote.pressNoteSubject
+         -  jsonPath: $.RequestBody.PressNote.pressNoteDate
+            type: DATE
+         -  jsonPath: $.RequestBody.PressNote.fileNumber
+         -  jsonPath: $.RequestBody.PressNote.notifiactionTemplateUuid
+         -  jsonPath: $.RequestBody.PressNote.isActive
+         -  jsonPath: $.RequestBody.PressNote.createdBy
+         -  jsonPath: $.RequestBody.PressNote.createdTime
+         -  jsonPath: $.RequestBody.PressNote.tenantId
+         -  jsonPath: $.RequestBody.PressNote.noteContent
+         -  jsonPath: $.RequestBody.PressNote.moduleCode
+         -  jsonPath: $.RequestBody.PressNote.sourceUuid
+      -  query: INSERT INTO public.egpr_map_press_note(map_press_note_uuid, press_master_uuid, press_note_uuid, notify_status,
+            module_code, tenant_id, is_active, created_by, created_time) VALUES (?, ?, ?,?, ?, ?, ?, ?,?);
+         basePath: RequestBody.PressNoteMap.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.PressNoteMap.*.mapPressNoteUuid
+         -  jsonPath: $.RequestBody.PressNoteMap.*.pressMasterUuid
+         -  jsonPath: $.RequestBody.PressNoteMap.*.pressNoteUuid
+         -  jsonPath: $.RequestBody.PressNoteMap.*.notifyStatus
+         -  jsonPath: $.RequestBody.PressNoteMap.*.moduleCode
+         -  jsonPath: $.RequestBody.PressNoteMap.*.tenantId
+         -  jsonPath: $.RequestBody.PressNoteMap.*.isActive
+         -  jsonPath: $.RequestBody.PressNoteMap.*.createdBy
+         -  jsonPath: $.RequestBody.PressNoteMap.*.createdTime
+   -  version: 1.0
+      description: pr-services save data
+      fromTopic: prscp-services-update-pressnote-topic
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE public.egpr_press_note SET press_note_subject=?, press_note_date=?, file_number=?,last_modified_by=?,last_modified_time=?,note_content=?
+            WHERE press_note_uuid=? and tenant_id=? and  module_code=?;
+         basePath: RequestBody.PressNote
+         jsonMaps:
+         -  jsonPath: $.RequestBody.PressNote.pressNoteSubject
+         -  jsonPath: $.RequestBody.PressNote.pressNoteDate
+            type: DATE
+         -  jsonPath: $.RequestBody.PressNote.fileNumber
+         -  jsonPath: $.RequestBody.PressNote.lastModifiedBy
+         -  jsonPath: $.RequestBody.PressNote.lastModifiedTime
+         -  jsonPath: $.RequestBody.PressNote.noteContent
+         -  jsonPath: $.RequestBody.PressNote.pressNoteUuid
+         -  jsonPath: $.RequestBody.PressNote.tenantId
+         -  jsonPath: $.RequestBody.PressNote.moduleCode
+      -  query: UPDATE public.egpr_notification_template SET  email_content=to_json(?::json), sms_content=?,last_modified_by=?,
+            last_modified_time=?, document_attachment=to_json(?::json) WHERE template_mapped_uuid=? and tenant_id=? and module_code=?;
+         basePath: RequestBody.PressNote
+         jsonMaps:
+         -  jsonPath: $.RequestBody.NotificationTemplate.emailContent
+         -  jsonPath: $.RequestBody.NotificationTemplate.smsContent
+         -  jsonPath: $.RequestBody.NotificationTemplate.lastModifiedBy
+         -  jsonPath: $.RequestBody.NotificationTemplate.lastModifiedTime
+         -  jsonPath: $.RequestBody.NotificationTemplate.setdoc
+         -  jsonPath: $.RequestBody.NotificationTemplate.templateMappedUuid
+         -  jsonPath: $.RequestBody.NotificationTemplate.tenantId
+         -  jsonPath: $.RequestBody.NotificationTemplate.moduleCode
+      -  query: UPDATE public.egpr_map_press_note SET  is_active=?, last_modified_by=?, last_modified_time=? WHERE press_note_uuid=?
+            and module_code=? and tenant_id=?;
+         basePath: RequestBody.PressNoteMap
+         jsonMaps:
+         -  jsonPath: $.RequestBody.PressNoteMap.isActive
+         -  jsonPath: $.RequestBody.PressNoteMap.lastModifiedBy
+         -  jsonPath: $.RequestBody.PressNoteMap.lastModifiedTime
+         -  jsonPath: $.RequestBody.PressNoteMap.pressNoteUuid
+         -  jsonPath: $.RequestBody.PressNoteMap.moduleCode
+         -  jsonPath: $.RequestBody.PressNoteMap.tenantId
+      -  query: INSERT INTO public.egpr_map_press_note(map_press_note_uuid, press_master_uuid, press_note_uuid, notify_status,
+            module_code, tenant_id, is_active, created_by, created_time) VALUES (?, ?, ?,?, ?, ?, ?, ?,?);
+         basePath: RequestBody.PressNoteMapList.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.mapPressNoteUuid
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.pressMasterUuid
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.pressNoteUuid
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.notifyStatus
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.moduleCode
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.tenantId
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.isActive
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.createdBy
+         -  jsonPath: $.RequestBody.PressNoteMapList.*.createdTime
+   -  version: 1.0
+      name: Public Relation
+      description: create committeeCompleteDetails in egpr_committee_detail,egpr_committee_member
+      fromTopic: prscp-services-save-committee
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO egpr_committee_detail(committee_uuid, committee_name, committee_description, is_active, tenant_id,
+            module_code, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,
+            ?);
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.committeeUuid
+         -  jsonPath: $.RequestBody.*.committeeName
+         -  jsonPath: $.RequestBody.*.committeeDescription
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.tenantId
+         -  jsonPath: $.RequestBody.*.moduleCode
+         -  jsonPath: $.RequestBody.*.createdBy
+         -  jsonPath: $.RequestBody.*.createdTime
+         -  jsonPath: $.RequestBody.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.lastModifiedTime
+      -  query: INSERT INTO egpr_committee_member(committee_member_uuid, committee_uuid, department_name, user_uuid, department_uuid,
+            tenant_id, module_code,is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.RequestBody.*.committeeMember.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.committeeMember.*.committeeMemberUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.committeeUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.departmentName
+         -  jsonPath: $.RequestBody.*.committeeMember.*.userUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.departmentUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.tenantId
+         -  jsonPath: $.RequestBody.*.committeeMember.*.moduleCode
+         -  jsonPath: $.RequestBody.*.committeeMember.*.isActive
+         -  jsonPath: $.RequestBody.*.committeeMember.*.createdBy
+         -  jsonPath: $.RequestBody.*.committeeMember.*.createdTime
+         -  jsonPath: $.RequestBody.*.committeeMember.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.committeeMember.*.lastModifiedTime
+   -  version: 1.0
+      name: Public Relation
+      description: update committeeCompleteDetails in egpr_committee_detail,egpr_committee_member
+      fromTopic: prscp-services-update-committee
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE egpr_committee_detail SET committee_name=?, committee_description=?, is_active=?,  last_modified_by=?,
+            last_modified_time=? WHERE committee_uuid=?;
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.committeeName
+         -  jsonPath: $.RequestBody.*.committeeDescription
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.lastModifiedTime
+         -  jsonPath: $.RequestBody.*.committeeUuid
+      -  query: DELETE FROM egpr_committee_member WHERE committee_uuid=?;
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.committeeUuid
+      -  query: INSERT INTO egpr_committee_member(committee_member_uuid, committee_uuid, department_name, user_uuid, department_uuid,
+            tenant_id, module_code,is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.RequestBody.*.committeeMember.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.committeeMember.*.committeeMemberUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.committeeUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.departmentName
+         -  jsonPath: $.RequestBody.*.committeeMember.*.userUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.departmentUuid
+         -  jsonPath: $.RequestBody.*.committeeMember.*.tenantId
+         -  jsonPath: $.RequestBody.*.committeeMember.*.moduleCode
+         -  jsonPath: $.RequestBody.*.committeeMember.*.isActive
+         -  jsonPath: $.RequestBody.*.committeeMember.*.createdBy
+         -  jsonPath: $.RequestBody.*.committeeMember.*.createdTime
+         -  jsonPath: $.RequestBody.*.committeeMember.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.committeeMember.*.lastModifiedTime
+   -  version: 1.0
+      name: Public Relation
+      description: delete committeeCompleteDetails in egpr_committee_detail
+      fromTopic: prscp-services-delete-committee
+      isTransaction: true
+      queryMaps:
+      -  query: UPDATE egpr_committee_detail SET is_active=?,  last_modified_by=?, last_modified_time=? WHERE committee_uuid=?;
+         basePath: $.RequestBody.*
+         jsonMaps:
+         -  jsonPath: $.RequestBody.*.isActive
+         -  jsonPath: $.RequestBody.*.lastModifiedBy
+         -  jsonPath: $.RequestBody.*.lastModifiedTime
+         -  jsonPath: $.RequestBody.*.committeeUuid
