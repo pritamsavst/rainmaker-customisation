@@ -3,7 +3,7 @@
     "DataConfigs": {
        "serviceName": "rainmaker-tl",
        "version": "1.0.0",
-       "baseKeyPath": "$.Licenses.*",
+       "baseKeyPath": "$",
        "entityIdPath":"$.applicationNumber",
        "isCommonTableBorderRequired":true,
        "mappings": [
@@ -13,27 +13,504 @@
              "mappings": [
                 {
                    "direct": [
-                                            
-                      {
-                        "variable": "variable1",
+                      {"variable": "applicationType",
                         "value": {
-                             "path":"$.tradeLicenseDetail.additionalDetail.applicationType"                              
+                           "path": "APPLICATION_TYPE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-common"
+                        }
+                     },
+                     {
+                        "variable": "paymentReciept",
+                        "value": {
+                           "path": "PAYMENT_RECIEPT"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-common"
+                        } 
+                     },
+                     {
+                        "variable": "ulb_grade",
+                        "value": {
+                           "path": "ULBGRADE_MC1"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "tenant_id",
+                        "value": {
+                           "path": "$..Licenses[0].tenantId"
                         },
                         "localisation":{
                            "required":true,
-                           "prefix":"TRADELICENSE_APPLICATIONTYPE",   
+                           "prefix":"TENANT_TENANTS",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "recieptNo",
+                        "value": {
+                           "path": "RECIEPT_NO"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "oldLicenseNo",
+                        "value": {
+                           "path": "OLD_LICENSE_NO"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "applicationNo",
+                        "value": {
+                           "path": "APPLICATION_NO"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "financialYear",
+                        "value": {
+                           "path": "FINANCIAL_YEAR"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "paymentDate",
+                        "value": {
+                           "path": "PAYMENT_DATE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "tradeDetails",
+                        "value": {
+                           "path": "TRADE_DETAILS"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "tradeName",
+                        "value": {
+                           "path": "TRADE_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "service_label",
+                        "value": {
+                          "path": "SERVICE_TYPE_LABEL"
+                       },
+                       "type": "label",
+                       "localisation":{
+                          "required":true,
+                          "prefix":"TL",   
+                          "module":"rainmaker-tl"
+                       }
+                    },
+                     {
+                        "variable": "tradeCategory",
+                        "value": {
+                           "path": "TRADE_CATEGORY"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "tradeType",
+                        "value": {
+                           "path": "TRADE_TYPE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "accessories",
+                        "value": {
+                           "path": "ACCESSORIES"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "ownerShipInfo",
+                        "value": {
+                           "path": "OWNERSHIP_INFORMATION"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "mobile_no",
+                        "value": {
+                          "path": "LOCALIZATION_TRADE_OWNER_CONTACT"
+                        },
+                        "type": "label",
+                        "localisation":{
+                          "required":true,
+                          "prefix": "TL",
+                          "module":"rainmaker-tl"
+                       }
+                    },
+                    {
+                     "variable": "date_of_birth",
+                     "value": {
+                       "path": "DOB_LABEL"
+                     },
+                     "type": "label",
+                     "localisation":{
+                       "required":true,
+                       "prefix": "TL",
+                       "module":"rainmaker-tl"
+                    }
+                   },
+                 {
+                  "variable": "address_label",
+                  "value": {
+                    "path": "LOCALIZATION_TRADE_ADDRESS"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix": "TL",
+                    "module":"rainmaker-tl"
+                 }
+              },
+                     {
+                        "variable": "owner_name_label",
+                        "value": {
+                          "path": "TRADE_OWNER_NAME"
+                        },
+                        "type": "label",
+                        "localisation":{
+                          "required":true,
+                          "prefix": "TL_LOCALIZATION",
+                          "module":"rainmaker-tl"
+                       }
+                    },
+                     {
+                        "variable": "payableAmount",
+                        "value": {
+                           "path": "PAYABLE_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "tradeLicenseFee",
+                        "value": {
+                           "path": "TRADE_LICENSE_FEE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "penalty",
+                        "value": {
+                           "path": "PENALTY"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "rebate",
+                        "value": {
+                           "path": "REBATE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "tax",
+                        "value": {
+                           "path": "TAX"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"CTL",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "roundOff",
+                        "value": {
+                           "path": "ROUNDOFF"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"CTL",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "adhocPenalty",
+                        "value": {
+                           "path": "ADHOC_PENALTY"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "adhocRebate",
+                        "value": {
+                           "path": "ADHOC_REBATE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "total",
+                        "value": {
+                           "path": "TOTAL"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "paymentInfo",
+                        "value": {
+                           "path": "PAYMENT_INFORMATION"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "totalAmoutPaid",
+                        "value": {
+                           "path": "TOTAL_AMOUNT_PAID"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "amountDue",
+                        "value": {
+                           "path": "AMOUNT_DUE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "paymentMode",
+                        "value": {
+                           "path": "PAYMENT_MODE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "transactionId",
+                        "value": {
+                           "path": "TRANSACTION_ID"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "bankNameBranch",
+                        "value": {
+                           "path": "BANK_NAME_WITH_BRANCH"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "g8ReceiptNo",
+                        "value": {
+                           "path": "G8_RECEIPT_NO"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "g8ReceiptDate",
+                        "value": {
+                           "path": "G8_RECEIPT_ISSUE_DATE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "generatedBy",
+                        "value": {
+                           "path": "GENERATED_BY"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "commissionOrEo",
+                        "value": {
+                           "path": "COMMISSIONER_OR_EO"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "note",
+                        "value": {
+                           "path": "NOTE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                      {
+                        "variable": "variable1",
+                        "value": {
+                             "path":"$..Licenses[0].applicationType"                              
+                        },
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_TYPE",   
                            "module":"rainmaker-tl"
                         }
                      },
                      {
                         "variable": "variable33",                        
-                        "url":"https://s3.ap-south-1.amazonaws.com/pb-egov-assets/pb.amritsar/logo.png",
+                        "url":"https://egov.transerve.com/media/logo.png",
                         "type":"image"
                      },   
                      {
                         "variable": "variable30",
                         "value": {
-                             "path":"$.tenantId"                              
+                             "path":"$..Licenses[0].tenantId"                              
                         },
                         "localisation":{
                            "required":true,
@@ -49,31 +526,47 @@
                      {
                         "variable": "variable2",
                         "value": {
-                             "path":"$.oldLicenseNumber"                              
+                             "path":"$..Licenses[0].oldLicenseNumber"                              
                         }
                      },
                       {
                          "variable": "variable3",
                          "value":{
-                              "path":"$.applicationNumber"                           
+                              "path":"$..Licenses[0].applicationNumber"                           
                           } 
                       },
                       {
                         "variable": "variable4",
                         "value": {
-                             "path":"$.financialYear"                              
+                             "path":"$..Licenses[0].financialYear"                              
                         }
                      },
                      {
                         "variable": "variable5",
                         "value": {
-                             "path":"$.tradeName"                              
+                             "path":"$..Licenses[0].businessService"                              
+                        },
+                        "localisation": {
+                           "required":true,
+                           "prefix": "GROUP",
+                           "module":"rainmaker-tl"
+                        }
+                     },
+                     {
+                        "variable": "service_type",
+                        "value": {
+                             "path":"$..Licenses[0].businessService"                              
+                        },
+                        "localisation": {
+                           "required":true,
+                           "prefix": "SHORT",
+                           "module":"rainmaker-tl"
                         }
                      },
                      {
                         "variable": "variable6",
                         "value": {
-                             "path":"$.tradeLicenseDetail.tradeUnits[*].tradeType"                              
+                             "path":"$..Licenses[0].tradeLicenseDetail.tradeUnits[*].tradeType"                              
                         },
                         "localisation":{
                            "required":true,
@@ -85,20 +578,18 @@
                      {
                         "variable": "variable7",
                         "value": {
-                             "path":"$.tradeLicenseDetail.tradeUnits[*].tradeType"                              
+                             "path":"$..Licenses[0].licenseType"                              
                         },
-                        "localisation":{
+                        "localisation": {
                            "required":true,
-                           "prefix":"TRADELICENSE_TRADETYPE",   
-                           "module":"rainmaker-tl",
-                           "isMainTypeRequired":true,
-                           "isSubTypeRequired":true
+                           "prefix":"TL",
+                           "module":"rainmaker-tl"
                         }
                      },
                      {
                         "variable": "variable8",
                         "value": {
-                             "path":"$.tradeLicenseDetail.accessories[*].accessoryCategory"                              
+                             "path":"$..Licenses[0].tradeLicenseDetail.accessories[*].accessoryCategory"                              
                         },
                         "localisation":{
                            "required":true,
@@ -109,43 +600,129 @@
                      {
                         "variable": "variable9",
                         "value": {
-                             "path":"$.tradeLicenseDetail.address.doorNo"                              
+                             "path":"$..Licenses[0].tradeLicenseDetail.address.doorNo"                              
                         }
                      },
                      {
                         "variable": "variable10",
                         "value": {
-                             "path":"$.tradeLicenseDetail.address.buildingName"                              
+                             "path":"$..Licenses[0].tradeLicenseDetail.address.buildingName"                              
                         }
                      },
                      {
                         "variable": "variable11",
                         "value": {
-                             "path":"$.tradeLicenseDetail.address.street"                              
+                             "path":"$..Licenses[0].tradeLicenseDetail.address.street"                              
                         }
                      },
                      {
                         "variable": "variable12",
                         "value": {
-                             "path":"$.tradeLicenseDetail.address.locality.name"                              
+                             "path":"$..Licenses[0].tradeLicenseDetail.address.locality.name"                              
                         }
                      },
                       {
                         "variable": "variable13",                        
                         "value":{
-                             "path":"$.tradeLicenseDetail.owners.*"                          
+                             "path":"$..Licenses[0].tradeLicenseDetail.owners.*"                          
                          },
                          "type":"array",
                          "format":{                            
                             "type":"string",
                             "scema":[
                                {
-                                  "key":"name"
+                                  "key":"name",
+                                  "value": "name",
+                                  "variable": "name"
                                },
                                {
-                                 "key":"mobileNumber"
-                               }]
+                                 "key":"mobileNumber",
+                                 "value": "mobileNumber",
+                                 "variable": "mobileNumber"
+                               },
+                               {
+                                  "key":"dob",
+                                  "value": "dob",
+                                  "variable": "dob",
+                                  "type": "date"
+                               },
+                               {
+                                  "key": "permanentAddress",
+                                  "value": "permanentAddress",
+                                  "variable": "permanentAddress"
+                               }
+                              ]
                         } 
+                     },
+                     {
+                        "variable":"variable16",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].receiptNumber"}
+                     },
+                     {
+                        "variable":"variable17",
+                        "value":{"path":"$..Payments[0].transactionDate"}
+                     },                           
+                     {
+                        "variable":"variable18",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='TL_FEE')].amount"}
+                     },
+                     {
+                        "variable": "taxAmount",
+                        "value": {"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='TL_TAX')].amount"}
+                     },
+                     {
+                        "variable": "roundoffAmount",
+                        "value": {"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='TL_ROUNDOFF')].amount"}
+                     },
+                     {
+                        "variable":"variable19",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].totalDue"}
+                     },
+                     {
+                        "variable":"variable20",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].totalAmountPaid"}
+                     },
+                     {
+                        "variable":"variable21",
+                        "value":{"path":"$..Payments[0].paymentMode"}
+                     },
+                     {
+                        "variable":"variable22",
+                        "value":{"path":"$..Payments[0].transactionNumber"}
+                     },
+                     {
+                        "variable":"variable23",
+                        "value":{"path":"$..Payments[0].bankName"}
+                     },
+                     {
+                        "variable":"variable24",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].manualReceiptNumber"}
+                     },
+                     {
+                        "variable":"variable25",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].manualReceiptDate"}
+                     },
+                     {
+                        "variable":"variable26",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_TIME_PENALTY')].amount"}
+                     },
+                     {
+                        "variable":"variable27",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_TIME_REBATE')].amount"}
+                     },
+                     {
+                        "variable":"variable28",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_ADHOC_PENALTY')].amount"}
+                     },
+                     {
+                        "variable":"variable29",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_ADHOC_REBATE')].amount"}
+                     },
+                     {
+                        "variable": "auditorName",
+                        "value": {
+                           "path": "$..data.auditorName"
+                        }
                      } 
                    ]
                 },
@@ -156,79 +733,7 @@
                         "formula": "{{variable19}}-{{variable20}}"
                      }
                   ]
-               },
-                {
-                   "externalAPI": [
-                     
-                      {
-                         
-                         "path": "http://collection-services:8080/collection-services/receipts/_search",
-                         "queryParam": "consumerCode=$.applicationNumber",
-                         
-                         
-                         "apiRequest": null,
-
-                         "responseMapping":[
-                           {
-                              "variable":"variable16",
-                              "value":"$.Receipt[0].receiptNumber"
-                           },
-                           {
-                              "variable":"variable17",
-                              "value":"$.Receipt[0].instrument.transactionDateInput"
-                           },                           
-                           {
-                              "variable":"variable18",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_TAX')].amount"
-                           },
-                           {
-                              "variable":"variable19",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].totalAmount"
-                           },
-                           {
-                              "variable":"variable20",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].amountPaid"
-                           },
-                           {
-                              "variable":"variable21",
-                              "value":"$.Receipt[0].instrument.instrumentType.name"
-                           },
-                           {
-                              "variable":"variable22",
-                              "value":"$.Receipt[0].transactionId"
-                           },
-                           {
-                              "variable":"variable23",
-                              "value":"$.Receipt[0].instrument.bank.name"
-                           },
-                           {
-                              "variable":"variable24",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].manualReceiptNumber"
-                           },
-                           {
-                              "variable":"variable25",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].manualReceiptDate"
-                           },
-                           {
-                              "variable":"variable26",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_TIME_PENALTY')].amount"
-                           },
-                           {
-                              "variable":"variable27",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_TIME_REBATE')].amount"
-                           },
-                           {
-                              "variable":"variable28",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_ADHOC_PENALTY')].amount"
-                           },
-                           {
-                              "variable":"variable29",
-                              "value":"$.Receipt[0].Bill[0].billDetails[0].billAccountDetails[?(@.taxHeadCode=='TL_ADHOC_REBATE')].amount"
-                           }
-                        ]  
-                      }
-                   ]
-                }
+               }
              ]
           }
        ]
