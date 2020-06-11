@@ -1,0 +1,453 @@
+{
+    "key": "tlcertificate",
+    "DataConfigs": {
+      "serviceName": "rainmaker-tl",
+      "version": "1.0.0",
+      "baseKeyPath": "$",
+      "entityIdPath":"$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.transerve.com/media/logo.png",
+                "type":"image"
+                },
+               {
+                  "variable": "ownerPhoto",
+                  "value": {
+                    "path": "$..Licenses[0].ownerDocument.link"
+                  },
+                  "type": "image"
+               },
+                {
+                    "variable": "ulb_grade",
+                    "value": {
+                       "path": "ULBGRADE_MC1"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "tenant_id",
+                    "value": {
+                       "path": "$..Licenses[0].tenantId"
+                    },
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TENANT_TENANTS",   
+                       "module":"rainmaker-common"
+                    } 
+                 },
+                 {
+                    "variable": "corporation_address_label",
+                    "value": {
+                       "path": "CORPORATION_ADDRESS"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$..data.corporationAddress"
+                    }
+                },
+                {
+                    "variable": "corporation_contact_label",
+                    "value": {
+                       "path": "CORPORATION_CONTACT"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "corporation_contact",
+                    "value": {
+                        "path": "$..data.corporationContact"
+                    }
+                },
+                {
+                    "variable": "corporation_website_label",
+                    "value": {
+                       "path": "CORPORATION_WEBSITE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "corporation_website",
+                    "value": {
+                        "path": "$..data.corporationWebsite"
+                    }
+                },
+                {
+                    "variable": "corporation_email_label",
+                    "value": {
+                       "path": "CORPORATION_EMAIL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "corporation_email",
+                    "value": {
+                        "path": "$..data.corporationEmail"
+                    }
+                },
+                {
+                    "variable": "trade_license_certificate",
+                    "value": {
+                       "path": "TRADE_LICENSE_CERTIFICATE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "trade_license_no_label",
+                    "value": {
+                       "path": "TRADE_LICENSE_NO"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "licenseNumber",
+                     "value": {
+                         "path": "$..data.licenseNumber"
+                     }
+                 },
+                 {
+                    "variable": "application_no_label",
+                    "value": {
+                       "path": "APPLICATION_NO"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "applicationNumber",
+                     "value": {
+                         "path": "$..data.applicationNumber"
+                     }
+                 },
+                 {
+                    "variable": "reciept_no_label",
+                    "value": {
+                       "path": "RECIEPT_NO"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "receiptNumber",
+                     "value": {
+                         "path": "$..data.receiptNumber"
+                     }
+                 },
+                 {
+                    "variable": "trade_name_label",
+                    "value": {
+                       "path": "TRADE_TYPE_LABEL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "tradeType",
+                     "value": {
+                         "path": "$..data.tradeType"
+                     },
+                     "localisation": {
+                        "required":true,
+                        "prefix": "GROUP",
+                        "module":"rainmaker-tl"
+                     }
+                 },
+                 {
+                  "variable": "service_type_label",
+                  "value": {
+                     "path": "SERVICE_TYPE_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL",   
+                     "module":"rainmaker-tl"
+                  } 
+               },
+               {
+                   "variable": "service_type",
+                   "value": {
+                       "path": "$..data.tradeType"
+                   },
+                   "localisation": {
+                      "required":true,
+                      "prefix": "SHORT",
+                      "module":"rainmaker-tl"
+                   }
+               },
+                 {
+                    "variable": "owner_name_label",
+                    "value": {
+                       "path": "TRADE_OWNER_NAME"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "owner_name",
+                     "value": {
+                         "path": "$..data.ownersList"
+                     }
+                 },
+                 {
+                    "variable": "father_or_husband_name_label",
+                    "value": {
+                       "path": "FATHER_OR_HUSBANDS_NAME_LABEL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL",
+                       "module":"rainmaker-tl"
+                    }
+                 },
+                 {
+                  "variable": "fatherName",
+                  "value": {
+                      "path": "$..data.owners[0].fatherOrHusbandsName"
+                  }
+                  },
+                 {
+                    "variable": "dob_label",
+                    "value": {
+                       "path": "DOB_LABEL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "dob",
+                     "value": {
+                         "path": "$..data.owners[0].dob"
+                     }
+                 },
+                 {
+                    "variable": "owner_contact_label",
+                    "value": {
+                       "path": "TRADE_OWNER_CONTACT"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "mobile",
+                     "value": {
+                         "path": "$..data.owners[0].mobile"
+                     }
+                 },
+                 {
+                    "variable": "address_label",
+                    "value": {
+                       "path": "TRADE_ADDRESS"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "address",
+                     "value": {
+                         "path": "$..data.owners[0].address"
+                     }
+                 },
+                 {
+                    "variable": "license_fee_label",
+                    "value": {
+                       "path": "TRADE_LICENSE_FEE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "currency_code",
+                    "value": {
+                       "path": "CURRENCY_CODE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "totalAmount",
+                     "value": {
+                         "path": "$..data.totalAmount"
+                     }
+                 },
+                 {
+                    "variable": "issue_date_label",
+                    "value": {
+                       "path": "LICENSE_ISSUE_DATE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "licenseIssueDate",
+                     "value": {
+                         "path": "$..data.licenseIssueDate"
+                     }
+                 },
+                 {
+                    "variable": "validity_label",
+                    "value": {
+                       "path": "LICENSE_VALIDITY"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "to_label",
+                     "value": {
+                         "path": "TRADE_LICENSE_TO"
+                     },
+                     "type": "label",
+                     "localisation":{
+                        "required":true,
+                        "prefix":"TL_LOCALIZATION",   
+                        "module":"rainmaker-tl"
+                     } 
+                 },
+                 {
+                     "variable": "from_date",
+                     "value": {
+                         "path": "$..data.licenseValidity.startDate"
+                     }
+                 },
+                 {
+                    "variable": "to_date",
+                    "value": {
+                        "path": "$..data.licenseValidity.endDate"
+                    }
+                 },
+                 {
+                    "variable": "approved_by_label",
+                    "value": {
+                       "path": "APPROVED_BY"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                     "variable": "auditorName",
+                     "value": {
+                         "path": "$..data.auditorName"
+                     }
+                 },
+                 {
+                    "variable": "commissioner_or_eo",
+                    "value": {
+                       "path": "COMMISSIONER_OR_EO"
+                    },
+                    "type": "label",
+                    "localisation":{
+                       "required":true,
+                       "prefix":"TL_LOCALIZATION",   
+                       "module":"rainmaker-tl"
+                    } 
+                 },
+                 {
+                    "variable": "Disclaimer",
+                    "value": {
+                       "path": "$..data.Disclaimer"
+                    },
+                    "localisation":{
+                     "required":true,
+                     "module":"rainmaker-tl"
+                  } 
+                 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
