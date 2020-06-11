@@ -9,234 +9,39 @@
              "style": "noc-head",
              "table": {
                "widths": [
-                 "*",
-                 "*",
-                 "*"
+                50, "*"
                ],
                "body": [
                  [
-                   {
-                     "text":"{{trade_license_application}}",
-                     "style": "receipt-logo-header"
-                   },
-                   {
-                       "text":"{{application_no}}",
-                       "alignment": "right",
-                       "color": "#484848",
-                       "margin": [
-                        0,
-                        2,
-                        -50,
-                        0
-                     ]
-                   },
-                   {
-                       "text":"{{applicationNumber}}",
-                       "alignment": "right",
-                       "color": "#484848",
-                       "bold": true,
-                       "margin": [
-                        -150,
-                        2,
-                        -20,
-                        0
-                     ]
-                   }
+                  {
+                    "image": "{{ulbLogo}}",
+                    "width": 80,
+                    "height": 80,
+                    "margin": [20, 12, 10, 10]
+                  },
+                  {
+                    "stack": [
+                      {
+                        "text": "{{application_no}} Nagar Panchayat",
+                        "style": "receipt-logo-header"
+                      },
+                      {
+                        "text": "{{application_label}} {{applicationNo}}",
+                        "style": "receipt-logo-sub-header"
+                      }
+                    ],
+                    "alignment": "center",
+                    "margin": [
+                      0,
+                      12,
+                      0,
+                      0
+                    ]
+                  }
                  ]
                ]
              },
              "layout": "noBorders"
-           },
-           {
-             "style": "noc-table2",
-             "table": {
-               "widths": [
-                 "*"
-               ],
-               "body": [
-                 [
-                   {
-                      "stack":[
-                               {
-                                "text":"{{total_amount}}",
-                                "style":"receipt-table-value-total",
-                                "bold" : false
-                               },
-                               {
-                                "text":"{{totalAmount}}",
-                                "style":"receipt-table-value-total",
-                                "fontSize": 20
-                               }
-                             ],
-                               "border":[
-                                true,
-                                true,
-                                true,
-                                false
-                              ]
-                   }
-                 ],
-                 [
-                   {
-                      "stack":[
-                              {
-                                "table": {
-                                       "widths": [
-                                         "*",
-                                         "*"
-                                       ],
-                                       "body": [
-                                         [
-                                           {
-                                             "text":"{{trade_license_tax}}",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                              "style": "receipt-table-value-down"
-                                           },
-                                           {
-                                             "text":"{{totalAmount}}",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                              "style": "receipt-table-value-down"
-                                           }
-                                         ]
-                                         ]
-                                     }
-                               },
-                               {
-                                "table": {
-                                       "widths": [
-                                         "*",
-                                         "*"
-                                       ],
-                                       "body": [
-                                         [
-                                           {
-                                             "text":"{{rebate_label}}",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                              "style": "receipt-table-value-down"
-                                           },
-                                           {
-                                             "text":"NA",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                              "style": "receipt-table-value-down"
-                                           }
-                                         ]
-                                         ]
-                                     }
-                               },
-                               {
-                                "table": {
-                                       "widths": [
-                                         "*",
-                                         "*"
-                                       ],
-                                       "body": [
-                                         [
-                                           {
-                                             "text":"{{penalty_label}}",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                              "style": "receipt-table-value-down"
-                                           },
-                                           {
-                                             "text":"NA",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                              "style": "receipt-table-value-down"
-                                           }
-                                         ]
-                                         ]
-                                     }
-                               },
-                               {
-                               "canvas": [
-                                           {
-                                               "type": "line",
-                                               "x1": 0, "y1": 0,
-                                               "x2": 315, "y2": 0,
-                                               "lineWidth": 1
-                                           }
-                                       ]
-                               },   
-                               {
-                                "table": {
-                                       "widths": [
-                                         "*",
-                                         "*"
-                                       ],
-                                       "body": [
-                                         [
-                                           {
-                                             "text":"{{total_amount}}",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                             "bold": true,
-                                              "style": "receipt-table-value-down"
-                                           },
-                                           {
-                                             "text":"6000",
-                                             "border":[
-                                               false,
-                                               false,
-                                               false,
-                                               false
-                                             ],
-                                             "bold": true,
-                                              "style": "receipt-table-value-down"
-                                           }
-                                         ]
-                                         ]
-                                     }
-                               }
-                             ],
-                               "border":[
-                                true,
-                                false,
-                                true,
-                                true
-                              ],
-                               "margin": [
-                                   0,
-                                   -15,
-                                   0,
-                                   0
-                                 ]
-                   }
-                 ]
-               ]
-             },
-             "layout": {}
            },
            {
              "style": "noc-table2",
@@ -263,34 +68,12 @@
                         "widths": [
                         "25%",
                         "25%",
-                        "30%",
-                        "20%"
+                        "50%"
                          ],
                        "body": [
                          [
                            {
                              "text":"{{application_type}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{old_application_number}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{licence_type}}",
                              "border":[
                                false,
                                false,
@@ -308,31 +91,21 @@
                                false
                              ],
                              "style": "receipt-table-value-cont"
-                           }  
+                           },
+                           {
+                            "text":"{{service_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }  
                          ],
                          [
                            {
                              "text":"{{applicationType}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{oldLicenseNumber}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{licenseType}}",
                              "border":[
                                false,
                                false,
@@ -350,720 +123,83 @@
                                false
                              ],
                               "style": "receipt-table2"
-                           }  
-                         ],
-                         [
+                           },
                            {
-                             "text":"{{structure_type}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{structure_sub_type}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{trade_commencement}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{trade_gst_no}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{structureType}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{structureSubType}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{commencementDate}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{tradeGstNo}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{operational_area}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{no_of_employees}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{operationalArea}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{noOfEmployees}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
-                         ]
-                       ]
-                   },
-                   "border":[
-                       true,
-                       false,
-                       true,
-                       false
-                     ]
-                  }
-                  
-                 ],
-                 [
-                    {
-                       "canvas": [
-                                   {
-                                       "type": "line",
-                                       "x1": 5, "y1": 0,
-                                       "x2": 550, "y2": 0,
-                                       "lineWidth": 1
-                                   }
-                               ],
+                            "text":"{{serviceName}}",
                             "border":[
-                               true,
-                               false,
-                               true,
-                               false
-                             ]	
-                    }   
-                  ],
-                 [
-                    {
-                       "table": {
-                        "widths": [
-                        "25%",
-                        "25%",
-                        "20%",
-                        "30%"
-                         ],
-                       "body": [
-                         [
-                           {
-                             "text":"{{trade_category}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{trade_type}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{trade_sub_type}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{uom_measurement}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           }  
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          }   
                          ],
                          [
-                           {
-                             "text":"{{tradeCategoty}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{tradeType}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{tradeSubType}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{uomMeasurement)}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{uom_value}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{uomValue}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":" ",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
-                         ]
-                       ]
-                   },
-                   "border":[
-                       true,
-                       false,
-                       true,
-                       false
-                     ]
-                  }
-                  
-                 ],
-                 [
-                    {
-                       "canvas": [
-                                   {
-                                       "type": "line",
-                                       "x1": 5, "y1": 0,
-                                       "x2": 550, "y2": 0,
-                                       "lineWidth": 1
-                                   }
-                               ],
+                          {
+                            "text":"{{old_application_number}}",
                             "border":[
-                               true,
-                               false,
-                               true,
-                               false
-                             ]
-                    }   
-                  ],
-                 [
-                    {
-                       "table": {
-                        "widths": [
-                        "25%",
-                        "25%",
-                        "20%",
-                        "30%"
-                         ],
-                       "body": [
-                         [
-                           {
-                             "text":"{{accesory_type}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{uom_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{uom_value}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{accessory_count}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           } 
-                         ],
-                         [
-                           {
-                             "text":"{{accessoryCount}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{uom}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{uomValue}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{accessoryCount}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
-                         ]
-                       ]
-                   },
-                   "border":[
-                       true,
-                       false,
-                       true,
-                       false
-                     ]
-                  }
-                  
-                 ],
-                 [
-                    {
-                       "canvas": [
-                                   {
-                                       "type": "line",
-                                       "x1": 5, "y1": 0,
-                                       "x2": 550, "y2": 0,
-                                       "lineWidth": 1
-                                   }
-                               ],
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont",
+                             "fontSize": 11
+                          },
+                          {
+                            "text":"{{license_period_label}}",
                             "border":[
-                               true,
-                               false,
-                               true,
-                               false
-                             ]
-                    }   
-                  ],
-                 [
-                    {
-                       "table": {
-                        "widths": [
-                        "25%",
-                        "25%",
-                        "20%",
-                        "30%"
-                         ],
-                       "body": [
-                         [
-                           {
-                             "text":"{{property_assessment_id}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{city_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{door_house_no}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{building_colony_name}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
                              "style": "receipt-table-value-cont"
-                           } 
-                         ],
-                         [
-                           {
-                             "text":"{{propertyAssessmentId}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{city}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{doorHouseNo}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{buildingColonyName}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           } 
-                         ],
-                         [
-                           {
-                             "text":"{{street_name}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{mohalla_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{pincode_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{electricity_connection_no}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           }
-                         ],
-                         [
-                           {
-                             "text":"{{streetName}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{mohalla}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{pincode}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{electricityConnectionNo}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           } 
-                         ]
+                          },  
+                          {
+                            "text":"",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }  
+                        ],
+                        [
+                          {
+                            "text":"{{oldApplicationNumber}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":"{{license_period}} {{years}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },  
+                          {
+                            "text":"",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          }  
+                        ]
                        ]
                    },
                    "border":[
@@ -1073,7 +209,6 @@
                        true
                      ]
                   }
-                  
                  ]
                ]
              },
@@ -1111,27 +246,16 @@
                          ],
                        "body": [
                          [
-                           {
-                             "text":"{{type_of_ownership}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{type_of_sub_ownership}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
+                          {
+                            "text":"{{name_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }  ,
                            {
                              "text":"{{mobile_no}}",
                              "border":[
@@ -1141,40 +265,40 @@
                                false
                              ],
                               "style": "receipt-table-value-cont"
-                           },  
+                           },
                            {
-                             "text":"{{name_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
+                            "text":"{{father_husband}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
                              "style": "receipt-table-value-cont"
-                           }  
+                          },
+                          {
+                            "text":"{{date_of_birth}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          } 
                          ],
                          [
-                           {
-                             "text":"{{typeOfOwnership}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{typeOfSubOwnership}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
+                          {
+                            "text":"{{name}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
                              "text":"{{mobileNo}}",
                              "border":[
                                false,
@@ -1183,102 +307,27 @@
                                false
                              ],
                               "style": "receipt-table2"
-                           },  
+                           },
                            {
-                             "text":"{{name}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{father_husband}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{relationship_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{gender_label}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{date_of_birth}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                             "style": "receipt-table-value-cont"
-                           }  
-                         ],
-                         [
-                           {
-                             "text":"{{fatherHusbandName}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{relationship}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{gender}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{dateOfBirth}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
+                            "text":"{{fatherHusbandName}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":"{{dateOfBirth}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          } 
                          ],
                          [
                            {
@@ -1290,38 +339,37 @@
                                false
                              ],
                               "style": "receipt-table-value-cont"
-                           },  
+                           },
                            {
-                             "text":"{{pan_no}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           },  
-                           {
-                             "text":"{{correspondance_address}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{special_owner}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
+                            "text":"{{address_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
                              "style": "receipt-table-value-cont"
-                           }  
+                          },
+                          {
+                            "text":"{{occupation_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          },
+                          {
+                            "text":" ",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          }                           
                          ],
                          [
                            {
@@ -1333,37 +381,37 @@
                                false
                              ],
                               "style": "receipt-table2"
-                           },  
+                           },
                            {
-                             "text":"{{panNo}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{correspondenceAddress}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"{{specialOwnerCategory}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           }  
+                            "text":"{{address}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":"{{occupation}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":" ",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          }
                          ]
                        ]
                    },
@@ -1408,58 +456,10 @@
                  [
                     {
                        "table": {
-                        "widths": [
-                        "50%",
-                        "50%"
-                         ],
-                       "body": [ 
-                            [
-                           {
-                             "text":"{{ownership_proof}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont"
-                           },  
-                           {
-                             "text":"{{owners_id_proof}}",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table-value-cont",
-                              "fontSize": 11
-                           } 
-                           
-                         ],
-                         [
-                           {
-                             "text":"ForwardAndUploadFiles.png",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           },  
-                           {
-                             "text":"CitizenInbox.png",
-                             "border":[
-                               false,
-                               false,
-                               false,
-                               false
-                             ],
-                              "style": "receipt-table2"
-                           } 
-                         ]
-                            ]
+                        "widths":["25%", "25%", "25%", "25%"],
+                       "body": [
+                        "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                       ]
                    },
                    "border":[
                        true,
@@ -1468,7 +468,6 @@
                        true
                      ]
                   }
-                  
                      ]
                 ],
                 "unbreakable": true
@@ -1501,6 +500,18 @@
                5
              ]
            },
+           "receipt-logo-sub-header": {
+            "color": "#484848",
+            "fontFamily": "Roboto",
+            "fontSize": 13,
+            "letterSpacing": 1.6,
+            "margin": [
+              0,
+              6,
+              0,
+              0
+            ]
+          },
             "noc-table": {
              "fontSize": 12,
              "color": "#484848",
