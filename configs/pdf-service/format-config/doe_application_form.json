@@ -1,0 +1,1305 @@
+{
+	"key": "doe_application_form",
+	"config": {
+		"defaultStyle": {
+			"font": "Cambay"
+		},
+
+
+		"content": [{
+				"style": "noc-head",
+				"table": {
+					"widths": [
+						"*",
+						"*",
+						"*"
+					],
+					"body": [
+						[{
+								"text": "Benefit for Death of an Employee",
+								"style": "receipt-logo-header"
+							},
+							{
+								"text": "Application Number",
+								"alignment": "right",
+								"color": "#484848",
+								"margin": [
+									0,
+									2,
+									-50,
+									0
+								]
+							},
+							{
+								"text": "{{application_number}}",
+								"alignment": "right",
+								"color": "#484848",
+								"bold": true,
+								"margin": [
+									-150,
+									2,
+									-20,
+									0
+								]
+							}
+						]
+					]
+				},
+				"layout": "noBorders"
+			},
+			{
+				"style": "noc-table2",
+				"table": {
+					"widths": [
+						"*"
+					],
+					"body": [
+						[{
+							"stack": [],
+							"border": [
+								true,
+								true,
+								true,
+								false
+							]
+						}],
+						[{
+							"stack": [{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Employee Name",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{employee_name}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Date of Birth",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{dob}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Date of Retirement",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{dor}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Date of Death",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{dod}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Department",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{department}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Designation",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{designation}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Employee Type",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{employee_type}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Service Date From",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{service_date_from}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Service Date To",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{service_date_to}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Residential address",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{residential_address}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								}
+								
+							],
+							"border": [
+								true,
+								false,
+								true,
+								true
+							],
+							"margin": [
+								0,
+								0,
+								0,
+								0
+							]
+						}],
+						[{
+							"stack": [{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Employee Group",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{employee_group}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "LPD",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{lpd}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "LTC",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{ltc}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "FMA",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{fma}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Miscellaneous",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{miscellaneous}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Income Tax",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{income_tax}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "CESS",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{cess}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Overpayment",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{overpayment}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is Dues Present",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_dues_present}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is Dues Amount Decided",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_dues_amount_decided}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Dues Amount",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{dues_amount}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "No Dues present for availed Government Accommodation",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{no_dues_for_availed_govt_accomodation}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "No pay Leave Count - Year",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{leave_count_year}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "No pay Leave Count - Month",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{leave_count_month}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "No pay Leave Count - Day",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{leave_count_day}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Bank Address",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{bank_address}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Account Number",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{account_number}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is eligible for pension",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_eligible_for_pension}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is died in Extremists, Dacoits, Smuggler, Anti-social attack",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_injured_in_extremists_dacoits_smuggler_antisocial_attack}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is died in Terrorist attack",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_injured_in_terrorist_attack}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is died in Accident",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_injured_died_in_accident}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								}
+							],
+							"border": [
+								true,
+								false,
+								true,
+								true
+							],
+							"margin": [
+								0,
+								0,
+								0,
+								0
+							]
+						}],
+						[{
+							"stack": [{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Disability Percentage(if applicable)",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{disability_percentage}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Wound or Extraordinary Pension Amount (in case of disability)",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{wound_extraordinary_pension_amount}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								},
+								{
+									"table": {
+										"widths": [
+											"*",
+											"*"
+										],
+										"body": [
+											[{
+													"text": "Is Attended allowance granted (in case of disability)",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												},
+												{
+													"text": "{{is_attended_allowance_granted}}",
+													"border": [
+														false,
+														false,
+														false,
+														false
+													],
+													"style": "receipt-table-value-down"
+												}
+											]
+										]
+									}
+								}
+							],
+							"border": [
+								true,
+								false,
+								true,
+								true
+							],
+							"margin": [
+								0,
+								0,
+								0,
+								0
+							]
+						}]
+					]
+				},
+				"layout": {}
+			}
+		],
+
+		"styles": {
+			"noc-head": {
+				"margin": [
+					-25,
+					-30,
+					0,
+					1
+				]
+			},
+			"receipt-logo-header": {
+				"color": "#484848",
+				"fontSize": 14,
+				"bold": true,
+				"letterSpacing": 0.74,
+				"margin": [
+					0,
+					0,
+					0,
+					5
+				]
+			},
+			"noc-table": {
+				"fontSize": 12,
+				"color": "#484848",
+				"margin": [
+					-25,
+					45,
+					-8,
+					-8
+				]
+			},
+			"noc-table2": {
+				"fontSize": 12,
+				"color": "#484848",
+				"margin": [
+					-25,
+					18,
+					-25,
+					-8
+				]
+			},
+			"receipt-table-value": {
+				"color": "#000000",
+				"bold": true,
+				"fontSize": 12,
+				"fontWeight": 500,
+				"margin": [
+					5,
+					5,
+					0,
+					0
+				]
+			},
+			"receipt-table-value-total": {
+				"color": "#000000",
+				"bold": true,
+				"fontSize": 12,
+				"fontWeight": 500,
+				"alignment": "right",
+				"margin": [
+					0,
+					5,
+					30,
+					0
+				]
+			},
+			"receipt-table-value-down": {
+				"color": "#000000",
+				"bold": false,
+				"fontSize": 12,
+				"fontWeight": 400,
+				"alignment": "left",
+				"margin": [
+					3,
+					5,
+					0,
+					5
+				]
+			},
+			"receipt-table-value2": {
+				"color": "#000000",
+				"bold": false,
+				"fontSize": 12,
+				"fontWeight": 500,
+				"margin": [
+					3,
+					0,
+					0,
+					0
+				]
+			},
+			"receipt-table-value-cont": {
+				"color": "#000000",
+				"bold": false,
+				"fontSize": 11,
+				"fontWeight": 400,
+				"margin": [
+					3,
+					0,
+					0,
+					0
+				]
+			},
+			"receipt-table": {
+				"color": "#484848",
+				"bold": true,
+				"fontSize": 12,
+				"fontWeight": 400,
+				"margin": [
+					-30,
+					5,
+					0,
+					0
+				]
+			},
+			"receipt-table2": {
+				"color": "#000000",
+				"bold": true,
+				"fontSize": 12,
+				"fontWeight": 500,
+				"margin": [
+					3,
+					0,
+					0,
+					0
+				]
+			}
+		}
+
+
+	}
+}
