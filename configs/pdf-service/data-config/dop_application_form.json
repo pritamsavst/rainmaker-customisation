@@ -1,0 +1,306 @@
+{
+	"key": "dop_application_form",
+	"DataConfigs": {
+		"serviceName": "pension",
+		"version": "1.0.0",
+		"baseKeyPath": "$.ApplicationDetails",
+		"entityIdPath": "$.businessId",
+		"isCommonTableBorderRequired": true,
+		"mappings": [{
+			"topic": "pension-pdf-generation",
+			"mappings": [{
+				"direct": [{
+						"variable": "application_number",
+						"value": {
+							"path": "$.businessId"
+						}
+					},
+					{
+						"variable": "employee_name",
+						"value": {
+							"path": "$.employee_name"
+						}
+					},
+					{
+						"variable": "dob",
+						"value": {
+							"path": "$.dob"
+						}
+					},
+					{
+						"variable": "dor",
+						"value": {
+							"path": "$.dateOfRetirement"
+						}
+					},
+					{
+						"variable": "dod",
+						"value": {
+							"path": "$.dateOfRetirement"
+						}
+					},
+					{
+						"variable": "department",
+						"value": {
+							"path": "$.department"
+						}
+					},
+					{
+						"variable": "designation",
+						"value": {
+							"path": "$.designation"
+						}
+					},
+					{
+						"variable": "employee_type",
+						"value": {
+							"path": "$.employee_type"
+						}
+					},
+					{
+						"variable": "employee_status",
+						"value": {
+							"path": "$.employee_status"
+						}
+					},
+					{
+						"variable": "service_date_from",
+						"value": {
+							"path": "$.serviceFrom"
+						}
+					},
+					{
+						"variable": "service_date_to",
+						"value": {
+							"path": "$.serviceTo"
+						}
+					},
+					{
+						"variable": "residential_address",
+						"value": {
+							"path": "$.permanentAddress"
+						}
+					},
+					{
+						"variable": "city",
+						"value": {
+							"path": "$.permanentCity"
+						}
+					},
+					{
+						"variable": "pincode",
+						"value": {
+							"path": "$.permanentPinCode"
+						}
+					},
+
+					{
+						"variable": "employee_group",
+						"value": {
+							"path": "$.employeeGroup"
+						}
+					},
+
+					{
+						"variable": "reason_for_retirement",
+						"value": {
+							"path": "$.reasonForRetirement"
+						}
+					},
+
+					{
+						"variable": "lpd",
+						"value": {
+							"path": "$.lpd"
+						}
+					},
+					{
+						"variable": "ltc",
+						"value": {
+							"path": "$.ltc"
+						}
+					},
+					{
+						"variable": "fma",
+						"value": {
+							"path": "$.fma"
+						}
+					},
+					{
+						"variable": "miscellaneous",
+						"value": {
+							"path": "$.miscellaneous"
+						}
+					},
+					{
+						"variable": "income_tax",
+						"value": {
+							"path": "$.incomeTax"
+						}
+					},
+					{
+						"variable": "cess",
+						"value": {
+							"path": "$.cess"
+						}
+					},
+					{
+						"variable": "overpayment",
+						"value": {
+							"path": "$.overPayment"
+						}
+					},
+
+
+					{
+						"variable": "is_dues_present",
+						"value": {
+							"path": "$.isDuesPresent"
+						}
+					},
+					{
+						"variable": "is_dues_amount_decided",
+						"value": {
+							"path": "$.isDuesAmountDecided"
+						}
+					},
+					{
+						"variable": "dues_amount",
+						"value": {
+							"path": "$.dues"
+						}
+					},
+					{
+						"variable": "no_dues_for_availed_govt_accomodation",
+						"value": {
+							"path": "$.isEligibleForPension"
+						}
+					},
+					{
+						"variable": "leave_count_year",
+						"value": {
+							"path": "$.totalNoPayLeavesYears"
+						}
+					},
+					{
+						"variable": "leave_count_month",
+						"value": {
+							"path": "$.totalNoPayLeavesMonths"
+						}
+					},
+					{
+						"variable": "leave_count_day",
+						"value": {
+							"path": "$.totalNoPayLeavesDays"
+						}
+					},
+					{
+						"variable": "bank_address",
+						"value": {
+							"path": "$.bankAddress"
+						}
+					},
+					{
+						"variable": "account_number",
+						"value": {
+							"path": "$.accountNumber"
+						}
+					},
+
+					{
+						"variable": "is_eligible_for_pension",
+						"value": {
+							"path": "$.isEligibleForPension"
+						}
+					},
+					{
+						"variable": "is_opted_for_commutation",
+						"value": {
+							"path": "$.isCommutationOpted"
+						}
+					},
+					{
+						"variable": "is_compassionate_pension_granted",
+						"value": {
+							"path": "$.isCompassionatePensionGranted"
+						}
+					},
+
+					{
+						"variable": "is_taken_monthly_pension_and_gratuity",
+						"value": {
+							"path": "$.isTakenMonthlyPensionAndGratuity"
+						}
+					},
+					{
+						"variable": "is_taken_compensation_pension_and_gratuity",
+						"value": {
+							"path": "$.isTakenCompensationPensionAndGratuity"
+						}
+					},
+					{
+						"variable": "is_taken_gratuity_commutation_terminal_benefit",
+						"value": {
+							"path": "$.isTakenGratuityCommutationTerminalBenefit"
+						}
+					},
+
+
+					{
+						"variable": "is_judicial_proceeding_continued",
+						"value": {
+							"path": "$.isAnyJudicialProceedingIsContinuing"
+						}
+					},
+					{
+						"variable": "if_misconduct_insolvency_inefficiency",
+						"value": {
+							"path": "$.isAnyMisconductInsolvencyInefficiency"
+						}
+					},
+
+					{
+						"variable": "is_convicted_serious_crime_or_guilty_grave_misconduct",
+						"value": {
+							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+						}
+					},
+
+					{
+						"variable": "is_injured_in_extremists_dacoits_smuggler_antisocial_attack",
+						"value": {
+							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+						}
+					},
+					{
+						"variable": "is_injured_in_terrorist_attack",
+						"value": {
+							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+						}
+					},
+					{
+						"variable": "disability_percentage",
+						"value": {
+							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+						}
+					},
+					{
+						"variable": "wound_extraordinary_pension_amount",
+						"value": {
+							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+						}
+					},
+					{
+						"variable": "is_attended_allowance_granted",
+						"value": {
+							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+						}
+					}
+
+
+
+				]
+			}]
+		}]
+	}
+}
