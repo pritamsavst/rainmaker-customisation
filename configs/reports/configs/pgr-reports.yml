@@ -142,11 +142,10 @@ ReportDefinitions:
     description, 
     (SELECT (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining') END) as slaHours), 
     Initcap(status) as status
-    FROM eg_pgr_service, eg_user, eg_pgr_address 
-    WHERE eg_pgr_service.accountid = eg_user.id::VARCHAR 
-    AND eg_pgr_service.tenantid LIKE $tenantid 
-    AND eg_pgr_address.uuid = eg_pgr_service.addressid
-    AND status IN ('open','assigned','reassigrequested','rejected')
+    FROM eg_pgr_service LEFT JOIN eg_user on eg_pgr_service.accountid = eg_user.id::VARCHAR
+    LEFT JOIN eg_pgr_address on eg_pgr_address.uuid = eg_pgr_service.addressid
+    WHERE eg_pgr_service.tenantid LIKE $tenantid
+    AND status IN ('open','assigned','reassignrequested','rejected','escalatedlevel1pending','escalatedlevel2pending','closed','resolved')
   orderby: ORDER BY eg_pgr_service.createdtime asc
 
 - reportName: StateSourceReport
@@ -556,6 +555,11 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: true
+  - name: escalated
+    label: reports.rainmaker-pgr.status.escalated
+    type: string
+    source: eg_pgr_service
+    total: true
   - name: total
     label: reports.rainmaker-pgr.total
     type: string
@@ -583,6 +587,7 @@ ReportDefinitions:
     SUM(CASE WHEN status in ('closed', 'resolved') THEN 1 ELSE 0 END) as closed,
     SUM(CASE WHEN status ='reassignrequested' THEN 1 ELSE 0 END) as reassignrequested,
     SUM(CASE WHEN status ='rejected' THEN 1 ELSE 0 END) as rejected,
+    SUM(CASE WHEN status in ('escalatedlevel1pending','escalatedlevel2pending') THEN 1 ELSE 0 END) as escalated,
     count(status) as total
     from eg_pgr_service
     WHERE tenantid != 'ch.testing'
@@ -745,7 +750,8 @@ ReportDefinitions:
       createdtime, 
       status,
       (select max("when") from eg_pgr_action where action='resolve' and businesskey = servicerequestid) as resolvedtime,
-      (select min("when") from eg_pgr_action where action='open' and businesskey = servicerequestid) as opentime
+      (select min("when") from eg_pgr_action where action='open' and businesskey = servicerequestid) as opentime,
+      slaendtime
     from eg_pgr_service as ps
     where 
     tenantid = $tenantid)
@@ -755,10 +761,10 @@ ReportDefinitions:
       count(*) as total,
       SUM (CASE WHEN status in ('rejected') THEN 1 ELSE 0 END) as rejected,
       SUM (CASE WHEN status in ('closed', 'resolved') THEN 1 ELSE 0 END) as resolved,
-      SUM (CASE WHEN status in ('closed', 'resolved') and (resolvedtime - opentime) >= 14 * 86400 * 1000 THEN 1 ELSE 0 END) as resolvedoutsidesla,
-      SUM (CASE WHEN status in ('assigned', 'reassignrequested') THEN 1 ELSE 0 END) as assigned,
+      SUM (CASE WHEN status in ('closed', 'resolved') and (resolvedtime >slaendtime) THEN 1 ELSE 0 END) as resolvedoutsidesla,
+      SUM (CASE WHEN status in ('assigned', 'reassignrequested','escalatedlevel1pending','escalatedlevel2pending') THEN 1 ELSE 0 END) as assigned,
       SUM (CASE WHEN status in ('open') THEN 1 ELSE 0 END) as open,
-      SUM (CASE WHEN status in ('assigned', 'reassignrequested', 'open') and (extract(epoch from now()) * 1000 - opentime) >= 14 * 86400 * 1000 THEN 1 ELSE 0 END) as outsidesla
+      SUM (CASE WHEN status in ('assigned', 'reassignrequested', 'open','escalatedlevel1pending','escalatedlevel2pending') and (extract(epoch from now()) * 1000 - slaendtime) >0 and slaendtime is not null THEN 1 ELSE 0 END) as outsidesla
       from pgr_data
       INNER JOIN (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) ON deptmap.serviceCode = pgr_data.servicecode
       INNER JOIN (VALUES tbl_def_dept) AS deptmap_def(name,code) ON deptmap.department = deptmap_def.code
@@ -823,7 +829,9 @@ ReportDefinitions:
     with pgr_data as (select  
       (select assignee from eg_pgr_action as pa where 
       pa.businesskey = ps.servicerequestid 
-      and pa."action" in ('assign', 'reassign')
+      --and pa."action" in ('assign', 'reassign')
+      and pa.status in ('assigned','resolved')
+      and pa.assignee is not null
       order by "when" desc
       fetch first 1 rows only
       ) as assignee, 
@@ -831,19 +839,20 @@ ReportDefinitions:
       createdtime, 
       status,
       (select max("when") from eg_pgr_action where action='resolve' and businesskey = servicerequestid) as resolvedtime,
-      (select min("when") from eg_pgr_action where action='open' and businesskey = servicerequestid) as opentime
+      (select min("when") from eg_pgr_action where action='open' and businesskey = servicerequestid) as opentime,
+      slaendtime
     from eg_pgr_service as ps
     where 
     tenantid = $tenantid)
 
     select 
-      coalesce((select name from eg_user where id::varchar = assignee),'-- Unassigned --') as employee, 
+      coalesce((select trim(name) from eg_user where id::varchar = assignee),'-- Unassigned --') as employee,
       SUM (CASE WHEN status in ('rejected') THEN 1 ELSE 0 END) as rejected,
       SUM (CASE WHEN status in ('closed', 'resolved') THEN 1 ELSE 0 END) as resolved,
-      SUM (CASE WHEN status in ('closed', 'resolved') and (resolvedtime - opentime) >= 14 * 86400 * 1000 THEN 1 ELSE 0 END) as resolvedoutsidesla,
-      SUM (CASE WHEN status in ('assigned', 'reassignrequested') THEN 1 ELSE 0 END) as assigned,
+      SUM (CASE WHEN status in ('closed', 'resolved') and (resolvedtime >slaendtime)  THEN 1 ELSE 0 END) as resolvedoutsidesla,
+      SUM (CASE WHEN status in ('assigned', 'reassignrequested','escalatedlevel1pending','escalatedlevel2pending') THEN 1 ELSE 0 END) as assigned,
       SUM (CASE WHEN status in ('open') THEN 1 ELSE 0 END) as open,
-      SUM (CASE WHEN status in ('assigned', 'reassignrequested', 'open') and (extract(epoch from now()) * 1000 - opentime) >= 14 * 86400 * 1000 THEN 1 ELSE 0 END) as outsidesla
+      SUM (CASE WHEN status in ('assigned', 'reassignrequested', 'open','escalatedlevel1pending','escalatedlevel2pending') and (extract(epoch from now()) * 1000 - slaendtime) >= 0 THEN 1 ELSE 0 END) as outsidesla
       from pgr_data
       WHERE 1=1
   orderby: ORDER BY assignee NULLS FIRST
