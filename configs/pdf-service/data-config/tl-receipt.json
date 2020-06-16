@@ -660,7 +660,8 @@
                      },
                      {
                         "variable":"variable17",
-                        "value":{"path":"$..Payments[0].transactionDate"}
+                        "value":{"path":"$..Payments[0].transactionDate"},
+                        "type": "date"
                      },                           
                      {
                         "variable":"variable18",

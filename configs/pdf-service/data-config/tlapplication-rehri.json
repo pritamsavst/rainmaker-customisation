@@ -1,0 +1,601 @@
+{
+    "key": "tlapplication_CTL.REHRI_REGISTRATION",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Licenses.*",
+      "entityIdPath":"$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "old_license_validity_label",
+                  "value": {
+                    "path": "OLD_LICENSE_VALIDITY_DATE_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL",   
+                     "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "trade_label",
+                  "value": {
+                     "path": "TRADE_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL",   
+                     "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "particulars_of_area_label",
+                  "value": {
+                     "path": "PARTICULARS_OF_AREA"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL",   
+                     "module":"rainmaker-tl"
+                  } 
+               },
+                {
+                  "variable": "platform_label",
+                  "value": {
+                    "path": "PLATFORM_NUMBER_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "place_of_work_label",
+                  "value": {
+                    "path": "PLACE_OF_WORK_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "business_date_label",
+                  "value": {
+                    "path": "BUSINESS_START_DATE_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "family_income_label",
+                  "value": {
+                    "path": "FAMILY_MONTHLY_INCOME_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "complete_address_label",
+                  "value": {
+                    "path": "COMPLETE_RESIDENTIAL_ADDRESS_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "trade_details",
+                  "value": {
+                     "path": "TRADE_DETAILS"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL_LOCALIZATION",   
+                     "module":"rainmaker-tl"
+                  } 
+               },
+               {
+                "variable": "years",
+                "value": {
+                   "path": "YEARS"
+                },
+                "type": "label",
+                "localisation":{
+                   "required":true,
+                   "prefix":"TL_LOCALIZATION",   
+                   "module":"rainmaker-tl"
+                } 
+             },
+               {
+                 "variable": "application_label",
+                 "value": {
+                   "path": "APP_NO_LABEL"
+                 },
+                 "type": "label",
+                 "localisation":{
+                    "required":true,
+                    "prefix":"TL_HOME_SEARCH_RESULTS",   
+                    "module":"rainmaker-tl"
+                 } 
+               },
+                {
+                    "variable": "applicationNo",
+                    "value": {
+                      "path": "$.applicationNumber"
+                    }
+                },
+                {
+                    "variable": "totalAmount",
+                    "value": {
+                      "path": "$.totalDue"
+                    }
+                },
+                {
+                    "variable": "tradeLicenseTax",
+                    "value": {
+                      "path": "$.totalDue"
+                    }
+                },
+                {
+                    "variable": "rebate",
+                    "value": {
+                      "path": "$.totalDue"
+                    }
+                },
+                {
+                    "variable": "penalty",
+                    "value": {
+                      "path": "$.totalDue"
+                    }
+                },
+                {
+                  "variable": "applicationType",
+                  "value": {
+                    "path": "$.applicationType"
+                  },
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL_TYPE",   
+                    "module":"rainmaker-tl"
+                 }
+                },
+                {
+                  "variable": "old_license_validity",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.oldLicenseValidTo"
+                  },
+                  "type": "date"
+                },
+                {
+                  "variable": "trade_value",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.tradeValue"
+                  }
+                },
+                {
+                  "variable": "particulars_of_area",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.particularsOfArea"
+                  }
+                },
+                {
+                  "variable": "complete_address",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.addressLine1"
+                  }
+                },
+                {
+                  "variable": "platform_value",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.platformNumber"
+                  }
+                },
+                {
+                  "variable": "place_of_work",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.placeOfWork"
+                  }
+                },
+                {
+                  "variable": "business_start_date",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.businessStartDate"
+                  }
+                },
+                {
+                  "variable": "family_income",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.familyMonthlyIncome"
+                  }
+                },
+                {
+                  "variable": "license_period",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.additionalDetail.licensePeriod"
+                  }
+                },
+                {
+                  "variable": "oldApplicationNumber",
+                  "value": {
+                    "path": "$.oldLicenseNumber"
+                  }
+                },
+                {
+                    "variable": "tradeName",
+                    "value": {
+                      "path": "$.businessService"
+                    },
+                    "localisation": {
+                      "required":true,
+                      "prefix": "GROUP",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                  "variable": "serviceName",
+                  "value": {
+                    "path": "$.businessService"
+                  },
+                  "localisation": {
+                    "required":true,
+                    "prefix": "SHORT",
+                    "module":"rainmaker-tl"
+                 }
+              },
+                {
+                    "variable": "mobileNo",
+                    "value": {
+                      "path": "$..tradeLicenseDetail.owners[0].mobileNumber"
+                    }
+                },
+                {
+                    "variable": "name",
+                    "value": {
+                      "path": "$.tradeLicenseDetail.owners[0].name"
+                    }
+                },
+                {
+                    "variable": "fatherHusbandName",
+                    "value": {
+                      "path": "$.tradeLicenseDetail.owners[0].fatherOrHusbandName"
+                    }
+                },
+                {
+                    "variable": "relationship",
+                    "value": {
+                      "path": "$.tradeLicenseDetail.owners[0].relationship"
+                    }
+                },
+                {
+                    "variable": "gender",
+                    "value": {
+                      "path": "$.tradeLicenseDetail.owners[0].gender"
+                    }
+                },
+                {
+                    "variable": "dateOfBirth",
+                    "value": {
+                      "path": "$.tradeLicenseDetail.owners[0].dob"
+                    },
+                    "type": "date"
+                },
+                {
+                    "variable": "email",
+                    "value": {
+                      "path": "$.tradeLicenseDetail.owners[0].emailId"
+                    }
+                },
+                {
+                  "variable": "address",
+                  "value": {
+                    "path": "$.tradeLicenseDetail.owners[0].permanentAddress"
+                  }
+              },
+              {
+                "variable": "occupation",
+                "value": {
+                  "path": "$.tradeLicenseDetail.additionalDetail.occupation"
+                }
+            },
+                {
+                  "variable": "ulb_grade",
+                  "value": {
+                     "path": "ULBGRADE_MC1"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL_LOCALIZATION",   
+                     "module":"rainmaker-tl"
+                  } 
+                  },
+                {
+                  "variable": "ulbLogo",                        
+                  "url":"https://egov.transerve.com/media/logo.png",
+                  "type":"image"
+               },
+               {
+                  "variable": "ownerPhoto",
+                  "value": {
+                    "path": "$.ownerDocument.link"
+                  },
+                  "type": "image"
+               },
+                {
+                    "variable": "application_no",
+                    "value": {
+                      "path": "$.tenantId"
+                    },
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TENANT_TENANTS",
+                      "module":"rainmaker-common"
+                   },
+                   "isUpperCaseRequired":true
+                },
+                {
+                    "variable": "total_amount",
+                    "value": {
+                      "path": "PDF_STATIC_LABEL_CONSOLIDATED_TLAPP_TOTAL_AMOUNT"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": null,
+                      "module":"rainmaker-common"
+                   }
+                },
+                {
+                    "variable": "trade_license_tax",
+                    "value": {
+                      "path": "PDF_STATIC_LABEL_CONSOLIDATED_TLAPP_TRADE_LICENSE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": null,
+                      "module":"rainmaker-common"
+                   }
+                },
+                {
+                    "variable": "rebate_label",
+                    "value": {
+                      "path": "PDF_STATIC_LABEL_CONSOLIDATED_TLAPP_REBATE"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": null,
+                      "module":"rainmaker-common"
+                   }
+                },
+                {
+                    "variable": "penalty_label",
+                    "value": {
+                      "path": "PDF_STATIC_LABEL_CONSOLIDATED_TLAPP_PENALTY"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": null,
+                      "module":"rainmaker-common"
+                   }
+                },
+                {
+                    "variable": "application_type",
+                    "value": {
+                      "path": "APPLICATION_TYPE"
+                   },
+                   "type": "label",
+                   "localisation":{
+                      "required":true,
+                      "prefix":"TL_LOCALIZATION",   
+                      "module":"rainmaker-common"
+                   }
+                },
+                {
+                  "variable": "license_period_label",
+                  "value": {
+                    "path": "LICENSE_PERIOD_LABEL"
+                 },
+                 "type": "label",
+                 "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                 }
+              },
+                {
+                    "variable": "old_application_number",
+                    "value": {
+                      "path": "OLD_LICENSE_NO"
+                   },
+                   "type": "label",
+                   "localisation":{
+                      "required":true,
+                      "prefix":"TL_LOCALIZATION",   
+                      "module":"rainmaker-tl"
+                   } 
+                },
+                {
+                    "variable": "trade_name",
+                    "value": {
+                      "path": "TRADE_TYPE_LABEL"
+                   },
+                   "type": "label",
+                   "localisation":{
+                      "required":true,
+                      "prefix":"TL",   
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                  "variable": "service_label",
+                  "value": {
+                    "path": "SERVICE_TYPE_LABEL"
+                 },
+                 "type": "label",
+                 "localisation":{
+                    "required":true,
+                    "prefix":"TL",   
+                    "module":"rainmaker-tl"
+                 }
+              },
+                {
+                    "variable": "owner_details",
+                    "value": {
+                      "path": "OWNERSHIP_INFORMATION"
+                   },
+                   "type": "label",
+                   "localisation":{
+                      "required":true,
+                      "prefix":"TL_LOCALIZATION",   
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                    "variable": "mobile_no",
+                    "value": {
+                      "path": "LOCALIZATION_TRADE_OWNER_CONTACT"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TL",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                    "variable": "name_label",
+                    "value": {
+                      "path": "TRADE_OWNER_NAME"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TL_LOCALIZATION",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                    "variable": "father_husband",
+                    "value": {
+                      "path": "FATHER_OR_HUSBANDS_NAME_LABEL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TL",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                    "variable": "relationship_label",
+                    "value": {
+                      "path": "PDF_STATIC_LABEL_CONSOLIDATED_TLAPP_RELATIONSHIP"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": null,
+                      "module":"rainmaker-common"
+                   }
+                },
+                {
+                    "variable": "date_of_birth",
+                    "value": {
+                      "path": "DOB_LABEL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TL",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                    "variable": "email_label",
+                    "value": {
+                      "path": "EMAIL_LABEL"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TL",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                  "variable": "address_label",
+                  "value": {
+                    "path": "LOCALIZATION_TRADE_ADDRESS"
+                  },
+                  "type": "label",
+                  "localisation":{
+                    "required":true,
+                    "prefix": "TL",
+                    "module":"rainmaker-tl"
+                 }
+              },
+              {
+                "variable": "occupation_label",
+                "value": {
+                  "path": "OCCUPATION_LABEL"
+                },
+                "type": "label",
+                "localisation":{
+                  "required":true,
+                  "prefix": "TL",
+                  "module":"rainmaker-tl"
+               }
+            },
+                {
+                    "variable": "documents_label",
+                    "value": {
+                      "path": "COMMON_DOCS"
+                    },
+                    "type": "label",
+                    "localisation":{
+                      "required":true,
+                      "prefix": "TL",
+                      "module":"rainmaker-tl"
+                   }
+                },
+                {
+                    "variable": "documents_array",
+                    "value": {
+                      "path": "$.additionalDetails.documents.*"
+                    }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
