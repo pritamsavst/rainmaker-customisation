@@ -113,12 +113,10 @@
             {
               "text": [
                 {
-                  "text": "{{recieptNo}} ",
-                  "bold": true
+                  "text": ""
                 },
                 {
-                  "text": "{{variable16}}",
-                  "bold": false
+                  "text": ""
                 }
               ],
               "alignment": "right"

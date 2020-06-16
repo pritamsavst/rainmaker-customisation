@@ -1,0 +1,625 @@
+{
+    "key": "tlapplication_CTL.REHRI_DRIVING_LICENSE",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+           },
+        "content": [
+            {
+             "style": "noc-head",
+             "table": {
+               "widths": [
+                50, "*"
+               ],
+               "body": [
+                 [
+                  {
+                    "image": "{{ulbLogo}}",
+                    "width": 80,
+                    "height": 80,
+                    "margin": [20, 12, 10, 10]
+                  },
+                  {
+                    "stack": [
+                      {
+                        "text": "{{ulb_grade}} {{application_no}}",
+                        "style": "receipt-logo-header"
+                      },
+                      {
+                        "text": "{{application_label}} {{applicationNo}}",
+                        "style": "receipt-logo-sub-header"
+                      }
+                    ],
+                    "alignment": "center",
+                    "margin": [
+                      0,
+                      12,
+                      0,
+                      0
+                    ]
+                  }
+                 ]
+               ]
+             },
+             "layout": "noBorders"
+           },
+           {
+             "style": "noc-table2",
+             "table": {
+               "widths": [
+                 "*"
+               ],
+               "body": [
+                 [
+                   {
+                     "text":"{{trade_details}}",
+                     "border":[
+                       true,
+                       true,
+                       true,
+                       false
+                     ],
+                      "style": "receipt-table-value"
+                   }
+                 ],
+                 [
+                    {
+                       "table": {
+                        "widths": [
+                        "25%",
+                        "25%",
+                        "50%"
+                         ],
+                       "body": [
+                         [
+                           {
+                             "text":"{{application_type}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table-value-cont"
+                           },  
+                           {
+                             "text":"{{trade_name}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                             "style": "receipt-table-value-cont"
+                           },
+                           {
+                            "text":"{{service_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }  
+                         ],
+                         [
+                           {
+                             "text":"{{applicationType}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table2"
+                           },  
+                           {
+                             "text":"{{tradeName}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table2"
+                           },
+                           {
+                            "text":"{{serviceName}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          }   
+                         ],
+                         [
+                          {
+                            "text":"{{old_application_number}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont",
+                             "fontSize": 11
+                          },
+                          {
+                            "text":"{{license_period_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          },  
+                          {
+                            "text":"{{old_license_validity_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }  
+                        ],
+                        [
+                          {
+                            "text":"{{oldApplicationNumber}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":"{{license_period}} {{years}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },  
+                          {
+                            "text":"{{old_license_validity}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          }  
+                        ]
+                       ]
+                   },
+                   "border":[
+                       true,
+                       false,
+                       true,
+                       true
+                     ]
+                  }
+                 ]
+               ]
+             },
+             "layout": {}
+           },
+           {
+             "stack": [
+               {
+             "style": "noc-table2",
+             "table": {
+               "widths": [
+                 "*"
+               ],
+               "body": [
+                 [
+                       {
+                         "text":"{{owner_details}}",
+                         "border":[
+                           true,
+                           true,
+                           true,
+                           false
+                         ],
+                          "style": "receipt-table-value"
+                       }
+                 ],
+                 [
+                    {
+                       "table": {
+                        "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                         [
+                          {
+                            "text":"{{name_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }  ,
+                           {
+                             "text":"{{mobile_no}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table-value-cont"
+                           },
+                           {
+                            "text":"{{father_husband}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          },
+                          {
+                            "text":"{{date_of_birth}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          } 
+                         ],
+                         [
+                          {
+                            "text":"{{name}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                             "text":"{{mobileNo}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table2"
+                           },
+                           {
+                            "text":"{{fatherHusbandName}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":"{{dateOfBirth}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          } 
+                         ],
+                         [
+                           {
+                             "text":"{{email_label}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table-value-cont"
+                           },
+                           {
+                            "text":"{{address_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          },
+                          {
+                            "text":"{{occupation_label}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          },
+                          {
+                            "text":" ",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          }                           
+                         ],
+                         [
+                           {
+                             "text":"{{email}}",
+                             "border":[
+                               false,
+                               false,
+                               false,
+                               false
+                             ],
+                              "style": "receipt-table2"
+                           },
+                           {
+                            "text":"{{address}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":"{{occupation}}",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table2"
+                          },
+                          {
+                            "text":" ",
+                            "border":[
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                             "style": "receipt-table-value-cont"
+                          }
+                         ]
+                       ]
+                   },
+                   "border":[
+                       true,
+                       false,
+                       true,
+                       true
+                     ]
+                  }
+                  
+                 ]
+                ],
+                "unbreakable": true
+             },
+             "layout": {}
+           }
+             ],
+             "unbreakable": true
+           },
+           {
+             "stack": [
+               {
+             "style": "noc-table2",
+             "table": {
+               "widths": [
+                 "*"
+               ],
+               "body": [
+                 [
+                       {
+                         "text":"{{documents_label}}",
+                         "border":[
+                           true,
+                           true,
+                           true,
+                           false
+                         ],
+                          "style": "receipt-table-value"
+                       }
+                 ],
+                 [
+                    {
+                       "table": {
+                        "widths":["25%", "25%", "25%", "25%"],
+                       "body": [
+                        "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                       ]
+                   },
+                   "border":[
+                       true,
+                       false,
+                       true,
+                       true
+                     ]
+                  }
+                     ]
+                ],
+                "unbreakable": true
+             },
+             "layout": {}
+           }
+             ],
+             "unbreakable": true
+           }
+           
+         ],
+         "styles": {
+            "noc-head": {
+             "margin": [
+               -25,
+               -30,
+               0,
+               1
+             ]
+           },
+           "receipt-logo-header": {
+             "color": "#484848",
+             "fontSize": 14,
+             "bold": true,
+             "letterSpacing": 0.74,
+             "margin": [
+               0,
+               0,
+               0,
+               5
+             ]
+           },
+           "receipt-logo-sub-header": {
+            "color": "#484848",
+            "fontFamily": "Roboto",
+            "fontSize": 13,
+            "letterSpacing": 1.6,
+            "margin": [
+              0,
+              6,
+              0,
+              0
+            ]
+          },
+            "noc-table": {
+             "fontSize": 12,
+             "color": "#484848",
+             "margin": [
+               -25,
+               45,
+               -8,
+               -8
+             ]
+           },
+           "noc-table2": {
+             "fontSize": 12,
+             "color": "#484848",
+             "margin": [
+               -25,
+               18,
+               -25,
+               -8
+             ]
+           },
+            "receipt-table-value": {
+             "color": "#000000",
+             "bold": true,
+             "fontSize": 12,
+             "fontWeight": 500,
+             "margin": [
+               5,
+               5,
+               0,
+               0
+             ]
+           },
+           "receipt-table-value-total": {
+             "color": "#000000",
+             "bold": true,
+             "fontSize": 12,
+             "fontWeight": 500,
+             "alignment": "right",
+             "margin": [
+               0,
+               5,
+               30,
+               0
+             ]
+           },
+           "receipt-table-value-down": {
+             "color": "#000000",
+             "bold": false,
+             "fontSize": 12,
+             "fontWeight": 400,
+             "alignment": "left",
+             "margin": [
+               3,
+               5,
+               0,
+               5
+             ]
+           },
+           "receipt-table-value2": {
+             "color": "#000000",
+             "bold": false,
+             "fontSize": 12,
+             "fontWeight": 500,
+             "margin": [
+               3,
+               0,
+               0,
+               0
+             ]
+           },
+            "receipt-table-value-cont": {
+             "color": "#000000",
+             "bold": false,
+             "fontSize": 11,
+             "fontWeight": 400,
+             "margin": [
+               3,
+               0,
+               0,
+               0
+             ]
+           },
+           "receipt-table": {
+             "color": "#484848",
+             "bold": true,
+             "fontSize": 12,
+             "fontWeight": 400,
+             "margin": [
+               -30,
+               5,
+               0,
+               0
+             ]
+           },
+           "receipt-table2": {
+             "color": "#000000",
+             "bold": true,
+             "fontSize": 12,
+             "fontWeight": 500,
+             "margin": [
+               3,
+               0,
+               0,
+               0
+             ]
+           }
+           
+         }
+       
+    }
+}
