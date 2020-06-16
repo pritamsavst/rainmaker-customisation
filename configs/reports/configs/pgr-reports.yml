@@ -109,11 +109,16 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: false
+  - name: lastactiondate
+    label: reports.rainmaker-pgr.lastactiondate
+    type: string
+    source: eg_pgr_service
+    total: false  
   - name: slahours
     label: reports.rainmaker-pgr.slahours
     type: string
     source: eg_pgr_service
-    total: false
+    total: false 
   searchParams:
   - name: fromDate
     label: reports.rainmaker-pgr.datefrom
@@ -140,7 +145,8 @@ ReportDefinitions:
     eg_pgr_address.landmark, 
     eg_pgr_address.housenoandstreetname as address, 
     description, 
-    (SELECT (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining') END) as slaHours), 
+    (select (CASE WHEN status in('resolved','rejected','closed') then '' ELSE (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining')END) END)) as slaHours,
+    to_char(to_timestamp(TRUNC(CAST(eg_pgr_service.lastmodifiedtime AS bigint) / 1000)), 'DD/MM/YYYY') AS lastactiondate,
     Initcap(status) as status
     FROM eg_pgr_service LEFT JOIN eg_user on eg_pgr_service.accountid = eg_user.id::VARCHAR
     LEFT JOIN eg_pgr_address on eg_pgr_address.uuid = eg_pgr_service.addressid
