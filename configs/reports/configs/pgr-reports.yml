@@ -109,6 +109,11 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: false
+  - name: autoescalated
+    label: reports.rainmaker-pgr.autoescalated
+    type: string
+    source: eg_pgr_service
+    total: false
   - name: lastactiondate
     label: reports.rainmaker-pgr.lastactiondate
     type: string
@@ -145,9 +150,10 @@ ReportDefinitions:
     eg_pgr_address.landmark, 
     eg_pgr_address.housenoandstreetname as address, 
     description, 
-    (select (CASE WHEN status in('resolved','rejected','closed') then '' ELSE (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining')END) END)) as slaHours,
+    (select (CASE WHEN status in('resolved','rejected','closed') or slaendtime is null then '' ELSE (CASE WHEN (((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000)) < 1 THEN CONCAT('Overdue by ', ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000) - ((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24), ' days') ELSE CONCAT(((SELECT deptmap.slaHours FROM (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) WHERE deptmap.serviceCode = eg_pgr_service.servicecode)::integer / 24) - ((((select extract(epoch from now())) * 1000) - eg_pgr_service.createdtime)::bigint/86400000), ' days remaining')END) END)) as slaHours,
     to_char(to_timestamp(TRUNC(CAST(eg_pgr_service.lastmodifiedtime AS bigint) / 1000)), 'DD/MM/YYYY') AS lastactiondate,
-    Initcap(status) as status
+    Initcap(status) as status,
+    (CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=eg_pgr_service.lastmodifiedby and eg_user.username='CRONJOB') is not null then 'Y' else '' end)  as autoescalated
     FROM eg_pgr_service LEFT JOIN eg_user on eg_pgr_service.accountid = eg_user.id::VARCHAR
     LEFT JOIN eg_pgr_address on eg_pgr_address.uuid = eg_pgr_service.addressid
     WHERE eg_pgr_service.tenantid LIKE $tenantid
@@ -731,6 +737,11 @@ ReportDefinitions:
     type: string
     source: pgr_data
     total: true
+  - name: escalated
+    label: reports.rainmaker-pgr.status.escalated
+    type: string
+    source: pgr_data
+    total: true
   - name: outsidesla
     label: reports.rainmaker-pgr.outsidesla
     type: string
@@ -768,8 +779,9 @@ ReportDefinitions:
       SUM (CASE WHEN status in ('rejected') THEN 1 ELSE 0 END) as rejected,
       SUM (CASE WHEN status in ('closed', 'resolved') THEN 1 ELSE 0 END) as resolved,
       SUM (CASE WHEN status in ('closed', 'resolved') and (resolvedtime >slaendtime) THEN 1 ELSE 0 END) as resolvedoutsidesla,
-      SUM (CASE WHEN status in ('assigned', 'reassignrequested','escalatedlevel1pending','escalatedlevel2pending') THEN 1 ELSE 0 END) as assigned,
+      SUM (CASE WHEN status in ('assigned', 'reassignrequested') THEN 1 ELSE 0 END) as assigned,
       SUM (CASE WHEN status in ('open') THEN 1 ELSE 0 END) as open,
+      SUM (CASE WHEN status in ('escalatedlevel1pending','escalatedlevel2pending') THEN 1 ELSE 0 END) as escalated,
       SUM (CASE WHEN status in ('assigned', 'reassignrequested', 'open','escalatedlevel1pending','escalatedlevel2pending') and (extract(epoch from now()) * 1000 - slaendtime) >0 and slaendtime is not null THEN 1 ELSE 0 END) as outsidesla
       from pgr_data
       INNER JOIN (VALUES tbl_dept) AS deptmap(serviceCode, department, slaHours) ON deptmap.serviceCode = pgr_data.servicecode
