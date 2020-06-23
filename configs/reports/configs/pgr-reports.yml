@@ -567,8 +567,13 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: true
-  - name: escalated
-    label: reports.rainmaker-pgr.status.escalated
+  - name: autoescalated
+    label: reports.rainmaker-pgr.status.autoescalated
+    type: string
+    source: eg_pgr_service
+    total: true
+  - name: reopened
+    label: reports.rainmaker-pgr.status.reopened
     type: string
     source: eg_pgr_service
     total: true
@@ -599,7 +604,8 @@ ReportDefinitions:
     SUM(CASE WHEN status in ('closed', 'resolved') THEN 1 ELSE 0 END) as closed,
     SUM(CASE WHEN status ='reassignrequested' THEN 1 ELSE 0 END) as reassignrequested,
     SUM(CASE WHEN status ='rejected' THEN 1 ELSE 0 END) as rejected,
-    SUM(CASE WHEN status in ('escalatedlevel1pending','escalatedlevel2pending') THEN 1 ELSE 0 END) as escalated,
+    SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=eg_pgr_service.lastmodifiedby and eg_user.username='CRONJOB' and eg_pgr_service.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as autoescalated,
+    SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=eg_pgr_service.lastmodifiedby and eg_user.username !='CRONJOB' and eg_pgr_service.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as reopened,
     count(status) as total
     from eg_pgr_service
     WHERE tenantid != 'ch.testing'
