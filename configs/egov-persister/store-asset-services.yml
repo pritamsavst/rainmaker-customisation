@@ -1,5 +1,5 @@
 serviceMaps:
-   serviceName: Inventory Service
+   serviceName: store-asset-services
    mappings:
    -  version: 1
       name: Stores create
