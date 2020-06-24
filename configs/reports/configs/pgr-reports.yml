@@ -568,7 +568,7 @@ ReportDefinitions:
     source: eg_pgr_service
     total: true
   - name: autoescalated
-    label: reports.rainmaker-pgr.status.autoescalated
+    label: reports.rainmaker-pgr.autoescalated
     type: string
     source: eg_pgr_service
     total: true
@@ -744,7 +744,7 @@ ReportDefinitions:
     source: pgr_data
     total: true
   - name: autoescalated
-    label: reports.rainmaker-pgr.status.autoescalated
+    label: reports.rainmaker-pgr.autoescalated
     type: string
     source: pgr_data
     total: true
