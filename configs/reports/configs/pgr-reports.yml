@@ -612,8 +612,8 @@ ReportDefinitions:
   groupby: GROUP BY tenantid,servicecode
   orderby: ORDER BY tenantid,servicecode
 
-- reportName: DepartmentReport
-  summary: Fetches complaint stats based on complaint types for a ULB
+- reportName: DepartmentReport1
+  summary: Fetches complaint stats based on complaint types for a ULB not used
   version: 1.0.0
   moduleName: rainmaker-pgr
   externalService:
@@ -699,7 +699,7 @@ ReportDefinitions:
   groupby: GROUP BY tenantid,deptmap_def.name
   orderby: ORDER BY tenantid,deptmap_def.name
 
-- reportName: ULBDepartmentReport
+- reportName: DepartmentReport
   summary: Fetches complaint stats based on department types for a ULB
   version: 1.0.0
   moduleName: rainmaker-pgr
@@ -803,7 +803,7 @@ ReportDefinitions:
   groupby: GROUP BY deptmap_def.name
   orderby: ORDER BY deptmap_def.name
 
-- reportName: ULBEmployeeWiseReport
+- reportName: EmployeeWiseReport
   summary: Fetches employee wise assignment report
   version: 1.0.0
   moduleName: rainmaker-pgr
