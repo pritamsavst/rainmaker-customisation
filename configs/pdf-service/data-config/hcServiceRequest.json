@@ -1,0 +1,110 @@
+{
+  "key": "hcServiceRequest",
+  "DataConfigs": {
+    "serviceName": "egov-hc",
+    "version": "1.0.0",
+    "baseKeyPath": "$.serviceRequest.*",
+    "entityIdPath": "$.applicationId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "serviceRequestId",
+                "value": {
+                  "path": "$.service_request_id"
+                }
+              },
+              {
+                "variable": "ownerName",
+                "value": {
+                  "path": "$.owner_name"
+                }
+              },
+              {
+                "variable": "locality",
+                "value": {
+                  "path": "$.locality"
+                }
+              },
+              {
+                "variable": "streeName",
+                "value": {
+                  "path": "$.street_name"
+                }
+              },
+              {
+                "variable": "createdTimes",
+                "value": {
+                  "path": "$.createdtimes"
+                }
+              },
+              {
+                "variable": "serviceType",
+                "value": {
+                  "path": "$.service_type"
+                }
+              },
+              {
+                "variable": "emailId",
+                "value": {
+                  "path": "$.email_id"
+                }
+              },
+              {
+                "variable": "serviceRequestStatus",
+                "value": {
+                  "path": "$.service_request_status"
+                }
+              },
+              {
+                "variable": "landmark",
+                "value": {
+                  "path": "$.landmark"
+                }
+              },
+              {
+                "variable": "contactNumber",
+                "value": {
+                  "path": "$.contact_number"
+                }
+              },
+              {
+                "variable": "treeCount",
+                "value": {
+                  "path": "$.tree_count"
+                }
+              },
+              {
+                "variable": "description",
+                "value": {
+                  "path": "$.description"
+                }
+              },
+              {
+                "variable": "SLADays",
+                "value": {
+                  "path": "$.SLADays"
+                }
+              },
+              {
+                "variable": "location",
+                "value": {
+                  "path": "$.location"
+                }
+              },
+              {
+                "variable": "status",
+                "value": {
+                  "path": "$.service_request_status"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
