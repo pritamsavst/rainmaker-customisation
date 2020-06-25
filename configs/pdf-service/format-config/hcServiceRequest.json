@@ -1,0 +1,582 @@
+{
+  "key": "hcServiceRequest",
+  "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "content": [
+      {
+        "style": "noc-head",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Municipal Corporation CHANDIGARH",
+                "style": "receipt-table-value"
+              }
+            ],
+            [
+              {
+                "table": {
+                  "widths": [
+                    "30%",
+                    "30%",
+                    "30%"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text": "Service RequestID",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont",
+                        "fontSize": 11
+                      },
+                      {
+                        "text": "Resolution Time(Days)",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont",
+                        "fontSize": 11
+                      },
+                      {
+                        "text": "Status",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont",
+                        "fontSize": 11
+                      }
+                    ],
+                    [
+                      {
+                        "text": "{{serviceRequestId}}",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table2"
+                      },
+                      {
+                        "text": "{{SLADays}}",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table2"
+                      },
+                      {
+                        "text": "{{status}}",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table2"
+                      }
+                    ]
+                  ]
+                },
+                "border": [
+                  true,
+                  false,
+                  true,
+                  true
+                ]
+              }
+            ]
+          ],
+          "unbreakable": true
+        },
+        "layout": "noBorders"
+      },
+      {
+        "stack": [
+          {
+            "style": "noc-table2",
+            "table": {
+              "widths": [
+                "*"
+              ],
+              "body": [
+                [
+                  {
+                    "text": "Service Request Details",
+                    "border": [
+                      true,
+                      true,
+                      true,
+                      false
+                    ],
+                    "style": "receipt-table-value"
+                  }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "30%",
+                        "30%",
+                        "30%",
+                        "10%"
+                      ],
+                      "body": [
+                        [
+                          {
+                            "text": "Service Request Type",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "No of Trees for Cutting/Pruning/Removal",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "Service Request Additional Details",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "Date",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          }
+                        ],
+                        [
+                          {
+                            "text": "{{serviceType}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{SLADays}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{description}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{createdTimes}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Location",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "Locality/Mohalla",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "House no and Street Name",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "Landmark",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          }
+                        ],
+                        [
+                          {
+                            "text": "{{location}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{locality}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{streeName}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{landmark}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          }
+                        ]
+                      ]
+                    },
+                    "border": [
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+              ],
+              "unbreakable": true
+            },
+            "layout": {}
+          }
+        ],
+        "unbreakable": true
+      },
+      {
+        "stack": [
+          {
+            "style": "noc-table2",
+            "table": {
+              "widths": [
+                "*"
+              ],
+              "body": [
+                [
+                  {
+                    "text": "Owner Details",
+                    "border": [
+                      true,
+                      true,
+                      true,
+                      false
+                    ],
+                    "style": "receipt-table-value"
+                  }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "33%",
+                        "33%",
+                        "33%",
+                        "1%"
+                      ],
+                      "body": [
+                        [
+                          {
+                            "text": "Owner Name",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          },
+                          {
+                            "text": "Owner Contact Number",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "Email ID",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          }
+                        ],
+                        [
+                          {
+                            "text": "{{ownerName}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{contactNumber}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{emailId}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          }
+                        ]
+                      ]
+                    },
+                    "border": [
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+              ],
+              "unbreakable": true
+            },
+            "layout": {}
+          }
+        ],
+        "unbreakable": true
+      }
+    ],
+    "styles": {
+      "noc-head": {
+        "margin": [
+          -25,
+          -30,
+          0,
+          1
+        ]
+      },
+      "receipt-logo-header": {
+        "color": "#484848",
+        "fontSize": 14,
+        "bold": true,
+        "letterSpacing": 0.74,
+        "margin": [
+          0,
+          0,
+          0,
+          5
+        ]
+      },
+      "noc-table": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          45,
+          -8,
+          -8
+        ]
+      },
+      "noc-table2": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          18,
+          -25,
+          -8
+        ]
+      },
+      "receipt-table-value": {
+        "color": "#000000",
+        "bold": true,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "margin": [
+          5,
+          5,
+          0,
+          0
+        ]
+      },
+      "receipt-table-value-total": {
+        "color": "#000000",
+        "bold": true,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "alignment": "right",
+        "margin": [
+          0,
+          5,
+          30,
+          0
+        ]
+      },
+      "receipt-table-value-down": {
+        "color": "#000000",
+        "bold": false,
+        "fontSize": 12,
+        "fontWeight": 400,
+        "alignment": "left",
+        "margin": [
+          3,
+          5,
+          0,
+          5
+        ]
+      },
+      "receipt-table-value2": {
+        "color": "#000000",
+        "bold": false,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "margin": [
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "receipt-table-value-cont": {
+        "color": "#000000",
+        "bold": false,
+        "fontSize": 11,
+        "fontWeight": 400,
+        "margin": [
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "receipt-table": {
+        "color": "#484848",
+        "bold": true,
+        "fontSize": 12,
+        "fontWeight": 400,
+        "margin": [
+          -30,
+          5,
+          0,
+          0
+        ]
+      },
+      "receipt-table2": {
+        "color": "#000000",
+        "bold": true,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "margin": [
+          3,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  }
+}
