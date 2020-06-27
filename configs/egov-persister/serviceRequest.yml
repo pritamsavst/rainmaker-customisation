@@ -1,0 +1,179 @@
+serviceMaps: 
+  serviceName: "Service Request"
+  mappings: 
+  - version: 1.0
+    name: applicationForm
+    description: "create service request in eg_hc_service_request"
+    fromTopic: hc-services-save
+    isTransaction: true
+    queryMaps: 
+     - query: INSERT INTO eg_hc_service_request(service_request_uuid, owner_name, tenant_id, location, latitude, longitude, locality, street_name, landmark, contact_number, email_id, tree_count, service_request_document, service_request_status, service_request_id, service_type, description,current_assignee, history_service_request_id, servicerequest_lang, createdby, createdtime ,lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, to_json(?::json), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+       basePath: RequestBody
+       jsonMaps: 
+            - 
+              jsonPath: $.RequestBody.service_request_uuid
+            - 
+              jsonPath: $.RequestBody.ownerName
+            - 
+              jsonPath: $.RequestBody.tenantId
+            - 
+              jsonPath: $.RequestBody.address
+            - 
+              jsonPath: $.RequestBody.latitude
+            - 
+              jsonPath: $.RequestBody.longitude
+            - 
+              jsonPath: $.RequestBody.mohalla
+            - 
+              jsonPath: $.RequestBody.houseNoAndStreetName
+            - 
+              jsonPath: $.RequestBody.landmark
+            - 
+              jsonPath: $.RequestBody.contactNumber
+            - 
+              jsonPath: $.RequestBody.email
+            - 
+              jsonPath: $.RequestBody.treeCount
+            - 
+              jsonPath: $.RequestBody.serviceMedia
+            - 
+              jsonPath: $.RequestBody.service_request_status
+            -
+              jsonPath: $.RequestBody.service_request_id
+            - 
+              jsonPath: $.RequestBody.serviceType
+            - 
+              jsonPath: $.RequestBody.description
+            - 
+              jsonPath: $.RequestBody.current_assignee
+            - 
+              jsonPath: $.RequestBody.history_service_request_id
+            - 
+              jsonPath: $.RequestBody.servicerequest_lang
+            - 
+              jsonPath: $.RequestBody.createdBy
+            - 
+              jsonPath: $.RequestBody.createdTime
+            - 
+              jsonPath: $.RequestBody.lastModifiedBy
+            - 
+              jsonPath: $.RequestBody.lastModifiedTime
+       
+  - version: 1.0
+    fromTopic: hc-services-editSeviceRequestType
+    isTransaction: true
+    queryMaps: 
+     - query:  UPDATE eg_hc_service_request set owner_name=?, tenant_id=?, location=?, latitude=?, longitude=?, locality=?, street_name=?, landmark=?, contact_number=?, email_id=?, tree_count=?, service_request_document=to_json(?::json), service_request_status=?, description=?,current_assignee=?, createdby=?, createdtime=?, lastmodifiedby=?, lastmodifiedtime=? where service_request_id =?;
+       basePath: RequestBody
+       jsonMaps: 
+            - 
+              jsonPath: $.RequestBody.ownerName
+            - 
+              jsonPath: $.RequestBody.tenantId
+            - 
+              jsonPath: $.RequestBody.address
+            - 
+              jsonPath: $.RequestBody.latitude
+            - 
+              jsonPath: $.RequestBody.longitude
+            - 
+              jsonPath: $.RequestBody.houseNoAndStreetName
+            - 
+              jsonPath: $.RequestBody.mohalla
+            - 
+              jsonPath: $.RequestBody.landmark
+            - 
+              jsonPath: $.RequestBody.contactNumber
+            - 
+              jsonPath: $.RequestBody.email
+            - 
+              jsonPath: $.RequestBody.treeCount
+            - 
+              jsonPath: $.RequestBody.serviceMedia
+            - 
+              jsonPath: $.RequestBody.service_request_status
+            - 
+              jsonPath: $.RequestBody.description
+            - 
+              jsonPath: $.RequestBody.current_assignee
+            - 
+              jsonPath: $.RequestBody.createdBy
+            - 
+              jsonPath: $.RequestBody.createdTime
+            - 
+              jsonPath: $.RequestBody.lastModifiedBy
+            - 
+              jsonPath: $.RequestBody.lastModifiedTime
+            -
+              jsonPath: $.RequestBody.service_request_id
+              
+  - version: 1.0
+    description: "update Application in eg_hc_service_request"
+    fromTopic: hc-service-update
+    isTransaction: true 
+    queryMaps:
+    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=?,service_request_document=to_json(?::json) where service_request_id=?;
+      basePath: RequestBody
+      jsonMaps:
+       -
+          jsonPath: $.RequestBody.service_request_status
+       -
+          jsonPath: $.RequestBody.current_assignee
+       - 
+          jsonPath: $.RequestBody.serviceMedia
+       -
+          jsonPath: $.RequestBody.service_request_id
+        
+  - version: 1.0
+    description: "update Application in eg_hc_service_request"
+    fromTopic: hc-service-edit
+    isTransaction: true 
+    queryMaps:
+    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=? where service_request_id=?;
+      basePath: RequestBody
+      jsonMaps:
+       -
+          jsonPath: $.RequestBody.service_request_status
+       -
+          jsonPath: $.RequestBody.current_assignee
+       -
+          jsonPath: $.RequestBody.service_request_id
+  
+  
+  - version: 1.0
+    description: "update Application in eg_hc_service_request"
+    fromTopic: hc-service-edit
+    isTransaction: true 
+    queryMaps:
+    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=? where service_request_id=?;
+      basePath: RequestBody
+      jsonMaps:
+       -
+          jsonPath: $.RequestBody.service_request_status
+       -
+          jsonPath: $.RequestBody.current_assignee
+       -
+          jsonPath: $.RequestBody.service_request_id  
+          
+  - version: 1.0
+    name: Device Source  
+    description: "Request - Device Source"
+    fromTopic: hc-services-request-device-source
+    isTransaction: true 
+    queryMaps:
+    - query: INSERT INTO eg_device_source_detail(source_uuid,module_type,device_type,module_code,device_details,tenant_id,reference_uuid,created_by, created_time) VALUES(?,?,?,?,to_json(?::json),?,?,?,?);
+      basePath: $.RequestBody
+      jsonMaps:
+         -  jsonPath: $.RequestBody.sourceUuid
+         -  jsonPath: $.RequestBody.moduleType
+         -  jsonPath: $.RequestBody.deviceType
+         -  jsonPath: $.RequestBody.moduleCode
+         -  jsonPath: $.RequestBody.deviceDetails
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.reference_uuid
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+            type: LONG                      
+  
+      
+  
