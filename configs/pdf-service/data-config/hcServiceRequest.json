@@ -100,6 +100,12 @@
                 "value": {
                   "path": "$.service_request_status"
                 }
+              },
+	            {
+                "variable": "docs",
+                "value": {
+                  "path": "$.documents"
+                }
               }
             ]
           }
