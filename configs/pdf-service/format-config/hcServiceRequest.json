@@ -448,6 +448,76 @@
           }
         ],
         "unbreakable": true
+      },
+      {
+        "stack": [
+          {
+            "style": "noc-table2",
+            "table": {
+              "widths": [
+                "*"
+              ],
+              "body": [
+                [
+                  {
+                    "text": "Documents",
+                    "border": [
+                      true,
+                      true,
+                      true,
+                      false
+                    ],
+                    "style": "receipt-table-value"
+                  }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "*"
+                      ],
+                      "body": [
+                        [
+                          {
+                            "text": "Uploaded Images",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "{{docs}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          }
+                        ]
+                      ]
+                    },
+                    "border": [
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+              ],
+              "unbreakable": true
+            },
+            "layout": {}
+          }
+        ],
+        "unbreakable": true
       }
     ],
     "styles": {
