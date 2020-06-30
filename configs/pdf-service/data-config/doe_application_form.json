@@ -36,7 +36,7 @@
 					{
 						"variable": "dod",
 						"value": {
-							"path": "$.dateOfRetirement"
+							"path": "$.dateOfDeath"
 						}
 					},
 					{
@@ -173,7 +173,7 @@
 					{
 						"variable": "no_dues_for_availed_govt_accomodation",
 						"value": {
-							"path": "$.isEligibleForPension"
+							"path": "$.noDuesForAvailGovtAccomodation"
 						}
 					},
 					{
@@ -269,13 +269,13 @@
 					{
 						"variable": "is_injured_in_extremists_dacoits_smuggler_antisocial_attack",
 						"value": {
-							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+							"path": "$.isDiesOrInjuredInExtremistsDacoitsSmugglerAntisocialAttack"
 						}
 					},
 					{
 						"variable": "is_injured_in_terrorist_attack",
 						"value": {
-							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+							"path": "$.isEmployeeDiesInTerroristAttack"
 						}
 					},
 					{
@@ -287,19 +287,19 @@
 					{
 						"variable": "disability_percentage",
 						"value": {
-							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+							"path": "$.disabilityPercentage"
 						}
 					},
 					{
 						"variable": "wound_extraordinary_pension_amount",
 						"value": {
-							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+							"path": "$.woundExtraordinaryPension"
 						}
 					},
 					{
 						"variable": "is_attended_allowance_granted",
 						"value": {
-							"path": "$.isConvictedSeriousCrimeOrGraveMisconduct"
+							"path": "$.attendantAllowanceGranted"
 						}
 					}
 
