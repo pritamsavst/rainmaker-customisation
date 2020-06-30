@@ -262,7 +262,7 @@ ReportDefinitions:
         type: string
       - 
         label: PENSION_EMPLOYEE_TYPE
-        name: "employee_type,"
+        name: "employee_type"
         source: eg_pension_employee
         total: false
         type: string
