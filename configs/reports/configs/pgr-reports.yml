@@ -537,6 +537,16 @@ ReportDefinitions:
   version: 1.0.0
   moduleName: rainmaker-pgr
   sourceColumns:
+  - name: department
+    label: reports.rainmaker-pgr.department
+    type: string
+    source: eg_pgr_service
+    total: false
+  - name: category
+    label: reports.rainmaker-pgr.category
+    type: string
+    source: eg_pgr_service
+    total: false
   - name: complainttype
     label: reports.rainmaker-pgr.complainttype
     type: string
@@ -598,6 +608,8 @@ ReportDefinitions:
   query: |
     select 
     initcap(split_part(tenantid, '.', 2)) as tenantid,
+    UPPER(CONCAT('PGRDEPT.',substring(left(servicecode, strpos(servicecode, '_') - 1),1,3)||'_'||substring(left(servicecode, strpos(servicecode, '_') - 1),4,10))) as department,
+    regexp_replace(category, '([a-z])([A-Z])', '\1 \2','g') as category,
     regexp_replace(servicecode, '([a-z])([A-Z])', '\1 \2','g') as complainttype,
     SUM(CASE WHEN status ='open' THEN 1 ELSE 0 END) as open,
     SUM(CASE WHEN status ='assigned' THEN 1 ELSE 0 END) as assigned,
