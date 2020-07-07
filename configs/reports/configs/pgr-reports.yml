@@ -621,8 +621,8 @@ ReportDefinitions:
     count(status) as total
     from eg_pgr_service
     WHERE tenantid != 'ch.testing'
-  groupby: GROUP BY tenantid,servicecode
-  orderby: ORDER BY tenantid,servicecode
+  groupby: GROUP BY tenantid,category,servicecode
+  orderby: ORDER BY tenantid,category,servicecode
 
 - reportName: DepartmentReport1
   summary: Fetches complaint stats based on complaint types for a ULB
