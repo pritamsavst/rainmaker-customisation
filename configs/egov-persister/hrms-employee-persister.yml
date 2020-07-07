@@ -7,7 +7,7 @@ serviceMaps:
     fromTopic: save-hrms-employee
     isTransaction: true
     queryMaps:
-    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, dateofsuperannuation, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*
       jsonMaps:
@@ -22,6 +22,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.code
 
       - jsonPath: $.Employees.*.dateOfAppointment
+      
+      - jsonPath: $.Employees.*.dateOfSuperannuation
 
       - jsonPath: $.Employees.*.employeeStatus
 
@@ -37,9 +39,10 @@ serviceMaps:
 
       - jsonPath: $.Employees.*.auditDetails.lastModifiedDate
 
+      
 
 
-    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, isprimaryassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*.assignments.*
       jsonMaps:
@@ -66,6 +69,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.isHOD
 
       - jsonPath: $.Employees.*.assignments.*.isCurrentAssignment
+      
+      - jsonPath: $.Employees.*.assignments.*.isPrimaryAssignment
 
       - jsonPath: $.Employees[*][?({id} in @.assignments[*].id)].uuid
 
@@ -77,6 +82,7 @@ serviceMaps:
 
       - jsonPath: $.Employees.*.assignments.*.auditDetails.lastModifiedDate
 
+      
 
 
 
@@ -247,7 +253,7 @@ serviceMaps:
 
       - jsonPath:  $.Employees.*.uuid
 
-    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, dateofsuperannuation, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*
       jsonMaps:
@@ -262,6 +268,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.code
 
       - jsonPath: $.Employees.*.dateOfAppointment
+      
+      - jsonPath: $.Employees.*.dateOfSuperannuation
 
       - jsonPath: $.Employees.*.employeeStatus
 
@@ -276,10 +284,12 @@ serviceMaps:
       - jsonPath: $.Employees.*.auditDetails.lastModifiedBy
 
       - jsonPath: $.Employees.*.auditDetails.lastModifiedDate
+      
+      
 
 
 
-    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, isprimaryassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*.assignments.*
       jsonMaps:
@@ -306,6 +316,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.isHOD
 
       - jsonPath: $.Employees.*.assignments.*.isCurrentAssignment
+      
+      - jsonPath: $.Employees.*.assignments.*.isPrimaryAssignment
 
       - jsonPath: $.Employees[*][?({id} in @.assignments[*].id)].uuid
 
@@ -316,6 +328,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.auditDetails.lastModifiedBy
 
       - jsonPath: $.Employees.*.assignments.*.auditDetails.lastModifiedDate
+      
+      
 
 
 
