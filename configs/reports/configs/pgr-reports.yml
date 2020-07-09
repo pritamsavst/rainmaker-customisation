@@ -607,8 +607,8 @@ ReportDefinitions:
     searchClause: AND createdtime <= $toDate
   query: |
     select 
-    initcap(split_part(tenantid, '.', 2)) as tenantid,
-    UPPER(CONCAT('PGRDEPT.',substring(left(servicecode, strpos(servicecode, '_') - 1),1,3)||'_'||substring(left(servicecode, strpos(servicecode, '_') - 1),4,10))) as department,
+    initcap(split_part(a.tenantid, '.', 2)) as tenantid, 
+    b.message as department,
     regexp_replace(category, '([a-z])([A-Z])', '\1 \2','g') as category,
     regexp_replace(servicecode, '([a-z])([A-Z])', '\1 \2','g') as complainttype,
     SUM(CASE WHEN status ='open' THEN 1 ELSE 0 END) as open,
@@ -616,13 +616,14 @@ ReportDefinitions:
     SUM(CASE WHEN status in ('closed', 'resolved') THEN 1 ELSE 0 END) as closed,
     SUM(CASE WHEN status ='reassignrequested' THEN 1 ELSE 0 END) as reassignrequested,
     SUM(CASE WHEN status ='rejected' THEN 1 ELSE 0 END) as rejected,
-    SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=eg_pgr_service.lastmodifiedby and eg_user.username='CRONJOB' and eg_pgr_service.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as autoescalated,
-    SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=eg_pgr_service.lastmodifiedby and eg_user.username !='CRONJOB' and eg_pgr_service.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as reopened,
-    count(status) as total
-    from eg_pgr_service
-    WHERE tenantid != 'ch.testing'
-  groupby: GROUP BY tenantid,category,servicecode
-  orderby: ORDER BY tenantid,category,servicecode
+    SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=a.lastmodifiedby and eg_user.username='CRONJOB' and a.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as autoescalated,
+    SUM(CASE WHEN (select username from eg_user where eg_user.id::VARCHAR=a.lastmodifiedby and eg_user.username !='CRONJOB' and a.status in ('escalatedlevel1pending','escalatedlevel2pending')) is not null then 1 else 0 end)  as reopened,
+    count(status) as total 
+    from eg_pgr_service a
+    left join message b on (b.code = UPPER(CONCAT('PGRDEPT.',substring(left(a.servicecode, strpos(a.servicecode, '_') - 1),1,3)||'_'||substring(left(a.servicecode, strpos(a.servicecode, '_') - 1),4,10))) and b.locale='en_IN')
+    WHERE a.tenantid != 'ch.testing'
+  groupby: GROUP BY a.tenantid,a.category,a.servicecode,b.message
+  orderby: ORDER BY a.tenantid,a.category,a.servicecode,b.message
 
 - reportName: DepartmentReport1
   summary: Fetches complaint stats based on complaint types for a ULB
