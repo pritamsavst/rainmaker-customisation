@@ -37,7 +37,7 @@ ReportDefinitions:
         type: epoch
   - 
     moduleName: rainmaker-pension
-    query: "select  fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, wound_extraordinary_pension, attendant_allowance from eg_pension_revision pr join eg_pension_pensioner pp on pr.pensioner_id=pp.uuid where 1=1 AND pp.active=true AND pr.active=true"
+    query: "select pp.pensioner_number as pensioner_number , pe.name as name,  fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, wound_extraordinary_pension, attendant_allowance from eg_pension_revision pr join eg_pension_pensioner pp on pr.pensioner_id=pp.uuid join eg_pension_employee pe on pp.pension_employee_id=pe.uuid where 1=1 AND pp.active=true AND pr.active=true"
     reportName: MonthlyPensionDrawn
     searchParams: 
       - 
@@ -60,80 +60,86 @@ ReportDefinitions:
         wrapper: true
     sourceColumns: 
       - 
-        label: PENSION_EMPLOYEE_PENSION_FMA
-        name: fma
-        source: eg_pension_revision
-        total: true
+        label: "Pensioner Number"
+        name: pensioner_number
+        source: eg_pension_pensioner
+        total: false
         type: string
       - 
-        label: PENSION_EMPLOYEE_PENSION_MISCELLANEOUS
-        name: miscellaneous
-        source: eg_pension_revision
-        total: true
+        label: "Pensioner Name"
+        name: name
+        source: eg_pension_employee
+        total: false
         type: string
       - 
-        label: PENSION_EMPLOYEE_PENSION_OVERPAYMENT
-        name: over_payment
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_INCOME_TAX
-        name: income_tax
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_CESS
-        name: cess
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_BP_R
+        label: "Basic Pension"
         name: basic_pension
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: PENSION_EMPLOYEE_PENSION_AP_R
-        name: additional_pension
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_COMMMUTED_PEENSION_R
-        name: commuted_pension
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_NET_DEDUCTION_R
-        name: net_deductions
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_FINAL_DEDUCTION_R
-        name: final_calculated_pension
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_IR_R
-        name: interim_relief
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_PENSION_DA_R
+        label: DA
         name: da
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: PENSION_EMPLOYEE_PENSION_TP_R
-        name: total_pension
+        label: "Commuted Pension"
+        name: commuted_pension
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Additional Pension"
+        name: additional_pension
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: IR
+        name: interim_relief
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Medical Relief"
+        name: fma
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: Miscellaneous
+        name: miscellaneous
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Wound Pension"
+        name: wound_extraordinary_pension
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Attendant Allowance"
+        name: attendant_allowance
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: Overpayment
+        name: over_payment
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Income Tax"
+        name: income_tax
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: Cess
+        name: cess
         source: eg_pension_revision
         total: true
         type: string
@@ -144,14 +150,20 @@ ReportDefinitions:
         total: true
         type: string
       - 
-        label: "Wound Extraordinary Pension"
-        name: wound_extraordinary_pension
+        label: "Total Pension"
+        name: total_pension
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: "Attendant Allowance"
-        name: attendant_allowance
+        label: "Net Deductions"
+        name: net_deductions
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "Net Pension"
+        name: final_calculated_pension
         source: eg_pension_revision
         total: true
         type: string
@@ -262,7 +274,7 @@ ReportDefinitions:
         type: string
       - 
         label: PENSION_EMPLOYEE_TYPE
-        name: "employee_type"
+        name: employee_type
         source: eg_pension_employee
         total: false
         type: string
@@ -278,4 +290,3 @@ ReportDefinitions:
         source: eg_pension_employee
         total: false
         type: epoch
-
