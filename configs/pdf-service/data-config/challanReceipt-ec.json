@@ -1,0 +1,58 @@
+{
+
+	"key": "challanReceipt-ec",
+	"DataConfigs": {
+		"serviceName": "egov-ec",
+		"version": "1.0.0",
+		"baseKeyPath": "$.paymentEchallan.*",
+		"entityIdPath": "$.applicationId",
+		"isCommonTableBorderRequired": true,
+		"mappings": [{			
+			"mappings": [{
+				"direct": [{
+						"variable": "variable1",
+						"value": {
+							"path": "$.receiptNo"
+						}
+					},
+					{
+						"variable": "variable2",
+						"value": {
+							"path": "$.dated"
+						}
+					},
+					{
+						"variable": "variable3",
+						"value": {
+							"path": "$.violatorName"
+						}
+					},
+					{
+						"variable": "variable4",
+						"value": {
+							"path": "$.amount"
+						}
+					},
+					{
+						"variable": "variable5",
+						"value": {
+							"path": "$.amountInWord"
+						}
+					},
+					{
+						"variable": "variable6",
+						"value": {
+							"path": "$.paymentMode"
+						}
+					},
+					{
+						"variable": "variable7",
+						"value": {
+							"path": "$.memoNo"
+						}
+					}
+				]
+			}]
+		}]
+	}
+}

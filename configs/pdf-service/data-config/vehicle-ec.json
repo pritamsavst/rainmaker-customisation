@@ -1,0 +1,76 @@
+{
+
+	"key": "vehicle-ec",
+	"DataConfigs": {
+		"serviceName": "egov-ec",
+		"version": "1.0.0",
+		"baseKeyPath": "$.vehicleEchallan.*",
+		"entityIdPath": "$.applicationId",
+		"isCommonTableBorderRequired": true,
+		"mappings": [{			
+			"mappings": [{
+				"direct": [{
+						"variable": "variable1",
+						"value": {
+							"path": "$.serialNo"
+						}
+					},
+					{
+						"variable": "variable2",
+						"value": {
+							"path": "$.violatorName"
+						}
+					},
+					{
+						"variable": "variable3",
+						"value": {
+							"path": "$.fatherName"
+						}
+					},
+					{
+						"variable": "variable4",
+						"value": {
+							"path": "$.address"
+						}
+					},
+					{
+						"variable": "variable5",
+						"value": {
+							"path": "$.placeTime"
+						}
+					},
+					{
+						"variable": "variable6",
+						"value": {
+							"path": "$.vehicleType"
+						}
+					},
+					{
+						"variable": "variable7",
+						"value": {
+							"path": "$.VehicleNumber"
+						}
+					},
+					{
+						"variable": "variable8",
+						"value": {
+							"path": "$.vehicleName"
+						}
+					},
+					{
+						"variable": "variable9",
+						"value": {
+							"path": "$.remark"
+						}
+					},
+					{
+						"variable": "variable10",
+						"value": {
+							"path": "$.date"
+						}
+					}
+				]
+			}]
+		}]
+	}
+}

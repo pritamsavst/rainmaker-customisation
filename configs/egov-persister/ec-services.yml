@@ -1,0 +1,792 @@
+serviceMaps:
+ serviceName: echallan services
+ mappings:
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-save-itemmaster-item-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_item_master(item_uuid, item_name, description, approval_status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,source_uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.itemUuid
+
+          - jsonPath: $.RequestBody.itemName
+
+          - jsonPath: $.RequestBody.description
+
+          - jsonPath: $.RequestBody.approvalStatus
+
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          - jsonPath: $.RequestBody.sourceUuid
+           
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-update-itemmaster-item-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_item_master SET item_name=?, description=?, approval_status=?, tenant_id=?, is_active=?, created_by=?, created_time=?, last_modified_by=?, last_modified_time=? WHERE item_uuid = ?;
+         basePath: RequestBody
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.itemName
+
+          - jsonPath: $.RequestBody.description
+
+          - jsonPath: $.RequestBody.approvalStatus
+
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+ 
+          - jsonPath: $.RequestBody.itemUuid
+          
+
+
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-save-finemaster-fine-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_fine_master(fine_uuid, encroachment_type, number_of_violation, penalty_amount, approval_status,storage_charges, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,source_uuid,effective_start_date,effective_end_date) VALUES (?, ?, ?, ?::numeric, ?, ?::numeric, ?, ?, ?, ?, ?, ?, ?, ?,?);
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.fineUuid
+
+          - jsonPath: $.RequestBody.encroachmentType
+
+          - jsonPath: $.RequestBody.numberOfViolation
+
+          - jsonPath: $.RequestBody.penaltyAmount
+          
+          - jsonPath: $.RequestBody.approvalStatus
+          
+          - jsonPath: $.RequestBody.storageCharges
+
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+          
+          - jsonPath: $.RequestBody.lastModifiedTime
+          - jsonPath: $.RequestBody.sourceUuid
+          
+          - jsonPath: $.RequestBody.effectiveStartDate
+            type: DATE
+          - jsonPath: $.RequestBody.effectiveEndDate
+            type: DATE
+            
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-update-finemaster-fine-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_fine_master SET encroachment_type=?, number_of_violation=?, penalty_amount=?::numeric, approval_status=?,storage_charges=?::numeric,tenant_id=? ,is_active=?, created_by=?, created_time=?, last_modified_by=?, last_modified_time=?,effective_start_date =? ,effective_end_date =? WHERE fine_uuid = ?;
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.encroachmentType
+
+          - jsonPath: $.RequestBody.numberOfViolation
+
+          - jsonPath: $.RequestBody.penaltyAmount
+          
+          - jsonPath: $.RequestBody.approvalStatus
+          
+          - jsonPath: $.RequestBody.storageCharges
+
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.effectiveStartDate
+            type: DATE
+          - jsonPath: $.RequestBody.effectiveEndDate
+            type: DATE
+          - jsonPath: $.RequestBody.fineUuid          
+
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-create-store-item-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_store_item_register(store_item_uuid, challan_uuid, item_uuid, item_name, quantity, auctioned_quantity, isverified, isauctioned, remark, item_store_deposit_date, violation_item_uuid, violation_uuid, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,isreturned,source_uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: RequestBody.storeItemRegister.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.storeItemRegister.*.storeItemUuid
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.challanUuid
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.itemUuid
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.itemName
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.quantity
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.auctionedQuantity
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.isVerified
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.isAuctioned
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.remark
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.itemStoreDepositDate
+            type: DATE
+          - jsonPath: $.RequestBody.storeItemRegister.*.violationItemUuid
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.violationUuid
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.tenantId
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.isActive
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.createdBy
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.createdTime
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.lastModifiedTime
+
+          - jsonPath: $.RequestBody.storeItemRegister.*.isReturned
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.sourceUuid                           
+          
+       - query: INSERT INTO public.egec_document(document_uuid, filestore_id, violation_uuid, challan_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        
+         basePath: RequestBody.document.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.document.*.documentUuid
+
+          - jsonPath: $.RequestBody.document.*.fileStoreId
+
+          - jsonPath: $.RequestBody.document.*.violationUuid
+
+          - jsonPath: $.RequestBody.document.*.challanId
+
+          - jsonPath: $.RequestBody.document.*.documentType
+
+          - jsonPath: $.RequestBody.document.*.tenantId
+
+          - jsonPath: $.RequestBody.document.*.isActive
+
+          - jsonPath: $.RequestBody.document.*.createdBy
+          
+          - jsonPath: $.RequestBody.document.*.createdTime
+
+          - jsonPath: $.RequestBody.document.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.document.*.lastModifiedTime
+          
+       - query: UPDATE public.egec_challan_master SET  challan_status=?,last_modified_by=?, last_modified_time=? WHERE challan_uuid=?;
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.status
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+
+          - jsonPath: $.RequestBody.challanUuid
+
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-update-store-item-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_store_item_register SET   last_modified_by=?, last_modified_time=?, isreturned=? WHERE challan_uuid=?;
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+
+          - jsonPath: $.RequestBody.isReturned
+          
+          - jsonPath: $.RequestBody.challanUuid
+          
+       - query: UPDATE public.egec_challan_master SET  challan_status=?,last_modified_by=?, last_modified_time=? WHERE challan_uuid=?;
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.status
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+
+          - jsonPath: $.RequestBody.challanUuid
+          
+ - version: 1.0
+   description: Persists challan generation 
+   fromTopic: persister-generate-challan-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_violation_master(violation_uuid, violator_name, contact_number, email_id, father_name, number_of_violation, address, sector, violation_date, violation_time, license_no_cov, nature_of_violation, location,  encroachment_type,  si_name, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,source_uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?::time, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?);
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.violationUuid
+
+          - jsonPath: $.RequestBody.violatorName
+
+          - jsonPath: $.RequestBody.contactNumber
+
+          - jsonPath: $.RequestBody.emailId
+
+          - jsonPath: $.RequestBody.fatherName
+
+          - jsonPath: $.RequestBody.numberOfViolation
+
+          - jsonPath: $.RequestBody.address
+
+          - jsonPath: $.RequestBody.sector
+            
+          - jsonPath: $.RequestBody.violationDate
+            type: DATE
+          - jsonPath: $.RequestBody.violationTime
+
+          - jsonPath: $.RequestBody.licenseNoCov
+
+          - jsonPath: $.RequestBody.natureOfViolation
+
+          - jsonPath: $.RequestBody.location
+
+          - jsonPath: $.RequestBody.encroachmentType
+
+          - jsonPath: $.RequestBody.siName
+
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.sourceUuid
+          
+       - query: INSERT INTO public.egec_challan_master(challan_uuid, violation_uuid, challan_id, challan_amount, challan_status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?::numeric, ?, ?, ?, ?, ?, ?, ?);
+        
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.challanUuid
+
+          - jsonPath: $.RequestBody.violationUuid
+
+          - jsonPath: $.RequestBody.challanId
+
+          - jsonPath: $.RequestBody.totalChallanAmount
+
+          - jsonPath: $.RequestBody.status
+
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+       - query: INSERT INTO public.egec_payment( payment_uuid,  payment_status, challan_uuid, violation_uuid,payment_amount,   tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?::numeric, ?, ?, ?, ?, ?, ?);
+         
+         
+         basePath: RequestBody.paymentDetails
+         jsonMaps:
+          - jsonPath: $.RequestBody.paymentDetails.paymentUuid
+
+          - jsonPath: $.RequestBody.paymentDetails.paymentStatus
+
+          - jsonPath: $.RequestBody.paymentDetails.challanUuid
+
+          - jsonPath: $.RequestBody.paymentDetails.violationUuid
+
+          - jsonPath: $.RequestBody.paymentDetails.paymentAmount
+
+          - jsonPath: $.RequestBody.paymentDetails.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+       - query: INSERT INTO public.egec_challan_detail(challan_detail_uuid, challan_uuid, budget_head, head_amount, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?::numeric, ?, ?, ?, ?, ?, ?);
+        
+         basePath: RequestBody.challanDetails.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.challanDetails.*.challanDetailUuid
+
+          - jsonPath: $.RequestBody.challanDetails.*.challanUuid
+
+          - jsonPath: $.RequestBody.challanDetails.*.budgetHead
+
+          - jsonPath: $.RequestBody.challanDetails.*.headAmount
+
+          - jsonPath: $.RequestBody.challanDetails.*.tenantId
+
+          - jsonPath: $.RequestBody.challanDetails.*.isActive
+
+          - jsonPath: $.RequestBody.challanDetails.*.createdBy
+
+          - jsonPath: $.RequestBody.challanDetails.*.createdTime
+
+          - jsonPath: $.RequestBody.challanDetails.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.challanDetails.*.lastModifiedTime                           
+          
+       - query: INSERT INTO public.egec_document(document_uuid, filestore_id, violation_uuid, challan_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        
+         basePath: RequestBody.document.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.document.*.documentUuid
+
+          - jsonPath: $.RequestBody.document.*.fileStoreId
+
+          - jsonPath: $.RequestBody.document.*.violationUuid
+
+          - jsonPath: $.RequestBody.document.*.challanId
+
+          - jsonPath: $.RequestBody.document.*.documentType
+
+          - jsonPath: $.RequestBody.document.*.tenantId
+
+          - jsonPath: $.RequestBody.document.*.isActive
+
+          - jsonPath: $.RequestBody.document.*.createdBy
+          
+          - jsonPath: $.RequestBody.document.*.createdTime
+
+          - jsonPath: $.RequestBody.document.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.document.*.lastModifiedTime
+          
+       - query: INSERT INTO public.egec_violation_detail(violation_item_uuid, violation_uuid, item_uuid, item_name, item_type, quantity, remark, vehicle_number, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        
+         basePath: RequestBody.violationItem.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.violationItem.*.violationItemUuid
+
+          - jsonPath: $.RequestBody.violationItem.*.violationUuid
+
+          - jsonPath: $.RequestBody.violationItem.*.itemUuid
+
+          - jsonPath: $.RequestBody.violationItem.*.itemName
+
+          - jsonPath: $.RequestBody.violationItem.*.itemType
+
+          - jsonPath: $.RequestBody.violationItem.*.quantity
+
+          - jsonPath: $.RequestBody.violationItem.*.remark
+
+          - jsonPath: $.RequestBody.violationItem.*.vehicleNumber
+
+          - jsonPath: $.RequestBody.violationItem.*.tenantId
+
+          - jsonPath: $.RequestBody.violationItem.*.isActive
+
+          - jsonPath: $.RequestBody.violationItem.*.createdBy
+          
+          - jsonPath: $.RequestBody.violationItem.*.createdTime
+
+          - jsonPath: $.RequestBody.violationItem.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.violationItem.*.lastModifiedTime
+          
+ - version: 1.0
+   description: Persists challan generation 
+   fromTopic: persister-update-challan-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_challan_master SET  challan_status=?,last_modified_by=?, last_modified_time=? WHERE challan_uuid=?;
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.status
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+
+          - jsonPath: $.RequestBody.challanUuid
+          
+          
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-create-vendor-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_vendor_registration_master(vendor_uuid, pass_no, cov_no, name, father_spouse_name, address, contact_number, vendor_category, street_vendor_area, transport_mode, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time, source_uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: RequestBody.vendorRegistrationList.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.vendorUuid
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.passNo
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.covNo
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.name
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.fatherSpouseName
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.address
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.contactNumber
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.vendorCategory
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.streetVendorArea
+            
+          - jsonPath: $.RequestBody.vendorRegistration.*.transportMode
+        
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.tenantId
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.isActive
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.createdBy
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.createdTime
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.sourceUuid
+
+          
+ - version: 1.0
+   description: update payment info for cash payment
+   fromTopic: persister-update-storeItemOfflinePayment-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_payment SET  payment_mode=?,payment_gateway=?, transaction_id=?,pg_status=?, payment_status=?,last_modified_by=?, last_modified_time=? WHERE challan_uuid =?  ;
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.paymentMode
+
+          - jsonPath: $.RequestBody.paymentGateway
+
+          - jsonPath: $.RequestBody.transactionId
+
+          - jsonPath: $.RequestBody.pgStatus
+
+          - jsonPath: $.RequestBody.paymentStatus
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+
+          - jsonPath: $.RequestBody.challanUuid
+          
+ - version: 1.0
+   description: Add Penalty Amount
+   fromTopic: persister-update-penalty-amount-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: update egec_payment set payment_amount = (payment_amount+ ?::numeric) where challan_uuid = ?;
+
+         basePath: RequestBody.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.*.storageCharges
+
+          - jsonPath: $.RequestBody.*.challanUuid
+       
+       - query: UPDATE public.egec_challan_master SET challan_amount=(challan_amount + ?::numeric) WHERE challan_uuid=?;
+
+         basePath: RequestBody.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.*.storageCharges
+
+          - jsonPath: $.RequestBody.*.challanUuid
+       
+       - query: UPDATE public.egec_challan_detail SET head_amount=(head_amount + ?::numeric) WHERE challan_uuid=? and budget_head = 'PENALTY_AMOUNT';
+
+         basePath: RequestBody.*
+         jsonMaps:
+          - jsonPath: $.RequestBody.*.storageCharges
+
+          - jsonPath: $.RequestBody.*.challanUuid
+          
+ - version: 1.0
+   description: update Auction
+   fromTopic: persister-update-auction-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_auction_master SET status=?, last_modified_by=?, last_modified_time=? WHERE auction_uuid=?;
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.status
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.auctionUuid
+          
+ - version: 1.0
+   description: update Auction
+   fromTopic: persister-update-auctionRejection-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE public.egec_auction_master SET status=?, last_modified_by=?, last_modified_time=? WHERE auction_uuid=?;
+
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.status
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.auctionUuid
+          
+       - query: UPDATE public.egec_store_item_register SET  auctioned_quantity=(auctioned_quantity::int - ?::int) WHERE store_item_uuid=?;
+
+         basePath: RequestBody.auctionList.*
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.auctionList.*.auctionQuantity
+          
+          - jsonPath: $.RequestBody.auctionList.*.storeItemUuid
+          
+          
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-update-vendor-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE  public.egec_vendor_registration_master SET pass_no =?, cov_no=?, name=?, father_spouse_name=?, address=?, contact_number=?, vendor_category=?, street_vendor_area=?, transport_mode=?, tenant_id=?, is_active=?, created_by=?, created_time=?, last_modified_by=?, last_modified_time=? where vendor_uuid = ?;
+         basePath: RequestBody.vendorRegistrationList.*
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.passNo
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.covNo
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.name
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.fatherSpouseName
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.address
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.contactNumber
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.vendorCategory
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.streetVendorArea
+            
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.transportMode
+        
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.tenantId
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.isActive
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.createdBy
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.createdTime
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.vendorRegistrationList.*.vendorUuid
+          
+          
+ - version: 1.0
+   description: Persists echallan services
+   fromTopic: persister-save-auction-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_auction_master(auction_uuid, violation_uuid, challan_uuid, status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time, source_uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    
+         basePath: RequestBody
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.auctionUuid
+
+          - jsonPath: $.RequestBody.violationUuid
+
+          - jsonPath: $.RequestBody.challanUuid
+          
+          - jsonPath: $.RequestBody.status
+        
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+          - jsonPath: $.RequestBody.sourceUuid
+          
+       - query: INSERT INTO public.egec_auction_detail(auction_detail_uuid, store_item_uuid, purchaser_name, auction_amount, auction_quantity, violation_item_uuid, violation_uuid, challan_uuid, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time, auction_uuid, purchaser_contact_no, auction_date) VALUES (?, ?, ?, ?::numeric, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        
+         basePath: RequestBody.auctionList.*
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.auctionList.*.auctionDetailUuid
+
+          - jsonPath: $.RequestBody.auctionList.*.storeItemUuid
+
+          - jsonPath: $.RequestBody.auctionList.*.purchaserName
+          
+          - jsonPath: $.RequestBody.auctionList.*.auctionAmount
+          
+          - jsonPath: $.RequestBody.auctionList.*.auctionQuantity
+          
+          - jsonPath: $.RequestBody.auctionList.*.violationItemUuid
+          
+          - jsonPath: $.RequestBody.auctionList.*.violationUuid
+          
+          - jsonPath: $.RequestBody.auctionList.*.challanUuid
+        
+          - jsonPath: $.RequestBody.auctionList.*.tenantId
+
+          - jsonPath: $.RequestBody.auctionList.*.isActive
+
+          - jsonPath: $.RequestBody.auctionList.*.createdBy
+
+          - jsonPath: $.RequestBody.auctionList.*.createdTime
+
+          - jsonPath: $.RequestBody.auctionList.*.lastModifiedBy
+
+          - jsonPath: $.RequestBody.auctionList.*.lastModifiedTime
+
+          - jsonPath: $.RequestBody.auctionList.*.auctionUuid
+          
+          - jsonPath: $.RequestBody.auctionList.*.purchaserContactNo
+          
+          - jsonPath: $.RequestBody.auctionList.*.auctionDate                   
+            type: DATE
+       - query: UPDATE public.egec_store_item_register SET  auctioned_quantity=(auctioned_quantity + ?) WHERE store_item_uuid=?;
+
+         basePath: RequestBody.auctionList.*
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.auctionList.*.auctionQuantity
+          
+          - jsonPath: $.RequestBody.auctionList.*.storeItemUuid
+          
+          
+ - version: 1.0
+   description: Payment History
+   fromTopic: persister-add-payment-history-topic
+   isTransaction: true
+   queryMaps:
+
+       - query: INSERT INTO public.egec_payment_receipt(payment_receipt_uuid, payment_uuid, payment_status, challan_amount,challan_uuid, violation_uuid, payment_gateway,transaction_id, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?::numeric, ?,?, ?, ?, ?, ?,?, ?, ?, ?);
+
+
+         basePath: RequestBody
+         jsonMaps:
+          
+          - jsonPath: $.RequestBody.paymentReceiptUuid
+
+          - jsonPath: $.RequestBody.paymentUuid
+
+          - jsonPath: $.RequestBody.paymentStatus
+          
+          - jsonPath: $.RequestBody.paymentAmount
+          
+          - jsonPath: $.RequestBody.challanUuid
+          
+          - jsonPath: $.RequestBody.violationUuid
+          
+          - jsonPath: $.RequestBody.paymentGateway
+          
+          - jsonPath: $.RequestBody.transactionId
+        
+          - jsonPath: $.RequestBody.tenantId
+
+          - jsonPath: $.RequestBody.isActive
+
+          - jsonPath: $.RequestBody.createdBy
+
+          - jsonPath: $.RequestBody.createdTime
+
+          - jsonPath: $.RequestBody.lastModifiedBy
+
+          - jsonPath: $.RequestBody.lastModifiedTime
+          
+ - version: 1.0
+   description: Device Source
+   fromTopic: persister-create-deviceSource-topic
+   isTransaction: true
+   queryMaps:
+      -  query: INSERT INTO egec_device_source_detail(source_uuid,module_type,device_type,device_details,tenant_id,created_by, created_time) VALUES(?,?,?,to_json(?::json),?,?,?);
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.sourceUuid
+         -  jsonPath: $.RequestBody.moduleType
+         -  jsonPath: $.RequestBody.deviceType
+         -  jsonPath: $.RequestBody.deviceDetails
+         -  jsonPath: $.RequestBody.tenantId
+         -  jsonPath: $.RequestBody.createdBy
+         -  jsonPath: $.RequestBody.createdTime
+            type: LONG
