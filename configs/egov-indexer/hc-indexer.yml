@@ -1,0 +1,43 @@
+ServiceMaps:
+ serviceName: Horticulture
+ version: 1.0.0
+ mappings:
+  - topic: hc-services-save
+    configKey: INDEX
+    indexes:
+    - name: horticulture-v1
+      type: serviceRequest
+      id: $.service_request_uuid, $.tenantId
+      isBulk: false
+      timeStampField: $.createdTime
+      jsonPath: $.RequestBody
+      
+  - topic: hc-service-update
+    configKey: INDEX
+    indexes:
+    - name: horticulture-v1
+      type: serviceRequest
+      id: $.service_request_uuid, $.tenantId
+      isBulk: false
+      timeStampField: $.createdTime
+      jsonPath: $.RequestBody
+      
+  - topic: hc-service-edit
+    configKey: INDEX
+    indexes:
+    - name: horticulture-v1
+      type: serviceRequest
+      id: $.service_request_uuid, $.tenantId
+      isBulk: false
+      timeStampField: $.createdTime
+      jsonPath: $.RequestBody
+            
+  - topic: hc-services-editSeviceRequestType
+    configKey: INDEX
+    indexes:
+    - name: horticulture-v1
+      type: serviceRequest
+      id: $.service_request_uuid, $.tenantId
+      isBulk: false
+      timeStampField: $.createdTime
+      jsonPath: $.RequestBody
