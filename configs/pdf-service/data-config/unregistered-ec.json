@@ -1,119 +1,112 @@
 {
 
-   "key":"unregistered-ec",
-   "DataConfigs": {
-      "serviceName": "egov-ec",
-      "version": "1.0.0",
-      "baseKeyPath": "$.unregisteredEchallan.*",
-      "entityIdPath":"$.applicationId",
-      "isCommonTableBorderRequired":true,
-      "mappings": [
-         {
-            "topic": "pt-pdf-generation",
-            "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
-            "mappings": [
-               {
-                  "direct": [
-                     {
-                        "variable": "variable1",
-                        "value": {
-                             "path":"$.serialNo"                              
-                        }
-                     },            
-                     {
-                        "variable":"variable2",
-                        "value":{
-                           "path":"$.violatorName"                            
-                        }  
-                     },
-                     {
-                        "variable": "variable3",
-                        "value":{
-                             "path":"$.fatherName"                           
-                         } 
-                     },
-                     {
-                       "variable": "variable4",
-                       "value":{
-                            "path":"$.address"                           
-                        } 
-                     },
-					 {
-                       "variable": "variable5",
-                       "value":{
-                            "path":"$.placeTime"                           
-                        } 
-                     },
-					 {
-                       "variable": "variable6",
-                       "value":{
-                            "path":"$.article1"                           
-                        } 
-                     },
-					 {
-                       "variable": "variable7",
-                       "value":{
-                            "path":"$.article2"                           
-                        } 
-                     },
-					 {
-                       "variable": "variable8",
-                       "value":{
-                            "path":"$.article3"                           
-                        } 
-                     },
-{
-                       "variable": "variable9",
-                       "value":{
-                            "path":"$.article4"                           
-                        } 
-                     },
-{
-                       "variable": "variable10",
-                       "value":{
-                            "path":"$.article5"                           
-                        } 
-                     },
-{
-                       "variable": "variable11",
-                       "value":{
-                            "path":"$.article6"                           
-                        } 
-                     },
-{
-                       "variable": "variable12",
-                       "value":{
-                            "path":"$.article7"                           
-                        } 
-                     },
-{
-                       "variable": "variable13",
-                       "value":{
-                            "path":"$.article8"                           
-                        } 
-                     },
-{
-                       "variable": "variable14",
-                       "value":{
-                            "path":"$.article9"                           
-                        } 
-                     },
-{
-                       "variable": "variable15",
-                       "value":{
-                            "path":"$.article10"                           
-                        } 
-                     },
-{
-                       "variable": "variable16",
-                       "value":{
-                            "path":"$.date"                           
-                        } 
-                     },				 					 
-                  ]
-               }
-            ]
-         }
-      ]
-   }
+	"key": "unregistered-ec",
+	"DataConfigs": {
+		"serviceName": "egov-ec",
+		"version": "1.0.0",
+		"baseKeyPath": "$.unregisteredEchallan.*",
+		"entityIdPath": "$.applicationId",
+		"isCommonTableBorderRequired": true,
+		"mappings": [{
+			"mappings": [{
+				"direct": [{
+						"variable": "variable1",
+						"value": {
+							"path": "$.serialNo"
+						}
+					},
+					{
+						"variable": "variable2",
+						"value": {
+							"path": "$.violatorName"
+						}
+					},
+					{
+						"variable": "variable3",
+						"value": {
+							"path": "$.fatherName"
+						}
+					},
+					{
+						"variable": "variable4",
+						"value": {
+							"path": "$.address"
+						}
+					},
+					{
+						"variable": "variable5",
+						"value": {
+							"path": "$.placeTime"
+						}
+					},
+					{
+						"variable": "variable6",
+						"value": {
+							"path": "$.article1"
+						}
+					},
+					{
+						"variable": "variable7",
+						"value": {
+							"path": "$.article2"
+						}
+					},
+					{
+						"variable": "variable8",
+						"value": {
+							"path": "$.article3"
+						}
+					},
+					{
+						"variable": "variable9",
+						"value": {
+							"path": "$.article4"
+						}
+					},
+					{
+						"variable": "variable10",
+						"value": {
+							"path": "$.article5"
+						}
+					},
+					{
+						"variable": "variable11",
+						"value": {
+							"path": "$.article6"
+						}
+					},
+					{
+						"variable": "variable12",
+						"value": {
+							"path": "$.article7"
+						}
+					},
+					{
+						"variable": "variable13",
+						"value": {
+							"path": "$.article8"
+						}
+					},
+					{
+						"variable": "variable14",
+						"value": {
+							"path": "$.article9"
+						}
+					},
+					{
+						"variable": "variable15",
+						"value": {
+							"path": "$.article10"
+						}
+					},
+					{
+						"variable": "variable16",
+						"value": {
+							"path": "$.date"
+						}
+					}
+				]
+			}]
+		}]
+	}
 }
