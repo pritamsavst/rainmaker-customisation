@@ -32,7 +32,7 @@
 	  "margin": [0,30,0,0]
     },
 	{
-      "text": "Address -{{variable8}}",
+      "text": "Address -{{variable8}},{{variable11}}",
       "alignment": "left",
 	  "margin": [0,20,0,0]
     },

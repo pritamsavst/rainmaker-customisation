@@ -127,3 +127,35 @@ serviceMaps:
          -  jsonPath: $.NOCApplications.*.performanceBankGuarantee   
          -  jsonPath: $.NOCApplications.*.totalamount     
          -  jsonPath: $.NOCApplications.*.applicationUuid
+         
+ - version: 1.0
+   fromTopic: fallback-noc-transitions
+   isTransaction: true
+   queryMaps:
+      -  query: UPDATE egpm_noc_application set application_status=?, amount=?, last_modified_time=?,gst_amount=?,performance_bank_guarantee=?,total_amount=? where application_uuid=?;
+         basePath: $.NOCApplication
+         jsonMaps:
+         -  jsonPath: $.NOCApplication.applicationStatus
+         -  jsonPath: $.NOCApplication.amount
+         -  jsonPath: $.NOCApplication.lastModifiedTime
+            type: LONG
+         -  jsonPath: $.NOCApplication.gstAmount
+         -  jsonPath: $.NOCApplication.performanceBankGuarantee   
+         -  jsonPath: $.NOCApplication.totalamount     
+         -  jsonPath: $.NOCApplication.applicationUuid
+         
+      - query: update egpm_noc_application_detail set application_detail=to_json(?::json)  where application_uuid=?
+        basePath: NOCApplication
+        jsonMaps:       
+         - jsonPath: $.NOCApplication.nocApplicationDetails.applicationDetail
+         - jsonPath: $.NOCApplication.applicationUuid
+      
+      -  query: delete from egpm_noc_application_remark where remark_id=?;
+         basePath: $.NOCApplication
+         jsonMaps:
+         -  jsonPath: $.NOCApplication.nocApplicationRemark.remarkId
+         
+      -  query: UPDATE egpm_noc_application_remark set is_active=true where remark_id=?;
+         basePath: $.NOCApplication
+         jsonMaps:
+         -  jsonPath: $.NOCApplication.nocApplicationRemark.previousRemarkId

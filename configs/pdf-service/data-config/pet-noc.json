@@ -21,7 +21,7 @@
                      {
                         "variable":"variable2",
                         "value":{
-                           "path":"$.applicantNameAddress"                            
+                           "path":"$.applicantHousenumber"                            
                         }  
                      },
                      {
@@ -41,6 +41,22 @@
                        "value":{
                             "path":"$.applicantName"                           
                         } 
+                     },
+					 {
+                       "variable": "variable6",
+                       "value":{
+                            "path":"$.badgeNumber"                           
+                        } 
+                     },
+					  {
+                        "variable":"variable7",
+                        "value":{
+                           "path":"$.applicantSector"                            
+                        }  ,
+								"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }	
                      }
                   ]
                }

@@ -77,7 +77,25 @@
                         "value":{
                            "path":"$.applicantNameAddress"                            
                         }  
+                     },
+					 {
+                        "variable":"variable12",
+                        "value":{
+                           "path":"$.applicantSector"                            
+                        }  ,
+								"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }	
+                     },
+					
+					 {
+                        "variable":"variable13",
+                        "value":{
+                           "path":"$.applicantsubsector"                            
+                        }  
                      }
+					
                   ]
                }
             ]

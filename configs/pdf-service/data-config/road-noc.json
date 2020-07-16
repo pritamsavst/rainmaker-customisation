@@ -40,7 +40,11 @@
                         "variable": "variable5",
                         "value": {
                              "path":"$.purposeOfRoadCutting"                              
-                        }
+                        },
+								"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }	
                      },            
                      {
                         "variable":"variable6",
@@ -77,6 +81,16 @@
                         "value":{
                            "path":"$.applicantNameAddress"                            
                         }  
+                     },
+					 {
+                        "variable":"variable12",
+                        "value":{
+                           "path":"$.applicantSector"                            
+                        }  ,
+								"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }	
                      }
                   ]
                }

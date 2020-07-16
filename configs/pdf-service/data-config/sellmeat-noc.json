@@ -21,8 +21,8 @@
                      {
                         "variable":"variable2",
                         "value":{
-                           "path":"$.applicantNameAddress"                            
-                        }  
+                           "path":"$.applicantNameHouseNumber"                            
+                        }							
                      },
                      {
                         "variable": "variable3",
@@ -47,6 +47,26 @@
                        "value":{
                             "path":"$.applicantName"                           
                         } 
+                     },
+					 {
+                       "variable": "variable7",
+                       "value":{
+                            "path":"$.licenseType"                           
+                        },
+						"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }						
+                     },
+					 {
+                       "variable": "variable8",
+                       "value":{
+                            "path":"$.applicantSector"                           
+                        },
+						"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }						
                      }
                   ]
                }

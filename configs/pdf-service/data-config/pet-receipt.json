@@ -51,9 +51,19 @@
                      {
                        "variable": "variable7",
                        "value":{
-                            "path":"$.applicantNameAddress"                           
+                            "path":"$.applicantHousenumber"                           
                         } 
-                     }
+                     },
+                     {
+                       "variable": "variable8",
+                       "value":{
+                            "path":"$.applicantSector"                           
+                        },
+						"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }
+					}
                   ]
                }
             ]

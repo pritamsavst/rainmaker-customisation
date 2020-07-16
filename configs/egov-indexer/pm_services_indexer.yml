@@ -19,7 +19,7 @@ ServiceMaps:
       type: noc
       id: $.nocNumber
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplications      
 
   - topic: update-noc-details-transitions
@@ -29,7 +29,7 @@ ServiceMaps:
       type: nocdetails
       id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplicationDetails
 
   - topic: delete-noc-transitions
@@ -39,7 +39,7 @@ ServiceMaps:
       type: nocdetails
       id: $.applicationDetailUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplicationDetails
 
   - topic: save-nocapprovereject-transitions
@@ -59,7 +59,7 @@ ServiceMaps:
       type: approve-reject-transitions
       id: $.tenantId,$.applicationUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplications
 
   - topic: update-noc-approve-reject-transitions
@@ -69,7 +69,7 @@ ServiceMaps:
       type: approve-reject-transitions
       id: $.remarkId,$.tenantId,$.applicationUuid
       isBulk: true
-      timeStampField: $.createdTime
+      timeStampField: $.lastModifiedTime
       jsonPath: $.NOCApplicationRemark
 
   - topic: update-opms-priceBookMasterDate
@@ -77,6 +77,16 @@ ServiceMaps:
     indexes:
     - name: pm-price-book-master-date-index-v1
       type: priceBookMasterDate
+      id: $.priceBookId,$.tenantId,$.applicationType
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCPriceBook
+
+  - topic: insert-opms-priceBookMaster
+    configKey: INDEX
+    indexes:
+    - name: pm-price-book-master-index-v1
+      type: priceBookMaster
       id: $.priceBookId,$.tenantId,$.applicationType
       isBulk: true
       timeStampField: $.createdTime

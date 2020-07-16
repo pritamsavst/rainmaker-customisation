@@ -1,234 +1,257 @@
 {
-  "key":"pet-noc",
-  "config":{
-    
-  "content":[
-    {
-      "text": "MUNICIPAL CORPORATION CHANDIGARH",
-      "alignment": "center",
-	  "color": "#484848",
-      "fontSize": 12,
-      "bold": true,
-	  "underline": true,
-	  "decoration": "underline",
-	  "margin": [
-        0,
-        20,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "TO",
-      "alignment": "left",
-	  "margin": [
-        0,
-        30,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "{{variable5}}",
-      "alignment": "left"
-    },
-	{
-      "text": "{{variable2}}",
-      "alignment": "left"
-    },
-	{
-      "text": "Application No - {{variable3}}",
-      "color": "#484848",
-      "fontSize": 12,
-      "bold": true,
-	  "margin": [
-        0,
-        20,
-        0,
-        0
-      ]
-    },
-    {
-      "text": "Dated - {{variable4}}",
-      "color": "#484848",
-      "fontSize": 12,
-      "bold": true,
-	  "margin": [
-        0,
-        10,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "Subject: Permission for keeping a pet dog at your residence in Chandigarh",
-      "color": "#484848",
-      "fontSize": 12,
-      "bold": true,
-	  "margin": [
-        0,
-        30,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "(Under Provision of Chandigarh Registration of pet dog BYE-LAWS 2010)",
-	  "margin": [
-        0,
-        10,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "Reference your application dated {{variable4}} on the subject cited above.",
-	  "margin": [
-        0,
-        10,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "Consequent upon the approval of the Medical Officer of Health, Municipal Corporation, Chandigarh,permission is hereby granted for Keeping a pet dog at your house in Chandigarh.",
-	  "margin": [
-        0,
-        5,
-        0,
-        0
-      ]
-    },
-	{
-      "text": "Further it is intimated that all the conditions of the undertaking shall be fulfilled throughout failing which the issued permission will be treated as withdrawn without further notice and action as deemed fit will be initiated.",
-	  "margin": [
-        0,
-        5,
-        0,
-        0
-      ]
-    },
-	{
-		"columns": [	
-			{
-				"width": 300,
-				"text":" "
-			},
-			{
-				"text": "The Medical Officer of Health,",
-				"color": "#484848",
-				"fontSize": 12,
-				"bold": true,
-				"margin": [0,25,0,0]
-			}
-		]
-	},
-	{
-		"columns": [	
-			{
-				"width": 300,
-				"text":" "
-			},
-			{
-				"text": "Municipal Corporation, Chandigarh.",
-				"color": "#484848",
-				"fontSize": 12,
-				"bold": true,
-				"margin": [0,0,0,0]
-			}
-		]
-	},
-	{
-		"columns": [	
-			{
-				"width": 300,
-				"text":" "
-			},
-			{
-				"text": "Dated: {{variable1}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"bold": true,
-				"margin": [0,0,0,0]
-			}
-		]
-	},
-	{
-      "text": "This letter is electronically generated, and no signature is required.",
-	  "style" : "receipt-footer"
+  "key": "pet-noc",
+  "config": {
+    "content": [
+      {
+        "text": "MUNICIPAL CORPORATION CHANDIGARH",
+        "alignment": "center",
+        "color": "#484848",
+        "fontSize": 12,
+        "bold": true,
+        "underline": true,
+        "decoration": "underline",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "TO",
+        "alignment": "left",
+        "margin": [
+          0,
+          30,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "{{variable5}}",
+        "alignment": "left"
+      },
+      {
+        "text": "{{variable2}},{{variable7}}",
+        "alignment": "left"
+      },
+      {
+        "text": "Application No - {{variable3}}",
+        "color": "#484848",
+        "fontSize": 12,
+        "bold": true,
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "Dated - {{variable4}}",
+        "color": "#484848",
+        "fontSize": 12,
+        "bold": true,
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "Subject: Permission for keeping a pet dog at your residence in Chandigarh",
+        "color": "#484848",
+        "fontSize": 12,
+        "bold": true,
+        "margin": [
+          0,
+          30,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "(Under Provision of Chandigarh Registration of pet dog BYE-LAWS 2010)",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "Reference your application dated {{variable4}} on the subject cited above.",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "Consequent upon the approval of the Medical Officer of Health, Municipal Corporation, Chandigarh,permission is hereby granted for Keeping a pet dog at your house in Chandigarh.",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      {
+        "text": "Further it is intimated that all the conditions of the undertaking shall be fulfilled throughout failing which the issued permission will be treated as withdrawn without further notice and action as deemed fit will be initiated.",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+	  {
+        "text": "Allocated Badge Number - {{variable6}}.",
+        "margin": [
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      {
+        "columns": [
+          {
+            "width": 300,
+            "text": " "
+          },
+          {
+            "text": "The Medical Officer of Health,",
+            "color": "#484848",
+            "fontSize": 12,
+            "bold": true,
+            "margin": [
+              0,
+              25,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "columns": [
+          {
+            "width": 300,
+            "text": " "
+          },
+          {
+            "text": "Municipal Corporation, Chandigarh.",
+            "color": "#484848",
+            "fontSize": 12,
+            "bold": true,
+            "margin": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "columns": [
+          {
+            "width": 300,
+            "text": " "
+          },
+          {
+            "text": "Dated: {{variable1}}",
+            "color": "#484848",
+            "fontSize": 12,
+            "bold": true,
+            "margin": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "text": "This letter is electronically generated, and no signature is required.",
+        "style": "receipt-footer"
+      }
+    ],
+    "styles": {
+      "pt-reciept-citizen-subheader": {
+        "fontSize": 10,
+        "bold": true,
+        "margin": [
+          0,
+          16,
+          0,
+          8
+        ],
+        "color": "#484848"
+      },
+      "pt-reciept-citizen-table": {
+        "fontSize": 10,
+        "color": "#484848"
+      },
+      "receipt-assess-table": {
+        "fontSize": 10,
+        "color": "#484848",
+        "margin": [
+          0,
+          8,
+          0,
+          0
+        ]
+      },
+      "receipt-assess-table-header": {
+        "bold": true,
+        "fillColor": "#D8D8D8",
+        "color": "#484848"
+      },
+      "receipt-header-details": {
+        "fontSize": 9,
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "color": "#484848"
+      },
+      "receipt-table-key": {
+        "color": "#484848",
+        "bold": true
+      },
+      "receipt-table-value": {
+        "color": "#484848"
+      },
+      "receipt-logo-header": {
+        "color": "#484848",
+        "fontSize": 16,
+        "bold": true,
+        "decoration": "underline",
+        "decorationColor": "#484848"
+      },
+      "receipt-logo-sub-header": {
+        "color": "#484848",
+        "fontSize": 13,
+        "decoration": "underline",
+        "decorationColor": "#484848"
+      },
+      "receipt-footer": {
+        "color": "#484848",
+        "fontSize": 10,
+        "margin": [
+          0,
+          50,
+          0,
+          5
+        ]
+      }
     }
-	],
-  "styles": {
-    "pt-reciept-citizen-subheader": {
-      "fontSize": 10,
-      "bold": true,
-      "margin": [
-        0,
-        16,
-        0,
-        8
-      ],
-      "color": "#484848"
-    },
-    "pt-reciept-citizen-table": {
-      "fontSize": 10,
-      "color": "#484848"
-    },
-    "receipt-assess-table": {
-      "fontSize": 10,
-      "color": "#484848",
-      "margin": [
-        0,
-        8,
-        0,
-        0
-      ]
-    },
-    "receipt-assess-table-header": {
-      "bold": true,
-      "fillColor": "#D8D8D8",
-      "color": "#484848"
-    },
-    "receipt-header-details": {
-      "fontSize": 9,
-      "margin": [
-        0,
-        0,
-        0,
-        8
-      ],
-      "color": "#484848"
-    },
-    "receipt-table-key": {
-      "color": "#484848",
-      "bold": true
-    },
-    "receipt-table-value": {
-      "color": "#484848"
-    },
-    "receipt-logo-header": {
-      "color": "#484848",
-      "fontSize": 16,
-      "bold": true,
-      "decoration": "underline",
-      "decorationColor": "#484848"
-    },
-    "receipt-logo-sub-header": {
-      "color": "#484848",
-      "fontSize": 13,
-      "decoration": "underline",
-      "decorationColor": "#484848"
-    },
-    "receipt-footer": {
-      "color": "#484848",
-      "fontSize": 10,
-      "margin": [
-        0,
-        50,
-        0,
-        5
-      ]
-    }
-  }
   }
 }

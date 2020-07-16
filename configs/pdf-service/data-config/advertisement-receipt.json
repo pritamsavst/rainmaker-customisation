@@ -71,6 +71,16 @@
                        "value":{
                             "path":"$.applicationDate"                           
                         } 
+                     },
+					 {
+                       "variable": "variable11",
+                       "value":{
+                            "path":"$.applicantSector"                           
+                        },
+						"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }						
                      }
                   ]
                }

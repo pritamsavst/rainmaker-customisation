@@ -2,7 +2,7 @@
 
    "key":"roadcut-receipt",
    "DataConfigs": {
-      "serviceName": "pm-services",
+      "serviceName": "egov-opms",
       "version": "1.0.0",
       "baseKeyPath": "$.nocApplicationDetail.*",
       "entityIdPath":"$.applicationId",
@@ -71,6 +71,16 @@
                        "value":{
                             "path":"$.bgAmountinword"                           
                         } 
+                     },
+					 {
+                       "variable": "variable11",
+                       "value":{
+                            "path":"$.applicantSector"                           
+                        },
+						"localisation":{
+                           "required":true,
+                           "module":"rainmaker-pm"
+                        }						
                      }
                   ]
                }

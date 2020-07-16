@@ -29,11 +29,11 @@
       ]
     },
 	{
-      "text": "{{variable6}}",
+      "text": "{{variable6}},",
       "alignment": "left"
     },
 	{
-      "text": "{{variable2}}",
+      "text": "{{variable2}},{{variable8}}",
       "alignment": "left"
     },
 	{
@@ -61,7 +61,7 @@
       ]
     },
 	{
-      "text": "Subject: Issue of No Objection certificate for obtaining license to sell meat, fish and poultry.",
+      "text": "Subject: Issue of No Objection certificate for obtaining license to sell {{variable7}}",
       "color": "#484848",
       "fontSize": 12,
       "bold": true,
@@ -91,7 +91,7 @@
       ]
     },
 	{
-      "text": "Inspection has been carried out by the office. You are hereby issued NOC for obtaining license to sell jhatka/halal meat (sheep/goat/pig), fish and poultry or packed/frozen meat (sheep/goat/pig), fish and poultry only at premises {{variable5}}.",
+      "text": "Inspection has been carried out by the office. You are hereby issued NOC for obtaining license to sell {{variable7}} only at premises {{variable5}},{{variable8}}.",
 	  "margin": [
         0,
         5,
@@ -127,7 +127,7 @@
 				"text":" "
 			},
 			{
-				"text": "Estate Officer / Commissioner ",
+				"text": "The Medical Officer of Health",
 				"color": "#484848",
 				"fontSize": 12,
 				"bold": true,
@@ -169,7 +169,7 @@
       "text": "This letter is electronically generated, and no signature is required.",
 	  "style" : "receipt-footer"
     },
-	{"text":"Conditions  for issue of No Objection Certificate","fontSize": 12,"decoration": "underline","margin": [0,20,0,0],"alignment": "center", "bold": "true", "pageBreak": "before"} ,
+	{"text":"Conditions for issue of No Objection Certificate","fontSize": 12,"decoration": "underline","margin": [0,20,0,0],"alignment": "center", "bold": "true", "pageBreak": "before"} ,
 	{"text":"No premises shall be issued NOC to obtain license for sale of meat, fish and poultry unless:-","margin": [0,20,0,0]} ,
 	{"text":"a) It has a floor made of impervious and non-slippery material.","margin": [0,20,0,0]} ,
 	{"text":"b) Its walls upto a height of minimum 5 feet from the floor level shall be made of Impervious concrete material (e.g.glazed tiles or hygienic panels etc.)and ceiling is properly plasted and lime washed."},

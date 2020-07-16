@@ -33,7 +33,7 @@
       "alignment": "left"
     },
 	{
-      "text": "{{variable11}}",
+      "text": "{{variable11}},{{variable12}}",
       "alignment": "left"
     },
 	{
