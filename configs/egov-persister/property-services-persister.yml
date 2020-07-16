@@ -774,4 +774,3 @@ serviceMaps:
          - jsonPath: $.Properties[*][?({assessmentNumber} in @.propertyDetails[*].assessmentNumber)].tenantId
 
 
-
