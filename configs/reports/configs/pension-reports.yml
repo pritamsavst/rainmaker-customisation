@@ -2,7 +2,7 @@
 ReportDefinitions: 
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='RRP_SERVICE'"
+    query: "select application_number,name as applicantName, date_of_retirement , workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='RRP_SERVICE'"
     reportName: RegularNormalPension
     searchParams: 
       - 
@@ -35,6 +35,11 @@ ReportDefinitions:
         name: date_of_retirement
         source: eg_pension_workflow_header
         type: epoch
+      - 
+        label: State
+        name: workflow_state
+        source: eg_pension_workflow_header
+        type: string
   - 
     moduleName: rainmaker-pension
     query: "select pp.pensioner_number as pensioner_number , pe.name as name,  fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, wound_extraordinary_pension, attendant_allowance from eg_pension_revision pr join eg_pension_pensioner pp on pr.pensioner_id=pp.uuid join eg_pension_employee pe on pp.pension_employee_id=pe.uuid where 1=1 AND pp.active=true AND pr.active=true"
@@ -169,7 +174,7 @@ ReportDefinitions:
         type: string
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOE_SERVICE'"
+    query: "select application_number,name as applicantName, date_of_retirement, workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOE_SERVICE'"
     reportName: DeathOfAnEmployee
     searchParams: 
       - 
@@ -202,9 +207,14 @@ ReportDefinitions:
         name: date_of_retirement
         source: eg_pension_workflow_header
         type: epoch
+      - 
+        label: State
+        name: workflow_state
+        source: eg_pension_workflow_header
+        type: string
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOP_SERVICE'"
+    query: "select application_number,name as applicantName, date_of_retirement, workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOP_SERVICE"
     reportName: DeathOfPensioner
     searchParams: 
       - 
@@ -237,56 +247,56 @@ ReportDefinitions:
         name: date_of_retirement
         source: eg_pension_workflow_header
         type: epoch
+      - 
+        label: State
+        name: workflow_state
+        source: eg_pension_workflow_header
+        type: string
   - 
     moduleName: rainmaker-pension
-    query: "select employee_hrms_id as id, employee_hrms_code as code,name,gender, employee_type, date_of_birth,date_of_retirement from eg_pension_employee WHERE 1=1"
+    query: "select pe.id, pe.code as code , u.name as name , u.gender as gender , pe.employeetype as employee_type  , u.dob ,pe.dateofsuperannuation as dateofsuperannuation   from eg_hrms_employee pe  join eg_user u  on pe.uuid=u.uuid  WHERE 1=1"
     reportName: EmployeeToBeRetired
     searchParams: 
       - 
         isMandatory: true
         label: reports.rainmaker-pgr.datefrom
         name: fromDate
-        searchClause: "AND eg_pension_employee.date_of_retirement >= $fromDate"
-        source: eg_pension_employee
+        searchClause: "AND pe.dateofsuperannuation >= $fromDate"
+        source: eg_hrms_employee
         type: epoch
       - 
         isMandatory: true
         label: reports.rainmaker-pgr.dateto
         name: toDate
-        searchClause: "AND eg_pension_employee.date_of_retirement <= $toDate"
-        source: eg_pension_employee
+        searchClause: "AND pe.dateofsuperannuation <= $toDate"
+        source: eg_hrms_employee
         type: epoch
     sourceColumns: 
       - 
         label: PENSION_EMPLOYEE_CODE
         name: code
-        source: eg_pension_employee
+        source: eg_hrms_employee
         type: string
       - 
         label: PENSION_EMPLOYEE_NAME
         name: name
-        source: eg_pension_employee
-        type: string
-      - 
-        label: PENSION_EMPLOYEE_GENDER
-        name: gender
-        source: eg_pension_employee
+        source: eg_user
         type: string
       - 
         label: PENSION_EMPLOYEE_TYPE
         name: employee_type
-        source: eg_pension_employee
+        source: eg_user
         total: false
         type: string
       - 
         label: PENSION_DOB
-        name: date_of_birth
-        source: eg_pension_employee
+        name: dob
+        source: eg_user
         total: false
         type: epoch
       - 
         label: PENSION_DOR
-        name: date_of_retirement
-        source: eg_pension_employee
+        name: dateofsuperannuation
+        source: eg_hrms_employee
         total: false
         type: epoch
