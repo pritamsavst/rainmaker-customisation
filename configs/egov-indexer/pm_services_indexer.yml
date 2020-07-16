@@ -1,0 +1,83 @@
+ServiceMaps:
+ serviceName: NOC
+ version: 1.0.0
+ mappings:
+  - topic: save-noc-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-index-v1
+      type: noc
+      id: $.applicationUuid,$.tenantId,$.nocNumber
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplications
+
+  - topic: update-noc-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-index-v1
+      type: noc
+      id: $.nocNumber
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplications      
+
+  - topic: update-noc-details-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-details-index-v1
+      type: nocdetails
+      id: $.applicationDetailUuid,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationDetails
+
+  - topic: delete-noc-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-details-index-v1
+      type: nocdetails
+      id: $.applicationDetailUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationDetails
+
+  - topic: save-nocapprovereject-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-approvereject-index-v1
+      type: approve-reject-transitions
+      id: $.remarkId,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationRemark
+
+  - topic: update-noc-approve-reject-main-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-approvereject-index-v1
+      type: approve-reject-transitions
+      id: $.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplications
+
+  - topic: update-noc-approve-reject-transitions
+    configKey: INDEX
+    indexes:
+    - name: pm-noc-approvereject-trans-index-v1
+      type: approve-reject-transitions
+      id: $.remarkId,$.tenantId,$.applicationUuid
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCApplicationRemark
+
+  - topic: update-opms-priceBookMasterDate
+    configKey: INDEX
+    indexes:
+    - name: pm-price-book-master-date-index-v1
+      type: priceBookMasterDate
+      id: $.priceBookId,$.tenantId,$.applicationType
+      isBulk: true
+      timeStampField: $.createdTime
+      jsonPath: $.NOCPriceBook
