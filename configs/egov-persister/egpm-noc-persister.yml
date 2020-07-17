@@ -82,6 +82,11 @@ serviceMaps:
    fromTopic: save-nocapprovereject-transitions
    isTransaction: true
    queryMaps:
+      -  query: UPDATE egpm_noc_application_remark set is_active=false where application_uuid=?;
+         basePath: $.NOCApplicationRemark.*
+         jsonMaps:
+         -  jsonPath: $.NOCApplicationRemark.*.applicationUuid
+
       -  query: INSERT INTO egpm_noc_application_remark (remark_id,application_uuid, application_status, remark, remark_by,
             is_active, created_by,created_time, last_modified_by,last_modified_time, document_detail,tenant_id)VALUES(?,?,?,?,?,?,?,?,?,?,to_json(?::json),?);
          basePath: $.NOCApplicationRemark.*
@@ -101,16 +106,6 @@ serviceMaps:
          -  jsonPath: $.NOCApplicationRemark.*.documentId
          -  jsonPath: $.NOCApplicationRemark.*.tenantId          
         
-          
- - version: 1.0
-   description: pm-sevices update transitions
-   fromTopic: update-noc-approve-reject-transitions
-   isTransaction: true
-   queryMaps:
-      -  query: UPDATE egpm_noc_application_remark set is_active=false where application_uuid=?;
-         basePath: $.NOCApplicationRemark.*
-         jsonMaps:
-         -  jsonPath: $.NOCApplicationRemark.*.applicationUuid
           
  - version: 1.0
    fromTopic: update-noc-approve-reject-main-transitions
