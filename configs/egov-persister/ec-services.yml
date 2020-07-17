@@ -3,7 +3,7 @@ serviceMaps:
  mappings:
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-save-itemmaster-item-topic
+   fromTopic: ec-services-save-item
    isTransaction: true
    queryMaps:
 
@@ -33,7 +33,7 @@ serviceMaps:
            
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-update-itemmaster-item-topic
+   fromTopic: ec-services-update-item
    isTransaction: true
    queryMaps:
 
@@ -65,7 +65,7 @@ serviceMaps:
 
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-save-finemaster-fine-topic
+   fromTopic: ec-services-save-fine
    isTransaction: true
    queryMaps:
 
@@ -104,7 +104,7 @@ serviceMaps:
             
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-update-finemaster-fine-topic
+   fromTopic: ec-services-update-fine
    isTransaction: true
    queryMaps:
 
@@ -141,7 +141,7 @@ serviceMaps:
 
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-create-store-item-topic
+   fromTopic: ec-services-create-store-item
    isTransaction: true
    queryMaps:
 
@@ -228,7 +228,7 @@ serviceMaps:
 
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-update-store-item-topic
+   fromTopic: ec-services-update-store-item
    isTransaction: true
    queryMaps:
 
@@ -257,7 +257,7 @@ serviceMaps:
           
  - version: 1.0
    description: Persists challan generation 
-   fromTopic: persister-generate-challan-topic
+   fromTopic: ec-services-generate-challan
    isTransaction: true
    queryMaps:
 
@@ -446,7 +446,7 @@ serviceMaps:
           
  - version: 1.0
    description: Persists challan generation 
-   fromTopic: persister-update-challan-topic
+   fromTopic: ec-services-update-challan
    isTransaction: true
    queryMaps:
 
@@ -465,7 +465,7 @@ serviceMaps:
           
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-create-vendor-topic
+   fromTopic: ec-services-create-vendor
    isTransaction: true
    queryMaps:
 
@@ -509,7 +509,7 @@ serviceMaps:
           
  - version: 1.0
    description: update payment info for cash payment
-   fromTopic: persister-update-storeItemOfflinePayment-topic
+   fromTopic: ec-services-update-store-offline-payment
    isTransaction: true
    queryMaps:
 
@@ -535,7 +535,7 @@ serviceMaps:
           
  - version: 1.0
    description: Add Penalty Amount
-   fromTopic: persister-update-penalty-amount-topic
+   fromTopic: ec-services-update-penalty-amount
    isTransaction: true
    queryMaps:
 
@@ -565,7 +565,7 @@ serviceMaps:
           
  - version: 1.0
    description: update Auction
-   fromTopic: persister-update-auction-topic
+   fromTopic: ec-services-update-auction
    isTransaction: true
    queryMaps:
 
@@ -583,7 +583,7 @@ serviceMaps:
           
  - version: 1.0
    description: update Auction
-   fromTopic: persister-update-auctionRejection-topic
+   fromTopic: ec-services-update-auction-rejection
    isTransaction: true
    queryMaps:
 
@@ -611,7 +611,7 @@ serviceMaps:
           
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-update-vendor-topic
+   fromTopic: ec-services-update-vendor
    isTransaction: true
    queryMaps:
 
@@ -654,7 +654,7 @@ serviceMaps:
           
  - version: 1.0
    description: Persists echallan services
-   fromTopic: persister-save-auction-topic
+   fromTopic: ec-services-save-auction
    isTransaction: true
    queryMaps:
 
@@ -736,7 +736,7 @@ serviceMaps:
           
  - version: 1.0
    description: Payment History
-   fromTopic: persister-add-payment-history-topic
+   fromTopic: ec-services-save-payment-history
    isTransaction: true
    queryMaps:
 
@@ -776,7 +776,7 @@ serviceMaps:
           
  - version: 1.0
    description: Device Source
-   fromTopic: persister-create-deviceSource-topic
+   fromTopic: ec-services-create-device-source
    isTransaction: true
    queryMaps:
       -  query: INSERT INTO egec_device_source_detail(source_uuid,module_type,device_type,device_details,tenant_id,created_by, created_time) VALUES(?,?,?,to_json(?::json),?,?,?);
