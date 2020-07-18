@@ -336,11 +336,11 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.receiptDetails.*.userReceivedQty
          -  jsonPath: $.materialReceipt.*.receiptDetails.*.unitRate
          -  jsonPath: $.materialReceipt.*.receiptDetails.*.remarks
-         -  jsonPath: $.materialReceipt.*.auditDetails.createdBy
-         -  jsonPath: $.materialReceipt.*.auditDetails.createdTime
+         -  jsonPath: $.materialReceipt.*.receiptDetails.*.auditDetails.createdBy
+         -  jsonPath: $.materialReceipt.*.receiptDetails.*.auditDetails.createdTime
             type: LONG
-         -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedBy
-         -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedTime
+         -  jsonPath: $.materialReceipt.*.receiptDetails.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.materialReceipt.*.receiptDetails.*.auditDetails.lastModifiedTime
             type: LONG
       -  query: INSERT INTO materialreceiptdetailaddnlinfo(id, receiptDetailId,tenantId,receivedDate, lotNo,oldReceiptNumber,expiryDate,userquantity,quantity,serialno
             )VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
@@ -366,8 +366,8 @@ serviceMaps:
       -  query: INSERT INTO materialreceiptdetail(id, tenantId, material, mrnNumber, uomNo,receivedQty, acceptedQty,userReceivedQty,userAcceptedQty,unitRate,
             remarks, createdby,createdTime,lastmodifiedby,lastModifiedTime) VALUES ( ?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
             ?, ?) ON CONFLICT (id,tenantid) DO UPDATE SET receivedQty = EXCLUDED.receivedQty,acceptedQty = EXCLUDED.receivedQty,userReceivedQty
-            = EXCLUDED.userReceivedQty,userAcceptedQty = EXCLUDED.userReceivedQty,unitRate = EXCLUDED.unitRate, lastmodifiedby
-            = EXCLUDED.lastmodifiedby,lastModifiedTime = EXCLUDED.lastmodifiedtime ;
+            = EXCLUDED.userReceivedQty,userAcceptedQty = EXCLUDED.userReceivedQty,unitRate = EXCLUDED.unitRate, remarks=EXCLUDED.remarks, lastmodifiedby
+            = EXCLUDED.lastmodifiedby,lastModifiedTime = EXCLUDED.lastmodifiedtime;
          basePath: $.materialReceipt.*.receiptDetails.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.receiptDetails.*.id
