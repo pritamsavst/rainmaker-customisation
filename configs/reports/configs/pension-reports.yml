@@ -50,7 +50,7 @@ ReportDefinitions:
         label: Year
         name: Year
         pattern: "list://2020:2020,2021:2021,2022:2022,2023:2023,2024:2024,2025:2025"
-        searchClause: "AND pr.effective_start_year>= $Year AND pr.effective_start_month>=$Month and pr.effective_end_year<=$Year and pr.effective_end_month<=$Month"
+        searchClause: "AND pr.effective_start_year<= cast($Year as integer) AND (pr.effective_end_year is null or pr.effective_end_year>=cast($Year as integer))"
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
@@ -59,7 +59,7 @@ ReportDefinitions:
         label: Month
         name: Month
         pattern: "list://1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12"
-        searchClause: "OR pr.effective_start_year>=$Year and pr.effective_start_month>=$Month"
+        searchClause: "AND pr.effective_start_month<=cast($Month as integer) and (pr.effective_end_month is null or pr.effective_end_month>=cast($Month as integer))"
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
@@ -214,7 +214,7 @@ ReportDefinitions:
         type: string
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement, workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOP_SERVICE"
+    query: "select application_number,name as applicantName, date_of_retirement, workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOP_SERVICE'"
     reportName: DeathOfPensioner
     searchParams: 
       - 
