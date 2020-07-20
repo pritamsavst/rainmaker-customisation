@@ -134,10 +134,10 @@
                   {
                     "table": {
                       "widths": [
-                        "30%",
-                        "30%",
-                        "30%",
-                        "10%"
+                        "25%",
+                        "15%",
+                        "35%",
+                        "25%"
                       ],
                       "body": [
                         [
@@ -198,7 +198,7 @@
                             "style": "receipt-table2"
                           },
                           {
-                            "text": "{{SLADays}}",
+                            "text": "{{treeCount}}",
                             "border": [
                               false,
                               false,
@@ -367,7 +367,7 @@
                       "body": [
                         [
                           {
-                            "text": "Owner Name",
+                            "text": "Name of Owner",
                             "border": [
                               false,
                               false,
@@ -377,7 +377,7 @@
                             "style": "receipt-table-value-cont"
                           },
                           {
-                            "text": "Owner Contact Number",
+                            "text": "Contact Number",
                             "border": [
                               false,
                               false,
@@ -388,7 +388,7 @@
                             "fontSize": 11
                           },
                           {
-                            "text": "Email ID",
+                            "text": "Email",
                             "border": [
                               false,
                               false,
