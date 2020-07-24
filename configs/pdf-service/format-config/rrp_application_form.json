@@ -6,47 +6,25 @@
 		},
 
 
-		"content": [{
-				"style": "noc-head",
-				"table": {
-					"widths": [
-						"*",
-						"*",
-						"*"
-					],
-					"body": [
-						[{
-								"text": "Regular Retirement Benefit",
-								"style": "receipt-logo-header"
-							},
-							{
-								"text": "Application Number",
-								"alignment": "right",
-								"color": "#484848",
-								"margin": [
-									0,
-									2,
-									-50,
-									0
-								]
-							},
-							{
-								"text": "{{application_number}}",
-								"alignment": "right",
-								"color": "#484848",
-								"bold": true,
-								"margin": [
-									-150,
-									2,
-									-20,
-									0
-								]
-							}
-						]
-					]
-				},
-				"layout": "noBorders"
-			},
+		"content": [
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "OFFICE OF COMMISSIONER, MUNICIPAL CORPORATION, CHANDIGARH",
+                  "bold": true,
+				  "alignment":"center"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Regular Retirement Benefit",
+                  "bold": false,
+				  "alignment":"center"
+        },
+		{
+          "style": "pt-reciept-citizen-header",
+          "text": "Application No. {{application_number}}",
+                  "bold": false,
+				  "alignment":"center"
+        },
 			{
 				"style": "noc-table2",
 				"table": {
