@@ -3735,10 +3735,124 @@ serviceMaps:
 
       - jsonPath: $.Pensioner.*.auditDetails.lastModifiedDate          
     
-    
+  - version: 1.0
+    name: Create Revised Pension Bulk
+    description: Create Revised Pension Bulk
+    fromTopic: CREATE_REVISED_PENSION_BULK
+    isTransaction: true
+    queryMaps:   
 
-    
+    - query: DELETE from eg_pension_revision where effective_start_year>=? and effective_start_month>=?;
 
+      basePath: Parameters
+      jsonMaps:      
+
+      - jsonPath: $.Parameters.effectiveYear      
+
+      - jsonPath: $.Parameters.effectiveMonth
+        
+    - query: UPDATE eg_pension_revision SET effective_end_year=?, effective_end_month=?, last_modified_by=?, last_modified_date=? WHERE uuid =?;
+
+      basePath: Parameters.oldPensionRevisions.*
+      jsonMaps:      
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.effectiveEndYear
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.effectiveEndMonth                  
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.auditDetails.createdBy      
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.auditDetails.createdDate             
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.pensionRevisionId
+
+    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, remarks, wound_extraordinary_pension, attendant_allowance) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, remarks, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid = ?;  
+
+      basePath: Parameters.oldPensionRevisions.*
+      jsonMaps:
       
-       
-  
+      - jsonPath: $.Parameters.oldPensionRevisions.*.pensionRevisionAuditId            
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.auditDetails.createdBy      
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.auditDetails.createdDate          
+
+      - jsonPath: $.Parameters.oldPensionRevisions.*.pensionRevisionId
+
+    - query: INSERT INTO eg_pension_revision(uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, last_modified_by, created_date, last_modified_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+      basePath: Parameters.newPensionRevisions.*
+      jsonMaps:
+      
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionRevisionId
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.tenantId
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionerId     
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.effectiveStartYear
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.effectiveStartMonth
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.effectiveEndYear      
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.effectiveEndMonth  
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionArrear 
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.fma
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.miscellaneous
+      
+      - jsonPath: $.Parameters.newPensionRevisions.*.overPayment
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.incomeTax
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.cess
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.basicPension
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.additionalPension          
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.commutedPension
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.netDeductions
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.finalCalculatedPension              
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.createdBy
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.lastModifiedBy
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.createdDate
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.lastModifiedDate
+      
+      - jsonPath: $.Parameters.newPensionRevisions.*.interimRelief
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.da
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.totalPension
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionDeductions
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionerFinalCalculatedBenefitId
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.remarks
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.woundExtraordinaryPension
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.attendantAllowance
+
+    - query: INSERT INTO eg_pension_revision_audit(uuid, pension_revision_id, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, created_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance) SELECT ?, uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, remarks, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid = ?;  
+
+      basePath: Parameters.newPensionRevisions.*
+      jsonMaps:
+      
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionRevisionAuditId            
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.createdBy      
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.auditDetails.createdDate          
+
+      - jsonPath: $.Parameters.newPensionRevisions.*.pensionRevisionId
