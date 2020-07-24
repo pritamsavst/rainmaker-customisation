@@ -223,3 +223,61 @@ serviceMaps:
        - jsonPath: $.actionInfo.*.tenantId
 
        - jsonPath: $.actionInfo.*.businessKey
+
+   
+ - version: 1.0
+   name: Autorouting
+   description: Persists Autorouting details in the table
+   fromTopic: save-autorouting-data
+   isTransaction: true
+   queryMaps:
+    - query: INSERT INTO eg_pgr_autorouting_data(id, tenantid, autorouting, createdby, createdtime, lastmodifiedby, lastmodifiedtime, active) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+      basePath: autoroutingmap
+      jsonMaps:
+
+       - jsonPath: $.autoroutingmap.id
+       
+       - jsonPath: $.autoroutingmap.tenantId
+
+       - jsonPath: $.autoroutingmap.autorouting
+         type: JSON
+         dbType: JSONB
+
+       - jsonPath: $.autoroutingmap.auditDetails.createdBy
+
+       - jsonPath: $.autoroutingmap.auditDetails.createdTime
+
+       - jsonPath: $.autoroutingmap.auditDetails.lastModifiedBy
+
+       - jsonPath: $.autoroutingmap.auditDetails.lastModifiedTime
+       
+       - jsonPath: $.autoroutingmap.active
+       
+       
+ - version: 1.0
+   name: Autorouting Update
+   description: Update autorouting details in the table
+   fromTopic: update-autorouting-data
+   isTransaction: true
+   queryMaps:
+
+    - query: UPDATE eg_pgr_autorouting_data SET autorouting=?, lastmodifiedby=?, lastmodifiedtime=?, active=? WHERE id=? AND tenantid=?;
+
+      basePath: autoroutingmap
+      jsonMaps:
+
+       - jsonPath: $.autoroutingmap.autorouting
+         type: JSON
+         dbType: JSONB
+
+       - jsonPath: $.autoroutingmap.auditDetails.lastModifiedBy
+
+       - jsonPath: $.autoroutingmap.auditDetails.lastModifiedTime
+       
+       - jsonPath: $.autoroutingmap.active
+       
+       - jsonPath: $.autoroutingmap.id
+       
+       - jsonPath: $.autoroutingmap.tenantId
+   
