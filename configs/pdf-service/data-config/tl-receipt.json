@@ -194,7 +194,7 @@
                      {
                         "variable": "ownerShipInfo",
                         "value": {
-                           "path": "OWNERSHIP_INFORMATION"
+                           "path": "PAYER_INFORMATION"
                         },
                         "type": "label",
                         "localisation":{
@@ -206,12 +206,12 @@
                      {
                         "variable": "mobile_no",
                         "value": {
-                          "path": "LOCALIZATION_TRADE_OWNER_CONTACT"
+                          "path": "PAYER_MOB_LABEL"
                         },
                         "type": "label",
                         "localisation":{
                           "required":true,
-                          "prefix": "TL",
+                          "prefix": "TL_PAYMENT",
                           "module":"rainmaker-tl"
                        }
                     },
@@ -242,12 +242,12 @@
                      {
                         "variable": "owner_name_label",
                         "value": {
-                          "path": "TRADE_OWNER_NAME"
+                          "path": "PAYER_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation":{
                           "required":true,
-                          "prefix": "TL_LOCALIZATION",
+                          "prefix": "TL_PAYMENT",
                           "module":"rainmaker-tl"
                        }
                     },
@@ -267,6 +267,18 @@
                         "variable": "tradeLicenseFee",
                         "value": {
                            "path": "TRADE_LICENSE_FEE"
+                        },
+                        "type": "label",
+                        "localisation":{
+                           "required":true,
+                           "prefix":"TL_LOCALIZATION",   
+                           "module":"rainmaker-tl"
+                        } 
+                     },
+                     {
+                        "variable": "charges_label",
+                        "value": {
+                           "path": "CHARGES"
                         },
                         "type": "label",
                         "localisation":{
@@ -422,7 +434,7 @@
                      {
                         "variable": "bankNameBranch",
                         "value": {
-                           "path": "BANK_NAME_WITH_BRANCH"
+                           "path": "BANK_NAME_OR_PAYMENT_GATEWAY"
                         },
                         "type": "label",
                         "localisation":{
@@ -456,7 +468,7 @@
                         } 
                      },
                      {
-                        "variable": "generatedBy",
+                        "variable": "generatedBy_label",
                         "value": {
                            "path": "GENERATED_BY"
                         },
@@ -655,6 +667,10 @@
                         } 
                      },
                      {
+                        "variable": "generated_by",
+                        "value": {"path": "$..generateBy"}
+                     },
+                     {
                         "variable":"variable16",
                         "value":{"path":"$..Payments[0].paymentDetails[0].receiptNumber"}
                      },
@@ -662,7 +678,11 @@
                         "variable":"variable17",
                         "value":{"path":"$..Payments[0].transactionDate"},
                         "type": "date"
-                     },                           
+                     }, 
+                     {
+                        "variable": "charges",
+                        "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='TL_CHARGES')].amount"}
+                     },                        
                      {
                         "variable":"variable18",
                         "value":{"path":"$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='TL_FEE')].amount"}
@@ -701,6 +721,7 @@
                      },
                      {
                         "variable":"variable25",
+                        "type": "date",
                         "value":{"path":"$..Payments[0].paymentDetails[0].manualReceiptDate"}
                      },
                      {

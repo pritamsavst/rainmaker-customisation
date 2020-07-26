@@ -35,6 +35,28 @@
                        "module":"rainmaker-tl"
                     } 
                  },
+                 {"variable": "applicationType",
+                  "value": {
+                     "path": "APPLICATION_TYPE"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL_LOCALIZATION",   
+                     "module":"rainmaker-common"
+                  }
+               },
+               {
+                  "variable": "applicationType_value",
+                  "value": {
+                    "path": "$..Licenses[0].applicationType"
+                  },
+                  "localisation":{
+                    "required":true,
+                    "prefix":"TL_TYPE",   
+                    "module":"rainmaker-tl"
+                 }
+                },
                  {
                     "variable": "tenant_id",
                     "value": {

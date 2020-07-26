@@ -7,41 +7,35 @@
     "content": [
       {
         "table": {
-          "widths": ["85%", "15%"],
+          "widths": [80, "*"],
           "body": [
             [
               {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [-6, 0, 0, 0]
+              },
+              {
                 "stack": [
-                  {
-                    "image": "{{ulbLogo}}",
-                    "width": 50,
-                    "height": 50,
-                    "alignment": "center"
-                  },
                   {
                     "text": "{{ulb_grade}} {{tenant_id}}",
                     "style": "receipt-logo-header",
-                    "margin": [0, 10, 0, 0]
+                    "margin": [0, 0, 0, 0]
                   },
                   {
-                    "text": "{{corporation_address_label}} : {{corporation_address}}",
+                    "text": "{{corporation_address}}",
                     "style": "receipt-logo-sub-text",
                     "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "{{corporation_contact_label}} {{corporation_contact}}",
+                    "text": "{{corporation_contact}}",
                     "style": "receipt-logo-sub-text",
-                    "margin": [0, 0, 0, 0]
+                    "margin": [0, -5, 0, 0]
                   },
                   {
                     "text": "{{corporation_website_label}} {{corporation_website}}",
                     "style": "receipt-logo-sub-text",
-                    "margin": [0, 0, 0, 0]
-                  },
-                  {
-                    "text": "{{corporation_email_label}} {{corporation_email}}",
-                    "style": "receipt-logo-sub-text",
-                    "margin": [0, 0, 0, 0]
+                    "margin": [0, -5, 0, 0]
                   },
                   {
                     "text": "{{trade_license_certificate}}",
@@ -50,87 +44,117 @@
                   }
                 ],
                 "alignment": "center",
-                "margin": [0, 0, 0, 0]
-              }, {
-                "image": "{{ownerPhoto}}",
-                "fit": [200, 100],
-                "margin": [0, 0, 20, 0]
+                "margin": [-20, 0, 0, 0]
               }
             ]
           ]
         },
+        "margin": [0, -25, 0, 0],
         "layout": "noBorders"
       },
       {
-        "style": "tl-certificate-data",
-        "columns": [
-          {
-            "width": 160,   
-            "text": "{{trade_license_no_label}}"
-          },
-          {
-            "width": "*",
-            "text": "{{licenseNumber}}"
-          }
-        ]
+        "table": {
+          "widths": ["80%", "20%"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "style": "tl-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,   
+                        "text": "{{trade_license_no_label}}"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{licenseNumber}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "tl-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "{{application_no_label}}"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationNumber}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "tl-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "{{reciept_no_label}}"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{receiptNumber}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "tl-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "{{applicationType}}"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationType_value}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "tl-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "{{trade_name_label}}"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{tradeType}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "tl-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "{{service_type_label}}"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{service_type}}"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "image": "{{ownerPhoto}}",
+                "width": 100,
+                "margin": [25, 12, 25, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0,0,0,0],
+        "layout": "noBorders"
       },
       {
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
-            "text": "{{application_no_label}}"
-          },
-          {
-            "width": "*",
-            "text": "{{applicationNumber}}"
-          }
-        ]
-      },
-      {
-        "style": "tl-certificate-data-2",
-        "columns": [
-          {
-            "width": 160,
-            "text": "{{reciept_no_label}}"
-          },
-          {
-            "width": "*",
-            "text": "{{receiptNumber}}"
-          }
-        ]
-      },
-      {
-        "style": "tl-certificate-data",
-        "columns": [
-          {
-            "width": 160,
-            "text": "{{trade_name_label}}"
-          },
-          {
-            "width": "*",
-            "text": "{{tradeType}}"
-          }
-        ]
-      },
-      {
-        "style": "tl-certificate-data",
-        "columns": [
-          {
-            "width": 160,
-            "text": "{{service_type_label}}"
-          },
-          {
-            "width": "*",
-            "text": "{{service_type}}"
-          }
-        ]
-      },
-      {
-        "style": "tl-certificate-data-2",
-        "columns": [
-          {
-            "width": 160,
+            "width": 200,
             "text": "{{owner_name_label}}"
           },
           {
@@ -143,7 +167,7 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{father_or_husband_name_label}}"
           },
           {
@@ -156,7 +180,7 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{dob_label}}"
           },
           {
@@ -169,7 +193,7 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{owner_contact_label}}"
           },
           {
@@ -182,11 +206,11 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{address_label}}"
           },
           {
-            "width": "*",
+            "width": 300,
             "text": "{{address}}"
           }
         ]
@@ -195,7 +219,7 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{license_fee_label}}"
           },
           {
@@ -208,7 +232,7 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{issue_date_label}}"
           },
           {
@@ -222,7 +246,7 @@
         "style": "tl-certificate-data-2",
         "columns": [
           {
-            "width": 160,
+            "width": 200,
             "text": "{{validity_label}}"
           },
           {
@@ -343,7 +367,7 @@
       },
       "tl-certificate-footer": {
         "fontSize": 14,
-        "margin": [0, 15, 0, 0],
+        "margin": [0, 25, 0, 0],
         "color": "#1E1E1E"
       }
     }
