@@ -6,109 +6,51 @@
     },
     "content": [
       {
-        "style": "noc-head",
-        "table": {
-          "widths": [
-            "*"
-          ],
-          "body": [
-            [
-              {
-                "text": "Municipal Corporation CHANDIGARH",
-                "style": "receipt-table-value"
-              }
-            ],
-            [
-              {
-                "table": {
-                  "widths": [
-                    "30%",
-                    "30%",
-                    "30%"
-                  ],
-                  "body": [
-                    [
+             "style": "noc-head",
+             "table": {
+               "widths": [
+                50, "*"
+               ],
+               "body": [
+                 [
+                  {
+                    "image": "{{ulbLogo}}",
+                    "width": 80,
+                    "height": 80,
+                    "margin": [20, 12, 10, 10]
+                  },
+                  {
+                    "stack": [
                       {
-                        "text": "Service RequestID",
-                        "border": [
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont",
-                        "fontSize": 11
+                        "text": "Municipal Corporation CHANDIGARH",
+                        "style": "receipt-logo-header"
                       },
                       {
-                        "text": "Resolution Time(Days)",
-                        "border": [
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont",
-                        "fontSize": 11
+                        "text":  "Service Request ID : {{serviceRequestId}} ",
+                        "style": "receipt-logo-sub-header"
                       },
                       {
-                        "text": "Status",
-                        "border": [
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont",
-                        "fontSize": 11
+                        "text":  "Resolution Time(Days) : {{SLADays}} ",
+                        "style": "receipt-logo-sub-header"
+                      },
+                      {
+                        "text":  "Status : {{status}} ",
+                        "style": "receipt-logo-sub-header"
                       }
                     ],
-                    [
-                      {
-                        "text": "{{serviceRequestId}}",
-                        "border": [
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{SLADays}}",
-                        "border": [
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table2"
-                      },
-                      {
-                        "text": "{{status}}",
-                        "border": [
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table2"
-                      }
+                    "alignment": "center",
+                    "margin": [
+                      0,
+                      12,
+                      0,
+                      0
                     ]
-                  ]
-                },
-                "border": [
-                  true,
-                  false,
-                  true,
-                  true
-                ]
-              }
-            ]
-          ],
-          "unbreakable": true
-        },
-        "layout": "noBorders"
-      },
+                  }
+                 ]
+               ]
+             },
+             "layout": "noBorders"
+           },
       {
         "stack": [
           {
