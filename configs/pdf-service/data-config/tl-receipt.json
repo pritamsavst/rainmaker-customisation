@@ -434,7 +434,7 @@
                      {
                         "variable": "bankNameBranch",
                         "value": {
-                           "path": "BANK_NAME_OR_PAYMENT_GATEWAY"
+                           "path": "BANK_NAME_WITH_BRANCH"
                         },
                         "type": "label",
                         "localisation":{
