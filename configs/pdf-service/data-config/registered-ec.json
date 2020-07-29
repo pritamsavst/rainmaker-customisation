@@ -122,6 +122,12 @@
 						"value": {
 							"path": "$.date"
 						}
+					},
+					{
+						"variable": "variable20",
+						"value": {
+							"path": "$.siName"
+						}
 					}
 				]
 			}]

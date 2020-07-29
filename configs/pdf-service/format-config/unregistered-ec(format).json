@@ -255,10 +255,23 @@
 						"text": " "
 					},
 					{
-						"text": "Sub Inspector(Enf.),",
+						"text": "{{variable17}}",
 						"color": "#484848",
 						"fontSize": 12,
 						"margin": [0, 20, 0, 0]
+					}
+				]
+			},
+			{
+				"columns": [{
+						"width": 300,
+						"text": " "
+					},
+					{
+						"text": "Sub Inspector(Enf.),",
+						"color": "#484848",
+						"fontSize": 12,
+						"margin": [0, 15, 0, 0]
 					}
 				]
 			},

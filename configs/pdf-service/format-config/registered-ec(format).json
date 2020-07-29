@@ -287,10 +287,23 @@
 						"text": " "
 					},
 					{
-						"text": "Sub Inspector(Enf.),",
+						"text": "{{variable20}}",
 						"color": "#484848",
 						"fontSize": 12,
 						"margin": [0, 20, 0, 0]
+					}
+				]
+			},
+			{
+				"columns": [{
+						"width": 300,
+						"text": " "
+					},
+					{
+						"text": "Sub Inspector(Enf.),",
+						"color": "#484848",
+						"fontSize": 12,
+						"margin": [0, 10, 0, 0]
 					}
 				]
 			},
