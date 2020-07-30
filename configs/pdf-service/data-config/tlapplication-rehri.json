@@ -12,6 +12,72 @@
             {
               "direct": [
                 {
+                  "variable": "fee_header",
+                  "value": {
+                    "path": "SUMMARY_FEE_EST"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL",   
+                     "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "total_amount_label",
+                  "value": {
+                    "path": "TOTAL_AMT"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL_COMMON",   
+                     "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "age_label",
+                  "value": {
+                    "path": "AGE_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL",   
+                     "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "currency_code",
+                  "value": {
+                     "path": "CURRENCY_CODE"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL_LOCALIZATION",   
+                     "module":"rainmaker-tl"
+                  } 
+               },
+               {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                }
+                 },
+                 {
+                  "variable": "fee_estimates",
+                  "value": {
+                    "path": "$.feeEstimate.*"
+                  }
+                },
+                {
+                  "variable": "total_fee_amount",
+                  "value": {
+                    "path": "$.totalAmount"
+                  }
+                },
+                {
                   "variable": "old_license_validity_label",
                   "value": {
                     "path": "OLD_LICENSE_VALIDITY_DATE_LABEL"
@@ -289,6 +355,11 @@
                     "variable": "relationship",
                     "value": {
                       "path": "$.tradeLicenseDetail.owners[0].relationship"
+                    },
+                    "localisation": {
+                      "required":true,
+                      "prefix": "COMMON_RELATION",
+                      "module": "rainmaker-tl"
                     }
                 },
                 {
@@ -355,8 +426,7 @@
                       "required":true,
                       "prefix": "TENANT_TENANTS",
                       "module":"rainmaker-common"
-                   },
-                   "isUpperCaseRequired":true
+                   }
                 },
                 {
                     "variable": "total_amount",
@@ -517,13 +587,13 @@
                 {
                     "variable": "relationship_label",
                     "value": {
-                      "path": "PDF_STATIC_LABEL_CONSOLIDATED_TLAPP_RELATIONSHIP"
+                      "path": "RELATIONSHIP_LABEL"
                     },
                     "type": "label",
                     "localisation":{
                       "required":true,
-                      "prefix": null,
-                      "module":"rainmaker-common"
+                      "prefix": "TL_COMMON",
+                      "module":"rainmaker-tl"
                    }
                 },
                 {
