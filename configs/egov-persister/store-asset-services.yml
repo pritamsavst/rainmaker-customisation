@@ -1574,7 +1574,7 @@ serviceMaps:
          -  jsonPath: $.scraps.*.scrapDetails.*.expiryDate
          -  jsonPath: $.scraps.*.scrapDetails.*.scrapReason
          -  jsonPath: $.scraps.*.scrapDetails.*.quantity
-         -  jsonPath: $.scraps.*.scrapDetails.*.scrapQuantity
+         -  jsonPath: $.scraps.*.scrapDetails.*.updatedScrapedQty
          -  jsonPath: $.scraps.*.scrapDetails.*.userQuantity
          -  jsonPath: $.scraps.*.scrapDetails.*.disposalQuantity
          -  jsonPath: $.scraps.*.scrapDetails.*.scrapValue
