@@ -6,9 +6,9 @@ serviceMaps:
       description: create stores in ulb
       fromTopic: inv-store-save-topic
       queryMaps:
-      -  query: INSERT INTO store(id, code, name, officelocation, description, department, storeincharge,billingaddress, deliveryaddress,
+      -  query: INSERT INTO store(id, code, name, officelocation, description, divisionname,department, storeincharge,billingaddress, deliveryaddress,
             contactno1,contactno2, email, iscentralstore, active, tenantId, createdby, lastmodifiedby,createdtime,lastmodifiedtime)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
          basePath: $.stores.*
          jsonMaps:
          -  jsonPath: $.stores.*.id
@@ -16,6 +16,7 @@ serviceMaps:
          -  jsonPath: $.stores.*.name
          -  jsonPath: $.stores.*.officeLocation.code
          -  jsonPath: $.stores.*.description
+         -  jsonPath: $.stores.*.divisionName
          -  jsonPath: $.stores.*.department.code
          -  jsonPath: $.stores.*.storeInCharge.code
          -  jsonPath: $.stores.*.billingAddress
@@ -37,12 +38,13 @@ serviceMaps:
       description: update stores in ulb
       fromTopic: inv-store-update-topic
       queryMaps:
-      -  query: UPDATE store SET name=?,description=?,department=?,storeincharge=?,officelocation=?, billingaddress=?,deliveryaddress=?,contactno1=?,contactno2=?,email=?,iscentralstore=?,active=?,lastmodifiedby=?,lastmodifiedtime=?
+      -  query: UPDATE store SET name=?,description=?,divisionname=?,department=?,storeincharge=?,officelocation=?, billingaddress=?,deliveryaddress=?,contactno1=?,contactno2=?,email=?,iscentralstore=?,active=?,lastmodifiedby=?,lastmodifiedtime=?
             WHERE code=? AND tenantid=?;
          basePath: $.stores.*
          jsonMaps:
          -  jsonPath: $.stores.*.name
          -  jsonPath: $.stores.*.description
+         -  jsonPath: $.stores.*.divisionName
          -  jsonPath: $.stores.*.department.code
          -  jsonPath: $.stores.*.storeInCharge.code
          -  jsonPath: $.stores.*.officeLocation.code
@@ -650,10 +652,10 @@ serviceMaps:
       description: Create Material Receipt Note
       fromTopic: inv-materialreceiptnote-save-topic
       queryMaps:
-      -  query: INSERT INTO materialreceipt(id, mrnnumber, receivingstore, receiptDate, receiptType, suppliercode, supplierbillno,
+      -  query: INSERT INTO materialreceipt(id, mrnnumber, receivingstore, receiptDate, receiptType,fileStoreId, suppliercode, supplierbillno,
             supplierbilldate, challanno, challandate, description, paymentterms, receivedby, designation, mrnstatus, inspectedby,
             inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime) VALUES (
-            ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?,?);
+            ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?,?,?);
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.id
@@ -662,6 +664,7 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.receiptDate
             dbType: LONG
          -  jsonPath: $.materialReceipt.*.receiptType
+         -  jsonPath: $.materialReceipt.*.fileStoreId
          -  jsonPath: $.materialReceipt.*.supplier.code
          -  jsonPath: $.materialReceipt.*.supplierBillNo
          -  jsonPath: $.materialReceipt.*.supplierBillDate
@@ -730,7 +733,7 @@ serviceMaps:
       fromTopic: inv-materialreceiptnote-update-topic
       isTransaction: true
       queryMaps:
-      -  query: update materialreceipt set receivingstore = ?, receiptDate  = ?, receiptType = ?, suppliercode = ?, supplierbillno
+      -  query: update materialreceipt set receivingstore = ?, receiptDate  = ?, receiptType = ?, fileStoreId=?, suppliercode = ?, supplierbillno
             = ?, supplierbilldate = ?, challanno = ?, challandate = ?, description = ?, paymentterms = ?, receivedby = ?,
             designation = ?, mrnstatus = ?, inspectedby = ?, inspectiondate = ?, inspectionremarks = ?, lastmodifiedby = ?,
             lastModifiedTime = ? where mrnnumber = ? and tenantid = ?;
@@ -740,6 +743,7 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.receiptDate
             dbType: LONG
          -  jsonPath: $.materialReceipt.*.receiptType
+         -  jsonPath: $.materialReceipt.*.fileStoreId
          -  jsonPath: $.materialReceipt.*.supplier.code
          -  jsonPath: $.materialReceipt.*.supplierBillNo
          -  jsonPath: $.materialReceipt.*.supplierBillDate
