@@ -177,6 +177,11 @@
         }	,
 		{
           "style": "pt-reciept-citizen-header",
+          "text": "IFSC: {{bank_ifsc}}",
+                  "bold": false
+        }	,
+		{
+          "style": "pt-reciept-citizen-header",
           "text": "Account Number: {{acc_number}}",
                   "bold": false
         }	,
