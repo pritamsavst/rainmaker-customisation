@@ -1,60 +1,66 @@
 {
 
-	"key": "shopkeeper-ec",
+	"key": "challanReceiptVehicle-ec",
 	"DataConfigs": {
 		"serviceName": "egov-ec",
 		"version": "1.0.0",
-		"baseKeyPath": "$.shopkeeperEchallan.*",
+		"baseKeyPath": "$.paymentEchallan.*",
 		"entityIdPath": "$.applicationId",
 		"isCommonTableBorderRequired": true,
-		"mappings": [{
+		"mappings": [{			
 			"mappings": [{
 				"direct": [{
 						"variable": "variable1",
 						"value": {
-							"path": "$.serialNo"
+							"path": "$.receiptNo"
 						}
 					},
 					{
 						"variable": "variable2",
 						"value": {
-							"path": "$.violatorName"
+							"path": "$.dated"
 						}
 					},
 					{
 						"variable": "variable3",
 						"value": {
-							"path": "$.fatherName"
+							"path": "$.violatorName"
 						}
 					},
 					{
 						"variable": "variable4",
 						"value": {
-							"path": "$.address"
+							"path": "$.amount"
 						}
 					},
 					{
 						"variable": "variable5",
 						"value": {
-							"path": "$.placeTime"
+							"path": "$.amountInWord"
 						}
 					},
 					{
-						"variable": "article",
+						"variable": "variable6",
 						"value": {
-							"path": "$.article"
-						}
-					},					
-					{
-						"variable": "variable16",
-						"value": {
-							"path": "$.date"
+							"path": "$.paymentMode"
 						}
 					},
 					{
-						"variable": "variable17",
+						"variable": "variable7",
 						"value": {
-							"path": "$.siName"
+							"path": "$.memoNo"
+						}
+					},
+					{
+						"variable": "variable8",
+						"value": {
+							"path": "$.fineAmount"
+						}
+					},
+					{
+						"variable": "variable9",
+						"value": {
+							"path": "$.storageAmount"
 						}
 					}
 				]

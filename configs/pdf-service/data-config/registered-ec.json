@@ -58,63 +58,9 @@
 						}
 					},
 					{
-						"variable": "variable9",
+						"variable": "article",
 						"value": {
-							"path": "$.article1"
-						}
-					},
-					{
-						"variable": "variable10",
-						"value": {
-							"path": "$.article2"
-						}
-					},
-					{
-						"variable": "variable11",
-						"value": {
-							"path": "$.article3"
-						}
-					},
-					{
-						"variable": "variable12",
-						"value": {
-							"path": "$.article4"
-						}
-					},
-					{
-						"variable": "variable13",
-						"value": {
-							"path": "$.article5"
-						}
-					},
-					{
-						"variable": "variable14",
-						"value": {
-							"path": "$.article6"
-						}
-					},
-					{
-						"variable": "variable15",
-						"value": {
-							"path": "$.article7"
-						}
-					},
-					{
-						"variable": "variable16",
-						"value": {
-							"path": "$.article8"
-						}
-					},
-					{
-						"variable": "variable17",
-						"value": {
-							"path": "$.article9"
-						}
-					},
-					{
-						"variable": "variable18",
-						"value": {
-							"path": "$.article10"
+							"path": "$.article"
 						}
 					},
 					{

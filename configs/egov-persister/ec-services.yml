@@ -145,7 +145,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
 
-       - query: INSERT INTO public.egec_store_item_register(store_item_uuid, challan_uuid, item_uuid, item_name, quantity, auctioned_quantity, isverified, isauctioned, remark, item_store_deposit_date, violation_item_uuid, violation_uuid, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,isreturned,source_uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+       - query: INSERT INTO public.egec_store_item_register(store_item_uuid, challan_uuid, item_uuid, item_name, quantity, auctioned_quantity, isverified, isauctioned, remark, item_store_deposit_date, violation_item_uuid, violation_uuid, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,isreturned,source_uuid,damaged_quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: RequestBody.storeItemRegister.*
          jsonMaps:
           - jsonPath: $.RequestBody.storeItemRegister.*.storeItemUuid
@@ -186,7 +186,9 @@ serviceMaps:
 
           - jsonPath: $.RequestBody.storeItemRegister.*.isReturned
           
-          - jsonPath: $.RequestBody.storeItemRegister.*.sourceUuid                           
+          - jsonPath: $.RequestBody.storeItemRegister.*.sourceUuid  
+          
+          - jsonPath: $.RequestBody.storeItemRegister.*.damagedQuantity                                    
           
        - query: INSERT INTO public.egec_document(document_uuid, filestore_id, violation_uuid, challan_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
         
