@@ -1,0 +1,49 @@
+{
+    "key": "hello-world",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.HelloWorlds.*",
+      "entityIdPath":"$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                  "variable": "first_name",
+                  "value": {
+                    "path": "$.firstName"
+                  }
+                },
+               {
+                  "variable": "last_name",
+                  "value": {
+                    "path": "$.lastName"
+                  }
+                },
+                {
+                  "variable": "municipality_name",
+                  "value": {
+                    "path": "$.tenantId"
+                  },
+                  "localisation":{
+                    "required":true,
+                    "prefix": "TENANT_TENANTS",
+                    "module":"rainmaker-common"
+                 },
+                 "isUpperCaseRequired":true
+              },
+                {
+                  "variable": "logo",                        
+                  "url":"https://egov.transerve.com/media/logo.png",
+                  "type":"image"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
