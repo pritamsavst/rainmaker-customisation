@@ -8,7 +8,7 @@ serviceMaps:
       isTransaction: true      
       queryMaps:
       -  query: INSERT INTO public.nulm_sep_application_detail(application_uuid,application_id,application_status,nulm_application_id,name,gender,age,dob,adhar_no,mother_name,father_or_husband_name,occupation,address, contact, since_how_long_in_chandigarh, qualification, 
-                category, is_urban_poor,is_minority, is_handicapped, is_loan_from_bankinginstitute,is_repayment_made, bpl_no, minority, type_of_business_to_be_started,previous_experience, place_of_work, bank_details, no_of_family_members,project_cost, loan_amount, recommended_amount, recommended_by, representative_name, representative_address,tenant_id, is_active, created_by, created_time,last_modified_by, last_modified_time)VALUES (?,?,?, ?, ?, ?,?, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+                category, is_urban_poor,is_minority, is_handicapped, is_loan_from_bankinginstitute,is_repayment_made, bpl_no, minority, type_of_business_to_be_started,previous_experience, place_of_work, bank_details, no_of_family_members,project_cost, loan_amount, recommended_amount, recommended_by, representative_name, representative_address,tenant_id, is_active, created_by, created_time,last_modified_by, last_modified_time,remark)VALUES (?,?,?, ?, ?, ?,?, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
          basePath: $.NulmSepRequest
          jsonMaps:
          -  jsonPath: $.NulmSepRequest.applicationUuid
@@ -52,6 +52,7 @@ serviceMaps:
          -  jsonPath: $.NulmSepRequest.auditDetails.createdTime
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSepRequest.remark
       -  query: INSERT INTO public.nulm_sep_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.NulmSepRequest.applicationDocument.*
          jsonMaps:
@@ -71,7 +72,7 @@ serviceMaps:
       fromTopic: nulm-services-update-sepapplication
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_sep_application_detail SET  nulm_application_id=?,application_status=?, name=?, gender=?, age=?, dob=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?, occupation=?, address=?, contact=?, since_how_long_in_chandigarh=?, qualification=?, category=?, is_urban_poor=?, is_minority=?, is_handicapped=?, is_loan_from_bankinginstitute=?, is_repayment_made=?, bpl_no=?, minority=?, type_of_business_to_be_started=?, previous_experience=?, place_of_work=?, bank_details=?, no_of_family_members=?, project_cost=?, loan_amount=?, recommended_amount=?, recommended_by=?, representative_name=?, representative_address=?,  last_modified_by=?, last_modified_time=?
+      -  query: UPDATE public.nulm_sep_application_detail SET  nulm_application_id=?,application_status=?, name=?, gender=?, age=?, dob=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?, occupation=?, address=?, contact=?, since_how_long_in_chandigarh=?, qualification=?, category=?, is_urban_poor=?, is_minority=?, is_handicapped=?, is_loan_from_bankinginstitute=?, is_repayment_made=?, bpl_no=?, minority=?, type_of_business_to_be_started=?, previous_experience=?, place_of_work=?, bank_details=?, no_of_family_members=?, project_cost=?, loan_amount=?, recommended_amount=?, recommended_by=?, representative_name=?, representative_address=?,  last_modified_by=?, last_modified_time=? ,remark=?
                 WHERE  application_uuid=? and tenant_id=? and is_active=?;
          basePath: $.NulmSepRequest
          jsonMaps:
@@ -110,6 +111,7 @@ serviceMaps:
          -  jsonPath: $.NulmSepRequest.representativeAddress
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSepRequest.remark
          -  jsonPath: $.NulmSepRequest.applicationUuid
          -  jsonPath: $.NulmSepRequest.tenantId         
          -  jsonPath: $.NulmSepRequest.isActive
@@ -136,11 +138,12 @@ serviceMaps:
       fromTopic: nulm-services-update-sepapplication-status
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_sep_application_detail SET nulm_application_id=?, application_status=? ,last_modified_by=?, last_modified_time=? WHERE  application_uuid=? AND tenant_id=? AND is_active='true' ;
+      -  query: UPDATE public.nulm_sep_application_detail SET nulm_application_id=?, application_status=? ,remark=?,last_modified_by=?, last_modified_time=? WHERE  application_uuid=? AND tenant_id=? AND is_active='true' ;
          basePath: $.NulmSepRequest
          jsonMaps:
          -  jsonPath: $.NulmSepRequest.nulmApplicationId
          -  jsonPath: $.NulmSepRequest.applicationStatus
+         -  jsonPath: $.NulmSepRequest.remark 
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmSepRequest.applicationUuid
@@ -152,8 +155,8 @@ serviceMaps:
       isTransaction: true      
       queryMaps:
       -  query: INSERT INTO public.nulm_smid_application_detail(application_uuid,application_id, nulm_application_id, application_status, name,gender, dob, date_of_opening_account, adhar_no,mother_name, father_or_husband_name, address, phone_no, mobile_no, qualification, email_id, is_urban_poor, is_minority, is_pwd, is_street_vendor, is_homeless, is_insurance, bpl_no, minority, caste, ward_no, name_as_per_adhar, 
-                adhar_acknowledgement_no, insurance_through, document_attachemnt, account_no, bank_name, branch_name, account_opened_through, ro_type, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)
-                VALUES (?, ?, ?, ?, ?, ?, ?::timestamp, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+                adhar_acknowledgement_no, insurance_through, document_attachemnt, account_no, bank_name, branch_name, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,remark)
+                VALUES (?, ?, ?, ?, ?, ?, ?::timestamp, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
 
          basePath: $.NulmSmidRequest
          jsonMaps:
@@ -190,21 +193,20 @@ serviceMaps:
          -  jsonPath: $.NulmSmidRequest.accountNo
          -  jsonPath: $.NulmSmidRequest.bankName
          -  jsonPath: $.NulmSmidRequest.branchName
-         -  jsonPath: $.NulmSmidRequest.accountOpenedThrough
-         -  jsonPath: $.NulmSmidRequest.roType
          -  jsonPath: $.NulmSmidRequest.tenantId
          -  jsonPath: $.NulmSmidRequest.isActive
          -  jsonPath: $.NulmSmidRequest.auditDetails.createdBy
          -  jsonPath: $.NulmSmidRequest.auditDetails.createdTime 
          -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSmidRequest.remark
    -  version: 1.0
       name: Update SMID Application
       description: Request -update smid-application
       fromTopic: nulm-services-update-smidapplication
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_smid_application_detail SET nulm_application_id=?,application_status=?, name=?,  gender=?, dob=?::timestamp, date_of_opening_account=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?,address=?, phone_no=?, mobile_no=?, qualification=?, email_id=?, is_urban_poor=?, is_minority=?, is_pwd=?, is_street_vendor=?,is_homeless=?, is_insurance=?, bpl_no=?, minority=?, caste=?, ward_no=?, name_as_per_adhar=?, adhar_acknowledgement_no=?, insurance_through=?, document_attachemnt=?, account_no=?, bank_name=?, branch_name=?, account_opened_through=?, ro_type=?,last_modified_by=?, last_modified_time=? WHERE application_uuid=? and tenant_id=? and is_active=?;
+      -  query: UPDATE public.nulm_smid_application_detail SET nulm_application_id=?,application_status=?, name=?,  gender=?, dob=?::timestamp, date_of_opening_account=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?,address=?, phone_no=?, mobile_no=?, qualification=?, email_id=?, is_urban_poor=?, is_minority=?, is_pwd=?, is_street_vendor=?,is_homeless=?, is_insurance=?, bpl_no=?, minority=?, caste=?, ward_no=?, name_as_per_adhar=?, adhar_acknowledgement_no=?, insurance_through=?, document_attachemnt=?, account_no=?, bank_name=?, branch_name=?,last_modified_by=?, last_modified_time=?,remark=? WHERE application_uuid=? and tenant_id=? and is_active=?;
          basePath: $.NulmSmidRequest
          jsonMaps:
          -  jsonPath: $.NulmSmidRequest.nulmApplicationId
@@ -238,24 +240,24 @@ serviceMaps:
          -  jsonPath: $.NulmSmidRequest.accountNo
          -  jsonPath: $.NulmSmidRequest.bankName
          -  jsonPath: $.NulmSmidRequest.branchName
-         -  jsonPath: $.NulmSmidRequest.accountOpenedThrough
-         -  jsonPath: $.NulmSmidRequest.roType
          -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedTime  
+         -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedTime 
+         -  jsonPath: $.NulmSmidRequest.remark  
          -  jsonPath: $.NulmSmidRequest.applicationUuid
          -  jsonPath: $.NulmSmidRequest.tenantId
-         -  jsonPath: $.NulmSmidRequest.isActive  
+         -  jsonPath: $.NulmSmidRequest.isActive
    -  version: 1.0
       name: Update SMID Application Status
       description: Request -update smid-application-status
       fromTopic: nulm-services-update-smidapplication-status
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_smid_application_detail SET nulm_application_id=?,application_status=?,last_modified_by=?,last_modified_time=? WHERE  application_uuid=? AND tenant_id=? AND is_active=?;
+      -  query: UPDATE public.nulm_smid_application_detail SET nulm_application_id=?,application_status=?,remark=?,last_modified_by=?,last_modified_time=? WHERE  application_uuid=? AND tenant_id=? AND is_active=?;
          basePath: $.NulmSmidRequest
          jsonMaps:
          -  jsonPath: $.NulmSmidRequest.nulmApplicationId
          -  jsonPath: $.NulmSmidRequest.applicationStatus
+         -  jsonPath: $.NulmSmidRequest.remark
          -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSmidRequest.auditDetails.lastModifiedTime  
          -  jsonPath: $.NulmSmidRequest.applicationUuid
@@ -491,4 +493,28 @@ serviceMaps:
          -  jsonPath: $.NulmShgRequest.*.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmShgRequest.*.applicationUuid 
          -  jsonPath: $.NulmShgRequest.*.shgUuid         
-         -  jsonPath: $.NulmShgRequest.*.tenantId                                     
+         -  jsonPath: $.NulmShgRequest.*.tenantId      
+   -  version: 1.0
+      name: Create Organization
+      description: Request - Create Organization
+      fromTopic: nulm-services-create-organization
+      isTransaction: true      
+      queryMaps:
+      -  query: INSERT INTO public.nulm_organization(organization_uuid, user_id, organization_name, address, email_id,representative_name, mobile_no, registration_no, tenant_id, is_active, 
+            created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.OrganizationRequest
+         jsonMaps:
+         -  jsonPath: $.OrganizationRequest.organizationUuid   
+         -  jsonPath: $.OrganizationRequest.userId
+         -  jsonPath: $.OrganizationRequest.organizationName
+         -  jsonPath: $.OrganizationRequest.address
+         -  jsonPath: $.OrganizationRequest.emailId
+         -  jsonPath: $.OrganizationRequest.representativeName
+         -  jsonPath: $.OrganizationRequest.mobileNo
+         -  jsonPath: $.OrganizationRequest.registrationNo
+         -  jsonPath: $.OrganizationRequest.tenantId
+         -  jsonPath: $.OrganizationRequest.isActive
+         -  jsonPath: $.OrganizationRequest.auditDetails.createdBy
+         -  jsonPath: $.OrganizationRequest.auditDetails.createdTime
+         -  jsonPath: $.OrganizationRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.OrganizationRequest.auditDetails.lastModifiedTime                                   
