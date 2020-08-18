@@ -259,7 +259,7 @@
 {
   "variable": "documents_array",
   "value": {
-    "path": "$.additionalDetails.documents.*"
+    "path": "$.ownerDetails.ownershipTransferDocuments.*"
   }
 },
 {
