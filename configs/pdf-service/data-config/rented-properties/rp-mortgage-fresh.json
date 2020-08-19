@@ -1,0 +1,350 @@
+{
+    "key": "rp-mortgage-fresh",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.MortgageApplications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+          "direct": [
+            {
+              "variable": "application_label",
+              "value": {
+                "path": "APP_NO_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "TL_HOME_SEARCH_RESULTS",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "header",
+              "value": {
+                "path": "PDF_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "applicationNo",
+              "value": {
+                "path": "$.applicationNumber"
+              }
+            },
+            {
+              "variable": "application_no",
+              "value": {
+                "path": "$.tenantId"
+              },
+              "localisation": {
+                "required": true,
+                "prefix": "TENANT_TENANTS",
+                "module": "rainmaker-common"
+              },
+              "isUpperCaseRequired": true
+            },
+            {
+              "variable": "property",
+              "value": {
+                "path": "PROPERTY_DETAILS_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "transit_site",
+              "value": {
+                "path": "SITE_PLOT_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "allotment_number",
+              "value": {
+                "path": "ALLOTMENT_NUMBER"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "area_label",
+              "value": {
+                "path": "AREA_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "transitNumber",
+              "value": {
+                "path": "$.property.transitNumber"
+              }
+            },
+            {
+              "variable": "allotmentNumber",
+              "value": {
+                "path": "$.allotmentNumber"
+              }
+            },
+            {
+              "variable": "area",
+              "value": {
+                "path": "$.property.area"
+              }
+            },
+            {
+              "variable": "pincode_label",
+              "value": {
+                "path": "PINCODE_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "pincode",
+              "value": {
+                "path": "$.property.pincode"
+              }
+            },
+            {
+              "variable": "logo",
+              "url": "https://egov.transerve.com/media/logo.png",
+              "type": "image"
+            },
+            {
+              "variable": "applicantDetails",
+              "value": {
+                "path": "APPLICANT_DETAILS"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "name_label",
+              "value": {
+                "path": "APPLICANT_NAME_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "relationship_label",
+              "value": {
+                "path": "RELATIONSHIP_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "mobile_no",
+              "value": {
+                "path": "MOBILE_NO_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "name",
+              "value": {
+                "path": "$.applicant[0].name"
+              }
+            },
+            {
+              "variable": "relationship",
+              "value": {
+                "path": "$.applicant[0].relationship"
+              }
+            },
+            {
+              "variable": "mobile",
+              "value": {
+                "path": "$.applicant[0].phone"
+              }
+            },
+            {
+              "variable": "email_label",
+              "value": {
+                "path": "OWNER_DETAILS_EMAIL_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "aadharno_label",
+              "value": {
+                "path": "AADHAR_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "email",
+              "value": {
+                "path": "$.applicant[0].email"
+              }
+            },
+            {
+              "variable": "aadharno",
+              "value": {
+                "path": "$.applicant[0].adhaarNumber"
+              }
+            },
+            {
+              "variable": "documents_label",
+              "value": {
+                "path": "DOCUMENTS_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "form_a_label",
+              "value": {
+                "path": "FORM_A_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "form_b_label",
+              "value": {
+                "path": "FORM_B_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "form_c_label",
+              "value": {
+                "path": "FORM_C_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "form_a_value",
+              "value": {
+                "path": "$.applicationDocuments[0].documentType"
+              }
+            },
+            {
+              "variable": "form_b_value",
+              "value": {
+                "path": "$.applicationDocuments[1].documentType"
+              }
+            },
+            {
+              "variable": "form_c_value",
+              "value": {
+                "path": "$.applicationDocuments[2].documentType"
+              }
+            },
+  
+            {
+              "variable": "application_for_mortgage",
+              "value": {
+                "path": "APPLICATION_FOR_MORTGAGE_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "father_husband_name_label",
+              "value": {
+                "path": "FATHER_HUSBANDS_NAME_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "guardian",
+              "value": {
+                "path": "$.applicant[0].guardian"
+              }
+            },
+            {
+                "variable": "documents_array",
+                "value": {
+                  "path": "$.applicationDocuments.*"
+                }
+              }
+          ]
+        }]
+      }]
+    }
+  } 

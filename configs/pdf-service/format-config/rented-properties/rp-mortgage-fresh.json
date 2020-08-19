@@ -1,0 +1,264 @@
+{
+    "key": "rp-mortgage-fresh",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 40,
+                        "alignment": "left"
+                    },
+                    {
+                        "stack": [{
+                                "text": "{{header}}",
+                                "alignment": "center",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{application_for_mortgage}}",
+                                "alignment": "center",
+                                "fontSize": 9,
+                                "italics": true,
+                                "bold": true
+                            },
+                            {
+                                "text": [{
+                                        "text": "{{application_label}}",
+                                        "alignment": "center",
+                                        "color": "#A0A2A4",
+                                        "fontSize": 10,
+                                        "lineHeight": "2",
+                                        "width": "auto"
+                                    },
+                                    {
+                                        "text": "{{applicationNo}}",
+                                        "alignment": "center",
+                                        "fontSize": 9,
+                                        "lineHeight": "2",
+                                        "bold": true
+                                    }
+                                ]
+                            }
+                        ]
+
+                    }
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "style": "table-style",
+                "table": {
+                    "widths": ["33.33%", "33.33%", "33.33%"],
+                    "body": [
+                        [{
+                            "colSpan": 3,
+                            "columns": [
+
+                                [{
+                                        "text": "{{property}}",
+                                        "fontSize": 10,
+                                        "lineHeight": 2
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{transit_site}}",
+                                                "fontSize": 8
+                                            },
+                                            {
+                                                "text": "{{allotment_number}}",
+                                                "fontSize": 8
+                                            },
+                                            {
+                                                "text": "{{area_label}} ",
+                                                "fontSize": 8
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{transitNumber}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 8,
+                                                "bold": true
+                                            },
+                                            {
+                                                "text": "{{allotmentNumber}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 8,
+                                                "bold": true
+                                            },
+                                            {
+                                                "text": "{{area}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 8,
+                                                "bold": true
+                                            }
+                                        ]
+
+                                    },
+                                    {
+                                        "columns": [{
+                                            "text": "{{pincode_label}}",
+                                            "fontSize": 8
+                                        }]
+                                    },
+                                    {
+                                        "columns": [{
+                                            "text": "{{pincode}}",
+                                            "fontSize": 8,
+                                            "bold": true
+                                        }]
+                                    }
+                                ]
+                            ]
+                        }, {}, {}],
+                        [{
+                            "colSpan": 3,
+                            "columns": [
+
+                                [{
+                                        "text": "{{applicantDetails}}",
+                                        "fontSize": 10,
+                                        "lineHeight": "2"
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{name_label}}",
+                                                "fontSize": 8
+                                            },
+                                            {
+                                                "text": "{{father_husband_name_label}}",
+                                                "fontSize": 8
+                                            },
+                                            {
+                                                "text": "{{relationship_label}} ",
+                                                "fontSize": 8
+                                            },
+                                            {
+                                                "text": "{{mobile_no}}",
+                                                "fontSize": 8
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{name}}",
+                                                "fontSize": 8,
+                                                "lineHeight": 2,
+                                                "bold": true
+                                            },
+                                            {
+                                                "text": "{{guardian}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 8,
+                                                "bold": true
+                                            },
+                                            {
+                                                "text": "{{relationship}} ",
+                                                "lineHeight": 2,
+                                                "fontSize": 8,
+                                                "bold": true
+                                            },
+                                            {
+                                                "text": "{{mobile}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 8,
+                                                "bold": true
+                                            }
+                                        ]
+
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{email_label}} ",
+                                                "fontSize": 8
+                                            },
+                                            {
+                                                "text": "{{aadharno_label}}",
+                                                "fontSize": 8
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{email}}",
+                                                "fontSize": 8,
+                                                "lineHeight": 2,
+                                                "bold": true
+                                            },
+                                            {
+                                                "text": "{{aadharno}}",
+                                                "fontSize": 8,
+                                                "lineHeight": 2,
+                                                "bold": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }, {}, {}],
+                        [{
+                                "colSpan": 3,
+                                "text": "{{documents_label}}",
+                                "fontSize": 10,
+                                "border": [
+                                    true,
+                                    true,
+                                    true,
+                                    false
+                                ]
+
+                            },
+                            {}, {}
+                        ],
+                        [{
+                                "colSpan": 3,
+                                "table": {
+                                    "widths": ["25%", "25%", "25%", "25%"],
+                                    "body": [
+                                        "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                                    ]
+                                },
+                                "border": [
+                                    true,
+                                    false,
+                                    true,
+                                    true
+                                ]
+                            },
+                            {}, {}
+                        ]
+                    ]
+                }
+            }
+
+        ],
+        "styles": {
+            "tableExample": {
+                "margin": [0, 5, 0, 15],
+                "width": ["100%"]
+            },
+            "table-style": {
+                "lineHeight": "2"
+            },
+            "receipt-table2": {
+                "color": "#000000",
+                "bold": true,
+                "fontSize": 8
+
+            },
+
+            "receipt-table-value-cont": {
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 8
+            }
+
+        }
+    }
+}
