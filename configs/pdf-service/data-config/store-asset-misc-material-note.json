@@ -1,0 +1,142 @@
+{
+  "key": "store-asset-misc-material-note",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.MiscellaneousMaterialReceiptNote.*",
+    "entityIdPath": "$.receiptNo",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "receiptNo",
+                "value": {
+                  "path": "$.receiptNo"
+                }
+              },
+			  {
+                "variable": "storeName",
+                "value": {
+                  "path": "$.storeName"
+                }
+              },
+			  {
+                "variable": "receiptType",
+                "value": {
+                  "path": "$.receiptType"
+                }
+              },
+			  {
+                "variable": "receiptDate",
+                "value": {
+                  "path": "$.receiptDate"
+                }
+              },
+			  {
+                "variable": "department",
+                "value": {
+                  "path": "$.department"
+                }
+              },
+			  {
+                "variable": "status",
+                "value": {
+                  "path": "$.status"
+                }
+              },
+			  {
+                "variable": "receivedBy",
+                "value": {
+                  "path": "$.receivedBy"
+                }
+              },
+			  {
+                "variable": "remarks",
+                "value": {
+                  "path": "$.remarks"
+                }
+              },
+			  {
+                "variable": "designation",
+                "value": {
+                  "path": "$.designation"
+                }
+              },
+              {
+                "variable": "variable1",
+                "value":{
+                     "path":"$.materialDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "srNo",
+					  "value": "srNo"
+					},
+					{
+					  "variable": "materialCode",
+					  "value": "materialCode"
+					},{
+					  "variable": "materialName",
+					  "value": "materialName"
+					},{
+					  "variable": "uomName",
+					  "value": "uomName"
+					},{
+					  "variable": "quantityReceived",
+					  "value": "quantityReceived"
+					},{
+					  "variable": "unitRate",
+					  "value": "unitRate"
+					},{
+					  "variable": "totalValue",
+					  "value": "totalValue"
+					}
+                  ]
+                }
+              },
+			  {
+                "variable": "variable2",
+                "value":{
+                     "path":"$.workflowDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "ReviewApprovalDate",
+					  "value": "reviewApprovalDate"
+					},
+					{
+					  "variable": "ReviewerApproverName",
+					  "value": "reviewerApproverName"
+					},{
+					  "variable": "Designation",
+					  "value": "designation"
+					},{
+					  "variable": "Action",
+					  "value": "action"
+					},{
+					  "variable": "SendTo",
+					  "value": "sendTo"
+					},{
+					  "variable": "ApprovalStatus",
+					  "value": "approvalStatus"
+					}
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
