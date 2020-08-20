@@ -15,13 +15,13 @@
                                 "text": "{{header}}",
                                 "alignment": "center",
                                 "color": "#17202A",
-                                "fontSize": 12,
+                                "fontSize": 14,
                                 "bold": true
                             },
                             {
                                 "text": "{{application_for_mortgage}}",
                                 "alignment": "center",
-                                "fontSize": 9,
+                                "fontSize": 11,
                                 "italics": true,
                                 "bold": true
                             },
@@ -30,14 +30,14 @@
                                         "text": "{{application_label}}",
                                         "alignment": "center",
                                         "color": "#A0A2A4",
-                                        "fontSize": 10,
+                                        "fontSize": 12,
                                         "lineHeight": "2",
                                         "width": "auto"
                                     },
                                     {
                                         "text": "{{applicationNo}}",
                                         "alignment": "center",
-                                        "fontSize": 9,
+                                        "fontSize": 11,
                                         "lineHeight": "2",
                                         "bold": true
                                     }
@@ -49,9 +49,7 @@
                 ]
 
             },
-
             {
-                "style": "table-style",
                 "margin": [0, 20, 10, 10],
                 "table": {
                     "widths": ["33.33%", "33.33%", "33.33%"],
@@ -62,21 +60,21 @@
 
                                 [{
                                         "text": "{{property}}",
-                                        "fontSize": 10,
+                                        "fontSize": 12,
                                         "lineHeight": 2
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{transit_site}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{allotment_number}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{area_label}} ",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             }
                                         ]
                                     },
@@ -84,19 +82,19 @@
                                         "columns": [{
                                                 "text": "{{transitNumber}}",
                                                 "lineHeight": 2,
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{allotmentNumber}}",
                                                 "lineHeight": 2,
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{area}}",
                                                 "lineHeight": 2,
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             }
                                         ]
@@ -105,13 +103,13 @@
                                     {
                                         "columns": [{
                                             "text": "{{pincode_label}}",
-                                            "fontSize": 8
+                                            "fontSize": 10
                                         }]
                                     },
                                     {
                                         "columns": [{
                                             "text": "{{pincode}}",
-                                            "fontSize": 8,
+                                            "fontSize": 10,
                                             "bold": true
                                         }]
                                     }
@@ -124,51 +122,51 @@
 
                                 [{
                                         "text": "{{applicantDetails}}",
-                                        "fontSize": 10,
+                                        "fontSize": 12,
                                         "lineHeight": "2"
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{name_label}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{father_husband_name_label}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{relationship_label}} ",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{mobile_no}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             }
                                         ]
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{name}}",
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "lineHeight": 2,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{guardian}}",
                                                 "lineHeight": 2,
-                                                "fontSize": 8,
+                                                "fontSize":10,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{relationship}} ",
                                                 "lineHeight": 2,
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{mobile}}",
                                                 "lineHeight": 2,
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             }
                                         ]
@@ -177,24 +175,24 @@
                                     {
                                         "columns": [{
                                                 "text": "{{email_label}} ",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{aadharno_label}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             }
                                         ]
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{email}}",
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "lineHeight": 2,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{aadharno}}",
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "lineHeight": 2,
                                                 "bold": true
                                             }
@@ -209,38 +207,42 @@
 
                                 [{
                                         "text": "{{grantDetails}}",
-                                        "fontSize": 12
+                                        "fontSize": 12,
+                                        "lineHeight":2
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{name_of_bank_label}} ",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{enter_mortgage_amount_label}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": "{{sanction_letter_number_label}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             }
                                         ]
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{nameOfBank}}",
-                                                "fontSize": 8,
+                                                "fontSize":10,
+                                                "lineHeight":2,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{enterMortgageAmount}} ",
-                                                "fontSize": 8,
-                                                "bold": true
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "lineHeight":2
                                             },
                                             {
                                                 "text": "{{sanctionLetterNumber}}",
-                                                "fontSize": 8,
-                                                "bold": true
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "lineHeight":2
                                             }
                                         ]
 
@@ -248,11 +250,11 @@
                                     {
                                         "columns": [{
                                                 "text": "{{mortgage_end_date_label}}",
-                                                "fontSize": 8
+                                                "fontSize":10
                                             },
                                             {
                                                 "text": "{{date_of_sanctioning_label}}",
-                                                "fontSize": 8
+                                                "fontSize": 10
                                             },
                                             {
                                                 "text": ""
@@ -262,12 +264,12 @@
                                     {
                                         "columns": [{
                                                 "text": "{{mortgageEndDate}}",
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             },
                                             {
                                                 "text": "{{dateOfSanctioning}}",
-                                                "fontSize": 8,
+                                                "fontSize": 10,
                                                 "bold": true
                                             },
                                             {
@@ -281,7 +283,7 @@
                         [{
                                 "colSpan": 3,
                                 "text": "{{documents_label}}",
-                                "fontSize": 10,
+                                "fontSize": 12,
                                 "border": [
                                     true,
                                     true,
@@ -316,26 +318,19 @@
             }
         ],
         "styles": {
-            "tableExample": {
-                "margin": [0, 5, 0, 15],
-                "width": ["100%"]
-            },
-            "table-style": {
-                "lineHeight": "2"
-            },
             "receipt-table2": {
                 "color": "#000000",
                 "bold": true,
-                "fontSize": 8
-
+                "fontSize": 10
+    
             },
-
+    
             "receipt-table-value-cont": {
                 "color": "#000000",
                 "bold": false,
-                "fontSize": 8
+                "fontSize": 10
             }
-
+           
         }
     }
 }
