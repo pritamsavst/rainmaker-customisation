@@ -1,5 +1,5 @@
 {
-    "key": "rp-mortgage-approved-alternate",
+    "key": "rp-duplicate-copy-paid",
     "config": {
         "defaultStyle": {
             "font": "Cambay"
@@ -19,7 +19,7 @@
                                 "bold": true
                             },
                             {
-                                "text": "{{application_for_mortgage}}",
+                                "text": "{{application_for_duplicate_copy}}",
                                 "alignment": "center",
                                 "fontSize": 11,
                                 "italics": true,
@@ -35,7 +35,7 @@
                                         "width": "auto"
                                     },
                                     {
-                                        "text": "{{applicationNo}}",
+                                        "text": "{{applicationNumber}}",
                                         "alignment": "center",
                                         "fontSize": 11,
                                         "lineHeight": "2",
@@ -49,11 +49,219 @@
                 ]
 
             },
+
             {
                 "margin": [0, 20, 10, 10],
                 "table": {
                     "widths": ["33.33%", "33.33%", "33.33%"],
                     "body": [
+                        [{
+                                "colSpan": 3,
+                                "text": "{{feeEstimateLabel}}",
+                                "fontSize": 12,
+                                "lineHeight": 2,
+                                "border": [
+                                    true,
+                                    true,
+                                    true,
+                                    false
+                                ]
+
+                            },
+                            {}, {}
+                        ],
+                        [{
+                            "colSpan": 3,
+
+                            "table": {
+                                "widths": [
+                                    "25%",
+                                    "25%",
+                                    "25%",
+                                    "25%"
+                                ],
+                                "body": [
+                                    [{
+
+                                            "text": "{{charges_due_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{aproCharge}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "alignment": "right",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{total_amount_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "alignment": "right",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "{{publication_charges_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{feeAmount}}",
+                                            "alignment": "right",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "Rs {{total}}",
+                                            "alignment": "right",
+                                            "fontSize": 10,
+                                            "bold": true,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{total}}",
+                                            "alignment": "right",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "bold": true,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            },
+                            "border": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+
+
+                        }, {}, {}],
+
                         [{
                             "colSpan": 3,
                             "columns": [
@@ -154,7 +362,7 @@
                                             {
                                                 "text": "{{guardian}}",
                                                 "lineHeight": 2,
-                                                "fontSize":10,
+                                                "fontSize": 10,
                                                 "bold": true
                                             },
                                             {
@@ -164,7 +372,7 @@
                                                 "bold": true
                                             },
                                             {
-                                                "text": "{{mobile}}",
+                                                "text": "{{phone}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
                                                 "bold": true
@@ -191,89 +399,10 @@
                                                 "bold": true
                                             },
                                             {
-                                                "text": "{{aadharno}}",
+                                                "text": "{{adhaarNumber}}",
                                                 "fontSize": 10,
                                                 "lineHeight": 2,
                                                 "bold": true
-                                            }
-                                        ]
-                                    }
-                                ]
-                            ]
-                        }, {}, {}],
-                        [{
-                            "colSpan": 3,
-                            "columns": [
-
-                                [{
-                                        "text": "{{grantDetails}}",
-                                        "fontSize": 12,
-                                        "lineHeight":2
-                                    },
-                                    {
-                                        "columns": [{
-                                                "text": "{{name_of_bank_label}} ",
-                                                "fontSize": 10
-                                            },
-                                            {
-                                                "text": "{{enter_mortgage_amount_label}}",
-                                                "fontSize": 10
-                                            },
-                                            {
-                                                "text": "{{sanction_letter_number_label}}",
-                                                "fontSize": 10
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "columns": [{
-                                                "text": "{{nameOfBank}}",
-                                                "fontSize":10,
-                                                "lineHeight":2,
-                                                "bold": true
-                                            },
-                                            {
-                                                "text": "{{enterMortgageAmount}} ",
-                                                "fontSize": 10,
-                                                "bold": true,
-                                                "lineHeight":2
-                                            },
-                                            {
-                                                "text": "{{sanctionLetterNumber}}",
-                                                "fontSize": 10,
-                                                "bold": true,
-                                                "lineHeight":2
-                                            }
-                                        ]
-
-                                    },
-                                    {
-                                        "columns": [{
-                                                "text": "{{mortgage_end_date_label}}",
-                                                "fontSize":10
-                                            },
-                                            {
-                                                "text": "{{date_of_sanctioning_label}}",
-                                                "fontSize": 10
-                                            },
-                                            {
-                                                "text": ""
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "columns": [{
-                                                "text": "{{mortgageEndDate}}",
-                                                "fontSize": 10,
-                                                "bold": true
-                                            },
-                                            {
-                                                "text": "{{dateOfSanctioning}}",
-                                                "fontSize": 10,
-                                                "bold": true
-                                            },
-                                            {
-                                                "text": ""
                                             }
                                         ]
                                     }
@@ -312,7 +441,6 @@
                             {}, {}
                         ]
 
-
                     ]
                 }
             }
@@ -322,9 +450,9 @@
                 "color": "#000000",
                 "bold": true,
                 "fontSize": 10
-    
+
             },
-    
+
             "receipt-table-value-cont": {
                 "color": "#000000",
                 "bold": false,
