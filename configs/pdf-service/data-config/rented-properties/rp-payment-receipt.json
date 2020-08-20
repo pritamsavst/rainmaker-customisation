@@ -3,8 +3,8 @@
     "DataConfigs": {
         "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.Owners.*",
-    "entityIdPath":"$.applicationNumber",
+    "baseKeyPath": "$",
+    "entityIdPath":"$.Payments[0].paymentDetails[0].bill.consumerCode",
     "isCommonTableBorderRequired": true,
     "mappings": [
         {
@@ -76,9 +76,9 @@
                             } 
                           },
                           {
-                            "variable": "applicationNumber",
+                            "variable": "consumerCode",
                             "value": {
-                              "path": "$.applicationNumber"
+                              "path": "$.Payments[0].paymentDetails[0].bill.consumerCode"
                             }
                         },
                         {
@@ -94,9 +94,9 @@
                             } 
                           },
                           {
-                            "variable": "paymentDate",
+                            "variable": "transactionDate",
                             "value": {
-                              "path": "$.paymentDate"
+                              "path": "$.Payments[0].transactionDate"
                             }
                         },
                         {
@@ -126,7 +126,7 @@
                           {
                             "variable": "receiptNumber",
                             "value": {
-                              "path": "$.receiptNumber"
+                              "path": "$.Payments[0].paymentDetails[0].receiptNumber"
                             }
                         },
                         {
@@ -144,7 +144,7 @@
                           {
                             "variable": "payerName",
                             "value": {
-                              "path": "$.payer_information.payerName"
+                              "path": "$.Payments[0].payerName"
                             }
                         },
                         {
@@ -160,9 +160,9 @@
                             } 
                           },
                           {
-                            "variable": "payerMobileNo",
+                            "variable": "mobileNumber",
                             "value": {
-                              "path": "$.payer_information.payerMobileNo"
+                              "path": "$.Payments[0].mobileNumber"
                             }
                         },
                         {
@@ -178,9 +178,9 @@
                             } 
                           },
                           {
-                            "variable": "application_charges_label",
+                            "variable": "charges_dues_label",
                             "value": {
-                              "path": "APPLICATION_CHARGES"
+                              "path": "CHARGES_DUES_LABEL"
                             },
                             "type": "label",
                             "localisation":{
@@ -238,15 +238,15 @@
                             } 
                           },
                           {
-                            "variable": "applicationCharges",
+                            "variable": "totalDue",
                             "value": {
-                              "path": "$.payableAmount.applicationCharges"
+                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='OwnershipTransferRP_DUE')].amount"
                             }
                         },
                         {
                             "variable": "publicationCharges",
                             "value": {
-                              "path": "$.payableAmount.publicationCharges"
+                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='OwnershipTransferRP_CHARGES')].amount"
                             }
                         },
                         {
@@ -264,7 +264,7 @@
                         {
                             "variable": "total",
                             "value": {
-                              "path": "$.payableAmount.total"
+                              "path": "$..Payments[0].paymentDetails[0].totalAmountPaid"
                             }
                         },
                         {
@@ -294,7 +294,7 @@
                           {
                             "variable": "amountPaid",
                             "value": {
-                              "path": "$.paymentInformation.amountPaid"
+                              "path": "$..Payments[0].paymentDetails[0].totalAmountPaid"
                             }
                         },
                         {
@@ -312,7 +312,7 @@
                           {
                             "variable": "amountDue",
                             "value": {
-                              "path": "$.paymentInformation.amountDue"
+                              "path": "$..Payments[0].paymentDetails[0].totalDue"
                             }
                         },
                         {
@@ -354,19 +354,19 @@
                           {
                             "variable": "paymentMode",
                             "value": {
-                              "path": "$.paymentInformation.paymentMode"
+                              "path": "$.Payments[0].paymentMode"
                             }
                         },
                         {
-                            "variable": "transactionID",
+                            "variable": "transactionNumber",
                             "value": {
-                              "path": "$.paymentInformation.transactionID"
+                              "path": "$.Payments[0].transactionNumber"
                             }
                         },
                         {
                             "variable": "bankName",
                             "value": {
-                              "path": "$.paymentInformation.bankName"
+                              "path": "$..Payments[0].bankName"
                             }
                         },
                         {
@@ -400,9 +400,9 @@
                             } 
                           },
                           {
-                            "variable": "g8ReceiptIssueDate",
+                            "variable": "receiptDate",
                             "value": {
-                              "path": "$.paymentInformation.g8ReceiptIssueDate"
+                              "path": "$.Payments[0].paymentDetails[0].receiptDate"
                             }
                         },
                         {
@@ -418,11 +418,17 @@
                             } 
                           },
                           {
-                            "variable": "generatedBy",
+                            "variable": "system_label",
                             "value": {
-                              "path": "$.generatedBy"
-                            }
-                        },
+                              "path": "SYSTEM_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
                         {
                             "variable": "note",
                             "value": {
@@ -470,7 +476,73 @@
                                "prefix":"RP",   
                                "module":"rainmaker-tl"
                             } 
+                          },
+                          {
+                            "variable": "penalty_label",
+                            "value": {
+                              "path": "PENALTY_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "penalty",
+                            "value": {
+                              "path": "$.penalty"
+                            }
+                        },
+                        {
+                          "variable": "application_details",
+                          "value": {
+                            "path": "APPLICATION_DETAILS_LABEL"
+                          },
+                          "type": "label",
+                          "localisation":{
+                             "required":true,
+                             "prefix":"RP",   
+                             "module":"rainmaker-tl"
+                          } 
+                        },
+                        {
+                          "variable": "application_type_label",
+                          "value": {
+                            "path": "APPLICATION_TYPE_LABEL"
+                          },
+                          "type": "label",
+                          "localisation":{
+                             "required":true,
+                             "prefix":"RP",   
+                             "module":"rainmaker-tl"
+                          } 
+                        },
+                        {
+                          "variable": "service_type_label",
+                          "value": {
+                            "path": "SERVICE_TYPE_LABEL"
+                          },
+                          "type": "label",
+                          "localisation":{
+                             "required":true,
+                             "prefix":"RP",   
+                             "module":"rainmaker-tl"
+                          } 
+                        },
+                        {
+                          "variable": "businessService",
+                          "value": {
+                            "path": "$.Payments[0].paymentDetails[0].businessService"
                           }
+                      },
+                      {
+                        "variable": "receiptType",
+                        "value": {
+                          "path": "$.Payments[0].paymentDetails[0].receiptType"
+                        }
+                    }
                     ]
                 }
             ]

@@ -43,7 +43,7 @@
                             "stack": [
                                
                                 {
-                                    "text": "Receipt Number",
+                                    "text": "{{receipt_number_label}}",
                                     "style": "receipt-table2"
                                   },
                                   {
@@ -71,7 +71,7 @@
                             "bold":true
                     },
                     {
-                            "text":"{{applicationNumber}}",
+                            "text":"{{consumerCode}}",
                             "width":"auto",
                             "lineHeight":"3"
                             
@@ -88,7 +88,7 @@
   
                           },
                           {
-                            "text":"{{paymentDate}}",
+                            "text":"{{transactionDate}}",
                             "width":"auto",
                             "lineHeight":"3"
                           }
@@ -96,6 +96,80 @@
                     
                 ]
             },
+            {
+              "text":"{{application_details}}",
+              "alignment":"left",
+              "bold":true,
+              "fontSize":10
+          },
+          {
+            "margin": [0, 0, 0, 20],
+             "table": {
+                 "widths": [
+                     "25%",
+                     "25%",
+                     "25%",
+                     "25%"
+                      ],
+                      "body": [
+                          [
+                             {
+                                 "text":"{{application_type_label}}",
+                                 "bold":true,
+                                 "fontSize":8,
+                                 "border":[
+                                   true,
+                                   true,
+                                   false,
+                                   true
+                                 ],
+                                  "style": "receipt-table2"
+                               },
+                               {
+                                 "text":"{{receiptType}}",
+                                 "fontSize":8,
+                                 "border":[
+                                   false,
+                                   true,
+                                   false,
+                                   true
+                                 ],
+                                  "style": "receipt-table-value-cont"
+                               },
+                               {
+                                 "text":"{{service_type_label}}",
+                                 "fontSize":8,
+                                 "border":[
+                                   true,
+                                   true,
+                                   false,
+                                   true
+                                 ],
+                                  "style": "receipt-table2"
+                               },
+                               {
+                                "text":"{{businessService}}",
+                                "fontSize":8,
+                                "border":[
+                                  false,
+                                  true,
+                                  true,
+                                  true
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                          ]
+                      ]
+             },
+             "lineHeight":"1",
+             "border":[
+                 true,
+                 false,
+                 true,
+                 false
+               ]
+     },
+
             {
                 "text":"{{payer_information}}",
                 "alignment":"left",
@@ -160,7 +234,7 @@
                                          "style": "receipt-table2"
                                       },
                                       {
-                                        "text":"{{payerMobileNo}}",
+                                        "text":"{{mobileNumber}}",
                                         "fontSize":8,
                                         "border":[
                                           false,
@@ -183,7 +257,7 @@
                                  ]
                              ]
                     },
-                    "lineHeight":"2",
+                    "lineHeight":"1",
                     "border":[
                         true,
                         false,
@@ -201,17 +275,23 @@
             {
                 "margin": [0, 0, 0, 20],
                 "table":{
-                    "widths":["20%","20%","20%","20%","20%"],
+                    "widths":["16.66%","16.66%","16.66%","16.66%","16.66%", "16.66%"],
                     "body":[
                         [
                             {
-                                "text":"{{application_charges_label}}",
+                                "text":"{{charges_dues_label}}",
                                 "fontSize":8,
                                  "bold":true
                                 
                               },
                               {
                                 "text":"{{publication_charges_label}}",
+                                "fontSize":8,
+                                "bold":true
+                              
+                              },
+                              {
+                                "text":"{{penalty_label}}",
                                 "fontSize":8,
                                 "bold":true
                               
@@ -237,12 +317,17 @@
                         ],
                         [
                             {
-                                "text":"{{applicationCharges}}",
+                                "text":"{{totalDue}}",
                                 "fontSize":8
                                
                               },
                               {
                                 "text":"{{publicationCharges}}",
+                                "fontSize":8
+                                
+                              },
+                              {
+                                "text":"{{penalty}}",
                                 "fontSize":8
                                 
                               },
@@ -333,7 +418,7 @@
                           {},
                           {
                           "colSpan":2,
-                          "text":"{{transactionID}}",
+                          "text":"{{transactionNumber}}",
                           "fontSize":8
                           },
                           {},
@@ -351,7 +436,7 @@
                             "fontSize":8},
                           
                             {
-                            "text":"{{g8ReceiptNumber}}",
+                            "text":"{{receiptNumber}}",
                             "fontSize":8
                             }
                         ]
@@ -365,7 +450,7 @@
                               "bold":true ,
                             "fontSize":8},
                             {
-                                "text":"{{g8ReceiptIssueDate}}",
+                                "text":"{{receiptDate}}",
                             "fontSize":8
                             }
                         ]  
@@ -381,7 +466,7 @@
             "fontSize":9,
             "bold":true
             },
-            {"text":"{{generatedBy}}",
+            {"text":"{{system_label}}",
             "fontSize":9,
             "lineHeight":"2"},
             {             
@@ -415,11 +500,11 @@
                      "bold":true    
                  },
                  {
-                     "text":"{{not_proof_of_property}}",
-                     "bold":true ,
-                     "fontSize":8,
-                     "width":"*"
-                 }
+                  "text":"{{not_proof_of_property}}",
+                  "bold":true ,
+                  "fontSize":8,
+                  "width":"*"
+              }
                 ]
              },
              {
