@@ -240,13 +240,13 @@
                           {
                             "variable": "totalDue",
                             "value": {
-                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='OwnershipTransferRP_DUE')].amount"
+                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='RP_DUE')].amount"
                             }
                         },
                         {
                             "variable": "publicationCharges",
                             "value": {
-                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='OwnershipTransferRP_CHARGES')].amount"
+                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='RP_CHARGES')].amount"
                             }
                         },
                         {
