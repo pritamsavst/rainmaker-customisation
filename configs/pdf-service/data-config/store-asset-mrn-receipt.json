@@ -1,0 +1,195 @@
+{
+  "key": "store-asset-mrn-receipt",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.MeterialReceiptNote.*",
+    "entityIdPath": "$.mrnNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+			  {
+                "variable": "receiptDate",
+                "value": {
+                  "path": "$.receiptDate"
+                }
+              },
+			  {
+                "variable": "mrnNumber",
+                "value": {
+                  "path": "$.mrnNumber"
+                }
+              },
+			  {
+                "variable": "storeName",
+                "value": {
+                  "path": "$.storeName"
+                }
+              },
+			  {
+                "variable": "mrnStatus",
+                "value": {
+                  "path": "$.mrnStatus"
+                }
+              },
+			  {
+                "variable": "receiptType",
+                "value": {
+                  "path": "$.receiptType"
+                }
+              },
+			  {
+                "variable": "supplierName",
+                "value": {
+                  "path": "$.supplierName"
+                }
+              },
+			  {
+                "variable": "supplierBillNo",
+                "value": {
+                  "path": "$.supplierBillNo"
+                }
+              },
+			  {
+                "variable": "supplierBillDate",
+                "value": {
+                  "path": "$.supplierBillDate"
+                }
+              },{
+                "variable": "challanNo",
+                "value": {
+                  "path": "$.challanNo"
+                }
+              },{
+                "variable": "challanDate",
+                "value": {
+                  "path": "$.challanDate"
+                }
+              },{
+                "variable": "remarks",
+                "value": {
+                  "path": "$.remarks"
+                }
+              },
+			  {
+                "variable": "receivedBy",
+                "value": {
+                  "path": "$.receivedBy"
+                }
+              },
+			  {
+                "variable": "designation",
+                "value": {
+                  "path": "$.designation"
+                }
+              },
+			  {
+                "variable": "inspectedBy",
+                "value": {
+                  "path": "$.inspectedBy"
+                }
+              },
+			  {
+                "variable": "inspectedDate",
+                "value": {
+                  "path": "$.inspectedDate"
+                }
+              },
+			  {
+                "variable": "inspectedRemarks",
+                "value": {
+                  "path": "$.inspectedRemarks"
+                }
+              },
+              {
+                "variable": "variable1",
+                "value":{
+                     "path":"$.materialDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+					{
+					  "variable": "SrNo",
+					  "value": "srNo"
+					},
+					{
+					  "variable": "PoNumber",
+					  "value": "poNumber"
+					},
+                    {
+					  "variable": "UOMName",
+					  "value": "uomName"
+					},
+					{
+					  "variable": "MaterialName",
+					  "value": "materialName"
+					},{
+					  "variable": "AcceptedQty",
+					  "value": "acceptedQty"
+					},{
+					  "variable": "OrderedQty",
+					  "value": "orderedQty"
+					},{
+					  "variable": "ReceivedQty",
+					  "value": "receivedQty"
+					},{
+					  "variable": "TotalValueOfAcceptedQty",
+					  "value": "totalValueOfAcceptedQty"
+					},{
+					  "variable": "RatePerUnit",
+					  "value": "ratePerUnit"
+					},{
+					  "variable": "LotNo",
+					  "value": "lotNo"
+					},{
+					  "variable": "MfgDate",
+					  "value": "mfgDate"
+					}
+                  ]
+                }
+              },
+			  {
+                "variable": "variable2",
+                "value":{
+                     "path":"$.workflowDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "ReviewApprovalDate",
+					  "value": "reviewApprovalDate"
+					},
+					{
+					  "variable": "ReviewerApproverName",
+					  "value": "reviewerApproverName"
+					},{
+					  "variable": "Designation",
+					  "value": "designation"
+					},{
+					  "variable": "Action",
+					  "value": "action"
+					},{
+					  "variable": "SendTo",
+					  "value": "sendTo"
+					},{
+					  "variable": "ApprovalStatus",
+					  "value": "approvalStatus"
+					}
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

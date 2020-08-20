@@ -77,9 +77,9 @@ serviceMaps:
             - 
               jsonPath: $.RequestBody.longitude
             - 
-              jsonPath: $.RequestBody.houseNoAndStreetName
-            - 
               jsonPath: $.RequestBody.mohalla
+            - 
+              jsonPath: $.RequestBody.houseNoAndStreetName
             - 
               jsonPath: $.RequestBody.landmark
             - 

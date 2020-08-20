@@ -1,5 +1,5 @@
 {
-	"key": "unregistered-ec",
+	"key": "shopkeeper-ec",
 	"config": {
 
 		"content": [{
@@ -24,6 +24,19 @@
 				"fontSize": 12,
 				"bold": true,
 				"underline": true,
+				"margin": [
+					0,
+					10,
+					0,
+					0
+				]
+			},
+			{
+				"text": "6310/MC Chd.--Govt. Press, UT, Chd",
+				"alignment": "center",
+				"color": "#484848",
+				"fontSize": 12,
+				"bold": true,
 				"margin": [
 					0,
 					10,
@@ -59,33 +72,7 @@
 				]
 			},
 			{
-				"text": "(For unregisterd / unauthorized vendors)",
-				"alignment": "center",
-				"color": "#484848",
-				"fontSize": 12,
-				"bold": true,
-				"underline": true,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "Details of articles removed under the Street Vendors (Protection of Livelihood & Regulation of Street Vending) Municipal Corporation, Chandigarh Bye laws-2018, under Chapter-lll, Clause-8(a)(6) of the Penalty.",
-				"color": "#484848",
-				"alignment": "justify",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "1. Name of Person : {{variable2}}",
+				"text": "Details of articles removed under section 44(n),323 and 415 of the Punjab Municipal Corporation Law(Extension to Chandigarh) Act,1994.",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -96,7 +83,7 @@
 				]
 			},
 			{
-				"text": "2. Father's Name: {{variable3}}",
+				"text": "1. Name of person scattering the articles : {{variable2}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -107,7 +94,7 @@
 				]
 			},
 			{
-				"text": "3. Address: {{variable4}}",
+				"text": "2. Father's Name : {{variable3}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -118,7 +105,7 @@
 				]
 			},
 			{
-				"text": "4. Place and Time: {{variable5}}",
+				"text": "3. Address : {{variable4}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -129,7 +116,7 @@
 				]
 			},
 			{
-				"text": "5. Details of articles:",
+				"text": "4. Place and Time of default : {{variable5}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -140,7 +127,7 @@
 				]
 			},
 			{
-				"text": "(i)     {{variable6}}",
+				"text": "5. Articles removed :",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -151,95 +138,7 @@
 				]
 			},
 			{
-				"text": "(ii)    {{variable7}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(iii)   {{variable8}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(iv)   {{variable9}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(v)    {{variable10}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(vi)   {{variable11}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(vii)  {{variable12}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(viii) {{variable13}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(ix)   {{variable14}}",
-				"color": "#484848",				
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(x)    {{variable15}}",
+				"text": "{{article}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -268,10 +167,10 @@
 						"text": " "
 					},
 					{
-						"text": "Sub Inspector(Enf.),",
+						"text": "Sub Inspector(E.),",
 						"color": "#484848",
 						"fontSize": 12,
-						"margin": [0, 15, 0, 0]
+						"margin": [0, 10, 0, 0]
 					}
 				]
 			},
@@ -289,7 +188,7 @@
 				]
 			},
 			{
-				"text": "Dated : {{variable16}}",
+				"text": "Dated: {{variable16}}",
 				"color": "#484848",
 				"alignment": "left",
 				"fontSize": 12,
@@ -314,7 +213,7 @@
 				]
 			},
 			{
-				"text": "(a) The seized articles shall not be released by Municipal Corporation, Chandigarh as per clause-8(a)(6).",
+				"text": "(a) The seized articles should be got released within one month,otherwise the same will be auctioned.",
 				"color": "#484848",
 				"alignment": "left",
 				"bold": "true",
@@ -327,7 +226,7 @@
 				]
 			},
 			{
-				"text": "(b) In case of any damage/breakage M.C., Chandigarh shall not be responsible.",
+				"text": "(b) In case of any damage/breakage,the Municipal Corporation, Chandigarh will not be responsible.",
 				"color": "#484848",
 				"alignment": "left",
 				"bold": "true",
@@ -340,7 +239,7 @@
 				]
 			},
 			{
-				"text": "(c) The unregistered/unauthorized vendors cannot claim the seized articles/goods once the same are seized by Enforcement Wing.",
+				"text": "(c) The storage will be imposed if the vehicle is not released within seven days of seized date. ",
 				"color": "#484848",
 				"alignment": "left",
 				"bold": "true",

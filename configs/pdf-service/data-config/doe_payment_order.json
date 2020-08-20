@@ -163,6 +163,12 @@
                                     "path": "$.bankAddress"
                                 }
                             },
+							{
+                                "variable": "bank_ifsc",
+                                "value": {
+                                    "path": "$.bankIfsc"
+                                }
+                            },
 {
                                 "variable": "acc_number",
                                 "value": {

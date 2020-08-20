@@ -1,5 +1,5 @@
 {
-	"key": "unregistered-ec",
+	"key": "registered-ec",
 	"config": {
 
 		"content": [{
@@ -59,7 +59,7 @@
 				]
 			},
 			{
-				"text": "(For unregisterd / unauthorized vendors)",
+				"text": "(For violations by Registerd Street Vendors)",
 				"alignment": "center",
 				"color": "#484848",
 				"fontSize": 12,
@@ -73,19 +73,7 @@
 				]
 			},
 			{
-				"text": "Details of articles removed under the Street Vendors (Protection of Livelihood & Regulation of Street Vending) Municipal Corporation, Chandigarh Bye laws-2018, under Chapter-lll, Clause-8(a)(6) of the Penalty.",
-				"color": "#484848",
-				"alignment": "justify",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "1. Name of Person : {{variable2}}",
+				"text": "This seizure memo is being issued under The Street Vendors (Protection of Livelihood & Regulation of Street Vending) Act, 2014 notified vide Gazette notification dated 20 December,2018 and Bye Laws framed there under, for violating the conditions mentioned in Chapter-ll Clause 3, Clause 4 & 5, Chapter-lll 6,7,9 & 10. The penalty is liable to be paid under Chapter-lll Clause 8 for the violation of the provisions of the said Act/Bye laws.",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -96,7 +84,7 @@
 				]
 			},
 			{
-				"text": "2. Father's Name: {{variable3}}",
+				"text": "1. Name of the Violator : {{variable2}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -107,7 +95,7 @@
 				]
 			},
 			{
-				"text": "3. Address: {{variable4}}",
+				"text": "2. Father's Name : {{variable3}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -118,7 +106,7 @@
 				]
 			},
 			{
-				"text": "4. Place and Time: {{variable5}}",
+				"text": "3. Address of the Violator : {{variable4}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -129,7 +117,7 @@
 				]
 			},
 			{
-				"text": "5. Details of articles:",
+				"text": "4. Site : {{variable5}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -140,7 +128,7 @@
 				]
 			},
 			{
-				"text": "(i)     {{variable6}}",
+				"text": "5. License No : {{variable6}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -151,7 +139,7 @@
 				]
 			},
 			{
-				"text": "(ii)    {{variable7}}",
+				"text": "6. Sector/Location : {{variable7}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -162,7 +150,7 @@
 				]
 			},
 			{
-				"text": "(iii)   {{variable8}}",
+				"text": "7. Nature of Violation : {{variable8}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -173,7 +161,7 @@
 				]
 			},
 			{
-				"text": "(iv)   {{variable9}}",
+				"text": "8. Details of articles/goods seized :",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -184,62 +172,7 @@
 				]
 			},
 			{
-				"text": "(v)    {{variable10}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(vi)   {{variable11}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(vii)  {{variable12}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(viii) {{variable13}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(ix)   {{variable14}}",
-				"color": "#484848",				
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(x)    {{variable15}}",
+				"text": "{{article}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -255,7 +188,7 @@
 						"text": " "
 					},
 					{
-						"text": "{{variable17}}",
+						"text": "{{variable20}}",
 						"color": "#484848",
 						"fontSize": 12,
 						"margin": [0, 20, 0, 0]
@@ -271,7 +204,7 @@
 						"text": "Sub Inspector(Enf.),",
 						"color": "#484848",
 						"fontSize": 12,
-						"margin": [0, 15, 0, 0]
+						"margin": [0, 10, 0, 0]
 					}
 				]
 			},
@@ -289,7 +222,7 @@
 				]
 			},
 			{
-				"text": "Dated : {{variable16}}",
+				"text": "Dated: {{variable19}}",
 				"color": "#484848",
 				"alignment": "left",
 				"fontSize": 12,
@@ -314,7 +247,7 @@
 				]
 			},
 			{
-				"text": "(a) The seized articles shall not be released by Municipal Corporation, Chandigarh as per clause-8(a)(6).",
+				"text": "(a) In case of any damage/breakage of seized articles, the M.C., Chandigarh shall not be responsible.",
 				"color": "#484848",
 				"alignment": "left",
 				"bold": "true",
@@ -327,7 +260,7 @@
 				]
 			},
 			{
-				"text": "(b) In case of any damage/breakage M.C., Chandigarh shall not be responsible.",
+				"text": "(b) The seized articles will be auctioned after one month if not released by the violators.",
 				"color": "#484848",
 				"alignment": "left",
 				"bold": "true",
@@ -339,15 +272,15 @@
 					0
 				]
 			},
+
 			{
-				"text": "(c) The unregistered/unauthorized vendors cannot claim the seized articles/goods once the same are seized by Enforcement Wing.",
+				"text": "Signature of Registered Vendor",
 				"color": "#484848",
 				"alignment": "left",
-				"bold": "true",
 				"fontSize": 12,
 				"margin": [
-					20,
-					5,
+					0,
+					40,
 					0,
 					0
 				]

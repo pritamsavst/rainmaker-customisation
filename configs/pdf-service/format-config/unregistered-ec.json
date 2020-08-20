@@ -140,106 +140,7 @@
 				]
 			},
 			{
-				"text": "(i)     {{variable6}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(ii)    {{variable7}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(iii)   {{variable8}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(iv)   {{variable9}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(v)    {{variable10}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(vi)   {{variable11}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(vii)  {{variable12}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(viii) {{variable13}}",
-				"color": "#484848",
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(ix)   {{variable14}}",
-				"color": "#484848",				
-				"fontSize": 12,
-				"margin": [
-					0,
-					5,
-					0,
-					0
-				]
-			},
-			{
-				"text": "(x)    {{variable15}}",
+				"text": "{{article}}",
 				"color": "#484848",
 				"fontSize": 12,
 				"margin": [
@@ -271,7 +172,7 @@
 						"text": "Sub Inspector(Enf.),",
 						"color": "#484848",
 						"fontSize": 12,
-						"margin": [0, 15, 0, 0]
+						"margin": [0, 10, 0, 0]
 					}
 				]
 			},
