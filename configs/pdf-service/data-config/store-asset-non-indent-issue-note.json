@@ -1,0 +1,170 @@
+{
+  "key": "store-asset-non-indent-issue-note",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.NonIndentIssueNote.*",
+    "entityIdPath": "$.issueNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "indentNumber",
+                "value": {
+                  "path": "$.indentNumber"
+                }
+              },
+			  {
+                "variable": "issueNumber",
+                "value": {
+                  "path": "$.issueNumber"
+                }
+              },
+			  {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.issueDate"
+                }
+              },
+			  {
+                "variable": "supplierName",
+                "value": {
+                  "path": "$.supplierName"
+                }
+              },
+			  {
+                "variable": "issuingStoreName",
+                "value": {
+                  "path": "$.issuingStoreName"
+                }
+              },
+			  {
+                "variable": "issuingStoreDept",
+                "value": {
+                  "path": "$.issuingStoreDept"
+                }
+              },
+			  {
+                "variable": "indentDate",
+                "value": {
+                  "path": "$.indentDate"
+                }
+              },
+			  {
+                "variable": "issueStatus",
+                "value": {
+                  "path": "$.issueStatus"
+                }
+              },
+			  {
+                "variable": "issueTotalAmount",
+                "value": {
+                  "path": "$.issueTotalAmount"
+                }
+              },
+			  {
+                "variable": "indentPurpose",
+                "value": {
+                  "path": "$.indentPurpose"
+                }
+              },
+			  {
+                "variable": "createdBy",
+                "value": {
+                  "path": "$.createdBy"
+                }
+              },
+			  {
+                "variable": "designation",
+                "value": {
+                  "path": "$.designation"
+                }
+              },
+			  {
+                "variable": "remark",
+                "value": {
+                  "path": "$.remark"
+                }
+              },
+              {
+                "variable": "variable1",
+                "value":{
+                     "path":"$.materialDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "srNo",
+					  "value": "srNo"
+					},
+					{
+					  "variable": "materialCode",
+					  "value": "materialCode"
+					},
+					{
+					  "variable": "materialName",
+					  "value": "materialName"
+					},{
+					  "variable": "materialDescription",
+					  "value": "materialDescription"
+					},{
+					  "variable": "uomName",
+					  "value": "uomName"
+					},{
+					  "variable": "unitRate",
+					  "value": "unitRate"
+					},{
+					  "variable": "totalValue",
+					  "value": "totalValue"
+					},{
+					  "variable": "quantityIssued",
+					  "value": "quantityIssued"
+					}
+                  ]
+                }
+              },
+			  {
+                "variable": "variable2",
+                "value":{
+                     "path":"$.workflowDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "ReviewApprovalDate",
+					  "value": "reviewApprovalDate"
+					},
+					{
+					  "variable": "ReviewerApproverName",
+					  "value": "reviewerApproverName"
+					},{
+					  "variable": "Designation",
+					  "value": "designation"
+					},{
+					  "variable": "Action",
+					  "value": "action"
+					},{
+					  "variable": "SendTo",
+					  "value": "sendTo"
+					},{
+					  "variable": "ApprovalStatus",
+					  "value": "approvalStatus"
+					}
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
