@@ -6,19 +6,23 @@
            },
            "content": [
             { 
-              "margin":[0,0,10,20], 
+              "margin":[ -41,-41,-41,0], 
               "table": {      
                 "widths": ["100%"],
               "body":[
                 [
                   {
-                    "fillColor":"#F6F6F6",
+                    "fillColor":"#F2F2F2",
+                    "margin":[8,10,0,10],
                     "columns":
                     [
                          {
                             "image": "{{logo}}",
-                            "alignment": "left",
-                            "width": 40  
+                            "margin":[ 45,
+                              10,
+                              10,
+                              10],
+                            "width": 50  
                           },
                           {
                             "width":"*",
@@ -36,10 +40,17 @@
                                     "style": "receipt-table-value-cont"
                                 }
                             ],
+                            "margin": [
+                              46,
+                              10,
+                              10,
+                              0
+                            ],
                             "alignment": "center"
                           },
                           {
                             "width":"auto", 
+                            "margin": [-50, 10, 15, 2],
                             "stack": [
                                
                                 {
@@ -52,7 +63,7 @@
                                     "lineHeight":"2"
                                   }
                             ],
-                            "alignment": "right"
+                            "alignment": "center"
                           }  
                     ]
                   }
@@ -65,12 +76,14 @@
             {
                 "columns":[
                     {
+                            "margin":[0,10,0,0],
                             "text":"{{application_number_label}}:",
                             "alignment": "left",
                             "width":"auto",
                             "bold":true
                     },
                     {
+                            "margin":[0,10,0,0],
                             "text":"{{consumerCode}}",
                             "width":"auto",
                             "lineHeight":"3"
@@ -81,13 +94,14 @@
                         "width":"*"
                     },
                     {
-                        
+                            "margin":[0,10,0,0],         
                             "text":"{{payment_date_label}}:",
                             "width":"auto",
                             "bold":true
   
                           },
                           {
+                            "margin":[0,10,0,0],
                             "text":"{{transactionDate}}",
                             "width":"auto",
                             "lineHeight":"3"
