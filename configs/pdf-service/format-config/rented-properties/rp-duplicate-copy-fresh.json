@@ -8,7 +8,7 @@
         {
           "columns": [{
             "image": "{{logo}}",
-            "width": 40,
+            "width": 50,
             "alignment": "left"
           },
           {
@@ -52,7 +52,12 @@
       },
   
         {
-          "margin": [0, 20, 10, 10],
+          "margin": [
+            -25,
+            10,
+            -25,
+            1
+          ],
           "table": {
             "widths": ["33.33%", "33.33%", "33.33%"],
             "body": [

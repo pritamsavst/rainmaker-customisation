@@ -219,7 +219,7 @@
             {
               "variable":"allotmentNumber",
               "value":{
-                "path":"$.property.AllotmentNumber"
+                "path":"$.allotmentNumber"
               }
             },
             {
