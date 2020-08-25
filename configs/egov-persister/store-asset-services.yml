@@ -6,8 +6,8 @@ serviceMaps:
       description: create stores in ulb
       fromTopic: inv-store-save-topic
       queryMaps:
-      -  query: INSERT INTO store(id, code, name, officelocation, description, divisionname,department, storeincharge,billingaddress, deliveryaddress,
-            contactno1,contactno2, email, iscentralstore, active, tenantId, createdby, lastmodifiedby,createdtime,lastmodifiedtime)
+      -  query: INSERT INTO store(id, code, name, officelocation, description, divisionname,department, storeincharge,billingaddress,
+            deliveryaddress, contactno1,contactno2, email, iscentralstore, active, tenantId, createdby, lastmodifiedby,createdtime,lastmodifiedtime)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
          basePath: $.stores.*
          jsonMaps:
@@ -537,7 +537,7 @@ serviceMaps:
          -  jsonPath: $.materialIssues.*.indent.indentNumber
          -  jsonPath: $.materialIssues.*.issuedToEmployee
          -  jsonPath: $.materialIssues.*.issuedToDesignation
-         -  jsonPath: $.materialIssues.*.issuePurposecreatedByName
+         -  jsonPath: $.materialIssues.*.issuePurpose
          -  jsonPath: $.materialIssues.*.supplier.code
          -  jsonPath: $.materialIssues.*.stateId
             dbType: LONG
@@ -653,10 +653,10 @@ serviceMaps:
       description: Create Material Receipt Note
       fromTopic: inv-materialreceiptnote-save-topic
       queryMaps:
-      -  query: INSERT INTO materialreceipt(id, mrnnumber, receivingstore, receiptDate, receiptType,fileStoreId, suppliercode, supplierbillno,
-            supplierbilldate, challanno, challandate, description, paymentterms, receivedby, designation, mrnstatus, inspectedby,
-            inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime) VALUES (
-            ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?,?,?);
+      -  query: INSERT INTO materialreceipt(id, mrnnumber, receivingstore, receiptDate, receiptType,fileStoreId, suppliercode,
+            supplierbillno, supplierbilldate, challanno, challandate, description, paymentterms, receivedby, designation,
+            mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime)
+            VALUES ( ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?,?,?);
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.id
@@ -734,10 +734,10 @@ serviceMaps:
       fromTopic: inv-materialreceiptnote-update-topic
       isTransaction: true
       queryMaps:
-      -  query: update materialreceipt set receivingstore = ?, receiptDate  = ?, receiptType = ?, fileStoreId=?, suppliercode = ?, supplierbillno
-            = ?, supplierbilldate = ?, challanno = ?, challandate = ?, description = ?, paymentterms = ?, receivedby = ?,
-            designation = ?, mrnstatus = ?, inspectedby = ?, inspectiondate = ?, inspectionremarks = ?, lastmodifiedby = ?,
-            lastModifiedTime = ? where mrnnumber = ? and tenantid = ?;
+      -  query: update materialreceipt set receivingstore = ?, receiptDate  = ?, receiptType = ?, fileStoreId=?, suppliercode
+            = ?, supplierbillno = ?, supplierbilldate = ?, challanno = ?, challandate = ?, description = ?, paymentterms =
+            ?, receivedby = ?, designation = ?, mrnstatus = ?, inspectedby = ?, inspectiondate = ?, inspectionremarks = ?,
+            lastmodifiedby = ?, lastModifiedTime = ? where mrnnumber = ? and tenantid = ?;
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.receivingStore.code
@@ -818,8 +818,8 @@ serviceMaps:
       queryMaps:
       -  query: insert into PurchaseOrder (store, purchaseOrderNumber, purchaseOrderDate, purchaseType, rateType, supplier,
             advanceAmount, advancePercentage, expectedDeliveryDate, deliveryTerms, paymentTerms, remarks, status, fileStoreId,
-            poCreatedBy, designation, stateId, createdBy, lastModifiedBy, createdTime, lastModifiedTime, id, tenantId, totalAmount) values
-            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
+            poCreatedBy, designation, stateId, createdBy, lastModifiedBy, createdTime, lastModifiedTime, id, tenantId, totalAmount)
+            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
          basePath: $.purchaseOrders.*
          jsonMaps:
          -  jsonPath: $.purchaseOrders.*.store.code
@@ -958,8 +958,8 @@ serviceMaps:
       queryMaps:
       -  query: insert into PurchaseOrder (store, purchaseOrderNumber, purchaseOrderDate, purchaseType, rateType, supplier,
             advanceAmount, advancePercentage, expectedDeliveryDate, deliveryTerms, paymentTerms, remarks, status, fileStoreId,
-            poCreatedBy, designation, stateId, createdBy, lastModifiedBy, createdTime, lastModifiedTime, id, tenantId, totalAmount) values
-            (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            poCreatedBy, designation, stateId, createdBy, lastModifiedBy, createdTime, lastModifiedTime, id, tenantId, totalAmount)
+            values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.purchaseOrders.*
          jsonMaps:
          -  jsonPath: $.purchaseOrders.*.store.code
@@ -992,8 +992,8 @@ serviceMaps:
             dbType: LONG
          -  jsonPath: $.purchaseOrders.*.totalAmount
       -  query: INSERT INTO PurchaseOrderDetail(id, tenantId,material, purchaseOrder, orderNumber, uom, priceList,userQuantity,
-            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity, workDetailRemarks, purchaseOrderPurpose)VALUES ( ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity, workDetailRemarks, purchaseOrderPurpose)VALUES
+            ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*
          jsonMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.id
@@ -1047,11 +1047,12 @@ serviceMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderNumber
          -  jsonPath: $.purchaseOrders.*.tenantId
       -  query: INSERT INTO PurchaseOrderDetail(id, tenantId,material, purchaseOrder, orderNumber, uom, priceList,userQuantity,
-            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity, workDetailRemarks, purchaseOrderPurpose)VALUES ( ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id, tenantId) DO UPDATE SET material=EXCLUDED.material, purchaseOrder=EXCLUDED.purchaseOrder,
-            orderNumber=EXCLUDED.orderNumber, uom=EXCLUDED.uom, pricelist=EXCLUDED.pricelist, orderQuantity=EXCLUDED.orderQuantity,
-            receivedQuantity=EXCLUDED.receivedQuantity, unitPrice=EXCLUDED.unitPrice, description=EXCLUDED.description, tenderquantity=EXCLUDED.tenderquantity,
-            usedquantity=EXCLUDED.usedquantity, workDetailRemarks=EXCLUDED.workDetailRemarks, purchaseOrderPurpose=EXCLUDED.purchaseOrderPurpose;
+            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity, workDetailRemarks, purchaseOrderPurpose)VALUES
+            ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id, tenantId) DO UPDATE SET material=EXCLUDED.material,
+            purchaseOrder=EXCLUDED.purchaseOrder, orderNumber=EXCLUDED.orderNumber, uom=EXCLUDED.uom, pricelist=EXCLUDED.pricelist,
+            orderQuantity=EXCLUDED.orderQuantity, receivedQuantity=EXCLUDED.receivedQuantity, unitPrice=EXCLUDED.unitPrice,
+            description=EXCLUDED.description, tenderquantity=EXCLUDED.tenderquantity, usedquantity=EXCLUDED.usedquantity,
+            workDetailRemarks=EXCLUDED.workDetailRemarks, purchaseOrderPurpose=EXCLUDED.purchaseOrderPurpose;
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*
          jsonMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.id
@@ -1192,16 +1193,17 @@ serviceMaps:
       fromTopic: inv-miscellaneousreceiptnote-save-topic
       isTransaction: true
       queryMaps:
-      -  query: INSERT INTO materialreceipt(id, mrnnumber, issuenumber, receivingstore, receiptpurpose, receiptDate, receiptType, suppliercode,
-            supplierbillno, supplierbilldate, challanno, challandate, description, paymentterms, receivedby, designation,
-            mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime)
+      -  query: INSERT INTO materialreceipt(id, mrnnumber, issuenumber, receivingstore, receiptpurpose, receiptDate, receiptType,
+            suppliercode, supplierbillno, supplierbilldate, challanno, challandate, description, paymentterms, receivedby,
+            designation, mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime)
             VALUES ( ?, ?, ?, ?, ?, ?, ? ,? ,?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?) ON CONFLICT (mrnnumber,tenantid)
-            DO UPDATE SET receivingstore = EXCLUDED.receivingstore, receiptpurpose = EXCLUDED.receiptpurpose, receiptDate  = EXCLUDED.receiptdate, receiptType = EXCLUDED.receiptType,
-            suppliercode = EXCLUDED.suppliercode, supplierbillno = EXCLUDED.supplierbillno, supplierbilldate = EXCLUDED.supplierbilldate,
-            challanno = EXCLUDED.challanno, challandate = EXCLUDED.challandate, description = EXCLUDED.description, paymentterms
-            = EXCLUDED.paymentterms, receivedby = EXCLUDED.receivedby, designation = EXCLUDED.designation, mrnstatus = EXCLUDED.mrnstatus,
-            inspectedby = EXCLUDED.inspectedby, inspectiondate = EXCLUDED.inspectiondate, inspectionremarks = EXCLUDED.inspectionremarks,
-            lastmodifiedby = EXCLUDED.lastmodifiedby, lastModifiedTime = EXCLUDED.lastmodifiedtime ;
+            DO UPDATE SET receivingstore = EXCLUDED.receivingstore, receiptpurpose = EXCLUDED.receiptpurpose, receiptDate  =
+            EXCLUDED.receiptdate, receiptType = EXCLUDED.receiptType, suppliercode = EXCLUDED.suppliercode, supplierbillno
+            = EXCLUDED.supplierbillno, supplierbilldate = EXCLUDED.supplierbilldate, challanno = EXCLUDED.challanno, challandate
+            = EXCLUDED.challandate, description = EXCLUDED.description, paymentterms = EXCLUDED.paymentterms, receivedby =
+            EXCLUDED.receivedby, designation = EXCLUDED.designation, mrnstatus = EXCLUDED.mrnstatus, inspectedby = EXCLUDED.inspectedby,
+            inspectiondate = EXCLUDED.inspectiondate, inspectionremarks = EXCLUDED.inspectionremarks, lastmodifiedby = EXCLUDED.lastmodifiedby,
+            lastModifiedTime = EXCLUDED.lastmodifiedtime ;
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.id
@@ -1512,8 +1514,8 @@ serviceMaps:
       description: Create Scrap
       fromTopic: inv-scrap-save-topic
       queryMaps:
-      -  query: INSERT INTO scrap(id, tenantId, storeCode,scrapNumber,scrapDate,description,status,designation,createdby,createdTime,lastmodifiedby,lastModifiedTime)VALUES
-            ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+      -  query: INSERT INTO scrap(id, tenantId, storeCode,scrapNumber,scrapDate,description,status,issuenumber, designation,createdby,createdTime,lastmodifiedby,lastModifiedTime)VALUES
+            ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.scraps.*
          jsonMaps:
          -  jsonPath: $.scraps.*.id
@@ -1523,6 +1525,7 @@ serviceMaps:
          -  jsonPath: $.scraps.*.scrapDate
          -  jsonPath: $.scraps.*.description
          -  jsonPath: $.scraps.*.scrapStatus
+         -  jsonPath: $.scraps.*.issueNumber
          -  jsonPath: $.scraps.*.designation
          -  jsonPath: $.scraps.*.auditDetails.createdBy
          -  jsonPath: $.scraps.*.auditDetails.createdTime
@@ -1574,8 +1577,8 @@ serviceMaps:
       -  query: INSERT INTO scrapdetail(id,tenantId,scrapNumber,material,uom,lotnumber,expirydate,scrapReason,quantity,scrapQuantity,userQuantity,disposalQuantity,scrapValue,existingValue,issuedetailid,createdby,createdTime,lastmodifiedby,lastModifiedTime
             )VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?) ON CONFLICT (id,tenantid) DO UPDATE SET expiryDate
             = EXCLUDED.expiryDate, quantity = EXCLUDED.quantity,scrapQuantity = EXCLUDED.scrapQuantity,userQuantity = EXCLUDED.userQuantity,
-            disposalQuantity = EXCLUDED.disposalQuantity,scrapValue = EXCLUDED.scrapValue,existingValue = EXCLUDED.existingValue, issuedetailid=EXCLUDED.issuedetailid,
-            lotNumber = EXCLUDED.lotNumber, lastmodifiedby=EXCLUDED.lastmodifiedby,lastModifiedTime=EXCLUDED.lastModifiedTime;
+            disposalQuantity = EXCLUDED.disposalQuantity,scrapValue = EXCLUDED.scrapValue,existingValue = EXCLUDED.existingValue,
+            issuedetailid=EXCLUDED.issuedetailid, lotNumber = EXCLUDED.lotNumber, lastmodifiedby=EXCLUDED.lastmodifiedby,lastModifiedTime=EXCLUDED.lastModifiedTime;
          basePath: $.scraps.*.scrapDetails.*
          jsonMaps:
          -  jsonPath: $.scraps.*.scrapDetails.*.id
@@ -1745,26 +1748,22 @@ serviceMaps:
             dbType: DOUBLE
          -  jsonPath: $.disposals[?({id} in @.disposalDetails[*].id)].disposalNumber
          -  jsonPath: $.disposals.*.disposalDetails.*.scrapDetails.id
-         
    -  version: 1
       name: Indents updatestatus
       description: update status of Indents in ulb
       fromTopic: inv-indents-updatestatus-topic
       queryMaps:
-      -  query: |-
-            update indent set indentStatus=? where indentNumber=?
+      -  query: update indent set indentStatus=? where indentNumber=?
          basePath: $.workFlowDetails
          jsonMaps:
          -  jsonPath: $.workFlowDetails.action
          -  jsonPath: $.workFlowDetails.businessId
-
    -  version: 1
       name: Indents issues updatestatus
       description: update status of Indents issue in ulb
       fromTopic: inv-issues-updatestatus-topic
       queryMaps:
-      -  query: |-
-            update materialissue set materialissuestatus=? where issuenumber=?
+      -  query: update materialissue set materialissuestatus=? where issuenumber=?
          basePath: $.workFlowDetails
          jsonMaps:
          -  jsonPath: $.workFlowDetails.action
@@ -1774,8 +1773,7 @@ serviceMaps:
       description: update status of purchase order in ulb
       fromTopic: inv-purchaseorders-updatestatus-topic
       queryMaps:
-      -  query: |-
-            update purchaseorder set status=? where purchaseordernumber=?
+      -  query: update purchaseorder set status=? where purchaseordernumber=?
          basePath: $.workFlowDetails
          jsonMaps:
          -  jsonPath: $.workFlowDetails.action
@@ -1785,8 +1783,27 @@ serviceMaps:
       description: update status of material receipt in ulb
       fromTopic: inv-materialreceiptnote-updatestatus-topic
       queryMaps:
-      -  query: |-
-            update materialreceipt set mrnstatus=? where mrnnumber=?
+      -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
+         basePath: $.workFlowDetails
+         jsonMaps:
+         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.businessId
+   -  version: 1
+      name: material receipt updatestatus
+      description: update status of material receipt in ulb
+      fromTopic: inv-miscellaneousreceiptnote-updatestatus-topic
+      queryMaps:
+      -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
+         basePath: $.workFlowDetails
+         jsonMaps:
+         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.businessId
+   -  version: 1
+      name: transfer inward updatestatus
+      description: transfer inward update status
+      fromTopic: inv-transfer-inward-updatestatus-topic
+      queryMaps:
+      -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
          -  jsonPath: $.workFlowDetails.action

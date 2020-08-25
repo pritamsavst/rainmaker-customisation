@@ -1,0 +1,197 @@
+{
+  "key": "store-asset-purchase-order",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.PurchaseOrder.*",
+    "entityIdPath": "$.poNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "poNumber",
+                "value": {
+                  "path": "$.poNumber"
+                }
+              },
+			  {
+                "variable": "storeName",
+                "value": {
+                  "path": "$.storeName"
+                }
+              },
+			  {
+                "variable": "poDate",
+                "value": {
+                  "path": "$.poDate"
+                }
+              },
+			  {
+                "variable": "poStatus",
+                "value": {
+                  "path": "$.poStatus"
+                }
+              },
+			  {
+                "variable": "rateType",
+                "value": {
+                  "path": "$.rateType"
+                }
+              },
+			  {
+                "variable": "supplierName",
+                "value": {
+                  "path": "$.supplierName"
+                }
+              },
+			  {
+                "variable": "advancePercentage",
+                "value": {
+                  "path": "$.advancePercentage"
+                }
+              },
+			  {
+                "variable": "advanceAmount",
+                "value": {
+                  "path": "$.advanceAmount"
+                }
+              },
+			  {
+                "variable": "deliveryDate",
+                "value": {
+                  "path": "$.deliveryDate"
+                }
+              },
+			  {
+                "variable": "rateContractNumber",
+                "value": {
+                  "path": "$.rateContractNumber"
+                }
+              },
+			  {
+                "variable": "rateContractDate",
+                "value": {
+                  "path": "$.rateContractDate"
+                }
+              },
+			  {
+                "variable": "deliveryTerms",
+                "value": {
+                  "path": "$.deliveryTerms"
+                }
+              },
+			  {
+                "variable": "paymentTerms",
+                "value": {
+                  "path": "$.paymentTerms"
+                }
+              },
+			  {
+                "variable": "remark",
+                "value": {
+                  "path": "$.remark"
+                }
+              },
+			  {
+                "variable": "createdBy",
+                "value": {
+                  "path": "$.createdBy"
+                }
+              },
+			  {
+                "variable": "designation",
+                "value": {
+                  "path": "$.designation"
+                }
+              },
+              {
+                "variable": "variable1",
+                "value":{
+                     "path":"$.materialDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "srNo",
+					  "value": "srNo"
+					},
+					{
+					  "variable": "materialCode",
+					  "value": "materialCode"
+					},
+					{
+					  "variable": "materialName",
+					  "value": "materialName"
+					},{
+					  "variable": "workDetailsRemark",
+					  "value": "workDetailsRemark"
+					},{
+					  "variable": "uomName",
+					  "value": "uomName"
+					},{
+					  "variable": "unitRate",
+					  "value": "unitRate"
+					},{
+					  "variable": "totalValue",
+					  "value": "totalValue"
+					},{
+					  "variable": "indentNumber",
+					  "value": "indentNumber"
+					},{
+					  "variable": "indentQuantity",
+					  "value": "indentQuantity"
+					},{
+					  "variable": "orderQuantity",
+					  "value": "orderQuantity"
+					},{
+					  "variable": "poPurpose",
+					  "value": "poPurpose"
+					}
+                  ]
+                }
+              },
+			  {
+                "variable": "variable2",
+                "value":{
+                     "path":"$.workflowDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "ReviewApprovalDate",
+					  "value": "reviewApprovalDate"
+					},
+					{
+					  "variable": "ReviewerApproverName",
+					  "value": "reviewerApproverName"
+					},{
+					  "variable": "Designation",
+					  "value": "designation"
+					},{
+					  "variable": "Action",
+					  "value": "action"
+					},{
+					  "variable": "SendTo",
+					  "value": "sendTo"
+					},{
+					  "variable": "ApprovalStatus",
+					  "value": "approvalStatus"
+					}
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
