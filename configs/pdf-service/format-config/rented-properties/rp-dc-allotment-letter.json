@@ -1,0 +1,127 @@
+{
+    "key": "rp-dc-allotment-letter",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 40,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 10,
+                                "bold": true,
+                                "lineHeight": "2"
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [50, 10, 0, 0],
+                "stack": [{
+                        "text": "{{name}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "{{colony}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "{{area}} ,{{pincode}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "Memo No {{memoNumber}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "Dated ________________________",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Subject:",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "*",
+                        "text": "Supply of duplicate copy of Allotment letter of Transit Site No {{transitNumber}}, {{colony}}, {{area}}, issued by the Estate Office/Municipal Corporation,Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [50, 20, 0, 0],
+                "style": "pdfContent",
+                "text": "Reference your application/request dated {{creationDate}} on the subject cited above."
+            },
+            {
+                "margin": [50, 20, 0, 0],
+                "style": "pdfContent",
+                "text": "The duplicate Allotment Letter No.{{allotmentNumber}} Dated {{allotmentDate}} in respect of Transit Site No.{{transitNumber}}, {{colony}}, {{area}} allotted to Sh./Smt. {{name}} is hereby attached, duly attested."
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Superintendent(C),",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent"
+                    }
+
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 8
+            }
+
+        }
+    }
+} 
