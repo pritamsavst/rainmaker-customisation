@@ -852,8 +852,8 @@ serviceMaps:
             dbType: LONG
          -  jsonPath: $.purchaseOrders.*.totalAmount
       -  query: INSERT INTO PurchaseOrderDetail(id, tenantId,material, purchaseOrder, orderNumber, uom, priceList,userQuantity,
-            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity)VALUES ( ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ? );
+            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity, indentnumber)VALUES ( ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ? );
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*
          jsonMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.id
@@ -870,6 +870,7 @@ serviceMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.description
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.tenderQuantity
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.usedQuantity
+         -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.indentNumber
       -  query: INSERT INTO PurchaseIndentDetail(id, purchaseOrderDetail, tenantId, indentDetail, quantity,createdBy, lastModifiedBy,
             createdTime, lastModifiedTime )VALUES ( ?, ?, ?, ?, ?,?,?,?,?);
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*.purchaseIndentDetails.*
@@ -1807,4 +1808,4 @@ serviceMaps:
          basePath: $.workFlowDetails
          jsonMaps:
          -  jsonPath: $.workFlowDetails.action
-         -  jsonPath: $.workFlowDetails.businessId
+         -  jsonPath: $.workFlowDetails.businessId         
