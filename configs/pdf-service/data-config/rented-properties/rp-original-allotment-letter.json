@@ -3,7 +3,7 @@
     "DataConfigs": {
       "serviceName": "rainmaker-rp",
       "version": "1.0.0",
-      "baseKeyPath": "$.DuplicateCopyApplications.*",
+      "baseKeyPath": "$.Properties.*",
       "entityIdPath": "$.applicationNumber",
       "isCommonTableBorderRequired": true,
       "mappings": [{
@@ -41,56 +41,38 @@
               {
                 "variable": "name",
                 "value": {
-                  "path": "$.applicant[0].name"
+                  "path": "$.owners[0].ownerDetails.name"
                 }
 
               },
               {
                 "variable":"colony",
                 "value":{
-                  "path":"$.property.colony"
+                  "path":"$.propertyImages[0].property.colony"
                 }
               },
               {
                 "variable":"area",
                 "value":{
-                  "path":"$.property.area"
+                  "path":"$.propertyImages[0].property.area"
                 }
               },
               {
                 "variable":"pincode",
                 "value":{
-                  "path":"$.property.pincode"
-                }
-              },
-              {
-                "variable":"memoNumber",
-                "value":{
-                  "path":"$.memoNumber"
+                  "path":"$.propertyImages[0].property.pincode"
                 }
               },
               {
                 "variable":"transitNumber",
                 "value":{
-                  "path":"$.property.transitNumber"
+                  "path":"$.propertyImages[0].property.transitNumber"
                 }
               },
               {
-                "variable":"creationDate",
+                "variable":"rent",
                 "value":{
-                  "path":"$.auditDetails.createdTime"
-                }
-              },
-              {
-                "variable":"allotmentNumber",
-                "value":{
-                  "path":"$.property.AllotmentNumber"
-                }
-              },
-              {
-                "variable":"allotmentDate",
-                "value":{
-                  "path":"$.property.allotmentDate"
+                  "path":"$.owners[0].ownerDetails.monthlyRent"
                 }
               }
 
