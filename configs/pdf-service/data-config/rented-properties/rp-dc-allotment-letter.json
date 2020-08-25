@@ -1,0 +1,102 @@
+{
+    "key": "rp-dc-allotment-letter",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.DuplicateCopyApplications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "COLONY_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.applicant[0].name"
+                }
+
+              },
+              {
+                "variable":"colony",
+                "value":{
+                  "path":"$.property.colony"
+                }
+              },
+              {
+                "variable":"area",
+                "value":{
+                  "path":"$.property.area"
+                }
+              },
+              {
+                "variable":"pincode",
+                "value":{
+                  "path":"$.property.pincode"
+                }
+              },
+              {
+                "variable":"memoNumber",
+                "value":{
+                  "path":"$.memoNumber"
+                }
+              },
+              {
+                "variable":"transitNumber",
+                "value":{
+                  "path":"$.property.transitNumber"
+                }
+              },
+              {
+                "variable":"creationDate",
+                "value":{
+                  "path":"$.auditDetails.createdTime"
+                }
+              },
+              {
+                "variable":"allotmentNumber",
+                "value":{
+                  "path":"$.property.AllotmentNumber"
+                }
+              },
+              {
+                "variable":"allotmentDate",
+                "value":{
+                  "path":"$.property.allotmentDate"
+                }
+              }
+
+            ]
+          }
+        ]
+      }]
+    }
+  }  
