@@ -1,0 +1,84 @@
+{
+    "key": "rp-original-allotment-letter",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Properties.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "COLONY_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.owners[0].ownerDetails.name"
+                }
+
+              },
+              {
+                "variable":"colony",
+                "value":{
+                  "path":"$.propertyImages[0].property.colony"
+                }
+              },
+              {
+                "variable":"area",
+                "value":{
+                  "path":"$.propertyImages[0].property.area"
+                }
+              },
+              {
+                "variable":"pincode",
+                "value":{
+                  "path":"$.propertyImages[0].property.pincode"
+                }
+              },
+              {
+                "variable":"transitNumber",
+                "value":{
+                  "path":"$.propertyImages[0].property.transitNumber"
+                }
+              },
+              {
+                "variable":"rent",
+                "value":{
+                  "path":"$.owners[0].ownerDetails.monthlyRent"
+                }
+              }
+
+            ]
+          }
+        ]
+      }]
+    }
+  }  
