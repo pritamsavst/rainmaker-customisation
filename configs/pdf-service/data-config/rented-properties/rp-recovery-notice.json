@@ -1,0 +1,121 @@
+{
+    "key": "rp-recovery-notice",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.notices.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+          "direct": [{
+              "variable": "municipal_co_chandigarh",
+              "value": {
+                "path": "VIOLATION_PDF_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "comments",
+              "value": {
+                "path": "$.description"
+              }
+            },
+            {
+              "variable": "commentsHeader",
+              "value": {
+                "path": "VIOLATION_COMMENTS_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "colony_branch",
+              "value": {
+                "path": "COLONY_BRANCH_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "cause_notice",
+              "value": {
+                "path": "CAUSE_NOTICE_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "logo",
+              "url": "https://egov.transerve.com/media/logo.png",
+              "type": "image"
+            },
+  
+            {
+              "variable": "transit_no",
+              "value": {
+                "path": "$.property.transitNumber"
+              }
+            },
+            {
+              "variable": "colony",
+              "value": {
+                "path": "$.property.colony"
+              }
+            },
+            {
+              "variable": "memoDate",
+              "value": {
+                "path": "$.memoDate"
+              }
+            },
+            {
+              "variable": "memoNumber",
+              "value": {
+                "path": "$.memoNumber"
+              }
+            },
+            {
+              "variable": "demandNoticeFrom",
+              "value": {
+                "path": "$.demandNoticeFrom"
+              }
+            },
+            {
+              "variable": "amount",
+              "value": {
+                "path": "$.amount"
+              }
+            },
+  
+            {
+              "variable": "demandNoticeTo",
+              "value": {
+                "path": "$.demandNoticeTo"
+              }
+            },
+            {
+              "variable": "demandNoticeFrom",
+              "value": {
+                "path": "$.demandNoticeFrom"
+              }
+            }
+  
+          ]
+        }]
+      }]
+    }
+  } 
