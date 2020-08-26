@@ -7,7 +7,7 @@
         "content": [{
                 "columns": [{
                         "image": "{{logo}}",
-                        "width": 40,
+                        "width": 50,
                         "alignment": "left"
                     },
                     {
@@ -16,13 +16,13 @@
                         "stack": [{
                                 "text": "{{header}}",
                                 "color": "#17202A",
-                                "fontSize": 12,
+                                "fontSize": 14,
                                 "bold": true
                             },
                             {
                                 "text": "{{colony_branch}}",
                                 "color": "#17202A",
-                                "fontSize": 10,
+                                "fontSize": 12,
                                 "bold": true,
                                 "lineHeight": "2"
                             }
@@ -33,6 +33,7 @@
 
             },
             {
+                "margin": [0, 20, 0, 0],
                 "text": "To",
                 "alignment": "left",
                 "style": "pdfContent"
@@ -55,12 +56,12 @@
                         "width": "*"
                     },
                     {
-                        "text": "Memo No {{memoNumber}}",
+                        "text": "Memo No _______",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "Dated ________________________",
+                        "text": "Dated ___________",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -94,7 +95,35 @@
             {
                 "margin": [50, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "The duplicate Allotment Letter No.{{allotmentNumber}} Dated {{allotmentDate}} in respect of Transit Site No.{{transitNumber}}, {{colony}}, {{area}} allotted to Sh./Smt. {{name}} is hereby attached, duly attested."
+                "text": [
+                    {
+                        "text":"The duplicate Allotment Letter No."
+                    },
+                    {
+                    "text":"{{allotmentNumber}} "
+                    ,
+                        "bold":true
+                    },
+                    {
+                        "text":"Dated ______ in respect of Transit Site No. "
+                    },
+                    {
+                        "text":"{{transitNumber}}, {{colony}}, {{area}} ."
+                        ,
+                        "bold":true
+                    },
+                    {
+                        "text":"allotted to Sh./Smt."
+                    },
+                    {
+                        "text":" {{name}}",
+                        "bold":true
+                    },
+                    {
+                        "text":" is hereby attached, duly attested."
+                    }
+                    
+            ]
             },
             {
                 "margin": [0, 20, 0, 0],
@@ -119,7 +148,7 @@
         ],
         "styles": {
             "pdfContent": {
-                "fontSize": 8
+                "fontSize": 10
             }
 
         }
