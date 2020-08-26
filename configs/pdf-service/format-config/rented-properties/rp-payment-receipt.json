@@ -406,39 +406,34 @@
                         
                     ],
                     [
-                        {  "colSpan":2,
+                        {  "colSpan":3,
                           "text":"{{payment_mode_label}}",
                             "bold":true ,
                           "fontSize":8},
                           {},
+                          {},
                           {
-                            "colSpan":2,
+                            "colSpan":3,
                               "text":"{{transaction_cheque_dd_label}}",
                               "bold":true ,
                           "fontSize":8
                           },
                           {},
-                          {"text":"{{bank_payment_gateway_label}}",
-                            "colSpan":2,
-                            "bold":true ,
-                          "fontSize":8},
                           {}
                           
                     ],
                     [
                         {"text":"{{paymentMode}}",
-                          "colSpan":2,
+                          "colSpan":3,
                           "fontSize":8},
                           {},
+                          {},
                           {
-                          "colSpan":2,
+                          "colSpan":3,
                           "text":"{{transactionNumber}}",
                           "fontSize":8
                           },
                           {},
-                          {"text":"{{bankName}}",
-                            "colSpan":2,
-                          "fontSize":8},
                           {}
                           
                     ],
