@@ -8,23 +8,23 @@
                 "columns": [{
                         "image": "{{logo}}",
                         "alignment": "left",
-                        "width": 40
+                        "width": 50
                     },
                     {
                         "width": "*",
                         "stack": [{
                                 "text": "{{municipal_co_chandigarh}}",
-                                "fontSize": 12,
+                                "fontSize": 14,
                                 "bold": true
                             },
                             {
                                 "text": "{{colony_branch}}",
-                                "fontSize": 12,
+                                "fontSize": 13,
                                 "color": "#676A6B "
                             },
                             {
                                 "text": "{{cause_notice}}",
-                                "fontSize": 10,
+                                "fontSize": 11,
                                 "bold": true,
                                 "width": "*",
                                 "alignment": "center",
@@ -54,10 +54,6 @@
                                 "text": "{{transit_no}}",
                                 "style": "noticeContent",
                                  "bold":true
-                            },
-                            {
-                                "text": " Rehabilitation Colony.",
-                                "style": "noticeContent"
                             }
                         ]
                     },
@@ -71,12 +67,21 @@
             {
                 "margin": [0, 10, 0, 0],
                 "stack": [{
-                        "text": "Memo No. {{memoNumber}}.",
+                        "text": "Memo No. ",
                         "style": "noticeContent"
                     },
                     {
-                        "text": "Dated, {{memoDate}}",
+                        "text": "{{memoNumber}}.",
+                        "style": "noticeContent" ,
+                        "bold":true  
+                    },
+                    {
+                        "text": "Dated,",
                         "style": "noticeContent"
+                    },
+                    {
+                        "text":"{{memoDate}}",
+                        "style":"noticeContent"
                     }
                 ],
                 "alignment": "left"
@@ -118,17 +123,17 @@
                     },
 
                     {
-                        "text": "",
+                        "text": "{{allotmentNumber}}",
                         "style": "noticeContent",
                         "bold":true
                     },
 
                     {
-                        "text": "ALC dated",
+                        "text": " ALC dated ",
                         "style": "noticeContent"
                     },
                     {
-                        "text": "",
+                        "text": "{{memoDate}}",
                         "style": "noticeContent",
                         "bold":true
                     }
@@ -338,7 +343,7 @@
                 "bold": true
             },
             "noticeContent": {
-                "fontSize": 8
+                "fontSize": 10
             }
 
         }

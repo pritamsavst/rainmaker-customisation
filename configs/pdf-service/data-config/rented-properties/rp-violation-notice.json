@@ -21,6 +21,14 @@
                 "module": "rainmaker-rp"
               }
             },
+          
+              {
+                "variable": "allotmentNumber",
+                "value": {
+                  "path": "$.allotmentNumber"
+                }
+              }, 
+           
             {
               "variable": "commentsHeader",
               "value": {

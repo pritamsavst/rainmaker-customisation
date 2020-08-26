@@ -26,6 +26,12 @@
               }
             },
             {
+              "variable": "allotmentNumber",
+              "value": {
+                "path": "$.allotmentNumber"
+              }
+            }, 
+            {
               "variable": "commentsHeader",
               "value": {
                 "path": "VIOLATION_COMMENTS_HEADER"
