@@ -192,9 +192,25 @@
               }
             },
             {
-              "variable": "relationship",
+              "variable": "relationshipF",
               "value": {
-                "path": "$.applicant[0].relationship"
+                "path": "FATHER"
+              },
+                "type": "label",
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "relationshipH",
+              "value": {
+                "path": "HUSBAND"
+              },
+                "type": "label",
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-rp"
               }
             },
             {
@@ -430,18 +446,26 @@
               "variable": "mortgageEndDate",
               "value": {
                 "path": "$.mortgageApprovedGrantDetails[0].mortgageEndDate"
-              }
+              },
+              "type":"date"
             },
             {
               "variable": "dateOfSanctioning",
               "value": {
                 "path": "$.mortgageApprovedGrantDetails[0].sanctionDate"
-              }
+              },
+              "type":"date"
             },
             {
                 "variable": "documents_array",
                 "value": {
                   "path": "$.applicationDocuments.*"
+                }
+              },
+              {
+                "variable": "relationship",
+                "value": {
+                  "path": "$.applicant[0].relationship"
                 }
               }
           ]
