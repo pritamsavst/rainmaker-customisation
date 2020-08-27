@@ -24,16 +24,15 @@
                   } 
                 },
                 {
-                  "variable": "municiapl_co",
+                  "variable": "header",
                   "value": {
-                    "path": "LOCALIZATION_ULBGRADE_MC1"
+                    "path": "PDF_HEADER"
                   },
                   "type": "label",
-                  "localisation":{
-                     "required":true,
-                     "prefix":"TL",   
-                     "module":"rainmaker-tl"
-                  } 
+                  "localisation": {
+                    "prefix": "RP",
+                    "module": "rainmaker-rp"
+                  }
                 },
                 {
                   "variable": "applicationNumber",
@@ -199,7 +198,7 @@
   {
     "variable": "relation",
     "value": {
-      "path": "$.ownerDetails.relation"
+      "path": "$.ownerDetails.relationWithDeceasedAllottee"
     }
   },
   {
@@ -241,7 +240,7 @@
   {
     "variable": "aadharno",
     "value": {
-      "path": "$.ownerDetails.aadharno"
+      "path": "$.ownerDetails.aadhaarNumber"
     }
   },
   {
@@ -260,6 +259,18 @@
     "variable": "documents_array",
     "value": {
       "path": "$.ownerDetails.ownershipTransferDocuments.*"
+    }
+  },
+  {
+    "variable": "applicantDetails",
+    "value": {
+      "path": "APPLICANT_DETAILS"
+    },
+    "type": "label",
+    "localisation": {
+      "required": true,
+      "prefix": "RP",
+      "module": "rainmaker-rp"
     }
   },
   {
@@ -289,7 +300,7 @@
   {
     "variable": "fatherhusbandsName",
     "value": {
-      "path": "$.ownerDetails.fatherhusbandsName"
+      "path": "$.ownerDetails.fatherOrHusband"
     }
   }
               ]

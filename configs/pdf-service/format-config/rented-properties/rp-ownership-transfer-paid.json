@@ -559,8 +559,9 @@
                         ],
                          "style": "receipt-table-value-cont"
                       },
+                    
                       {
-                        "text":"{{aadharno_label}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -570,7 +571,7 @@
                          "style": "receipt-table-value-cont"
                       },
                       {
-                        "text":"",
+                        "text":"{{aadharno_label}}",
                         "border":[
                           false,
                           false,
@@ -602,7 +603,7 @@
                          "style": "receipt-table2"
                       },
                       {
-                        "text":"{{aadharno}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -612,7 +613,7 @@
                          "style": "receipt-table2"
                       },
                       {
-                        "text":"",
+                        "text":"{{aadharno}}",
                         "border":[
                           false,
                           false,

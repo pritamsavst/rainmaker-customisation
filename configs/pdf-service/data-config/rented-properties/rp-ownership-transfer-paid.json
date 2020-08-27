@@ -199,7 +199,7 @@
 {
   "variable": "relation",
   "value": {
-    "path": "$.ownerDetails.relation"
+    "path": "$.ownerDetails.relationWithDeceasedAllottee"
   }
 },
 {
@@ -241,7 +241,7 @@
 {
   "variable": "aadharno",
   "value": {
-    "path": "$.ownerDetails.aadharno"
+    "path": "$.ownerDetails.aadhaarNumber"
   }
 },
 {
