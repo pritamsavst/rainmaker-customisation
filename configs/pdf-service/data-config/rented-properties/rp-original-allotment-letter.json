@@ -49,7 +49,12 @@
                 "variable":"colony",
                 "value":{
                   "path":"$.propertyImages[0].property.colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
                 }
+                
               },
               {
                 "variable":"area",
