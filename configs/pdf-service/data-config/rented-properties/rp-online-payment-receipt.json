@@ -1,0 +1,319 @@
+{
+    "key": "rp-online-payment-receipt",
+    "DataConfigs": {
+        "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$",
+    "entityIdPath":"$.Payments[0].paymentDetails[0].bill.consumerCode",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+        {
+            "mappings": [
+                {
+                    "direct": [
+                        {
+                            "variable": "logo",                        
+                            "url":"https://egov.transerve.com/media/logo.png",
+                            "type":"image"
+                          },
+                          {
+                            "variable": "header",
+                            "value": {
+                              "path": "PDF_HEADER"
+                            },
+                            "type": "label",
+                            "localisation": {
+                              "prefix": "RP",
+                              "module": "rainmaker-tl"
+                            }
+                          },
+                       
+                        {
+                            "variable": "rentPayment",
+                            "value": {
+                              "path": "RENT_PAYMENT_SUB_HEADER"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "transitSite",
+                            "value": {
+                              "path": "TRANSIT_SITE"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                        {
+                            "variable": "payment_receipt",
+                            "value": {
+                              "path": "PAYMENT_RECEIPT_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "license_name",
+                            "value": {
+                              "path": "LICENSE_NAME_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                           
+                        {
+                            "variable": "payer_information",
+                            "value": {
+                              "path": "PAYER_INFORMATION_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "receipt_number_label",
+                            "value": {
+                              "path": "RECEIPT_NUMBER_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "receiptNumber",
+                            "value": {
+                              "path": "$.Payments[0].paymentDetails[0].receiptNumber"
+                            }
+                        },
+                        {
+                            "variable": "payer_name_label",
+                            "value": {
+                              "path": "PAYER_NAME_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "payerName",
+                            "value": {
+                              "path": "$.Payments[0].payerName"
+                            }
+                        },
+                        {
+                            "variable": "payer_mobile_no_label",
+                            "value": {
+                              "path": "PAYER_MOBILE_NO_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "mobileNumber",
+                            "value": {
+                              "path": "$.Payments[0].mobileNumber"
+                            }
+                        },
+                        {
+                            "variable": "payableAmount",
+                            "value": {
+                              "path": "PAYABLE_AMOUNT_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                    
+                          {
+                            "variable": "total_label",
+                            "value": {
+                              "path": "TOTAL_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "assessAmountLabel",
+                            "value": {
+                              "path": "ASSESSMENT_AMOUNT_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "interestAmountLabel",
+                            "value": {
+                              "path": "INTEREST_AMOUNT_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                        {
+                            "variable": "total",
+                            "value": {
+                              "path": "$..Payments[0].paymentDetails[0].bill.totalAmount"
+                            }
+                        },
+                        {
+                            "variable": "paymentInformation",
+                            "value": {
+                              "path": "PAYMENT_INFORMATION_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "amount_paid_label",
+                            "value": {
+                              "path": "AMOUNT_PAID_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "amountPaid",
+                            "value": {
+                              "path": "$..Payments[0].paymentDetails[0].totalAmountPaid"
+                            }
+                        },
+                       
+                        {
+                            "variable": "payment_mode_label",
+                            "value": {
+                              "path": "PAYMENT_MODE_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                         
+                          {
+                            "variable": "transaction_id_label",
+                            "value": {
+                              "path": "TRANSACTION_ID_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "bank_name_label",
+                            "value": {
+                              "path": "BANK_NAME_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "paymentMode",
+                            "value": {
+                              "path": "$.Payments[0].paymentMode"
+                            }
+                        },
+                        {
+                            "variable": "transactionNumber",
+                            "value": {
+                              "path": "$.Payments[0].transactionNumber"
+                            }
+                        },
+                        {
+                            "variable": "bankName",
+                            "value": {
+                              "path": "$..Payments[0].bankName"
+                            }
+                        },
+                
+                        {
+                            "variable": "generated_by_label",
+                            "value": {
+                              "path": "GENERATED_BY_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "system_label",
+                            "value": {
+                              "path": "SYSTEM_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          }
+                          
+                    ]
+                }
+            ]
+        }
+    ]
+    }
+}
