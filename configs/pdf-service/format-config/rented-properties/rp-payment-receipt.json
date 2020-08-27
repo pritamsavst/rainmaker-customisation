@@ -28,7 +28,7 @@
                             "width":"*",
                             "stack": [
                                 {
-                                    "text": "{{municiapl_co}} {{application_no}}",
+                                    "text": "{{header}}",
                                     "style": "receipt-logo-header"
                                   },
                                   {
@@ -289,7 +289,7 @@
             {
                 "margin": [0, 0, 0, 20],
                 "table":{
-                    "widths":["16.66%","16.66%","16.66%","16.66%","16.66%", "16.66%"],
+                    "widths":["33.33%","33.33%","33.33%"],
                     "body":[
                         [
                             {
@@ -303,24 +303,6 @@
                                 "fontSize":8,
                                 "bold":true
                               
-                              },
-                              {
-                                "text":"{{penalty_label}}",
-                                "fontSize":8,
-                                "bold":true
-                              
-                              },
-                              {
-                                "text":"{{tax_label}}",
-                                "fontSize":8,
-                                "bold":true
-                               
-                              },
-                              {
-                                "text":"{{round_off_label}}",
-                                "fontSize":8,
-                                "bold":true
-                               
                               },
                               {
                                 "text":"{{total_label}}",
@@ -339,22 +321,6 @@
                                 "text":"{{publicationCharges}}",
                                 "fontSize":8
                                 
-                              },
-                              {
-                                "text":"{{penalty}}",
-                                "fontSize":8
-                                
-                              },
-                              {
-                                "text":"{{tax}}",
-                                "fontSize":8
-                                
-                              },
-                              {
-                                "text":"{{roundOff}}",
-                                "fontSize":8
-
-                               
                               },
                               {
                                 "text":"{{total}}",
@@ -378,7 +344,7 @@
                     "widths": ["16.66%", "16.66%", "16.66%" , "16.66%", "16.66%","16.66%"],
                     "body":[
                         [{ 
-                            "colSpan":3,
+                            "colSpan":6,
                             "columns":[
                                 {"text":"{{amount_paid_label}} :",
                                   "bold":true ,
@@ -390,19 +356,8 @@
                             ]
                         },
                         {},{},
-                        {
-                            "colSpan":3,
-                            "columns":[
-                                {"text":"{{amount_due_label}} :",
-                                  "bold":true ,
-                                "fontSize":8},
-                                {
-                                    "text":"{{amountDue}}",
-                                "fontSize":8
-                                }
-                            ]  
-                        },
-                        {}, {}
+                      
+                        {}, {},{}
                         
                     ],
                     [
@@ -436,38 +391,7 @@
                           {},
                           {}
                           
-                    ],
-                    [{
-                        "colSpan":3,
-                        "columns":[
-                            {"text":"{{g8_receipt_number_label}} :",
-                              "bold":true ,
-                            "fontSize":8},
-                          
-                            {
-                            "text":"{{receiptNumber}}",
-                            "fontSize":8
-                            }
-                        ]
-                    },
-                    {},
-                    {},
-                    {
-                        "colSpan":3,
-                        "columns":[
-                            {"text":"{{g8_receipt_issue_date_label}} :",
-                              "bold":true ,
-                            "fontSize":8},
-                            {
-                                "text":"{{receiptDate}}",
-                            "fontSize":8
-                            }
-                        ]  
-                    },
-                    {},
-                    {}
-                    
-                ]
+                    ]
                     ]
                 }
             },

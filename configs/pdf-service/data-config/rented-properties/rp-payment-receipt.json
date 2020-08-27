@@ -292,6 +292,17 @@
                             } 
                           },
                           {
+                            "variable": "header",
+                            "value": {
+                              "path": "PDF_HEADER"
+                            },
+                            "type": "label",
+                            "localisation": {
+                              "prefix": "RP",
+                              "module": "rainmaker-rp"
+                            }
+                          },
+                          {
                             "variable": "amountPaid",
                             "value": {
                               "path": "$..Payments[0].paymentDetails[0].totalAmountPaid"
@@ -330,7 +341,7 @@
                           {
                             "variable": "transaction_cheque_dd_label",
                             "value": {
-                              "path": "TRANSACTION_CHEQUE_DD_LABEL"
+                              "path": "TRANSACTION_ID_LABEL"
                             },
                             "type": "label",
                             "localisation":{
