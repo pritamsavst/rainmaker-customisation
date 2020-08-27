@@ -199,8 +199,12 @@
 {
   "variable": "relation",
   "value": {
-    "path": "$.ownerDetails.relation"
-  }
+    "path": "$.ownerDetails.relationWithDeceasedAllottee"
+  },
+  "localisation":{
+    "required":true,
+    "module":"rainmaker-tl"
+ }
 },
 {
   "variable": "phone",
@@ -241,7 +245,7 @@
 {
   "variable": "aadharno",
   "value": {
-    "path": "$.ownerDetails.aadharno"
+    "path": "$.ownerDetails.aadhaarNumber"
   }
 },
 {

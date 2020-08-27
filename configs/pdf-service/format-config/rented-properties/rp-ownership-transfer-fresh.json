@@ -22,7 +22,7 @@
                   {
                     "stack": [
                       {
-                        "text": "{{municiapl_co}} {{application_no}}",
+                        "text": "{{header}}",
                         "style": "receipt-logo-header"
                       },
                       {
@@ -228,7 +228,7 @@
                   "body": [
                     [
                       {
-                        "text":"{{rent_holder}}",
+                        "text":"{{applicantDetails}}",
                         "border":[
                           true,
                           true,
@@ -344,16 +344,6 @@
                            "style": "receipt-table-value-cont"
                         },
                         {
-                          "text":"{{aadharno_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table-value-cont"
-                        },
-                        {
                           "text":"",
                           "border":[
                             false,
@@ -363,6 +353,17 @@
                           ],
                            "style": "receipt-table-value-cont"
                         },
+                        {
+                          "text":"{{aadharno_label}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table-value-cont"
+                        },
+                       
                         {
                           "text":"",
                           "border":[
@@ -386,16 +387,6 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{aadharno}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
                           "text":"",
                           "border":[
                             false,
@@ -405,6 +396,17 @@
                           ],
                            "style": "receipt-table2"
                         },
+                        {
+                          "text":"{{aadharno}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                     
                         {
                           "text":"",
                           "border":[

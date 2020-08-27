@@ -26,22 +26,10 @@
                                 "bold": true
                             },
                             {
-                                "text": [{
-                                        "text": "{{application_label}}",
-                                        "alignment": "center",
-                                        "color": "#A0A2A4",
-                                        "fontSize": 12,
-                                        "lineHeight": "2",
-                                        "width": "auto"
-                                    },
-                                    {
-                                        "text": "{{applicationNumber}}",
-                                        "alignment": "center",
-                                        "fontSize": 11,
-                                        "lineHeight": "2",
-                                        "bold": true
-                                    }
-                                ]
+                                "text": "{{application_label}} {{applicationNumber}}",
+                                "fontSize": 12,
+                                "alignment":"center",
+                                "lineHeight": "2"
                             }
                         ]
 
@@ -63,8 +51,10 @@
                         [{
                                 "colSpan": 3,
                                 "text": "{{feeEstimateLabel}}",
+                                "bold":true,
                                 "fontSize": 12,
                                 "lineHeight": 2,
+                                "margin":[3,0,0,0],
                                 "border": [
                                     true,
                                     true,
@@ -96,8 +86,7 @@
                                                 false,
                                                 false,
                                                 false
-                                            ]
-                                        },
+                                            ]                                        },
                                         {
                                             "text": "",
                                             "border": [
@@ -274,20 +263,25 @@
                                 [{
                                         "text": "{{property}}",
                                         "fontSize": 12,
-                                        "lineHeight": 2
+                                        "lineHeight": 2,
+                                        "margin":[3,0,0,0],
+                                        "bold":true
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{transit_site}}",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{allotment_number}}",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{area_label}} ",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             }
                                         ]
                                     },
@@ -296,19 +290,22 @@
                                                 "text": "{{transitNumber}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{allotmentNumber}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{area}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             }
                                         ]
 
@@ -316,14 +313,16 @@
                                     {
                                         "columns": [{
                                             "text": "{{pincode_label}}",
-                                            "fontSize": 10
+                                            "fontSize": 10,
+                                            "margin":[3,0,0,0]
                                         }]
                                     },
                                     {
                                         "columns": [{
                                             "text": "{{pincode}}",
                                             "fontSize": 10,
-                                            "bold": true
+                                            "bold": true,
+                                            "margin":[3,0,0,0]
                                         }]
                                     }
                                 ]
@@ -336,24 +335,30 @@
                                 [{
                                         "text": "{{applicantDetails}}",
                                         "fontSize": 12,
-                                        "lineHeight": "2"
+                                        "lineHeight": "2",
+                                        "margin":[3,0,0,0],
+                                        "bold":true
                                     },
                                     {
                                         "columns": [{
                                                 "text": "{{name_label}}",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{father_husband_name_label}}",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{relationship_label}} ",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{mobile_no}}",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             }
                                         ]
                                     },
@@ -362,25 +367,29 @@
                                                 "text": "{{name}}",
                                                 "fontSize": 10,
                                                 "lineHeight": 2,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{guardian}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{relationship}} ",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{phone}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             }
                                         ]
 
@@ -388,11 +397,13 @@
                                     {
                                         "columns": [{
                                                 "text": "{{email_label}} ",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{aadharno_label}}",
-                                                "fontSize": 10
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
                                             }
                                         ]
                                     },
@@ -401,13 +412,15 @@
                                                 "text": "{{email}}",
                                                 "fontSize": 10,
                                                 "lineHeight": 2,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             },
                                             {
                                                 "text": "{{adhaarNumber}}",
                                                 "fontSize": 10,
                                                 "lineHeight": 2,
-                                                "bold": true
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
                                             }
                                         ]
                                     }
@@ -417,6 +430,7 @@
                         [{
                                 "colSpan": 3,
                                 "text": "{{documents_label}}",
+                                "margin":[3,0,0,0],
                                 "fontSize": 12,
                                 "border": [
                                     true,

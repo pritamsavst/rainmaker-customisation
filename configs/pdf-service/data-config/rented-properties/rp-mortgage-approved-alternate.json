@@ -192,12 +192,6 @@
               }
             },
             {
-              "variable": "relationship",
-              "value": {
-                "path": "$.applicant[0].relationship"
-              }
-            },
-            {
               "variable": "mobile",
               "value": {
                 "path": "$.applicant[0].phone"
@@ -430,18 +424,30 @@
               "variable": "mortgageEndDate",
               "value": {
                 "path": "$.mortgageApprovedGrantDetails[0].mortgageEndDate"
-              }
+              },
+              "type":"date"
             },
             {
               "variable": "dateOfSanctioning",
               "value": {
                 "path": "$.mortgageApprovedGrantDetails[0].sanctionDate"
-              }
+              },
+              "type":"date"
             },
             {
                 "variable": "documents_array",
                 "value": {
                   "path": "$.applicationDocuments.*"
+                }
+              },
+              {
+                "variable": "relationship",
+                "value": {
+                  "path": "$.applicant[0].relationship"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-rp"
                 }
               }
           ]

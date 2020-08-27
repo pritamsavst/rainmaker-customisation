@@ -50,6 +50,10 @@
                 "variable":"colony",
                 "value":{
                   "path":"$.property.colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
                 }
               },
               {

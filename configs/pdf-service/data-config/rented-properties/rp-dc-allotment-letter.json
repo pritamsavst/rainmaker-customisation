@@ -18,7 +18,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-rp"
+                  "module": "rainmaker-tl"
                 }
               },
               {
@@ -29,7 +29,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-rp"
+                  "module": "rainmaker-tl"
                 }
               },
 
@@ -49,6 +49,10 @@
                 "variable":"colony",
                 "value":{
                   "path":"$.property.colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
                 }
               },
               {

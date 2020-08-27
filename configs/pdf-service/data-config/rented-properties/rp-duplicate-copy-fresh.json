@@ -19,7 +19,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -30,7 +30,7 @@
               "type": "label",
               "localisation": {
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -42,7 +42,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -54,7 +54,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -66,7 +66,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -78,7 +78,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
   
@@ -96,7 +96,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -108,7 +108,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -120,7 +120,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -132,7 +132,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
   
@@ -145,7 +145,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -157,7 +157,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
   
@@ -170,7 +170,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -207,7 +207,7 @@
               "localisation": {
                 "required": true,
                 "prefix": "RP",
-                "module": "rainmaker-rp"
+                "module": "rainmaker-tl"
               }
             },
             {
@@ -260,6 +260,10 @@
               "variable": "relationship",
               "value": {
                 "path": "$.applicant[0].relationship"
+              },
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-rp"
               }
             },
             {
@@ -278,151 +282,6 @@
               "variable": "adhaarNumber",
               "value": {
                 "path": "$.applicant[0].adhaarNumber"
-              }
-            },
-            {
-              "variable": "form_a_label",
-              "value": {
-                "path": "FORM_A_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-  
-            {
-              "variable": "form_b_label",
-              "value": {
-                "path": "FORM_B_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_c_label",
-              "value": {
-                "path": "FORM_C_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_d_label",
-              "value": {
-                "path": "FORM_D_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_e_label",
-              "value": {
-                "path": "FORM_E_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_f_label",
-              "value": {
-                "path": "FORM_F_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_g_label",
-              "value": {
-                "path": "FORM_G_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_h_label",
-              "value": {
-                "path": "FORM_H_LABEL"
-              },
-              "type": "label",
-              "localisation": {
-                "required": true,
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "form_a_value",
-              "value": {
-                "path": "$.applicationDocuments[0].documentType"
-              }
-            },
-            {
-              "variable": "form_b_value",
-              "value": {
-                "path": "$.applicationDocuments[1].documentType"
-              }
-            },
-            {
-              "variable": "form_c_value",
-              "value": {
-                "path": "$.applicationDocuments[2].documentType"
-              }
-            },
-            {
-              "variable": "form_d_value",
-              "value": {
-                "path": "$.applicationDocuments[3].documentType"
-              }
-            },
-            {
-              "variable": "form_e_value",
-              "value": {
-                "path": "$.applicationDocuments[4].documentType"
-              }
-            },
-            {
-              "variable": "form_f_value",
-              "value": {
-                "path": "$.applicationDocuments[5].documentType"
-              }
-            },
-            {
-              "variable": "form_g_value",
-              "value": {
-                "path": "$.applicationDocuments[6].documentType"
-              }
-            },
-            {
-              "variable": "form_h_value",
-              "value": {
-                "path": "$.applicationDocuments[7].documentType"
               }
             },
             {

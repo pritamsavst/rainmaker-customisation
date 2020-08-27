@@ -196,6 +196,10 @@
               "variable": "relationship",
               "value": {
                 "path": "$.applicant[0].relationship"
+              },
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-rp"
               }
             },
             {
