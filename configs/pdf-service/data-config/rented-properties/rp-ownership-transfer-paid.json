@@ -200,7 +200,11 @@
   "variable": "relation",
   "value": {
     "path": "$.ownerDetails.relationWithDeceasedAllottee"
-  }
+  },
+  "localisation":{
+    "required":true,
+    "module":"rainmaker-tl"
+ }
 },
 {
   "variable": "phone",

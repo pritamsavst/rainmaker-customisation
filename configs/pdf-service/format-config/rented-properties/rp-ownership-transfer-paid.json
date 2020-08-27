@@ -711,37 +711,19 @@
           "fontSize": 10,
           "bold": true,
           "italics": true,
-          "letterSpacing": 0.74,
-          "margin": [
-            0,
-            0,
-            0,
-            5
-          ]
+          "letterSpacing": 0.74
         },
          "receipt-logo-header": {
            "color": "#484848",
            "fontSize": 14,
            "bold": true,
-           "letterSpacing": 0.74,
-           "margin": [
-             0,
-             0,
-             0,
-             5
-           ]
+           "letterSpacing": 0.74
          },
          "receipt-logo-sub-header": {
           "color": "#484848",
           "fontFamily": "Roboto",
           "fontSize": 13,
-          "letterSpacing": 1.6,
-          "margin": [
-            0,
-            6,
-            0,
-            0
-          ]
+          "letterSpacing": 1.6
         },
           "noc-table": {
            "fontSize": 12,
