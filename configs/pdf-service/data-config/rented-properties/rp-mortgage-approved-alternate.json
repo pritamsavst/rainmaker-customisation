@@ -192,28 +192,6 @@
               }
             },
             {
-              "variable": "relationshipF",
-              "value": {
-                "path": "FATHER"
-              },
-                "type": "label",
-              "localisation": {
-                "required": true,
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "relationshipH",
-              "value": {
-                "path": "HUSBAND"
-              },
-                "type": "label",
-              "localisation": {
-                "required": true,
-                "module": "rainmaker-rp"
-              }
-            },
-            {
               "variable": "mobile",
               "value": {
                 "path": "$.applicant[0].phone"
@@ -466,6 +444,10 @@
                 "variable": "relationship",
                 "value": {
                   "path": "$.applicant[0].relationship"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-rp"
                 }
               }
           ]
