@@ -195,7 +195,7 @@
             {
                 "margin": [0, 0, 0, 20],
                 "table":{
-                    "widths":["33.33%","33.33%","33.33%"],
+                    "widths":["25%","25%","25%","25%"],
                     "body":[
                         [
                             {
@@ -203,7 +203,7 @@
                                 "fontSize":8,
                                 "bold":true
                               
-                              },
+                            },
                             {
                                 "text":"{{interestAmountLabel}}",
                                 "fontSize":8,
@@ -215,6 +215,11 @@
                                 "fontSize":8,
                                 "bold":true
                                
+                              },
+                              {
+                                "text":"{{payableAmountOn}}",
+                                "fontSize":8,
+                                "bold":true
                               }
                         ],
                         [
@@ -232,6 +237,10 @@
                                 "text":"{{totalAmount}}",
                                 "fontSize":8
               
+                              },
+                              {
+                                "text":"{{dateOfPayment}}",
+                                "fontSize":8
                               }
                          ]
                     ]

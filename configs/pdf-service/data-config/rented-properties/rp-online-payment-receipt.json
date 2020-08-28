@@ -41,9 +41,28 @@
                             } 
                           },
                           {
+                            "variable": "dateOfPayment",
+                            "value": {
+                              "path": "$.Properties[0].payments[0].dateOfPayment"
+                            },
+                            "type":"date"
+                          },
+                          {
                             "variable": "transitSite",
                             "value": {
                               "path": "TRANSIT_SITE"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-tl"
+                            } 
+                          },
+                          {
+                            "variable": "payableAmountOn",
+                            "value": {
+                              "path": "PAYABLE_AMOUNT_ON"
                             },
                             "type": "label",
                             "localisation":{
