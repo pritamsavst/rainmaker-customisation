@@ -63,7 +63,7 @@
                     },
                     {
                             "margin":[0,10,0,0],
-                            "text":"",
+                            "text":"{{transitNo}}",
                             "width":"auto",
                             "lineHeight":"3"
                             
@@ -219,17 +219,17 @@
                         ],
                         [
                             {
-                                "text":"",
+                                "text":"{{balancePrincipal}}",
                                 "fontSize":8
                                
                               },
                               {
-                                "text":"{{publicationCharges}}",
+                                "text":"{{balanceInterest}}",
                                 "fontSize":8
                                 
                               },
                               {
-                                "text":"{{total}}",
+                                "text":"{{totalAmount}}",
                                 "fontSize":8
               
                               }

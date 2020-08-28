@@ -52,6 +52,30 @@
                                "module":"rainmaker-tl"
                             } 
                           },
+                          {
+                            "variable": "transitNo",
+                            "value": {
+                              "path": "$.Properties[0].transitNumber"
+                            }
+                          },
+                          {
+                            "variable":"balanceAmount",
+                            "value":{
+                              "path":"$.Properties[0].rentSummary.balanceAmount"
+                            }
+                          },
+                          {
+                            "variable":"balanceInterest",
+                            "value":{
+                              "path":"$.Properties[0].rentSummary.balanceInterest"
+                            }
+                          },
+                          {
+                            "variable":"balancePrincipal",
+                            "value":{
+                              "path":"$.Properties[0].rentSummary.balancePrincipal"
+                            }
+                          },
                         {
                             "variable": "payment_receipt",
                             "value": {
@@ -311,6 +335,13 @@
                           }
                           
                     ]
+                    
+                },
+                {
+                  "derived": [{
+                    "variable": "totalAmount",
+                    "formula": "({{balancePrincipal}}+{{balanceInterest}} -{{balanceAmount}})"
+                  }]
                 }
             ]
         }
