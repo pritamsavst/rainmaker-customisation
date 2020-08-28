@@ -309,6 +309,29 @@
   } 
 },
 {
+  "variable": "header",
+  "value": {
+    "path": "PDF_HEADER"
+  },
+  "type": "label",
+  "localisation": {
+    "prefix": "RP",
+    "module": "rainmaker-rp"
+  }
+},
+{
+  "variable": "applicantDetails",
+  "value": {
+    "path": "APPLICANT_DETAILS"
+  },
+  "type": "label",
+  "localisation": {
+    "required": true,
+    "prefix": "RP",
+    "module": "rainmaker-rp"
+  }
+},
+{
   "variable": "fresh_license_legal_heir",
   "value": {
      "path": "FRESH_LICENSE_LEGAL_HEIR_HEADER"

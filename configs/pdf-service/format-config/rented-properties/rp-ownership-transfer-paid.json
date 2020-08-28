@@ -22,7 +22,7 @@
                 {
                   "stack": [
                     {
-                      "text": "{{municiapl_co}} {{application_no}}",
+                      "text": "{{header}}",
                       "style": "receipt-logo-header"
                     },
                     {
@@ -444,7 +444,7 @@
                 "body": [
                   [
                     {
-                      "text":"{{rent_holder}}",
+                      "text":"{{applicantDetails}}",
                       "border":[
                         true,
                         true,
@@ -557,7 +557,7 @@
                           false,
                           false
                         ],
-                         "style": "receipt-table-value-cont"
+                         "style": "receipt-table2"
                       },
                     
                       {
@@ -568,7 +568,7 @@
                           false,
                           false
                         ],
-                         "style": "receipt-table-value-cont"
+                         "style": "receipt-table2"
                       },
                       {
                         "text":"{{aadharno_label}}",
@@ -600,7 +600,7 @@
                           false,
                           false
                         ],
-                         "style": "receipt-table2"
+                         "style": "receipt-table-value-cont"
                       },
                       {
                         "text":"",
@@ -749,7 +749,6 @@
            "color": "#000000",
            "bold": true,
            "fontSize": 12,
-           "fontWeight": 500,
            "margin": [
              5,
              5,
@@ -798,7 +797,7 @@
           "receipt-table-value-cont": {
            "color": "#000000",
            "bold": false,
-           "fontSize": 11,
+           "fontSize": 10,
            "fontWeight": 400,
            "margin": [
              3,
@@ -822,7 +821,7 @@
          "receipt-table2": {
            "color": "#000000",
            "bold": true,
-           "fontSize": 12,
+           "fontSize": 10,
            "fontWeight": 500,
            "margin": [
              3,
