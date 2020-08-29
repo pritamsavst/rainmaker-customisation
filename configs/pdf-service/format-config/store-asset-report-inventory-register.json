@@ -1,0 +1,231 @@
+{
+    "key": "store-asset-report-inventory-register",
+    "config": {
+	    "pageSize": "TABLOID", 
+	    "pageOrientation": "landscape",
+		"defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+			{
+			  "text": "MUNICIPAL CORPORATION CHANDIGARH",
+			  "alignment": "center",
+			  "color": "#484848",
+			  "fontSize": 12,
+			  "bold": true,
+			  "margin": [
+				0,
+				1,
+				0,
+				0
+			  ]
+			},
+			{
+			  "text": "Inventory Register",
+			  "alignment": "center",
+			  "color": "#484848",
+			  "fontSize": 12,
+			  "bold": true,
+			  "margin": [
+				0,
+				3,
+				0,
+				0
+			  ]
+			},
+			{
+			  "text": "Store Name : {{storeName}}",
+			  "alignment": "left",
+			  "color": "#484848",
+			  "fontSize": 10,
+			  "bold": true,
+			  "margin": [
+				9,
+				3,
+				10,
+				0
+			  ]
+			},
+			{
+			  "text": "Department Name : {{storeDepartment}}",
+			  "alignment": "left",
+			  "color": "#484848",
+			  "fontSize": 10,
+			  "bold": true,
+			  "margin": [
+				9,
+				3,
+				10,
+				0
+			  ]
+			},
+			{
+			  "text": "Material Name : {{materialName}}",
+			  "alignment": "left",
+			  "color": "#484848",
+			  "fontSize": 10,
+			  "bold": true,
+			  "margin": [
+				9,
+				3,
+				10,
+				10
+			  ]
+			},
+            {
+                "style": "store-material-table",
+                "table": {
+					"headerRows": 1,
+					"widths": [
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%",
+						"4.8%"
+					],									
+					"body":								
+						[
+						   [ "{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, { \"text\":\"Opening Balance\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ], \"colSpan\":3, \"style\": \"tm-sub-table\" }, \"\", \"\", { \"text\":\"Receipt\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"colSpan\":7, \"style\": \"tm-sub-table\" }, \"\", \"\", \"\", \"\", \"\", \"\", { \"text\":\"Issue\", \"alignment\": \"center\", \"border\":[ true, true, true, true ] , \"colSpan\":7, \"style\": \"tm-sub-table\"}, \"\", \"\", \"\", \"\", \"\", \"\", { \"text\":\"Balance\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ] , \"colSpan\":3, \"style\": \"tm-sub-table\"}, \"\", \"\"" ],
+						   [ "{ \"text\":\"Sr. No.\", \"border\":[ true, false, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"},{ \"text\":\"Qty.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Unit\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Value\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Receipt Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Material Receipt No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Department\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Purchase Qty.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Purchase Unit\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Rate per unit\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Total value of Inventory\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Issue Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Material Issue No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Name of Department to which issued\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Qty. Issued\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Qty. Issued Unit\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Rate per Unit\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Total Value\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Qty.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Unit\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Value\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
+						   "{{#variable1}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{openingQty}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{openingUom}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{openingRate}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptDate}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptDepartment}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptPurchaseQty}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptPurchaseUom}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptPurchaseUnitRate}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{receiptTotalValue}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedDate}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedToDepartment}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedQty}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedUom}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedUnitRate}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{issuedTotalValue}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{balanceQty}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{balanceUom}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{balanceTotalValue}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
+						]								
+				},
+                "layout": {}
+            }
+		],
+        "styles": {
+            "tm-head": {
+                "margin": [
+                    -39,
+                    -38,
+                    -38,
+                    0
+                ]
+            },
+            "tm-table": {
+				"fontFamily": "Cambay",
+                "fontSize": 8,
+                "color": "#484848",
+                "margin": [
+                    -25,
+                    18,
+                    -8,
+                    10
+                ]
+            },
+            "header": {
+                "color": "#000000",
+                "textTransform": "uppercase",
+                "bold": true,
+                "fontFamily": "Cambay",
+				"fontSize": 8,
+                "fontWeight": 500,
+                "margin": [
+                    -25,
+                    15,
+                    0,
+                    -10
+                ]
+            },
+			"tm-cols-table": {
+				"fontFamily": "Cambay",
+                "color": "#484848",   
+				"bold": true,			
+                "fontSize": 10,
+				"alignment": "left",
+                "margin": [
+                    3,
+                    0,
+                    0,
+                    10
+                ]
+            },
+            "tm-sub-table-value": {
+				"fontFamily": "Cambay",
+                "color": "#484848",
+                "bold": false,
+                "fontSize": 8,
+                "fontWeight": 200,
+                "margin": [
+                    3,
+                    0,
+                    0,
+                    10
+                ]
+            },
+            "tm-sub-table": {
+                "color": "#484848",
+				"backgroundColor":"grey",
+                "bold": true,
+				"fontFamily": "Cambay",
+                "fontSize": 10,
+                "fontWeight": 200,
+                "margin": [
+                    3,
+                    0,
+                    0,
+                    10
+                ]
+            },
+			"store-staus-table": {
+				"fontFamily": "Cambay",
+                "fontSize": 10,
+                "margin": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+			"store-table-cols": {
+                "color": "#484848",
+				"fontFamily": "Cambay",
+                "fontSize": 10,				
+                "margin": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+			"store-material-table": {
+                "color": "#484848",
+				"fontFamily": "Cambay",
+                "fontSize": 10,
+                "margin": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "qr-image": {
+                "margin": [
+                    -40,
+                    -1,
+                    -3,
+                    0
+                ],
+                "color": "#484848",
+                "alignment": "right",
+                "backgroundColor": "#dddddd"
+            }
+        }
+    }
+}
