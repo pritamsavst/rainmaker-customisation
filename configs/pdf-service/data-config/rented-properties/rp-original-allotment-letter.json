@@ -18,7 +18,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-rp"
+                  "module": "rainmaker-tl"
                 }
               },
               {
@@ -29,7 +29,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-rp"
+                  "module": "rainmaker-tl"
                 }
               },
 
@@ -59,13 +59,13 @@
               {
                 "variable":"area",
                 "value":{
-                  "path":"$.propertyImages[0].property.area"
+                  "path":"$.propertyDetails.address.area"
                 }
               },
               {
                 "variable":"pincode",
                 "value":{
-                  "path":"$.propertyImages[0].property.pincode"
+                  "path":"$.propertyDetails.address.pincode"
                 }
               },
               {
