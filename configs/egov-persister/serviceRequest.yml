@@ -112,7 +112,7 @@ serviceMaps:
     fromTopic: hc-service-update
     isTransaction: true 
     queryMaps:
-    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=?,service_request_document=to_json(?::json) where service_request_id=?;
+    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=?,service_request_document=to_json(?::json) , lastmodifiedtime=? where service_request_id=?;
       basePath: RequestBody
       jsonMaps:
        -
@@ -121,6 +121,8 @@ serviceMaps:
           jsonPath: $.RequestBody.current_assignee
        - 
           jsonPath: $.RequestBody.serviceMedia
+       - 
+          jsonPath: $.RequestBody.lastModifiedTime
        -
           jsonPath: $.RequestBody.service_request_id
         
@@ -129,13 +131,15 @@ serviceMaps:
     fromTopic: hc-service-edit
     isTransaction: true 
     queryMaps:
-    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=? where service_request_id=?;
+    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=? , lastmodifiedtime=? where service_request_id=?;
       basePath: RequestBody
       jsonMaps:
        -
           jsonPath: $.RequestBody.service_request_status
        -
           jsonPath: $.RequestBody.current_assignee
+       - 
+          jsonPath: $.RequestBody.lastModifiedTime
        -
           jsonPath: $.RequestBody.service_request_id
   
@@ -145,13 +149,15 @@ serviceMaps:
     fromTopic: hc-service-edit
     isTransaction: true 
     queryMaps:
-    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=? where service_request_id=?;
+    - query: UPDATE eg_hc_service_request set service_request_status=?,current_assignee=?, lastmodifiedtime=? where service_request_id=?;
       basePath: RequestBody
       jsonMaps:
        -
           jsonPath: $.RequestBody.service_request_status
        -
           jsonPath: $.RequestBody.current_assignee
+       - 
+          jsonPath: $.RequestBody.lastModifiedTime
        -
           jsonPath: $.RequestBody.service_request_id  
           
