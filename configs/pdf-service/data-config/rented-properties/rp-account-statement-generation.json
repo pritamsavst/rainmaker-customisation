@@ -43,8 +43,56 @@
                 "value": {
                   "path": "$.RentAccountStatements.*"
                 }
+              },
+              {
+                "variable":"colony",
+                "value":{
+                  "path":"$.Properties[0].colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.Properties[0].owners[0].ownerDetails.name"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.Properties[0].owners[0].ownerDetails.allotmentStartdate"
+                },
+                "type":"date"
+                
+              },
+              {
+                  "variable":"area",
+                  "value":{
+                      "path":"$.Properties[0].propertyDetails.area"
+                  }
+              },
+              {
+                "variable":"rent",
+                "value":{
+                    "path":"$.Properties[0].propertyDetails.rentPerSqyd"
               }
-
+            },
+            {
+                "variable": "monthlyRent",
+                "value": {
+                  "path": "$.Properties[0].owners[0].ownerDetails.monthlyRent"
+                }
+                
+              },
+              {
+                "variable":"interestRate",
+                "value":{
+                    "path":"$.Properties[0].propertyDetails.interestRate"
+              }
+            }
             ]
           }
         ]

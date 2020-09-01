@@ -7,14 +7,14 @@
         "content": [{
                 "stack": [
                     {
-                        "text": "PROVISIONAL STATEMENT OF PLOT NO. 57, ",
+                        "text": "Provisional Statement of Plot No. , ",
                         "alignment": "center",
                         "fontSize": 14,
                         "bold": true,
                         "margin": [0, 0, 0, 0] 
                     },
                     {
-                        "text": "KUMBHAR COLONY, MALOYA , UI CHANDIGARH",
+                        "text": "{{colony}}",
                         "alignment": "center",
                         "fontSize": 14,
                         "bold": true,
@@ -33,14 +33,14 @@
                             "text": "Name",
                             "style": "table-header"
                         }, {
-                            "text": "Sh Sadhu Ram",
+                            "text": "{{name}}",
                             "style": "table-content"
                         }],
                         [{
                             "text": "Date of Allotment As Per Lease Deed",
                             "style": "table-header"
                         }, {
-                            "text": "Sh Sadhu Ram",
+                            "text": "{{date}}",
                             "style": "table-content"
                         }],
                         [{
@@ -54,28 +54,28 @@
                             "text": "Area",
                             "style": "table-header"
                         }, {
-                            "text": "",
+                            "text": "{{area}} sq.yd",
                             "style": "table-content"
                         }],
                         [{
                             "text": "Rent ",
                             "style": "table-header"
                         }, {
-                            "text": "",
+                            "text": "Rs{{rent}} /- per sq.yd. as per clause 1 of Lease Deed",
                             "style": "table-content"
                         }],
                         [{
                             "text": "Security Advance Taken By o/o BDPO U.T.Interest",
                             "style": "table-header"
                         }, {
-                            "text": "Sh Sadhu Ram",
+                            "text": "",
                             "style": "table-content"
                         }],
                         [{
                             "text": "Yr. Rent (increase as per Clause 4 of Lease Deed)",
                             "style": "table-header"
                         }, {
-                            "text": "Sh Sadhu Ram",
+                            "text": "",
                             "style": "table-content"
                         }],
                      
@@ -83,14 +83,14 @@
                             "text": "Montly Rent",
                             "style": "table-header"
                         }, {
-                            "text": "Sh Sadhu Ram",
+                            "text": "{{monthlyRent}}",
                             "style": "table-content"
                         }],
                         [{
                             "text": "Interest",
                             "style": "table-header"
                         }, {
-                            "text": "Sh Sadhu Ram",
+                            "text": "{{interestRate}}% P.A as per clause 15 of Lease Deed",
                             "style": "table-content"
                         }]
                     ]
@@ -106,26 +106,68 @@
                         [
                             {
                             "text":"Date",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         },
                         {
                             "text":"Amount",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         },   {
                             "text":"Type",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         },   {
                             "text":"Interest Due",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         },   {
                             "text":"Principal Due",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         },   {
                             "text":"Total Due",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         },   {
                             "text":"Account Balance",
-                            "style":"table-header"
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
                         }
                     ]
                     ]
@@ -149,6 +191,12 @@
                 "align": "center",
                 "bold": true
             },
+            "table-header2": {
+                "fontSize": 10,
+                "align": "center",
+                "bold": true
+            },
+           
             "table-content": {
                 "fontSize": 10,
                 "align": "center"
