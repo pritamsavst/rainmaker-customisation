@@ -1,0 +1,53 @@
+{
+    "key": "rp-account-statement-generation",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "COLONY_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable": "account_statements",
+                "value": {
+                  "path": "$.RentAccountStatements.*"
+                }
+              }
+
+            ]
+          }
+        ]
+      }]
+    }
+  }  
