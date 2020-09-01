@@ -341,8 +341,9 @@
                             false,
                             false
                           ],
-                           "style": "receipt-table-value-cont"
+                           "style": "receipt-table2"
                         },
+                      
                         {
                           "text":"",
                           "border":[
@@ -351,7 +352,7 @@
                             false,
                             false
                           ],
-                           "style": "receipt-table-value-cont"
+                           "style": "receipt-table2"
                         },
                         {
                           "text":"{{aadharno_label}}",
@@ -363,7 +364,6 @@
                           ],
                            "style": "receipt-table-value-cont"
                         },
-                       
                         {
                           "text":"",
                           "border":[
@@ -384,7 +384,7 @@
                             false,
                             false
                           ],
-                           "style": "receipt-table2"
+                           "style": "receipt-table-value-cont"
                         },
                         {
                           "text":"",
@@ -406,7 +406,6 @@
                           ],
                            "style": "receipt-table2"
                         },
-                     
                         {
                           "text":"",
                           "border":[
@@ -446,33 +445,33 @@
               ],
               "body": [
                 [
-                      {
-                        "text":"{{documents_label}}",
-                        "border":[
-                          true,
-                          true,
-                          true,
-                          false
-                        ],
-                         "style": "receipt-table-value"
-                      }
-                ],
-                [
-                   {
-                      "table": {
-                       "widths":["25%", "25%", "25%", "25%"],
-                      "body": [
-                       "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
-                      ]
-                  },
-                  "border":[
+                  {
+                    "text":"{{documents_label}}",
+                    "border":[
                       true,
-                      false,
                       true,
-                      true
-                    ]
-                 }
-                    ]
+                      true,
+                      false
+                    ],
+                     "style": "receipt-table-value"
+                  }
+            ],
+            [
+               {
+                  "table": {
+                   "widths":["25%", "25%", "25%", "25%"],
+                  "body": [
+                   "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                  ]
+              },
+              "border":[
+                  true,
+                  false,
+                  true,
+                  true
+                ]
+             }
+                ]
                ],
                "unbreakable": true
             },
