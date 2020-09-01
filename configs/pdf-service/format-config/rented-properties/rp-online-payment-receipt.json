@@ -1,0 +1,388 @@
+{
+    "key": "rp-online-payment-receipt",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+           },
+           "content": [
+            { 
+              "margin":[ -41,-41,-41,0], 
+              "table": {      
+                "widths": ["100%"],
+              "body":[
+                [
+                  {
+                    "fillColor":"#F2F2F2",
+                    "margin":[8,10,0,10],
+                    "columns":
+                    [
+                         {
+                            "image": "{{logo}}",
+                            "margin":[ 45,
+                              10,
+                              10,
+                              10],
+                            "width": 50  
+                          },
+                          {
+                            "width":"*",
+                            "stack": [
+                                {
+                                    "text": "{{header}}",
+                                    "style": "receipt-logo-header"
+                                  },
+                                  {
+                                      "text": "{{rentPayment}}",
+                                      "style": "receipt-table-value-cont"
+                                  }
+                            ],
+                            "margin": [
+                              0,
+                              10,
+                              10,
+                              0
+                            ],
+                            "alignment": "center"
+                          }
+                    ]
+                  }
+                ]
+              ]
+              },
+              "layout": "noBorders"
+                
+            },
+            {
+                "columns":[
+                    {
+                            "margin":[0,10,0,0],
+                            "text":"{{transitSite}} :",
+                            "alignment": "left",
+                            "width":"auto",
+                            "bold":true
+                    },
+                    {
+                            "margin":[0,10,0,0],
+                            "text":"{{transitNo}}",
+                            "width":"auto",
+                            "lineHeight":"3"
+                            
+                    },
+                    {
+                        "text":"",
+                        "width":"*"
+                    },
+                    {
+                            "margin":[0,10,0,0],         
+                            "text":"{{receipt_number_label}}:",
+                            "width":"auto",
+                            "bold":true
+  
+                          },
+                          {
+                            "margin":[0,10,0,0],
+                            "text":"{{receiptNumber}}",
+                            "width":"auto",
+                            "lineHeight":"3"
+                          }
+                    
+                    
+                ]
+            },
+
+            {
+                "text":"{{payer_information}}",
+                "alignment":"left",
+                "bold":true,
+                "fontSize":10
+            },
+            {
+                   "margin": [0, 0, 0, 20],
+                    "table": {
+                        "widths": [
+                            "33.33%",
+                            "33.33%",
+                            "33.33%"
+                             ],
+                             "body": [
+                                 [
+                                    {
+                                        "text":"{{payer_name_label}}",
+                                        "bold":true,
+                                        "fontSize":8,
+                                        "border":[
+                                          true,
+                                          true,
+                                          false,
+                                          true
+                                        ],
+                                         "style": "receipt-table2"
+                                      },
+                                      {
+                                        "text":"{{payerName}}",
+                                        "fontSize":8,
+                                        "border":[
+                                          false,
+                                          true,
+                                          false,
+                                          true
+                                        ],
+                                         "style": "receipt-table-value-cont"
+                                      },
+                                      {
+                                        "text":"",
+                                        "border":[
+                                          false,
+                                          true,
+                                          true,
+                                          true
+                                        ],
+                                         "style": "receipt-table-value-cont"
+                                      }
+                                 ],
+                                 [
+                                    {
+                                        "text":"{{payer_mobile_no_label}}",
+                                        "bold":true,
+                                        "fontSize":8,
+                                        "border":[
+                                          true,
+                                          false,
+                                          false,
+                                          true
+                                        ],
+                                         "style": "receipt-table2"
+                                      },
+                                      {
+                                        "text":"{{mobileNumber}}",
+                                        "fontSize":8,
+                                        "border":[
+                                          false,
+                                          false,
+                                          false,
+                                          true
+                                        ],
+                                         "style": "receipt-table-value-cont"
+                                      },
+                                      {
+                                        "text":"",
+                                        "border":[
+                                          false,
+                                          false,
+                                          true,
+                                          true
+                                        ],
+                                         "style": "receipt-table-value-cont"
+                                      }
+                                 ]
+                             ]
+                    },
+                    "lineHeight":"1",
+                    "border":[
+                        true,
+                        false,
+                        true,
+                        false
+                      ]
+            },
+            {
+                "text":"{{payableAmount}}",
+                "alignment":"left",
+                "bold":true,
+                "fontSize":10
+                
+            },
+            {
+                "margin": [0, 0, 0, 20],
+                "table":{
+                    "widths":["25%","25%","25%","25%"],
+                    "body":[
+                        [
+                            {
+                                "text":"{{assessAmountLabel}}",
+                                "fontSize":8,
+                                "bold":true
+                              
+                            },
+                            {
+                                "text":"{{interestAmountLabel}}",
+                                "fontSize":8,
+                                 "bold":true
+                                
+                              },
+                              {
+                                "text":"{{total_label}}",
+                                "fontSize":8,
+                                "bold":true
+                               
+                              },
+                              {
+                                "text":"{{payableAmountOn}}",
+                                "fontSize":8,
+                                "bold":true
+                              }
+                        ],
+                        [
+                            {
+                                "text":"{{balancePrincipal}}",
+                                "fontSize":8
+                               
+                              },
+                              {
+                                "text":"{{balanceInterest}}",
+                                "fontSize":8
+                                
+                              },
+                              {
+                                "text":"{{totalAmount}}",
+                                "fontSize":8
+              
+                              },
+                              {
+                                "text":"{{dateOfPayment}}",
+                                "fontSize":8
+                              }
+                         ]
+                    ]
+                }
+            },
+            {
+                "text":"{{paymentInformation}}",
+                "alignment":"left",
+                "bold":true,
+                "fontSize":10
+            },
+            {
+                "margin": [0, 0, 0, 20],
+                "table":{
+                    "widths": ["33.33%", "33.33%", "33.33%"],
+                    "body":[
+                        [{ 
+                            "colSpan":3,
+                            "columns":[
+                                {"text":"{{amount_paid_label}} :",
+                                  "bold":true ,
+                                "fontSize":8},
+                                {
+                                    "text":"{{amountPaid}}",
+                                "fontSize":8
+                                }
+                            ]
+                        },
+                        {},{}
+                      
+                        
+                    ],
+                    [
+                        { 
+                          "text":"{{payment_mode_label}}",
+                            "bold":true ,
+                          "fontSize":8},
+                          {
+                         
+                              "text":"{{transaction_id_label}}",
+                              "bold":true ,
+                          "fontSize":8
+                          },
+                          { "text":"{{bank_name_label}}",
+                            "bold":true ,
+                        "fontSize":8}
+                        
+                          
+                    ],
+                    [
+                        {"text":"{{paymentMode}}",
+                          "fontSize":8},
+                          {
+                          "text":"{{transactionNumber}}",
+                          "fontSize":8
+                          },{
+                            "text":"{{bankName}}",
+                            "fontSize":8  
+                          }
+                          
+                    ]
+                   
+                    ]
+                }
+            },
+            {"text":"{{generated_by_label}}",
+            "fontSize":9,
+            "bold":true
+            },
+            {"text":"{{system_label}}",
+            "fontSize":9,
+            "lineHeight":"2"}
+        
+              
+           ],
+           "styles": {
+            "noc-head": {
+                "margin": [
+                  -25,
+                  -30,
+                  0,
+                  1
+                ]
+              },
+              "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-table-value-cont": {
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "noc-table2": {
+                "fontSize": 12,
+                "color": "#484848",
+                "margin": [
+                 -25,
+                 0,
+                 -25,
+                 0
+               ]
+              },
+              "receipt-table-value": {
+                "color": "#000000",
+                "bold": true,
+                "fontSize": 12,
+                "fontWeight": 500,
+                "margin": [
+                  5,
+                  5,
+                  0,
+                  0
+                ]
+              },
+              "receipt-table2": {
+                "color": "#000000",
+                "bold": true,
+                "fontSize": 12,
+                "fontWeight": 500,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+              }
+           }
+    }
+}
