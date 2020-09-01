@@ -267,6 +267,16 @@
               }
             },
             {
+              "variable":"colony",
+              "value":{
+                "path":"$.property.colony"
+              },
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-tl"
+              }
+            },
+            {
               "variable": "phone",
               "value": {
                 "path": "$.applicant[0].phone"

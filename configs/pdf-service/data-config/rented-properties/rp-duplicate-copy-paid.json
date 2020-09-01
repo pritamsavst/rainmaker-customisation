@@ -33,6 +33,16 @@
                 }
               },
               {
+                "variable":"colony",
+                "value":{
+                  "path":"$.property.colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
                 "variable": "transit_site",
                 "value": {
                   "path": "SITE_PLOT_LABEL"

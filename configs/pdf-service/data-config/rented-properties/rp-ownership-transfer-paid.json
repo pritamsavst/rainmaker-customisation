@@ -237,6 +237,16 @@
   }
 },
 {
+  "variable":"colony",
+  "value":{
+    "path":"$.property.colony"
+  },
+  "localisation": {
+    "required": true,
+    "module": "rainmaker-tl"
+  }
+},
+{
   "variable": "email",
   "value": {
     "path": "$.ownerDetails.email"

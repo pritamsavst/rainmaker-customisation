@@ -97,7 +97,7 @@
                             "style": "receipt-table-value-cont"
                           },
                           {
-                           "text":"{{area_label}}",
+                           "text":"Colony",
                            "border":[
                              false,
                              false,
@@ -129,7 +129,7 @@
                              "style": "receipt-table2"
                           },
                           {
-                           "text":"{{area}}",
+                           "text":"{{colony}}",
                            "border":[
                              false,
                              false,
