@@ -441,6 +441,16 @@
                 }
               },
               {
+                "variable":"colony",
+                "value":{
+                  "path":"$.property.colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
                 "variable": "relationship",
                 "value": {
                   "path": "$.applicant[0].relationship"

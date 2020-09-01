@@ -203,6 +203,16 @@
               }
             },
             {
+              "variable":"colony",
+              "value":{
+                "path":"$.property.colony"
+              },
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-tl"
+              }
+            },
+            {
               "variable": "mobile",
               "value": {
                 "path": "$.applicant[0].phone"

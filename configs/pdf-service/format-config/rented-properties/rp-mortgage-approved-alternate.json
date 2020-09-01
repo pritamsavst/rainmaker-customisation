@@ -70,7 +70,7 @@
                                                 "margin":[3,0,0,0]
                                             },
                                             {
-                                                "text": "{{area_label}} ",
+                                                "text": "Colony ",
                                                 "fontSize": 10,
                                                 "margin":[3,0,0,0]
                                             }
@@ -92,7 +92,7 @@
                                                 "margin":[3,0,0,0]
                                             },
                                             {
-                                                "text": "{{area}}",
+                                                "text": "{{colony}}",
                                                 "lineHeight": 2,
                                                 "fontSize": 10,
                                                 "bold": true,
