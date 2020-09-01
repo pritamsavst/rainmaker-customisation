@@ -482,159 +482,140 @@
           }
          ],
          "styles": {
-            "noc-head": {
-             "margin": [
-               -25,
-               -30,
-               0,
-               1
-             ]
-           },
-           "receipt-logo-header2": {
-            "color": "#484848",
-            "fontSize": 10,
-            "bold": true,
-            "italics": true,
-            "letterSpacing": 0.74,
-            "margin": [
-              0,
-              0,
-              0,
-              5
-            ]
-          },
-           "receipt-logo-header": {
-             "color": "#484848",
-             "fontSize": 14,
-             "bold": true,
-             "letterSpacing": 0.74,
-             "margin": [
-               0,
-               0,
-               0,
-               5
-             ]
-           },
-           "receipt-logo-sub-header": {
-            "color": "#484848",
-            "fontFamily": "Roboto",
-            "fontSize": 13,
-            "letterSpacing": 1.6,
-            "margin": [
-              0,
-              6,
-              0,
-              0
-            ]
-          },
-            "noc-table": {
-             "fontSize": 12,
-             "color": "#484848",
-             "margin": [
-               -25,
-               45,
-               -8,
-               -8
-             ]
-           },
-           "noc-table2": {
-             "fontSize": 12,
-             "color": "#484848",
-             "margin": [
-              -25,
-              0,
-              -25,
-              0
-            ]
-           },
-            "receipt-table-value": {
-             "color": "#000000",
-             "bold": true,
-             "fontSize": 12,
-             "fontWeight": 500,
-             "margin": [
-               5,
-               5,
-               0,
-               0
-             ]
-           },
-           "receipt-table-value-total": {
-             "color": "#000000",
-             "bold": true,
-             "fontSize": 12,
-             "fontWeight": 500,
-             "alignment": "right",
-             "margin": [
-               0,
-               5,
-               30,
-               0
-             ]
-           },
-           "receipt-table-value-down": {
-             "color": "#000000",
-             "bold": false,
-             "fontSize": 12,
-             "fontWeight": 400,
-             "alignment": "left",
-             "margin": [
-               3,
-               5,
-               0,
-               5
-             ]
-           },
-           "receipt-table-value2": {
-             "color": "#000000",
-             "bold": false,
-             "fontSize": 12,
-             "fontWeight": 500,
-             "margin": [
-               3,
-               0,
-               0,
-               0
-             ]
-           },
-            "receipt-table-value-cont": {
-             "color": "#000000",
-             "bold": false,
-             "fontSize": 11,
-             "fontWeight": 400,
-             "margin": [
-               3,
-               0,
-               0,
-               0
-             ]
-           },
-           "receipt-table": {
-             "color": "#484848",
-             "bold": true,
-             "fontSize": 12,
-             "fontWeight": 400,
-             "margin": [
-               -30,
-               5,
-               0,
-               0
-             ]
-           },
-           "receipt-table2": {
-             "color": "#000000",
-             "bold": true,
-             "fontSize": 12,
-             "fontWeight": 500,
-             "margin": [
-               3,
-               0,
-               0,
-               0
-             ]
-           }
-           
+          "noc-head": {
+           "margin": [
+             -25,
+             -30,
+             0,
+             1
+           ]
+         },
+         "receipt-logo-header2": {
+          "color": "#484848",
+          "fontSize": 10,
+          "bold": true,
+          "italics": true,
+          "letterSpacing": 0.74
+        },
+         "receipt-logo-header": {
+           "color": "#484848",
+           "fontSize": 14,
+           "bold": true,
+           "letterSpacing": 0.74
+         },
+         "receipt-logo-sub-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 13,
+          "letterSpacing": 1.6
+        },
+          "noc-table": {
+           "fontSize": 12,
+           "color": "#484848",
+           "margin": [
+             -25,
+             45,
+             -8,
+             -8
+           ]
+         },
+         "noc-table2": {
+           "fontSize": 12,
+           "color": "#484848",
+           "margin": [
+            -25,
+            0,
+            -25,
+            0
+          ]
+         },
+          "receipt-table-value": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "margin": [
+             5,
+             5,
+             0,
+             0
+           ]
+         },
+         "receipt-table-value-total": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "alignment": "right",
+           "margin": [
+             0,
+             5,
+             30,
+             0
+           ]
+         },
+         "receipt-table-value-down": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 12,
+           "fontWeight": 400,
+           "alignment": "left",
+           "margin": [
+             3,
+             5,
+             0,
+             5
+           ]
+         },
+         "receipt-table-value2": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
+         },
+          "receipt-table-value-cont": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 10,
+           "fontWeight": 400,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
+         },
+         "receipt-table": {
+           "color": "#484848",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 400,
+           "margin": [
+             -30,
+             5,
+             0,
+             0
+           ]
+         },
+         "receipt-table2": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 10,
+           "fontWeight": 500,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
          }
+         
+       }
        
     }
   }
