@@ -326,7 +326,7 @@
   "type": "label",
   "localisation": {
     "prefix": "RP",
-    "module": "rainmaker-rp"
+    "module": "rainmaker-tl"
   }
 },
 {
