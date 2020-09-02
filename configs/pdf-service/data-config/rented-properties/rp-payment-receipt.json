@@ -97,7 +97,8 @@
                             "variable": "transactionDate",
                             "value": {
                               "path": "$.Payments[0].transactionDate"
-                            }
+                            },
+                            "type":"date"
                         },
                         {
                             "variable": "payer_information",
@@ -144,7 +145,7 @@
                           {
                             "variable": "payerName",
                             "value": {
-                              "path": "$.Payments[0].payerName"
+                              "path": "$.Properties[0].owners[0].ownerDetails.name"
                             }
                         },
                         {
@@ -507,6 +508,12 @@
                             }
                         },
                         {
+                          "variable": "generatedBy",
+                          "value": {
+                            "path": "$.generateBy"
+                          }
+                      },
+                        {
                           "variable": "application_details",
                           "value": {
                             "path": "APPLICATION_DETAILS_LABEL"
@@ -546,13 +553,24 @@
                           "variable": "businessService",
                           "value": {
                             "path": "$.Payments[0].paymentDetails[0].businessService"
-                          }
-                      },
+                          },
+                          "localisation":{
+                            "required":true,
+                            "prefix":"RP",   
+                            "module":"rainmaker-tl"
+                         }                       
+                        },
                       {
                         "variable": "receiptType",
                         "value": {
                           "path": "$.Payments[0].paymentDetails[0].receiptType"
-                        }
+                        },
+                        "localisation":{
+                          "required":true,
+                          "prefix":"RP",   
+                          "module":"rainmaker-tl"
+                       } 
+
                     }
                     ]
                 }
