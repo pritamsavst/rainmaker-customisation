@@ -48,7 +48,7 @@
               {
                 "variable":"colony",
                 "value":{
-                  "path":"$.propertyImages[0].property.colony"
+                  "path":"$.propertyDetails.address.colony"
                 },
                 "localisation": {
                   "required": true,
@@ -71,7 +71,7 @@
               {
                 "variable":"transitNumber",
                 "value":{
-                  "path":"$.propertyImages[0].property.transitNumber"
+                  "path":"$.propertyDetails.address.transitNumber"
                 }
               },
               {
