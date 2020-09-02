@@ -4,25 +4,38 @@
         "defaultStyle": {
             "font": "Cambay"
         },
-        "content": [{
-                "stack": [
+        "content": [
+            {
+                "columns":[
                     {
-                        "text": "Provisional Statement of Plot No. , ",
-                        "alignment": "center",
-                        "fontSize": 14,
-                        "bold": true,
-                        "margin": [0, 0, 0, 0] 
+                        "image": "{{logo}}",
+                        "width": 55,
+                        "alignment": "left",
+                        "margin":[10,0,0,0]
                     },
                     {
-                        "text": "{{colony}}",
-                        "alignment": "center",
-                        "fontSize": 14,
-                        "bold": true,
-                        "margin": [0, 0, 0, 0]
+                        "stack": [
+                            {
+                                "text": "Provisional Statement of Plot No. , ",
+                                "alignment": "center",
+                                "fontSize": 14,
+                                "bold": true,
+                                "margin": [0, 0, 0, 0] 
+                            },
+                            {
+                                "text": "{{colony}}",
+                                "alignment": "center",
+                                "fontSize": 14,
+                                "bold": true,
+                                "margin": [0, 0, 0, 0]
+                            }
+                        ]
+        
                     }
-                ]
 
+                ]
             },
+           
             {
                 "margin": [0, 20, 0, 0],
                 "table": {
