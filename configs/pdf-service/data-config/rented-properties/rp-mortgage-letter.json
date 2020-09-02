@@ -1,0 +1,103 @@
+{
+    "key": "rp-mortgage-letter",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.MortgageApplications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "COLONY_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path":"$.applicant[0].name"
+                }
+
+              },
+              {
+                "variable":"colony",
+                "value":{
+                  "path":"$.property.colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable":"area",
+                "value":{
+                  "path":"$.property.area"
+                }
+              },
+              {
+                "variable":"pincode",
+                "value":{
+                  "path":"$.property.pincode"
+                }
+              },
+              {
+                "variable":"transitNumber",
+                "value":{
+                  "path":"$.property.transitNumber"
+                }
+              },
+              {
+                "variable":"dateOfDeathAllottee",
+                "value":{
+                  "path":"$.ownerDetails.dateOfDeathAllottee"
+                }
+              },
+
+              {
+                "variable": "allotmenNumber",
+                "value": {
+                  "path": "$.allotmenNumber"
+                }
+
+              },
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              }
+
+            ]
+          }
+
+        ]
+      }]
+    }
+  }  
