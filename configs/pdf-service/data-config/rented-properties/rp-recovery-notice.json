@@ -90,18 +90,13 @@
               "variable": "memoDate",
               "value": {
                 "path": "$.memoDate"
-              }
+              },
+              "type":"date"
             },
             {
               "variable": "memoNumber",
               "value": {
                 "path": "$.memoNumber"
-              }
-            },
-            {
-              "variable": "demandNoticeFrom",
-              "value": {
-                "path": "$.demandNoticeFrom"
               }
             },
             {
@@ -115,13 +110,15 @@
               "variable": "demandNoticeTo",
               "value": {
                 "path": "$.demandNoticeTo"
-              }
+              },
+              "type":"date"
             },
             {
               "variable": "demandNoticeFrom",
               "value": {
                 "path": "$.demandNoticeFrom"
-              }
+              },
+              "type":"date"
             }
   
           ]
