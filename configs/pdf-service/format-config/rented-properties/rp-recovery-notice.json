@@ -327,11 +327,11 @@
                     },
                     {
                         "style": "noticeContent",
-                        "text": "2. Payment be deposited in Chandigarh State Co-Operative Bank. {{colony}},"
+                        "text": "2. Payment be deposited in Chandigarh State Co-Operative Bank. Vikas Nagar Mauli Jagran,U.T. Chandigarh by cash."
                     },
                     {
-                        "style": "noticeContent",
-                        "text": "cash."
+                        "text":"3. The due amount is subjected to change.",
+                        "style":"noticeContent"
                     }
 
                 ]
