@@ -233,7 +233,7 @@
             {
                 "margin": [0, 20, 0, 0],
                 "style": "noticeContent",
-                "text": "Rent calculated w.e.f. from {{demandNoticeFrom}} to  {{demandNoticeFrom}}"
+                "text": "Rent calculated w.e.f. from {{demandNoticeFrom}} to  {{demandNoticeTo}} "
             },
             {
                 "style": "noticeContent",
