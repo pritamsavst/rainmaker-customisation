@@ -145,7 +145,7 @@
                           {
                             "variable": "payerName",
                             "value": {
-                              "path": "$.Properties[0].owners[0].ownerDetails.name"
+                              "path": "$.Payments[0].payerName"
                             }
                         },
                         {
