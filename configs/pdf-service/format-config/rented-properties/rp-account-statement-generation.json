@@ -16,7 +16,7 @@
                     {
                         "stack": [
                             {
-                                "text": "Provisional Statement of Plot No. , ",
+                                "text": "Provisional Statement of Transit No. {{transitNumber}}, ",
                                 "alignment": "center",
                                 "fontSize": 14,
                                 "bold": true,
@@ -57,10 +57,10 @@
                             "style": "table-content"
                         }],
                         [{
-                            "text": "Plot No.",
+                            "text": "Transit No",
                             "style": "table-header"
                         }, {
-                            "text": "",
+                            "text": "{{transitNumber}}",
                             "style": "table-content"
                         }],
                         [{
