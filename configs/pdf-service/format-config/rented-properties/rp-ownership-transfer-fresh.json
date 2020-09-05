@@ -333,27 +333,7 @@
                         }
                       ],
                       [
-                        {
-                          "text":"{{email_label}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table-value-cont"
-                        },
-                      
-                        {
-                          "text":"",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
+                        
                         {
                           "text":"{{aadharno_label}}",
                           "border":[
@@ -365,19 +345,7 @@
                            "style": "receipt-table-value-cont"
                         },
                         {
-                          "text":"",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table-value-cont"
-                        }
-                      ],
-                      [
-                        {
-                          "text":"{{email}}",
+                          "text":"Date of Death of Allotee",
                           "border":[
                             false,
                             false,
@@ -386,6 +354,16 @@
                           ],
                            "style": "receipt-table-value-cont"
                         },
+                        {
+                          "text":"{{email_label}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table-value-cont"
+                        }, 
                         {
                           "text":"",
                           "border":[
@@ -395,9 +373,31 @@
                             false
                           ],
                            "style": "receipt-table2"
-                        },
+                        }
+                      ],
+                      [
                         {
                           "text":"{{aadharno}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{dateOfDeathAllottee}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{email}}",
                           "border":[
                             false,
                             false,

@@ -360,6 +360,13 @@
   }
 },
 {
+  "variable": "dateOfDeathAllottee",
+  "value": {
+    "path": "$.ownerDetails.dateOfDeathAllottee"
+  },
+  "type":"date"   
+},
+{
   "variable": "total_amount_label",
   "value": {
      "path": "TOTAL_AMOUNT_LABEL"
