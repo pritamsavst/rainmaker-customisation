@@ -92,6 +92,12 @@
                 "value":{
                     "path":"$.Properties[0].propertyDetails.interestRate"
               }
+            },
+            {
+              "variable":"transitNumber",
+              "value":{
+                "path":"$.Properties[0].transitNumber"
+              }
             }
             ]
           }
