@@ -310,7 +310,7 @@
             "fontSize":9,
             "bold":true
             },
-            {"text":"{{system_label}}",
+            {"text":"{{generatedBy}}",
             "fontSize":9,
             "lineHeight":"2"}
         

@@ -72,6 +72,12 @@
                             } 
                           },
                           {
+                            "variable": "generatedBy",
+                            "value": {
+                              "path": "$.generatedBy"
+                            }
+                        },
+                          {
                             "variable": "transitNo",
                             "value": {
                               "path": "$.Properties[0].transitNumber"
