@@ -35,6 +35,14 @@
                   }
                 },
                 {
+                  "variable": "dateOfDeathAllottee",
+                  "value": {
+                    "path": "$.ownerDetails.dateOfDeathAllottee"
+                  },
+                  "type":"date"   
+                },
+
+                {
                   "variable": "applicationNumber",
                   "value": {
                     "path": "$.ownerDetails.applicationNumber"
