@@ -97,7 +97,7 @@
                                             ]
                                         },
                                         {
-                                            "text": "{{aproCharge}}",
+                                            "text": "{{feeAmount}}",
                                             "color": "#6B6E6F",
                                             "fontSize": 10,
                                             "alignment": "right",
@@ -142,7 +142,7 @@
                                             ]
                                         },
                                         {
-                                            "text": "{{feeAmount}}",
+                                            "text": "{{aproCharge}}",
                                             "alignment": "right",
                                             "color": "#6B6E6F",
                                             "fontSize": 10,
