@@ -23,7 +23,7 @@
                                 "color": "#676A6B "
                             },
                             {
-                                "text": "{{cause_notice}}",
+                                "text": "{{cause_notice}} : {{noticeId}}",
                                 "fontSize": 11,
                                 "bold": true,
                                 "width": "*",
@@ -44,7 +44,13 @@
             },
             {
                 "margin": [0, 10, 0, 0],
-                "stack": [{
+                "stack": [
+                    {
+                        "text":"{{ownerName}}",
+                        "style":"noticeContent"
+                    },
+                    {
+
                         "text": [{
                                 "text": "Transit Site No  ",
                                 "style": "noticeContent"
@@ -71,7 +77,7 @@
                         "style": "noticeContent"
                     },
                     {
-                        "text": "{{memoNumber}}.",
+                        "text": "{{allotmentNumber}}.",
                         "style": "noticeContent" ,
                         "bold":true  
                     },

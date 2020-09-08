@@ -1,131 +1,145 @@
 {
-    "key": "rp-violation-notice",
-    "DataConfigs": {
-      "serviceName": "rainmaker-rp",
-      "version": "1.0.0",
-      "baseKeyPath": "$.notices.*",
-      "entityIdPath": "$.applicationNumber",
-      "isCommonTableBorderRequired": true,
+  "key": "rp-violation-notice",
+  "DataConfigs": {
+    "serviceName": "rainmaker-rp",
+    "version": "1.0.0",
+    "baseKeyPath": "$.notices.*",
+    "entityIdPath": "$.applicationNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [{
       "mappings": [{
-        "mappings": [{
-          "direct": [
-  
-            {
-              "variable": "municipal_co_chandigarh",
-              "value": {
-                "path": "VIOLATION_PDF_HEADER"
-              },
-              "type": "label",
-              "localisation": {
-                "prefix": "RP",
-                "module": "rainmaker-tl"
-              }
+        "direct": [
+
+          {
+            "variable": "municipal_co_chandigarh",
+            "value": {
+              "path": "VIOLATION_PDF_HEADER"
             },
-          
-              {
-                "variable": "allotmentNumber",
-                "value": {
-                  "path": "$.allotmentNumber"
-                }
-              }, 
-           
-            {
-              "variable": "commentsHeader",
-              "value": {
-                "path": "VIOLATION_COMMENTS_HEADER"
-              },
-              "type": "label",
-              "localisation": {
-                "prefix": "RP",
-                "module": "rainmaker-tl"
-              }
-            },
-            {
-              "variable": "comments",
-              "value": {
-                "path": "$.description"
-              }
-            },
-            {
-              "variable": "colony_branch",
-              "value": {
-                "path": "COLONY_BRANCH_HEADER"
-              },
-              "type": "label",
-              "localisation": {
-                "prefix": "RP",
-                "module": "rainmaker-rp"
-              }
-            },
-            {
-              "variable": "cause_notice",
-              "value": {
-                "path": "CAUSE_NOTICE_HEADER"
-              },
-              "type": "label",
-              "localisation": {
-                "prefix": "RP",
-                "module": "rainmaker-tl"
-              }
-            },
-            {
-              "variable": "logo",
-              "url": "https://egov.transerve.com/media/logo.png",
-              "type": "image"
-            },
-  
-            {
-              "variable": "transit_no",
-              "value": {
-                "path": "$.property.transitNumber"
-              }
-            },
-            {
-              "variable": "memoDate",
-              "value": {
-                "path": "$.memoDate"
-              },
-              "type":"date"
-            },
-            {
-              "variable": "memoNumber",
-              "value": {
-                "path": "$.memoNumber"
-              }
-            },
-            {
-              "variable": "amount",
-              "value": {
-                "path": "$.amount"
-              }
-            },
-  
-            {
-              "variable": "demandNoticeTo",
-              "value": {
-                "path": "$.demandNoticeTo"
-              },
-              "type":"date"
-            },
-            {
-              "variable": "demandNoticeFrom",
-              "value": {
-                "path": "$.demandNoticeFrom"
-              },
-              "type":"date"
-            },
-            {
-              "variable": "colony",
-              "value": {
-                "path": "$.property.colony"
-              },
-              "localisation": {
-                "required": true,
-                "module": "rainmaker-tl"
-              }
+            "type": "label",
+            "localisation": {
+              "prefix": "RP",
+              "module": "rainmaker-tl"
             }
-          ]
-        }]
+          },
+
+          {
+            "variable": "allotmentNumber",
+            "value": {
+              "path": "$.allotmentNumber"
+            }
+          },
+          {
+            "variable":"noticeId",
+            "value": {
+              "path": "$.memoNumber"
+            }
+          },
+
+          {
+            "variable": "commentsHeader",
+            "value": {
+              "path": "VIOLATION_COMMENTS_HEADER"
+            },
+            "type": "label",
+            "localisation": {
+              "prefix": "RP",
+              "module": "rainmaker-tl"
+            }
+          },
+          {
+            "variable": "comments",
+            "value": {
+              "path": "$.description"
+            }
+          },
+          {
+            "variable": "colony_branch",
+            "value": {
+              "path": "COLONY_BRANCH_HEADER"
+            },
+            "type": "label",
+            "localisation": {
+              "prefix": "RP",
+              "module": "rainmaker-rp"
+            }
+          },
+          {
+            "variable": "ownerName",
+            "value": {
+              "path": "$.OwnerName"
+            }
+          },
+          {
+            "variable": "guardian",
+            "value": {
+              "path": "$.guardian"
+            }
+          },
+
+          {
+            "variable": "cause_notice",
+            "value": {
+              "path": "CAUSE_NOTICE_HEADER"
+            },
+            "type": "label",
+            "localisation": {
+              "prefix": "RP",
+              "module": "rainmaker-tl"
+            }
+          },
+          {
+            "variable": "logo",
+            "url": "https://egov.transerve.com/media/logo.png",
+            "type": "image"
+          },
+
+          {
+            "variable": "transit_no",
+            "value": {
+              "path": "$.property.transitNumber"
+            }
+          },
+          {
+            "variable": "memoDate",
+            "value": {
+              "path": "$.allotmentStartdate"
+            },
+            "type": "date"
+          },
+       
+          {
+            "variable": "amount",
+            "value": {
+              "path": "$.amount"
+            }
+          },
+
+          {
+            "variable": "demandNoticeTo",
+            "value": {
+              "path": "$.demandNoticeTo"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "demandNoticeFrom",
+            "value": {
+              "path": "$.demandNoticeFrom"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "colony",
+            "value": {
+              "path": "$.property.colony"
+            },
+            "localisation": {
+              "required": true,
+              "module": "rainmaker-tl"
+            }
+          }
+        ]
       }]
-    }
-  } 
+    }]
+  }
+}

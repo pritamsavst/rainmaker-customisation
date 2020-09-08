@@ -23,7 +23,7 @@
                                 "color": "#676A6B "
                             },
                             {
-                                "text": "{{cause_notice}}",
+                                "text": "{{cause_notice}} : {{noticeId}}",
                                 "fontSize": 11,
                                 "bold": true,
                                 "width": "*",
@@ -44,19 +44,36 @@
             },
             {
                 "margin": [0, 10, 0, 0],
-                "stack": [{
-                        "text": [{
-                                "text": "Transit Site No  ",
-                                "style": "noticeContent"
-                            },
-
+                "stack": [
                             {
-                                "text": "{{transit_no}}",
-                                "style": "noticeContent",
-                                "bold": true
-                            }
-                        ]
-                    },
+                                "text":"{{ownerName}}",
+                                "style":"noticeContent"
+                            },
+                            {
+                                "text":"s/o ,",
+                                "style":"noticeContent"
+                            },
+                            {
+                                "text":"{{guardian}}",
+                                "style":"noticeContent"
+                            },
+                            {
+                                "text":[
+                                    {
+                                        "text": "Transit Site No  ",
+                                        "style": "noticeContent"
+                                    },
+        
+                                    {
+                                        "text": "{{transit_no}}",
+                                        "style": "noticeContent",
+                                        "bold": true
+                                    }
+                                ]
+                            },
+                          
+                      
+                
                     {
                         "text": "{{colony}}.",
                         "style": "noticeContent"
@@ -66,24 +83,33 @@
             },
             {
                 "margin": [0, 10, 0, 0],
-                "stack": [{
-                        "text": "Memo No. ",
-                        "style": "noticeContent"
-                    },
+                "stack": [
                     {
-                        "text": "{{memoNumber}}",
-                        "style": "noticeContent",
-                        "bold": true
+                        "text":[
+                            {
+                                "text": "Memo No. ",
+                                "style": "noticeContent"
+                            },
+                            {
+                                "text": "{{allotmentNumber}}",
+                                "style": "noticeContent",
+                                "bold": true
+                            }
+                        ]
                     },
-                    {
-                        "text": "Dated",
-                        "style": "noticeContent"
-                    },
-                    {
-                        "text": " {{memoDate}}",
-                        "style": "noticeContent",
-                        "bold": true
-                    }
+                     {
+                         "text":[
+                            {
+                                "text": "Dated",
+                                "style": "noticeContent"
+                            },
+                            {
+                                "text": " {{memoDate}}",
+                                "style": "noticeContent",
+                                "bold": true
+                            }
+                         ]
+                     }
                 ],
                 "alignment": "left"
             },
@@ -95,7 +121,7 @@
                     },
 
                     {
-                        "text": " Regarding depositing of outstanding rent of Transit Site No   {{transit_no }} , {{colony}}",
+                        "text": " Regarding Allotment of Transit Site No.{{transit_no }} , {{colony}} On license hold basis.   ",
                         "style": "noticeContent",
                         "bold": true
                     }
@@ -119,7 +145,7 @@
                         "bold": true
                     },
                     {
-                        "text": " ALC dated",
+                        "text": " ALC dated ",
                         "style": "noticeContent"
                     },
                     {

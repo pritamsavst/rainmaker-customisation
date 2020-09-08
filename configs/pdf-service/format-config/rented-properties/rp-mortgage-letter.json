@@ -62,7 +62,7 @@
                 "margin": [50, 10, 0, 0],
                 "stack":[
                     {
-                        "text": "Memo No----------------------",
+                        "text": "Memo No  {{allotmentNumber}}",
                         "style": "pdfContent",
                         "bold":true
                     },
@@ -117,10 +117,10 @@
                         "bold":true
                     },
                     {
-                        "text": "on account of loan of Rs."
+                        "text": "on account of loan of Rs. "
                     },
                     {
-                        "text":"-------",
+                        "text":"{{mortgageAmount}} ",
                         "bold":true
                     },
                     {

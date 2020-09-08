@@ -47,6 +47,19 @@
 
               },
               {
+                "variable":"mortgageAmount",
+                "value": {
+                  "path":"$.mortgageApprovedGrantDetails[0].mortgageAmount"
+                }
+              },
+              {
+                "variable": "allotmentNumber",
+                "value": {
+                  "path":"$.allotmentNumber"
+                }
+
+              },
+              {
                 "variable":"colony",
                 "value":{
                   "path":"$.property.colony"
