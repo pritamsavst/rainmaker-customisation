@@ -1,0 +1,336 @@
+{
+    "key": "rp-duplicate-copy-charges",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.DuplicateCopyApplications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+          "direct": [
+  
+            {
+              "variable": "property",
+              "value": {
+                "path": "PROPERTY_DETAILS_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "header",
+              "value": {
+                "path": "PDF_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "transit_site",
+              "value": {
+                "path": "SITE_PLOT_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "allotment_number",
+              "value": {
+                "path": "ALLOTMENT_NUMBER"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "area_label",
+              "value": {
+                "path": "AREA_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "pincode_label",
+              "value": {
+                "path": "PINCODE_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+  
+            {
+              "variable": "logo",
+              "url": "https://egov.transerve.com/media/logo.png",
+              "type": "image"
+            },
+            {
+              "variable": "applicantDetails",
+              "value": {
+                "path": "APPLICANT_DETAILS"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+                "variable": "applicationChargesDetails",
+                "value": {
+                  "path": "PAYMENT_CHARGES_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "required": true,
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable": "feeAmount",
+                "value": {
+                  "path": "$.applicant[0].feeAmount"
+                }
+              },
+              {
+                "variable": "charges_due_label",
+                "value": {
+                  "path": "CHARGES_DUE_LABEL"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+            {
+              "variable": "name_label",
+              "value": {
+                "path": "APPLICANT_NAME_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "relationship_label",
+              "value": {
+                "path": "RELATIONSHIP_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "mobile_no",
+              "value": {
+                "path": "MOBILE_NO_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+  
+            {
+              "variable": "email_label",
+              "value": {
+                "path": "OWNER_DETAILS_EMAIL_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "aadharno_label",
+              "value": {
+                "path": "AADHAR_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+  
+            {
+              "variable": "documents_label",
+              "value": {
+                "path": "DOCUMENTS_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "application_label",
+              "value": {
+                "path": "APP_NO_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "TL_HOME_SEARCH_RESULTS",
+                "module": "rainmaker-tl"
+              }
+            },
+  
+            {
+              "variable": "application_for_duplicate_copy",
+              "value": {
+                "path": "APPLICATION_FOR_DUPLICATE_HEADER"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable": "father_husband_name_label",
+              "value": {
+                "path": "FATHER_HUSBANDS_NAME_LABEL"
+              },
+              "type": "label",
+              "localisation": {
+                "required": true,
+                "prefix": "RP",
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "applicationNumber",
+              "value": {
+                "path": "$.applicationNumber"
+              }
+            },
+            {
+              "variable":"allotmentNumber",
+              "value":{
+                "path":"$.allotmentNumber"
+              }
+            },
+            {
+              "variable": "transitNumber",
+              "value": {
+                "path": "$.property.transitNumber"
+              }
+  
+            },
+            {
+              "variable": "area",
+              "value": {
+                "path": "$.property.area"
+              }
+            },
+            {
+              "variable": "pincode",
+              "value": {
+                "path": "$.property.pincode"
+              }
+  
+            },
+            {
+              "variable": "name",
+              "value": {
+                "path": "$.applicant[0].name"
+              }
+  
+            },
+            {
+              "variable": "guardian",
+              "value": {
+                "path": "$.applicant[0].guardian"
+              }
+  
+            },
+            {
+              "variable": "relationship",
+              "value": {
+                "path": "$.applicant[0].relationship"
+              },
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-rp"
+              }
+            },
+            {
+              "variable":"colony",
+              "value":{
+                "path":"$.property.colony"
+              },
+              "localisation": {
+                "required": true,
+                "module": "rainmaker-tl"
+              }
+            },
+            {
+              "variable": "phone",
+              "value": {
+                "path": "$.applicant[0].phone"
+              }
+            },
+            {
+              "variable": "email",
+              "value": {
+                "path": "$.applicant[0].email"
+              }
+            },
+            {
+              "variable": "adhaarNumber",
+              "value": {
+                "path": "$.applicant[0].adhaarNumber"
+              }
+            },
+            {
+                "variable": "documents_array",
+                "value": {
+                  "path": "$.applicationDocuments.*"
+                }
+            }
+          ]
+        }]
+      }]
+    }
+  } 
