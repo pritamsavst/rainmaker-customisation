@@ -28,6 +28,12 @@
               "path": "$.allotmentNumber"
             }
           },
+          {
+            "variable":"noticeId",
+            "value": {
+              "path": "$.memoNumber"
+            }
+          },
 
           {
             "variable": "commentsHeader",
@@ -100,18 +106,7 @@
             },
             "type": "date"
           },
-          {
-            "text":"noticeId",
-            "value": {
-              "path": "$.noticeId"
-            }
-          },
-          {
-            "variable": "allotmentNumber",
-            "value": {
-              "path": "$.allotmentNumber"
-            }
-          },
+       
           {
             "variable": "amount",
             "value": {

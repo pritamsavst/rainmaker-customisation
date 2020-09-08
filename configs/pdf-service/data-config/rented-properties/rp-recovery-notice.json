@@ -87,9 +87,21 @@
               }
             },
             {
+              "variable":"noticeId",
+              "value": {
+                "path": "$.memoNumber"
+              }
+            },
+            {
+              "variable": "ownerName",
+              "value": {
+                "path": "$.OwnerName"
+              }
+            },
+            {
               "variable": "memoDate",
               "value": {
-                "path": "$.memoDate"
+                "path": "$.allotmentStartdate"
               },
               "type":"date"
             },
