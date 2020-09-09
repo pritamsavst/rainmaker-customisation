@@ -259,7 +259,7 @@
             {
                 "text": [{
                         "style": "noticeContent",
-                        "text": "You are hereby served with this notice to deposit the outstanding amount of ______ within 30"
+                        "text": "You are hereby served with this notice to deposit the outstanding amount of Rs {{amount}} within 30"
 
                     },
                     {
