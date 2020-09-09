@@ -47,6 +47,14 @@
 
               },
               {
+                "variable": "allotmentStartDate",
+                "value": {
+                  "path":"$.allotmentStartDate"
+                }
+
+              },
+              
+              {
                 "variable":"mortgageAmount",
                 "value": {
                   "path":"$.mortgageApprovedGrantDetails[0].mortgageAmount"
