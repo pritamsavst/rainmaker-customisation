@@ -101,7 +101,7 @@
             {
               "variable": "memoDate",
               "value": {
-                "path": "$.allotmentStartdate"
+                "path": "$.memoDate"
               },
               "type":"date"
             },
