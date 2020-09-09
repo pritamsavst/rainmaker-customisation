@@ -1763,7 +1763,7 @@ serviceMaps:
       -  query: update indent set indentStatus=? where indentNumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: Indents issues updatestatus
@@ -1773,7 +1773,7 @@ serviceMaps:
       -  query: update materialissue set materialissuestatus=? where issuenumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: Purchase Order updatestatus
@@ -1783,7 +1783,7 @@ serviceMaps:
       -  query: update purchaseorder set status=? where purchaseordernumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: material receipt updatestatus
@@ -1793,7 +1793,7 @@ serviceMaps:
       -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: material receipt updatestatus
@@ -1803,7 +1803,7 @@ serviceMaps:
       -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: transfer inward updatestatus
@@ -1813,5 +1813,5 @@ serviceMaps:
       -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
-         -  jsonPath: $.workFlowDetails.businessId         
+         -  jsonPath: $.workFlowDetails.status
+         -  jsonPath: $.workFlowDetails.businessId
