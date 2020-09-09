@@ -88,7 +88,7 @@
                             "text": "Yr. Rent (increase as per Clause 4 of Lease Deed)",
                             "style": "table-header"
                         }, {
-                            "text": "",
+                            "text": "{{rentIncrementPercentage}}%",
                             "style": "table-content"
                         }],
                      
