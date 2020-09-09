@@ -81,6 +81,12 @@
               }
             },
             {
+              "variable":"rentIncrementPercentage",
+              "value":{
+                  "path":"$.Properties[0].propertyDetails.rentIncrementPercentage"
+            }
+          },
+            {
                 "variable": "monthlyRent",
                 "value": {
                   "path": "$.Properties[0].owners[0].ownerDetails.monthlyRent"
