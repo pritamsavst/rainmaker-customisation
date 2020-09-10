@@ -1,0 +1,220 @@
+{
+    "key": "rp-account-statement-generation",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "columns":[
+                    {
+                        "image": "{{logo}}",
+                        "width": 55,
+                        "alignment": "left",
+                        "margin":[10,0,0,0]
+                    },
+                    {
+                        "stack": [
+                            {
+                                "text": "Provisional Statement of Transit No. {{transitNumber}}, ",
+                                "alignment": "center",
+                                "fontSize": 14,
+                                "bold": true,
+                                "margin": [0, 0, 0, 0] 
+                            },
+                            {
+                                "text": "{{colony}}",
+                                "alignment": "center",
+                                "fontSize": 14,
+                                "bold": true,
+                                "margin": [0, 0, 0, 0]
+                            }
+                        ]
+        
+                    }
+
+                ]
+            },
+           
+            {
+                "margin": [0, 20, 0, 0],
+                "table": {
+                    "widths": ["50%", "50%"],
+                    "alignment":"center",
+                    "body": [
+                        [{
+                            "text": "Name",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{name}}",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Date of Allotment As Per Lease Deed",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{date}}",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Transit No",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{transitNumber}}",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Area",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{area}} sq.yd",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Rent ",
+                            "style": "table-header"
+                        }, {
+                            "text": "Rs{{rent}} /- per sq.yd. as per clause 1 of Lease Deed",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Security Advance Taken By o/o BDPO U.T.Interest",
+                            "style": "table-header"
+                        }, {
+                            "text": "",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Yr. Rent (increase as per Clause 4 of Lease Deed)",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{rentIncrementPercentage}}%",
+                            "style": "table-content"
+                        }],
+                     
+                        [{
+                            "text": "Montly Rent",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{monthlyRent}}",
+                            "style": "table-content"
+                        }],
+                        [{
+                            "text": "Interest",
+                            "style": "table-header"
+                        }, {
+                            "text": "{{interestRate}}% P.A as per clause 15 of Lease Deed",
+                            "style": "table-content"
+                        }]
+                    ]
+                }
+
+
+            },
+            {
+                "margin":[0,20,0,0],
+                "table":{
+                    "widths":["14.28%","14.28%","14.28%","14.28%","14.28%","14.28%","14.28%"],
+                    "body":[
+                        [
+                            {
+                            "text":"Date",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                        {
+                            "text":"Amount",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },   {
+                            "text":"Type",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },   {
+                            "text":"Interest Due",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },   {
+                            "text":"Principal Due",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },   {
+                            "text":"Total Due",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },   {
+                            "text":"Account Balance",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        }
+                    ]
+                    ]
+                 
+                }
+            },
+            {
+                "margin":[0,0,0,0],
+                "table": {
+                 
+                    "widths":["14.28%","14.28%","14.28%","14.28%","14.28%","14.28%","14.28%"],
+                    "body": [
+                       "{{#account_statements}}[{{#.}}{\"text\":\"{{date}}\",\"style\": \"table-content\"},{\"text\":\"{{amount}}\",\"style\": \"table-content\"},{\"text\":\"{{type}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingInterest}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingPrincipal}}\",\"style\": \"table-content\"},{\"text\":\"{{dueAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingBalance}}\",\"style\": \"table-content\"}{{/.}}]{{/account_statements}}"
+                    ]
+                }
+            }
+        ],
+        "styles": {
+            "table-header": {
+                "fontSize": 10,
+                "align": "center",
+                "bold": true
+            },
+            "table-header2": {
+                "fontSize": 10,
+                "align": "center",
+                "bold": true
+            },
+           
+            "table-content": {
+                "fontSize": 10,
+                "align": "center"
+            }
+
+        }
+    }
+}

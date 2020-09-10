@@ -1,0 +1,334 @@
+{
+    "key": "rp-ownership-transfer-fresh",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Owners.*",
+      "entityIdPath":"$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "application_label",
+                  "value": {
+                    "path": "APP_NO_LABEL"
+                  },
+                  "type": "label",
+                  "localisation":{
+                     "required":true,
+                     "prefix":"TL_HOME_SEARCH_RESULTS",   
+                     "module":"rainmaker-tl"
+                  } 
+                },
+                {
+                  "variable": "header",
+                  "value": {
+                    "path": "PDF_HEADER"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "RP",
+                    "module": "rainmaker-tl"
+                  }
+                },
+                {
+                  "variable": "dateOfDeathAllottee",
+                  "value": {
+                    "path": "$.ownerDetails.dateOfDeathAllottee"
+                  },
+                  "type":"date"   
+                },
+
+                {
+                  "variable": "applicationNumber",
+                  "value": {
+                    "path": "$.ownerDetails.applicationNumber"
+                  }
+              },
+                {
+                  "variable": "application_no",
+                  "value": {
+                    "path": "$.tenantId"
+                  },
+                  "localisation":{
+                    "required":true,
+                    "prefix": "TENANT_TENANTS",
+                    "module":"rainmaker-common"
+                 },
+                 "isUpperCaseRequired":true
+              },
+              {
+                "variable": "property",
+                "value": {
+                   "path": "PROPERTY_DETAILS_HEADER"
+                },
+                "type": "label",
+                "localisation":{
+                   "required":true,
+                   "prefix":"RP",   
+                   "module":"rainmaker-tl"
+                } 
+             },
+             {
+              "variable": "transit_site",
+              "value": {
+                 "path": "SITE_PLOT_LABEL"
+              },
+              "type": "label",
+              "localisation":{
+                 "required":true,
+                 "prefix":"RP",   
+                 "module":"rainmaker-tl"
+              } 
+           },
+         {
+          "variable": "allotment_number",
+          "value": {
+             "path": "ALLOTMENT_NUMBER"
+          },
+          "type": "label",
+          "localisation":{
+             "required":true,
+             "prefix":"RP",   
+             "module":"rainmaker-tl"
+          } 
+       },
+       {
+        "variable": "area_label",
+        "value": {
+           "path": "AREA_LABEL"
+        },
+        "type": "label",
+        "localisation":{
+           "required":true,
+           "prefix":"RP",   
+           "module":"rainmaker-tl"
+        } 
+     },
+     {
+      "variable": "transitNumber",
+      "value": {
+        "path": "$.property.transitNumber"
+      }
+  },
+  {
+    "variable": "allotmenNumber",
+    "value": {
+      "path": "$.allotmenNumber"
+    }
+  },
+  {
+  "variable": "area",
+  "value": {
+    "path": "$.property.area"
+  }
+  },
+  {
+    "variable": "pincode_label",
+    "value": {
+      "path": "PINCODE_LABEL"
+    },
+    "type": "label",
+    "localisation": {
+      "required": true,
+      "prefix": "RP",
+      "module": "rainmaker-tl"
+    }
+  },
+  {
+    "variable": "pincode",
+    "value": {
+      "path": "$.property.pincode"
+    }
+  },
+  {
+    "variable": "logo",                        
+    "url":"https://egov.transerve.com/media/logo.png",
+    "type":"image"
+  },
+  {
+    "variable": "rent_holder",
+    "value": {
+      "path": "RENT_HOLDER_PARTICULAR_HEADER"
+   },
+   "type": "label",
+   "localisation":{
+      "required":true,
+      "prefix":"RP",   
+      "module":"rainmaker-tl"
+   }
+  },
+  {
+    "variable": "name_label",
+    "value": {
+      "path": "APPLICANT_NAME_LABEL"
+    },
+    "type": "label",
+    "localisation":{
+      "required":true,
+      "prefix": "RP",
+      "module":"rainmaker-tl"
+   }
+  },
+  {
+    "variable": "relationship_label",
+    "value": {
+      "path": "RELATIONSHIP_LABEL"
+    },
+    "type": "label",
+    "localisation":{
+      "required":true,
+      "prefix": "RP",
+      "module":"rainmaker-tl"
+   }
+  },
+  {
+    "variable": "mobile_no",
+    "value": {
+      "path": "MOBILE_NO_LABEL"
+    },
+    "type": "label",
+    "localisation":{
+      "required":true,
+      "prefix": "RP",
+      "module":"rainmaker-tl"
+   }
+  },
+  {
+    "variable": "name",
+    "value": {
+      "path": "$.ownerDetails.name"
+    }
+  },
+  {
+    "variable": "relation",
+    "value": {
+      "path": "$.ownerDetails.relationWithDeceasedAllottee"
+    },
+    "localisation":{
+      "required":true,
+      "module":"rainmaker-tl"
+   }
+  },
+  {
+    "variable": "phone",
+    "value": {
+      "path": "$.ownerDetails.phone"
+    }
+  },
+  {
+    "variable": "email_label",
+    "value": {
+      "path": "OWNER_DETAILS_EMAIL_LABEL"
+    },
+    "type": "label",
+    "localisation": {
+      "required": true,
+      "prefix": "RP",
+      "module": "rainmaker-tl"
+    }
+  },
+  {
+    "variable": "aadharno_label",
+    "value": {
+      "path": "AADHAR_LABEL"
+    },
+    "type": "label",
+    "localisation": {
+      "required": true,
+      "prefix": "RP",
+      "module": "rainmaker-tl"
+    }
+  },
+  {
+    "variable": "email",
+    "value": {
+      "path": "$.ownerDetails.email"
+    }
+  },
+  {
+    "variable": "aadharno",
+    "value": {
+      "path": "$.ownerDetails.aadhaarNumber"
+    }
+  },
+  {
+    "variable": "documents_label",
+    "value": {
+      "path": "DOCUMENTS_LABEL"
+    },
+    "type": "label",
+    "localisation":{
+      "required":true,
+      "prefix": "RP",
+      "module":"rainmaker-tl"
+   }
+  },
+  {
+    "variable": "documents_array",
+    "value": {
+      "path": "$.ownerDetails.ownershipTransferDocuments.*"
+    }
+  },
+  {
+    "variable":"colony",
+    "value":{
+      "path":"$.property.colony"
+    },
+    "localisation": {
+      "required": true,
+      "module": "rainmaker-tl"
+    }
+  },
+  {
+    "variable": "applicantDetails",
+    "value": {
+      "path": "APPLICANT_DETAILS"
+    },
+    "type": "label",
+    "localisation": {
+      "required": true,
+      "prefix": "RP",
+      "module": "rainmaker-rp"
+    }
+  },
+  {
+    "variable": "fresh_license_legal_heir",
+    "value": {
+       "path": "FRESH_LICENSE_LEGAL_HEIR_HEADER"
+    },
+    "type": "label",
+    "localisation":{
+       "required":true,
+       "prefix":"RP",   
+       "module":"rainmaker-tl"
+    } 
+  },
+  {
+    "variable": "father_husband_name_label",
+    "value": {
+       "path": "FATHER_HUSBANDS_NAME_LABEL"
+    },
+    "type": "label",
+    "localisation":{
+       "required":true,
+       "prefix":"RP",   
+       "module":"rainmaker-tl"
+    } 
+  },
+  {
+    "variable": "fatherhusbandsName",
+    "value": {
+      "path": "$.ownerDetails.fatherOrHusband"
+    }
+  }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }

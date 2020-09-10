@@ -1,0 +1,472 @@
+{
+    "key": "rp-duplicate-copy-paid",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+                        "stack": [{
+                                "text": "{{header}}",
+                                "alignment": "center",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{application_for_duplicate_copy}}",
+                                "alignment": "center",
+                                "fontSize": 11,
+                                "italics": true,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{application_label}} {{applicationNumber}}",
+                                "fontSize": 12,
+                                "alignment":"center",
+                                "lineHeight": "2"
+                            }
+                        ]
+
+                    }
+                ]
+
+            },
+
+            {
+                "margin": [
+                    -25,
+                    10,
+                    -25,
+                    1
+                  ],
+                "table": {
+                    "widths": ["33.33%", "33.33%", "33.33%"],
+                    "body": [
+                        [{
+                                "colSpan": 3,
+                                "text": "{{feeEstimateLabel}}",
+                                "bold":true,
+                                "fontSize": 12,
+                                "lineHeight": 2,
+                                "margin":[3,0,0,0],
+                                "border": [
+                                    true,
+                                    true,
+                                    true,
+                                    false
+                                ]
+
+                            },
+                            {}, {}
+                        ],
+                        [{
+                            "colSpan": 3,
+
+                            "table": {
+                                "widths": [
+                                    "25%",
+                                    "25%",
+                                    "25%",
+                                    "25%"
+                                ],
+                                "body": [
+                                    [{
+
+                                            "text": "{{charges_due_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{feeAmount}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "alignment": "right",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{total_amount_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "alignment": "right",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "{{publication_charges_label}}",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{aproCharge}}",
+                                            "alignment": "right",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "Rs {{total}}",
+                                            "alignment": "right",
+                                            "fontSize": 10,
+                                            "bold": true,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                true,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ],
+                                    [{
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "{{total}}",
+                                            "alignment": "right",
+                                            "color": "#6B6E6F",
+                                            "fontSize": 10,
+                                            "bold": true,
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        {
+                                            "text": "",
+                                            "border": [
+                                                false,
+                                                false,
+                                                false,
+                                                false
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            },
+                            "border": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+
+
+                        }, {}, {}],
+
+                        [{
+                            "colSpan": 3,
+                            "columns": [
+
+                                [{
+                                        "text": "{{property}}",
+                                        "fontSize": 12,
+                                        "lineHeight": 2,
+                                        "margin":[3,0,0,0],
+                                        "bold":true
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{transit_site}}",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            },
+                                        
+                                            {
+                                                "text": "Colony",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{transitNumber}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{colony}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            }
+                                        ]
+
+                                    },
+                                    {
+                                        "columns": [{
+                                            "text": "{{pincode_label}}",
+                                            "fontSize": 10,
+                                            "margin":[3,0,0,0]
+                                        }]
+                                    },
+                                    {
+                                        "columns": [{
+                                            "text": "{{pincode}}",
+                                            "fontSize": 10,
+                                            "bold": true,
+                                            "margin":[3,0,0,0]
+                                        }]
+                                    }
+                                ]
+                            ]
+                        }, {}, {}],
+                        [{
+                            "colSpan": 3,
+                            "columns": [
+
+                                [{
+                                        "text": "{{applicantDetails}}",
+                                        "fontSize": 12,
+                                        "lineHeight": "2",
+                                        "margin":[3,0,0,0],
+                                        "bold":true
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{name_label}}",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{father_husband_name_label}}",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{relationship_label}} ",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{mobile_no}}",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{name}}",
+                                                "fontSize": 10,
+                                                "lineHeight": 2,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{guardian}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{relationship}} ",
+                                                "lineHeight": 2,
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{phone}}",
+                                                "lineHeight": 2,
+                                                "fontSize": 10,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            }
+                                        ]
+
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{email_label}} ",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{aadharno_label}}",
+                                                "fontSize": 10,
+                                                "margin":[3,0,0,0]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "columns": [{
+                                                "text": "{{email}}",
+                                                "fontSize": 10,
+                                                "lineHeight": 2,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            },
+                                            {
+                                                "text": "{{adhaarNumber}}",
+                                                "fontSize": 10,
+                                                "lineHeight": 2,
+                                                "bold": true,
+                                                "margin":[3,0,0,0]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }, {}, {}],
+                        [{
+                                "colSpan": 3,
+                                "text": "{{documents_label}}",
+                                "margin":[3,0,0,0],
+                                "fontSize": 12,
+                                "border": [
+                                    true,
+                                    true,
+                                    true,
+                                    false
+                                ]
+
+                            },
+                            {}, {}
+                        ],
+                        [{
+                                "colSpan": 3,
+                                "table": {
+                                    "widths": ["25%", "25%", "25%", "25%"],
+                                    "body": [
+                                        "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                                    ]
+                                },
+                                "border": [
+                                    true,
+                                    false,
+                                    true,
+                                    true
+                                ]
+                            },
+                            {}, {}
+                        ]
+
+                    ]
+                }
+            }
+        ],
+        "styles": {
+            "receipt-table2": {
+                "color": "#000000",
+                "bold": true,
+                "fontSize": 10
+
+            },
+
+            "receipt-table-value-cont": {
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 10
+            }
+           
+        }
+    }
+}

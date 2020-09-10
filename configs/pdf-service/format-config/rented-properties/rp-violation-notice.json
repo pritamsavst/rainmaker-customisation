@@ -1,0 +1,343 @@
+{
+    "key": "rp-violation-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "alignment": "left",
+                        "width": 50
+                    },
+                    {
+                        "width": "*",
+                        "stack": [{
+                                "text": "{{municipal_co_chandigarh}}",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "fontSize": 13,
+                                "color": "#676A6B "
+                            },
+                            {
+                                "text": "{{cause_notice}} : {{noticeId}}",
+                                "fontSize": 11,
+                                "bold": true,
+                                "width": "*",
+                                "alignment": "center",
+                                "lineHeight": "2"
+                            }
+                        ],
+                        "alignment": "center"
+                    }
+                ]
+            },
+
+            {
+                "margin": [0, 10, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "noticeContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [
+                            {
+                                "text":"{{ownerName}}",
+                                "style":"noticeContent"
+                            },
+                            {
+                                "text":"s/o ,",
+                                "style":"noticeContent"
+                            },
+                            {
+                                "text":"{{guardian}}",
+                                "style":"noticeContent"
+                            },
+                            {
+                                "text":[
+                                    {
+                                        "text": "Transit Site No  ",
+                                        "style": "noticeContent"
+                                    },
+        
+                                    {
+                                        "text": "{{transit_no}}",
+                                        "style": "noticeContent",
+                                        "bold": true
+                                    }
+                                ]
+                            },
+                          
+                      
+                
+                    {
+                        "text": "{{colony}}.",
+                        "style": "noticeContent"
+                    }
+                ],
+                "alignment": "left"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [
+                    {
+                        "text":[
+                            {
+                                "text": "Memo No. ",
+                                "style": "noticeContent"
+                            },
+                            {
+                                "text": "{{allotmentNumber}}",
+                                "style": "noticeContent",
+                                "bold": true
+                            }
+                        ]
+                    },
+                     {
+                         "text":[
+                            {
+                                "text": "Dated",
+                                "style": "noticeContent"
+                            },
+                            {
+                                "text": " {{memoDate}}",
+                                "style": "noticeContent",
+                                "bold": true
+                            }
+                         ]
+                     }
+                ],
+                "alignment": "left"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Subject: ",
+                        "style": "noticeContent"
+                    },
+
+                    {
+                        "text": " Regarding Allotment of Transit Site No.{{transit_no }} , {{colony}} On license hold basis.   ",
+                        "style": "noticeContent",
+                        "bold": true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Whereas Transit Site No. in Rehabilitation Colony, Chandigarh was allotted to you on ",
+                        "style": "noticeContent"
+                    },
+
+                    {
+                        "text": "license hold basis vide Allotment Letter No  ",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "{{allotmentNumber}}",
+                        "style": "noticeContent",
+                        "bold": true
+                    },
+                    {
+                        "text": " ALC dated ",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "{{memoDate}}",
+                        "style": "noticeContent",
+                        "bold": true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Whereas. the function regarding Rehabilitation of Colonies has been transferred by",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "the Chandigarh Administration to the Municipal Corporation, Chandigarh vide Notification No.",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "2/6/Fl(2)-LG-95/12740, dated 28-09-1995 and the Additional Commissioner, Municipal",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Corporation, Chandigarh has been appointed as Estate Officer under the provision of Capital",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "of Punjab (Development And Regulations) Act 1952, vide Chandigarh Administration",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                    "text": "Notification bearing No.10/3/2-UTFI (1)/g013/2727 dated 22.03.2013.",
+                    "style": "noticeContent"
+                }]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": "Whereas, the provisions of Allotment letter is as under: -",
+                "style": "noticeContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": "Clause No. 4: The transit site shall be used for residential purposes only and for no other purpose.",
+                "style": "noticeContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": "Clause No. 5:  The licensee shall not sublet. assign or otherwise part with possession of the transit site or any part thereof in favour of any person whatsoever.",
+                "style": "noticeContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Clause No. 6: (i) The license in respect of the transit site shall be liable to be terminated in case of",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "breach/non-compliance of the terms and conditions of “Tenements and sites and Services Chandigarh",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Scheme, 1979”, as amended from time to time. The licensee shall be bound by the provisions of Capital of",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Punjab (Development and Regulations) Act, 1952 and Rules made thereunder, horn time to time. -",
+                        "style": "noticeContent"
+                    }
+                ]
+
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "(ii) The licensee shall be bound by the terms and conditions of the allotment letter and",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Licensing of Tenements and sites and services in Chandigarh Scheme, 1979 as amended,— vide",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "notiﬁcation dated 9th December 1997.",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Clause No, 12: The licensee shall not deviate in any manner from the layout plan to alter the size of the",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "transit site whether by sub-division or amalgamation or otherwise ",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Clause No, 15: No fragmentation or amalgamation of site shall be permitted in any manner.",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Clause No, 16: The licensee shall not be entitled to execute General Power of Attomey/Special power of",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Attorney in respect of affairs of the site in any manner except with the prior permission of the Competent",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Authority.",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "{{commentsHeader}} : ",
+                        "style": "noticeContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{comments}}",
+                        "style": "noticeContent"
+                    }
+                ]
+
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "It has been found that you have done the above said violations and breached the terms & conditions of",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "allotment and ‘Licensing of Tenements and Sites and Services Scheme 1979. ",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "You are hereby served with this notice to remove the Violations Within 30 days from the issuance of this",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Notice, failing which further action shall be initiated against you in accordance with the terms and conditions",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "of allotment/Scheme and law.",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            }
+
+
+
+        ],
+        "styles": {
+            "tableHeader": {
+                "fontSize": 8,
+                "bold": true
+            },
+            "noticeContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+} 

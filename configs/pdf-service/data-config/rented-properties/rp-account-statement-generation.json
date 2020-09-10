@@ -1,0 +1,113 @@
+{
+    "key": "rp-account-statement-generation",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "COLONY_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-tl"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable": "account_statements",
+                "value": {
+                  "path": "$.RentAccountStatements.*"
+                }
+              },
+              {
+                "variable":"colony",
+                "value":{
+                  "path":"$.Properties[0].colony"
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-tl"
+                }
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.Properties[0].owners[0].ownerDetails.name"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.Properties[0].owners[0].ownerDetails.allotmentStartdate"
+                },
+                "type":"date"
+                
+              },
+              {
+                  "variable":"area",
+                  "value":{
+                      "path":"$.Properties[0].propertyDetails.area"
+                  }
+              },
+              {
+                "variable":"rent",
+                "value":{
+                    "path":"$.Properties[0].propertyDetails.rentPerSqyd"
+              }
+            },
+            {
+              "variable":"rentIncrementPercentage",
+              "value":{
+                  "path":"$.Properties[0].propertyDetails.rentIncrementPercentage"
+            }
+          },
+            {
+                "variable": "monthlyRent",
+                "value": {
+                  "path": "$.Properties[0].owners[0].ownerDetails.monthlyRent"
+                }
+                
+              },
+              {
+                "variable":"interestRate",
+                "value":{
+                    "path":"$.Properties[0].propertyDetails.interestRate"
+              }
+            },
+            {
+              "variable":"transitNumber",
+              "value":{
+                "path":"$.Properties[0].transitNumber"
+              }
+            }
+            ]
+          }
+        ]
+      }]
+    }
+  }  

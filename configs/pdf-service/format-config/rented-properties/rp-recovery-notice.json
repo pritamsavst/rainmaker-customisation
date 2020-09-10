@@ -1,0 +1,357 @@
+{
+    "key": "rp-recovery-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "alignment": "left",
+                        "width": 50
+                    },
+                    {
+                        "width": "*",
+                        "stack": [{
+                                "text": "{{municipal_co_chandigarh}}",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "fontSize": 13,
+                                "color": "#676A6B "
+                            },
+                            {
+                                "text": "{{cause_notice}} : {{noticeId}}",
+                                "fontSize": 11,
+                                "bold": true,
+                                "width": "*",
+                                "alignment": "center",
+                                "lineHeight": "2"
+                            }
+                        ],
+                        "alignment": "center"
+                    }
+                ]
+            },
+
+            {
+                "margin": [0, 10, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "noticeContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [
+                    {
+                        "text":"{{ownerName}}",
+                        "style":"noticeContent"
+                    },
+                    {
+
+                        "text": [{
+                                "text": "Transit Site No  ",
+                                "style": "noticeContent"
+                            },
+
+                            {
+                                "text": "{{transit_no}}",
+                                "style": "noticeContent",
+                                 "bold":true
+                            }
+                        ]
+                    },
+                    {
+                        "text": "{{colony}}.",
+                        "style": "noticeContent"
+                    }
+                ],
+                "alignment": "left"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "text": "Memo No. ",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "{{allotmentNumber}}.",
+                        "style": "noticeContent" ,
+                        "bold":true  
+                    },
+                    {
+                        "text": "Dated,",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text":"{{memoDate}}",
+                        "style":"noticeContent"
+                    }
+                ],
+                "alignment": "left"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": [{
+                        "text": "Subject: ",
+                        "style": "noticeContent"
+                    },
+
+                    {
+                        "text": " Regarding depositing of outstanding rent of Transit Site No   {{transit_no }} , {{colony}}",
+                        "style": "noticeContent",
+                        "bold": true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": [{
+                        "text": "Whereas Transit Site No.",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "{{transit_no}}",
+                        "style": "noticeContent",
+                        "bold":true
+                    },
+                    {
+                        "text": "in Rehabilitation Colony, Chandigarh was allotted to you on",
+                        "style": "noticeContent"
+                    },
+
+                    {
+                        "text": "license hold basis vide Allotment Letter No ",
+                        "style": "noticeContent"
+                    },
+
+                    {
+                        "text": "{{allotmentNumber}}",
+                        "style": "noticeContent",
+                        "bold":true
+                    },
+
+                    {
+                        "text": " ALC dated ",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "{{memoDate}}",
+                        "style": "noticeContent",
+                        "bold":true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Whereas. the function regarding Rehabilitation of Colonies has been transferred by",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "the Chandigarh Administration to the Municipal Corporation, Chandigarh vide Notification No.",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "No. 2/6/Fl(2)-LG-95/12740, dated 28-09-1995 and the Additional Commissioner, Municipal",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "Corporation, Chandigarh has been appointed as Estate Officer under the provision of Capital",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "of Punjab (Development And Regulations) Act 1952, vide Chandigarh Administration",
+                        "style": "noticeContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                    "text": "Notification bearing No.10/3/2-UTFI(1)/g013/2727 dated 22.03.2013.",
+                    "style": "noticeContent"
+                }]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Whereas, you have breached the Condition No.1 of Allotment Letter. wherein it has been cleared that -",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "each licensee is required to deposit monthly rent in advance by 10th of month.",
+                        "style": "noticeContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "noticeContent",
+                "text": "As per Section 14 (5) & 27 (1) (iii) of Licensing of Tenements and Sites and Services in Chandigarh Scheme 1979:-"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Section 14 (5) 'The default of payment of any two Installments by the due date, the lease",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "shall be liable to be cancelled by the competent authority after notice in writing.'",
+                        "style": "noticeContent"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "Section 27(1)(iii) The Competent Authority shall cancel the allotment of site/tenement if it is",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "found 'If the allottee fails to deposit license fee in spite of the service of notice of demand for a",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "period of three months, whether consecutively or otherwise",
+                        "style": "noticeContent"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": [{
+                        "text": "While going through the Provisional Accounts Statement it has been found that the following",
+                        "style": "noticeContent"
+                    },
+                    {
+                        "text": "amount is still recoverable from you, as per detail given below: -",
+                        "style": "noticeContent"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "noticeContent",
+                "text": "Rent calculated w.e.f. from {{demandNoticeFrom}} to  {{demandNoticeTo}} "
+            },
+            {
+                "style": "noticeContent",
+                "margin": [0, 10, 0, 0],
+                "text": "Total Amount Rs. {{amount}}"
+            },
+            {
+                "style": "noticeContent",
+                "margin": [0, 10, 0, 0],
+                "text": "Amount Recovered: Rs. _____________"
+            },
+            {
+                "style": "noticeContent",
+                "margin": [0, 10, 0, 0],
+                "text": "Outstanding Balance: Rs. _____________"
+            },
+            {
+                "text": [{
+                        "style": "noticeContent",
+                        "text": "You are hereby served with this notice to deposit the outstanding amount of Rs {{amount}} within 30"
+
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "days from the date of issue of this notice, failing which further action shall be initiated against you"
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "in accordance with the terms and conditions of Allotment/Scheme i"
+                    }
+                ],
+                "margin": [0, 20, 0, 0]
+            },
+            {
+                "margin": [0, 10, 0, 20],
+                "text": [{
+                        "text": "{{commentsHeader}} : ",
+                        "style": "noticeContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{comments}}",
+                        "style": "noticeContent"
+                    }
+                ],
+                "alignment": "left",
+                "lineHeight": 3
+
+            },
+
+            {
+                "alignment": "right",
+                "margin": [0, 5, 0, 0],
+                "stack": [{
+                        "style": "noticeContent",
+                        "text": "Additional Commissioner"
+
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "Municipal Corporation. Chandigarh"
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "exercising the powers of Estate Officer."
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "under Capital of Punjab (Development"
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "and Regulations) Act, 1952,",
+                        "lineHeight": 4
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "text": "Note: -",
+                "style": "noticeContent",
+                "bold": true
+            },
+            {
+                "alignment": "left",
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "style": "noticeContent",
+                        "text": "1. The due amount will be subject to audit"
+
+                    },
+                    {
+                        "style": "noticeContent",
+                        "text": "2. Payment be deposited in Chandigarh State Co-Operative Bank. Vikas Nagar Mauli Jagran,U.T. Chandigarh by cash."
+                    },
+                    {
+                        "text":"3. The due amount is subjected to change.",
+                        "style":"noticeContent"
+                    }
+
+                ]
+            }
+        ],
+        "styles": {
+            "tableHeader": {
+                "fontSize": 8,
+                "bold": true
+            },
+            "noticeContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+} 
