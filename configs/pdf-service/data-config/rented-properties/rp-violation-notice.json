@@ -49,7 +49,7 @@
           {
             "variable": "comments",
             "value": {
-              "path": "$.description"
+              "path": "$.violations"
             }
           },
           {
