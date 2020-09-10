@@ -96,7 +96,25 @@
             {
                 "margin": [50, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "Reference your letter No._____dated _______ on the subject cited above.",
+                "text":[
+                    {
+                        "text": "Reference your letter No. "
+                    },
+                    {
+                        "text":"{{sanctionLetterNumber}} ",
+                        "bold":true
+                    },
+                    {
+                        "text":"dated "
+                    },
+                    {
+                        "text":"{{sanctionDate}} ",
+                        "bold":true
+                    },
+                    {
+                        "text":"on the subject cited above."
+                    }
+                ],
                 "italics":true
             },
             {

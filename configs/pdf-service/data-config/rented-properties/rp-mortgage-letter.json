@@ -53,6 +53,19 @@
                 }
               },
               {
+                "variable":"sanctionLetterNumber",
+                "value": {
+                  "path":"$.mortgageApprovedGrantDetails[0].sanctionLetterNumber"
+                }
+              },
+              {
+                "variable":"sanctionDate",
+                "value": {
+                  "path":"$.mortgageApprovedGrantDetails[0].sanctionDate"
+                },
+                "type":"date"
+              },
+              {
                 "variable": "allotmentNumber",
                 "value": {
                   "path":"$.allotmentNumber"
