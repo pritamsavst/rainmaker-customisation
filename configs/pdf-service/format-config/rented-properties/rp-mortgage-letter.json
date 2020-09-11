@@ -67,7 +67,7 @@
                         "bold":true
                     },
                     {
-                        "text": "Dated ________________________",
+                    "text": "Dated {{allotmentStartDate}}",
                         "style": "pdfContent",
                         "bold":true
                     }
