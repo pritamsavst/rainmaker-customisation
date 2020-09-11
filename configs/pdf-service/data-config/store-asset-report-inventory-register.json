@@ -1,0 +1,149 @@
+{
+  "key": "store-asset-report-inventory-register",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.InventoryReport.*",
+    "entityIdPath": "$.storeName",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "storeName",
+                "value": {
+                  "path": "$.storeName"
+                }
+              },
+			  {
+                "variable": "storeDepartment",
+                "value": {
+                  "path": "$.storeDepartment"
+                }
+              },
+			  {
+                "variable": "materialName",
+                "value": {
+                  "path": "$.materialName"
+                }
+              },
+              {
+                "variable": "variable1",
+                "value":{
+                     "path":"$.invetoryDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "srNo",
+					  "value": "srNo"
+					},
+					{
+					  "variable": "openingQty",
+					  "value": "openingQty"
+					},
+					{
+					  "variable": "openingUom",
+					  "value": "openingUom"
+					},{
+					  "variable": "openingRate",
+					  "value": "openingRate"
+					},{
+					  "variable": "receiptDate",
+					  "value": "receiptDate"
+					},{
+					  "variable": "receiptNo",
+					  "value": "receiptNo"
+					},{
+					  "variable": "receiptDepartment",
+					  "value": "receiptDepartment"
+					},{
+					  "variable": "receiptPurchaseQty",
+					  "value": "receiptPurchaseQty"
+					},{
+					  "variable": "receiptPurchaseUom",
+					  "value": "receiptPurchaseUom"
+					},{
+					  "variable": "receiptPurchaseUnitRate",
+					  "value": "receiptPurchaseUnitRate"
+					},{
+					  "variable": "receiptTotalValue",
+					  "value": "receiptTotalValue"
+					},{
+					  "variable": "issuedDate",
+					  "value": "issuedDate"
+					},{
+					  "variable": "issuedNo",
+					  "value": "issuedNo"
+					},{
+					  "variable": "issuedToDepartment",
+					  "value": "issuedToDepartment"
+					},{
+					  "variable": "issuedQty",
+					  "value": "issuedQty"
+					},{
+					  "variable": "issuedUom",
+					  "value": "issuedUom"
+					},{
+					  "variable": "issuedUnitRate",
+					  "value": "issuedUnitRate"
+					},{
+					  "variable": "issuedTotalValue",
+					  "value": "issuedTotalValue"
+					},{
+					  "variable": "balanceQty",
+					  "value": "balanceQty"
+					},{
+					  "variable": "balanceUom",
+					  "value": "balanceUom"
+					},{
+					  "variable": "balanceTotalValue",
+					  "value": "balanceTotalValue"
+					}
+                  ]
+                }
+              },
+			  {
+                "variable": "variable2",
+                "value":{
+                     "path":"$.workflowDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "ReviewApprovalDate",
+					  "value": "reviewApprovalDate"
+					},
+					{
+					  "variable": "ReviewerApproverName",
+					  "value": "reviewerApproverName"
+					},{
+					  "variable": "Designation",
+					  "value": "designation"
+					},{
+					  "variable": "Action",
+					  "value": "action"
+					},{
+					  "variable": "SendTo",
+					  "value": "sendTo"
+					},{
+					  "variable": "ApprovalStatus",
+					  "value": "approvalStatus"
+					}
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

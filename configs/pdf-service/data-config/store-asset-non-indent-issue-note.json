@@ -139,24 +139,21 @@
                   "type":"string",
                   "scema":[
                     {
-					  "variable": "ReviewApprovalDate",
-					  "value": "reviewApprovalDate"
+					  "variable": "date",
+					  "value": "date"
 					},
 					{
-					  "variable": "ReviewerApproverName",
-					  "value": "reviewerApproverName"
+					  "variable": "updatedBy",
+					  "value": "updatedBy"
 					},{
-					  "variable": "Designation",
-					  "value": "designation"
+					  "variable": "status",
+					  "value": "status"
 					},{
-					  "variable": "Action",
-					  "value": "action"
+					  "variable": "currentAssignee",
+					  "value": "currentAssignee"
 					},{
-					  "variable": "SendTo",
-					  "value": "sendTo"
-					},{
-					  "variable": "ApprovalStatus",
-					  "value": "approvalStatus"
+					  "variable": "comments",
+					  "value": "comments"
 					}
                   ]
                 }

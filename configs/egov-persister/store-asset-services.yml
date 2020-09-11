@@ -514,9 +514,9 @@ serviceMaps:
       fromTopic: inv-issues-save-topic
       queryMaps:
       -  query: |-
-            INSERT INTO materialissue(id, tenantId, issuetype, fromstore, tostore, issuenumber, issuedate, materialissuestatus, description, totalissuevalue, fileStoreId, createdbyname, designation, indentnumber, issuedtoemployee, issuedtodesignation, issuepurpose,
+            INSERT INTO materialissue(id, tenantId, issuetype, fromstore, tostore, issuenumber, issuedate, materialissuestatus, description, totalissuevalue, totaldeductionvalue, fileStoreId, createdbyname, designation, indentnumber, issuedtoemployee, issuedtodesignation, issuepurpose,
               supplier, stateId, createdby, createdTime, lastmodifiedby, lastmodifiedtime)
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.materialIssues.*
          jsonMaps:
          -  jsonPath: $.materialIssues.*.id
@@ -530,6 +530,8 @@ serviceMaps:
          -  jsonPath: $.materialIssues.*.materialIssueStatus
          -  jsonPath: $.materialIssues.*.description
          -  jsonPath: $.materialIssues.*.totalIssueValue
+            dbType: DOUBLE
+         -  jsonPath: $.materialIssues.*.totalDeductionValue
             dbType: DOUBLE
          -  jsonPath: $.materialIssues.*.fileStoreId
          -  jsonPath: $.materialIssues.*.createdByName
@@ -587,7 +589,7 @@ serviceMaps:
       isTransaction: true
       queryMaps:
       -  query: update materialissue set issuetype = ?, fromstore  = ?, tostore = ?, issuedate = ?, materialissuestatus =
-            ?, description = ?, totalissuevalue = ?, fileStoreId = ?, designation = ?, indentnumber = ?, issuedtoemployee
+            ?, description = ?, totalissuevalue = ?, totaldeductionvalue =?,  fileStoreId = ?, designation = ?, indentnumber = ?, issuedtoemployee
             = ?, issuedtodesignation = ?, issuepurpose = ?, supplier = ?, stateId = ?, lastmodifiedby = ?, lastModifiedTime
             = ? where issuenumber = ? and tenantid = ?;
          basePath: $.materialIssues.*
@@ -599,6 +601,8 @@ serviceMaps:
          -  jsonPath: $.materialIssues.*.materialIssueStatus
          -  jsonPath: $.materialIssues.*.description
          -  jsonPath: $.materialIssues.*.totalIssueValue
+            dbType: DOUBLE
+         -  jsonPath: $.materialIssues.*.totalDeductionValue
             dbType: DOUBLE
          -  jsonPath: $.materialIssues.*.fileStoreId
          -  jsonPath: $.materialIssues.*.designation
@@ -655,8 +659,8 @@ serviceMaps:
       queryMaps:
       -  query: INSERT INTO materialreceipt(id, mrnnumber, receivingstore, receiptDate, receiptType,fileStoreId, suppliercode,
             supplierbillno, supplierbilldate, challanno, challandate, description, paymentterms, receivedby, designation,
-            mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime)
-            VALUES ( ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?,?,?);
+            mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime,externalPoNumber)
+            VALUES ( ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?,?,?,?);
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.id
@@ -689,6 +693,7 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedBy
          -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedTime
             dbType: LONG
+         -  jsonPath: $.materialReceipt.*.externalPoNumber
       -  query: INSERT INTO materialreceiptdetail(id, tenantId, material, uomNo, receivedQty, acceptedQty, unitRate, rejectionremark,
             podetailid, mrnnumber, createdby, createdTime, lastmodifiedby, lastModifiedTime, userreceivedqty, useracceptedqty)VALUES
             ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
@@ -737,7 +742,7 @@ serviceMaps:
       -  query: update materialreceipt set receivingstore = ?, receiptDate  = ?, receiptType = ?, fileStoreId=?, suppliercode
             = ?, supplierbillno = ?, supplierbilldate = ?, challanno = ?, challandate = ?, description = ?, paymentterms =
             ?, receivedby = ?, designation = ?, mrnstatus = ?, inspectedby = ?, inspectiondate = ?, inspectionremarks = ?,
-            lastmodifiedby = ?, lastModifiedTime = ? where mrnnumber = ? and tenantid = ?;
+            lastmodifiedby = ?, lastModifiedTime = ? , externalPoNumber=? where mrnnumber = ? and tenantid = ?;
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.receivingStore.code
@@ -756,13 +761,14 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.receivedBy
          -  jsonPath: $.materialReceipt.*.designation
          -  jsonPath: $.materialReceipt.*.mrnStatus
-         -  jsonPath: $.materialReceipt.*.inspectedBy
+         -  jsonPath: $.materialReceipt.*.inspectedByexternalPoNumber
          -  jsonPath: $.materialReceipt.*.inspectionDate
             dbType: LONG
          -  jsonPath: $.materialReceipt.*.inspectionRemarks
          -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedBy
          -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedTime
             dbType: LONG
+         -  jsonPath: $.materialReceipt.*.externalPoNumber
          -  jsonPath: $.materialReceipt.*.mrnNumber
          -  jsonPath: $.materialReceipt.*.tenantId
       -  query: INSERT INTO materialreceiptdetail(id, tenantId, material, uomNo, receivedQty, acceptedQty, unitRate, rejectionremark,
@@ -852,8 +858,8 @@ serviceMaps:
             dbType: LONG
          -  jsonPath: $.purchaseOrders.*.totalAmount
       -  query: INSERT INTO PurchaseOrderDetail(id, tenantId,material, purchaseOrder, orderNumber, uom, priceList,userQuantity,
-            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity)VALUES ( ?, ?, ?, ?, ?,
-            ?, ?, ?, ?, ?, ?, ?, ?, ? );
+            orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity, indentnumber)VALUES ( ?, ?, ?, ?, ?,
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ? );
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*
          jsonMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.id
@@ -870,6 +876,7 @@ serviceMaps:
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.description
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.tenderQuantity
          -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.usedQuantity
+         -  jsonPath: $.purchaseOrders.*.purchaseOrderDetails.*.indentNumber
       -  query: INSERT INTO PurchaseIndentDetail(id, purchaseOrderDetail, tenantId, indentDetail, quantity,createdBy, lastModifiedBy,
             createdTime, lastModifiedTime )VALUES ( ?, ?, ?, ?, ?,?,?,?,?);
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*.purchaseIndentDetails.*
@@ -1756,7 +1763,7 @@ serviceMaps:
       -  query: update indent set indentStatus=? where indentNumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: Indents issues updatestatus
@@ -1766,7 +1773,7 @@ serviceMaps:
       -  query: update materialissue set materialissuestatus=? where issuenumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: Purchase Order updatestatus
@@ -1776,7 +1783,7 @@ serviceMaps:
       -  query: update purchaseorder set status=? where purchaseordernumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: material receipt updatestatus
@@ -1786,7 +1793,7 @@ serviceMaps:
       -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: material receipt updatestatus
@@ -1796,7 +1803,7 @@ serviceMaps:
       -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
    -  version: 1
       name: transfer inward updatestatus
@@ -1806,5 +1813,5 @@ serviceMaps:
       -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
          basePath: $.workFlowDetails
          jsonMaps:
-         -  jsonPath: $.workFlowDetails.action
+         -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
