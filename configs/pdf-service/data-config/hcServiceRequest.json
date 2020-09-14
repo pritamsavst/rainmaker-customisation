@@ -31,7 +31,7 @@
               {
                 "variable": "locality",
                 "value": {
-                  "path": "$.locality"
+                  "path": "$.sectorName"
                 }
               },
               {
@@ -49,7 +49,7 @@
               {
                 "variable": "serviceType",
                 "value": {
-                  "path": "$.service_type"
+                  "path": "$.serviceRequestTypeName"
                 }
               },
               {
@@ -74,6 +74,12 @@
                 "variable": "contactNumber",
                 "value": {
                   "path": "$.contact_number"
+                }
+              },
+              {
+                "variable": "subType",
+                "value": {
+                  "path": "$.servicerequestsubtype"
                 }
               },
               {
