@@ -6,51 +6,57 @@
     },
     "content": [
       {
-             "style": "noc-head",
-             "table": {
-               "widths": [
-                50, "*"
-               ],
-               "body": [
-                 [
+        "style": "noc-head",
+        "table": {
+          "widths": [
+            50,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "height": 80,
+                "margin": [
+                  20,
+                  12,
+                  10,
+                  10
+                ]
+              },
+              {
+                "stack": [
                   {
-                    "image": "{{ulbLogo}}",
-                    "width": 80,
-                    "height": 80,
-                    "margin": [20, 12, 10, 10]
+                    "text": "Municipal Corporation CHANDIGARH",
+                    "style": "receipt-logo-header"
                   },
                   {
-                    "stack": [
-                      {
-                        "text": "Municipal Corporation CHANDIGARH",
-                        "style": "receipt-logo-header"
-                      },
-                      {
-                        "text":  "Service Request ID : {{serviceRequestId}} ",
-                        "style": "receipt-logo-sub-header"
-                      },
-                      {
-                        "text":  "Resolution Time(Days) : {{SLADays}} ",
-                        "style": "receipt-logo-sub-header"
-                      },
-                      {
-                        "text":  "Status : {{status}} ",
-                        "style": "receipt-logo-sub-header"
-                      }
-                    ],
-                    "alignment": "center",
-                    "margin": [
-                      0,
-                      12,
-                      0,
-                      0
-                    ]
+                    "text": "Service Request ID : {{serviceRequestId}} ",
+                    "style": "receipt-logo-sub-header"
+                  },
+                  {
+                    "text": "Resolution Time(Days) : {{SLADays}} ",
+                    "style": "receipt-logo-sub-header"
+                  },
+                  {
+                    "text": "Status : {{status}} ",
+                    "style": "receipt-logo-sub-header"
                   }
-                 ]
-               ]
-             },
-             "layout": "noBorders"
-           },
+                ],
+                "alignment": "center",
+                "margin": [
+                  0,
+                  12,
+                  0,
+                  0
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
       {
         "stack": [
           {
@@ -78,8 +84,9 @@
                       "widths": [
                         "25%",
                         "15%",
-                        "35%",
-                        "25%"
+                        "25%",
+                        "25%",
+                        "10%"
                       ],
                       "body": [
                         [
@@ -95,7 +102,18 @@
                             "fontSize": 11
                           },
                           {
-                            "text": "No of Trees for Cutting/Pruning/Removal",
+                            "text": "Service Request SubType",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": "No. of trees for cutting/pruning/removal",
                             "border": [
                               false,
                               false,
@@ -131,6 +149,16 @@
                         [
                           {
                             "text": "{{serviceType}}",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table2"
+                          },
+                          {
+                            "text": "{{subType}}",
                             "border": [
                               false,
                               false,
@@ -194,7 +222,7 @@
                             "fontSize": 11
                           },
                           {
-                            "text": "House no and Street Name",
+                            "text": "House no. and street name",
                             "border": [
                               false,
                               false,
@@ -206,6 +234,17 @@
                           },
                           {
                             "text": "Landmark",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
+                          },
+                          {
+                            "text": " ",
                             "border": [
                               false,
                               false,
@@ -256,6 +295,17 @@
                               false
                             ],
                             "style": "receipt-table2"
+                          },
+                          {
+                            "text": "  ",
+                            "border": [
+                              false,
+                              false,
+                              false,
+                              false
+                            ],
+                            "style": "receipt-table-value-cont",
+                            "fontSize": 11
                           }
                         ]
                       ]
