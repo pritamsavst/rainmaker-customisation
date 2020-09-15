@@ -9,8 +9,6 @@
       "mappings": [{
         "mappings": [{
             "direct": [
-
-
               {
                 "variable": "header",
                 "value": {
@@ -47,6 +45,28 @@
 
               },
               {
+                "variable": "allotmentStartdate",
+                "value": {
+                  "path":"$.ownerDetails.allotmentStartdate"
+                },
+                "type":"date"
+
+              },
+              {
+                "variable": "fatherOrHusband",
+                "value": {
+                  "path":"$.ownerDetails.fatherOrHusband"
+                }
+
+              },
+               {
+                "variable": "allotmenNumber",
+                "value": {
+                  "path":"$.allotmenNumber"
+                }
+
+              },
+              {
                 "variable":"colony",
                 "value":{
                   "path":"$.property.colony"
@@ -78,7 +98,8 @@
                 "variable":"dateOfDeathAllottee",
                 "value":{
                   "path":"$.ownerDetails.dateOfDeathAllottee"
-                }
+                },
+                "type":"date"
               },
 
               {
