@@ -16,7 +16,7 @@
                     {
                         "stack": [
                             {
-                                "text": "Provisional Statement of Transit No. {{transitNumber}}, ",
+                                "text": "Provisional Statement of Transit Site No. {{transitNumber}}, ",
                                 "alignment": "center",
                                 "fontSize": 14,
                                 "bold": true,
@@ -57,7 +57,7 @@
                             "style": "table-content"
                         }],
                         [{
-                            "text": "Transit No",
+                            "text": "Transit Site No",
                             "style": "table-header"
                         }, {
                             "text": "{{transitNumber}}",
@@ -93,7 +93,7 @@
                         }],
                      
                         [{
-                            "text": "Montly Rent",
+                            "text": "Monthly Rent",
                             "style": "table-header"
                         }, {
                             "text": "{{monthlyRent}}",

@@ -46,6 +46,13 @@
 
               },
               {
+                "variable": "allotmenNumber",
+                "value": {
+                  "path":"$.allotmenNumber"
+                }
+
+              },
+              {
                 "variable":"colony",
                 "value":{
                   "path":"$.property.colony"
@@ -83,18 +90,19 @@
                 "variable":"creationDate",
                 "value":{
                   "path":"$.auditDetails.createdTime"
-                }
+                },
+                "type":"date"
               },
               {
                 "variable":"allotmentNumber",
                 "value":{
-                  "path":"$.property.AllotmentNumber"
+                  "path":"$.allotmentNumber"
                 }
               },
               {
                 "variable":"allotmentDate",
                 "value":{
-                  "path":"$.property.allotmentDate"
+                  "path":"$.allotmentStartDate"
                 }
               }
 

@@ -54,16 +54,6 @@
                         "text": "U.T., Chandigarh.",
                         "style": "pdfContent",
                         "width": "*"
-                    },
-                    {
-                        "text": "Memo No----------------------",
-                        "style": "pdfContent",
-                        "width": "*"
-                    },
-                    {
-                        "text": "Dated ________________________",
-                        "style": "pdfContent",
-                        "width": "*"
                     }
 
                 ]
@@ -91,12 +81,12 @@
                         "width": "*"
                     },
                     {
-                        "text": "Memo No----------------------",
+                        "text": "Memo No  {{allotmenNumber}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "Dated ________________________",
+                        "text": "Dated {{allotmentStartdate}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -131,7 +121,21 @@
                 "margin": [50, 0, 0, 0],
                 "style": "pdfContent",
                 "text": [{
-                        "text": "Consequent upon the death of ____on {{dateOfDeathAllottee}} the Death Certificate of which has been submitted by you alongwith Indemnity Bond and extract of newspapers dated "
+                        "text": "Consequent upon the death of  "
+                    },
+                    {
+                        "text": "{{fatherOrHusband}} ",
+                        "bold":true
+                    },
+                    {
+                        "text": "on "
+                    },
+                    {
+                        "text": "{{dateOfDeathAllottee}} ",
+                        "bold":true
+                    },
+                    {
+                        "text": "the Death Certificate of which has been submitted by you alongwith Indemnity Bond and extract of newspapers dated "
                     },
                     {
                         "text": "i.e.____________________(Hindi),_________________(Punjabi), and______________"
@@ -148,7 +152,13 @@
                         "bold":true
                     },
                     {
-                        "text": " is hereby transferred in your name on the basis of intestate death of Shri/Smt.____________ subject to the following terms &amp; Conditions:-"
+                        "text": " is hereby transferred in your name on the basis of intestate death of Shri/Smt. "
+                    },
+                    {
+                        "text":"{{fatherOrHusband}} ","bold":true
+                    },
+                    {
+                        "text":"subject to the following terms &amp; Conditions:-"
                     }
                 ]
             },
