@@ -48,7 +48,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -60,7 +60,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -72,7 +72,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -90,7 +90,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -109,7 +109,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -121,7 +121,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -139,7 +139,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -157,7 +157,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -175,7 +175,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -187,7 +187,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -199,7 +199,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -211,7 +211,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -223,7 +223,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -235,7 +235,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -277,7 +277,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -289,7 +289,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -300,7 +300,7 @@
                             "type": "label",
                             "localisation": {
                               "prefix": "RP",
-                              "module": "rainmaker-tl"
+                              "module": "rainmaker-rp"
                             }
                           },
                           {
@@ -318,7 +318,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -336,7 +336,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -348,7 +348,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -360,7 +360,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -390,7 +390,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -408,7 +408,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -426,7 +426,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -438,7 +438,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                         {
@@ -450,7 +450,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -462,7 +462,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -474,7 +474,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -486,7 +486,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -498,7 +498,7 @@
                             "localisation":{
                                "required":true,
                                "prefix":"RP",   
-                               "module":"rainmaker-tl"
+                               "module":"rainmaker-rp"
                             } 
                           },
                           {
@@ -522,7 +522,7 @@
                           "localisation":{
                              "required":true,
                              "prefix":"RP",   
-                             "module":"rainmaker-tl"
+                             "module":"rainmaker-rp"
                           } 
                         },
                         {
@@ -534,7 +534,7 @@
                           "localisation":{
                              "required":true,
                              "prefix":"RP",   
-                             "module":"rainmaker-tl"
+                             "module":"rainmaker-rp"
                           } 
                         },
                         {
@@ -546,7 +546,7 @@
                           "localisation":{
                              "required":true,
                              "prefix":"RP",   
-                             "module":"rainmaker-tl"
+                             "module":"rainmaker-rp"
                           } 
                         },
                         {
@@ -557,7 +557,7 @@
                           "localisation":{
                             "required":true,
                             "prefix":"RP",   
-                            "module":"rainmaker-tl"
+                            "module":"rainmaker-rp"
                          }                       
                         },
                       {
@@ -568,7 +568,7 @@
                         "localisation":{
                           "required":true,
                           "prefix":"RP",   
-                          "module":"rainmaker-tl"
+                          "module":"rainmaker-rp"
                        } 
 
                     }
