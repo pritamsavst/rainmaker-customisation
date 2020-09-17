@@ -28,7 +28,7 @@
               "type": "label",
               "localisation": {
                 "prefix": "RP",
-                "module": "rainmaker-tl"
+                "module": "rainmaker-rp"
               }
             },
             {
@@ -209,7 +209,7 @@
               },
               "localisation": {
                 "required": true,
-                "module": "rainmaker-tl"
+                "module": "rainmaker-rp"
               }
             },
             {
