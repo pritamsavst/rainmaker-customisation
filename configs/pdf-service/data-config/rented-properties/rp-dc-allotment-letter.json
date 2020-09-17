@@ -18,7 +18,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
               {
@@ -29,7 +29,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
 
@@ -46,13 +46,20 @@
 
               },
               {
+                "variable": "allotmenNumber",
+                "value": {
+                  "path":"$.allotmenNumber"
+                }
+
+              },
+              {
                 "variable":"colony",
                 "value":{
                   "path":"$.property.colony"
                 },
                 "localisation": {
                   "required": true,
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
               {
@@ -83,18 +90,19 @@
                 "variable":"creationDate",
                 "value":{
                   "path":"$.auditDetails.createdTime"
-                }
+                },
+                "type":"date"
               },
               {
                 "variable":"allotmentNumber",
                 "value":{
-                  "path":"$.property.AllotmentNumber"
+                  "path":"$.allotmentNumber"
                 }
               },
               {
                 "variable":"allotmentDate",
                 "value":{
-                  "path":"$.property.allotmentDate"
+                  "path":"$.allotmentStartDate"
                 }
               }
 

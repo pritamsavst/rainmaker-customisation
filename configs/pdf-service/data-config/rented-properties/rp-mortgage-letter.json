@@ -19,7 +19,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
               {
@@ -30,7 +30,7 @@
                 "type": "label",
                 "localisation": {
                   "prefix": "RP",
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
 
@@ -47,10 +47,32 @@
 
               },
               {
+                "variable": "allotmentStartDate",
+                "value": {
+                  "path":"$.allotmentStartDate"
+                },
+                "type":"date"
+
+              },
+              
+              {
                 "variable":"mortgageAmount",
                 "value": {
                   "path":"$.mortgageApprovedGrantDetails[0].mortgageAmount"
                 }
+              },
+              {
+                "variable":"sanctionLetterNumber",
+                "value": {
+                  "path":"$.mortgageApprovedGrantDetails[0].sanctionLetterNumber"
+                }
+              },
+              {
+                "variable":"sanctionDate",
+                "value": {
+                  "path":"$.mortgageApprovedGrantDetails[0].sanctionDate"
+                },
+                "type":"date"
               },
               {
                 "variable": "allotmentNumber",
@@ -66,7 +88,7 @@
                 },
                 "localisation": {
                   "required": true,
-                  "module": "rainmaker-tl"
+                  "module": "rainmaker-rp"
                 }
               },
               {

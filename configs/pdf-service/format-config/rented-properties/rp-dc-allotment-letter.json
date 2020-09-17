@@ -56,12 +56,12 @@
                         "width": "*"
                     },
                     {
-                        "text": "Memo No _______",
+                        "text": "Memo No {{allotmentNumber}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "Dated ___________",
+                        "text": "Dated {{allotmentDate}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -100,12 +100,11 @@
                         "text":"The duplicate Allotment Letter No."
                     },
                     {
-                    "text":"{{allotmentNumber}} "
-                    ,
+                    "text":"{{allotmentNumber}} " ,
                         "bold":true
                     },
                     {
-                        "text":"Dated ______ in respect of Transit Site No. "
+                        "text":"Dated {{allotmentDate}} in respect of Transit Site No. "
                     },
                     {
                         "text":"{{transitNumber}}, {{colony}}, {{area}} ."

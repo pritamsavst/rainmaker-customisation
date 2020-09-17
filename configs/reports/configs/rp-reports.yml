@@ -1,0 +1,430 @@
+---
+ReportDefinitions:
+- reportName: OTApplicationStatusReport
+  summary: Number of applications by there status
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: status
+    label: report.rp.status
+    type: string
+    source: ot
+    total: false
+  - name: total
+    label: report.rp.total
+    type: string
+    source: ot
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: ot
+    isMandatory: false
+    searchClause: AND CAST (ot.modified_date AS BIGINT) >= $fromDate 
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: ot
+    isMandatory: false
+    searchClause: AND CAST (ot.modified_date AS BIGINT) <= $toDate
+  query: SELECT COUNT(od.application_number) as total,message.message as status from cs_pt_ownership_v1 ot LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id LEFT OUTER JOIN message ON message.code = ot.application_state AND message.locale = 'en_IN' WHERE ot.tenantid LIKE $tenantid AND ot.application_state != 'null'
+  groupby: GROUP BY message.message
+
+
+- reportName: DCApplicationStatusReport
+  summary: Number of applications by there status
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: status
+    label: report.rp.status
+    type: string
+    source: dc
+    total: false
+  - name: total
+    label: report.rp.total
+    type: string
+    source: dc
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND dc.modified_time >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND dc.modified_time <= $toDate
+  query: SELECT COUNT(application_number) as total,message.message as status from cs_pt_duplicate_ownership_application dc LEFT OUTER JOIN message ON message.code = state AND message.locale = 'en_IN' WHERE dc.tenantid LIKE $tenantid
+  groupby: GROUP BY message.message
+  
+- reportName: MGApplicationStatusReport
+  summary: Number of applications by there status
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: status
+    label: report.rp.status
+    type: string
+    source: mg
+    total: false
+  - name: total
+    label: report.rp.total
+    type: string
+    source: mg
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: mg
+    isMandatory: false
+    searchClause: AND mg.modified_time >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: mg
+    isMandatory: false
+    searchClause: AND mg.modified_time <= $toDate
+  query: SELECT COUNT(application_number) as total,message.message as status from cs_pt_mortgage_application mg LEFT OUTER JOIN message ON message.code = state AND message.locale = 'en_IN' WHERE mg.tenantid LIKE $tenantid
+  groupby: GROUP BY message.message
+
+
+- reportName: OTCollectionReport
+  summary: Ownership Trasfer Collection Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: receiptnumber
+    label: report.rp.receiptnumber
+    type: string
+    source: ot
+    total: false
+  - name: receiptIssueDate
+    label: report.rp.receiptissuedate
+    type: string
+    source: ot
+    total: false
+  - name: g8issuedate
+    label: report.rp.g8issuedate
+    type: string
+    source: ot
+    total: false
+  - name: g8receiptno
+    label: report.rp.g8receiptno
+    type: string
+    source: ot
+    total: false
+  - name: allotmen_number
+    label: report.rp.allotmentnumber
+    type: string
+    source: ot
+    total: false
+  - name: formattedAllotmentDate
+    label: report.rp.allotmentdate
+    type: string
+    source: ot
+    total: false
+  - name: name
+    label: report.rp.user.name
+    type: string
+    source: ot
+    total: false
+  - name: mobileno
+    label: report.rp.user.mobilenumber
+    type: string
+    source: ot
+    total: false
+  - name: bankid
+    label: report.rp.bankid
+    type: string
+    source: ot
+    total: false
+  - name: branchname
+    label: report.rp.branchname
+    type: string
+    source: ot
+    total: false
+  - name: transactionumber
+    label: report.rp.transactionumber
+    type: string
+    source: ot
+    total: false
+  - name: status
+    label: report.rp.status
+    type: string
+    source: ot
+    total: false
+  - name: applicationtype
+    label: report.rp.applicationtype
+    type: string
+    source: ot
+    total: false
+  - name: totalamount
+    label: report.rp.receipt.totalamount
+    type: string
+    source: ot
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: ot
+    isMandatory: false
+    searchClause: AND receipt.createddate >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: ot
+    isMandatory: false
+    searchClause: AND receipt.createddate  <= $toDate 
+  query: |
+    SELECT 
+      ot.allotmen_number,
+      to_char(To_timestamp(CAST (od.allotment_startdate AS BIGINT) / 1000), 'DD/MM/YYYY') as formattedAllotmentDate,
+      msg.message as status,
+      to_char(To_timestamp(receipt.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
+      receipt.receiptnumber,
+      CASE WHEN split_part(ot.application_state,'_',1) = 'OT' THEN 'Ownership Transfer' ELSE '' END as applicationtype,
+      od.name as name,
+      od.phone as mobileno,
+      ih.bankid,
+      ih.branchname,
+      ih.transactionnumber as transactionnumber,
+      ih.instrumenttype,
+      receipt.totalamount as totalamount,
+      To_char(To_timestamp(receipt.manualreceiptdate / 1000), 'DD/MM/YYYY') AS g8issuedate,
+      receipt.manualreceiptnumber as g8receiptno
+    FROM cs_pt_ownership_v1 ot 
+    INNER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id 
+    INNER JOIN  message msg ON  msg.code = ot.application_state AND msg.locale = 'en_IN'
+    LEFT OUTER JOIN egcl_receiptheader receipt ON receipt.consumercode = od.application_number  and receipt.status != 'Cancelled'
+    LEFT OUTER JOIN egcl_receiptinstrument as ri ON ri.receiptheader = receipt.id
+    LEFT OUTER JOIN egcl_instrumentheader as ih ON ih.id = ri.instrumentheader and ih.instrumentstatus != 'CANCELLED'
+    WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' AND ot.tenantId LIKE $tenantid
+
+  
+- reportName: DCCollectionReport
+  summary: Duplicate Copy Collection Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: receiptnumber
+    label: report.rp.receiptnumber
+    type: string
+    source: dc
+    total: false
+  - name: receiptIssueDate
+    label: report.rp.receiptissuedate
+    type: string
+    source: dc
+    total: false
+  - name: g8issuedate
+    label: report.rp.g8issuedate
+    type: string
+    source: dc
+    total: false
+  - name: g8receiptno
+    label: report.rp.g8receiptno
+    type: string
+    source: dc
+    total: false
+  - name: allotmen_number
+    label: report.rp.allotmentnumber
+    type: string
+    source: dc
+    total: false
+  - name: formattedAllotmentDate
+    label: report.rp.allotmentdate
+    type: string
+    source: dc
+    total: false
+  - name: name
+    label: report.rp.user.name
+    type: string
+    source: dc
+    total: false
+  - name: mobileno
+    label: report.rp.user.mobilenumber
+    type: string
+    source: dc
+    total: false
+  - name: bankid
+    label: report.rp.bankid
+    type: string
+    source: dc
+    total: false
+  - name: branchname
+    label: report.rp.branchname
+    type: string
+    source: dc
+    total: false
+  - name: transactionumber
+    label: report.rp.transactionumber
+    type: string
+    source: dc
+    total: false
+  - name: status
+    label: report.rp.status
+    type: string
+    source: dc
+    total: false
+  - name: applicationtype
+    label: report.rp.applicationtype
+    type: string
+    source: dc
+    total: false
+  - name: totalamount
+    label: report.rp.receipt.totalamount
+    type: string
+    source: dc
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND receipt.createddate >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND receipt.createddate  <= $toDate 
+  query: |
+    SELECT 
+      ot.allotmen_number,
+      to_char(To_timestamp(CAST (od.allotment_startdate AS BIGINT) / 1000), 'DD/MM/YYYY') as formattedAllotmentDate,
+      msg.message as status,
+      to_char(To_timestamp(receipt.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
+      receipt.receiptnumber,
+      CASE WHEN split_part(dc.state,'_',1) = 'DC' THEN 'Duplicate Copy' ELSE '' END as applicationtype,
+      da.name as name,
+      da.mobileno as mobileno,
+      ih.bankid,
+      ih.branchname,
+      ih.transactionnumber as transactionnumber,
+      ih.instrumenttype,
+      receipt.totalamount as totalamount,
+      To_char(To_timestamp(receipt.manualreceiptdate / 1000), 'DD/MM/YYYY') AS g8issuedate,
+      receipt.manualreceiptnumber as g8receiptno
+    FROM cs_pt_duplicate_ownership_application dc 
+    INNER JOIN cs_pt_duplicatecopy_applicant da ON da.application_id = dc.id 
+    INNER JOIN  message msg ON  msg.code = dc.state AND msg.locale = 'en_IN'
+    LEFT OUTER JOIN cs_pt_ownership_v1 ot ON dc.property_id = ot.property_id and ot.active_state = true
+    LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON ot.id = od.owner_id
+    LEFT OUTER JOIN egcl_receiptheader receipt ON receipt.consumercode = dc.application_number  and receipt.status != 'Cancelled'
+    LEFT OUTER JOIN egcl_receiptinstrument as ri ON ri.receiptheader = receipt.id
+    LEFT OUTER JOIN egcl_instrumentheader as ih ON ih.id = ri.instrumentheader and ih.instrumentstatus != 'CANCELLED'
+    WHERE dc.State in ('DC_APPROVED', 'DC_PAID', 'DC_REJECTEDPAID','DC_PENDINGCLAPPROVAL','DC_PENDINGSAREJECTION') AND dc.tenantId LIKE $tenantid
+    
+
+- reportName: RPRentCollectionReport
+  summary: RP Rent Collection Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: receiptnumber
+    label: report.rp.receiptnumber
+    type: string
+    source: rent
+    total: false
+  - name: receiptIssueDate
+    label: report.rp.receiptissuedate
+    type: string
+    source: rent
+    total: false
+  - name: g8issuedate
+    label: report.rp.g8issuedate
+    type: string
+    source: rent
+    total: false
+  - name: g8receiptno
+    label: report.rp.g8receiptno
+    type: string
+    source: rent
+    total: false
+  - name: transit_number
+    label: report.rp.transitnumber
+    type: string
+    source: rent
+    total: false
+  - name: name
+    label: report.rp.user.name
+    type: string
+    source: rent
+    total: false
+  - name: mobileno
+    label: report.rp.user.mobilenumber
+    type: string
+    source: rent
+    total: false
+  - name: bankid
+    label: report.rp.bankid
+    type: string
+    source: rent
+    total: false
+  - name: branchname
+    label: report.rp.branchname
+    type: string
+    source: rent
+    total: false
+  - name: transactionumber
+    label: report.rp.transactionumber
+    type: string
+    source: rent
+    total: false
+  - name: paymenttype
+    label: report.rp.paymenttype
+    type: string
+    source: rent
+    total: false
+  - name: totalamount
+    label: report.rp.receipt.totalamount
+    type: string
+    source: rent
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: rent
+    isMandatory: false
+    searchClause: AND receipt.createddate >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND receipt.createddate  <= $toDate 
+  query: |
+    SELECT 
+      rent.transit_number,
+      to_char(To_timestamp(receipt.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
+      receipt.receiptnumber,
+      od.name as name,
+      od.phone as mobileno,
+      ih.bankid,
+      ih.branchname,
+      ih.transactionnumber as transactionnumber,
+      ih.instrumenttype,
+      receipt.totalamount as totalamount,
+      To_char(To_timestamp(receipt.manualreceiptdate / 1000), 'DD/MM/YYYY') AS g8issuedate,
+      receipt.manualreceiptnumber as g8receiptno
+    FROM cs_pt_property_v1 rent 
+    LEFT OUTER JOIN cs_pt_ownership_v1 ot ON rent.id = ot.property_id and ot.active_state = true
+    LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON ot.id = od.owner_id
+    LEFT OUTER JOIN egcl_receiptheader receipt ON receipt.consumercode = rent.rent_payment_consumer_code  and receipt.status != 'Cancelled'
+    LEFT OUTER JOIN egcl_receiptinstrument as ri ON ri.receiptheader = receipt.id
+    LEFT OUTER JOIN egcl_instrumentheader as ih ON ih.id = ri.instrumentheader and ih.instrumentstatus != 'CANCELLED'
+    WHERE rent.tenantId LIKE $tenantid
+
+
+
+

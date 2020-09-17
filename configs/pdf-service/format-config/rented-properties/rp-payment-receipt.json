@@ -34,11 +34,7 @@
                                   {
                                       "text": "{{payment_receipt}}",
                                       "style": "receipt-table-value-cont"
-                                  },
-                                  {
-                                    "text": "{{license_name}}",
-                                    "style": "receipt-table-value-cont"
-                                }
+                                  }
                             ],
                             "margin": [
                               46,
