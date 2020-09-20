@@ -99,16 +99,6 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: false
-  - name: source
-    label: reports.rainmaker-pgr.source
-    type: string
-    source: eg_pgr_service
-    total: false
-  - name: complaintraisedby
-    label: reports.rainmaker-pgr.complaintraisedby
-    type: string
-    source: eg_pgr_service
-    total: false
   - name: lastassignedto
     label: reports.rainmaker-pgr.lastassignedto
     type: string
@@ -134,6 +124,16 @@ ReportDefinitions:
     type: string
     source: eg_pgr_service
     total: false 
+  - name: source
+    label: reports.rainmaker-pgr.source
+    type: string
+    source: eg_pgr_service
+    total: false
+  - name: complaintraisedby
+    label: reports.rainmaker-pgr.complaintraisedby
+    type: string
+    source: eg_pgr_service
+    total: false
   searchParams:
   - name: fromDate
     label: reports.rainmaker-pgr.datefrom
