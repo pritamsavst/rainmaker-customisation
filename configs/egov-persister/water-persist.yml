@@ -145,7 +145,7 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_property(id, tenantId, property_id, usagecategory, usagesubcategory, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_ws_property(id, tenantId, property_id, wsid, usagecategory, usagesubcategory, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       basePath: $.WaterConnection.waterProperty
       jsonMaps:
          
@@ -154,6 +154,8 @@ serviceMaps:
           - jsonPath: $.WaterConnection.tenantId
           
           - jsonPath: $.WaterConnection.propertyId
+          
+          - jsonPath: $.WaterConnection.id
 
           - jsonPath: $.WaterConnection.waterProperty.usageCategory
 
@@ -441,7 +443,7 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime  
       
-    - query: INSERT INTO eg_ws_property(id, tenantId, property_id, usagecategory, usagesubcategory, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET usagecategory = ?, usagesubcategory =?, lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_property(id, tenantId, property_id, wsid, usagecategory, usagesubcategory, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET usagecategory = ?, usagesubcategory =?, lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterProperty
       jsonMaps:
          
@@ -450,6 +452,8 @@ serviceMaps:
           - jsonPath: $.WaterConnection.tenantId
           
           - jsonPath: $.WaterConnection.propertyId
+          
+          - jsonPath: $.WaterConnection.id
 
           - jsonPath: $.WaterConnection.waterProperty.usageCategory
 
