@@ -127,9 +127,9 @@ serviceMaps:
           
           - jsonPath: $.WaterConnection.id
           
-          - jsonPath: $.WaterConnection.applicationNo
+          - jsonPath: $.WaterConnection.waterApplication.applicationNo
 
-          - jsonPath: $.WaterConnection.waterApplication.activityType
+          - jsonPath: $.WaterConnection.activityType
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
@@ -413,9 +413,9 @@ serviceMaps:
           
           - jsonPath: $.WaterConnection.id
           
-          - jsonPath: $.WaterConnection.applicationNo
+          - jsonPath: $.WaterConnection.waterApplication.applicationNo
 
-          - jsonPath: $.WaterConnection.waterApplication.activityType
+          - jsonPath: $.WaterConnection.activityType
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
@@ -431,7 +431,7 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
-          - jsonPath: $.WaterConnection.waterApplication.activityType
+          - jsonPath: $.WaterConnection.activityType
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
