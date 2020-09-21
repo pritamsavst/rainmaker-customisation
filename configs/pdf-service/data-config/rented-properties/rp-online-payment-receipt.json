@@ -43,7 +43,7 @@
                           {
                             "variable": "dateOfPayment",
                             "value": {
-                              "path": "$.Properties[0].payments[0].dateOfPayment"
+                              "path": "$.Payments[0].transactionDate"
                             },
                             "type":"date"
                           },
