@@ -8,7 +8,7 @@ serviceMaps:
       isTransaction: true      
       queryMaps:
       -  query: INSERT INTO public.nulm_sep_application_detail(application_uuid,application_id,application_status,nulm_application_id,name,gender,age,dob,adhar_no,mother_name,father_or_husband_name,occupation,address, contact, since_how_long_in_chandigarh, qualification, 
-                category, is_urban_poor,is_minority, is_handicapped, is_loan_from_bankinginstitute,is_repayment_made, bpl_no, minority, type_of_business_to_be_started,previous_experience, place_of_work, bank_details, no_of_family_members,project_cost, loan_amount, recommended_amount, recommended_by, representative_name, representative_address,tenant_id, is_active, created_by, created_time,last_modified_by, last_modified_time,remark)VALUES (?,?,?, ?, ?, ?,?, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
+                category, is_urban_poor,is_minority, is_handicapped, is_loan_from_bankinginstitute,is_repayment_made, bpl_no, minority, type_of_business_to_be_started,previous_experience, place_of_work, no_of_family_members, loan_amount, recommended_by, representative_name, representative_address,tenant_id, is_active, created_by, created_time,last_modified_by, last_modified_time,remark,account_name,bank_name,branch_name,is_disability_certificate_available)VALUES (?,?,?, ?, ?, ?,?, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?);
          basePath: $.NulmSepRequest
          jsonMaps:
          -  jsonPath: $.NulmSepRequest.applicationUuid
@@ -38,11 +38,8 @@ serviceMaps:
          -  jsonPath: $.NulmSepRequest.typeOfBusinessToBeStarted
          -  jsonPath: $.NulmSepRequest.previousExperience
          -  jsonPath: $.NulmSepRequest.placeOfWork
-         -  jsonPath: $.NulmSepRequest.bankDetails
          -  jsonPath: $.NulmSepRequest.noOfFamilyMembers
-         -  jsonPath: $.NulmSepRequest.projectCost
          -  jsonPath: $.NulmSepRequest.loanAmount
-         -  jsonPath: $.NulmSepRequest.recommendedAmount
          -  jsonPath: $.NulmSepRequest.recommendedBy
          -  jsonPath: $.NulmSepRequest.representativeName
          -  jsonPath: $.NulmSepRequest.representativeAddress
@@ -53,6 +50,10 @@ serviceMaps:
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmSepRequest.remark
+         -  jsonPath: $.NulmSepRequest.accountName
+         -  jsonPath: $.NulmSepRequest.bankName
+         -  jsonPath: $.NulmSepRequest.branchName
+         -  jsonPath: $.NulmSepRequest.isDisabilityCertificateAvailable
       -  query: INSERT INTO public.nulm_sep_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.NulmSepRequest.applicationDocument.*
          jsonMaps:
@@ -72,8 +73,9 @@ serviceMaps:
       fromTopic: nulm-services-update-sepapplication
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_sep_application_detail SET  nulm_application_id=?,application_status=?, name=?, gender=?, age=?, dob=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?, occupation=?, address=?, contact=?, since_how_long_in_chandigarh=?, qualification=?, category=?, is_urban_poor=?, is_minority=?, is_handicapped=?, is_loan_from_bankinginstitute=?, is_repayment_made=?, bpl_no=?, minority=?, type_of_business_to_be_started=?, previous_experience=?, place_of_work=?, bank_details=?, no_of_family_members=?, project_cost=?, loan_amount=?, recommended_amount=?, recommended_by=?, representative_name=?, representative_address=?,  last_modified_by=?, last_modified_time=? ,remark=?
-                WHERE  application_uuid=? and tenant_id=? and is_active=?;
+      -  query: UPDATE public.nulm_sep_application_detail SET  nulm_application_id=?,application_status=?, name=?, gender=?, age=?, dob=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?, occupation=?, address=?, contact=?, since_how_long_in_chandigarh=?, qualification=?, category=?, is_urban_poor=?, is_minority=?, is_handicapped=?, is_loan_from_bankinginstitute=?, is_repayment_made=?, bpl_no=?, minority=?, type_of_business_to_be_started=?, previous_experience=?, place_of_work=?,no_of_family_members=?, loan_amount=?,recommended_by=?, representative_name=?, representative_address=?,  last_modified_by=?, last_modified_time=? ,remark=?
+                ,account_name=?,bank_name=?,branch_name=?,is_disability_certificate_available=?,task_committee_approved_amount=?,task_committee_remark=?,task_committee_action_date=?::timestamp,task_committee_status=?,committee_bank_name=?,committee_branch_name=?,application_forwarded_on_date=?::timestamp,sanction_date=?::timestamp,sanction_remarks=? 
+                 WHERE  application_uuid=? and tenant_id=? and is_active=?;
          basePath: $.NulmSepRequest
          jsonMaps:
          -  jsonPath: $.NulmSepRequest.nulmApplicationId
@@ -101,17 +103,27 @@ serviceMaps:
          -  jsonPath: $.NulmSepRequest.typeOfBusinessToBeStarted
          -  jsonPath: $.NulmSepRequest.previousExperience
          -  jsonPath: $.NulmSepRequest.placeOfWork
-         -  jsonPath: $.NulmSepRequest.bankDetails
          -  jsonPath: $.NulmSepRequest.noOfFamilyMembers
-         -  jsonPath: $.NulmSepRequest.projectCost
          -  jsonPath: $.NulmSepRequest.loanAmount
-         -  jsonPath: $.NulmSepRequest.recommendedAmount
          -  jsonPath: $.NulmSepRequest.recommendedBy
          -  jsonPath: $.NulmSepRequest.representativeName
          -  jsonPath: $.NulmSepRequest.representativeAddress
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSepRequest.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmSepRequest.remark
+         -  jsonPath: $.NulmSepRequest.accountName
+         -  jsonPath: $.NulmSepRequest.bankName
+         -  jsonPath: $.NulmSepRequest.branchName
+         -  jsonPath: $.NulmSepRequest.isDisabilityCertificateAvailable
+         -  jsonPath: $.NulmSepRequest.taskCommitteeApprovedAmount
+         -  jsonPath: $.NulmSepRequest.taskCommitteeRemark
+         -  jsonPath: $.NulmSepRequest.taskCommitteeActionDate
+         -  jsonPath: $.NulmSepRequest.taskCommitteeStatus
+         -  jsonPath: $.NulmSepRequest.committeeBankName
+         -  jsonPath: $.NulmSepRequest.committeeBranchName
+         -  jsonPath: $.NulmSepRequest.applicationForwardedOnDate
+         -  jsonPath: $.NulmSepRequest.sanctionDate
+         -  jsonPath: $.NulmSepRequest.sanctionRemarks
          -  jsonPath: $.NulmSepRequest.applicationUuid
          -  jsonPath: $.NulmSepRequest.tenantId         
          -  jsonPath: $.NulmSepRequest.isActive
@@ -538,7 +550,7 @@ serviceMaps:
       -  query: INSERT INTO public.nulm_suh_application_detail(suh_uuid, suh_id, name_of_shelter, address, shelter_background,category, weather_condition, shelter_classification, other_classification, ownership, operation_and_management_of_shelters, area, capacity, is_constitution_of_shelter_management_committee, constitution_of_shelter_management_committee_remark, 
                 is_social_audit, social_audit_remark, is_linkage_to_central_govt_welfare_schemes, linkage_to_central_govt_welfare_schemes_remark, is_linkage_to_public_health_initiatives, linkage_to_public_health_initiatives_remark, is_linkage_to_other_govt_schemes, linkage_to_other_govt_schemes_remark, is_linkage_to_local_community, 
                 linkage_to_local_community_remark, is_linkage_to_social_workers_and_philanthropists, linkage_to_social_workers_and_philanthropists_remark, is_user_charges, user_charges_remark, is_iec_and_promotional_initiatives, iec_and_promotional_initiatives_remark, is_quarterly_reporting, quarterly_reporting_remark, is_visits, 
-                visits_remark, address_picture, program_picture, document_attachment, remark, application_status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, to_json(?::json), to_json(?::json), to_json(?::json), ?, ?, ?, ?, ?, ?, ?, ?);
+                visits_remark, address_picture, program_picture, document_attachment, remark, application_status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,assigned_to) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, to_json(?::json), to_json(?::json), to_json(?::json), ?, ?, ?, ?, ?, ?, ?, ?,?);
          basePath: $.NulmSuhRequest
          jsonMaps:
          -  jsonPath: $.NulmSuhRequest.suhUuid 
@@ -587,6 +599,7 @@ serviceMaps:
          -  jsonPath: $.NulmSuhRequest.auditDetails.createdTime
          -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedTime  
+         -  jsonPath: $.NulmSuhRequest.assignedTo
       -  query: INSERT INTO public.nulm_suh_facilities_maintenance(suh_uuid, facility_uuid, is_bedding, bedding_remark, is_washing_of_linen, washing_of_linen_remark, is_cleaning_of_premises, cleaning_of_premise_remark, is_recreation_facilities, recreation_facilities_remark, is_drinking_water, drinking_water_remark, is_meals, meals_remark, is_locker_for_inmates, locker_for_inmates_remark, 
                 is_fire_safety_measure, fire_safety_measure_remark, is_office_set_up, office_set_up_remark, is_first_aid_kit_and_training_to_staff, first_aid_kit_and_training_to_staff_remark, is_display_of_emergency_numbers, display_of_emergency_numbers_remark, is_toilet, toilet_remark, facility_picture, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)
                   VALUES ( ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, to_json(?::json), ?, ?, ?, ?,?, ?);
@@ -681,7 +694,7 @@ serviceMaps:
       queryMaps:
       -  query: UPDATE public.nulm_suh_application_detail SET name_of_shelter=?, address=?, shelter_background=?, category=?, weather_condition=?, shelter_classification=?, other_classification=?,ownership=?, operation_and_management_of_shelters=?, area=?, capacity=?, is_constitution_of_shelter_management_committee=?,constitution_of_shelter_management_committee_remark=?, is_social_audit=?, social_audit_remark=?, is_linkage_to_central_govt_welfare_schemes=?, 
                 linkage_to_central_govt_welfare_schemes_remark=?, is_linkage_to_public_health_initiatives=?, linkage_to_public_health_initiatives_remark=?, is_linkage_to_other_govt_schemes=?, linkage_to_other_govt_schemes_remark=?, is_linkage_to_local_community=?, linkage_to_local_community_remark=?, is_linkage_to_social_workers_and_philanthropists=?,  linkage_to_social_workers_and_philanthropists_remark=?, is_user_charges=?, user_charges_remark=?, is_iec_and_promotional_initiatives=?, 
-                iec_and_promotional_initiatives_remark=?, is_quarterly_reporting=?, quarterly_reporting_remark=?, is_visits=?, visits_remark=?, address_picture=to_json(?::json),  program_picture=to_json(?::json), document_attachment=to_json(?::json), remark=?, application_status=?, last_modified_by=?,last_modified_time=? WHERE suh_uuid=? and tenant_id=?;
+                iec_and_promotional_initiatives_remark=?, is_quarterly_reporting=?, quarterly_reporting_remark=?, is_visits=?, visits_remark=?, address_picture=to_json(?::json),  program_picture=to_json(?::json), document_attachment=to_json(?::json), remark=?, application_status=?, last_modified_by=?,last_modified_time=?,assigned_to=? WHERE suh_uuid=? and tenant_id=?;
          basePath: $.NulmSuhRequest
          jsonMaps:
          -  jsonPath: $.NulmSuhRequest.nameOfShelter 
@@ -723,7 +736,8 @@ serviceMaps:
          -  jsonPath: $.NulmSuhRequest.remark 
          -  jsonPath: $.NulmSuhRequest.applicationStatus
          -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedTime         
+         -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedTime  
+         -  jsonPath: $.NulmSuhRequest.assignedTo       
          -  jsonPath: $.NulmSuhRequest.suhUuid                            
          -  jsonPath: $.NulmSuhRequest.tenantId   
       -  query: UPDATE public.nulm_suh_facilities_maintenance   SET  is_bedding=?, bedding_remark=?, is_washing_of_linen=?, washing_of_linen_remark=?, is_cleaning_of_premises=?,cleaning_of_premise_remark=?, is_recreation_facilities=?, recreation_facilities_remark=?, is_drinking_water=?, drinking_water_remark=?, is_meals=?, meals_remark=?, 
