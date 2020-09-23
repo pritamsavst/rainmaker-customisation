@@ -471,7 +471,47 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
-       - jsonPath: $.WaterConnection.id   
+       - jsonPath: $.WaterConnection.id
+
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
+      basePath: $.WaterConnection.waterApplication
+      jsonMaps:
+         
+          - jsonPath: $.WaterConnection.waterApplication.id
+
+          - jsonPath: $.WaterConnection.tenantId
+          
+          - jsonPath: $.WaterConnection.id
+          
+          - jsonPath: $.WaterConnection.waterApplication.applicationNo
+
+          - jsonPath: $.WaterConnection.activityType
+
+          - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
+
+          - jsonPath: $.WaterConnection.waterApplication.action
+          
+          - jsonPath: $.WaterConnection.waterApplication.comments
+
+          - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+
+          - jsonPath: $.WaterConnection.auditDetails.createdTime
+
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+
+          - jsonPath: $.WaterConnection.activityType
+
+          - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
+
+          - jsonPath: $.WaterConnection.waterApplication.action
+          
+          - jsonPath: $.WaterConnection.waterApplication.comments
+
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime        
        
  - version: 1.0
    name: WaterConnection
