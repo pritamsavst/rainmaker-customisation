@@ -443,38 +443,6 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime  
       
-    - query: INSERT INTO eg_ws_property(id, tenantId, property_id, wsid, usagecategory, usagesubcategory, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET usagecategory = ?, usagesubcategory =?, lastmodifiedby =?, lastmodifiedtime =?;
-      basePath: $.WaterConnection.waterProperty
-      jsonMaps:
-         
-          - jsonPath: $.WaterConnection.waterProperty.id
-
-          - jsonPath: $.WaterConnection.tenantId
-          
-          - jsonPath: $.WaterConnection.propertyId
-          
-          - jsonPath: $.WaterConnection.id
-
-          - jsonPath: $.WaterConnection.waterProperty.usageCategory
-
-          - jsonPath: $.WaterConnection.waterProperty.usageSubCategory 
-
-          - jsonPath: $.WaterConnection.auditDetails.createdBy
-
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
-
-          - jsonPath: $.WaterConnection.auditDetails.createdTime
-
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
-          
-          - jsonPath: $.WaterConnection.waterProperty.usageCategory
-
-          - jsonPath: $.WaterConnection.waterProperty.usageSubCategory 
-
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
-
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
-
  - version: 1.0
    name: WaterConnection
    description: update ConnectionDetails in eg_ws_connection and eg_ws_service
