@@ -367,7 +367,7 @@
                            "style": "receipt-table-value-cont"
                         },
                         {
-                          "text":"",
+                          "text":"Due Amount",
                           "border":[
                             false,
                             false,
@@ -399,14 +399,14 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"",
+                          "text":"{{totalDue}}",
                           "border":[
                             false,
                             false,
                             false,
                             false
                           ],
-                           "style": "receipt-table-value-cont"
+                           "style": "receipt-table2"
                         },
                         {
                           "text":"",

@@ -23,6 +23,12 @@
               }
             },
             {
+              "variable":"totalDue",
+              "value": {
+                "path": "$.property.rentSummary.totalDue"
+              }
+            },
+            {
               "variable": "header",
               "value": {
                 "path": "PDF_HEADER"

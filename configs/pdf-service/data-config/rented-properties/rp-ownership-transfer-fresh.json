@@ -41,6 +41,12 @@
                   },
                   "type":"date"   
                 },
+                {
+                  "variable":"totalDue",
+                  "value": {
+                    "path": "$.property.rentSummary.totalDue"
+                  }
+                },
 
                 {
                   "variable": "applicationNumber",

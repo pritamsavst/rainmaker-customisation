@@ -244,6 +244,12 @@
    }
   },
   {
+    "variable":"totalDue",
+    "value": {
+      "path": "$.property.rentSummary.totalDue"
+    }
+  },
+  {
     "variable": "phone",
     "value": {
       "path": "$.ownerDetails.phone"
