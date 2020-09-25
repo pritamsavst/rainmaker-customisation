@@ -1,5 +1,5 @@
 {
-    "key": "rp-online-payment-receipt",
+    "key": "rp-rent-payment-receipt",
     "DataConfigs": {
         "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -330,7 +330,7 @@
                         {
                             "variable": "bankName",
                             "value": {
-                              "path": "$..Payments[0].bankName"
+                              "path": "$.Properties[0].bankName"
                             }
                         },
                 

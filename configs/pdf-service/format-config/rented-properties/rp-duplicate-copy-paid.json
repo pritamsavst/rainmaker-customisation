@@ -304,6 +304,11 @@
                                             "text": "{{pincode_label}}",
                                             "fontSize": 10,
                                             "margin":[3,0,0,0]
+                                        },
+                                        {
+                                            "text": "Due Amount",
+                                            "fontSize": 10,
+                                            "margin":[3,0,0,0]
                                         }]
                                     },
                                     {
@@ -312,7 +317,14 @@
                                             "fontSize": 10,
                                             "bold": true,
                                             "margin":[3,0,0,0]
-                                        }]
+                                        },
+                                        {
+                                            "text": "{{totalDue}}",
+                                            "fontSize": 10,
+                                            "bold": true,
+                                            "margin":[3,0,0,0]
+                                        }
+                                    ]
                                     }
                                 ]
                             ]

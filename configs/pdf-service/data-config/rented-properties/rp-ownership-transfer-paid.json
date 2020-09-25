@@ -19,7 +19,7 @@
                 "type": "label",
                 "localisation":{
                    "required":true,
-                   "prefix":"TL_HOME_SEARCH_RESULTS",   
+                   "prefix":"RP_HOME_SEARCH_RESULTS_APP_NO_LABEL",   
                    "module":"rainmaker-rp"
                 } 
               },
@@ -34,6 +34,12 @@
                    "prefix":"TL",   
                    "module":"rainmaker-tl"
                 } 
+              },
+              {
+                "variable":"totalDue",
+                "value": {
+                  "path": "$.property.rentSummary.totalDue"
+                }
               },
               {
                 "variable": "applicationNumber",

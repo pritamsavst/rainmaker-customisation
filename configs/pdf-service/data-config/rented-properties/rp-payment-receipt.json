@@ -169,7 +169,7 @@
                         {
                             "variable": "payableAmount",
                             "value": {
-                              "path": "PAYABLE_AMOUNT_LABEL"
+                              "path": "PAYABLE_RENT_PAYMENT_LABEL"
                             },
                             "type": "label",
                             "localisation":{

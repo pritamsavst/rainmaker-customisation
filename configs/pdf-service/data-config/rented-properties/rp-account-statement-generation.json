@@ -89,7 +89,7 @@
             {
                 "variable": "monthlyRent",
                 "value": {
-                  "path": "$.Properties[0].owners[0].ownerDetails.monthlyRent"
+                  "path": "$.Properties[0].demands[0].remainingPrincipal"
                 }
                 
               },

@@ -21,6 +21,12 @@
                 }
               },
               {
+                "variable":"totalDue",
+                "value": {
+                  "path": "$.property.rentSummary.totalDue"
+                }
+              },
+              {
                 "variable": "property",
                 "value": {
                   "path": "PROPERTY_DETAILS_HEADER"
@@ -190,8 +196,8 @@
                 "type": "label",
                 "localisation": {
                   "required": true,
-                  "prefix": "TL_HOME_SEARCH_RESULTS",
-                  "module": "rainmaker-tl"
+                  "prefix": "RP_HOME_SEARCH_RESULTS_APP_NO_LABEL",
+                  "module": "rainmaker-rp"
                 }
               },
               {
