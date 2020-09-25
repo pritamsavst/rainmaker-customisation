@@ -67,6 +67,30 @@ serviceMaps:
        - jsonPath: $.SewerageConnection.auditDetails.createdTime
 
        - jsonPath: $.SewerageConnection.auditDetails.lastModifiedTime
+       
+    - query: INSERT INTO eg_sw_property(id, tenantId, property_id, swid, usagecategory, usagesubcategory, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+      basePath: $.SewerageConnection.swProperty
+      jsonMaps:
+         
+          - jsonPath: $.SewerageConnection.swProperty.id
+
+          - jsonPath: $.SewerageConnection.tenantId
+          
+          - jsonPath: $.SewerageConnection.propertyId
+          
+          - jsonPath: $.SewerageConnection.id
+
+          - jsonPath: $.SewerageConnection.swProperty.usageCategory
+
+          - jsonPath: $.SewerageConnection.swProperty.usageSubCategory 
+
+          - jsonPath: $.SewerageConnection.auditDetails.createdBy
+
+          - jsonPath: $.SewerageConnection.auditDetails.lastModifiedBy
+
+          - jsonPath: $.SewerageConnection.auditDetails.createdTime
+
+          - jsonPath: $.SewerageConnection.auditDetails.lastModifiedTime
          
 
  - version: 1.0
