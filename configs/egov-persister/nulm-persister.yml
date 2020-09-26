@@ -1135,4 +1135,50 @@ serviceMaps:
          -  jsonPath: $.NulmTransactionRequest.*.filestoreId
          -  jsonPath: $.NulmTransactionRequest.*.documentType
          -  jsonPath: $.NulmTransactionRequest.*.auditDetails.lastModifiedBy
-         -  jsonPath: $.NulmTransactionRequest.*.auditDetails.lastModifiedTime   
+         -  jsonPath: $.NulmTransactionRequest.*.auditDetails.lastModifiedTime
+   -  version: 1.0
+      name: Save SUH Citizen NGO Details
+      description: Save SUH Citizen NGO Details
+      fromTopic: nulm-services-save-suhcitizenngoapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: INSERT INTO public.nulm_suh_citizenngo_application(suh_citizen_ngo_uuid, shelter_requested_for_person, address, gender, age, reason_for_staying, is_disabled, nominated_by, name_of_nominated_person, contact_no, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSuhCitizenNGORequest
+         jsonMaps:
+         -  jsonPath: $.NulmSuhCitizenNGORequest.suhCitizenNGOUuid
+         -  jsonPath: $.NulmSuhCitizenNGORequest.shelterRequestedForPerson
+         -  jsonPath: $.NulmSuhCitizenNGORequest.address
+         -  jsonPath: $.NulmSuhCitizenNGORequest.gender
+         -  jsonPath: $.NulmSuhCitizenNGORequest.age
+         -  jsonPath: $.NulmSuhCitizenNGORequest.reasonForStaying
+         -  jsonPath: $.NulmSuhCitizenNGORequest.isDisabled
+         -  jsonPath: $.NulmSuhCitizenNGORequest.nominatedBy
+         -  jsonPath: $.NulmSuhCitizenNGORequest.nameOfNominatedPerson
+         -  jsonPath: $.NulmSuhCitizenNGORequest.contactNo
+         -  jsonPath: $.NulmSuhCitizenNGORequest.isActive         
+         -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.createdBy        
+         -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.createdTime
+         -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedTime
+   -  version: 1.0
+      name: Update Citizen NGO Details
+      description: Update Citizen NGO Details
+      fromTopic: nulm-services-update-suhcitizenngoapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: UPDATE public.nulm_suh_citizenngo_application SET shelter_requested_for_person=?, address=?, gender=?, age=?, reason_for_staying=?, is_disabled=?, nominated_by=?, name_of_nominated_person=?, contact_no=?, is_active=?,last_modified_by=?, last_modified_time=? WHERE suh_citizen_ngo_uuid=?;
+         basePath: $.NulmSuhCitizenNGORequest
+         jsonMaps:
+         -  jsonPath: $.NulmSuhCitizenNGORequest.shelterRequestedForPerson
+         -  jsonPath: $.NulmSuhCitizenNGORequest.address
+         -  jsonPath: $.NulmSuhCitizenNGORequest.gender
+         -  jsonPath: $.NulmSuhCitizenNGORequest.age
+         -  jsonPath: $.NulmSuhCitizenNGORequest.reasonForStaying
+         -  jsonPath: $.NulmSuhCitizenNGORequest.isDisabled
+         -  jsonPath: $.NulmSuhCitizenNGORequest.nominatedBy
+         -  jsonPath: $.NulmSuhCitizenNGORequest.nameOfNominatedPerson
+         -  jsonPath: $.NulmSuhCitizenNGORequest.contactNo
+         -  jsonPath: $.NulmSuhCitizenNGORequest.isActive   
+         -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSuhCitizenNGORequest.suhCitizenNGOUuid
