@@ -365,7 +365,7 @@
                 {
                   "derived": [{
                     "variable": "totalAmount",
-                    "formula": "({{balancePrincipal}}+{{balanceInterest}} -{{balanceAmount}})"
+                    "formula": "({{balancePrincipal}}+{{balanceInterest}} -{{balanceAmount}}).toFixed(2)"
                   }]
                 }
             ]
