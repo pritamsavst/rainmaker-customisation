@@ -259,6 +259,7 @@
                 "colSpan": 3,
                 "text": "{{documents_label}}",
                 "fontSize": 12,
+                "bold":true,
                 "margin":[3,0,0,0],
                 "border": [
                     true,

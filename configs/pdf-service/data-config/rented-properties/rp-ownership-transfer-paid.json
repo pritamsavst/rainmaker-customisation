@@ -399,7 +399,7 @@
 {
   "variable": "fatherhusbandsName",
   "value": {
-    "path": "$.ownerDetails.fatherhusbandsName"
+    "path": "$.ownerDetails.fatherOrHusband"
   }
 }
             ]
