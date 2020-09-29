@@ -1,0 +1,233 @@
+{
+    "key": "nulm-certificate",
+    "DataConfigs": {
+      "serviceName": "rainmaker-nulm",
+      "version": "1.0.0",
+      "baseKeyPath": "$.SepApplication.*",
+    "entityIdPath": "$.applicationId",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "mappings": [
+            {
+              "direct": [
+               {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.transerve.com/media/logo.png",
+                "type":"image"
+                },
+               {
+                  "variable": "ownerPhoto",
+                  "value": {
+                    "path": "$.applicantPhoto"
+                  },
+                  "type": "image"
+               },
+                 {
+                    "variable": "corporation_name",
+                    "value": {
+                        "path": "$.corporationName"
+                    }
+                },
+                 {
+                    "variable": "corporation_address",
+                    "value": {
+                        "path": "$.corporationAddress"
+                    }
+                },
+                   {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.applicationId"
+                }
+              },
+			  {
+                "variable": "applicationStatus",
+                "value": {
+                  "path": "$.applicationStatus"
+                }
+              },
+                 {
+                "variable": "nameOfApplicant",
+                "value": {
+                  "path": "$.nameOfApplicant"
+                }
+              },
+			  {
+                "variable": "gender",
+                "value": {
+                  "path": "$.gender"
+                }
+              },{
+                "variable": "dob",
+                "value": {
+                  "path": "$.dob"
+                }
+              },
+			  {
+                "variable": "adharNo",
+                "value": {
+                  "path": "$.adharNo"
+                }
+              },
+			  {
+                "variable": "motherName",
+                "value": {
+                  "path": "$.motherName"
+                }
+              },
+			   {
+                "variable": "fatherOrHusbandName",
+                "value": {
+                  "path": "$.fatherOrHusbandName"
+                }
+              }, {
+                "variable": "address",
+                "value": {
+                  "path": "$.address"
+                }
+              },
+			  {
+                "variable": "contact",
+                "value": {
+                  "path": "$.contact"
+                }
+              },
+			   {
+                "variable": "qualification",
+                "value": {
+                  "path": "$.qualification"
+                }
+              },
+			   {
+                "variable": "category",
+                "value": {
+                  "path": "$.category"
+                }
+              },
+			  {
+                "variable": "isUrbanPoor",
+                "value": {
+                  "path": "$.isUrbanPoor"
+                }
+              },
+			  {
+                "variable": "bplNo",
+                "value": {
+                  "path": "$.bplNo"
+                }
+              },
+			  {
+                "variable": "isMinority",
+                "value": {
+                  "path": "$.isMinority"
+                }
+              }, {
+                "variable": "minority",
+                "value": {
+                  "path": "$.minority"
+                }
+              },
+			  {
+                "variable": "isHandicapped",
+                "value": {
+                  "path": "$.isHandicapped"
+                }
+              },
+			  {
+                "variable": "typeOfBusinessToBeStarted",
+                "value": {
+                  "path": "$.typeOfBusinessToBeStarted"
+                }
+              },
+			  {
+                "variable": "previousExperience",
+                "value": {
+                  "path": "$.previousExperience"
+                }
+              },
+			  {
+                "variable": "placeOfWork",
+                "value": {
+                  "path": "$.placeOfWork"
+                }
+              },
+			  {
+                "variable": "occupation",
+                "value": {
+                  "path": "$.occupation"
+                }
+              },
+			  {
+                "variable": "sinceHowLongInChandigarh",
+                "value": {
+                  "path": "$.sinceHowLongInChandigarh"
+                }
+              },
+			  {
+                "variable": "bankName",
+                "value": {
+                  "path": "$.bankName"
+                }
+              },
+			  {
+                "variable": "branchName",
+                "value": {
+                  "path": "$.branchName"
+                }
+              },
+			  {
+                "variable": "accountName",
+                "value": {
+                  "path": "$.accountName"
+                }
+              },
+			  {
+                "variable": "noOfFamilyMembers",
+                "value": {
+                  "path": "$.noOfFamilyMembers"
+                }
+              },
+			  {
+                "variable": "loanAmount",
+                "value": {
+                  "path": "$.loanAmount"
+                }
+              },
+			  {
+                "variable": "recommendedBy",
+                "value": {
+                  "path": "$.recommendedBy"
+                }
+              },
+			  {
+                "variable": "isLoanFromBankinginstitute",
+                "value": {
+                  "path": "$.isLoanFromBankinginstitute"
+                }
+              },
+			  {
+                "variable": "isRepaymentMade",
+                "value": {
+                  "path": "$.isRepaymentMade"
+                }
+              },
+			  {
+                "variable": "representativeName",
+                "value": {
+                  "path": "$.representativeName"
+                }
+              },
+			  {
+                "variable": "representativeAddress",
+                "value": {
+                  "path": "$.representativeAddress"
+                }
+              }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
