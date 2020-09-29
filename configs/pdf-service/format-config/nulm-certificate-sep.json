@@ -1,0 +1,534 @@
+{
+      "key": "nulm-certificate",
+    "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+     },
+    "content": [
+      {
+        "table": {
+          "widths": [80, "*"],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [-6, 0, 0, 0]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "{{corporation_name}}",
+                    "style": "receipt-logo-header",
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": "{{corporation_address}}",
+                    "style": "receipt-logo-sub-text",
+                    "margin": [0, 5, 0, 0]
+                  }
+                ],
+                "alignment": "center",
+                "margin": [-20, 0, 0, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0, -25, 0, 0],
+        "layout": "noBorders"
+      },
+      {
+        "table": {
+          "widths": ["80%", "20%"],
+          "body": [
+            [
+              {
+                "stack": [
+                 
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Application No"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationId}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Application Status"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{applicationStatus}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Name of Applicant"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{nameOfApplicant}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Gender"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{gender}}"
+                      }
+                    ]
+                  },
+                  {
+                    "style": "nulm-certificate-data-2",
+                    "columns": [
+                      {
+                        "width": 200,
+                        "text": "Date Of Birth"
+                      },
+                      {
+                        "width": "*",
+                        "text": "{{dob}}"
+                      }
+                    ]
+                  },
+				  {
+					"style": "nulm-certificate-data-2",
+					"columns": [
+					  {
+						"width": 200,
+						"text": "Address"
+					  },
+					  {
+						"width": "*",
+						"text": "{{address}}"
+					  }
+					]
+				  }
+                ]
+              },
+              {
+                "image": "{{ownerPhoto}}",
+                "width": 100,
+                "margin": [25, 12, 25, 0]
+              }
+            ]
+          ]
+        },
+        "margin": [0,0,0,0],
+        "layout": "noBorders"
+      },
+      {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Adhar Number"
+          },
+          {
+            "width": 100,
+            "text": "{{adharNo}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Mother Name"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{motherName}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Father/Husband Name"
+          },
+          {
+            "width": 100,
+			"text": "{{fatherOrHusbandName}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Contact"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{contact}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Category"
+          },
+          {
+            "width": 100,
+            "text": "{{category}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 100,
+            "text": "Handicapped"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{isHandicapped}}"
+          }
+        ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+            "text": "Are you Urban Poor ?"
+          },
+          {
+            "width": 100,
+            "text": "{{isUrbanPoor}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 100,
+            "text": "BPL Number"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{bplNo}}"
+          }
+        ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+		  {
+            "width": 200,
+            "text": "Minority"
+          },
+          {
+            "width": 100,
+            "text": "{{isMinority}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 100,
+            "text": "Minority Religion"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{minority}}"
+          }
+        ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Type of Business/Industry/Service/activity proposed to be started"
+          },
+          {
+            "width": 100,
+            "text": "{{typeOfBusinessToBeStarted}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Previous experience"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{previousExperience}}"
+          }
+        ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Place of work whether the activity is proposed to be started"
+          },
+          {
+            "width": 100,
+            "text": "{{plnameeOfWork}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "No. of family members"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{noOfFamilyMembers}}"
+          }
+		 ]
+      },
+ 	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Occupation"
+          },
+          {
+            "width": 100,
+            "text": "{{occupation}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Qualification"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{qualification}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Bank Name (Only in Chandigarh)"
+          },
+          {
+            "width": 100,
+            "text": "{{bankName}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Branch Name"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{branchName}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "A/C Name"
+          },
+          {
+            "width": 100,
+            "text": "{{accountName}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Since how long in Chandigarh in Yrs"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{sinceHowLongInChandigarh}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Amount of Loan required"
+          },
+          {
+            "width": 100,
+            "text": "{{loanAmount}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Recommended by"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{recommendedBy}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Whether taken loan from any banking/financial institute in past"
+          },
+          {
+            "width": 100,
+            "text": "{{isLoanFromBankinginstitute}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "If Yes , whether all repayment made ?"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{isRepaymentMade}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Particulars of representative Name"
+          },
+          {
+            "width": 100,
+            "text": "{{representativeName}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Particulars of representative Address"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{representativeAddress}}"
+          }
+        ]
+      }
+    ],
+    "styles": {
+      "nulm-certificate-data-2": {
+        "margin": [0, 8, 0, 0]
+      },
+      "receipt-logo-header": {
+        "color": "#1E1E1E",
+        "fontSize": 18,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-sub-text": {
+        "color": "#656565",
+        "fontSize": 14,
+        "letterSpacing": 0.74
+      }
+    }
+  }
+}
