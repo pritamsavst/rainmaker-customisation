@@ -12,11 +12,11 @@
             {
               "variable": "application_label",
               "value": {
-                "path": "APP_NO_LABEL"
+                "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
               },
               "type": "label",
               "localisation": {
-                "prefix": "RP_HOME_SEARCH_RESULTS_APP_NO_LABEL",
+                "prefix": "RP",
                 "module": "rainmaker-rp"
               }
             },
