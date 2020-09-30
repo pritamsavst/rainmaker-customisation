@@ -229,7 +229,7 @@
                           {
                             "variable": "total_label",
                             "value": {
-                              "path": "TOTAL_LABEL"
+                              "path": "TOTAL_AMOUNT_LABEL"
                             },
                             "type": "label",
                             "localisation":{
