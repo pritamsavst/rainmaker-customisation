@@ -229,7 +229,7 @@
                           {
                             "variable": "total_label",
                             "value": {
-                              "path": "TOTAL_LABEL"
+                              "path": "RENT_TOTALAMOUNT_LABEL"
                             },
                             "type": "label",
                             "localisation":{

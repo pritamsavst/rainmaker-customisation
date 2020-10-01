@@ -95,8 +95,8 @@ ReportDefinitions:
   groupby: GROUP BY message.message
 
 
-- reportName: OTCollectionReport
-  summary: Ownership Trasfer Collection Report
+- reportName: OTRegistryReport
+  summary: Ownership Trasfer Registry Report
   version: 1.0.0
   moduleName: rainmaker-rp
   sourceColumns:
@@ -107,16 +107,6 @@ ReportDefinitions:
     total: false
   - name: receiptIssueDate
     label: report.rp.receiptissuedate
-    type: string
-    source: ot
-    total: false
-  - name: g8issuedate
-    label: report.rp.g8issuedate
-    type: string
-    source: ot
-    total: false
-  - name: g8receiptno
-    label: report.rp.g8receiptno
     type: string
     source: ot
     total: false
@@ -140,17 +130,7 @@ ReportDefinitions:
     type: string
     source: ot
     total: false
-  - name: bankid
-    label: report.rp.bankid
-    type: string
-    source: ot
-    total: false
-  - name: branchname
-    label: report.rp.branchname
-    type: string
-    source: ot
-    total: false
-  - name: transactionumber
+  - name: transactionnumber
     label: report.rp.transactionumber
     type: string
     source: ot
@@ -176,41 +156,35 @@ ReportDefinitions:
     type: epoch
     source: ot
     isMandatory: false
-    searchClause: AND receipt.createddate >= $fromDate
+    searchClause: AND payment.createdtime >= $fromDate
   - name: toDate
     label: reports.rp.toDate
     type: epoch
     source: ot
     isMandatory: false
-    searchClause: AND receipt.createddate  <= $toDate 
+    searchClause: AND payment.createdtime  <= $toDate 
   query: |
     SELECT 
       ot.allotmen_number,
       to_char(To_timestamp(CAST (od.allotment_startdate AS BIGINT) / 1000), 'DD/MM/YYYY') as formattedAllotmentDate,
       msg.message as status,
-      to_char(To_timestamp(receipt.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
-      receipt.receiptnumber,
+      to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
+      pd.receiptnumber,
       CASE WHEN split_part(ot.application_state,'_',1) = 'OT' THEN 'Ownership Transfer' ELSE '' END as applicationtype,
       od.name as name,
       od.phone as mobileno,
-      ih.bankid,
-      ih.branchname,
-      ih.transactionnumber as transactionnumber,
-      ih.instrumenttype,
-      receipt.totalamount as totalamount,
-      To_char(To_timestamp(receipt.manualreceiptdate / 1000), 'DD/MM/YYYY') AS g8issuedate,
-      receipt.manualreceiptnumber as g8receiptno
+      payment.transactionnumber as transactionnumber,
+      payment.totalamountpaid as totalamount
     FROM cs_pt_ownership_v1 ot 
     INNER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id 
     INNER JOIN  message msg ON  msg.code = ot.application_state AND msg.locale = 'en_IN'
-    LEFT OUTER JOIN egcl_receiptheader receipt ON receipt.consumercode = od.application_number  and receipt.status != 'Cancelled'
-    LEFT OUTER JOIN egcl_receiptinstrument as ri ON ri.receiptheader = receipt.id
-    LEFT OUTER JOIN egcl_instrumentheader as ih ON ih.id = ri.instrumentheader and ih.instrumentstatus != 'CANCELLED'
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = od.application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' AND ot.tenantId LIKE $tenantid
-
   
-- reportName: DCCollectionReport
-  summary: Duplicate Copy Collection Report
+- reportName: DCRegistryReport
+  summary: Duplicate Copy Registry Report
   version: 1.0.0
   moduleName: rainmaker-rp
   sourceColumns:
@@ -221,16 +195,6 @@ ReportDefinitions:
     total: false
   - name: receiptIssueDate
     label: report.rp.receiptissuedate
-    type: string
-    source: dc
-    total: false
-  - name: g8issuedate
-    label: report.rp.g8issuedate
-    type: string
-    source: dc
-    total: false
-  - name: g8receiptno
-    label: report.rp.g8receiptno
     type: string
     source: dc
     total: false
@@ -254,17 +218,7 @@ ReportDefinitions:
     type: string
     source: dc
     total: false
-  - name: bankid
-    label: report.rp.bankid
-    type: string
-    source: dc
-    total: false
-  - name: branchname
-    label: report.rp.branchname
-    type: string
-    source: dc
-    total: false
-  - name: transactionumber
+  - name: transactionnumber
     label: report.rp.transactionumber
     type: string
     source: dc
@@ -290,43 +244,38 @@ ReportDefinitions:
     type: epoch
     source: dc
     isMandatory: false
-    searchClause: AND receipt.createddate >= $fromDate
+    searchClause: AND payment.createdtime >= $fromDate
   - name: toDate
     label: reports.rp.toDate
     type: epoch
     source: dc
     isMandatory: false
-    searchClause: AND receipt.createddate  <= $toDate 
+    searchClause: AND payment.createdtime  <= $toDate 
   query: |
     SELECT 
       ot.allotmen_number,
       to_char(To_timestamp(CAST (od.allotment_startdate AS BIGINT) / 1000), 'DD/MM/YYYY') as formattedAllotmentDate,
       msg.message as status,
-      to_char(To_timestamp(receipt.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
-      receipt.receiptnumber,
+      to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
+      pd.receiptnumber,
       CASE WHEN split_part(dc.state,'_',1) = 'DC' THEN 'Duplicate Copy' ELSE '' END as applicationtype,
       da.name as name,
       da.mobileno as mobileno,
-      ih.bankid,
-      ih.branchname,
-      ih.transactionnumber as transactionnumber,
-      ih.instrumenttype,
-      receipt.totalamount as totalamount,
-      To_char(To_timestamp(receipt.manualreceiptdate / 1000), 'DD/MM/YYYY') AS g8issuedate,
-      receipt.manualreceiptnumber as g8receiptno
+      payment.transactionnumber as transactionnumber,
+      payment.totalamountpaid as totalamount
     FROM cs_pt_duplicate_ownership_application dc 
     INNER JOIN cs_pt_duplicatecopy_applicant da ON da.application_id = dc.id 
     INNER JOIN  message msg ON  msg.code = dc.state AND msg.locale = 'en_IN'
     LEFT OUTER JOIN cs_pt_ownership_v1 ot ON dc.property_id = ot.property_id and ot.active_state = true
     LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON ot.id = od.owner_id
-    LEFT OUTER JOIN egcl_receiptheader receipt ON receipt.consumercode = dc.application_number  and receipt.status != 'Cancelled'
-    LEFT OUTER JOIN egcl_receiptinstrument as ri ON ri.receiptheader = receipt.id
-    LEFT OUTER JOIN egcl_instrumentheader as ih ON ih.id = ri.instrumentheader and ih.instrumentstatus != 'CANCELLED'
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = dc.application_number
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     WHERE dc.State in ('DC_APPROVED', 'DC_PAID', 'DC_REJECTEDPAID','DC_PENDINGCLAPPROVAL','DC_PENDINGSAREJECTION') AND dc.tenantId LIKE $tenantid
     
 
-- reportName: RPRentCollectionReport
-  summary: RP Rent Collection Report
+- reportName: RPRentRegistryReport
+  summary: RP Rent Registry Report
   version: 1.0.0
   moduleName: rainmaker-rp
   sourceColumns:
@@ -337,16 +286,6 @@ ReportDefinitions:
     total: false
   - name: receiptIssueDate
     label: report.rp.receiptissuedate
-    type: string
-    source: rent
-    total: false
-  - name: g8issuedate
-    label: report.rp.g8issuedate
-    type: string
-    source: rent
-    total: false
-  - name: g8receiptno
-    label: report.rp.g8receiptno
     type: string
     source: rent
     total: false
@@ -365,17 +304,7 @@ ReportDefinitions:
     type: string
     source: rent
     total: false
-  - name: bankid
-    label: report.rp.bankid
-    type: string
-    source: rent
-    total: false
-  - name: branchname
-    label: report.rp.branchname
-    type: string
-    source: rent
-    total: false
-  - name: transactionumber
+  - name: transactionnumber
     label: report.rp.transactionumber
     type: string
     source: rent
@@ -400,31 +329,251 @@ ReportDefinitions:
   - name: toDate
     label: reports.rp.toDate
     type: epoch
-    source: dc
+    source: rent
     isMandatory: false
     searchClause: AND receipt.createddate  <= $toDate 
+  - name: transit_number
+    label: report.rp.transitnumber
+    type: string
+    source: rent
+    isMandatory: false
+    searchClause: AND rent.transit_number  = $transit_number 
   query: |
     SELECT 
       rent.transit_number,
-      to_char(To_timestamp(receipt.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
-      receipt.receiptnumber,
+      to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
+      pd.receiptnumber,
       od.name as name,
       od.phone as mobileno,
-      ih.bankid,
-      ih.branchname,
-      ih.transactionnumber as transactionnumber,
-      ih.instrumenttype,
-      receipt.totalamount as totalamount,
-      To_char(To_timestamp(receipt.manualreceiptdate / 1000), 'DD/MM/YYYY') AS g8issuedate,
-      receipt.manualreceiptnumber as g8receiptno
+      payment.transactionnumber as transactionnumber,
+      payment.totalamountpaid as totalamount,
+      payment.paymentmode as paymenttype
     FROM cs_pt_property_v1 rent 
     LEFT OUTER JOIN cs_pt_ownership_v1 ot ON rent.id = ot.property_id and ot.active_state = true
     LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON ot.id = od.owner_id
-    LEFT OUTER JOIN egcl_receiptheader receipt ON receipt.consumercode = rent.rent_payment_consumer_code  and receipt.status != 'Cancelled'
-    LEFT OUTER JOIN egcl_receiptinstrument as ri ON ri.receiptheader = receipt.id
-    LEFT OUTER JOIN egcl_instrumentheader as ih ON ih.id = ri.instrumentheader and ih.instrumentstatus != 'CANCELLED'
-    WHERE rent.tenantId LIKE $tenantid
-
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('SITE-%s',rent.transit_number), '%')
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
+    WHERE rent.tenantId LIKE $tenantid and payment.transactionnumber != 'null' 
+    
+- reportName: OTCollectionReport
+  summary: Ownership transfer Collection Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: applicationtype
+    label: report.rp.applicationtype
+    type: string
+    source: ot
+    total: false
+  - name: transactionCount
+    label: report.rp.totalTransaction
+    type: string
+    source: ot
+    total: false
+  - name: total
+    label: report.rp.totalCollection
+    type: string
+    source: ot
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: ot
+    isMandatory: false
+    searchClause: AND payment.createdtime >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: ot
+    isMandatory: false
+    searchClause: AND payment.createdtime <= $toDate
+  query: |
+    SELECT 
+      COUNT(bill.consumercode) as transactionCount,
+      CASE WHEN split_part(ot.application_state,'_',1) = 'OT' THEN 'Ownership Transfer' ELSE '' END as applicationtype,
+      SUM(payment.totalamountpaid) as total 
+    FROM cs_pt_ownership_v1 ot 
+    INNER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = od.application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' AND ot.tenantId LIKE $tenantid
+  groupby: GROUP BY applicationtype
+  
+- reportName: DCCollectionReport
+  summary: Duplicate Copy Collection Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: applicationtype
+    label: report.rp.applicationtype
+    type: string
+    source: dc
+    total: false
+  - name: transactionCount
+    label: report.rp.totalTransaction
+    type: string
+    source: dc
+    total: false
+  - name: total
+    label: report.rp.totalCollection
+    type: string
+    source: dc
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND payment.createdtime >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: dc
+    isMandatory: false
+    searchClause: AND payment.createdtime <= $toDate
+  query: |
+    SELECT 
+      COUNT(bill.consumercode) as transactionCount,
+      CASE WHEN split_part(dc.state,'_',1) = 'DC' THEN 'Duplicate Copy' ELSE '' END as applicationtype,
+      SUM(payment.totalamountpaid) as total 
+    FROM cs_pt_duplicate_ownership_application dc 
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = dc.application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    WHERE dc.State in ('DC_APPROVED', 'DC_PAID', 'DC_REJECTEDPAID','DC_PENDINGCLAPPROVAL','DC_PENDINGSAREJECTION') AND dc.tenantId LIKE $tenantid
+  groupby: GROUP BY applicationtype
+  
+- reportName: RPRentCollectionReport
+  summary: RP Rent Collection Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: transit_number
+    label: report.rp.transitnumber
+    type: string
+    source: rp
+    total: false
+  - name: transactionCount
+    label: report.rp.totalTransaction
+    type: string
+    source: rp
+    total: false
+  - name: online
+    label: report.rp.online.collection
+    type: string
+    source: rp
+    total: true
+  - name: offline
+    label: report.rp.offline.collection
+    type: string
+    source: rp
+    total: true
+  - name: total
+    label: report.rp.totalCollection
+    type: string
+    source: rp
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.rp.fromDate
+    type: epoch
+    source: rp
+    isMandatory: false
+    searchClause: AND payment.createdtime >= $fromDate
+  - name: toDate
+    label: reports.rp.toDate
+    type: epoch
+    source: rp
+    isMandatory: false
+    searchClause: AND payment.createdtime <= $toDate
+  query: |
+    SELECT 
+      COUNT(bill.consumercode) as transactionCount,
+      rp.transit_number,
+      SUM(onl.totalamountpaid) as online,
+      SUM(offl.totalamountpaid) as offline,
+      COALESCE(SUM(onl.totalamountpaid),0)+ COALESCE(SUM(offl.totalamountpaid),0) as total
+     FROM cs_pt_property_v1 rp
+     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('SITE-%s',rp.transit_number), '%')
+     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
+     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
+     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'CASH') AS offl ON pd.paymentid = offl.id
+     WHERE rp.tenantId LIKE $tenantid and payment.transactionnumber != 'null' 
+  groupby: GROUP BY rp.transit_number
+  
+- reportName: RPDueAmountReport
+  summary: RP Due Amount Report
+  version: 1.0.0
+  moduleName: rainmaker-rp
+  sourceColumns:
+  - name: transit_number
+    label: report.rp.transitnumber
+    type: string
+    source: due
+    total: false
+  - name: colony
+    label: report.rp.colony
+    type: string
+    source: due
+    total: false
+  - name: name
+    label: report.rp.user.name
+    type: string
+    source: due
+    total: false
+  - name: mobileno
+    label: report.rp.user.mobilenumber
+    type: string
+    source: due
+    total: false
+  - name: remaining_pricipal
+    label: report.rp.remainingpricipal
+    type: string
+    source: due
+    total: true
+  - name: balance_interest
+    label: report.rp.balanceinterest
+    type: string
+    source: due
+    total: true
+  - name: total_due
+    label: report.rp.totaldue
+    type: string
+    source: due
+    total: true
+  - name: balance_amount
+    label: report.rp.balanceamount
+    type: string
+    source: due
+    total: true
+   
+  searchParams:
+  - name: colony
+    label: report.rp.colony
+    type: singlevaluelist
+    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=RentedProperties&masterName=colonies|$.MdmsRes.RentedProperties.colonies.*.code|$.MdmsRes.RentedProperties.colonies.*.code
+    source: due
+    wrapper: true
+    isMandatory: false
+    searchClause: AND due.colony = $colony
+  query: |
+    SELECT 
+      transit_number,
+      colony,
+      owner_name as name,
+      mobile_number as mobileno,
+      remaining_principal,
+      balance_interest,
+      COALESCE(SUM(remaining_principal),0)+ COALESCE(SUM(balance_interest),0) as total_due,
+      balance_amount 
+     FROM cs_pt_dueamount due
+     WHERE due.tenantId LIKE $tenantid
+  groupby: GROUP BY due.transit_number,due.colony,name,mobileno, due.remaining_principal,due.balance_interest,due.balance_amount
 
 
 
