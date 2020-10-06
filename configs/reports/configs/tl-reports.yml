@@ -30,11 +30,6 @@ ReportDefinitions:
     type: string
     source: tl
     total: false
-  - name: mnumber
-    label: report.tl.user.mobilenumber
-    type: string
-    source: tl
-    total: false
   - name: transactionumber
     label: report.tl.transactionumber
     type: string
@@ -77,14 +72,13 @@ ReportDefinitions:
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       name,
-      mnumber,
       payment.transactionnumber as transactionumber,
       totalamountpaid
     FROM eg_tl_tradelicense tl 
     INNER JOIN eg_tl_tradelicensedetail tld ON tld.tradelicenseid = tl.id 
     INNER JOIN  message msg ON  msg.code = tl.businessservice AND msg.locale = 'en_IN'
     INNER JOIN (
-      SELECT tradelicensedetailid, array_to_string(array_agg(tluser.name),', ') as name, array_to_string(array_agg(tluser.mobilenumber),', ') as mnumber
+      SELECT tradelicensedetailid, array_to_string(array_agg(tluser.name),', ') as name
       FROM eg_tl_owner tlowner 
       INNER JOIN eg_user tluser ON tluser.uuid = tlowner.id
       group by tradelicensedetailid
