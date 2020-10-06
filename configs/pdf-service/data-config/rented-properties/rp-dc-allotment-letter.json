@@ -103,7 +103,8 @@
                 "variable":"allotmentDate",
                 "value":{
                   "path":"$.allotmentStartDate"
-                }
+                },
+                "type":"date"
               }
 
             ]

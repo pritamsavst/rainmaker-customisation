@@ -81,13 +81,13 @@
                         "width": "*"
                     },
                     {
-                        "text": "Memo No ----",
+                        "text": "Memo No  {{allotmentNumber}}",
                         "style": "pdfContent",
                         "margin": [0, 0, 0, 0],
                         "width": "*"
                     },
                     {
-                        "text": "Dated, Chandigarh, the /",
+                        "text": "Dated, {{allotmentDate}}",
                         "style": "pdfContent",
                         "margin": [0, 0, 0, 0],
                         "width": "*"
