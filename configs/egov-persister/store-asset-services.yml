@@ -1815,3 +1815,13 @@ serviceMaps:
          jsonMaps:
          -  jsonPath: $.workFlowDetails.status
          -  jsonPath: $.workFlowDetails.businessId
+   -  version: 1
+      name: opening balance updatestatus
+      description: opening balance update status
+      fromTopic: inv-openbalance-updatestatus-topic
+      queryMaps:
+      -  query: update materialreceipt set mrnstatus=? where mrnnumber=?
+         basePath: $.workFlowDetails
+         jsonMaps:
+         -  jsonPath: $.workFlowDetails.status
+         -  jsonPath: $.workFlowDetails.businessId
