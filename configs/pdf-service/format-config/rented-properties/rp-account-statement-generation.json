@@ -74,7 +74,7 @@
                             "text": "Rent ",
                             "style": "table-header"
                         }, {
-                            "text": "Rs{{rent}} /- per sq.yd. as per clause 1 of Lease Deed",
+                            "text": "",
                             "style": "table-content"
                         }],
                         [{
@@ -128,7 +128,7 @@
                               ]
                         },
                         {
-                            "text":"Amount",
+                            "text":"Amount(in Rs)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -158,7 +158,7 @@
                               ]
                         },  
                            {
-                            "text":"Remaining Principal",
+                            "text":"Principal Due",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -166,7 +166,17 @@
                                 true,
                                 false
                               ]
-                        },   {
+                        }, 
+                        {
+                            "text":"Interest Due",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },  {
                             "text":"Total Due",
                             "style":"table-header",
                             "border":[
@@ -186,16 +196,7 @@
                                 false
                               ]
                         },
-                        {
-                            "text":"Remaining Interest",
-                            "style":"table-header",
-                            "border":[
-                                true,
-                                true,
-                                true,
-                                false
-                              ]
-                        },
+                    
                         {
                             "text":"Receipt Number",
                             "style":"table-header",
@@ -218,7 +219,7 @@
                  
                     "widths":["11.11%","11.11%","11.11%","11.11%","11.11%","11.11%","11.11%","11.11%","11.11%"],
                     "body": [
-                       "{{#account_statements}}[{{#.}}{\"text\":\"{{date}}\",\"style\": \"table-content\"},{\"text\":\"{{amount}}\",\"style\": \"table-content\"},{\"text\":\"{{typeP}}\",\"style\": \"table-content\"},{\"text\":\"{{typeR}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingPrincipal}}\",\"style\": \"table-content\"},{\"text\":\"{{dueAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingBalance}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingInterest}}\",\"style\": \"table-content\"},{\"text\":\"{{receiptNo}}\",\"style\": \"table-content\"}{{/.}}]{{/account_statements}}"
+                       "{{#account_statements}}[{{#.}}{\"text\":\"{{date}}\",\"style\": \"table-content\"},{\"text\":\"{{amount}}\",\"style\": \"table-content\"},{\"text\":\"{{typeP}}\",\"style\": \"table-content\"},{\"text\":\"{{typeR}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingPrincipal}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingInterest}}\",\"style\": \"table-content\"},{\"text\":\"{{dueAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingBalance}}\",\"style\": \"table-content\"},{\"text\":\"{{receiptNo}}\",\"style\": \"table-content\"}{{/.}}]{{/account_statements}}"
                     ]
                 }
             }

@@ -79,6 +79,19 @@
                 "value":{
                   "path":"$.owners[0].ownerDetails.monthlyRent"
                 }
+              },
+              {
+                "variable":"allotmentNumber",
+                "value":{
+                  "path":"$..owners[0].allotmenNumber"
+                }
+              },
+              {
+                "variable":"allotmentDate",
+                "value":{
+                  "path":"$.owners[0].ownerDetails.allotmentStartdate"
+                },
+                "type":"date"
               }
 
             ]
