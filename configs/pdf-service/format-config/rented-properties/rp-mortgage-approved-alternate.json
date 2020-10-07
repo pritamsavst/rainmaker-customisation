@@ -64,11 +64,7 @@
                                                 "fontSize": 10,
                                                 "margin":[3,0,0,0]
                                             },
-                                            {
-                                                "text": "{{allotment_number}}",
-                                                "fontSize": 10,
-                                                "margin":[3,0,0,0]
-                                            },
+                                           
                                             {
                                                 "text": "Colony ",
                                                 "fontSize": 10,
@@ -84,13 +80,7 @@
                                                 "margin":[3,0,0,0],
                                                 "bold": true
                                             },
-                                            {
-                                                "text": "{{allotmentNumber}}",
-                                                "lineHeight": 2,
-                                                "fontSize": 10,
-                                                "bold": true,
-                                                "margin":[3,0,0,0]
-                                            },
+                                           
                                             {
                                                 "text": "{{colony}}",
                                                 "lineHeight": 2,
