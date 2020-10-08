@@ -218,9 +218,9 @@
                             } 
                           },
                           {
-                            "variable": "assessAmountLabel",
+                            "variable": "principalDueLabel",
                             "value": {
-                              "path": "ASSESSMENT_AMOUNT_LABEL"
+                              "path": "PRINCIPAL_DUE_LABEL"
                             },
                             "type": "label",
                             "localisation":{
@@ -230,9 +230,33 @@
                             } 
                           },
                           {
-                            "variable": "interestAmountLabel",
+                            "variable": "interestDueLabel",
                             "value": {
-                              "path": "INTEREST_AMOUNT_LABEL"
+                              "path": "INTEREST_DUE_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-rp"
+                            } 
+                          },
+                          {
+                            "variable": "totalDueLabel",
+                            "value": {
+                              "path": "TOTAL_DUE_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"RP",   
+                               "module":"rainmaker-rp"
+                            } 
+                          },
+                          {
+                            "variable": "accountBalanceLabel",
+                            "value": {
+                              "path": "ACCOUNT_BALANCE_LABEL"
                             },
                             "type": "label",
                             "localisation":{
@@ -365,7 +389,7 @@
                 {
                   "derived": [{
                     "variable": "totalAmount",
-                    "formula": "({{balancePrincipal}}+{{balanceInterest}} -{{balanceAmount}}).toFixed(2)"
+                    "formula": "({{balancePrincipal}}+{{balanceInterest}}).toFixed(2)"
                   }]
                 }
             ]

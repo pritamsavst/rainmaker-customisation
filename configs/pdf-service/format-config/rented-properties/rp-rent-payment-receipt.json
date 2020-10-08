@@ -195,23 +195,29 @@
             {
                 "margin": [0, 0, 0, 20],
                 "table":{
-                    "widths":["25%","25%","25%","25%"],
+                    "widths":["20%","20%","20%","20%","20%"],
                     "body":[
                         [
                             {
-                                "text":"{{assessAmountLabel}}",
+                                "text":"{{principalDueLabel}}",
                                 "fontSize":8,
                                 "bold":true
                               
                             },
                             {
-                                "text":"{{interestAmountLabel}}",
+                                "text":"{{interestDueLabel}}",
                                 "fontSize":8,
                                  "bold":true
                                 
                               },
                               {
-                                "text":"{{total_label}}",
+                                "text":"{{totalDueLabel}}",
+                                "fontSize":8,
+                                "bold":true
+                               
+                              },
+                              {
+                                "text":"{{accountBalanceLabel}}",
                                 "fontSize":8,
                                 "bold":true
                                
@@ -235,6 +241,11 @@
                               },
                               {
                                 "text":"{{totalAmount}}",
+                                "fontSize":8
+              
+                              },
+                              {
+                                "text":"{{balanceAmount}}",
                                 "fontSize":8
               
                               },
