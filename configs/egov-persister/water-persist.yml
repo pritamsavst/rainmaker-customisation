@@ -423,13 +423,13 @@ serviceMaps:
           
           - jsonPath: $.WaterConnection.waterApplication.comments
 
-          - jsonPath: $.WaterConnection.auditDetails.createdBy
+          - jsonPath: $.WaterConnection.waterApplication.auditDetails.createdBy
 
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+          - jsonPath: $.WaterConnection.waterApplication.auditDetails.lastModifiedBy
 
-          - jsonPath: $.WaterConnection.auditDetails.createdTime
+          - jsonPath: $.WaterConnection.waterApplication.auditDetails.createdTime
 
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+          - jsonPath: $.WaterConnection.waterApplication.auditDetails.lastModifiedTime
 
           - jsonPath: $.WaterConnection.activityType
 
