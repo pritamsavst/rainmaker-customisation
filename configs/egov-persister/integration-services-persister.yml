@@ -1,0 +1,21 @@
+serviceMaps:
+   serviceName: integration-services
+   mappings:
+   -  version: 1.0
+      name: Save PT number mapping
+      description: Request -save ptnumber-mapping
+      fromTopic: integration-services-save-ptnumber
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.pt_citizen_mapping(uuid, user_id, property_tax_id, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?,?,?,?,?,?,?,?,?);
+         basePath: $.PtMappingRequest
+         jsonMaps:
+         -  jsonPath: $.PtMappingRequest.uuid
+         -  jsonPath: $.PtMappingRequest.userId
+         -  jsonPath: $.PtMappingRequest.propertyTaxId
+         -  jsonPath: $.PtMappingRequest.tenantId
+         -  jsonPath: $.PtMappingRequest.isActive
+         -  jsonPath: $.PtMappingRequest.auditDetails.createdBy
+         -  jsonPath: $.PtMappingRequest.auditDetails.createdTime
+         -  jsonPath: $.PtMappingRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.PtMappingRequest.auditDetails.lastModifiedTime
