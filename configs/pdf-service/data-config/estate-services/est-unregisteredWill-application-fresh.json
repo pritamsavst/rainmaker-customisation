@@ -1,0 +1,593 @@
+{
+    "key": "est-unregisteredWill-application-fresh",
+    "DataConfigs": {
+        "serviceName": "rainmaker-rp",
+        "version": "1.0.0",
+        "baseKeyPath": "$.Applications.*",
+        "entityIdPath": "$.applicationNumber",
+        "isCommonTableBorderRequired": true,
+        "mappings": [{
+            "mappings": [{
+                "direct": [
+
+                    {
+                        "variable": "property",
+                        "value": {
+                            "path": "PROPERTY_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "header",
+                        "value": {
+                          "path": "PDF_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                      {
+                        "variable": "colony_branch",
+                        "value": {
+                          "path": "ESTATE_BRANCH_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                    {
+                        "variable": "application_label",
+                        "value": {
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
+                      {
+                        "variable": "subHeader",
+                        "value": {
+                          "path": "APPLY_ESTATEBRANCH_OWNERSHIPTRANSFER_UNREGISTEREDWILL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                    
+                    {
+                        "variable": "fileNumberLabel",
+                        "value": {
+                            "path": "FILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "categoryLabel",
+                        "value": {
+                            "path": "CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "subCategoryLabel",
+                        "value": {
+                            "path": "SUB_CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "siteNoLabel",
+                        "value": {
+                            "path": "SITE_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+
+                    {
+                        "variable": "logo",
+                        "url": "https://egov.transerve.com/media/logo.png",
+                        "type": "image"
+                    },
+                    {
+                        "variable": "sectorNoLabel",
+                        "value": {
+                            "path": "SECTOR_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "propertyTypeLabel",
+                        "value": {
+                            "path": "PROPERTY_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "lastNocDateLabel",
+                        "value": {
+                            "path": "LAST_NOC_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "propertyApplicationNumberLabel",
+                        "value": {
+                            "path": "PROPERTY_APPLICATION_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "dueAmountLabel",
+                        "value": {
+                            "path": "DUE_AMOUNT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "sectorNoLabel",
+                        "value": {
+                            "path": "SECTOR_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+
+                    {
+                        "variable": "deceasedDetailsHeader",
+                        "value": {
+                            "path": "DECEASED_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "deceasedNameLabel",
+                        "value": {
+                            "path": "DECEASED_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "deceasedFHNameLabel",
+                        "value": {
+                            "path": "DECEASED_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "deceasedAddressLabel",
+                        "value": {
+                            "path": "DECEASED_ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "sellerPercentShareLabel",
+                        "value": {
+                            "path": "PERCENT_SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+
+                    {
+                        "variable": "dateOfDeathLabel",
+                        "value": {
+                            "path": "DATE_OF_DEATH_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "unregisterWillDetailsHeader",
+                        "value": {
+                            "path": "UNREGISTERED_WILL_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "dateOfExecutionUnregisteredLabel",
+                        "value": {
+                            "path": "DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "isLegalHeirRadioLabel",
+                        "value": {
+                            "path": "IS_LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "legalHeirBeneficiaryNameLabel",
+                        "value": {
+                            "path": "LEGAL_HEIR_BENEFICIARY_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                   
+                    {
+                        "variable": "ageLabel",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "addressLabel",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "relationWithDeceasedRadioBtnLabel",
+                        "value": {
+                            "path": "RELATION_WITH_DECEASED_RADIO_BTN_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "witnessDetailsHeader",
+                        "value": {
+                            "path": "WITNESS_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "witnessNameLabel",
+                        "value": {
+                            "path": "WITNESS_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"documents_label",
+                        "value": {
+                            "path": "DOCUMENTS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                        
+                    },
+                    {
+                        "variable": "mobileNoLabel",
+                        "value": {
+                            "path": "MOBILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },                    
+
+                    {
+                        "variable": "fileNumberValue",
+                        "value": {
+                            "path": "$.property.fileNumber"
+                        }
+                    },
+                    {
+                        "variable": "categoryValue",
+                        "value": {
+                            "path": "$.property.category"
+                        },
+                        "localisation": {
+                          "required": true,
+                          "module": "rainmaker-es"
+                        }
+                      },
+
+                    {
+                        "variable": "subCategoryValue",
+                        "value": {
+                            "path": "$.property.subCategory"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                        }
+
+                    },
+                    {
+                        "variable": "siteNumberValue",
+                        "value": {
+                            "path": "$.property.siteNumber"
+                        }
+                    },
+                    {
+                        "variable": "sectorNumberValue",
+                        "value": {
+                            "path": "$.property.sectorNumber"
+                        }
+
+                    },
+                    {
+                        "variable": "propertyTypeValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.propertyType"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                        }
+
+                    },
+                    {
+                        "variable": "lastNocDateValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.lastNocDate"
+                        }
+
+                    },
+                   
+                    {
+                        "variable": "proertyApplicationNumberValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.propertyApplicationNumber"
+                        }
+                    },
+                    {
+                        "variable": "dueAmountValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.dueAmount"
+                        }
+                    },
+                    {
+                        "variable": "tranferorNameValue",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                        }
+                    },
+                    {
+                        "variable": "transfereeGuardianName",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+                        }
+                    },
+                    {
+                        "variable": "transfereeAddress",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.address"
+                        }
+                    },
+                    {
+                        "variable": "tranferorShare",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.share"
+                        }
+                    },
+                    {
+                        "variable": "tranferorDateOfDeath",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.dateOfDeath"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "dateOfExecutionWill",
+                        "value": {
+                            "path": "$.applicationDetails.dateOfExecutionOfWill"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "legalHeirOrBeneficiaryValue",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.legalHeirOrbeneficiary"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "tranfereeNameValue",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.name"
+                        }
+                    },
+                    {
+                        "variable": "tranfereeAge",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.age"
+                        }
+                    },
+                    {
+                        "variable": "tranfereeAddress",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.address"
+                        }
+                    },
+                    {
+                        "variable": "transfereeRelationWithDeceasedRadio",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.relationWithDeceased"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "witnessNameValue",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].name"
+                        }
+                    },
+                    {
+                        "variable": "witnessAgeValue",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].dob"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "witnessAddressValue",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].address"
+                        }
+                    },
+                    {
+                        "variable": "witnessPhoneValue",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].phone"
+                        }
+                    },
+                    {
+                        "variable": "applicationNumber",
+                        "value": {
+                            "path": "$.applicationNumber"
+                        }
+                    },
+                    {
+                        "variable": "documents_array",
+                        "value": {
+                            "path": "$.applicationDocuments.*"
+                        }
+                    }
+                   
+                ]
+            }]
+        }]
+    }
+}

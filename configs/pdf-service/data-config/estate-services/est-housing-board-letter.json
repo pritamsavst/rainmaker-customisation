@@ -1,0 +1,96 @@
+{
+    "key": "est-housing-board-letter",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Applications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "ESTATE_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable":"applicationNumber",
+                "value":{
+                  "path":"$.applicationNumber"
+                }
+              },
+              {
+                "variable":"name",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable":"fatherOrHusbandName",
+                "value":{
+                  "path":"$.applicationDetails.transferee.fatherOrHusbandName"
+                }
+              },
+               {
+                "variable":"address",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
+                "variable":"share",
+                "value":{
+                  "path":"$.applicationDetails.transferor.share"
+                }
+              },
+              {
+                "variable":"siteNumber",
+                "value":{
+                  "path":"$.property.siteNumber"
+                }
+              },
+              {
+                "variable":"transferorName",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable":"dateOfExecutionOfWill",
+                "value":{
+                  "path":"$.applicationDetails.dateOfExecutionOfWill"
+                },
+                "type":"date"
+              }
+
+            ]
+          }
+        ]
+      }]
+    }
+  }  

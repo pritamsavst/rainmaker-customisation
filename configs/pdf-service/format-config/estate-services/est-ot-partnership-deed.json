@@ -1,0 +1,167 @@
+{
+    "key": "est-ot-partnership-deed",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "New Deluxe Building, Sector 17-E, Chandigarh",
+                                "fontSize": 12
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text": "No. MC/Estate/2019/",
+                        "alignment": "left",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Dated",
+                        "alignment": "right",
+                        "style": "pdfContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [50, 10, 0, 0],
+                "stack": [{
+                        "text": "-----------",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "--------------",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "------------",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "_______",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": " ___________",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "*",
+                        "text": "Submission of Conveyance deed booth SCF/SCO/Residential Site No.______ Manimajra ,UT Chandigarh",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin":[50,20,0,0],
+                "style":"pdfContent",
+                "text":"Enclosed please find herewith original deed with copy of thereof duly executed on _____. You are "
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "text": " directed to get it Registered with Sub-Registrar , U.T Chandigarh  and submit the attested/notarized copy of same with this office for record"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                 "columns":[
+                     {
+                         "text":"DA/As above",
+                         "alignment": "left"
+                     },
+                     {
+                        "text":"for",
+                        "alignment": "center",
+                        "bold":true
+                    },
+                    {
+                        "alignment": "right",
+                        "stack": [{
+                                "text": "Section Officer(Estate)",
+                                "style": "pdfContent",
+                                "bold": true
+                            },
+                            {
+                                "text": "Additional Commissioner",
+                                "style": "pdfContent",
+                                "bold": true
+        
+                            },
+                            {
+                                "text": "Municipal Corporation,",
+                                "style": "pdfContent",
+                                "bold": true
+        
+                            },
+                            {
+                                "text": "Chandigarh.",
+                                "style": "pdfContent",
+                                "bold": true
+        
+                            }
+        
+                        ]
+                    }
+                 ] 
+            }
+           
+        
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

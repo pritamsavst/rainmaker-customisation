@@ -1,0 +1,288 @@
+{
+    "key": "est-leasehold-freehold-conversion-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text": [{
+                                "text": "No. MC/Estate/2019/ "
+                            },
+                            {
+                                "text": "{{applicationNumber}}",
+                                "bold": true
+                            }
+                        ],
+
+                        "alignment": "left",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Dated_________",
+                        "alignment": "right",
+                        "style": "pdfContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "bold":true,
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{name}} s/o {{fatherOrHusbandName}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "             ______ w/o {{name}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{address}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": [{
+                                "text": "Conversion of lease-hold system into free-hold in respect of independent Dwelling Unit No.  "
+                            },
+                            {
+                                "text": "______",
+                                "bold": true
+                            },
+                            {
+                                "text": " in Modern Housing Complex, (Phase III), Manimajra."
+                            }
+                        ],
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "             Reference your application dated ____________on the subject noted above. "
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "             That Dwelling Unit No.  "
+                    },
+                    {
+                        "text": " ______ ",
+                        "bold": true
+                    },
+                    {
+                        "text": "in Modern Housing complex, Phase-Ili, Manimajra, U.T. Chandigarh was allotted to you on Hire Purchase/ under partial/ Fully Self Finance system Basis by the Chandigarh Housing Board, Chandigarh, vide Allotment letter No. "
+                    },
+                    {
+                        "text": " {{allotmentNumber}} "
+                    },
+                    {
+                        "text": "dated "
+                    },
+                    {
+                        "text": "{{dateOfAllotment}}"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": [{
+                        "text": "             That the Chandigarh Housing Board, Chandigarh, has issued No Objection for conversion of above dwelling unit from lease-hold to free-hold system vide Memo No.  "
+
+                    }, {
+                        "text": "_________ ","bold":true
+                    },
+                    {
+                        "text": "dated  "
+                    },
+                    {
+                        "text": " ___________ ,","bold":true
+                    },
+                    {
+                        "text": "and the site/plinth area of dwelling unit is mentioned as "
+                    },
+                    {
+                        "text": "{{areaSqft}} Sq.Yds.","bold":true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "             The Chandigarh Administration Estate Branch-t vide its Notifications bearing No. 222-UTFI(3)-95/9360, dated the 19th July 1996, framed the rules called 'the Chandigarh conversion of Residential Lease-Hold Land Tenure into Free-Hold Land Tenure Rules, 1996.' as adopted by Municipal Corporation, Chandigarh vide Agenda item No.4 in its 230 meeting held on 28.7.98, making these rules applicable for the conversion of dwelling units in Modern Housing Complex, Phase-I11. Manimajra, from lease-hold land tenure and further ordered by the Administrator U.T., Chandigarh vide its notification bearing no 11/1/18-UTFI(2)-2017!11822, dated the 24h October, 2017."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "             Necessary sanction to the conversion of the above mentioned dwelling unit from lease hold to free hold system is hereby accorded in view of full amount of conversion charges as per rules in lumpsum and further subject to the following conditions: "
+            },
+
+            {
+                "margin": [30, 10, 0, 0],
+                "style": "pdfContent",
+                "stack": [{
+
+                        "text": "I).   That after the conversion from the lease hold basis to free hold basis, the 'Chandigarh (Sale of sites & Building) Rules, 1960' as amended from time to time shall -so-facto be applicable to the present dwelling unit. "
+                    },
+                    {
+                        "text":[
+                            {
+                                "text":"II).  That all other terms &conditions as imposed by the Chandigarh Housing Board vide their Allotment letter no."
+                            },
+                            {
+                                "text": " {{allotmentNumber}} ","bold":true
+                            },
+                            {
+                                "text":"dated "
+                            },
+                            {
+                                "text":"{{dateOfAllotment}} ","bold":true
+                            },
+                            {
+                                "text":" shall remain operative as before. "
+                            }
+                        ]
+                    },
+                    
+                    {
+                        "text": "III). That you shall execute conveyance deed on non-judicial stamp papers equal to the amount as mentioned in Rule 9 of the 'Chandigarh Conversion of Residential Lease-Hold Land Tenure into Free-Hold Land Tenure Rules, 1996', within six months from the date of issue of this letter in the prescribed form to be issued by the M.C.C. and subject to 'No Objection Certificate issued by the Chandigarh Housing Board. The said Conveyance Deed shall be got registered with the Sub-Registrar, U.T., Chandigarh under due intimation to this office. (iv) "
+                    },
+                    {
+                        "text": "IV)    You shall also be liable to pay the dues to the Chandigarh Housing Board, Chandigarh, on account of premium, interest, Ground Rent, penalty etc., if any, found recoverable from you at later stage."
+                    },
+                    {
+                        "text": "V)     That you will ensure that the dwelling unit is free from building violation and misuse."
+                    },
+                    {
+                        "text": "VI)    That, if any, information supplied by you is found to be incorrect at any stage, the application for conversion from lease hold to free-hold site shall be treated as cancelled & the entire amount deposited shall be forfeited and action shall be initiated against you under the provisions of the Capital of Punjab (Development & Regulation) Act, 1952, as amended from time to time and the rules made there under. "
+                    },
+                    {
+                        "text": "VII)   In case any enhanced compensation is granted by the Hon'ble Court to the landowner from whom the land had been acquired the same liability shall be passed on to you and you shall be liable to pay the amount on pro-rata basis to the landowner. "
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Additional Commissioner-I",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left"
+                    },
+                    {
+                        "text": "Dated:______",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "stack": [{
+                    "preserveLeadingSpaces": true,
+                    "text": "             A copy is forwarded to the Chairman, Chandigarh Housing Board, Chandigarh, for information w.r.t his Memo No. CHB-AO-IV/2019/1558 dated 20.02.2018 in respect of Sh. Jasbir Singh & ors, H.No.5617. Modern Housing Complex, Manimajra, UT, Chandigarh ",
+                    "style": "pdfContent"
+                }]
+            }
+
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

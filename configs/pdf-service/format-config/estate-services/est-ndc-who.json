@@ -1,0 +1,230 @@
+{
+    "key": "est-ndc-who",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "New Deluxe Building, Sector 17-E, Chandigarh",
+                                "fontSize": 12
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text": [{
+                            "text": "No. MC/Estate/2019/ "
+                        }, {
+                            "text": "{{applicationNumber}}",
+                            "bold": true
+                        }],
+                        "alignment": "left",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Dated",
+                        "alignment": "right",
+                        "style": "pdfContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [50, 10, 0, 0],
+                "stack": [{
+                        "text": "{{name}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "{{address}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "*",
+                        "text": [{
+                                "text": "Issuance of No Dues Certificate in respect of Site No "
+
+                            },
+                            {
+                                "text": "{{siteNumber}}, ",
+                                "bold": true
+                            },
+                            {
+                                "text": " Rajeev Vihar, Manimajra, UT, Chandigarh "
+                            }
+                        ],
+                        "style": "pdfContent"
+
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": "             Please reference your application on the subject cited above. ",
+                "preserveLeadingSpaces": true
+
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": [{
+                    "preserveLeadingSpaces": true,
+                    "text": "             The Demand draft amounting to Rs.___________ deposited by you as per notification No. 31/1/452-UTFI(4) 2018/21052 dated 14.11.2018 on account of one time charges has been accepted as detailed below: "
+                }]
+            },
+            {
+                "style": "pdfContent",
+                "margin": [0, 20, 0, 0],
+                "table": {
+                    "widths": ["33.33%", "33.33%", "33.33%"],
+                    "body": [
+                        [{
+                            "text": "Name of Original Allottee"
+                        }, {
+                            "text": "Flat No  "
+                        }, {
+                            "text": "Area "
+                        }],
+                        [{
+                            "text": "{{transferorName}}","bold":true
+                        }, {
+                            "text": "{{siteNumber}}","bold":true
+                        }, {
+                            "text": "","bold":true
+                        }]
+
+                    ]
+                }
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "             However, this No Due Certificate is further subject to the following conditions: - "
+                    },
+                    {
+                        "text": "             1. Deposit of composition fee and any other charge and further execution of Sub Conveyance deed/deed of transfer rights of the flats as per above notification dated 14.11.2016 with the Sub Registrar/Estate Office/Registrar Co-operative Society, Chandigarh."
+                    },
+                    {
+                        "text": "             2. The said NDC is subject to audit and you shall be liable to pay any amount in arrear or any other Govt dues if found due towards above mentioned fiat at any later stage. "
+
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "             You are further advised to approach the office or AWHO/Sub Registrar/Registrar, Cooperative Soc ety, UT, Chandigarh, for further course of action."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer  ",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Additional Commissioner ",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Municipal Corporation,Chandigarh",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left"
+                    },
+                    {
+                        "text": "Dated:",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "style": "pdfContent",
+                "stack": [{
+                        "text": "Copy is forwarded to following for information & necessary action please: -"
+                    },
+                    {
+                        "text": "1.The Registrar, Co-operative Societies, UT Govt Press, Sector 18-A Chandigarh."
+                    },
+                    {
+                        "text": "2. The Sub Registrar, UT, Chandigarh with the request to charge  composition fees, as mentioned in the notification issued by the Finance Department, Chandigarh Administration, Chandigarh vide Memo No. 21/1/452-UTFI(4)-2018,21050 dated 14.11.2018"
+
+                    },
+                    {
+                        "text": "3.The AWHO, South Hutments, Kashmir House, Rajaji Marg, New Delhi-110011 with the advice to compliedthe orders passed in CWP No. 12259 of 2015 titled as &quot;Khushal Chand Malhotra v/s Commissioner, Municipal Corporation, Chandigarh and take care of issues i.e. violations, sale of property before the lock in period and GPA/will etc, as this office has only to issue NDC as per the Chandigarh Administration notification dated 14.11.2018 in respect of one time charges on account of unearned increase only."
+                    }
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

@@ -1,0 +1,265 @@
+{
+    "key": "est-show-cause-non-payment-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "alignment":"right",
+                "style":"pdfContent",
+                "text":"POST/THROUGH PS"
+            },{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text":[
+                            {
+                                "text": "No. MC/Estate/2019/ "
+                            },
+                            {
+                                "text":"{{applicationNumber}}","bold":true
+                            }
+                        ],
+                       
+                        "alignment": "left",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Dated______",
+                        "alignment": "right",
+                        "style": "pdfContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                    "preserveLeadingSpaces": true,
+                        "text": "                 {{name}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "                 {{address}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Subject:",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": "Show Cause Notice under Rule 12 (iii) and 13 (iii) of the Chandigarh Estate Rules 2007 as amended from time to time read with rule 14 of the said Rules.”",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "alignment":"center",
+                "text": "*****"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text":[
+                    {
+                        "text": "                WHEREAS, SCO/Booth site No."
+                    },
+                    {
+                        "text":" {{siteNumber}}","bold":true
+                    },
+                    {
+                        "text":"Sector "
+                    },
+                    {
+                        "text":" {{sectorNumber}}","bold":true
+                    },
+                    {
+                        "text":" was sub-leased/leased out to you for 99 years on the terms and conditions specified in Letter No. "
+                    },
+                    {
+                        "text":" {{allotmentNumber}},","bold":true
+                    },
+                    {
+                        "text":" dated "
+                    },
+                    {
+                        "text":" {{dateOfAllotment}} ","bold":true
+                    },
+                    {
+                        "text":"at a premium of Rs. "
+                    },
+                    {
+                        "text":" {{emdAmount}}","bold":true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "                And, whereas, the sub-lease/lease shall be governed by the provisions of the Capital of Punjab (Development &amp; Regulation) Act, 1952 as amended to date and rules framed there under.."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "                And, whereas, the Chandigarh Estate Rules, 2007 were made under the provisions of the Capital of Punjab (Development &amp; Regulation) Act, 1952 and come into force on 7.11.2007, whereby the Chandigarh Lease Hold of Sites and Building Rules, 1973 were repealed and by virtue of Section 20 of the Rules of 2007, the sites governed under, the erstwhile rules shall now be governed by new rules."
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "                And, whereas, as per the terms and conditions of the allotment on sub-lease hold basis, you are/were required to pay annual ground rent for 99 years as prescribed in the Allotment letter."
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                And, whereas, you have not paid the ground rent, which fall due on the following  dates:"
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "stack":[
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text":"      1      ________"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text":"      2      ________"
+                    },{
+                        "preserveLeadingSpaces": true,
+                        "text":"      3      ________"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                And, whereas, you liable to pay the outstanding amount of the ground rent along with interest/penalty (as applicable) from the date on which the ground rent became payable till such date the same is actually paid."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                And whereas you also liable to pay the Service Tax as prescribed by the Centre Government from time to time amounting to Rs. _____________."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                Now, therefore, you are hereby directed to clear the entire outstanding amount of Rs. _________________ out of which Rs. _________________ towards ground rent & Rs. _________________ towards interest/penalty as per the provisions of the Chandigarh Estate Rules, 2007 as amended for time to time and towards the Service Tax"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                And Whereas, the aforesaid amount is subject to verification and check/revision by the Audit. In case, you have paid any amount of ground rent, necessary intimation about the  same may please be give to this office prior to the hearing of the case."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                You are hereby afforded an opportunity of being heard in person or through your authorized representative on ____________________ at _______________, 1st Floor, New Deluxe Building. Sector 17/E, Chandigarh to show cause as to why the sub lease/lease may not be cancelled and forfeiture as provided in Rule 14 may not be imposed. In case you fail to appear or give satisfactory explanation in the matter on the fixed date and time, it will be presumed that you have nothing to say in the matter and ex-parte decision will be taken in accordance with rules."
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Joint Commissioner, ",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "(Exercising the powers of the Estate officer ",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "under the provision of Capital of Punjab",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "(Development & Regulation) Act, 1952).",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Chandigarh",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            }
+        
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

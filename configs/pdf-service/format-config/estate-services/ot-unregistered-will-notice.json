@@ -1,0 +1,266 @@
+{
+    "key": "ot-unregistered-will-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "BEFORE SHRI ______________________________",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "ADDITIONAL COMMISSIONER,",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{header}}",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "auto",
+
+                        "text": [{
+                                "text": "Transfer of ownership of "
+                            }, {
+                                "text": " {{share}} ",
+                                "bold": true
+                            },
+                            {
+                                "text": "share of SCO/SCF/Booth/Residential Site No. "
+                            },
+                            {
+                                "text": "{{siteNumber}} ",
+                                "bold": true
+                            },
+                            {
+                                "text": "Situated in "
+                            },
+                            {
+                                "text": "________",
+                                "bold": true
+
+                            },
+                            {
+                                "text": " Chandigarh on the basis of Un-registered Will of Late Shri/Smt"
+                            },
+                            {
+                                "text": " {{transferorName}}",
+                                "bold": true
+                            }
+                        ],
+                        "style": "pdfContent"
+                    },
+                    {
+                        "border": "2",
+                        "image": "{{logo}}",
+                        "alignment": "right",
+                        "width": "50"
+
+                    }
+                ]
+            },
+            {
+                "text": "*****",
+                "alignment": "center",
+                "margin": [0, 20, 0, 0]
+            },
+            {
+                "preserveLeadingSpaces": true,
+                "text": "              It Is notified for the information of general public and all concerned that as per record of this office ",
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent"
+            },
+            {
+
+                "style": "pdfContent",
+                "margin": [0, 0, 0, 0],
+                "text": [{
+                        "text": "{{share}}"
+                    }, {
+                        "text": "% share of the SCO/SCF/Booth/Residential Site No. "
+                    },
+                    {
+                        "text": "{{siteNumber}} ",
+                        "bold": true
+                    },
+                    {
+                        "text": "situated in Chandigarh stands in the name of Shri/Smt"
+                    },
+                    {
+                        "text": " {{transferorName}}",
+                        "bold": true
+                    }
+
+                ]
+
+            },
+            {
+                "style": "pdfContent",
+                "text": [{
+                    "preserveLeadingSpaces": true,
+
+                        "text": "              It has been reported by Smt/Shri"
+                    },
+                    {
+                        "text": " {{witnessName}} ",
+                        "bold": true
+                    },
+                    {
+                        "text": "r/o "
+                    },
+                    {
+                        "text": "{{witnessAddress}} ",
+                        "bold": true
+                    },
+
+                    {
+                        "text": "Chandigarh that Shri/Smt expired on "
+                    },
+                    {
+                        "text":"{{dateOfDeath}} ","bold":true
+                    },
+                    {
+                        "text":"leaving behind "
+                    },
+                    {
+                        "text": "a Un-registered Will dated "
+                    },
+
+                    {
+                        "text":" {{dateOfExecutionOfWill}}","bold":true
+                    }
+                ],
+
+                "margin": [0, 0, 0, 0]
+            },
+          
+            {
+                "style": "pdfContent",
+                "margin": [0, 0, 0, 0],
+                "text": [{
+                    "preserveLeadingSpaces": true,
+                    "text": "             Now, "
+                    },
+                    {
+                        "text": "{{name}} ",
+                        "bold": true
+                    },
+                    {
+                        "text": "r/o "
+                    },
+                    {
+                        "text": " {{address}}",
+                        "bold": true
+                    },
+                    {
+                        "text": " has applied for the transfer of ownership rights to the extent of  "
+                    },
+                    {
+                        "text":"{{share }} % ","bold":true
+                    },
+                    {
+                        "text":"share of the"
+                    },
+                    {
+                        "text": "SCO/SCF/Booth/Residential Site No. "
+                    },
+                    {
+                        "text": " {{siteNumber}}",
+                        "bold": true
+                    },
+                    {
+                        "text":"situated in Chandigarh held by Late Shri/Smt "
+                    },
+                    {
+                        "text": " {{transferorName}}",
+                        "bold": true
+                    },
+                    {
+                        "text": "in her favour on the basis of un-registered Will dated "
+                    },
+                    {
+                        "text":" {{dateOfExecutionOfWill}}", "bold": true
+                    },
+                    {
+                        "text":"of Late Shri/Smt "
+                    },
+                    {
+                        "text": " {{transferorName}}",
+                        "bold": true
+                    },
+                    {
+                        "text": "If anybody has got any objection upon the mutation of the said share in the said property, in favour of the above named applicant, he/she/they may furnish the same in writing in the office of the undersigned in his office Room No.___________Floor, New Deluxe Building, Municipal Corporation, Sector 17, Chandigarh within 30 days from the date of publication of this notice, failing which the ownership of the said property will be transferred accordingly and no further claim whatsoever shall be entertained at any later stage."
+                    }
+
+                ]
+            },
+
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "ADDL. COMMISSIONER,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "MUNICIPAL CORPORATION,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "CHANDIGARH.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "text": "Note: Read carefully before publication.",
+                "style": "pdfContent"
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

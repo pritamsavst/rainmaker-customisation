@@ -1,0 +1,552 @@
+{
+    "key": "est-court-decree-family-settlement-application",
+    "config": {
+      "defaultStyle": {
+        "font": "Cambay"
+      },
+      "content": [
+        {
+          "columns": [{
+            "image": "{{logo}}",
+            "width": 50,
+            "alignment": "left"
+          },
+          {
+            "stack": [{
+                "text": "{{header}}",
+                "alignment": "center",
+                "color": "#17202A",
+                "fontSize": 14,
+                "bold": true
+              },
+              {
+                "text": "{{subHeader}}",
+                "alignment": "center",
+                "fontSize": 11,
+                "italics": true,
+                "bold":true
+              },
+              {
+                "text": "{{application_label}} {{applicationNumber}}",
+                "fontSize": 12,
+                "alignment":"center",
+                "lineHeight": "2"
+            }
+            ]
+  
+          }
+        ]
+  
+      },
+  
+        {
+          "margin": [
+            -25,
+            10,
+            -25,
+            1
+          ],
+          "table": {
+            "widths": ["25%", "25%", "25%","25%"],
+            "body": [
+            [{
+              "colSpan": 4,
+              "columns": [
+
+                  [{
+                          "text": "{{property}}",
+                          "fontSize": 12,
+                          "lineHeight": "2",
+                          "margin":[3,0,0,0],
+                          "bold":true
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{fileNumberLabel}}",
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{categoryLabel}}",
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{subCategoryLabel}} ",
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{siteNoLabel}}",
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              }
+                          ]
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{fileNumberValue}}",
+                                  "fontSize": 10,
+                                  "lineHeight": 2,
+                                  "width":150,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{categoryValue}}",
+                                  "lineHeight": 2,
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{subCategoryValue}} ",
+                                  "lineHeight": 2,
+                                  "fontSize": 10,
+                                  "bold": true,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{siteNumberValue}}",
+                                  "lineHeight": 2,
+                                  "fontSize": 10,
+                                  "bold": true,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              }
+                          ]
+
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{sectorNoLabel}} ",
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{propertyTypeLabel}}",
+                                  "fontSize": 10,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                "text": "{{lastNocDateLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{propertyApplicationNumberLabel}}",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                          ]
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{sectorNumberValue}}",
+                                  "fontSize": 10,
+                                  "lineHeight": 2,
+                                  "bold": true,
+                                  "width":150,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{propertyTypeValue}}",
+                                  "fontSize": 10,
+                                  "lineHeight": 2,
+                                  "width":150,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                "text": "{{lastNocDateValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{proertyApplicationNumberValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                          ]
+                      },
+                      {
+                        "columns": [{
+                                "text": "{{dueAmountLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{dueAmountValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+                  ]
+              ]
+          }, {}, {},{}],
+       
+        [{
+            "colSpan": 4,
+            "columns": [
+
+                [{
+                        "text": "{{transfereeDetailsHeader}}",
+                        "fontSize": 12,
+                        "lineHeight": "2",
+                        "margin":[3,0,0,0],
+                        "bold":true
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{transfereeTypeLabel}}",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{existingOwnerLabel}}",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transferorNameLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transfereeNameLabel}}",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{type}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{existingOwnerName}}",
+                                "lineHeight": 2,
+                                "fontSize": 10,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{sellerTransferorName}} ",
+                                "lineHeight": 2,
+                                "fontSize": 10,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transfereeName}}",
+                                "lineHeight": 2,
+                                "fontSize": 10,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{FHNameLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{addressLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transfereeMobileNoLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{percentageShareLabel}} ",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0],
+                                "width":150
+                            }
+                          
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{fatherOrHusbandName}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{address}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{mobileNo}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },{
+                                "text": "{{percentageOfShareTransferred}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{registrationNoLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{dateOfRegistrationLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                          
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{registrationNumber}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{dateOfRegistration}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }, {}, {},{}],
+        [{
+            "colSpan": 4,
+            "columns": [
+
+                [{
+                        "text": "{{modeOFTransferHeader}}",
+                        "fontSize": 12,
+                        "lineHeight": "2",
+                        "margin":[3,0,0,0],
+                        "bold":true
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{familySettlementLabel}}",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                            
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{modeOfTransfer}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "width":150,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+                    
+                ]
+            ]
+        }, {}, {},{}],
+        [{
+            "colSpan": 4,
+            "columns": [
+
+                [{
+                        "text": "{{decreeDetailsHeader}}",
+                        "fontSize": 12,
+                        "lineHeight": "2",
+                        "margin":[3,0,0,0],
+                        "bold":true
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{familySettlementDateLabel}}",
+                                "fontSize": 10,
+                                "width":150, 
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{passedByCourtLabel}}",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{citvilSuitTitleLabel}} ",
+                                "fontSize": 10,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{familysettlementdate}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{passedbycourt}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{civilsuittitle}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "width":150,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+               
+                ]
+            ]
+        }, {}, {},{}]
+    
+        ]
+          }
+         
+        },
+        {
+            "pageBreak": "before",
+                "margin": [
+                -25,
+                10,
+                -30,
+                1
+              ],
+            "table":{
+                "widths": ["25%", "25%", "25%","25%"],
+                "body":[
+                  [{
+                      "colSpan": 4,
+                      "text": "{{documents_label}}",
+                      "fontSize": 12,
+                      "margin":[3,0,0,0],
+                      "border": [
+                          true,
+                          true,
+                          true,
+                          false
+                      ]
+                  },
+                  {}, {},{}
+              ],
+              [{
+                      "colSpan": 4,
+                      "table": {
+                          "widths": ["25%", "25%", "25%", "25%"],
+                          "body": [
+                              "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{documentType}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                          ]
+                      },
+                      "border": [
+                          true,
+                          false,
+                          true,
+                          true
+                      ]
+                  },
+                  {}, {},{}
+              ]
+                ]
+            }
+        }
+      ],
+      "styles": {
+        "receipt-table2": {
+            "color": "#000000",
+            "bold": true,
+            "fontSize": 10
+
+        },
+
+        "receipt-table-value-cont": {
+            "color": "#000000",
+            "bold": false,
+            "fontSize": 10
+        }
+       
+    }
+    }
+  } 

@@ -1,0 +1,451 @@
+{
+    "key": "est-inestate-death-application-fresh",
+    "config": {
+      "defaultStyle": {
+        "font": "Cambay"
+      },
+      "content": [
+        {
+          "columns": [{
+            "image": "{{logo}}",
+            "width": 50,
+            "alignment": "left"
+          },
+          {
+            "stack": [{
+                "text": "{{header}}",
+                "alignment": "center",
+                "color": "#17202A",
+                "fontSize": 14,
+                "bold": true
+              },
+              {
+                "text": "{{subHeader}}",
+                "alignment": "center",
+                "fontSize": 11,
+                "italics": true,
+                "bold":true
+              },
+              {
+                "text": "{{application_label}} {{applicationNumber}}",
+                "fontSize": 12,
+                "alignment":"center",
+                "lineHeight": "2"
+            }
+            ]
+  
+          }
+        ]
+  
+      },
+  
+        {
+          "margin": [
+            -25,
+            10,
+            -25,
+            1
+          ],
+          "table": {
+            "widths": ["25%", "25%", "25%","25%"],
+            "body": [
+            [{
+              "colSpan": 4,
+              "columns": [
+
+                  [{
+                          "text": "{{property}}",
+                          "fontSize": 12,
+                          "lineHeight": "2",
+                          "margin":[3,0,0,0],
+                          "bold":true
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{fileNumberLabel}}",
+                                  "fontSize": 10,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{categoryLabel}}",
+                                  "fontSize": 10,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{subCategoryLabel}} ",
+                                  "fontSize": 10,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{siteNoLabel}}",
+                                  "fontSize": 10,
+                                  "margin":[3,0,0,0]
+                              }
+                          ]
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{fileNumberValue}}",
+                                  "fontSize": 10,
+                                  "lineHeight": 2,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{categoryValue}}",
+                                  "lineHeight": 2,
+                                  "fontSize": 10,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{subCategoryValue}} ",
+                                  "lineHeight": 2,
+                                  "fontSize": 10,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{siteNumberValue}}",
+                                  "lineHeight": 2,
+                                  "fontSize": 10,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              }
+                          ]
+
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{sectorNoLabel}} ",
+                                  "fontSize": 10,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{propertyTypeLabel}}",
+                                  "fontSize": 10,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                "text": "{{lastNocDateLabel}} ",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{propertyApplicationNumberLabel}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            }
+                          ]
+                      },
+                      {
+                          "columns": [{
+                                  "text": "{{sectorNumberValue}}",
+                                  "fontSize": 10,
+                                  "lineHeight": 2,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                  "text": "{{propertyTypeValue}}",
+                                  "fontSize": 10,
+                                  "lineHeight": 2,
+                                  "bold": true,
+                                  "margin":[3,0,0,0]
+                              },
+                              {
+                                "text": "{{lastNocDateValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{proertyApplicationNumberValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                          ]
+                      },
+                      {
+                        "columns": [{
+                                "text": "{{dueAmountLabel}} ",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{dueAmountValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+                  ]
+              ]
+          }, {}, {}],
+       
+        [{
+            "colSpan": 4,
+            "columns": [
+
+                [{
+                        "text": "{{deceasedDetailsHeader}}",
+                        "fontSize": 12,
+                        "lineHeight": "2",
+                        "margin":[3,0,0,0],
+                        "bold":true
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{tranferorNameValue}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transfereeGuardianName}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transfereeAddress}} ",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranferorShare}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{tranfereeNameValue}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranfereeFHNameValue}}",
+                                "lineHeight": 2,
+                                "fontSize": 10,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranfereeRelationValue}} ",
+                                "lineHeight": 2,
+                                "fontSize": 10,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranfereeAddressValue}}",
+                                "lineHeight": 2,
+                                "fontSize": 10,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{dateOfDeathLabel}} ",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{isLegalHeir}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                              "text": "{{isExistingOwnerLabel}} ",
+                              "fontSize": 10,
+                              "margin":[3,0,0,0]
+                          },
+                          {
+                              "text": "{{selectOwnerLabel}}",
+                              "fontSize": 10,
+                              "margin":[3,0,0,0]
+                          }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{tranferorDateOfDeath}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranferorLegalHeir}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{isExisting}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{typesOfOwner}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }, {}, {}],
+        [{
+            "colSpan": 4,
+            "columns": [
+
+                [{
+                        "text": "{{legalHeirHeader}}",
+                        "fontSize": 12,
+                        "lineHeight": "2",
+                        "margin":[3,0,0,0],
+                        "bold":true
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{legalHeirNameLabel}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{legalHeirAgeLabel}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{legalHeirAddressLabel}} ",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{legalHeirRelationshipLabel}}",
+                                "fontSize": 10,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    },
+                    {
+                        "columns": [{
+                                "text": "{{tranfereeName}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranfereeAge}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{tranfereeAddress}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            },
+                            {
+                                "text": "{{transfereeRelationWithDeceased}}",
+                                "fontSize": 10,
+                                "lineHeight": 2,
+                                "bold": true,
+                                "margin":[3,0,0,0]
+                            }
+                        ]
+                    }
+                ]
+            ]
+        }, {}, {}]
+             
+            ]
+          }
+        },
+        {
+            "pageBreak": "before",
+                "margin": [
+                -25,
+                10,
+                -30,
+                1
+              ],
+            "table":{
+                "widths": ["25%", "25%", "25%","25%"],
+                "body":[
+                  [{
+                      "colSpan": 4,
+                      "text": "{{documents_label}}",
+                      "fontSize": 12,
+                      "margin":[3,0,0,0],
+                      "border": [
+                          true,
+                          true,
+                          true,
+                          false
+                      ]
+                  },
+                  {}, {},{}
+              ],
+              [{
+                      "colSpan": 4,
+                      "table": {
+                          "widths": ["25%", "25%", "25%", "25%"],
+                          "body": [
+                              "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{documentType}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                          ]
+                      },
+                      "border": [
+                          true,
+                          false,
+                          true,
+                          true
+                      ]
+                  },
+                  {}, {},{}
+              ]
+                ]
+            }
+        }
+      ],
+      "styles": {
+        "receipt-table2": {
+            "color": "#000000",
+            "bold": true,
+            "fontSize": 10
+
+        },
+
+        "receipt-table-value-cont": {
+            "color": "#000000",
+            "bold": false,
+            "fontSize": 10
+        }
+       
+    }
+    }
+  } 

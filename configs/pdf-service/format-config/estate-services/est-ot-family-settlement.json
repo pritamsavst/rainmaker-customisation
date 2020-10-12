@@ -1,0 +1,241 @@
+{
+    "key": "est-ot-family-settlement",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "New Deluxe Building, Sector 17-E, Chandigarh",
+                                "fontSize": 12
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text": [{
+                                "text": "No. MC/Estate/2019/ "
+                            },
+                            {
+                                "text": "{{applicationNumber}}",
+                                "bold": true
+                            }
+                        ],
+                        "alignment": "left",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "Dated_______",
+                        "alignment": "right",
+                        "style": "pdfContent"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                    "preserveLeadingSpaces": true,
+                        "text": "             {{name}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{address}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": "Transfer of ownership of {{share}}% share of SCO/SCF/Booth/Residential Site No. {{siteNumber}} situated in {{companyAddress}} Chandigarh on the Court decree.",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "preserveLeadingSpaces": true,
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": "             Reference your application dated _____________________ on the subject cited above."
+            },
+            {
+                "preserveLeadingSpaces": true,
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "text":[
+                    {
+                        "text": "             In view of the  court decree/award dated "
+                    },
+                    {
+                        "text":"{{decreeDate}} ",
+                        "bold": true
+                    },
+                    {
+                        "text":"passed by the Hon'ble Court of Mr/Ms "
+                    },
+                    {
+                        "text": " {{transferorName}}",
+                        "bold": true
+                    },
+                    {
+                        "text": " which has submitted by you along with liability affidavit and Indemnity Bond, the ownership of the SCO/Booth/Residential site No. "
+                    },
+                    {
+                        "text": "{{siteNumber}} ",
+                        "bold": true
+                    },
+                    {
+                        "text": "situated in"
+                    },
+                    {
+                        "text": "{{companyAddress}}",
+                        "bold": true
+                    },
+                    {
+                        "text": " Chandigarh is hereby transferred in your name from the name of Shri/Smt"
+                    },
+                    {
+                        "text": " {{transferorName}} ",
+                        "bold": true
+                    },
+
+                    {
+                        "text": "on the following terms & conditions: -"
+                    }
+                ]
+
+            },
+          
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "1.             The intending transferee shall abide by the provisions of Capital of Punjab(Development & Regulation) Act , 1952 as amended upto date and the Rules framed there under from time to time and shall abide by the Terms and Conditions  as laid down in the Allotment Letter and Deed of Conveyance."
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "2.             The intending transferee shall be liable to pay any amount in arrears, if found due towards the premium and interest etc. in respect of above mentioned site."
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "3.             That the intending transferee shall obtain the occupation certificate immediately after transfer of ownership."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Additional Commissioner,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left"
+                    },
+                    {
+                        "text": "Dated:",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "stack": [{
+                        "text": "Copy is forwarded to following for information & necessary action please: -",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "1. The SDO (Buildings), Estate Officer, U.T. Chandigarh.",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "2. The Asst Collector Tax, Municipal Corporation, Chandigarh",
+                        "style": "pdfContent"
+
+                    }
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

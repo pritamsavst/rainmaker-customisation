@@ -1,0 +1,261 @@
+{
+    "key": "est-show-cause-occupation-certificate-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+         {
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text": "No. MC/Estate/2019/ {{applicationNumber}}",
+                        "alignment": "left",
+                        "style": "pdfContent",
+                        "bold":true
+                    },
+                    {
+                        "text": "Dated _______",
+                        "alignment": "right",
+                        "style": "pdfContent",
+                        "bold":true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{name}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{address}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Subject:",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": "Show cause notice in respect of SCF No.{{siteNumber}}, {{companyAddress}}",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "alignment":"center",
+                "text": "*****",
+                "bold":true
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text":[
+                    {
+                        "text": "                WHEREAS the SCF Site No  "
+                    },
+                    {
+                        "text":"{{siteNumber}} , {{companyAddress}}","bold":true
+                    },
+                    {
+                        "text":" was initially allotted to "
+                    },
+                    {
+                        "text":"{{name}} , {{fatherOrHusbandName}} ","bold":true
+                    },
+                    {
+                        "text":" vide allotment letter No. "
+                    },
+                    {
+                        "text":"{{allotmentNumber}} ","bold":true
+                    },
+                    {
+                        "text":"dated "
+                    },
+                    {
+                        "text":"{{dateOfAllotment}} ","bold":true
+                    },
+                    {
+                        "text":"on the terms & conditions incorporated in the allotment referred to above."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "                AND WHEREAS the said SCF was later on transferred in your favour vide letter no. MC/Estate/2011/5129 dated 24.08.2011, MC/Estate/2013/8501 dated 14.08.2013 and MC/Estate/2019/10143 dated 18.12.2019 on the terms & conditions as mentioned in the allotment letter and deed of conveyance and with condition that you were required to submit occupation certificate within one month failing which no further transfer will be made in future."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "               Whereas according to provision of clause 8(a) of the terms & conditions of allotment, you were required to complete construction over the said site within one year from the date of allotment, after getting the plans of proposed building approved from the competent authority in accordance with the regulation."
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "                Whereas you were handed over the possession of the site and accordingly you were to complete the construction over the site within one year or in the extended period."
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                Whereas according to the provisions of clause no. 4 of above said transfer letter,you were required to submit occupation certificate within one month from the issue of transfer of ownership but you have not yet submitted the occupation certificate in respect of above said SCF. "
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                You are hereby served with this notice why your site shall not be resumed besides forfeiting the whole amount as per clause 8(b) of the allotment letter dated 05.07.1978"
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "                In case you have to say something in this regard, you are hereby afforded an opportunity of being heard in person on__________at__________ before the undersigned in Room No. _______, 1st floor, New Deluxe Building, Sector 17-E, Chandigarh, falling which it shall be presumed that you have nothing to say in this regard and ex-parte decision shall be taken without any further notice."
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Additional Commissioner",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "(Exercising the powers of the Estate Officer",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "under the provisions of Capital of Punjab ",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "(Development & Regulation) Act, 1952).",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Chandigarh",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "margin":[0,20,10,10],
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left",
+                        "bold":true
+                    },
+                    {
+                        "text": "Dated:",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "style": "pdfContent",
+                "margin":[40,10,0,0],
+                "stack": [
+                    {
+                        "style": "pdfContent",
+                        "preserveLeadingSpaces": true,
+                        "text":"A copy is also forwarded to the following information and necessary "
+                    },
+                    {
+                        "text": "1.The SDO(B). Estate Office, U.T. Chandigarh. He is requested to depute concerned JE along with the relevant record pertaining to the site in question on the above date and time.",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "2. The Law officer, Municipal Corporation, Chandigarh. He is directed to attend the proceedings on the above date and time.",
+                        "style": "pdfContent"
+
+                    },
+                    {
+                        "text": "3. The Building Inspector, Municipal Corporation, Chandigarh. He is directed to attend the proceedings on the above date and time.",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "4. Smt. Alka Bansal W/o Sh Rakesh Bansal (intending transferee 20% share), r/o H.No.3-B-1, Meera Marg Jawahar Nagar, Sr. Ganga Nagar, Rajasthan.",
+                        "style": "pdfContent"
+                    } 
+                ]
+            }
+        
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

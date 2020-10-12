@@ -1,0 +1,200 @@
+{
+    "key": "est-ot-inestate-death-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "BEFORE SHRI ______________________________",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "ADDITIONAL COMMISSIONER,",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{header}}",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "auto",
+                        "style": "pdfContent",
+                        "text": [{
+                                "text": "Transfer of ownership of share of SCO/SCF/Booth/Residential Site No. "
+                            },
+                            {
+                                "text": " {{siteNumber}} ",
+                                "bold": true
+                            },
+                            {
+                                "text": "Situated in "
+                            },
+                            {
+                                "text": "____________ ",
+                                "bold": true
+                            },
+                            {
+                                "text": "Chandigarh on the basis of Intestate death"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "*****",
+                "alignment": "center",
+                "margin": [0, 20, 0, 0]
+            },
+
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": [{
+                        "text": "        It is notified for the information of general public and all concerned that the as per record of this office  share of the property known as SCF/SCO/Booth Residential Site No "
+
+                    },
+                    {
+                        "text": " {{siteNumber}}",
+                        "bold": true
+                    },
+                    {
+                        "text": " stands in the name of Shri smt "
+                    },
+                    {
+                        "text": "{{transferorName}}",
+                        "bold": true 
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text":[
+                    {
+                        "text": "       It has been reported by "
+                    },
+                    {
+                        "text":"___________ ","bold":true
+                    },
+                    {
+                        "text":" that Shri Smt  had expired intestate on "
+                    },
+                    {
+                        "text":"{{dateOfDeath}} ","bold":true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text":[
+                    {
+                        "text": "        Now "
+
+                    },
+                    {
+                        "text":"{{name}}","bold":true
+                    },
+                    {
+                        "text":" r/o "
+                    },
+                    {
+                        "text":"{{address}}","bold":true
+                    },
+                    {
+                        "text":" has applied for the transfer of ownership rights to the extent of  "
+                    },
+                    {
+                        "text":" {{share}}","bold":true
+                    },
+                    {
+                        "text":"% share in respect of SCF'Sco/Booth Residential Site No."
+                    },
+                    {
+                        "text":" {{siteNumber}} ","bold":true
+                    },
+                    {
+                        "text":" in their favour on the basis of intestate death of Shri/Smt"
+                    },
+                    {
+                        "text":" {{transferorName}} ","bold":true
+                    },
+                    {
+                        "text":"If anybody has got any objection upon the mutation of the said share in the said property, in favour of the above  named applicant, he/she/they may furnish the same in writing in the office of the undersigned in his office Room No. ______, ______ Floor, New Deluxe Building, Municipal Corporation, Sector 17, Chandigarh within 30 days from the date of publication of this notice, failing which the ownership of the said property will be transferred accordingly and no further claim whatsoever shall be entertained at any later stage."
+                    }
+                ]
+            },
+
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "ADDL. COMMISSIONER,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "MUNICIPAL CORPORATION,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "CHANDIGARH.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "alignment": "center",
+                "text": "Note: Read carefully before publication.",
+                "style": "pdfContent"
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}

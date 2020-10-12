@@ -1,0 +1,177 @@
+{
+    "key": "est-amount-letter-after-conversion",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "columns": [{
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left"
+                    },
+                    {
+
+                        "alignment": "center",
+                        "stack": [{
+                                "text": "{{header}}",
+                                "color": "#17202A",
+                                "fontSize": 14,
+                                "bold": true
+                            },
+                            {
+                                "text": "{{colony_branch}}",
+                                "color": "#17202A",
+                                "fontSize": 12,
+                                "bold": true
+                            }
+                        ]
+                    }
+
+                ]
+
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "text": "No. MC/Estate/2019/ {{applicationNumber}}",
+                        "alignment": "left",
+                        "style": "pdfContent",
+                        "bold":true
+                    },
+                    {
+                        "text": "Dated_________",
+                        "alignment": "right",
+                        "style": "pdfContent",
+                        "bold":true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "               {{name}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "               {{address}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "*",
+                        "text": "Execution of conveyance deed after conversion of lease hold tenure into freehold land tenure in respect of land under HIG(Ind.) Dwelling Unit No. _____________, Phase-11, Manimajra, U.T.. Chandigarh ",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "1             Reference memo no. MC-Estate/2019/_____________ dated ________allowing the conversion of Leasehold Land Tenure in respect of land under the dwelling unit no. 5832, Phase-III, Manimajra, U.T., Chandigarh. "
+            },
+            {          
+                "margin": [0, 20, 0, 0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "2             As per condition No. (iii) of the aforesaid memo, you were to get the conveyance deed executed on Non-Judicial Stamp Papers in prescribed performa available with the Municipal Corporation and said conveyance deed is to be got registered with the Sub-Registrar, U.T., Chandigarh. "            
+            },
+            {          
+                "margin": [0, 20, 0, 0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "3             The consideration amount for the purpose of calculation of stamp duty on conveyance deed, as per the rules, is the conversion fee without any remission plus premium of land under the dweiling unit Conversion fee in respect of land under the dwelling unit at present is Rs.  land premium of land is Rs. . .. Thus the stamp duty @ 5% worked out to be Rs. __________( + = ) in in your case. "            
+            },
+            {          
+                "margin": [0, 10, 0, 0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "              The procedure for execution of conveyance deed is as under: "            
+            },
+          
+            {
+                "margin":[50,0,0,0],
+                "style": "pdfContent",
+                "stack": [{
+                        "text": "I).  You shall deposit Rs._ .- as a stamp duty through treasury challan (available Central Treasury, U.T., Sector-17, Chandigarh) in the State Bank of India (Treasury Branch), Sector-17, near RCC, Chandigarh. . "
+                    },
+                    {
+                        "text": "II). You shall obtain four copies of printed performa of conveyance deed on production of original copy of treasury chaiian (also bring one Photostat copy of treasury challan) for execution amongst transferee, Chandigarh Housing Board and Municipal Corporation, Chandigarh on submission of demand draft or pay order from Municipal Corporation, Chandigarh for Rs 750/- in favour of Commissioner. Municipal Corporation, Chandigarh representing processing fee/printing charges etc."
+                    },
+                    {
+                        "text": "III). You shall affix recent passport photograph on each copy of printed performa of conveyance deed. Photograph attested by gazetted officer "
+                    },
+                    {
+                        "text":"IV)    You shall get the certificate on the top of performa of conveyance deed signed from the District Treasury Officer, U.T., Chandigarh exercising the powers of the Collector, on production of the original treasury challan before him, as a proof of having paid the stamp duty "
+                    },
+                    {
+                        "text":"V)     After recording the aforesaid certificate by the District Treasury Officer, U.T., Chandigarh, you shall submit the formats of conveyance deed to Municipal Corporation, Chandigarh duly signed and witnessed, for execution."
+                    },
+                    {
+                        "text":"VI)    After signing the conveyance deed by the Additional Commissioner, Municipal Corporation, Chandigarh on behalf of the Municipal Corporation, Chandigarh these will be handed over to the office of Chandigarh Housing Board for getting the same executed/signed from the Chief Account Officer, Chandigarh Housing Board, U.T., Chandigarh  "
+                    },
+                    {
+                        "text":"VII)   On receipt of the conveyance deed duly executed by the Chief Account Officer, Housing Board, Chandigarh, you shall get it registered with the Sub-Registrar, U.T., Chandigarh within two weeks and furnish Photostat copy of registered conveyance deed duly attested by the Notary Public, one copy in the office of Secretary, Chandigarh Housing Board, Chandigarh and another in the off rd of this office. "
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer(Estate),",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {
+                "fontSize": 10
+            }
+
+        }
+    }
+}
