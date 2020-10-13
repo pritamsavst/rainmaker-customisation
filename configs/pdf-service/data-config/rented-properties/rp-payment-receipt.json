@@ -441,18 +441,7 @@
                                "module":"rainmaker-rp"
                             } 
                           },
-                        {
-                            "variable": "note",
-                            "value": {
-                              "path": "NOTE_LABEL"
-                            },
-                            "type": "label",
-                            "localisation":{
-                               "required":true,
-                               "prefix":"RP",   
-                               "module":"rainmaker-rp"
-                            } 
-                          },
+                   
                           {
                             "variable": "subject_to_realization",
                             "value": {
