@@ -9,7 +9,18 @@
         "mappings": [{
             "mappings": [{
                 "direct": [
-
+                    {
+                        "variable": "application_label",
+                        "value": {
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
                     {
                         "variable": "property",
                         "value": {
@@ -347,10 +358,6 @@
                         "variable": "categoryValue",
                         "value": {
                             "path": "$.property.category"
-                        },
-                        "localisation": {
-                          "required": true,
-                          "module": "rainmaker-es"
                         }
                       },
 
@@ -378,10 +385,6 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
                         }
 
                     },
@@ -389,7 +392,8 @@
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        }
+                        },
+                        "type":"date"
 
                     },
                    

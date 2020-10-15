@@ -4,54 +4,79 @@
         "defaultStyle": {
             "font": "Cambay"
         },
-        "content": [{
-                "columns": [{
-                        "image": "{{logo}}",
-                        "width": 50,
-                        "alignment": "left"
-                    },
-                    {
-
-                        "alignment": "center",
-                        "stack": [{
-                                "text": "{{header}}",
-                                "color": "#17202A",
-                                "fontSize": 14,
-                                "bold": true
-                            },
-                            {
-                                "text": "{{colony_branch}}",
-                                "color": "#17202A",
-                                "fontSize": 12,
-                                "bold": true
-                            }
-                        ]
-                    }
-
-                ]
-
+        "content": [
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                         {
+                           "text": "{{header}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style":"receipt-logo-sub-header"
+                         }
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
             },
             {
-                "margin": [0, 20, 10, 10],
-                "columns": [{
-                        "text":[
-                            {
-                                "text": "No. MC/Estate/2019/ "
-                            },
-                            {
-                                "text":"{{applicationNumber}}","bold":true
-                            }
-                        ],
-                        "alignment": "left",
-                        "style": "pdfContent"
+              "style": "pt-reciept-citizen-header",
+              "columns": [
+                {
+                  "width":"auto",
+                  "text": [
+                    {
+                      "text": "No.MC/Estate/2019/ ",
+                      "bold": true
                     },
                     {
-                        "text": "Dated___________",
-                        "alignment": "right",
-                        "style": "pdfContent"
+                      "text": "{{applicationNumber}}",
+                      "bold": false
                     }
-
-                ]
+                  ],
+                  "alignment": "left"
+                },
+                {
+                  "text": ""
+                },
+                {
+                  "width":"auto",
+                  "text": [
+                    {
+                      "text": "Dated ",
+                      "bold": true
+                    },
+                    {
+                      "text": "____________",
+                      "bold": false
+                    }
+                  ],
+                  "alignment": "right"
+                }
+              ]
             },
             {
                 "margin": [0, 20, 0, 0],
@@ -218,9 +243,61 @@
 
         ],
         "styles": {
-            "pdfContent": {
-                "fontSize": 10
-            }
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
 
         }
     }

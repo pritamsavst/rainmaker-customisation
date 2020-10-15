@@ -107,13 +107,13 @@
                     {
                         "variable": "siteNoLabel",
                         "value": {
-                            "path": "EST_SITE_NO_LABEL"
+                            "path": "SITE_NO_LABEL"
                         },
                         "type": "label",
                         "localisation": {
                             "required": true,
-                            "prefix": "RP",
-                            "module": "rainmaker-rp"
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
                         }
                     },
 
@@ -159,7 +159,7 @@
                     },  {
                         "variable": "propertyApplicationNumberLabel",
                         "value": {
-                            "path": "EST_PROPERTY_APPLICATION_NUMBER_LABEL"
+                            "path": "PROPERTY_APPLICATION_NUMBER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -170,7 +170,7 @@
                     },  {
                         "variable": "dueAmountLabel",
                         "value": {
-                            "path": "EST_DUE_AMOUNT_LABEL"
+                            "path": "DUE_AMOUNT_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -443,7 +443,11 @@
                         "variable": "subCategoryValue",
                         "value": {
                             "path": "$.property.subCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {
@@ -463,10 +467,6 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
                         }
 
                     },
@@ -474,7 +474,8 @@
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        }
+                        },
+                        "type":"date"
 
                     },
                    
@@ -518,13 +519,15 @@
                         "variable": "tranferorDateOfDeath",
                         "value": {
                             "path": "$.applicationDetails.transferor.dateOfDeath"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "dateOfExecutionWill",
                         "value": {
                             "path": "$.applicationDetails.dateOfExecutionOfWill"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "registrationNumber",
@@ -536,7 +539,8 @@
                         "variable": "dateOfRegistrationValue",
                         "value": {
                             "path": "$.applicationDetails.dateOfRegistration"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "legalHeirOrBeneficiaryValue",
@@ -586,8 +590,7 @@
                         "variable": "witnessAgeValue",
                         "value": {
                             "path": "$.applicationDetails.witness[0].dob"
-                        },
-                        "type":"date"
+                        }
                     },
                     {
                         "variable": "witnessAddressValue",

@@ -445,10 +445,6 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
                         }
 
                     },
@@ -456,7 +452,8 @@
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        }
+                        },
+                        "type":"date"
 
                     },
                    
@@ -558,8 +555,7 @@
                         "variable": "witnessAgeValue",
                         "value": {
                             "path": "$.applicationDetails.witness[0].dob"
-                        },
-                        "type":"date"
+                        }
                     },
                     {
                         "variable": "witnessAddressValue",

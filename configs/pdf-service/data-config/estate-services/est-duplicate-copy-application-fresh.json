@@ -95,7 +95,7 @@
                     {
                         "variable": "siteNoLabel",
                         "value": {
-                            "path": "EST_SITE_NO_LABEL"
+                            "path": "SITE_NO_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -147,7 +147,7 @@
                     },  {
                         "variable": "propertyApplicationNumberLabel",
                         "value": {
-                            "path": "EST_PROPERTY_APPLICATION_NUMBER_LABEL"
+                            "path": "PROPERTY_APPLICATION_NUMBER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -158,7 +158,7 @@
                     },  {
                         "variable": "dueAmountLabel",
                         "value": {
-                            "path": "EST_DUE_AMOUNT_LABEL"
+                            "path": "DUE_AMOUNT_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -239,6 +239,18 @@
                             "module": "rainmaker-es"
                         }
                     },
+                    {
+                        "variable": "application_label",
+                        "value": {
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
                     {
                         "variable": "shareLabel",
                         "value": {
@@ -325,7 +337,11 @@
                         "variable": "subCategoryValue",
                         "value": {
                             "path": "$.property.subCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {

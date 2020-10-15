@@ -1,388 +1,773 @@
 {
     "key": "est-ndc-application-fresh",
     "config": {
-      "defaultStyle": {
-        "font": "Cambay"
-      },
-      "content": [
-        {
-          "columns": [{
-            "image": "{{logo}}",
-            "width": 50,
-            "alignment": "left"
+        "defaultStyle": {
+            "font": "Cambay"
+           },
+        "content": [
+            {
+             "style": "noc-head",
+             "table": {
+               "widths": [
+                50, "*"
+               ],
+               "body": [
+                 [
+                  {
+                    "image": "{{logo}}",
+                    "width": 50,
+                    "margin": [8, 10, 10, 0]
+                  },
+                  {
+                    "stack": [
+                      {
+                        "text": "{{header}}",
+                        "style": "receipt-logo-header"
+                      },
+                      {
+                        "text":"{{subHeader}}",
+                        "style":"receipt-logo-sub-header"
+                      },
+                      {
+                        "text": "{{application_label}} {{applicationNumber}}",
+                        "style": "receipt-logo-sub-header"
+                      }
+                    ],
+                    "alignment": "center",
+                      "margin": [
+                        0,
+                        12,
+                        0,
+                        0
+                      ]
+                  }
+                 ]
+               ]
+             },
+             "layout": "noBorders"
+           },
+         
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{property}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
+                          [
+                            {
+                              "text":"{{fileNumberLabel}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{categoryLabel}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{subCategoryLabel}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{siteNoLabel}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{fileNumberValue}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{categoryValue}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{subCategoryValue}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{siteNumberValue}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{sectorNoLabel}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }, 
+                            {
+                                "text":"{{propertyTypeLabel}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"{{lastNocDateLabel}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"{{propertyApplicationNumberLabel}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                           
+                          ],
+                          [
+                          
+                        
+                            {
+                              "text":"{{sectorNumberValue}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              
+                            "style": "receipt-table2"
+                           
+                            },
+                            {
+                                "text":"{{propertyTypeValue}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              },
+                              {
+                                "text":"{{lastNocDateValue}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2",
+                                 "width":150
+                              },
+                              {
+                                "text":"{{proertyApplicationNumberValue}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              }
+                           
+                          ],
+                          [
+                         
+                              {
+                                "text":"{{dueAmountLabel}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                           
+                          ],
+                          [
+                          
+                        
+                            {
+                              "text":"{{dueAmountValue}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              
+                            "style": "receipt-table2"
+                           
+                            },
+                            {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                
+                              "style": "receipt-table2"
+                             
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                
+                              "style": "receipt-table2"
+                             
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                
+                              "style": "receipt-table2"
+                             
+                              }
+                           
+                           
+                          ]
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
           },
           {
-            "stack": [{
-                "text": "{{header}}",
-                "alignment": "center",
-                "color": "#17202A",
-                "fontSize": 14,
-                "bold": true
-              },
+            "stack": [
               {
-                "text": "{{subHeader}}",
-                "alignment": "center",
-                "fontSize": 11,
-                "italics": true,
-                "bold":true
-              },
-              {
-                "text": "{{application_label}} {{applicationNumber}}",
-                "fontSize": 12,
-                "alignment":"center",
-                "lineHeight": "2"
-            }
-            ]
-  
-          }
-        ]
-  
-      },
-  
-        {
-          "margin": [
-            -25,
-            10,
-            -25,
-            1
-          ],
-          "table": {
-            "widths": ["25%", "25%", "25%","25%"],
-            "body": [
-            [{
-              "colSpan": 4,
-              "columns": [
-
-                  [{
-                          "text": "{{property}}",
-                          "fontSize": 12,
-                          "lineHeight": "2",
-                          "margin":[3,0,0,0],
-                          "bold":true
-                      },
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
                       {
-                          "columns": [{
-                                  "text": "{{fileNumberLabel}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{categoryLabel}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{subCategoryLabel}} ",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{siteNoLabel}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "margin":[3,0,0,0]
-                              }
-                          ]
-                      },
+                        "text":"{{applicantDetailsHeader}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{OwnerLabel}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
                       {
-                          "columns": [{
-                                  "text": "{{fileNumberValue}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "lineHeight": 2,
-                                  "bold": true,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{categoryValue}}",
-                                  "fontSize": 10,
-                                  "lineHeight": 2,
-                                  "width":150,
-                                  "bold": true,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{subCategoryValue}} ",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "bold": true,
-                                  "lineHeight": 2,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{siteNumberValue}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "bold": true,
-                                  "lineHeight": 2,
-                                  "margin":[3,0,0,0]
-                              }
-                          ]
-
-                      },
+                        "text":"{{fatherHusbandNameLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{addressLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{ownerMobileNumberLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{ownerName}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{fatherOrHusband}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{ownerAddress}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{ownerMobileValue}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{shareLabel}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
                       {
-                          "columns": [{
-                                  "text": "{{sectorNoLabel}} ",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{propertyTypeLabel}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                "text": "{{lastNocDateLabel}} ",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{propertyApplicationNumberLabel}}",
-                                "fontSize": 10,
-                                "width":120,
-                                "margin":[3,0,0,0]
-                            }
-                          ]
-                      },
-                      {
-                          "columns": [{
-                                  "text": "{{sectorNumberValue}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "bold": true,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                  "text": "{{propertyTypeValue}}",
-                                  "fontSize": 10,
-                                  "width":150,
-                                  "bold": true,
-                                  "margin":[3,0,0,0]
-                              },
-                              {
-                                "text": "{{lastNocDateValue}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{proertyApplicationNumberValue}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            }
-                          ]
-                      },
-                      {
-                        "columns": [{
-                                "text": "{{dueAmountLabel}} ",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            }
-                        ]
+                        "text":"{{cpNumberLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{reasonForNDCLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{ownerShare}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{cpNumber}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{reasonForNdc}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                       ]
                     },
-                    {
-                        "columns": [{
-                                "text": "{{dueAmountValue}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            }
-                        ]
-                    }
-                  ]
-              ]
-          }, {}, {},{}],
-       
-        [{
-            "colSpan": 4,
-            "columns": [
-
-                [{
-                        "text": "{{applicantDetailsHeader}}",
-                        "fontSize": 12,
-                        "lineHeight": "2",
-                        "margin":[3,0,0,0],
-                        "bold":true
-                    },
-                    {
-                        "columns": [{
-                                "text": "{{OwnerLabel}}",
-                                "fontSize": 10,
-                                "margin":[3,0,0,0],
-                                "width":150
-                            },
-                            {
-                                "text": "{{fatherHusbandNameLabel}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{addressLabel}} ",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{ownerMobileNumberLabel}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            }
-                        ]
-                    },
-                    {
-                        "columns": [{
-                                "text": "{{ownerName}}",
-                                "fontSize": 10,
-                                "lineHeight": 2,
-                                "width":150,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{fatherOrHusband}}",
-                                "lineHeight": 2,
-                                "fontSize": 10,
-                                "bold": true,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{ownerAddress}} ",
-                                "lineHeight": 2,
-                                "fontSize": 10,
-                                "width":150,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{ownerMobileValue}}",
-                                "lineHeight": 2,
-                                "fontSize": 10,
-                                "width":150,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            }
-                        ]
-
-                    },
-                    {
-                        "columns": [{
-                                "text": "{{shareLabel}} ",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{cpNumberLabel}} ",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{reasonForNDCLabel}} ",
-                                "fontSize": 10,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            }
-                          
-                        ]
-                    },
-                    {
-                        "columns": [{
-                                "text": "{{ownerShare}}",
-                                "fontSize": 10,
-                                "lineHeight": 2,
-                                "bold": true,
-                                "width":150,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{cpNumber}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "lineHeight": 2,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            },
-                            {
-                                "text": "{{reasonForNdc}}",
-                                "fontSize": 10,
-                                "width":150,
-                                "lineHeight": 2,
-                                "bold": true,
-                                "margin":[3,0,0,0]
-                            }
-                        ]
-                    }
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
                 ]
-            ]
-        }, {}, {},{}],
-        [{
-            "colSpan": 4,
-            "text": "{{documents_label}}",
-            "fontSize": 12,
-            "margin":[3,0,0,0],
-            "border": [
-                true,
-                true,
-                true,
-                false
-            ]
-        },
-        {}, {},{}
-    ],
-        
-    [{
-        "colSpan": 4,
-        "table": {
-            "widths": ["25%", "25%", "25%", "25%"],
-            "body": [
-                "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
-            ]
-        },
-        "border": [
-            true,
-            false,
-            true,
-            true
-        ]
-    },
-    {}, {},{}
-]
-    
-        ]
-        
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+            "style": "noc-table2",
+            "table": {
+              "widths": [
+                "*"
+              ],
+              "body": [
+                [
+                      {
+                        "text":"{{documents_label}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                   {
+                      "table": {
+                       "widths":["25%", "25%", "25%", "25%"],
+                      "body": [
+                       "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                      ]
+                  },
+                  "border":[
+                    true,
+                    false,
+                    true,
+                    true
+                    ]
+                 }
+                    ]
+               ],
+               "unbreakable": true
+            },
+            "layout": {}
           }
-         
-        }
-      ],
-      "styles": {
-        "receipt-table2": {
-            "color": "#000000",
-            "bold": true,
-            "fontSize": 10
-
+            ],
+            "unbreakable": true
+          }
+         ],
+         "styles": {
+         "receipt-logo-header": {
+          "color": "#484848",
+          "fontSize": 14,
+          "bold": true,
+          "letterSpacing": 0.74,
+          "margin": [
+            0,
+            0,
+            0,
+            5
+          ]
         },
-
-        "receipt-table-value-cont": {
-            "color": "#000000",
-            "bold": false,
-            "fontSize": 10
-        }
+        "receipt-logo-sub-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 13,
+          "letterSpacing": 1.6,
+          "margin": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+          "noc-table": {
+           "fontSize": 12,
+           "color": "#484848",
+           "margin": [
+             -25,
+             45,
+             -8,
+             -8
+           ]
+         },
+         "noc-table2": {
+           "fontSize": 12,
+           "color": "#484848",
+           "margin": [
+             -25,
+             10,
+             -25,
+             -8
+           ]
+         },
+          "receipt-table-value": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             5,
+             5,
+             0,
+             0
+           ]
+         },
+         "receipt-table-value-total": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "alignment": "right",
+           "margin": [
+             0,
+             5,
+             30,
+             0
+           ]
+         },
+         "receipt-table-value-down": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 12,
+           "fontWeight": 400,
+           "alignment": "left",
+           "margin": [
+             3,
+             5,
+             0,
+             5
+           ]
+         },
+         "receipt-table-value2": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
+         },
+         "noc-head": {
+            "margin": [
+              -25,
+              -30,
+              0,
+              1
+            ]
+          },
+         "receipt-table-value-cont": {
+          "color": "#000000",
+          "bold": false,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "margin": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+         "receipt-table": {
+           "color": "#484848",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 400,
+           "margin": [
+             -30,
+             5,
+             0,
+             0
+           ]
+         },
+         "receipt-table2": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
+         }
+         
+       }
        
     }
-    }
-  } 
+  }
+

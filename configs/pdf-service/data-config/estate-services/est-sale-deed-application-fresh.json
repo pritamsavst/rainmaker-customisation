@@ -108,13 +108,13 @@
                     {
                         "variable": "siteNoLabel",
                         "value": {
-                            "path": "EST_SITE_NO_LABEL"
+                            "path": "SITE_NO_LABEL"
                         },
                         "type": "label",
                         "localisation": {
                             "required": true,
-                            "prefix": "RP",
-                            "module": "rainmaker-rp"
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
                         }
                     },
 
@@ -160,7 +160,7 @@
                     },  {
                         "variable": "propertyApplicationNumberLabel",
                         "value": {
-                            "path": "EST_PROPERTY_APPLICATION_NUMBER_LABEL"
+                            "path": "PROPERTY_APPLICATION_NUMBER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -171,7 +171,7 @@
                     },  {
                         "variable": "dueAmountLabel",
                         "value": {
-                            "path": "EST_DUE_AMOUNT_LABEL"
+                            "path": "DUE_AMOUNT_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -207,7 +207,7 @@
                     {
                         "variable": "sellerTransferorNameLabel",
                         "value": {
-                            "path": "_SELLER_OR_TRANSFEROR_NAME_LABEL"
+                            "path": "SELLER_OR_TRANSFEROR_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -415,18 +415,16 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
                         }
+                       
 
                     },
                     {
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        }
+                        },
+                        "type":"date"
 
                     },
                    
@@ -482,6 +480,10 @@
                         "variable": "tranfereeRelationValue",
                         "value": {
                             "path": "$.applicationDetails.transferee.relation"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {
@@ -506,6 +508,10 @@
                         "variable": "modeOfTransferValue",
                         "value": {
                             "path": "$.applicationDetails.modeOfTransfer"
+                        },
+                        "localisation": {
+                          "required": true,
+                          "module": "rainmaker-es"
                         }
                     },
                     {
@@ -518,7 +524,8 @@
                         "variable": "dateOfRegistrationValue",
                         "value": {
                             "path": "$.applicationDetails.dateOfRegistration"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "applicationNumber",

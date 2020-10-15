@@ -23,6 +23,18 @@
                         }
                     },
                     {
+                        "variable": "application_label",
+                        "value": {
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
+                    {
                         "variable": "header",
                         "value": {
                           "path": "PDF_HEADER"
@@ -370,7 +382,11 @@
                         "variable": "subCategoryValue",
                         "value": {
                             "path": "$.property.subCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {
@@ -487,13 +503,30 @@
                         "variable": "transfereeRelationWithDeceased",
                         "value": {
                             "path": "$.applicationDetails.transferee.relationWithDeceased"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "applicationNumber",
                         "value": {
                             "path": "$.applicationNumber"
                         }
+                    },
+                    {
+                        "variable":"documents_label",
+                        "value": {
+                            "path": "DOCUMENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                        
                     },
                     {
                         "variable": "documents_array",

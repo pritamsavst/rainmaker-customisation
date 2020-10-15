@@ -348,7 +348,11 @@
                         "variable": "serviceCategory",
                         "value": {
                             "path": "$.propertyDetails.serviceCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {
@@ -588,7 +592,11 @@
                         "variable": "guardianRelation",
                         "value": {
                             "path": "$.propertyDetails.owners[0].ownerDetails.guardianRelation"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "address",
@@ -796,7 +804,11 @@
                         "variable": "purchaserguardianRelation",
                         "value": {
                             "path": "$.propertyDetails.purchaser[0].ownerDetails.guardianRelation"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "purchaseraddress",
@@ -992,7 +1004,7 @@
                     {
                         "variable":"documents_label",
                         "value": {
-                            "path": "DOCUMENTS_LABEL"
+                            "path": "DOCUMENT_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
