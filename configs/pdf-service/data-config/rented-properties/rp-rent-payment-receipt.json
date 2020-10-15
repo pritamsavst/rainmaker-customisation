@@ -354,7 +354,7 @@
                         {
                             "variable": "bankName",
                             "value": {
-                              "path": "$.Properties[0].bankName"
+                              "path": "$.Properties[0].offlinePaymentDetails[0].bankName"
                             }
                         },
                 
