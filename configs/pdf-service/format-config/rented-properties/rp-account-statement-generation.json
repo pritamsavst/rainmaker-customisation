@@ -9,25 +9,22 @@
                 "columns":[
                     {
                         "image": "{{logo}}",
-                        "width": 55,
+                        "width": 50,
                         "alignment": "left",
-                        "margin":[10,0,0,0]
+                        "margin": [8, 10, 10, 0]
                     },
                     {
                         "stack": [
                             {
-                                "text": "Provisional Statement of Transit Site No. {{transitNumber}}, ",
+                                "text": "{{header}}. {{transitNumber}}, ",
                                 "alignment": "center",
-                                "fontSize": 14,
-                                "bold": true,
-                                "margin": [0, 0, 0, 0] 
+                                "style":"receipt-logo-header"
+                               
                             },
                             {
                                 "text": "{{colony}}",
                                 "alignment": "center",
-                                "fontSize": 14,
-                                "bold": true,
-                                "margin": [0, 0, 0, 0]
+                                "style":"receipt-logo-header"
                             }
                         ]
         
@@ -118,7 +115,7 @@
                     "body":[
                         [
                             {
-                            "text":"Date",
+                            "text":"{{COMMON_TABLE_COL_DATE}}",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -128,7 +125,7 @@
                               ]
                         },
                         {
-                            "text":"Amount(in Rs)",
+                            "text":"{{COMMON_TABLE_COL_AS_AMOUNT}} (in Rs)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -138,7 +135,7 @@
                               ]
                         },  
                         {
-                            "text":"  Type    (payment)",
+                            "text":"{{COMMON_TABLE_COL_AS_TYPE}}(payment)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -148,7 +145,7 @@
                               ]
                         },
                          {
-                            "text":"  Type    (Rent)",
+                            "text":"{{COMMON_TABLE_COL_AS_TYPE}}(Rent)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -158,7 +155,7 @@
                               ]
                         },  
                            {
-                            "text":"Principal Due",
+                            "text":"{{COMMON_TABLE_COL_AS_REMAINING_PRINCIPAL}}",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -168,7 +165,7 @@
                               ]
                         }, 
                         {
-                            "text":"Interest Due",
+                            "text":"{{COMMON_TABLE_COL_AS_REMAINING_INTEREST}}",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -177,7 +174,7 @@
                                 false
                               ]
                         },  {
-                            "text":"Total Due",
+                            "text":"{{COMMON_TABLE_COL_AS_TOTAL_DUE}}",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -187,7 +184,7 @@
                               ]
                         },   
                         {
-                            "text":"Account Balance",
+                            "text":"{{COMMON_TABLE_ACCOUNT_BALANCE}}",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -198,7 +195,7 @@
                         },
                     
                         {
-                            "text":"Receipt Number",
+                            "text":"{{RECEIPT_NO}}",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -225,21 +222,43 @@
             }
         ],
         "styles": {
-            "table-header": {
-                "fontSize": 10,
-                "align": "center",
-                "bold": true
-            },
-            "table-header2": {
-                "fontSize": 10,
-                "align": "center",
-                "bold": true
-            },
-           
-            "table-content": {
-                "fontSize": 10,
-                "align": "center"
-            }
+             
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "table-content": {
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "table-header": {
+                "color": "#000000",
+                "bold": true,
+                "fontSize": 11,
+                "fontWeight": 500,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+              }
 
         }
     }

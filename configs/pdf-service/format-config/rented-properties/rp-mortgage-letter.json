@@ -62,7 +62,7 @@
                 "margin": [50, 10, 0, 0],
                 "stack":[
                     {
-                        "text": "Memo No  {{allotmentNumber}}",
+                        "text": "Memo no/Allotment number {{allotmentNumber}}",
                         "style": "pdfContent",
                         "bold":true
                     },
@@ -214,7 +214,15 @@
         "styles": {
             "pdfContent": {
                 "fontSize": 10
-            }      
+            },
+            "noc-head": {
+                "margin": [
+                  -25,
+                  -30,
+                  0,
+                  1
+                ]
+              }      
         }
     }
 } 

@@ -13,7 +13,7 @@
               {
                 "variable": "header",
                 "value": {
-                  "path": "PDF_HEADER"
+                  "path": "ACCOUNT_STATEMENT_HEADER"
                 },
                 "type": "label",
                 "localisation": {
@@ -32,7 +32,94 @@
                   "module": "rainmaker-rp"
                 }
               },
-
+              {
+                "variable": "COMMON_TABLE_COL_DATE",
+                "value": {
+                  "path": "COMMON_TABLE_COL_DATE"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "COMMON_TABLE_COL_AS_AMOUNT",
+                "value": {
+                  "path": "COMMON_TABLE_COL_AS_AMOUNT"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "COMMON_TABLE_COL_AS_REMAINING_INTEREST",
+                "value": {
+                  "path": "COMMON_TABLE_COL_AS_REMAINING_INTEREST"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "COMMON_TABLE_COL_AS_REMAINING_PRINCIPAL",
+                "value": {
+                  "path": "COMMON_TABLE_COL_AS_REMAINING_PRINCIPAL"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "COMMON_TABLE_COL_AS_TOTAL_DUE",
+                "value": {
+                  "path": "COMMON_TABLE_COL_AS_TOTAL_DUE"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "COMMON_TABLE_COL_AS_TYPE",
+                "value": {
+                  "path": "COMMON_TABLE_COL_AS_TYPE"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "COMMON_TABLE_ACCOUNT_BALANCE",
+                "value": {
+                  "path": "COMMON_TABLE_ACCOUNT_BALANCE"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable": "RECEIPT_NO",
+                "value": {
+                  "path": "RECEIPT_NO"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
               {
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",

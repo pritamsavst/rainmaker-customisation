@@ -26,7 +26,7 @@
                     },
                     {
                       "text":"{{fresh_license_legal_heir}}",
-                      "style":"receipt-table-value-cont"
+                      "style":"receipt-logo-sub-header"
                     },
                     {
                       "text": "{{application_label}} {{applicationNumber}}",
@@ -719,15 +719,15 @@
          ]
        },
        "noc-table2": {
-         "fontSize": 12,
-         "color": "#484848",
-         "margin": [
-           -25,
-           14,
-           -25,
-           -8
-         ]
-       },
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          10,
+          -25,
+          -8
+        ]
+      },
         "receipt-table-value": {
          "color": "#000000",
          "bold": true,
@@ -813,7 +813,15 @@
            0,
            0
          ]
-       }
+       },
+       "noc-head": {
+        "margin": [
+          -25,
+          -30,
+          0,
+          1
+        ]
+      }
        
      }
      

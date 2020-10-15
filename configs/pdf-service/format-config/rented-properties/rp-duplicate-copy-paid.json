@@ -26,7 +26,7 @@
                       },
                       {
                         "text":"{{application_for_duplicate_copy}}",
-                        "style":"receipt-table-value-cont"
+                        "style":"receipt-logo-sub-header"
                       },
                       {
                         "text": "{{application_label}} {{applicationNumber}}",
@@ -734,15 +734,15 @@
            ]
          },
          "noc-table2": {
-           "fontSize": 12,
-           "color": "#484848",
-           "margin": [
-             -25,
-             14,
-             -25,
-             -8
-           ]
-         },
+          "fontSize": 12,
+          "color": "#484848",
+          "margin": [
+            -25,
+            10,
+            -25,
+            -8
+          ]
+        },
           "receipt-table-value": {
            "color": "#000000",
            "bold": true,
