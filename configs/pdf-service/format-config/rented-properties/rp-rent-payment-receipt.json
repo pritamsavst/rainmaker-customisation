@@ -238,7 +238,7 @@
               
                               },
                               {
-                                "text":"{{dateOfPayment}}"
+                                "text":"{{dateOfPayment}} , {{time}}"
                               }
                          ]
                     ]

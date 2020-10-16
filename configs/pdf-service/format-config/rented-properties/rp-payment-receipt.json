@@ -346,33 +346,42 @@
                         
                     ],
                     [
-                        {  "colSpan":3,
+                        {  "colSpan":2,
                           "text":"{{payment_mode_label}}",
                           "style":"receipt-table-key"
                         },
                           {},
-                          {},
                           {
-                            "colSpan":3,
+                            "colSpan":2,
                               "text":"{{transaction_cheque_dd_label}}" ,
                               "style":"receipt-table-key"
                           },
                           {},
+                          {
+                            "colSpan":2,
+                              "text":"{{payableAmountOn}}" ,
+                              "style":"receipt-table-key"
+                          }, 
                           {}
                           
                     ],
                     [
                         {"text":"{{paymentMode}}",
-                          "colSpan":3
+                          "colSpan":2
                           },
                           {},
-                          {},
+                        
                           {
-                          "colSpan":3,
+                          "colSpan":2,
                           "text":"{{transactionNumber}}"
                           
                           },
                           {},
+                          {
+                            "colSpan":2,
+                            "text":"{{dateOfPayment}} , {{time}}"
+                            
+                            },
                           {}
                           
                     ]

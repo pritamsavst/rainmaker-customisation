@@ -382,6 +382,31 @@
                             }
                         },
                         {
+                          "variable": "payableAmountOn",
+                          "value": {
+                            "path": "PAYABLE_AMOUNT_ON"
+                          },
+                          "type": "label",
+                          "localisation":{
+                             "required":true,
+                             "prefix":"RP",   
+                             "module":"rainmaker-rp"
+                          } 
+                        },
+                        {
+                          "variable": "dateOfPayment",
+                          "value": {
+                            "path": "$.Payments[0].transactionDate"
+                          },
+                          "type":"date"
+                        },
+                        {
+                          "variable": "time",
+                          "value": {
+                            "path": "$.Payments[0].paymentDetails[0].auditDetails.lastModifiedTime"
+                          }
+                        },
+                        {
                             "variable": "g8_receipt_number_label",
                             "value": {
                               "path": "G8_RECEIPT_NUMBER_LABEL"

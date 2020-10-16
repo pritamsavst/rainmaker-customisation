@@ -48,6 +48,12 @@
                             "type":"date"
                           },
                           {
+                            "variable": "time",
+                            "value": {
+                              "path": "$.Payments[0].paymentDetails[0].auditDetails.lastModifiedTime"
+                            }
+                          },
+                          {
                             "variable": "transitSite",
                             "value": {
                               "path": "TRANSIT_SITE"
