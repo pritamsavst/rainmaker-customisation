@@ -47,7 +47,7 @@
              "layout": "noBorders"
            },
          
-          {
+           {
             "stack": [
               {
                 "style": "noc-table2",
@@ -195,7 +195,7 @@
                                  "style": "receipt-table-value-cont"
                               },
                               {
-                                "text":"{{propertyApplicationNumberLabel}}",
+                                "text":"{{dueAmountLabel}}",
                                 "border":[
                                   false,
                                   false,
@@ -243,7 +243,7 @@
                                  "width":150
                               },
                               {
-                                "text":"{{proertyApplicationNumberValue}}",
+                                "text":"{{dueAmountValue}}",
                                 "border":[
                                   false,
                                   false,
@@ -252,105 +252,6 @@
                                 ],
                                  "style": "receipt-table2"
                               }
-                           
-                          ],
-                          [
-                         
-                              {
-                                "text":"{{dueAmountLabel}}",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              }
-                           
-                          ],
-                          [
-                          
-                        
-                            {
-                              "text":"{{dueAmountValue}}",
-                              "border":[
-                                false,
-                                false,
-                                false,
-                                false
-                              ],
-                              
-                            "style": "receipt-table2"
-                           
-                            },
-                            {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              }
-                           
                            
                           ]
                            ]
@@ -641,7 +542,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{isLegalHeirBeneficiaryLabel}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -681,7 +582,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{legalHeirOrBeneficiaryValue}}",
+                          "text":"",
                           "border":[
                             false,
                             false,
@@ -690,10 +591,60 @@
                           ],
                           "style": "receipt-table2"
                         }
-                      ],
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{registerWillDetailsHeader}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
                       [
                         {
-                          "text":"{{legalHeirBeneficiaryNameLabel}}",
+                          "text":"{{dateOfExecutionUnregisteredLabel}}",
                           "border":[
                             false,
                             false,
@@ -703,7 +654,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{ageLabel}}",
+                        "text":"{{registrationNumberWillLabel}}",
                         "border":[
                           false,
                           false,
@@ -712,7 +663,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{addressLabel}}",
+                        "text":"{{dateOfRegistrationWillLabel}}",
                         "border":[
                           false,
                           false,
@@ -721,7 +672,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{relationWithDeceasedRadioBtnLabel}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -733,7 +684,7 @@
                       ],
                       [
                         {
-                          "text":"{{tranfereeNameValue}}",
+                          "text":"{{dateOfExecutionWill}}",
                           "border":[
                             false,
                             false,
@@ -743,7 +694,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{tranfereeAge}}",
+                          "text":"{{registrationNumber}}",
                           "border":[
                             false,
                             false,
@@ -752,7 +703,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{tranfereeAddress}}",
+                          "text":"{{dateOfRegistrationValue}}",
                           "border":[
                             false,
                             false,
@@ -761,7 +712,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{transfereeRelationWithDeceasedRadio}}",
+                          "text":"",
                           "border":[
                             false,
                             false,
@@ -790,6 +741,216 @@
             "unbreakable": true
           },
           {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{LEGAL_BENEFICIARY_DETAILS}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{IS_LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{LEGAL_HEIR_BENEFICIARY_NAME_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{RELATION_SHIP_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{legalHeirOrBeneficiaryValue}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{tranfereeNameValue}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{fatherOrHusbandName}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{relation}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{DOB_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{ADDRESS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{RELATION_WITH_DECEASED_RADIO_BTN_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{PERCENTAGE_SHARED_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{dob}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{transfereeaddress}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{relationWithDeceased}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{percentageOfShareTransferred}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "pageBreak": "before",
             "stack": [
               {
                 "style": "noc-table2",
@@ -919,7 +1080,7 @@
             "unbreakable": true
           },
           {
-            "pageBreak": "before",
+            
             "stack": [
               {
             "style": "noc-table2",

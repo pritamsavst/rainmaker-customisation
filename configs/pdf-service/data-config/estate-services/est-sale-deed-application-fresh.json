@@ -373,7 +373,31 @@
                             "module": "rainmaker-es"
                         }
                     },
-
+                    {
+                        "variable": "DOB_LABEL",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"documents_label",
+                        "value": {
+                            "path": "DOCUMENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                        
+                    },
                     {
                         "variable": "fileNumberValue",
                         "value": {
@@ -526,6 +550,14 @@
                             "path": "$.applicationDetails.dateOfRegistration"
                         },
                         "type":"date"
+                    },
+                    {
+                        "variable": "dobValue",
+                        "value": {
+                            "path": "$. applicationDetails.transferee.dob"
+                        },
+                        "type":"date"
+                       
                     },
                     {
                         "variable": "applicationNumber",

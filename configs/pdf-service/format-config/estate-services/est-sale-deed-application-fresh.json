@@ -703,7 +703,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"",
+                        "text":"{{DOB_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -743,7 +743,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"",
+                          "text":"{{dobValue}}",
                           "border":[
                             false,
                             false,

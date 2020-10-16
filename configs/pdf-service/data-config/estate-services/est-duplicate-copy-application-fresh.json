@@ -194,7 +194,7 @@
                     {
                         "variable": "OwnerLabel",
                         "value": {
-                            "path": "OWNERS_LABEL"
+                            "path": "OWNER_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -391,7 +391,7 @@
                     {
                         "variable": "duplicateOwnerName",
                         "value": {
-                            "path": "$.applicationDetails.duplicate.owner.ownerDetails.ownerName"
+                            "path": "$.applicationDetails.owner.ownerDetails.ownerName"
                         }
                     },
                     {
@@ -428,6 +428,10 @@
                         "variable": "typeOfLetter",
                         "value": {
                             "path": "$.applicationDetails.typeOfLetter"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {

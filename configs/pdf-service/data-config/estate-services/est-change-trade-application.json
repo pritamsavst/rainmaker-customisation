@@ -389,37 +389,37 @@
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                            "path": "$.applicationDetails.owner.ownerDetails.ownerName"
                         }
                     },
                     {
                         "variable": "guardianName",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+                            "path": "$.applicationDetails.owner.ownerDetails.guardianName"
                         }
                     },
                     {
                         "variable": "ownerAddress",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.address"
+                            "path": "$.applicationDetails.owner.ownerDetails.address"
                         }
                     },
                     {
                         "variable": "ownerMobileValue",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.mobileNumber"
+                            "path": "$.applicationDetails.owner.ownerDetails.mobileNumber"
                         }
                     },
                     {
                         "variable": "ownerShare",
                         "value": {
-                            "path": "$.applicationDetails.transferor.share"
+                            "path": "$.applicationDetails.owner.share"
                         }
                     },
                     {
                         "variable": "cpNumber",
                         "value": {
-                            "path": "$.applicationDetails.transferor.cpNumber"
+                            "path": "$.applicationDetails.owner.cpNumber"
                         }
                     },
                     {

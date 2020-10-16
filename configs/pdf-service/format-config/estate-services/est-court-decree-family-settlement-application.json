@@ -195,7 +195,7 @@
                                  "style": "receipt-table-value-cont"
                               },
                               {
-                                "text":"{{propertyApplicationNumberLabel}}",
+                                "text":"{{dueAmountLabel}}",
                                 "border":[
                                   false,
                                   false,
@@ -243,7 +243,7 @@
                                  "width":150
                               },
                               {
-                                "text":"{{proertyApplicationNumberValue}}",
+                                "text":"{{dueAmountValue}}",
                                 "border":[
                                   false,
                                   false,
@@ -253,106 +253,143 @@
                                  "style": "receipt-table2"
                               }
                            
-                          ],
-                          [
-                         
-                              {
-                                "text":"{{dueAmountLabel}}",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
+                          ]
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
 
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              }
-                           
-                          ],
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{SELLER_TRANSFEROR_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
                           [
-                          
-                        
                             {
-                              "text":"{{dueAmountValue}}",
+                              "text":"{{SELLER_OR_TRANSFEROR_NAME_LABEL}}",
                               "border":[
                                 false,
                                 false,
                                 false,
                                 false
                               ],
-                              
-                            "style": "receipt-table2"
-                           
+                              "style": "receipt-table-value-cont"
                             },
                             {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              }
-                           
-                           
+                              "text":"{{SELLER_TRANSFEROR_FATHER_HUSBAND_NAME_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{SELLER_TRANSFEROR_ADDRESS_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{PERCENT_SHARE_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{sellerOwnerName}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{sellerguardianName}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{selleraddress}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{sellershare}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
                           ]
+                         
                            ]
                         },
                         "border":[
@@ -404,7 +441,7 @@
                        "body": [
                       [
                         {
-                          "text":"{{transfereeTypeLabel}}",
+                          "text":"{{TRANSFEREE_NAME_LABEL}}",
                           "border":[
                             false,
                             false,
@@ -414,7 +451,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{existingOwnerLabel}}",
+                        "text":"{{DOB_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -423,7 +460,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{transferorNameLabel}}",
+                        "text":"{{FATHER_HUSBAND_NAME_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -432,7 +469,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{transfereeNameLabel}}",
+                        "text":"{{RELATION_SHIP_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -444,7 +481,7 @@
                       ],
                       [
                         {
-                          "text":"{{type}}",
+                          "text":"{{transfereename}}",
                           "border":[
                             false,
                             false,
@@ -454,7 +491,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{existingOwnerName}}",
+                          "text":"{{transfereedob}}",
                           "border":[
                             false,
                             false,
@@ -463,7 +500,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{sellerTransferorName}}",
+                          "text":"{{transfereefatherOrHusbandName}}",
                           "border":[
                             false,
                             false,
@@ -472,7 +509,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{transfereeName}}",
+                          "text":"{{transfereerelation}}",
                           "border":[
                             false,
                             false,
@@ -484,7 +521,7 @@
                       ],
                       [
                         {
-                          "text":"{{FHNameLabel}}",
+                          "text":"{{ADDRESS_LABEL}}",
                           "border":[
                             false,
                             false,
@@ -494,7 +531,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{addressLabel}}",
+                        "text":"{{TRANSFEREE_MOBILENUMBER_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -503,7 +540,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{transfereeMobileNoLabel}}",
+                        "text":"{{PERCENT_SHARE_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -512,7 +549,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{percentageShareLabel}}",
+                        "text":"{{REGISTRATION_NUMBER_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -524,7 +561,7 @@
                       ],
                       [
                         {
-                          "text":"{{fatherOrHusbandName}}",
+                          "text":"{{transfereeaddress}}",
                           "border":[
                             false,
                             false,
@@ -534,7 +571,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{address}}",
+                          "text":"{{transfereemobileNo}}",
                           "border":[
                             false,
                             false,
@@ -543,7 +580,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{mobileNo}}",
+                          "text":"{{transfereepercentageOfShareTransferred}}",
                           "border":[
                             false,
                             false,
@@ -552,7 +589,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{percentageOfShareTransferred}}",
+                          "text":"{{registrationNumber}}",
                           "border":[
                             false,
                             false,
@@ -564,7 +601,7 @@
                       ],
                       [
                         {
-                          "text":"{{registrationNoLabel}}",
+                          "text":"{{DATE_OF_REGISTRATION_LABEL}}",
                           "border":[
                             false,
                             false,
@@ -574,15 +611,6 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{dateOfRegistrationLabel}}",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      },{
                         "text":"",
                         "border":[
                           false,
@@ -600,11 +628,20 @@
                           false
                         ],
                         "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
                       }
                       ],
                       [
                         {
-                            "text":"{{registrationNumber}}",
+                            "text":"{{dateOfRegistration}}",
                             "border":[
                               false,
                               false,
@@ -613,7 +650,7 @@
                             ],
                             "style": "receipt-table2"
                           },{
-                            "text":"{{dateOfRegistration}}",
+                            "text":"",
                             "border":[
                               false,
                               false,
@@ -792,6 +829,7 @@
           },
 
           {
+            "pageBreak": "before",
             "stack": [
               {
                 "style": "noc-table2",
@@ -921,7 +959,7 @@
             "unbreakable": true
           },
           {
-            "pageBreak": "before",
+           
             "stack": [
               {
             "style": "noc-table2",

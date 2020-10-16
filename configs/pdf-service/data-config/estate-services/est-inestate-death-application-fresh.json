@@ -107,13 +107,13 @@
                     {
                         "variable": "siteNoLabel",
                         "value": {
-                            "path": "EST_SITE_NO_LABEL"
+                            "path": "SITE_NO_LABEL"
                         },
                         "type": "label",
                         "localisation": {
                             "required": true,
-                            "prefix": "RP",
-                            "module": "rainmaker-rp"
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
                         }
                     },
 
@@ -159,7 +159,7 @@
                     },  {
                         "variable": "propertyApplicationNumberLabel",
                         "value": {
-                            "path": "EST_PROPERTY_APPLICATION_NUMBER_LABEL"
+                            "path": "PROPERTY_APPLICATION_NUMBER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -170,7 +170,7 @@
                     },  {
                         "variable": "dueAmountLabel",
                         "value": {
-                            "path": "EST_DUE_AMOUNT_LABEL"
+                            "path": "DUE_AMOUNT_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -206,7 +206,7 @@
                     {
                         "variable": "deceasedNameLabel",
                         "value": {
-                            "path": "DECEASED_NAME_TYPE_LABEL"
+                            "path": "DECEASED_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -230,7 +230,7 @@
                     {
                         "variable": "deceasedAddressLabel",
                         "value": {
-                            "path": "DECEASED_ADDRESS_LABE"
+                            "path": "DECEASED_ADDRESS_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -265,9 +265,9 @@
                         }
                     },
                     {
-                        "variable": "isLegalHeir",
+                        "variable": "TRANSFEREE_TYPE_LABEL",
                         "value": {
-                            "path": "IS_LEGAL_HEIR_LABEL"
+                            "path": "TRANSFEREE_TYPE_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -325,9 +325,9 @@
                         }
                     },
                     {
-                        "variable": "legalHeirAgeLabel",
+                        "variable": "LEGAL_FATHER_HUSBAND_NAME_LABEL",
                         "value": {
-                            "path": "LEGAL_HEIR_AGE_LABEL"
+                            "path": "LEGAL_FATHER_HUSBAND_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -337,7 +337,31 @@
                         }
                     },
                     {
-                        "variable": "legalHeirAddressLabel",
+                        "variable": "RELATION_SHIP_LABEL",
+                        "value": {
+                            "path": "RELATION_SHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "LEGAL_HEIR_DOB_LABEL",
+                        "value": {
+                            "path": "LEGAL_HEIR_DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "LEGAL_HEIR_ADDRESS_LABEL",
                         "value": {
                             "path": "LEGAL_HEIR_ADDRESS_LABEL"
                         },
@@ -349,9 +373,9 @@
                         }
                     },
                     {
-                        "variable": "legalHeirRelationshipLabel",
+                        "variable": "LEGAL_RELATION_WITH_DECEASED_RADIO_BTN_LABEL",
                         "value": {
-                            "path": "LEGAL_HEIR_RELATIONSHIP_WITH_DECEASED_LABEL"
+                            "path": "LEGAL_RELATION_WITH_DECEASED_RADIO_BTN_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -360,7 +384,19 @@
                             "module": "rainmaker-es"
                         }
                     },
-
+                    
+                    {
+                        "variable": "PERCENT_SHARE_LABEL",
+                        "value": {
+                            "path": "PERCENT_SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
                     {
                         "variable": "fileNumberValue",
                         "value": {
@@ -461,12 +497,13 @@
                         "variable": "tranferorDateOfDeath",
                         "value": {
                             "path": "$.applicationDetails.transferor.dateOfDeath"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
-                        "variable": "tranferorLegalHeir",
+                        "variable": "transfereetype",
                         "value": {
-                            "path": "$.applicationDetails.transferor.legalHeir"
+                            "path": "$.applicationDetails.transferee.type"
                         }
                     },
                     {
@@ -488,26 +525,41 @@
                         }
                     },
                     {
-                        "variable": "tranfereeAge",
+                        "variable": "fatherOrHusbandName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.age"
+                            "path": "$.applicationDetails.transferee.fatherOrHusbandName"
                         }
                     },
                     {
-                        "variable": "tranfereeAddress",
+                        "variable": "relation",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.relation"
+                        }
+                    },
+                    {
+                        "variable": "dob",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.dob"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "address",
                         "value": {
                             "path": "$.applicationDetails.transferee.address"
                         }
                     },
                     {
-                        "variable": "transfereeRelationWithDeceased",
+                        "variable": "relationWithDeceased",
                         "value": {
                             "path": "$.applicationDetails.transferee.relationWithDeceased"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
-                          }
+                        }
+                    },
+                    {
+                        "variable": "percentageOfShareTransferred",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
+                        }
                     },
                     {
                         "variable": "applicationNumber",

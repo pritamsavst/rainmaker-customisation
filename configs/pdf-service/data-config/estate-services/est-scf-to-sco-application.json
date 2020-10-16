@@ -313,7 +313,7 @@
                     {
                         "variable": "registrationNoPropertyLabel",
                         "value": {
-                            "path": "REGESTRATION_NO_OF_PROPERTY_LABEL"
+                            "path": "COMPANY_REGISTRATION_NUMBER"
                         },
                         "type": "label",
                         "localisation": {

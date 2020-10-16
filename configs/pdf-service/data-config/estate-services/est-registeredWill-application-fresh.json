@@ -206,7 +206,7 @@
                     {
                         "variable": "deceasedNameLabel",
                         "value": {
-                            "path": "ES_DECEASED_NAME_LABEL"
+                            "path": "DECEASED_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -313,7 +313,19 @@
                         }
                     },
                     {
-                        "variable": "isLegalHeirBeneficiaryLabel",
+                        "variable": "LEGAL_BENEFICIARY_DETAILS",
+                        "value": {
+                            "path": "LEGAL_BENEFICIARY_DETAILS"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "IS_LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL",
                         "value": {
                             "path": "IS_LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL"
                         },
@@ -325,9 +337,106 @@
                         }
                     },
                     {
-                        "variable": "legalHeirBeneficiaryNameLabel",
+                        "variable": "LEGAL_HEIR_BENEFICIARY_NAME_LABEL",
                         "value": {
                             "path": "LEGAL_HEIR_BENEFICIARY_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "RELATION_SHIP_LABEL",
+                        "value": {
+                            "path": "RELATION_SHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "DOB_LABEL",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ADDRESS_LABEL",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "RELATION_WITH_DECEASED_RADIO_BTN_LABEL",
+                        "value": {
+                            "path": "RELATION_WITH_DECEASED_RADIO_BTN_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "PERCENTAGE_SHARED_LABEL",
+                        "value": {
+                            "path": "PERCENTAGE_SHARED_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable": "beneficiaryDetailsHeader",
+                        "value": {
+                            "path": "WITNESS_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "witnessNameLabel",
+                        "value": {
+                            "path": "WITNESS_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -361,33 +470,9 @@
                         }
                     },
                     {
-                        "variable": "relationWithDeceasedRadioBtnLabel",
+                        "variable": "mobileNoLabel",
                         "value": {
-                            "path": "RELATION_WITH_DECEASED_RADIO_BTN_LABE"
-                        },
-                        "type": "label",
-                        "localisation": {
-                            "required": true,
-                            "prefix": "ES",
-                            "module": "rainmaker-es"
-                        }
-                    },
-                    {
-                        "variable": "beneficiaryDetailsHeader",
-                        "value": {
-                            "path": "BENEFICIARY_DETAILS_HEADER"
-                        },
-                        "type": "label",
-                        "localisation": {
-                            "required": true,
-                            "prefix": "ES",
-                            "module": "rainmaker-es"
-                        }
-                    },
-                    {
-                        "variable": "witnessNameLabel",
-                        "value": {
-                            "path": "WITNESS_NAME_LABEL"
+                            "path": "MOBILE_NUMBER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -399,7 +484,7 @@
                     {
                         "variable":"documents_label",
                         "value": {
-                            "path": "DOCUMENTS_LABEL"
+                            "path": "DOCUMENT_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -559,27 +644,43 @@
                         }
                     },
                     {
-                        "variable": "tranfereeAge",
+                        "variable": "fatherOrHusbandName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.age"
+                            "path": "$.applicationDetails.transferee.fatherOrHusbandName"
                         }
                     },
                     {
-                        "variable": "tranfereeAddress",
+                        "variable": "relation",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.relation"
+                        }
+                    },
+                    {
+                        "variable": "dob",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.dob"
+                        },
+                       "type":"date"
+                    },
+                    {
+                        "variable": "transfereeaddress",
                         "value": {
                             "path": "$.applicationDetails.transferee.address"
                         }
                     },
                     {
-                        "variable": "transfereeRelationWithDeceasedRadio",
+                        "variable": "relationWithDeceased",
                         "value": {
                             "path": "$.applicationDetails.transferee.relationWithDeceased"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
                         }
                     },
+                    {
+                        "variable": "percentageOfShareTransferred",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
+                        }
+                    },
+                  
                     {
                         "variable": "witnessNameValue",
                         "value": {

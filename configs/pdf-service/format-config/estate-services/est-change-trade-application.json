@@ -382,7 +382,7 @@
                   "body": [
                     [
                       {
-                        "text":"{{applicantDetailsHeader}}",
+                        "text":"{{tradeDetailsHeader}}",
                         "border":[
                           true,
                           true,

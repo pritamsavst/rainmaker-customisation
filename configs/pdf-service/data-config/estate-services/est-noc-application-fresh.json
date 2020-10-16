@@ -335,6 +335,18 @@
                             "module": "rainmaker-es"
                         }
                     },
+                    {
+                        "variable": "dobLabel",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
                     
                     {
                         "variable":"documents_label",
@@ -369,7 +381,7 @@
                     {
                         "variable": "subCategoryValue",
                         "value": {
-                            "path": "$.property.property.subCategory"
+                            "path": "$.property.subCategory"
                         },
                         "localisation": {
                             "required": true,
@@ -401,7 +413,8 @@
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        }
+                        },
+                        "type":"date"
 
                     },
                    
@@ -480,6 +493,12 @@
                         "variable": "tranfereeMobileNo",
                         "value": {
                             "path": "$.applicationDetails.transferee.mobileNo"
+                        }
+                    },
+                    {
+                        "variable": "dob",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.dob"
                         }
                     },
                     {

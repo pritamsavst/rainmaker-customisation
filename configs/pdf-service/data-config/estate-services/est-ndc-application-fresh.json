@@ -375,37 +375,37 @@
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.applicationDetails.ownerDetails.ownerName"
+                            "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
                         }
                     },
                     {
                         "variable": "fatherOrHusband",
                         "value": {
-                            "path": "$.applicationDetails.fatherOrHusband"
+                            "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
                         }
                     },
                     {
                         "variable": "ownerAddress",
                         "value": {
-                            "path": "$.applicationDetails.ownerDetails.address"
+                            "path": "$.applicationDetails.transferor.transferorDetails.address"
                         }
                     },
                     {
                         "variable": "ownerMobileValue",
                         "value": {
-                            "path": "$.applicationDetails.ownerDetails.phone"
+                            "path": "$.applicationDetails.transferor.transferorDetails.mobileNumber"
                         }
                     },
                     {
                         "variable": "ownerShare",
                         "value": {
-                            "path": "$.applicationDetails.share"
+                            "path": "$.applicationDetails.transferor.share"
                         }
                     },
                     {
                         "variable": "cpNumber",
                         "value": {
-                            "path": "$.applicationDetails.cpNumber"
+                            "path": "$.applicationDetails.transferor.cpNumber"
                         }
                     },
                     {

@@ -195,7 +195,7 @@
                                  "style": "receipt-table-value-cont"
                               },
                               {
-                                "text":"{{propertyApplicationNumberLabel}}",
+                                "text":"{{dueAmountLabel}}",
                                 "border":[
                                   false,
                                   false,
@@ -243,7 +243,7 @@
                                  "width":150
                               },
                               {
-                                "text":"{{proertyApplicationNumberValue}}",
+                                "text":"{{dueAmountValue}}",
                                 "border":[
                                   false,
                                   false,
@@ -253,106 +253,8 @@
                                  "style": "receipt-table2"
                               }
                            
-                          ],
-                          [
-                         
-                              {
-                                "text":"{{dueAmountLabel}}",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              }
-                           
-                          ],
-                          [
-                          
-                        
-                            {
-                              "text":"{{dueAmountValue}}",
-                              "border":[
-                                false,
-                                false,
-                                false,
-                                false
-                              ],
-                              
-                            "style": "receipt-table2"
-                           
-                            },
-                            {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              }
-                           
-                           
                           ]
+                        
                            ]
                         },
                         "border":[
@@ -702,16 +604,18 @@
                           ],
                           "style": "receipt-table-value-cont"
                         },
+                        {
+                          "text":"{{dobLabel}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+
                       {
-                        "text":"",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      },{
                         "text":"",
                         "border":[
                           false,
@@ -743,7 +647,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"",
+                          "text":"{{dob}}",
                           "border":[
                             false,
                             false,
