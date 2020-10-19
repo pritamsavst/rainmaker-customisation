@@ -42,10 +42,27 @@
                 },
                 "layout": "noBorders"
               },
-            {
+              {
                 "margin": [0, 20, 0, 0],
-                "text": "From",
-                "alignment": "left",
+                "columns":[{
+                  "text": "From",
+                  "alignment": "left"
+                },
+                {
+                  "text":[
+                      {
+                        "style": "pdfContent",
+                        "text": "{{dateApprovalLabel}} :"
+                      },
+                      {
+                          "text":"{{approvalDate}}",
+                          "style":"receipt-logo-sub-header"
+                      }
+                  ],
+                  "alignment": "right"
+                  
+                }],
+                
                 "style": "pdfContent"
             },
             {

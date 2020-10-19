@@ -34,6 +34,18 @@
               },
 
               {
+                "variable": "dateApprovalLabel",
+                "value": {
+                  "path": "DATE_OF_APPROVAL_LABEL"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+
+              {
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
@@ -73,6 +85,13 @@
                 "value":{
                   "path":"$.property.pincode"
                 }
+              },
+              {
+                "variable":"approvalDate",
+                "value":{
+                  "path":"$.auditDetails.lastModifiedTime"
+                },
+                "type":"date"
               },
               {
                 "variable":"memoNumber",

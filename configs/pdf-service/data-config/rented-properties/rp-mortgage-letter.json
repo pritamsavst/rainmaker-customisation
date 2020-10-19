@@ -68,6 +68,24 @@
                 }
               },
               {
+                "variable": "dateApprovalLabel",
+                "value": {
+                  "path": "DATE_OF_APPROVAL_LABEL"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable":"approvalDate",
+                "value":{
+                  "path":"$.auditDetails.lastModifiedTime"
+                },
+                "type":"date"
+              },
+              {
                 "variable":"sanctionDate",
                 "value": {
                   "path":"$.mortgageApprovedGrantDetails[0].sanctionDate"

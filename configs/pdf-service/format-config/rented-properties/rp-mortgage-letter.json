@@ -34,8 +34,26 @@
 
             },
             {
-                "text": "To",
-                "alignment": "left",
+                "margin": [0, 20, 0, 0],
+                "columns":[{
+                  "text": "To",
+                  "alignment": "left"
+                },
+                {
+                  "text":[
+                      {
+                        "style": "pdfContent",
+                        "text": "{{dateApprovalLabel}} :"
+                      },
+                      {
+                          "text":"{{approvalDate}}",
+                          "style":"receipt-logo-sub-header"
+                      }
+                  ],
+                  "alignment": "right"
+                  
+                }],
+                
                 "style": "pdfContent"
             },
             {

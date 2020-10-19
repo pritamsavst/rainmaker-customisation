@@ -21,6 +21,24 @@
                 }
               },
               {
+                "variable": "dateApprovalLabel",
+                "value": {
+                  "path": "DATE_OF_APPROVAL_LABEL"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "RP",
+                  "module": "rainmaker-rp"
+                }
+              },
+              {
+                "variable":"approvalDate",
+                "value":{
+                  "path":"$.auditDetails.lastModifiedTime"
+                },
+                "type":"date"
+              },
+              {
                 "variable": "colony_branch",
                 "value": {
                   "path": "COLONY_BRANCH_HEADER"
