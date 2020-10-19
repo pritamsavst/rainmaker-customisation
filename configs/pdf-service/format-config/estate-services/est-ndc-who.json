@@ -91,12 +91,12 @@
             {
                 "margin": [50, 10, 0, 0],
                 "stack": [{
-                        "text": "{{name}}",
+                        "text": "{{transferorName}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "{{address}}",
+                        "text": "{{transferorAddress}}",
                         "style": "pdfContent",
                         "width": "*"
                     }

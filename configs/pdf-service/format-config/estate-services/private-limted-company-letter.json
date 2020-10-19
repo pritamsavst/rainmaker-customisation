@@ -1,5 +1,5 @@
 {
-    "key": "est-ndc-general-reason-letter",
+    "key": "private-limted-company-letter",
     "config": {
         "defaultStyle": {
             "font": "Cambay"
@@ -81,8 +81,7 @@
                     "alignment": "right"
                   }
                 ]
-              },
-          
+            },
             {
                 "margin": [0, 20, 0, 0],
                 "text": "To",
@@ -90,17 +89,20 @@
                 "style": "pdfContent"
             },
             {
-                "margin": [50, 10, 0, 0],
+                "margin": [0, 10, 0, 0],
                 "stack": [{
-                        "text": "{{transferorName}}",
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{name}} ",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "{{transferorAddress}}",
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{address}} ",
                         "style": "pdfContent",
                         "width": "*"
                     }
+
                 ]
             },
             {
@@ -114,94 +116,64 @@
 
                     },
                     {
-                        "margin": [20, 0, 0, 0],
+                        "margin": [10, 0, 0, 0],
                         "width": "*",
                         "text": [{
-                                "text": "Issuance of ownership certificate and No Due Certificate in r/o SCF/SCO/Booth/Residential Site No.  "
+                                "text": "Submission of Conveyance deed booth SCF/SCO/Residential Site No. "
+                            }, {
+                                "text": "{{siteNumber}}","bold":true
                             },
                             {
-                                "text": "{{siteNumber}} ",
+                                "text": " Manimajra ,UT Chandigarh"
+                            }
+                        ],
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "             Enclosed please find herewith original deed with copy of thereof duly executed on _____. You are directed to get it Registered with Sub-Registrar , U.T Chandigarh  and submit the attested/notarized copy of same with this office for record"
+            },
+            {
+                "style": "pdfContent",
+                "margin": [0, 20, 0, 0],
+                "columns": [{
+                        "text": "DA/As above",
+                        "alignment": "left"
+                    },
+                    {
+                        "alignment": "right",
+                        "stack": [{
+                                "text": "Section Officer",
+                                "style": "pdfContent",
+                                "bold": true
+                            },
+                            {
+                                "text": "For Additional Commissioner",
+                                "style": "pdfContent",
                                 "bold": true
 
                             },
                             {
-                                "text": "Chandigarh"
+                                "text": "Municipal Corporation,",
+                                "style": "pdfContent",
+                                "bold": true
+
+                            },
+                            {
+                                "text": "Chandigarh.",
+                                "style": "pdfContent",
+                                "bold": true
+
                             }
-                        ],
-                        "style": "pdfContent"
-                    }
-                ]
-            },
-            {
-                "margin": [0, 20, 0, 0],
-                "style": "pdfContent",
-                "preserveLeadingSpaces": true,
-                "text": [{
-                        "text": "             As per allotment file maintained in this office SCF/SCO/Booth/Residential Site No. "
-                    },
-                    {
-                        "text": " {{siteNumber}}  ","bold":true
-                    },
-                    {
-                        "text": "Chandigarh stands in the name of Smt/Shri "
-                    },
-                    {
-                        "text": "{{transferorName}} ","bold":true
-                    },
-                    {
-                        "text": "Nothing is due on account of premium and extension fees."
-                    }
-                ]
-            },
-            {
-                "margin": [0, 20, 0, 0],
-                "style": "pdfContent",
-                "preserveLeadingSpaces": true,
-                "text": "             This ownership certificate is not valid for sale/gift/transfer and is only issued in connection with __ ______ "
-            },
-            {
-                "margin": [0, 20, 0, 0],
-                "alignment": "right",
-                "stack": [{
-                        "text": "Section Officer (E).",
-                        "style": "pdfContent",
-                        "bold": true
-                    },
-                    {
-                        "text": "Municipal Corporation, ",
-                        "style": "pdfContent",
-                        "bold": true
 
-                    },
-                    {
-                        "text": "Chandigarh ",
-                        "style": "pdfContent",
-                        "bold": true
-
-                    }
-
-                ]
-            },
-            {
-                "margin": [0, 20, 10, 10],
-                "columns": [{
-                        "text": "Endst. No. MC/Estate/2019/",
-                        "style": "pdfContent",
-                        "alignment": "left"
-                    },
-                    {
-                        "text": "Dated:",
-                        "style": "pdfContent",
-                        "alignment": "right"
+                        ]
                     }
                 ]
-            },
-            {
-                "stack": [{
-                    "preserveLeadingSpaces": true,
-                    "text": "             Copy of the above is forwarded to the SDO(B). Estate Office, UT, Chandigarh for information and necessary action please ",
-                    "style": "pdfContent"
-                }]
             }
 
 

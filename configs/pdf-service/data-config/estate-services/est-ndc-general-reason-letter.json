@@ -81,6 +81,12 @@
                 }
               },
               {
+                "variable":"transferorAddress",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
                 "variable":"dateOfExecutionOfWill",
                 "value":{
                   "path":"$.applicationDetails.dateOfExecutionOfWill"

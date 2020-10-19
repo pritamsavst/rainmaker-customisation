@@ -1,5 +1,5 @@
 {
-    "key": "est-ndc-who",
+    "key": "private-limted-company-letter",
     "DataConfigs": {
       "serviceName": "rainmaker-rp",
       "version": "1.0.0",
@@ -39,9 +39,15 @@
                 "type": "image"
               },
               {
+                "variable":"applicationNumber",
+                "value":{
+                  "path":"$.applicationNumber"
+                }
+              },
+              {
                 "variable":"name",
                 "value":{
-                  "path":"$.applicationDetails.ownerDetails.ownerName"
+                  "path":"$.applicationDetails.transferee.name"
                 }
               },
               {
@@ -50,16 +56,10 @@
                   "path":"$.applicationDetails.transferee.fatherOrHusbandName"
                 }
               },
-              {
-                "variable":"applicationNumber",
-                "value":{
-                  "path":"$.applicationNumber"
-                }
-              },
                {
                 "variable":"address",
                 "value":{
-                  "path":"$.applicationDetails.ownerDetails.address"
+                  "path":"$.applicationDetails.transferee.address"
                 }
               },
               {
@@ -78,12 +78,6 @@
                 "variable":"transferorName",
                 "value":{
                   "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
-                }
-              },
-              {
-                "variable":"transferorAddress",
-                "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.address"
                 }
               },
               {
@@ -161,7 +155,7 @@
                 },
                 "type":"date"
               }
-     
+
             ]
           }
         ]

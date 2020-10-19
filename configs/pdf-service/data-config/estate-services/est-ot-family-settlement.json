@@ -46,7 +46,7 @@
               {
                 "variable":"name",
                 "value":{
-                  "path":"$.applicationDetails.ownerDetails.ownerName"
+                  "path":"$.applicationDetails.transferee.name"
                 }
               },
               {
@@ -58,7 +58,7 @@
                {
                 "variable":"address",
                 "value":{
-                  "path":"$.applicationDetails.ownerDetails.address"
+                  "path":"$.applicationDetails.transferee.address"
                 }
               },
               {
@@ -169,7 +169,7 @@
               {
                 "variable":"decreeDate",
                 "value":{
-                  "path":"$.property.propertyDetails.decreeDate"
+                  "path":"$.applicationDetails.decreeDate"
                 },
                 "type":"date"
               }
