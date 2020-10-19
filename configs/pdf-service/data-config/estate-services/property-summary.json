@@ -627,7 +627,8 @@
                         "variable": "possesionDate",
                         "value": {
                             "path": "$.propertyDetails.owners[0].ownerDetails.possesionDate"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "dateOfAllotment",
