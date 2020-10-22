@@ -212,7 +212,8 @@
                           ],
                           [
                             {
-                              "text":"",
+                              "text":"{{total_amount_label}}",
+                              "color": "#484848",
                               "border":[
                                 false,
                                 false,

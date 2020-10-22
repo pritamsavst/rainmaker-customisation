@@ -219,23 +219,15 @@
                         [
                             {
                                 "text":"{{balancePrincipal}}"
-                               
-                               
                               },
                               {
-                                "text":"{{balanceInterest}}",
-                                "fontSize":8
-                                
+                                "text":"{{balanceInterest}}"
                               },
                               {
                                 "text":"{{totalAmount}}"
-                               
-              
                               },
                               {
-                                "text":"{{balanceAmount}}",
-                                "fontSize":8
-              
+                                "text":"{{balanceAmount}}"
                               },
                               {
                                 "text":"{{dateOfPayment}} , {{time}}"

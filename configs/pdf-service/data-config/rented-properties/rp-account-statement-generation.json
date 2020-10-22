@@ -176,10 +176,18 @@
             {
                 "variable": "monthlyRent",
                 "value": {
-                  "path": "$.Properties[0].demands[0].remainingPrincipal"
+                  "path": "$.Properties[0].demands[0].collectionPrincipal"
                 }
                 
               },
+              {
+                "variable": "rentPerSqYard",
+                "value": {
+                  "path": "$.Properties[0].propertyDetails.area"
+                }
+                
+              },
+              
               {
                 "variable":"interestRate",
                 "value":{
