@@ -72,7 +72,7 @@
 											[ "{ \"text\":\"Issuing Store Name : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{issuingStoreName}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Issuing Store Dept. : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{issuingStoreDept}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Indenting Store Name : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentingStoreName}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Indenting Store Dept. : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentingStoreDept}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],										
 											[ "{ \"text\":\"Indent Purpose : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentPurpose}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Inward Status\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{inwardStatus}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],										
-											[ "{ \"text\":\"Created By : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{createdBy}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Designation : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
+											[ "{ \"text\":\"Created By Employee : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{createdBy}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Created By Employee Designation : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Receipt Total Value : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{receiptTotalValue}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Remark : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{remark}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}" ]
 										]								
@@ -97,7 +97,7 @@
 			  "bold": true,
 			  "margin": [
 				9,
-				2,
+				20,
 				15,
 				0
 			  ]
@@ -151,7 +151,7 @@
 			  "bold": true,
 			  "margin": [
 				9,
-				10,
+				80,
 				10,
 				0
 			  ]
@@ -168,7 +168,8 @@
                                 "table": {
 									"headerRows": 1,
                                     "widths": [
-                                        "20%",
+                                        "5%",
+                                        "15%",
                                         "20%",
                                         "20%",
                                         "20%",
@@ -176,8 +177,8 @@
                                     ],
                                     "body":								
 										[		
-										   [ "{ \"text\":\"Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Updated By\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Status\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Current Assignee\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Comments\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
-										   "{{#variable2}}[ \"{ \"text\":\"{{date}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{updatedBy}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{status}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{currentAssignee}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{comments}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable2}}"
+										   [ "{ \"text\":\"Sr. No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"},{ \"text\":\"Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Updated By\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Status\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Current Assignee\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Comments\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
+										   "{{#variable2}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"},{ \"text\":\"{{date}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{updatedBy}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{status}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{currentAssignee}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{comments}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable2}}"
 										]								
                                 },
                                 "border": [

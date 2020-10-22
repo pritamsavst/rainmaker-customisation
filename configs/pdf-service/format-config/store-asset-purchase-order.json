@@ -41,9 +41,9 @@
 			  "bold": true,
 			  "margin": [
 				0,
-				3,
+				20,
 				0,
-				0
+				10
 			  ]
 			},
 			{
@@ -70,13 +70,12 @@
 										   	[ "{ \"text\":\"PO Number : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{poNumber}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"PO Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{poDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Store Name : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{storeName}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"PO Status : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{poStatus}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"PO Rate Type : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{rateType}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Supplier Name : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{supplierName}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
-											[ "{ \"text\":\"Advance Percentage : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{advancePercentage}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Advance Amount : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{advanceAmount}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Expected Delivery Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{deliveryDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
-											[ "{ \"text\":\"Rate Contract/Tender/Quotation No. : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{rateContractNumber}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Rate Contract/Tender/Quotation No. : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{rateContractDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
+											[ "{ \"text\":\"Rate Contract/Tender/Quotation No. : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{rateContractNumber}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Rate Contract/Tender/Quotation Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{rateContractDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Delivery Terms : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{deliveryTerms}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Payment Terms : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{paymentTerms}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}" ],
 											[ "{ \"text\":\"Remarks : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{remark}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}" ],											
-											[ "{ \"text\":\"Created By : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{createdBy}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Designation : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ]
+											[ "{ \"text\":\"Created By Employee : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{createdBy}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Created By Employee Designation : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ]
 										]								
                                 },
                                 "border": [
@@ -98,8 +97,8 @@
 			  "fontSize": 10,
 			  "bold": true,
 			  "margin": [
-				9,
-				2,
+				10,
+				150,
 				15,
 				0
 			  ]
@@ -171,7 +170,8 @@
                                 "table": {
 									"headerRows": 1,
                                     "widths": [
-                                        "20%",
+										"5%",
+                                        "15%",
                                         "20%",
                                         "20%",
                                         "20%",
@@ -179,8 +179,8 @@
                                     ],
                                     "body":								
 										[		
-										   [ "{ \"text\":\"Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Updated By\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Status\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Current Assignee\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Comments\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
-										   "{{#variable2}}[ \"{ \"text\":\"{{date}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{updatedBy}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{status}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{currentAssignee}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{comments}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable2}}"
+										   [ "{ \"text\":\"Sr. No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"},{ \"text\":\"Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Updated By\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Status\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Current Assignee\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Comments\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
+										   "{{#variable2}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"},{ \"text\":\"{{date}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{updatedBy}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{status}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{currentAssignee}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{comments}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable2}}"
 										]								
                                 },
                                 "border": [
