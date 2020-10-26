@@ -559,12 +559,13 @@
                         "variable": "transfereedob",
                         "value": {
                             "path": "$.applicationDetails.transferee.dob"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "transfereefatherOrHusbandName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.applicationDetails.transferee.fatherOrHusbandName"
+                            "path": "$.applicationDetails.transferee.fatherOrHusbandName"
                         }
                     },
                      
@@ -572,6 +573,10 @@
                         "variable": "transfereerelation",
                         "value": {
                             "path": "$.applicationDetails.transferee.relation"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                   
@@ -603,7 +608,8 @@
                         "variable": "dateOfRegistration",
                         "value": {
                             "path": "$.applicationDetails.dateOfRegistration"
-                        }
+                        },
+                        "type":"date"
                     },
  
                     {
@@ -616,7 +622,8 @@
                         "variable": "familysettlementdate",
                         "value": {
                             "path": "$.applicationDetails.familysettlementdate"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "passedbycourt",
