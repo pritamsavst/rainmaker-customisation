@@ -1,0 +1,197 @@
+{
+    "key": "payment-letter",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+        
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                         {
+                           "text": "{{header}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style":"receipt-logo-sub-header"
+                         }
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+            },
+           
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "               _________",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "               __________",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "margin":[0,10,0,0],
+                        "preserveLeadingSpaces": true,
+                        "text": "               Memo No__________",
+                        "style": "pdfContent",
+                        "width": "*",
+                        "bold":true
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "               Dated:-________",
+                        "style": "pdfContent",
+                        "width": "*",
+                        "bold":true
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Subject:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": "NOC for Electricity, Water and Sewerage connections in respect of H.No. ______, Village Attawa, Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "              Reference to your application dated 19.2.2010, on the subject as cited above."
+            },
+            {          
+                "margin": [0, 10, 0, 0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "              In this connection, it is intimated that this office has worked out total amount of Rs. ______________/- (Words)________________________________."            
+            },
+            {          
+                "margin": [0, 10, 0, 0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "              Therefore, you are required to deposit the same by means of Demand Draft in favour of the Commissioner, Municipal Corporation, Chandigarh, at the earliest,so that NOC for the above said Connections can be considered."            
+            },
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":" S.D.E.(Buildings),"
+                    },
+                    {
+                        "text":"Municipal Corporation Chandigarh "
+                    }
+                ] 
+            }
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}
