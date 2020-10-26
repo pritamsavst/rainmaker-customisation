@@ -71,7 +71,7 @@
                             "text": "Rent per sq yd",
                             "style": "table-header"
                         }, {
-                            "text": "{{rentPerSqYard}}",
+                            "text": "{{rentPerSqYd}}",
                             "style": "table-content"
                         }],
                         [{
