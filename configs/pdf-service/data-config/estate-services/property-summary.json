@@ -228,7 +228,7 @@
                     {
                         "variable": "allotcationTypeValue",
                         "value": {
-                            "path": "$.propertyDetails.allocationType"
+                            "path": "$.propertyDetails.typeOfAllocation"
                         }
                     },
                     {
