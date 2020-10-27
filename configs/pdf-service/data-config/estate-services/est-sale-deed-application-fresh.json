@@ -554,7 +554,7 @@
                     {
                         "variable": "dobValue",
                         "value": {
-                            "path": "$. applicationDetails.transferee.dob"
+                            "path": "$.applicationDetails.transferee.dob"
                         },
                         "type":"date"
                        
