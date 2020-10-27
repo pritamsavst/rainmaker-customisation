@@ -561,7 +561,7 @@ serviceMaps:
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.value
             dbType: DOUBLE
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.uom.code
-         -  jsonPath: $.materialIssues.*.materialIssueDetails.*.scrapValue
+         -  jsonPath: $.materialIssues.*.materialIssueDetails.*.value
             dbType: DOUBLE
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.voucherHeader
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.indentDetail.id
@@ -629,7 +629,7 @@ serviceMaps:
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.value
             dbType: DOUBLE
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.uom.code
-         -  jsonPath: $.materialIssues.*.materialIssueDetails.*.scrapValue
+         -  jsonPath: $.materialIssues.*.materialIssueDetails.*.value
             dbType: DOUBLE
          -  jsonPath: $.materialIssues.*.materialIssueDetails.*.voucherHeader
          -  jsonPath: $.materialIssues[?({id} in @.materialIssueDetails[*].id)].issueNumber
@@ -1202,15 +1202,15 @@ serviceMaps:
       queryMaps:
       -  query: INSERT INTO materialreceipt(id, mrnnumber, issuenumber, receivingstore, receiptpurpose, receiptDate, receiptType,
             suppliercode, supplierbillno, supplierbilldate, challanno, challandate, description, paymentterms, receivedby,
-            designation, mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid, createdby, createdTime, lastmodifiedby,lastModifiedTime)
-            VALUES ( ?, ?, ?, ?, ?, ?, ? ,? ,?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?) ON CONFLICT (mrnnumber,tenantid)
+            designation, mrnstatus, inspectedby, inspectiondate, inspectionremarks, tenantid,isAdHoc ,createdby, createdTime, lastmodifiedby,lastModifiedTime)
+            VALUES ( ?, ?, ?, ?, ?, ?, ? ,? ,?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?, ?, ?,?) ON CONFLICT (mrnnumber,tenantid)
             DO UPDATE SET receivingstore = EXCLUDED.receivingstore, receiptpurpose = EXCLUDED.receiptpurpose, receiptDate  =
             EXCLUDED.receiptdate, receiptType = EXCLUDED.receiptType, suppliercode = EXCLUDED.suppliercode, supplierbillno
             = EXCLUDED.supplierbillno, supplierbilldate = EXCLUDED.supplierbilldate, challanno = EXCLUDED.challanno, challandate
             = EXCLUDED.challandate, description = EXCLUDED.description, paymentterms = EXCLUDED.paymentterms, receivedby =
             EXCLUDED.receivedby, designation = EXCLUDED.designation, mrnstatus = EXCLUDED.mrnstatus, inspectedby = EXCLUDED.inspectedby,
             inspectiondate = EXCLUDED.inspectiondate, inspectionremarks = EXCLUDED.inspectionremarks, lastmodifiedby = EXCLUDED.lastmodifiedby,
-            lastModifiedTime = EXCLUDED.lastmodifiedtime ;
+            lastModifiedTime = EXCLUDED.lastmodifiedtime ,isAdHoc = EXCLUDED.isAdHoc;
          basePath: $.materialReceipt.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.id
@@ -1237,6 +1237,7 @@ serviceMaps:
             dbType: LONG
          -  jsonPath: $.materialReceipt.*.inspectionRemarks
          -  jsonPath: $.materialReceipt.*.tenantId
+         -  jsonPath: $.materialReceipt.*.isAdHoc
          -  jsonPath: $.materialReceipt.*.auditDetails.createdBy
          -  jsonPath: $.materialReceipt.*.auditDetails.createdTime
             dbType: LONG
