@@ -4,37 +4,48 @@
         "defaultStyle": {
             "font": "Cambay"
         },
-        "content": [{
-                "columns": [{
-                        "image": "{{logo}}",
-                        "alignment": "left",
-                        "width": 50
-                    },
-                    {
-                        "width": "*",
-                        "stack": [{
-                                "text": "{{municipal_co_chandigarh}}",
-                                "fontSize": 14,
-                                "bold": true
-                            },
-                            {
-                                "text": "{{colony_branch}}",
-                                "fontSize": 13,
-                                "color": "#676A6B "
-                            },
-                            {
-                                "text": "{{cause_notice}} : {{noticeId}}",
-                                "fontSize": 11,
-                                "bold": true,
-                                "width": "*",
-                                "alignment": "center",
-                                "lineHeight": "2"
-                            }
-                        ],
-                        "alignment": "center"
-                    }
-                ]
-            },
+        "content": [
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                         {
+                           "text": "{{municipal_co_chandigarh}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style": "receipt-logo-sub-header"
+                         },
+                         {
+                           "text": "{{cause_notice}} : {{noticeId}}",
+                           "style": "receipt-logo-sub-header"
+                         }
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+              },
 
             {
                 "margin": [0, 10, 0, 0],
@@ -335,8 +346,49 @@
                 "bold": true
             },
             "noticeContent": {
-                "fontSize": 10
-            }
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
 
         }
     }

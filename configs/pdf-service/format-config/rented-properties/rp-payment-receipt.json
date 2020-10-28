@@ -1,9 +1,7 @@
 {
     "key": "rp-payment-receipt",
     "config": {
-        "defaultStyle": {
-            "font": "Cambay"
-           },
+        
            "content": [
             { 
               "margin":[ -41,-41,-41,0], 
@@ -33,7 +31,7 @@
                                   },
                                   {
                                       "text": "{{payment_receipt}}",
-                                      "style": "receipt-table-value-cont"
+                                      "style": "receipt-logo-sub-header"
                                   }
                             ],
                             "margin": [
@@ -50,13 +48,15 @@
                             "stack": [
                                
                                 {
-                                    "text": "{{receipt_number_label}}",
-                                    "style": "receipt-table2"
+                                    "text": "{{receipt_number_label}} ",
+                                    "style": "receipt-no",
+                                    "bold": true
                                   },
                                   {
                                     "text": "{{receiptNumber}}",
-                                    "style": "receipt-table2",
-                                    "lineHeight":"2"
+                                    "style": "receipt-no",
+                                    "lineHeight":"2",
+                                    "bold": true
                                   }
                             ],
                             "alignment": "center"
@@ -73,15 +73,19 @@
                 "columns":[
                     {
                             "margin":[0,10,0,0],
-                            "text":"{{application_number_label}}:",
+                            "color": "#484848",
+                            "fontSize": 12,
+                            "text":"{{application_number_label}} : ",
                             "alignment": "left",
                             "width":"auto",
                             "bold":true
                     },
                     {
                             "margin":[0,10,0,0],
-                            "text":"{{consumerCode}}",
+                            "text":" {{consumerCode}}",
                             "width":"auto",
+                            "color": "#484848",
+                            "fontSize": 12,
                             "lineHeight":"3"
                             
                     },
@@ -91,15 +95,19 @@
                     },
                     {
                             "margin":[0,10,0,0],         
-                            "text":"{{payment_date_label}}:",
+                            "text":"{{payment_date_label}} : ",
                             "width":"auto",
-                            "bold":true
+                            "bold":true,
+                            "color": "#484848",
+                            "fontSize": 12
   
                           },
                           {
                             "margin":[0,10,0,0],
-                            "text":"{{transactionDate}}",
+                            "text":" {{transactionDate}}",
                             "width":"auto",
+                            "color": "#484848",
+                            "fontSize": 12,
                             "lineHeight":"3"
                           }
                     
@@ -109,11 +117,11 @@
             {
               "text":"{{application_details}}",
               "alignment":"left",
-              "bold":true,
-              "fontSize":10
+              "style":"pt-reciept-citizen-subheader"
+             
           },
           {
-            "margin": [0, 0, 0, 20],
+            "style":"pt-reciept-citizen-table",
              "table": {
                  "widths": [
                      "25%",
@@ -125,48 +133,42 @@
                           [
                              {
                                  "text":"{{application_type_label}}",
-                                 "bold":true,
-                                 "fontSize":8,
+                                 "style":"receipt-table-key",
                                  "border":[
                                    true,
                                    true,
                                    false,
                                    true
-                                 ],
-                                  "style": "receipt-table2"
+                                 ]
                                },
                                {
                                  "text":"{{receiptType}}",
-                                 "fontSize":8,
                                  "border":[
                                    false,
                                    true,
                                    false,
                                    true
-                                 ],
-                                  "style": "receipt-table-value-cont"
+                                 ]
                                },
                                {
                                  "text":"{{service_type_label}}",
-                                 "fontSize":8,
+                                 "style":"receipt-table-key",
                                  "border":[
                                    true,
                                    true,
                                    false,
                                    true
-                                 ],
-                                  "style": "receipt-table2"
+                                 ]
+                                  
                                },
                                {
                                 "text":"{{businessService}}",
-                                "fontSize":8,
                                 "border":[
                                   false,
                                   true,
                                   true,
                                   true
-                                ],
-                                 "style": "receipt-table-value-cont"
+                                ]
                               }
                           ]
                       ]
@@ -183,11 +185,11 @@
             {
                 "text":"{{payer_information}}",
                 "alignment":"left",
-                "bold":true,
-                "fontSize":10
+                "style":"pt-reciept-citizen-subheader"
+               
             },
             {
-                   "margin": [0, 0, 0, 20],
+                   "style":"pt-reciept-citizen-table",
                     "table": {
                         "widths": [
                             "33.33%",
@@ -198,26 +200,23 @@
                                  [
                                     {
                                         "text":"{{payer_name_label}}",
-                                        "bold":true,
-                                        "fontSize":8,
+                                        "style":"receipt-table-key",
                                         "border":[
                                           true,
                                           true,
                                           false,
                                           true
-                                        ],
-                                         "style": "receipt-table2"
+                                        ]
                                       },
                                       {
                                         "text":"{{payerName}}",
-                                        "fontSize":8,
+                                        
                                         "border":[
                                           false,
                                           true,
                                           false,
                                           true
-                                        ],
-                                         "style": "receipt-table-value-cont"
+                                        ]
                                       },
                                       {
                                         "text":"",
@@ -233,26 +232,22 @@
                                  [
                                     {
                                         "text":"{{payer_mobile_no_label}}",
-                                        "bold":true,
-                                        "fontSize":8,
                                         "border":[
                                           true,
                                           false,
                                           false,
                                           true
                                         ],
-                                         "style": "receipt-table2"
+                                        "style":"receipt-table-key"
                                       },
                                       {
                                         "text":"{{mobileNumber}}",
-                                        "fontSize":8,
                                         "border":[
                                           false,
                                           false,
                                           false,
                                           true
-                                        ],
-                                         "style": "receipt-table-value-cont"
+                                        ]
                                       },
                                       {
                                         "text":"",
@@ -278,49 +273,43 @@
             {
                 "text":"{{payableAmount}}",
                 "alignment":"left",
-                "bold":true,
-                "fontSize":10
+                "style":"pt-reciept-citizen-subheader"
                 
             },
             {
-                "margin": [0, 0, 0, 20],
+              "style":"pt-reciept-citizen-table",
                 "table":{
                     "widths":["33.33%","33.33%","33.33%"],
                     "body":[
                         [
                             {
                                 "text":"{{charges_dues_label}}",
-                                "fontSize":8,
-                                 "bold":true
+                                "style":"receipt-table-key"
+                                
                                 
                               },
                               {
                                 "text":"{{publication_charges_label}}",
-                                "fontSize":8,
-                                "bold":true
+                                "style":"receipt-table-key"
                               
                               },
                               {
                                 "text":"{{total_label}}",
-                                "fontSize":8,
-                                "bold":true
+                                "style":"receipt-table-key"
                                
                               }
                         ],
                         [
                             {
-                                "text":"{{totalDue}}",
-                                "fontSize":8
+                                "text":"{{totalDue}}"
                                
                               },
                               {
-                                "text":"{{publicationCharges}}",
-                                "fontSize":8
+                                "text":"{{publicationCharges}}"
                                 
                               },
                               {
-                                "text":"{{total}}",
-                                "fontSize":8
+                                "text":"{{total}}"
               
                               }
                          ]
@@ -330,12 +319,12 @@
             {
                 "text":"{{paymentInformation}}",
                 "alignment":"left",
-                "bold":true,
-                "fontSize":10
+                "style":"pt-reciept-citizen-subheader"
+               
             },
             {
                 "margin": [0, 0, 0, 20],
-
+                "style":"pt-reciept-citizen-table",
                 "table":{
                     "widths": ["16.66%", "16.66%", "16.66%" , "16.66%", "16.66%","16.66%"],
                     "body":[
@@ -343,11 +332,11 @@
                             "colSpan":6,
                             "columns":[
                                 {"text":"{{amount_paid_label}} :",
-                                  "bold":true ,
-                                "fontSize":8},
+                                  "style":"receipt-table-key"
+                              
+                              },
                                 {
-                                    "text":"{{amountPaid}}",
-                                "fontSize":8
+                                "text":"{{amountPaid}}"
                                 }
                             ]
                         },
@@ -357,107 +346,90 @@
                         
                     ],
                     [
-                        {  "colSpan":3,
+                        {  "colSpan":2,
                           "text":"{{payment_mode_label}}",
-                            "bold":true ,
-                          "fontSize":8},
-                          {},
+                          "style":"receipt-table-key"
+                        },
                           {},
                           {
-                            "colSpan":3,
-                              "text":"{{transaction_cheque_dd_label}}",
-                              "bold":true ,
-                          "fontSize":8
+                            "colSpan":2,
+                              "text":"{{transaction_cheque_dd_label}}" ,
+                              "style":"receipt-table-key"
                           },
                           {},
+                          {
+                            "colSpan":2,
+                              "text":"{{payableAmountOn}}" ,
+                              "style":"receipt-table-key"
+                          }, 
                           {}
                           
                     ],
                     [
                         {"text":"{{paymentMode}}",
-                          "colSpan":3,
-                          "fontSize":8},
-                          {},
-                          {},
-                          {
-                          "colSpan":3,
-                          "text":"{{transactionNumber}}",
-                          "fontSize":8
+                          "colSpan":2
                           },
                           {},
+                        
+                          {
+                          "colSpan":2,
+                          "text":"{{transactionNumber}}"
+                          
+                          },
+                          {},
+                          {
+                            "colSpan":2,
+                            "text":"{{dateOfPayment}} , {{time}}"
+                            
+                            },
                           {}
                           
                     ]
                     ]
                 }
             },
-            {"text":"{{generated_by_label}}",
-            "fontSize":9,
-            "bold":true
-            },
-            {"text":"{{generatedBy}}",
-            "fontSize":9,
-            "lineHeight":"2"},
-            {             
-            "text":"{{note}} :",
-            "fontSize":8,
-            "width":"auto" ,
-            "bold":true  
-            },
             {
-               "columns":[
-                {             
-                    "text":"1:",
-                    "fontSize":8,
-                    "width":"auto",
-                    "bold":true    
-                },
-                {
-                    "text":"{{subject_to_realization}}",
-                    "bold":true ,
-                    "fontSize":8,
-                    "width":"*"
-                }
-               ]
-            },
-            {
-                "columns":[
-                 {             
-                     "text":"2:",
-                     "fontSize":8,
-                     "width":"auto",
-                     "bold":true    
-                 },
-                 {
-                  "text":"{{not_proof_of_property}}",
-                  "bold":true ,
-                  "fontSize":8,
-                  "width":"*"
-              }
+              "style": "receipt-approver",
+              "table": {
+                "widths": ["*"],
+                "body": [
+                  [
+                    {
+                      "stack": [
+                        {
+                          "text": "{{generated_by_label}}",
+                          "margin": [0, 0, 0, 0],
+                          "bold": true
+                        },
+                        {
+                          "text": "{{generatedBy}}",
+                          "margin": [0, 0, 0, 0],
+                          "bold": false
+                        }
+                      ],
+                      "alignment": "left"
+                    }
+                  ],
+                  [
+                    {
+                      "text":"Note: 1. {{subject_to_realization}} 2.{{not_proof_of_property}} 3.{{computer_generated_document}}",
+                      "margin": [0, 10, 0, 0],
+                      "style": "receipt-footer"
+                    }
+                  ]
                 ]
-             },
-             {
-                "columns":[
-                 {             
-                     "text":"3:",
-                     "fontSize":8,
-                     "width":"auto",
-                     "bold":true    
-                 },
-                 {
-                     "text":"{{computer_generated_document}}",
-                     "bold":true ,
-                     "fontSize":8,
-                     "width":"*"
-                 }
-                ]
-             }
-           
+              },
+              "layout": "noBorders"
+            }
             
               
               
            ],
            "styles": {
+            "receipt-footer": {
+              "color": "#484848",
+              "fontSize": 8
+            },
             "noc-head": {
                 "margin": [
                   -25,
@@ -468,15 +440,56 @@
               },
               "receipt-logo-header": {
                 "color": "#484848",
-                "fontSize": 14,
+                "fontFamily": "Roboto",
+                "fontSize": 16,
                 "bold": true,
-                "letterSpacing": 0.74,
+                "letterSpacing": 0.74
+              },
+              "receipt-no": {
+                "color": "#484848",
+                "fontSize": 10
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
                 "margin": [
                   0,
+                  6,
                   0,
-                  0,
-                  5
+                  0
                 ]
+              },
+              "pt-reciept-citizen-subheader": {
+                "fontSize": 10,
+                "bold": true,
+                "margin": [
+                  0,
+                  16,
+                  0,
+                  8
+                ],
+                "color": "#484848"
+              },
+              "pt-reciept-citizen-table": {
+                "fontSize": 10,
+                "color": "#484848"
+              },
+              "receipt-table-key": {
+                "color": "#484848",
+                "bold": true
+              },
+              "receipt-approver": {
+                "fontSize": 10,
+                "bold": true,
+                "margin": [
+                  0,
+                  60,
+                  0,
+                  8
+                ],
+                "color": "#484848"
               },
               "receipt-table-value-cont": {
                 "color": "#000000",

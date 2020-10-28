@@ -531,7 +531,7 @@ ReportDefinitions:
     type: string
     source: due
     total: false
-  - name: remaining_pricipal
+  - name: remaining_principal
     label: report.rp.remainingpricipal
     type: string
     source: due
