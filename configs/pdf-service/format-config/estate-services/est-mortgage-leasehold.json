@@ -1,0 +1,283 @@
+{
+    "key": "est-mortgage-leasehold",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                         {
+                           "text": "{{header}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style":"receipt-logo-sub-header"
+                         }
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+            },
+            {
+                "style": "pt-reciept-citizen-header",
+                "columns": [
+                  {
+                    "width":"auto",
+                    "text": [
+                      {
+                        "text": "No.MC/Estate/2019/ ",
+                        "bold": true
+                      },
+                      {
+                        "text": "{{applicationNumber}}",
+                        "bold": false
+                      }
+                    ],
+                    "alignment": "left"
+                  },
+                  {
+                    "text": "",
+                    "width":"*"
+                  },
+                  {
+                    "width":"auto",
+                    "text": [
+                      {
+                        "text": "Dated ",
+                        "bold": true
+                      },
+                      {
+                        "text": "____________",
+                        "bold": false
+                      }
+                    ],
+                    "alignment": "right"
+                  }
+                ]
+              },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [50, 10, 0, 0],
+                "stack": [{
+                        "text": "{{ownerName}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "{{address}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [20, 0, 0, 0],
+                        "width": "*",
+                        "text": "Intimation to mortgage of {{loanAmount}} - Near , Manimajra, U.T., Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text": "             Reference your application dated _____________________ on the subject cited above."
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "             The Additional Commissioner. Municipal Corporation, Chandigarh is pleased to grant you permission to obtain loan taken over facility from "
+                    },
+                    {
+                        "text": "{{bankName}}",
+                        "bold":true
+                    },
+                    {
+                        "text": "Limited, on the following terms & conditions as earlier imposed while granting permission to mortgage in respect of "
+                    },
+                    {
+                        "text": "__________",
+                        "bold":true
+                    },
+                    {
+                        "text": "for"
+                    }
+                ]
+            },
+
+            {
+                "margin": [50, 10, 0, 0],
+                "style": "pdfContent",
+                "stack": [{
+                        "text": "(i).  The Municipal Corporation. Chandigarh shall have 1 st and paramount charge and _____________________ Limited, _________________shall have 2 nd charge over it."
+                    },
+                    {
+                        "text": "(ii). The aforesaid ____________________ will not selll/dispose off the property in any way for recovering outstanding amount of loan without the prior permission in writing from the Additional Commissioner/Joint Commissioner, MCC and in case the financial institution proceeds to auction the property, they shall deposit the outstanding dues of the M.C. to Additional Commissioner/Joint Commissioner prior to adjusting their own outstanding dues."
+                    },
+                    {
+                        "text": "(iii).In case in the enhancement of the cost of land paid by the Corporation shall to be paid by you within 30 days of its paid."
+                    },
+                    {
+                        "text": "(iv)   In case of non-compliance with any of the terms and conditions referred to above and incorporation in original allotment letter the allotment of the site is liable to be cancelled and plot resumed by the Corporation besides forfeiting the whole or any part of the payment made in respect thereof."
+                    },
+                    {
+                        "text": "(v)    The permission to mortgage the property shall not preclude the Additional Commissioner/ Joint Commissioner, M.C., Chandigarh to take action for breach of any provision of law and the terms and condition of allotment letter."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Addl. Commissioner-I,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left"
+                    },
+                    {
+                        "text": "Dated:____________",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "stack": [{
+                    "preserveLeadingSpaces": true,
+                    "text": "             Copy is forwarded to the bank {{bankName}} for information & necessary action ",
+                    "style": "pdfContent"
+                }]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}

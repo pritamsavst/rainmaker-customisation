@@ -1,0 +1,304 @@
+{
+    "key": "est-scf-sco-letter",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                         {
+                           "text": "{{header}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style":"receipt-logo-sub-header"
+                         }
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+            },
+            {
+              "style": "pt-reciept-citizen-header",
+              "columns": [
+                {
+                  "width":"auto",
+                  "text": [
+                    {
+                      "text": "No.MC/Estate/2019/ ",
+                      "bold": true
+                    },
+                    {
+                      "text": "{{applicationNumber}}",
+                      "bold": false
+                    }
+                  ],
+                  "alignment": "left"
+                },
+                {
+                  "text": ""
+                },
+                {
+                  "width":"auto",
+                  "text": [
+                    {
+                      "text": "Dated ",
+                      "bold": true
+                    },
+                    {
+                      "text": "____________",
+                      "bold": false
+                    }
+                  ],
+                  "alignment": "right"
+                }
+              ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "            {{name}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "            {{address}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text":[
+                            {
+                                "preserveLeadingSpaces": true,
+                                "text": "Conversion of SCF No.  "
+                            },
+                            {
+                                "text":" {{siteNumber}} ","bold":true
+                            },
+                            {
+                                "text":"situated in "
+                            },
+                            {
+                                "text":" {{companyAddress}} ","bold":true
+                            },
+                            {
+                                "text":" into SCO"
+                            }
+                        ],
+                        "style": "pdfContent"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "preserveLeadingSpaces": true,
+                "style": "pdfContent",
+                "text":[
+                    {
+                        "text": "             In this connection, it is intimated that the Demand Draft of Rs."
+                    },
+                    {
+                        "text":"__________ /- ","bold":true
+                    },
+                    {
+                        "text":" (Rs. _only) submitted by you has been accepted as conversion charges, Conversion of SCF No. "
+                    },
+                    {
+                        "text":"{{siteNumber}} /-","bold":true
+                    },
+                    {
+                        "text":" into SCO is hereby allowed subject to the following conditions: - "
+                    }
+                ]
+            },
+          
+            {
+                "margin":[30,10,0,0],
+                "style": "pdfContent",
+                "stack": [{
+                    
+                        "text": "1) That the first and second floor of the building constructed on the site shali be allowed to be used for the purpose of offices subject to payment of conversion charges as may be fixed from time to time in this behalf. "
+                    },
+                    {
+                        "text": " 2) That the stairs for the first and second floor of the building shall be provided from the shop in accordance with the prescribed architectural controls for Shop-cum-Offices and they have to submit revised plans indicating the purposed position of the staircase and other internal changes"
+                    },
+                    {
+                        "text": "3) That no change in the outer façade of the building or additionai construction of any kind shall be permitted."
+                    },
+                    {
+                        "text":"4) That said conversion shall come effect only on sanction of revised building plan. "
+                    },
+                    {
+                        "text":"5) That the applicant shall obtained the occupation completion certificate from the SDO (B), Estate Office, Chandigarh. "
+                    },
+                    {
+                        "text":"6) That you will pay the conversion charges if any revised by the Chandigarh Administration. "
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text":"Additional Commissioner-I",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            { 
+                "margin": [0, 20, 0, 0],
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left"
+                    },
+                    {
+                        "text": "Dated:_________",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "style": "pdfContent",
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "            Copy is forwarded to the following for information & necessary action please: "    
+                    },
+                    {
+                        "text":"1..The SDO(Buildings), Estate Officer, U.T. Chandigarh,"
+                    },
+                    {
+                        "text":"2..The Asstt. Collector Tax, Municipal Corporation, Chandigarh "
+                    }
+                ]
+            }
+
+
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}

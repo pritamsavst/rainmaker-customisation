@@ -1,0 +1,386 @@
+{
+    "key": "est-cause-violation-notice",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                         {
+                           "text": "{{header}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style":"receipt-logo-sub-header"
+                         }
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+            },
+            {
+                "style": "pt-reciept-citizen-header",
+                "columns": [
+                  {
+                    "width":"auto",
+                    "text": [
+                      {
+                        "text": "No. MC/Estate/2019/ ",
+                        "bold": true
+                      },
+                      {
+                        "text": "{{applicationNumber}}",
+                        "bold": false
+                      }
+                    ],
+                    "alignment": "left"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "width":"auto",
+                    "text": [
+                      {
+                        "text": "Dated ",
+                        "bold": true
+                      },
+                      {
+                        "text": "____________",
+                        "bold": false
+                      }
+                    ],
+                    "alignment": "right"
+                  }
+                ]
+              },
+          
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "                {{name}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "                {{address}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Subject:",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": "Show Cause Notice under Rule 14 & 10 of the Chandigarh Estate Rules, 2007 read with Section 8-A of Capital of Punjab (Development & Regulation) Act 1952 ",
+                        "style": "pdfContent",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "*****",
+                "style": "pdfContent",
+                "bold": true,
+                "alignment":"center"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": [
+                    {
+                        "bold": true,
+                        "preserveLeadingSpaces": true,
+                        "text":"        Whereas" 
+                    },
+                    {
+                        "text":" the Booth Site No. "
+                    },
+                    {
+                        "text":" {{siteNumber}}, {{companyAddress}} . ","bold": true
+                    },
+                    {
+                        "text":" was allotted to "
+                    },
+                    {
+                        "text":"{{name}} s/o {{fatherOrHusbandName}}, {{address}}","bold": true
+                    },
+                    {
+                        "text":" vide allotmeat letter No "
+                    },
+                    {
+                        "text":"{{allotmentNumber}} ","bold": true
+                    },
+                    {
+                        "text":"dated"
+                    },
+                    {
+                        "text":" {{dateOfAllotment}}","bold": true
+                    }
+                ],
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": [
+                    {
+                        "bold": true,
+                        "preserveLeadingSpaces": true,
+                        "text":"        AND WHEREAS" 
+                    },
+                    {
+                        "text":" the provisions of the Capital of Punab Development & Regulation) Act 1952 were extended to the Noticed Area Committee, Chandiga: vides Notification bearing No. 4627-UTFI (4)-410255 dated 27.07.1994 "
+                    }
+                ],
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": [
+                    {
+                        "bold": true,
+                        "preserveLeadingSpaces": true,
+                        "text":"        And whereas" 
+                    },
+                    {
+                        "text":" the Chandigarh Sale of site and Building Rules 1960 were repealed after the Chandigarh Estate Rules 2007 came into force on 07.11.2007 and by virtue of Section 20 of the Rules of 2007, the sites governed under the erstwhile rules shall now be governed by the new rules as amended from time to time. Hence, this notice under the Chandigarh Estate Rules 2007 as amended in 2009."
+                    }
+                ],
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "text": [
+                    {
+                        "bold": true,
+                        "preserveLeadingSpaces": true,
+                        "text":"        And whereas" 
+                    },
+                    {
+                        "text":" it has been brought into the notice of the undersigned that you have altered the building without prior permission of the Chief Administrator, U.T. Chandigarh in the following männer:-"
+                    }
+                ],
+                "style": "pdfContent"
+            },
+            {
+                "margin": [0, 0, 0, 0],
+                "style": "pdfContent",
+                "stack":[
+                    {
+                        "text":"1.  Coverage of space more than allowed by 2’-7½’ (10’-10 ½” x 2’-7½” =28.54 sq ft) except public corridor."
+                    },
+                    {
+                        "text":"2.  Total length of building exceeds the allowed by 2’-7½”."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "width": "*",
+                "text": [
+                    {
+                        "bold": true,
+                        "preserveLeadingSpaces": true,
+                        "text":"        And whereas" 
+                    },
+                    {
+                        "text":" your aforesaid actions amounts to breach of terms and conditions of the allotment and are in violation of the sanctioned plan besides contravention of the provisions of the relevant Act and rules as mentioned above.                         "
+                    }
+                ],
+                "style": "pdfContent"
+            },
+            {
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"        Now, therefore the undersigned by virtue of the power conferred upon under Rule 10 of the Estate Rules, 2007 amended from time to time direct the allottees/transferees and the occupier(s) of the site(s) to remove the building violations within the period of two months as per the Chandigarh Administration notification No. 50/10/71-(P-III)-UTFI(5)-2016/2928 dated 28.03.2016. As per the aforesaid notification dated 28.03.2016, the penal charges @ Rs. 6/- (for coverage beyond permitted) per sq. ft. per day of the area under violation, which shall be paid by the transferee/allottee and the occupier of the site or building or part thereof the building violation occurs. In case of non-payment of such charges the same shall be recovered as arrears of land revenue."   
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"        In case of your failure to remove the building violations from the site as per revised/sanctioned plan within the aforesaid period of two months, it will be presumed that you are not inclined to remove the building violations and the proceedings of resumption/cancellation/sealing/removal shall be initiated against you under Rules 14 of the Chandigarh Estate Rules 2007 as amended from time to time read with Section 8-A of the Capital of Punjab (Development & Regulation) Act, 1952."   
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"        The undersigned hereby called upon you to show cause within a period of 15 days from the date of issuance of notice as to why the proceeding under Rule 10 and Rule 14 of Chandigarh Estate Rules, 2007 as amended from time to time read with Section 8-A of the Capital of Punjab (Development & Regulation) Act, 1952 be not contemplated and in case of your failure to appear in person on fixed date and time, the proceeding will be taken out ex-parte against you."   
+            }, {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"        If the violations at the site/building is established, the charges for violation or misuse at the rate specified in this notice shall be payable within 15 days of such order. For any delay in payment, interest shall be charged at one and a half percent for each month of delay or part thereof. The charges for violation shall be payable for the period the violations remained in existence."   
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"        In case you have to say something in this regard, you are hereby afforded an opportunity of being heard in person on __________ at 11:00 AM before the undersigned in Room No 612, 6th floor, New Deluxe Building, Sector 17-E, Chandigarh, falling which it shall be presumed that you have nothing to say in this regard and ex-parte decision will be taken in accordance with law/rules."   
+            },
+          
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":" ADDITIONAL COMMISSIONER-I"
+
+                    },
+                    {
+                        "text":"(Exercising the powers of the Estate Officer "
+                    },
+                    {
+                        "text":" under the provisions of Capital of Punjab"
+                    },
+                    {
+                        "text":"Development & Regulation) Act, 1952) "
+                    },
+                    {
+                        "text":"MUNICIPAL CORPORATION, CHANDIGARH "
+                    }
+                ] 
+            },
+            {
+                "margin":[0,20,10,10],
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left",
+                        "bold":true
+                    },
+                    {
+                        "text": "Dated:",
+                        "style": "pdfContent",
+                        "alignment": "right",
+                        "bold":true
+                    }
+                ]
+            },
+            {
+                "stack": [
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "           A copy is also forwarded to the following for information and necessary action ",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "1.         The Law Officer, Municipal Corporation, Chandigarh with the directions to attend the proceedings on the above date and time.",
+                        "style": "pdfContent",
+                        "preserveLeadingSpaces": true
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "2.          The Building Inspector, Municipal Corporation, Chandigarh with the directions to attend the proceedings on the above date and time alongwith name of occupier of the booth under consideration.",
+                        "style": "pdfContent"
+                    }
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}

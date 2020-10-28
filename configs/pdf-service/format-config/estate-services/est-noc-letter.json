@@ -1,0 +1,383 @@
+{
+    "key": "est-noc-letter",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "style": "noc-head",
+                "table": {
+                  "widths": [
+                   50, "*"
+                  ],
+                  "body": [
+                    [
+                     {
+                       "image": "{{logo}}",
+                       "width": 50,
+                       "margin": [8, 10, 10, 0]
+                     },
+                     {
+                       "stack": [
+                        {
+                            "text": "Performa of NOC letter issue,",
+                            "style":"receipt-logo-sub-header"
+                        },
+                         {
+                           "text": "{{header}}",
+                           "style": "receipt-logo-header"
+                         },
+                         {
+                           "text":"{{colony_branch}}",
+                           "style":"receipt-logo-sub-header"
+                         }
+                         
+                       ],
+                       "alignment": "center",
+                         "margin": [
+                           0,
+                           12,
+                           0,
+                           0
+                         ]
+                     }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+            },
+            {
+                "style": "pt-reciept-citizen-header",
+                "columns": [
+                  {
+                    "width":"auto",
+                    "text": [
+                      {
+                        "text": "No.MC/Estate/2019/ ",
+                        "bold": true
+                      },
+                      {
+                        "text": "{{applicationNumber}}",
+                        "bold": false
+                      }
+                    ],
+                    "alignment": "left"
+                  },
+                  {
+                    "text": ""
+                  },
+                  {
+                    "width":"auto",
+                    "text": [
+                      {
+                        "text": "Dated ",
+                        "bold": true
+                      },
+                      {
+                        "text": "____________",
+                        "bold": false
+                      }
+                    ],
+                    "alignment": "right"
+                  }
+                ]
+              },
+              
+            {
+                "margin": [0, 20, 0, 0],
+                "text": "To",
+                "alignment": "left",
+                "style": "pdfContent"
+            },
+            {
+                "margin": [40, 10, 0, 0],
+                "stack": [{
+                        "text": " {{name}} ",
+                        "style": "pdfContent",
+                        "width": "*"
+                    },
+                    {
+                        "text": "{{address}}",
+                        "style": "pdfContent",
+                        "width": "*"
+                    }
+
+
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "columns": [{
+                        "text": "Sub:-",
+                        "style": "pdfContent",
+                        "bold": true,
+                        "width": "auto",
+                        "alignment": "left"
+
+                    },
+                    {
+                        "margin": [10, 0, 0, 0],
+                        "width": "*",
+                        "text": [{
+                                "text": "Issuance of No Objection Certificate for transfer of "
+                            },
+                            {
+                                "text": " {{share}} % ",
+                                "bold": true
+                            },
+                            {
+                                "text": "shares in respect of leasehold SCO Site No"
+                            },
+                            {
+                                "text": "{{siteNumber}}  ",
+                                "bold": true
+                            },
+                            {
+                                "text": "Chandigarh by way of "
+                            },
+                            {
+                                "text": "_________",
+                                "bold": true
+                            }
+                        ],
+                        "style": "pdfContent"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": "            Reference your letter dated ______ on the subject noted above. ",
+                "preserveLeadingSpaces": true
+
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "text": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "            In view of the indemnity bond and affidavit submitted by you along with liability affidavit of   "
+                    },
+                    {
+                        "text": " {{transferorName}} S/o  {{transferorGuardianName}}, {{transferorAddress}}, ","bold":true
+                    },
+                    {
+                        "text": "you are hereby granted permission for transfer of lease rights to the extent of "
+                    },
+                    {
+                        "text": "{{share}} ",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "share in favour of "
+                    },
+                    {
+                        "text": "{{name}} S/o {{fatherOrHusbandName}} ",
+                        "bold": true
+
+
+                    },
+                    {
+                        "text": "in respect of SCO No. "
+                    },
+                    {
+                        "text": "{{siteNumber}},{{address}} ",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "(father to son)."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "            This permission is subject to execution and registration of proper transfer of lease rights deed and further subject to the condition that the intending transferee will also abide by the provisions as Capital of Punjab (Development & Regulation) Act, 1952 and as amended upto date and the rules framed there under from time to time and shall also abide by the terms & conditions of the allotment letter bearing No. {{allotmentNumber}} dated {{dateOfAllotment}} and  lease deed. This permission shall be valid for one month from the date of issue of this letter for execution of transfer of lease right deed. The detail of property is as under: "
+            },
+            {
+                "style": "pdfContent",
+                "margin": [0, 20, 0, 0],
+                "table": {
+                    "widths": [10, "45%", "45%"],
+                    "body": [
+                        [{
+                            "text": "1"
+                        }, {
+                            "text": "Year of auction"
+                        }, {
+                            "text": [{
+                                    "text": " {{dateOfAuction}} ",
+                                    "bold": true
+                                },
+                                {
+                                    "text": "on leasehold basis "
+                                }
+                            ]
+                        }],
+                        [{
+                            "text": "2"
+                        }, {
+                            "text": "Date of issue of allotment letter"
+                        }, {
+                            "text": "{{dateOfAllotment}} ",
+                            "bold": true
+                        }],
+                        [{
+                            "text": "3"
+                        }, {
+                            "text": "Year of construction of building  "
+                        }, {
+                            "text": "Occupation certificate issued  _____"
+                        }],
+                        [{
+                            "text": "4"
+                        }, {
+                            "text": "Description of property  "
+                        }, {
+                            "text": [{
+                                "text": " {{areaSqft}} ",
+                                "bold": true
+                            }, {
+                                "text": "sq.yds"
+                            }]
+
+                        }],
+                        [{
+                            "text": "5"
+                        }, {
+                            "text": "Kind of property  "
+                        }, {
+                            "text": [{
+                                    "text": " {{propertyType}} ",
+                                    "bold": true
+                                }, {
+                                    "text": "Site (Leasehold basis) "
+                                }
+
+                            ]
+
+                        }]
+                    ]
+                }
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Assistant Controller (F&A) ",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "For Municipal Corporation ",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
+            },
+            {
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left",
+                        "bold": true
+                    },
+                    {
+                        "text": "Dated:",
+                        "style": "pdfContent",
+                        "alignment": "right",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "stack": [{
+                        "text": "Copy is forwarded to following for information & necessary action please: -",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "1.The Sub-Registrar, Estate Office, U.T., Chandigarh.",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "2. The ACT, Municipal Corporation, Chandigarh",
+                        "style": "pdfContent"
+
+                    }
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}

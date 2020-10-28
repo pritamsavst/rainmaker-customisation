@@ -1,0 +1,176 @@
+{
+    "key": "noc-proposal-letter",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Applications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "BUILDING_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              },
+              {
+                "variable":"applicationNumber",
+                "value":{
+                  "path":"$.applicationNumber"
+                }
+              },
+              {
+                "variable":"name",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable":"fatherOrHusbandName",
+                "value":{
+                  "path":"$.applicationDetails.transferee.fatherOrHusbandName"
+                }
+              },
+               {
+                "variable":"address",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
+                "variable":"share",
+                "value":{
+                  "path":"$.applicationDetails.transferor.share"
+                }
+              },
+              {
+                "variable":"siteNumber",
+                "value":{
+                  "path":"$.property.siteNumber"
+                }
+              },
+              {
+                "variable":"transferorName",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable":"dateOfExecutionOfWill",
+                "value":{
+                  "path":"$.applicationDetails.dateOfExecutionOfWill"
+                },
+                "type":"date"
+              },
+              {
+                "variable":"witnessName",
+                "value":{
+                  "path":"$.applicationDetails.witness[0].name"
+                }
+              },
+              {
+                "variable":"witnessAddress",
+                "value":{
+                  "path":"$.applicationDetails.witness[0].address"
+                }
+              },
+              {
+                "variable":"dateOfDeath",
+                "value":{
+                  "path":"$.applicationDetails.transferor.dateOfDeath"
+                }
+              },
+              {
+                "variable":"transferorName",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable":"transferorAddress",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
+                "variable":"transferorGuardianName",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.guardianName"
+                }
+              },
+              {
+                "variable":"allotmentNumber",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.allotmentNumber"
+                }
+              },
+              {
+                "variable":"dateOfAllotment",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+                },
+                "type":"date"
+              },
+              {
+                "variable":"areaSqft",
+                "value":{
+                  "path":"$.property.propertyDetails.areaSqft"
+                }
+              },
+              {
+                "variable":"propertyType",
+                "value":{
+                  "path":"$.property.propertyDetails.propertyType"
+                }
+              },
+              {
+                "variable":"dateOfAuction",
+                "value":{
+                  "path":"$.property.propertyDetails.dateOfAuction"
+                },
+                "type":"date"
+              },
+              {
+                "variable":"sectorNumber",
+                "value":{
+                  "path":"$.property.sectorNumber"
+                }
+              },
+              {
+                "variable":"emdAmount",
+                "value":{
+                  "path":"$.property.propertyDetails.emdAmount"
+                }
+              }
+
+            ]
+          }
+        ]
+      }]
+    }
+  }  

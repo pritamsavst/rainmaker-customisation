@@ -1,0 +1,280 @@
+{
+    "key": "est-cause-violation-order",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [{
+                "text": "ORDER",
+                "style": "receipt-logo-header",
+                "alignment":"center",
+                "margin": [
+                    -25,
+                    -25,
+                    0,
+                    1
+                  ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": [{
+                        "text": "        The Booth Site No "
+                    },
+                    {
+                        "text": " {{siteNumber}}, {{companyAddress}}",
+                        "bold": true
+                    },
+                    {
+                        "text": "was initially allotted to"
+                    },
+                    {
+                        "text": " {{transferorName}} w/o ______",
+                        "bold": true
+                    },
+                    {
+                        "text": "vide allotment letter No."
+                    },
+                    {
+                        "text": "{{allotmentNumber}} ",
+                        "bold": true
+                    },
+                    {
+                        "text": "dated "
+                    },
+                    {
+                        "text": "{{dateOfAllotment}} ",
+                        "bold": true
+                    },
+                    {
+                        "text": "for the 'General Trade but other than motor trade'."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": [{
+                        "text": "        Whereas the said site was further transferred in the name of "
+                    },
+                    {
+                        "text": " {{name}}, s/o {{fatherOrHusbandName}} ","bold":true
+                    },
+                    {
+                        "text": " vide this office memo No. MC/Estate/2016/6433 dated 26.09.2016  "
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        And whereas the provisions of the Capital of Punjab (Development & Regulation) Act 1952 were extended to the Notified Area Committee, Chandigarh vides Notification bearing No. 4627-UTFI (4)-94/10255 dated 27.07.1994  "
+            }, {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        And whereas the Chandigarh Sale of site and Building Rules 1960 were repealed after the Chandigarh Estate Rules 2007 came into force on 07.11.2007 and by virtue of Section 20 of the Chandigarh Estate Rules of 2007, the sites governed under the erstwhile rules shall now be governed by the new rules as amended from time to time. Hence this notice under the Chandigarh Estate Rules 2007 as amended in 2009.  "
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        It was brought into the notice of the undersigned that you have altered the building without prior permission of the Chief Administrator, U.T. Chandigarh in the following manner: "
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "stack": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "        1       Basement store 8’-7½'' x 25'-0''= 215.62 sq ft"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "        2       Tyre service 8’-7½'' x 27’-4½''= 225 sq ft"
+                    }, {
+                        "preserveLeadingSpaces": true,
+                        "text": "        3       Store 8'-7½'' x 16'-6''= 142.31 sq ft"
+                    },
+                    {
+
+                        "preserveLeadingSpaces": true,
+                        "text": "                 Total Area : 582.93 sq.ft."
+                    }
+                ]
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        And the aforesaid actions i.e. carrying out the building violations amounts to breach of terms and conditions of the allotment and are in violation of the sanctioned plan besides contravention of the provisions of the relevant Act and rules as mentioned above. "
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        Accordingly, the show cause notice under section 14 & 10 of Chandigarh Estate Rules, 2007 read with section 8-A of Punjab (Development & Regulation) Rules, 1952 was served with the directions to remove the building violations/misuse vide this office Memo No. MC/Estate/2019/7748 dated 16.09.2019. The opportunity of hearing was also afforded on 03.10.2019, 05.11.20198 and 19.11.2019. During the hearing proceedings the owners on 31.10.2019 intimated that he had removed the violation, accordingly, the committee was directed to inspect the building and submit report. "
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        The committee vide letter dated 13.11.2019 submitted the report duly mentioning therein that the violation/misuse has been closed.  "
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        The owner/occupant is liable to pay the misuse/violation charges as amended vide Chandigarh Administration notification No.50/10/71-PIII-UTFI(5)-2016/2928 dated 28.03.2016."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "       Whereas the charges for the area remained under violation comes to Rs. 1,81,586/- (Rupees one lac eighty one thousand five hundred and eighty six only) i.e. from the date of issue to notice to the date of such removal. The aforesaid amount is subject to verification and check/revision by audit."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "text": "        In view of the statements of the officials/owner/occupant and perusal of the record made available, I Tilak Raj, HCS, Additional Commissioner-cum-Estate Officer, Municipal Corporation, Chandigarh exercising the powers Estate Officer under the provision of Capital of Punjab (Development & Regulation) Act, 1952 have come to the conclusion that the owner is liable to pay the charges for the violation/misuse i.e. Rs. 1,81,586/- (Rupees one lac eighty one thousand five hundred and eighty six only) within 15 days from the issue of this orders failing which interest at the rate of one and half percent for each month of delay shall be charged. In case of failure to make the payment by owners, the same shall be recovered under an arrear of Land Revenue Act."
+            },
+            {
+                "margin": [0, 10, 0, 0],
+                "style": "pdfContent",
+                "preserveLeadingSpaces": true,
+                "stack": [{
+                        "style": "pdfContent",
+                        "text": "        Announced on __________"
+
+                    },
+                    {
+                        "style": "pdfContent",
+                        "text": "        Orders be communicated to the parties concerned."
+                    }
+                ]
+
+            },
+            {
+                "alignment": "right",
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "bold": true,
+                "stack": [{
+                        "text": " Additional Commissioner-cum-Estate Officer"
+
+                    },
+                    {
+                        "text": "MUNICIPAL CORPORATION, "
+                    },
+                    {
+                        "text": " CHANDIGARH (Exercising the powers of"
+                    },
+                    {
+                        "text": "the Estate Officer under the provisions of"
+                    },
+                    {
+                        "text": "Capital of Punjab (Development & "
+                    },
+                    {
+                        "text": "Regulation) Act, 1952)"
+                    }
+                ]
+            },
+            {
+                "margin": [0, 20, 10, 10],
+                "columns": [{
+                        "preserveLeadingSpaces": true,
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left"
+                    },
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "Dated:_________",
+                        "style": "pdfContent",
+                        "alignment": "right"
+                    }
+                ]
+            },
+            {
+                "stack": [{
+                        "text": "1.       Shri Rama Kaushik & ors i/o H.No. 2006, Sector 45, Burail Chandigarh ",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "2.       The PS to the Commissioner for the kind information of the worthy Commissioner, Municipal Corporation, Chandigarh",
+                        "style": "pdfContent"
+
+                    },
+                    {
+                        "text": "3.        The SDO (8). Estate Office, UT, Chandigarh for information and necessary action please. ",
+                        "style": "pdfContent"
+                    }
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}

@@ -1,0 +1,578 @@
+{
+    "key": "est-show-cause-non-payment-order",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+             {
+                "text": "{{header}}",
+                "alignment":"center",
+                "style": "receipt-logo-header",
+                "margin": [
+                    -25,
+                    -25,
+                    0,
+                    1
+                  ]
+              },
+              {
+                "text":"ORDER",
+                "alignment":"center",
+                "style":"receipt-logo-sub-header"
+              },
+            
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"            The Hotel Site Block No. 6. Sector, 35-B, Chandigarh measuring 12694 422 sq yd (approx) was allotted to M/s Lok Priya Buildwell Pvt Ltd through open auction held on 11.10.2006 on lease hold basis vide this Meno No MC/Estate 2006/6684 dated 17-10-2006 under the provisions of Capital of Punjab (D&amp;R) Act 1952 and Chandigarh Lease Hold of Sites &amp; Buildings Rules 1973, as amended from time to time."   
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "text":[
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text":"            And Whereas the Chandigarh Lease Hold of Sites &amp; Building Rules, 1973 were repealed after the Chandigarh Estate Rules, 2007 came into force on 07.11.2007 and by virtue of rule 14 of the said Rules of 2007, the sites governed under the erstwhile rules shall now be governed by the new rules."   
+                    }
+                ]
+            }, 
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "text":[
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text":"            And, whereas, as per condition No. 16 of the terms and conditions of allotment letter and clause 9 of the lease deed, the licensee is required to pay all taxes levied by the govt from time to time."   
+                    }
+                ]
+            }, 
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "text":[
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text":"            And, whereas as per condition No 22 of the terms and conditions of allotment letter the breach of any terms and conditions of the lease/allotment, the Estate Officer shall be competent to cancel the lease/allotment and forfeit the whole and part of the payment paid by the lessee. "   
+                    }
+                ]
+            }, 
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"            And, whereas, the Chandigarh Estate Rules, 2007 were made under the provisions of the Capital of Punjab (Development & Regulation) Act, 1952 and come into force on 7.11 2007, whereby the Chandigarh Lease Hold of Sites and Building Rules, 1973 were repealed and by virtue of Section 20 of the Rules of 2007, the sites governed under the erstwhile rules shall now be governed by new rules. "   
+                  
+             
+            }, 
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces": true, 
+                "text":"            And, whereas, as per the terms and conditions of the allotment on sub-lease hold basis, the licensee was required to pay annual ground rent for 99 years as prescribed in the Allotment letter."    
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             And, whereas, licensee has not been paying the ground rent regularly from year 2012 (Rs 2,53,42,500/- PA), which fall due on 11h October, of each year inspite of many opportunities afforded in hearing. The outstanding amount of Rs 7,81,29,024 - (Rs.7,35,67,374/- Ground  rent/interest + Rs 45,61,650/- GST) is due in respect of said site as on 10.11.2017."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             And, whereas, licensee is liable to pay the outstanding amount of the ground rent along with interest/penalty (as applicable) from the date on which the ground rent became payable till such date the same is actually paid."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             Whereas show cause notice was issued to the firm vide letter dated 08.4.2013 and hearing in the said case on account of outstanding dues was going on regularly and afforded almost 77 hearing opportunities to clear outstanding dues."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             And whereas on 01.05.2017 Sh. Rampal, Director/CEO of M/s Lok Priya Buildwell Pvt. Ltd. was present in the bearing and he submitted a schedule of payment to clear outstanding dues, wherein, it has been agreed that outstanding dues of Rs 10 Crores shall be cleared uplo April 2018 and also agreed to give post dated cheques. The firm has not given post dated cheques as per commitment made in letter given during the hearing on 01.05.2017. However, the firm had submitted oniy 03 post dated cheques amounting to Rs 50 lacs each dated 15.06.17, 15.07.17 & 15.08.2017 Instead 10 Nos post dated cheques as per commitment made on 01.05.2017."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             It was again directed vide letter dated 17.05.2017 to clear the dues by next date of hearing i.e. on 15.06.2017 without excuse and appear in person and explain as to why the lease of property may not be cancelled"
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             Further, it was again directed to clear the duas by next date of hearing i.e. by 24.10.2017 without excuse and appear in person and explain as to why the penal action may not be taken as per rules."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             The case was listed before the undersigned on 24.10.2017 for recovery of Ground Rent, GST & Interest and Sh. Ram Pal of M/s Lok Priya Buildwell Pvt. Ltd. was present and explained that the firm needs more time to clear the dues. The firm had been directed to clear the entire dues by 10.11.2017 as the undersigned had already afforded number of opportunities to firm. It was also Informed to Sh. Ram Pal that it might be treated as final notice."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             On 10.11.2017 the personal hearing was done by the undersigned, Sh. Ram Pal was present. Neither he cleared any arrears as accumulated nor he submitted any payment schedule to clear the entire dues."
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "preserveLeadingSpaces":true,
+                "text":"             The firm is not depositing dues regularly despite of their written commitments resultantly the recoverable amount has increased as per details given below:-"
+            },
+            
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent",
+                "table":{
+                    "widths":["14.28%","14.28%","14.28%","14.28%","14.28%","14.28%","14.28%"],
+                    "body":[
+                        [
+                            {
+                                "text":"Period"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Ground rent due on  11.10.2011 payable by 10.11.11"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Ground rent due on  11.10.2012 payable by 10.11.12"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Ground rent due on  11.10.2013 payable by 10.11.13"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Ground rent due on  11.10.2014 payable by 10.11.14"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                        
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Ground rent due on  11.10.2015 payable by 10.11.15"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Ground rent due on  11.10.2016 payable by 10.11.16"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Period"
+                            },
+                            {
+                                "text":"Ground rent due on  11.10.2017 payable by 10.11.17"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Total amount",
+                                "bold":true
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"Total Due Amount"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":"GST"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ],
+                        [
+                            {
+                                "text":" Total outstanding amount on 10.11.17"
+                            },
+                            {
+                                "text":"Opening balance"
+                            },
+                            {
+                                "text":"G. Rent due"
+                            },
+                            {
+                                "text":"Payment received"
+                            },
+                            {
+                                "text":"Balance"
+                            },
+                            {
+                                "text":"Interest due"
+                            },
+                            {
+                                "text":"Total balance amount"
+                            }
+                        ]
+                       
+
+                    ]
+                }
+            }, 
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"            The firm was directed number of times to clear the dues during hearing of case but the firm has not cleared the dues inspite of sufficient opportunities given by the court."      
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"            Keeping in view of the facts, the undersigned is of the view that firm is not paying attention to clear the outstanding dues. The undersigned is convinced that firm is not serious about payment of dues and therefore ! have left with no other alternative but to cancel the allotment/lease of M/s Lok Priya Buildwell Pvt. Ltd., Hotel Site Block No. 6, Sector 35-B, Chandigarh measuring 12694.422 sq yd. (approx.) on account of non payment of outstanding dues of Rs.7,81,29,024/- as on 10.11.2017. Therefore, I, Uma Shankar Gupta, PCS, Additional Commissioner-cum Estate Officer, Municipal Corporation, Chandigarh exercising the powers of the Estate Officer under the provisions of Capital of Punjab (Development & Regulation) Act, 1952 hereby cancel the allotment/lease of M/s Lok Priya Buildwell Pvt Ltd. Hotel Site Block No. 6, Sector 35-B, Chandigarh measuring 12694.422 sq yd. (approx.) with immediate effect as per condition No. 22 of the terms and conditions of allotment letter and further order to forfeit 10% of the premium, ground rent, interest and other dues to be calculated as per rule 14 of Chandigarh Estate Rules, 2007 read with Section 8-A of the Capital of Punjab (Development and Regulation) Act, 1952 as amended from time to time. I, further order to lodge eviction complaint with SDM-cum-Estate Officer (Under Public Premises) Act, 1971 against all unauthorized occupants for eviction from the public premise in question and for recovery of outstanding amount alongwith interest and penalty as applicable till the date of final realization through Collector, U.T., Chandigarh as arrears of Land Revenue."      
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"            Announced on 10.11.2017. issued under my hand and seal on this 10th day of November, 2017."      
+            },
+            {
+                "margin":[0,10,0,0],
+                "style":"pdfContent", 
+                "preserveLeadingSpaces": true,
+                "text":"           Order be communicated."      
+            },
+        
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":"UMA SHANKAR GUPTA, PCS"
+                    },
+                    {
+                        "text":" Additional Commissioner-cum-Estate Officer"
+
+                    },
+                    {
+                        "text":"(Exercising the power of Estate Hicar under the"
+                    },
+                    {
+                        "text":"provisions of Capital of Punjab (Development &"
+                    },
+                    {
+                        "text":"Regulation) Act, 1952)"
+                    },
+                    {
+                        "text":"Municipal Corporation"
+                    },
+                    {
+                        "text":"Chandigarh."
+                    }
+                ] 
+            },
+            {
+                "margin":[0,10,0,0],
+                "alignment":"left",
+                "style":"pdfContent",
+                "text":"(Regd. Post)/ Messenger",
+                "bold":true
+            },
+            {
+                "margin":[0,20,10,10],
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/2019/",
+                        "style": "pdfContent",
+                        "alignment": "left",
+                        "bold":true
+                    },
+                    {
+                        "text": "Dated:",
+                        "style": "pdfContent",
+                        "alignment": "right",
+                        "bold":true
+                    }
+                ]
+            },
+            {
+                "style": "pdfContent",
+                "stack": [
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "            A copy is forwarded to the following for information & necessary action:-",
+                        "style": "pdfContent"
+                    },
+                    {
+                        "text": "1.           M/s Lok Priya Buildwell Pvt Ltd., Hotel Site Block No. 6, Sector  35-B, Chandigarh.",
+                        "style": "pdfContent"
+
+                    },
+                    {
+                        "text": "2.           The Sub Divisional Engineer, Roads Sub-Division No. 10, M.C Chandigarh. ",
+                        "style": "pdfContent"
+                    }
+                ]
+            }
+
+
+        ],
+        "styles": {
+            "pdfContent": {        
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 11,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+            },
+            "pt-reciept-citizen-header": {
+                "fontSize": 12,
+                "bold": true,
+                "margin": [
+                  0,
+                  8,
+                  0,
+                  0
+                ],
+                "color": "#484848"
+              },
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "receipt-logo-sub-header": {
+                "color": "#484848",
+                "fontFamily": "Roboto",
+                "fontSize": 13,
+                "letterSpacing": 1.6,
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  0
+                ]
+              },
+              "noc-head": {
+                "margin": [
+                  -25,
+                  -25,
+                  0,
+                  1
+                ]
+              }
+
+        }
+    }
+}

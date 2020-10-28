@@ -1,0 +1,70 @@
+{
+    "key": "est-mortgage-freehold",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Applications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "ESTATE_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+              {
+                "variable": "siteNumber",
+                "value": {
+                  "path": "$.property.siteNumber"
+                }
+              },
+              {
+                "variable": "ownerName",
+                "value": {
+                  "path": "$.applicationDetails.owner.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable": "address",
+                "value": {
+                  "path": "$.applicationDetails.owner.ownerDetails.address"                }
+              },
+              {
+                "variable": "applicationNumber",
+                "value": {
+                  "path": "$.applicationNumber"
+                }
+              },
+              
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }]
+    }
+  }  

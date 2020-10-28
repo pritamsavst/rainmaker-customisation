@@ -1,0 +1,47 @@
+{
+    "key": "ot-registered-will",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Applications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+
+              {
+                "variable": "header",
+                "value": {
+                  "path": "PDF_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+              {
+                "variable": "colony_branch",
+                "value": {
+                  "path": "ESTATE_BRANCH_HEADER"
+                },
+                "type": "label",
+                "localisation": {
+                  "prefix": "ES",
+                  "module": "rainmaker-es"
+                }
+              },
+
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              }
+
+            ]
+          }
+        ]
+      }]
+    }
+  }  
