@@ -508,7 +508,7 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.propertyDetailsId
 
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.demandDate
+            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.generationDate
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.isPrevious
 
