@@ -615,26 +615,26 @@
                     {
                         "variable": "modeOfTransfer",
                         "value": {
-                            "path": "$.modeOfTransfer"
+                            "path": "$.applicationDetails.modeOfTransfer"
                         }
                     },
                     {
                         "variable": "familysettlementdate",
                         "value": {
-                            "path": "$.applicationDetails.familysettlementdate"
+                            "path": "$.applicationDetails.decreeDate"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "passedbycourt",
                         "value": {
-                            "path": "$.applicationDetails.purchaser.passedbycourt"
+                            "path": "$.applicationDetails.courtDetails"
                         }
                     },
                     {
                         "variable": "civilsuittitle",
                         "value": {
-                            "path": "$.applicationDetails.purchaser.civilsuittitle"
+                            "path": "$.applicationDetails.civilTitledAs"
                         }
                     },
                     {
