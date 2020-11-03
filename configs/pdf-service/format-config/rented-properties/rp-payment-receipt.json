@@ -402,7 +402,7 @@
                           "bold": true
                         },
                         {
-                          "text": "{{generatedBy}}",
+                          "text": "System",
                           "margin": [0, 0, 0, 0],
                           "bold": false
                         }
