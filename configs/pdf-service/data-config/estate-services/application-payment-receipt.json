@@ -30,7 +30,7 @@
                         {
                             "variable": "applicationChargesLabel",
                             "value": {
-                              "path": "PAYMENT_RECEIPT_LABEL"
+                              "path": "APPLICATION_CHARGES"
                             },
                             "type": "label",
                             "localisation": {
@@ -52,7 +52,7 @@
                           {
                             "variable": "gstPercentage",
                             "value": {
-                              "path": "PAYMENT_RECEIPT_NO_LABEL"
+                              "path": "ES_GST_PERCENT_LABEL"
                             },
                             "type": "label",
                             "localisation": {

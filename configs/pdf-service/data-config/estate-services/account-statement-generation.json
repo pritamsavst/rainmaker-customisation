@@ -1,0 +1,178 @@
+{
+    "key": "account-statement-generation",
+    "DataConfigs": {
+      "serviceName": "rainmaker-rp",
+      "version": "1.0.0",
+      "baseKeyPath": "$",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [
+            {
+              "direct": [
+  
+                {
+                  "variable": "header",
+                  "value": {
+                    "path": "ACCOUNT_STATEMENT_HEADER"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+  
+                {
+                  "variable":"address",
+                  "value":{
+                    "path":"$.Properties[0].propertyDetails.owners[0].ownerDetails.address"
+                  }
+                },
+  
+                {
+                  "variable":"siteNumber",
+                  "value":{
+                    "path":"$.Properties[0].siteNumber"
+                  }
+                },
+                {
+                  "variable": "date",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_DATE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "amount",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_AMOUNT"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "typePayment",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_PAYMENTTYPE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "typeRent",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_RENTTYPE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "principalDue",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_PRINCIPALDUE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "gstDue",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_GSTDUE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "interestDue",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_INTERESTDUE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+               
+                {
+                  "variable": "gstPenaltyDue",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_GSTPENALTYDUE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                  "variable": "totalDue",
+                  "value": {
+                    "path": "COMMON_TABLE_COL_TOTALDUE"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
+                {
+                    "variable":"accountBalance",
+                    "value": {
+                      "path": "COMMON_TABLE_COL_ACCOUNTBALANCE"
+                    },
+                    "type": "label",
+                    "localisation": {
+                      "prefix": "ES",
+                      "module": "rainmaker-es"
+                    }
+                },
+                {
+                  "variable":"receiptNo",
+                  "value": {
+                      "path": "COMMON_TABLE_RECEIPT_NO"
+                    },
+                    "type": "label",
+                    "localisation": {
+                      "prefix": "ES",
+                      "module": "rainmaker-es"
+                    }
+                },
+                {
+                  "variable": "logo",
+                  "url": "https://egov.transerve.com/media/logo.png",
+                  "type": "image"
+                },
+                {
+                  "variable": "account_statements",
+                  "value": {
+                    "path": "$.EstateAccountStatement.*"
+                  }
+                }
+            
+              ]
+            }
+          ]
+      }]
+    }
+  }  

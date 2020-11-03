@@ -229,7 +229,12 @@
                         "variable": "allotcationTypeValue",
                         "value": {
                             "path": "$.propertyDetails.typeOfAllocation"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
+
                     },
                     {
                         "variable": "AUCTION_DETAILS_HEADER",
@@ -433,7 +438,8 @@
                         "variable": "companyRegistrationDate",
                         "value": {
                             "path": "$.propertyDetails.companyRegistrationDate"
-                        }
+                        },
+                        "type":"date"
 
                     },
                     {
