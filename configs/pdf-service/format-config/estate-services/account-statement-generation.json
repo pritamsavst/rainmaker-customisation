@@ -23,7 +23,7 @@
                                
                             },
                             {
-                                "text": "{{address}}",
+                                "text": "{{village}} , {{mohalla}}",
                                 "alignment": "center",
                                 "style":"receipt-logo-header"
                             }
