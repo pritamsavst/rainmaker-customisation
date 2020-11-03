@@ -24,11 +24,18 @@
                 },
   
                 {
-                  "variable":"address",
+                  "variable":"village",
                   "value":{
-                    "path":"$.Properties[0].propertyDetails.owners[0].ownerDetails.address"
+                    "path":"$.Properties[0].propertyDetails.village"
                   }
                 },
+                {
+                  "variable":"mohalla",
+                  "value":{
+                    "path":"$.Properties[0].propertyDetails.mohalla"
+                  }
+                },
+  
   
                 {
                   "variable":"siteNumber",
