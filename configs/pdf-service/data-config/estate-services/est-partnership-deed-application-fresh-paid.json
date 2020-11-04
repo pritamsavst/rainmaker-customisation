@@ -1,5 +1,5 @@
 {
-    "key": "est-ndc-application-fresh",
+    "key": "est-partnership-deed-application-fresh-paid",
     "DataConfigs": {
         "serviceName": "rainmaker-rp",
         "version": "1.0.0",
@@ -10,17 +10,64 @@
             "mappings": [{
                 "direct": [
                     {
-                        "variable": "application_label",
+                        "variable": "feeEstimateLabel",
                         "value": {
-                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                          "path": "FEE_ESTIMATE_LABEL"
                         },
                         "type": "label",
                         "localisation": {
-                          "required": true,
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "charges_due_label",
+                        "value": {
+                          "path": "APPLICATION_CHARGES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "gstLabel",
+                        "value": {
+                          "path": "GST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "total_amount_label",
+                        "value": {
+                          "path": "TOTAl_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation": {
                           "prefix": "RP",
                           "module": "rainmaker-rp"
                         }
                       },
+                      {
+                        "variable": "applicationCharges",
+                        "value": {
+                            "path": "$.property.charges"
+                        }
+                    },
+                    {
+                        "variable": "gstValue",
+                        "value": {
+                            "path": "$.property.gst"
+                        }
+                    },
                     {
                         "variable": "property",
                         "value": {
@@ -55,10 +102,22 @@
                           "module": "rainmaker-es"
                         }
                       },
+                    {
+                        "variable": "application_label",
+                        "value": {
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
                       {
                         "variable": "subHeader",
                         "value": {
-                          "path": "APPLY_ESTATEBRANCH_OTHERCITIZENSERVICE_NDC"
+                          "path": "APPLY_ESTATEBRANCH_OWNERSHIPTRANSFER_PATNERSHIPDEED"
                         },
                         "type": "label",
                         "localisation": {
@@ -112,7 +171,7 @@
                         "localisation": {
                             "required": true,
                             "prefix": "ES",
-                            "module": "rainmaker-rp"
+                            "module": "rainmaker-es"
                         }
                     },
 
@@ -191,9 +250,9 @@
                     },
 
                     {
-                        "variable": "applicantDetailsHeader",
+                        "variable": "transfereeDetailsHeader",
                         "value": {
-                            "path": "APPLICANT_DETAILS_HEADER"
+                            "path": "TRANSFEREE_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -203,9 +262,9 @@
                         }
                     },
                     {
-                        "variable": "OwnerLabel",
+                        "variable": "transfereeTypeRatioLabel",
                         "value": {
-                            "path": "OWNER_NAME_LABEL"
+                            "path": "TRANSFEREE_TYPE_RADIO_BTN_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -215,9 +274,9 @@
                         }
                     },
                     {
-                        "variable": "fatherHusbandNameLabel",
+                        "variable": "selectOwnerLabel",
                         "value": {
-                            "path": "FATHER_HUSBAND_NAME_LABEL"
+                            "path": "SELECT_OWNER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -227,9 +286,9 @@
                         }
                     },
                     {
-                        "variable": "addressLabel",
+                        "variable": "sellerTransferorNameLabel",
                         "value": {
-                            "path": "ADDRESS_LABEL"
+                            "path": "SELLER_OR_TRANSFEROR_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -239,7 +298,44 @@
                         }
                     },
                     {
-                        "variable": "ownerMobileNumberLabel",
+                        "variable": "transfereeNameLabel",
+                        "value": {
+                            "path": "TRANSFEREE_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+
+                    {
+                        "variable": "transfereeFatherHusbandNameLabel",
+                        "value": {
+                            "path": "TRANSFEREE_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "transfereeAddressLabel",
+                        "value": {
+                            "path": "TRANSFEREE_ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "mobileNumberLabel",
                         "value": {
                             "path": "MOBILE_NUMBER_LABEL"
                         },
@@ -251,9 +347,9 @@
                         }
                     },
                     {
-                        "variable": "shareLabel",
+                        "variable": "percentShareLabel",
                         "value": {
-                            "path": "OWNER_SHARE_LABEL"
+                            "path": "PERCENT_SHARE_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -263,9 +359,9 @@
                         }
                     },
                     {
-                        "variable": "cpNumberLabel",
+                        "variable": "companyDetailsHeader",
                         "value": {
-                            "path": "CP_NUMBER_LABEL"
+                            "path": "COMPANY_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -275,9 +371,81 @@
                         }
                     },
                     {
-                        "variable": "reasonForNDCLabel",
+                        "variable": "registerationNumberOfDODDEEdLabel",
                         "value": {
-                            "path": "REASON_FOR_NO_DUE_CERTIFICATE_LABEL"
+                            "path": "REGISTRATION_NUMBER_OF_PARTNERSHIP_DEED_OR_DISSOLUTION_DEED"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "registrationDateLabel",
+                        "value": {
+                            "path": "REGISTRATION_DATE"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "privateLimitedCompanyLabel",
+                        "value": {
+                            "path": "PRIVATE_LIMITED_COMPANY_NAME"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "companyAddressLabel",
+                        "value": {
+                            "path": "COMPANY_ADDRESS"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "companyRegistrationNoLabel",
+                        "value": {
+                            "path": "COMPANY_REGISTRATION_NUMBER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "modeOfTransferHeader",
+                        "value": {
+                            "path": "MODE_OF_TRANSFER_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "modeOfTransferLabel",
+                        "value": {
+                            "path": "MODE_OF_TRANSFER_Label"
                         },
                         "type": "label",
                         "localisation": {
@@ -299,7 +467,7 @@
                         }
                         
                     },
-                    
+
                     {
                         "variable": "fileNumberValue",
                         "value": {
@@ -356,8 +524,7 @@
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        },
-                        "type":"date"
+                        }
 
                     },
                    
@@ -374,45 +541,87 @@
                         }
                     },
                     {
-                        "variable": "ownerName",
+                        "variable": "transfereeTypeValue",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                            "path": "$.applicationDetails.purchaser.transfereeType"
                         }
                     },
                     {
-                        "variable": "fatherOrHusband",
+                        "variable": "purchaserOwnerName",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+                            "path": "$.applicationDetails.purchaser.ownerName"
                         }
                     },
                     {
-                        "variable": "ownerAddress",
+                        "variable": "sellerOrTransferor",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.address"
+                            "path": "$.applicationDetails.ownerDetails.sellerOrTransferor"
                         }
                     },
                     {
-                        "variable": "ownerMobileValue",
+                        "variable": "transfereename",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.mobileNumber"
+                            "path": "$.applicationDetails.transfereename"
                         }
                     },
                     {
-                        "variable": "ownerShare",
+                        "variable": "transfereefatherOrHusband",
                         "value": {
-                            "path": "$.applicationDetails.transferor.share"
+                            "path": "$.applicationDetails.transfereefatherOrHusband"
                         }
                     },
                     {
-                        "variable": "cpNumber",
+                        "variable": "transfereeAddress",
                         "value": {
-                            "path": "$.applicationDetails.transferor.cpNumber"
+                            "path": "$.applicationDetails.transfereeAddress"
                         }
                     },
                     {
-                        "variable": "reasonForNdc",
+                        "variable": "phone",
                         "value": {
-                            "path": "$.applicationDetails.reasonForNdc"
+                            "path": "$.applicationDetails.phone"
+                        }
+                    },
+                    {
+                        "variable": "percentShare",
+                        "value": {
+                            "path": "$.applicationDetails.percentShare"
+                        }
+                    },
+                    {
+                        "variable": "regNumberOfPartnership",
+                        "value": {
+                            "path": "$.applicationDetails.ownerDetails.regNumberOfPartnership"
+                        }
+                    },
+                    {
+                        "variable": "registrationDate",
+                        "value": {
+                            "path": "$.applicationDetails.ownerDetails.registrationDate"
+                        }
+                    },
+                    {
+                        "variable": "companyName",
+                        "value": {
+                            "path": "$.applicationDetails.ownerDetails.companyName"
+                        }
+                    },
+                    {
+                        "variable": "companyAddress",
+                        "value": {
+                            "path": "$.applicationDetails.ownerDetails.companyAddress"
+                        }
+                    },
+                    {
+                        "variable": "companyRegNumber",
+                        "value": {
+                            "path": "$.applicationDetails.ownerDetails.companyRegNumber"
+                        }
+                    },
+                    {
+                        "variable": "modeOfTransfer",
+                        "value": {
+                            "path": "$.applicationDetails.ownerDetails.modeOfTransfer"
                         }
                     },
                     {
@@ -427,8 +636,13 @@
                             "path": "$.applicationDocuments.*"
                         }
                     }
-                   
                 ]
+            },
+            {
+                "derived": [{
+                  "variable": "total",
+                  "formula": "{{applicationCharges}}+{{gstValue}}"
+                }]
             }]
         }]
     }

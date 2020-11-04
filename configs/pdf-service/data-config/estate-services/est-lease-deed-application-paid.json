@@ -1,5 +1,5 @@
 {
-    "key": "est-ndc-application-fresh",
+    "key": "est-lease-deed-application-paid",
     "DataConfigs": {
         "serviceName": "rainmaker-rp",
         "version": "1.0.0",
@@ -10,17 +10,64 @@
             "mappings": [{
                 "direct": [
                     {
-                        "variable": "application_label",
+                        "variable": "feeEstimateLabel",
                         "value": {
-                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                          "path": "FEE_ESTIMATE_LABEL"
                         },
                         "type": "label",
                         "localisation": {
-                          "required": true,
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "charges_due_label",
+                        "value": {
+                          "path": "APPLICATION_CHARGES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "gstLabel",
+                        "value": {
+                          "path": "GST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "total_amount_label",
+                        "value": {
+                          "path": "TOTAl_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation": {
                           "prefix": "RP",
                           "module": "rainmaker-rp"
                         }
                       },
+                      {
+                        "variable": "applicationCharges",
+                        "value": {
+                            "path": "$.property.charges"
+                        }
+                    },
+                    {
+                        "variable": "gstValue",
+                        "value": {
+                            "path": "$.property.gst"
+                        }
+                    },
                     {
                         "variable": "property",
                         "value": {
@@ -34,31 +81,21 @@
                         }
                     },
                     {
-                        "variable": "header",
+                        "variable": "application_label",
                         "value": {
-                          "path": "PDF_HEADER"
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
                         },
                         "type": "label",
                         "localisation": {
-                          "prefix": "ES",
-                          "module": "rainmaker-es"
-                        }
-                      },
-                      {
-                        "variable": "colony_branch",
-                        "value": {
-                          "path": "ESTATE_BRANCH_HEADER"
-                        },
-                        "type": "label",
-                        "localisation": {
-                          "prefix": "ES",
-                          "module": "rainmaker-es"
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
                         }
                       },
                       {
                         "variable": "subHeader",
                         "value": {
-                          "path": "APPLY_ESTATEBRANCH_OTHERCITIZENSERVICE_NDC"
+                          "path": "APPLY_ESTATEBRANCH_OTHERCITIZENSERVICE_LEASEDEED"
                         },
                         "type": "label",
                         "localisation": {
@@ -67,6 +104,19 @@
                           "module": "rainmaker-es"
                         }
                       },
+                    
+                    
+                    {
+                        "variable": "header",
+                        "value": {
+                            "path": "PDF_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "RP",
+                            "module": "rainmaker-rp"
+                        }
+                    },
                     {
                         "variable": "fileNumberLabel",
                         "value": {
@@ -241,7 +291,7 @@
                     {
                         "variable": "ownerMobileNumberLabel",
                         "value": {
-                            "path": "MOBILE_NUMBER_LABEL"
+                            "path": "OWNER_MOBILE_NUMBER_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -253,7 +303,7 @@
                     {
                         "variable": "shareLabel",
                         "value": {
-                            "path": "OWNER_SHARE_LABEL"
+                            "path": "SHARE_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -275,9 +325,21 @@
                         }
                     },
                     {
-                        "variable": "reasonForNDCLabel",
+                        "variable": "typeOfExecutionHeader",
                         "value": {
-                            "path": "REASON_FOR_NO_DUE_CERTIFICATE_LABEL"
+                            "path": "TYPE_OF_EXECUTION_DETAILS"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "executionTypeLabel",
+                        "value": {
+                            "path": "SELECT_TYPE_OF_EXECUTION_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -356,8 +418,7 @@
                         "variable": "lastNocDateValue",
                         "value": {
                             "path": "$.property.propertyDetails.lastNocDate"
-                        },
-                        "type":"date"
+                        }
 
                     },
                    
@@ -380,7 +441,7 @@
                         }
                     },
                     {
-                        "variable": "fatherOrHusband",
+                        "variable": "guardianName",
                         "value": {
                             "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
                         }
@@ -410,9 +471,13 @@
                         }
                     },
                     {
-                        "variable": "reasonForNdc",
+                        "variable": "typeOfExecution",
                         "value": {
-                            "path": "$.applicationDetails.reasonForNdc"
+                            "path": "$.applicationDetails.typeOfExecution"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {
@@ -421,6 +486,7 @@
                             "path": "$.applicationNumber"
                         }
                     },
+                    
                     {
                         "variable": "documents_array",
                         "value": {
@@ -429,6 +495,12 @@
                     }
                    
                 ]
+            },
+            {
+                "derived": [{
+                  "variable": "total",
+                  "formula": "{{applicationCharges}}+{{gstValue}}"
+                }]
             }]
         }]
     }
