@@ -1,7 +1,7 @@
 {
     "key": "application-payment-receipt",
     "DataConfigs": {
-        "serviceName": "rainmaker-common",
+        "serviceName": "rainmaker-es",
     "version": "1.0.0",
     "baseKeyPath": "$",
     "entityIdPath":"$.Payments[0].paymentDetails[0].bill.consumerCode",
