@@ -1,0 +1,507 @@
+{
+    "key": "est-lease-deed-application-paid",
+    "DataConfigs": {
+        "serviceName": "rainmaker-es",
+        "version": "1.0.0",
+        "baseKeyPath": "$.Applications.*",
+        "entityIdPath": "$.applicationNumber",
+        "isCommonTableBorderRequired": true,
+        "mappings": [{
+            "mappings": [{
+                "direct": [
+                    {
+                        "variable": "feeEstimateLabel",
+                        "value": {
+                          "path": "FEE_ESTIMATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "charges_due_label",
+                        "value": {
+                          "path": "APPLICATION_CHARGES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "gstLabel",
+                        "value": {
+                          "path": "GST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "total_amount_label",
+                        "value": {
+                          "path": "TOTAl_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
+                      {
+                        "variable": "applicationCharges",
+                        "value": {
+                            "path": "$.property.charges"
+                        }
+                    },
+                    {
+                        "variable": "gstValue",
+                        "value": {
+                            "path": "$.property.gst"
+                        }
+                    },
+                    {
+                        "variable": "property",
+                        "value": {
+                            "path": "PROPERTY_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "application_label",
+                        "value": {
+                          "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "RP",
+                          "module": "rainmaker-rp"
+                        }
+                      },
+                      {
+                        "variable": "subHeader",
+                        "value": {
+                          "path": "APPLY_ESTATEBRANCH_OTHERCITIZENSERVICE_LEASEDEED"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "required": true,
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                    
+                    
+                    {
+                        "variable": "header",
+                        "value": {
+                            "path": "PDF_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "RP",
+                            "module": "rainmaker-rp"
+                        }
+                    },
+                    {
+                        "variable": "fileNumberLabel",
+                        "value": {
+                            "path": "FILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "categoryLabel",
+                        "value": {
+                            "path": "CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "subCategoryLabel",
+                        "value": {
+                            "path": "SUB_CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "siteNoLabel",
+                        "value": {
+                            "path": "SITE_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-rp"
+                        }
+                    },
+
+                    {
+                        "variable": "logo",
+                        "url": "https://egov.transerve.com/media/logo.png",
+                        "type": "image"
+                    },
+                    {
+                        "variable": "sectorNoLabel",
+                        "value": {
+                            "path": "SECTOR_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "propertyTypeLabel",
+                        "value": {
+                            "path": "PROPERTY_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "lastNocDateLabel",
+                        "value": {
+                            "path": "LAST_NOC_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "propertyApplicationNumberLabel",
+                        "value": {
+                            "path": "PROPERTY_APPLICATION_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "dueAmountLabel",
+                        "value": {
+                            "path": "DUE_AMOUNT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },  {
+                        "variable": "sectorNoLabel",
+                        "value": {
+                            "path": "SECTOR_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+
+                    {
+                        "variable": "applicantDetailsHeader",
+                        "value": {
+                            "path": "APPLICANT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "OwnerLabel",
+                        "value": {
+                            "path": "OWNER_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "fatherHusbandNameLabel",
+                        "value": {
+                            "path": "FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "addressLabel",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ownerMobileNumberLabel",
+                        "value": {
+                            "path": "OWNER_MOBILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "shareLabel",
+                        "value": {
+                            "path": "SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "cpNumberLabel",
+                        "value": {
+                            "path": "CP_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "typeOfExecutionHeader",
+                        "value": {
+                            "path": "TYPE_OF_EXECUTION_DETAILS"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "executionTypeLabel",
+                        "value": {
+                            "path": "SELECT_TYPE_OF_EXECUTION_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"documents_label",
+                        "value": {
+                            "path": "DOCUMENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                        
+                    },
+                    
+                    {
+                        "variable": "fileNumberValue",
+                        "value": {
+                            "path": "$.property.fileNumber"
+                        }
+                    },
+                    {
+                        "variable": "categoryValue",
+                        "value": {
+                            "path": "$.property.category"
+                        },
+                        "localisation": {
+                          "required": true,
+                          "module": "rainmaker-es"
+                        }
+                      },
+
+                    {
+                        "variable": "subCategoryValue",
+                        "value": {
+                            "path": "$.property.subCategory"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
+
+                    },
+                    {
+                        "variable": "siteNumberValue",
+                        "value": {
+                            "path": "$.property.siteNumber"
+                        }
+                    },
+                    {
+                        "variable": "sectorNumberValue",
+                        "value": {
+                            "path": "$.property.sectorNumber"
+                        }
+
+                    },
+                    {
+                        "variable": "propertyTypeValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.propertyType"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                        }
+
+                    },
+                    {
+                        "variable": "lastNocDateValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.lastNocDate"
+                        }
+
+                    },
+                   
+                    {
+                        "variable": "proertyApplicationNumberValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.propertyApplicationNumber"
+                        }
+                    },
+                    {
+                        "variable": "dueAmountValue",
+                        "value": {
+                            "path": "$.property.propertyDetails.dueAmount"
+                        }
+                    },
+                    {
+                        "variable": "ownerName",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                        }
+                    },
+                    {
+                        "variable": "guardianName",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+                        }
+                    },
+                    {
+                        "variable": "ownerAddress",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.address"
+                        }
+                    },
+                    {
+                        "variable": "ownerMobileValue",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.transferorDetails.mobileNumber"
+                        }
+                    },
+                    {
+                        "variable": "ownerShare",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.share"
+                        }
+                    },
+                    {
+                        "variable": "cpNumber",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.cpNumber"
+                        }
+                    },
+                    {
+                        "variable": "typeOfExecution",
+                        "value": {
+                            "path": "$.applicationDetails.typeOfExecution"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "applicationNumber",
+                        "value": {
+                            "path": "$.applicationNumber"
+                        }
+                    },
+                    
+                    {
+                        "variable": "documents_array",
+                        "value": {
+                            "path": "$.applicationDocuments.*"
+                        }
+                    }
+                   
+                ]
+            },
+            {
+                "derived": [{
+                  "variable": "total",
+                  "formula": "{{applicationCharges}}+{{gstValue}}"
+                }]
+            }]
+        }]
+    }
+}
