@@ -1189,3 +1189,125 @@ serviceMaps:
          -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmSuhCitizenNGORequest.suhCitizenNGOUuid
+   -  version: 1.0
+      name: Save susv Renew Application
+      description: Request -save susv-renew-application
+      fromTopic: nulm-services-save-susvrenewapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: INSERT INTO public.nulm_susv_renew_application_detail(application_uuid, application_id, application_status, looking_for, name_of_street_vendor, cov_no, residential_address, change_of_location, proposed_address, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.applicationUuId
+         -  jsonPath: $.NulmSusvRenewRequest.applicationId
+         -  jsonPath: $.NulmSusvRenewRequest.applicationStatus
+         -  jsonPath: $.NulmSusvRenewRequest.lookingFor
+         -  jsonPath: $.NulmSusvRenewRequest.nameOfStreetVendor
+         -  jsonPath: $.NulmSusvRenewRequest.covNo   
+         -  jsonPath: $.NulmSusvRenewRequest.residentialAddress
+         -  jsonPath: $.NulmSusvRenewRequest.changeOfLocation
+         -  jsonPath: $.NulmSusvRenewRequest.proposedAddress
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.isActive 
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.createdBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime         
+      -  query: INSERT INTO public.nulm_susv_renew_familiy_detail(uuid, application_uuid, name, age, relation, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.uuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.name
+         -  jsonPath: $.NulmSusvRenewRequest.*.age
+         -  jsonPath: $.NulmSusvRenewRequest.*.relation
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime                
+      -  query: INSERT INTO public.nulm_susv_renew_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.documnetUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.filestoreId
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.documentType
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime         
+   -  version: 1.0
+      name: Update SUSV Application
+      description: Update susv-renew application
+      fromTopic: nulm-services-update-susvrenewapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: UPDATE public.nulm_susv_renew_application_detail SET looking_for=?, name_of_street_vendor=?, cov_no=?, residential_address=?, change_of_location=?, proposed_address=?, last_modified_by=?, last_modified_time=? WHERE  application_uuid=? and tenant_id=? and is_active=?;
+         basePath: $.NulmSusvRenewRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.lookingFor
+         -  jsonPath: $.NulmSusvRenewRequest.nameOfStreetVendor
+         -  jsonPath: $.NulmSusvRenewRequest.covNo   
+         -  jsonPath: $.NulmSusvRenewRequest.residentialAddress
+         -  jsonPath: $.NulmSusvRenewRequest.changeOfLocation
+         -  jsonPath: $.NulmSusvRenewRequest.proposedAddress
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime         
+         -  jsonPath: $.NulmSusvRenewRequest.applicationUuId
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.isActive 
+      -  query: DELETE FROM public.nulm_susv_renew_familiy_detail WHERE application_uuid=? and tenant_id=?;
+         basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId        
+      -  query: INSERT INTO public.nulm_susv_renew_familiy_detail(uuid, application_uuid, name, age, relation, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.uuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.name
+         -  jsonPath: $.NulmSusvRenewRequest.*.age
+         -  jsonPath: $.NulmSusvRenewRequest.*.relation
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime                
+      -  query: DELETE FROM public.nulm_susv_renew_application_document WHERE application_uuid=? and tenant_id=?;
+         basePath: $.NulmSusvRenewRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId 
+      -  query: INSERT INTO public.nulm_susv_renew_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.documnetUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.filestoreId
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.documentType
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime         
+   -  version: 1.0
+      name: Update SUSV Renew Application status
+      description: Update susv-renew-application-status
+      fromTopic: nulm-services-update-susvrenewapplication-status
+      isTransaction: true      
+      queryMaps:
+      -  query: UPDATE public.nulm_susv_renew_application_detail SET application_status=?, last_modified_by=?, last_modified_time=? WHERE application_id=? and tenant_id=?;
+         basePath: $.NulmSusvRenewRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.applicationStatus
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSusvRenewRequest.applicationId
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId
