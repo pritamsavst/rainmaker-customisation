@@ -3,7 +3,7 @@
     "DataConfigs": {
         "serviceName": "rainmaker-es",
         "version": "1.0.0",
-        "baseKeyPath": "$.Applications.*",
+        "baseKeyPath": "$",
         "entityIdPath": "$.applicationNumber",
         "isCommonTableBorderRequired": true,
         "mappings": [{
@@ -24,11 +24,9 @@
                       {
                         "variable": "charges_due_label",
                         "value": {
-                          "path": "APPLICATION_CHARGES_LABEL"
+                            "path": "$.feeEstimate[0].name.labelKey"
                         },
-                        "type": "label",
                         "localisation": {
-                          "prefix": "ES",
                           "module": "rainmaker-es"
                         }
           
@@ -36,11 +34,9 @@
                       {
                         "variable": "gstLabel",
                         "value": {
-                          "path": "GST_LABEL"
+                          "path": "$.feeEstimate[1].name.labelKey"
                         },
-                        "type": "label",
                         "localisation": {
-                          "prefix": "ES",
                           "module": "rainmaker-es"
                         }
           
@@ -52,20 +48,20 @@
                         },
                         "type": "label",
                         "localisation": {
-                          "prefix": "RP",
-                          "module": "rainmaker-rp"
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
                         }
                       },
                       {
                         "variable": "applicationCharges",
                         "value": {
-                            "path": "$.property.charges"
+                            "path": "$.feeEstimate[0].value"
                         }
                     },
                     {
                         "variable": "gstValue",
                         "value": {
-                            "path": "$.property.gst"
+                            "path": "$.feeEstimate[1].value"
                         }
                     },
                     {
@@ -401,13 +397,13 @@
                     {
                         "variable": "fileNumberValue",
                         "value": {
-                            "path": "$.property.fileNumber"
+                            "path": "$.Applications[0].property.fileNumber"
                         }
                     },
                     {
                         "variable": "categoryValue",
                         "value": {
-                            "path": "$.property.category"
+                            "path": "$.Applications[0].property.category"
                         },
                         "localisation": {
                           "required": true,
@@ -418,7 +414,7 @@
                     {
                         "variable": "subCategoryValue",
                         "value": {
-                            "path": "$.property.subCategory"
+                            "path": "$.Applications[0].property.subCategory"
                         },
                         "localisation": {
                             "required": true,
@@ -429,20 +425,20 @@
                     {
                         "variable": "siteNumberValue",
                         "value": {
-                            "path": "$.property.siteNumber"
+                            "path": "$.Applications[0].property.siteNumber"
                         }
                     },
                     {
                         "variable": "sectorNumberValue",
                         "value": {
-                            "path": "$.property.sectorNumber"
+                            "path": "$.Applications[0].property.sectorNumber"
                         }
 
                     },
                     {
                         "variable": "propertyTypeValue",
                         "value": {
-                            "path": "$.property.propertyDetails.propertyType"
+                            "path": "$.Applications[0].property.propertyDetails.propertyType"
                         },
                         "localisation": {
                             "required": true,
@@ -453,7 +449,7 @@
                     {
                         "variable": "lastNocDateValue",
                         "value": {
-                            "path": "$.property.propertyDetails.lastNocDate"
+                            "path": "$.Applications[0].property.propertyDetails.lastNocDate"
                         },
                         "type":"date"
 
@@ -462,79 +458,79 @@
                     {
                         "variable": "proertyApplicationNumberValue",
                         "value": {
-                            "path": "$.property.propertyDetails.propertyApplicationNumber"
+                            "path": "$.Applications[0].property.propertyDetails.propertyApplicationNumber"
                         }
                     },
                     {
                         "variable": "dueAmountValue",
                         "value": {
-                            "path": "$.property.propertyDetails.dueAmount"
+                            "path": "$.Applications[0].property.propertyDetails.dueAmount"
                         }
                     },
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.ownerName"
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.ownerName"
                         }
                     },
                     {
                         "variable": "guardianName",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.guardianName"
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.guardianName"
                         }
                     },
                     {
                         "variable": "ownerAddress",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.address"
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.address"
                         }
                     },
                     {
                         "variable": "ownerMobileValue",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.mobileNumber"
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.mobileNumber"
                         }
                     },
                     {
                         "variable": "ownerShare",
                         "value": {
-                            "path": "$.applicationDetails.owner.share"
+                            "path": "$.Applications[0].applicationDetails.owner.share"
                         }
                     },
                     {
                         "variable": "ownerCpNumber",
                         "value": {
-                            "path": "$.applicationDetails.owner.cpNumber"
+                            "path": "$.Applications[0].applicationDetails.owner.cpNumber"
                         }
                     },
                     {
                         "variable": "bankName",
                         "value": {
-                            "path": "$.applicationDetails.bankName"
+                            "path": "$.Applications[0].applicationDetails.bankName"
                         }
                     },
                     {
                         "variable": "reasonForMortgage",
                         "value": {
-                            "path": "$.applicationDetails.reasonForMortgage"
+                            "path": "$.Applications[0].applicationDetails.reasonForMortgage"
                         }
                     },
                     {
                         "variable": "loanAmount",
                         "value": {
-                            "path": "$.applicationDetails.loanAmount"
+                            "path": "$.Applications[0].applicationDetails.loanAmount"
                         }
                     },
                     {
                         "variable": "applicationNumber",
                         "value": {
-                            "path": "$.applicationNumber"
+                            "path": "$.Applications[0].applicationNumber"
                         }
                     },
                     {
                         "variable": "documents_array",
                         "value": {
-                            "path": "$.applicationDocuments.*"
+                            "path": "$.Applications[0].applicationDocuments.*"
                         }
                     }
                    
@@ -543,7 +539,7 @@
             {
                 "derived": [{
                   "variable": "total",
-                  "formula": "{{applicationCharges}}+{{gstValue}}"
+                  "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
                 }]
             }]
         }]

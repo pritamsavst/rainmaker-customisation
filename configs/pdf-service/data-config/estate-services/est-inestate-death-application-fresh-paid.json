@@ -3,7 +3,7 @@
     "DataConfigs": {
         "serviceName": "rainmaker-es",
         "version": "1.0.0",
-        "baseKeyPath": "$.Applications.*",
+        "baseKeyPath": "$",
         "entityIdPath": "$.applicationNumber",
         "isCommonTableBorderRequired": true,
         "mappings": [{
@@ -24,11 +24,9 @@
                       {
                         "variable": "charges_due_label",
                         "value": {
-                          "path": "APPLICATION_CHARGES_LABEL"
+                            "path": "$.feeEstimate[0].name.labelKey"
                         },
-                        "type": "label",
                         "localisation": {
-                          "prefix": "ES",
                           "module": "rainmaker-es"
                         }
           
@@ -36,11 +34,9 @@
                       {
                         "variable": "gstLabel",
                         "value": {
-                          "path": "GST_LABEL"
+                          "path": "$.feeEstimate[1].name.labelKey"
                         },
-                        "type": "label",
                         "localisation": {
-                          "prefix": "ES",
                           "module": "rainmaker-es"
                         }
           
@@ -52,20 +48,20 @@
                         },
                         "type": "label",
                         "localisation": {
-                          "prefix": "RP",
-                          "module": "rainmaker-rp"
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
                         }
                       },
                       {
                         "variable": "applicationCharges",
                         "value": {
-                            "path": "$.property.charges"
+                            "path": "$.feeEstimate[0].value"
                         }
                     },
                     {
                         "variable": "gstValue",
                         "value": {
-                            "path": "$.property.gst"
+                            "path": "$.feeEstimate[1].value"
                         }
                     },
                     {
@@ -458,13 +454,13 @@
                     {
                         "variable": "fileNumberValue",
                         "value": {
-                            "path": "$.property.fileNumber"
+                            "path": "$.Applications[0].property.fileNumber"
                         }
                     },
                     {
                         "variable": "categoryValue",
                         "value": {
-                            "path": "$.property.category"
+                            "path": "$.Applications[0].property.category"
                         },
                         "localisation": {
                           "required": true,
@@ -475,7 +471,7 @@
                     {
                         "variable": "subCategoryValue",
                         "value": {
-                            "path": "$.property.subCategory"
+                            "path": "$.Applications[0].property.subCategory"
                         },
                         "localisation": {
                             "required": true,
@@ -486,20 +482,20 @@
                     {
                         "variable": "siteNumberValue",
                         "value": {
-                            "path": "$.property.siteNumber"
+                            "path": "$.Applications[0].property.siteNumber"
                         }
                     },
                     {
                         "variable": "sectorNumberValue",
                         "value": {
-                            "path": "$.property.sectorNumber"
+                            "path": "$.Applications[0].property.sectorNumber"
                         }
 
                     },
                     {
                         "variable": "propertyTypeValue",
                         "value": {
-                            "path": "$.property.propertyDetails.propertyType"
+                            "path": "$.Applications[0].property.propertyDetails.propertyType"
                         },
                         "localisation": {
                             "required": true,
@@ -510,7 +506,7 @@
                     {
                         "variable": "lastNocDateValue",
                         "value": {
-                            "path": "$.property.propertyDetails.lastNocDate"
+                            "path": "$.Applications[0].property.propertyDetails.lastNocDate"
                         }
 
                     },
@@ -518,111 +514,111 @@
                     {
                         "variable": "proertyApplicationNumberValue",
                         "value": {
-                            "path": "$.property.propertyDetails.propertyApplicationNumber"
+                            "path": "$.Applications[0].property.propertyDetails.propertyApplicationNumber"
                         }
                     },
                     {
                         "variable": "dueAmountValue",
                         "value": {
-                            "path": "$.property.propertyDetails.dueAmount"
+                            "path": "$.Applications[0].property.propertyDetails.dueAmount"
                         }
                     },
                     {
                         "variable": "tranferorNameValue",
                         "value": {
-                            "path": "$.applicationDetails.transferor.name"
+                            "path": "$.Applications[0].applicationDetails.transferor.name"
                         }
                     },
                     {
                         "variable": "transfereeGuardianName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.fatherOrHusbandName"
+                            "path": "$.Applications[0].applicationDetails.transferee.fatherOrHusbandName"
                         }
                     },
                     {
                         "variable": "transfereeAddress",
                         "value": {
-                            "path": "$.applicationDetails.transferee.address"
+                            "path": "$.Applications[0].applicationDetails.transferee.address"
                         }
                     },
                     {
                         "variable": "tranferorShare",
                         "value": {
-                            "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
+                            "path": "$.Applications[0].applicationDetails.transferee.percentageOfShareTransferred"
                         }
                     },
                     {
                         "variable": "tranferorDateOfDeath",
                         "value": {
-                            "path": "$.applicationDetails.transferor.dateOfDeath"
+                            "path": "$.Applications[0].applicationDetails.transferor.dateOfDeath"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "transfereetype",
                         "value": {
-                            "path": "$.applicationDetails.transferee.type"
+                            "path": "$.Applications[0].applicationDetails.transferee.type"
                         }
                     },
                     {
                         "variable": "isExisting",
                         "value": {
-                            "path": "$.owner.transferor.existing"
+                            "path": "$.Applications[0].owner.transferor.existing"
                         }
                     },
                     {
                         "variable": "typesOfOwner",
                         "value": {
-                            "path": "$.applicationDetails.typesOfOwner"
+                            "path": "$.Applications[0].applicationDetails.typesOfOwner"
                         }
                     },
                     {
                         "variable": "tranfereeName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.name"
+                            "path": "$.Applications[0].applicationDetails.transferee.name"
                         }
                     },
                     {
                         "variable": "fatherOrHusbandName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.fatherOrHusbandName"
+                            "path": "$.Applications[0].applicationDetails.transferee.fatherOrHusbandName"
                         }
                     },
                     {
                         "variable": "relation",
                         "value": {
-                            "path": "$.applicationDetails.transferee.relation"
+                            "path": "$.Applications[0].applicationDetails.transferee.relation"
                         }
                     },
                     {
                         "variable": "dob",
                         "value": {
-                            "path": "$.applicationDetails.transferee.dob"
+                            "path": "$.Applications[0].applicationDetails.transferee.dob"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "address",
                         "value": {
-                            "path": "$.applicationDetails.transferee.address"
+                            "path": "$.Applications[0].applicationDetails.transferee.address"
                         }
                     },
                     {
                         "variable": "relationWithDeceased",
                         "value": {
-                            "path": "$.applicationDetails.transferee.relationWithDeceased"
+                            "path": "$.Applications[0].applicationDetails.transferee.relationWithDeceased"
                         }
                     },
                     {
                         "variable": "percentageOfShareTransferred",
                         "value": {
-                            "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
+                            "path": "$.Applications[0].applicationDetails.transferee.percentageOfShareTransferred"
                         }
                     },
                     {
                         "variable": "applicationNumber",
                         "value": {
-                            "path": "$.applicationNumber"
+                            "path": "$.Applications[0].applicationNumber"
                         }
                     },
                     {
@@ -641,7 +637,7 @@
                     {
                         "variable": "documents_array",
                         "value": {
-                            "path": "$.applicationDocuments.*"
+                            "path": "$.Applications[0].applicationDocuments.*"
                         }
                     }
                 ]
@@ -649,7 +645,7 @@
             {
                 "derived": [{
                   "variable": "total",
-                  "formula": "{{applicationCharges}}+{{gstValue}}"
+                  "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
                 }]
             }]
         }]
