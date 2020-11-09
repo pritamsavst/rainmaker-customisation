@@ -174,8 +174,8 @@ serviceMaps:
       isTransaction: true      
       queryMaps:
       -  query: INSERT INTO public.nulm_smid_application_detail(application_uuid,application_id, nulm_application_id, application_status, name,gender, dob, date_of_opening_account, adhar_no,mother_name, father_or_husband_name, address, phone_no, mobile_no, qualification, email_id, is_urban_poor, is_minority, is_pwd, is_street_vendor, is_homeless, is_insurance, bpl_no, minority, caste, ward_no, name_as_per_adhar, 
-                adhar_acknowledgement_no, insurance_through, document_attachemnt, account_no, bank_name, branch_name, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,remark,is_registered,cob_number)
-                VALUES (?, ?, ?, ?, ?, ?, ?::timestamp, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?);
+                adhar_acknowledgement_no, insurance_through, document_attachemnt, account_no, bank_name, branch_name, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,remark,is_registered,cob_number,age)
+                VALUES (?, ?, ?, ?, ?, ?, ?::timestamp, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?);
 
          basePath: $.NulmSmidRequest
          jsonMaps:
@@ -223,13 +223,14 @@ serviceMaps:
          -  jsonPath: $.NulmSmidRequest.remark
          -  jsonPath: $.NulmSmidRequest.isRegistered
          -  jsonPath: $.NulmSmidRequest.cobNumber
+         -  jsonPath: $.NulmSmidRequest.age
    -  version: 1.0
       name: Update SMID Application
       description: Request -update smid-application
       fromTopic: nulm-services-update-smidapplication
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_smid_application_detail SET nulm_application_id=?,application_status=?, name=?,  gender=?, dob=?::timestamp, date_of_opening_account=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?,address=?, phone_no=?, mobile_no=?, qualification=?, email_id=?, is_urban_poor=?, is_minority=?, is_pwd=?, is_street_vendor=?,is_homeless=?, is_insurance=?, bpl_no=?, minority=?, caste=?, ward_no=?, name_as_per_adhar=?, adhar_acknowledgement_no=?, insurance_through=?, document_attachemnt=?, account_no=?, bank_name=?, branch_name=?,last_modified_by=?, last_modified_time=?,remark=?,is_registered=?,cob_number=? WHERE application_uuid=? and tenant_id=? and is_active=?;
+      -  query: UPDATE public.nulm_smid_application_detail SET nulm_application_id=?,application_status=?, name=?,  gender=?, dob=?::timestamp, date_of_opening_account=?::timestamp, adhar_no=?, mother_name=?, father_or_husband_name=?,address=?, phone_no=?, mobile_no=?, qualification=?, email_id=?, is_urban_poor=?, is_minority=?, is_pwd=?, is_street_vendor=?,is_homeless=?, is_insurance=?, bpl_no=?, minority=?, caste=?, ward_no=?, name_as_per_adhar=?, adhar_acknowledgement_no=?, insurance_through=?, document_attachemnt=?, account_no=?, bank_name=?, branch_name=?,last_modified_by=?, last_modified_time=?,remark=?,is_registered=?,cob_number=?,age=? WHERE application_uuid=? and tenant_id=? and is_active=?;
          basePath: $.NulmSmidRequest
          jsonMaps:
          -  jsonPath: $.NulmSmidRequest.nulmApplicationId
@@ -270,6 +271,7 @@ serviceMaps:
          -  jsonPath: $.NulmSmidRequest.remark  
          -  jsonPath: $.NulmSmidRequest.isRegistered
          -  jsonPath: $.NulmSmidRequest.cobNumber
+         -  jsonPath: $.NulmSmidRequest.age
          -  jsonPath: $.NulmSmidRequest.applicationUuid
          -  jsonPath: $.NulmSmidRequest.tenantId
          -  jsonPath: $.NulmSmidRequest.isActive
@@ -558,7 +560,7 @@ serviceMaps:
       -  query: INSERT INTO public.nulm_suh_application_detail(suh_uuid, suh_id, name_of_shelter, address, shelter_background,category, weather_condition, shelter_classification, other_classification, ownership, operation_and_management_of_shelters, area, capacity, is_constitution_of_shelter_management_committee, constitution_of_shelter_management_committee_remark, 
                 is_social_audit, social_audit_remark, is_linkage_to_central_govt_welfare_schemes, linkage_to_central_govt_welfare_schemes_remark, is_linkage_to_public_health_initiatives, linkage_to_public_health_initiatives_remark, is_linkage_to_other_govt_schemes, linkage_to_other_govt_schemes_remark, is_linkage_to_local_community, 
                 linkage_to_local_community_remark, is_linkage_to_social_workers_and_philanthropists, linkage_to_social_workers_and_philanthropists_remark, is_user_charges, user_charges_remark, is_iec_and_promotional_initiatives, iec_and_promotional_initiatives_remark, is_quarterly_reporting, quarterly_reporting_remark, is_visits, 
-                visits_remark, address_picture, program_picture, document_attachment, remark, application_status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,assigned_to) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, to_json(?::json), to_json(?::json), to_json(?::json), ?, ?, ?, ?, ?, ?, ?, ?,?);
+                visits_remark, address_picture, program_picture, document_attachment, remark, application_status, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time,assigned_to) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, to_json(?::json), to_json(?::json), to_json(?::json), ?, ?, ?, ?, ?, ?, ?, ?,?,?);
          basePath: $.NulmSuhRequest
          jsonMaps:
          -  jsonPath: $.NulmSuhRequest.suhUuid 
@@ -745,7 +747,7 @@ serviceMaps:
          -  jsonPath: $.NulmSuhRequest.applicationStatus
          -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSuhRequest.auditDetails.lastModifiedTime  
-         -  jsonPath: $.NulmSuhRequest.assignedTo       
+         -  jsonPath: $.NulmSuhRequest.assignedTo
          -  jsonPath: $.NulmSuhRequest.suhUuid                            
          -  jsonPath: $.NulmSuhRequest.tenantId   
       -  query: UPDATE public.nulm_suh_facilities_maintenance   SET  is_bedding=?, bedding_remark=?, is_washing_of_linen=?, washing_of_linen_remark=?, is_cleaning_of_premises=?,cleaning_of_premise_remark=?, is_recreation_facilities=?, recreation_facilities_remark=?, is_drinking_water=?, drinking_water_remark=?, is_meals=?, meals_remark=?, 
@@ -845,7 +847,7 @@ serviceMaps:
       fromTopic: nulm-services-save-suhlog
       isTransaction: true      
       queryMaps:
-      -  query: INSERT INTO public.nulm_suh_occupancy_log(log_uuid, name_of_shelter, date, name, qualification, gender,age, address, adhar_no, reason_for_staying, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?::timestamp, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+      -  query: INSERT INTO public.nulm_suh_occupancy_log(log_uuid, name_of_shelter, date, name, qualification, gender,age,dob, address, adhar_no, reason_for_staying, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?::timestamp, ?, ?, ?, ?, ?::timestamp,?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.NulmSuhLogRequest
          jsonMaps:
          -  jsonPath: $.NulmSuhLogRequest.logUuid 
@@ -855,6 +857,7 @@ serviceMaps:
          -  jsonPath: $.NulmSuhLogRequest.qualification 
          -  jsonPath: $.NulmSuhLogRequest.gender 
          -  jsonPath: $.NulmSuhLogRequest.age 
+         -  jsonPath: $.NulmSuhLogRequest.dob 
          -  jsonPath: $.NulmSuhLogRequest.address 
          -  jsonPath: $.NulmSuhLogRequest.aadhaarNo
          -  jsonPath: $.NulmSuhLogRequest.reasonForStaying 
@@ -884,7 +887,7 @@ serviceMaps:
       fromTopic: nulm-services-save-susvapplication
       isTransaction: true      
       queryMaps:
-      -  query: INSERT INTO public.nulm_susv_application_detail(application_uuid, application_id, nulm_application_id, application_status,name_of_applicant, gender, age, adhar_no, mother_name, father_or_husband_name, permanent_address, present_address, mobile_no, is_disability, category, qualification, blood_group, category_of_vending, proposed_location_of_vending, proposed_time_of_vending, goverment_scheme, name_of_nominee, tenant_id, remark,  is_active,is_undertaking, place,date,created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?::timestamp,?, ?, ?,?);
+      -  query: INSERT INTO public.nulm_susv_application_detail(application_uuid, application_id, nulm_application_id, application_status,name_of_applicant, gender, age, adhar_no, mother_name, father_or_husband_name, permanent_address, present_address, mobile_no, is_disability, category, qualification, blood_group, category_of_vending, proposed_location_of_vending, proposed_time_of_vending, goverment_scheme, name_of_nominee, tenant_id, remark,  is_active,is_undertaking, place,date,created_by, created_time, last_modified_by, last_modified_time,dob) VALUES (?, ?, ?, ?, ?, ?,?, ?,?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?::timestamp,?, ?, ?,?,?::timestamp);
          basePath: $.NulmSusvRequest
          jsonMaps:
          -  jsonPath: $.NulmSusvRequest.applicationUuid
@@ -919,6 +922,7 @@ serviceMaps:
          -  jsonPath: $.NulmSusvRequest.auditDetails.createdTime
          -  jsonPath: $.NulmSusvRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSusvRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSusvRequest.dob
       -  query: INSERT INTO public.nulm_susv_familiy_detail(uuid, application_uuid, name, age, relation, tenant_id, is_active,created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.NulmSusvRequest.susvApplicationFamilyDetails.*
          jsonMaps:
@@ -952,7 +956,7 @@ serviceMaps:
       fromTopic: nulm-services-update-susvapplication
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_susv_application_detail SET application_status=?, name_of_applicant=?, gender=?, age=?, adhar_no=?, mother_name=?, father_or_husband_name=?, permanent_address=?,present_address=?, mobile_no=?, is_disability=?, category=?, qualification=?, blood_group=?, category_of_vending=?, proposed_location_of_vending=?, proposed_time_of_vending=?, goverment_scheme=?, name_of_nominee=?,remark=?,is_undertaking=?, place=?,date=?::timestamp, last_modified_by=?, last_modified_time=? WHERE  application_uuid=? and tenant_id=? and is_active=?;
+      -  query: UPDATE public.nulm_susv_application_detail SET application_status=?, name_of_applicant=?, gender=?, age=?, adhar_no=?, mother_name=?, father_or_husband_name=?, permanent_address=?,present_address=?, mobile_no=?, is_disability=?, category=?, qualification=?, blood_group=?, category_of_vending=?, proposed_location_of_vending=?, proposed_time_of_vending=?, goverment_scheme=?, name_of_nominee=?,remark=?,is_undertaking=?, place=?,date=?::timestamp, last_modified_by=?, last_modified_time=?,dob=?::timestamp WHERE  application_uuid=? and tenant_id=? and is_active=?;
          basePath: $.NulmSusvRequest
          jsonMaps:
          -  jsonPath: $.NulmSusvRequest.action
@@ -980,6 +984,7 @@ serviceMaps:
          -  jsonPath: $.NulmSusvRequest.date
          -  jsonPath: $.NulmSusvRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSusvRequest.auditDetails.lastModifiedTime         
+         -  jsonPath: $.NulmSusvRequest.dob
          -  jsonPath: $.NulmSusvRequest.applicationUuid
          -  jsonPath: $.NulmSusvRequest.tenantId         
          -  jsonPath: $.NulmSusvRequest.isActive
@@ -1142,7 +1147,7 @@ serviceMaps:
       fromTopic: nulm-services-save-suhcitizenngoapplication
       isTransaction: true      
       queryMaps:
-      -  query: INSERT INTO public.nulm_suh_citizenngo_application(suh_citizen_ngo_uuid, shelter_requested_for_person, address, gender, age, reason_for_staying, is_disabled, nominated_by, name_of_nominated_person, contact_no, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+      -  query: INSERT INTO public.nulm_suh_citizenngo_application(suh_citizen_ngo_uuid, shelter_requested_for_person, address, gender,age,dob, reason_for_staying, is_disabled, nominated_by, name_of_nominated_person, contact_no, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?::timestamp,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
          basePath: $.NulmSuhCitizenNGORequest
          jsonMaps:
          -  jsonPath: $.NulmSuhCitizenNGORequest.suhCitizenNGOUuid
@@ -1150,6 +1155,7 @@ serviceMaps:
          -  jsonPath: $.NulmSuhCitizenNGORequest.address
          -  jsonPath: $.NulmSuhCitizenNGORequest.gender
          -  jsonPath: $.NulmSuhCitizenNGORequest.age
+         -  jsonPath: $.NulmSuhCitizenNGORequest.dob
          -  jsonPath: $.NulmSuhCitizenNGORequest.reasonForStaying
          -  jsonPath: $.NulmSuhCitizenNGORequest.isDisabled
          -  jsonPath: $.NulmSuhCitizenNGORequest.nominatedBy
@@ -1166,13 +1172,14 @@ serviceMaps:
       fromTopic: nulm-services-update-suhcitizenngoapplication
       isTransaction: true      
       queryMaps:
-      -  query: UPDATE public.nulm_suh_citizenngo_application SET shelter_requested_for_person=?, address=?, gender=?, age=?, reason_for_staying=?, is_disabled=?, nominated_by=?, name_of_nominated_person=?, contact_no=?, is_active=?,last_modified_by=?, last_modified_time=? WHERE suh_citizen_ngo_uuid=?;
+      -  query: UPDATE public.nulm_suh_citizenngo_application SET shelter_requested_for_person=?, address=?, gender=?, age=?,dob=?::timestamp, reason_for_staying=?, is_disabled=?, nominated_by=?, name_of_nominated_person=?, contact_no=?, is_active=?,last_modified_by=?, last_modified_time=? WHERE suh_citizen_ngo_uuid=?;
          basePath: $.NulmSuhCitizenNGORequest
          jsonMaps:
          -  jsonPath: $.NulmSuhCitizenNGORequest.shelterRequestedForPerson
          -  jsonPath: $.NulmSuhCitizenNGORequest.address
          -  jsonPath: $.NulmSuhCitizenNGORequest.gender
          -  jsonPath: $.NulmSuhCitizenNGORequest.age
+         -  jsonPath: $.NulmSuhCitizenNGORequest.dob
          -  jsonPath: $.NulmSuhCitizenNGORequest.reasonForStaying
          -  jsonPath: $.NulmSuhCitizenNGORequest.isDisabled
          -  jsonPath: $.NulmSuhCitizenNGORequest.nominatedBy
@@ -1182,3 +1189,125 @@ serviceMaps:
          -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSuhCitizenNGORequest.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmSuhCitizenNGORequest.suhCitizenNGOUuid
+   -  version: 1.0
+      name: Save susv Renew Application
+      description: Request -save susv-renew-application
+      fromTopic: nulm-services-save-susvrenewapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: INSERT INTO public.nulm_susv_renew_application_detail(application_uuid, application_id, application_status, looking_for, name_of_street_vendor, cov_no, residential_address, change_of_location, proposed_address, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.applicationUuId
+         -  jsonPath: $.NulmSusvRenewRequest.applicationId
+         -  jsonPath: $.NulmSusvRenewRequest.applicationStatus
+         -  jsonPath: $.NulmSusvRenewRequest.lookingFor
+         -  jsonPath: $.NulmSusvRenewRequest.nameOfStreetVendor
+         -  jsonPath: $.NulmSusvRenewRequest.covNo   
+         -  jsonPath: $.NulmSusvRenewRequest.residentialAddress
+         -  jsonPath: $.NulmSusvRenewRequest.changeOfLocation
+         -  jsonPath: $.NulmSusvRenewRequest.proposedAddress
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.isActive 
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.createdBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime         
+      -  query: INSERT INTO public.nulm_susv_renew_familiy_detail(uuid, application_uuid, name, age, relation, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.uuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.name
+         -  jsonPath: $.NulmSusvRenewRequest.*.age
+         -  jsonPath: $.NulmSusvRenewRequest.*.relation
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime                
+      -  query: INSERT INTO public.nulm_susv_renew_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.documnetUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.filestoreId
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.documentType
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime         
+   -  version: 1.0
+      name: Update SUSV Application
+      description: Update susv-renew application
+      fromTopic: nulm-services-update-susvrenewapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: UPDATE public.nulm_susv_renew_application_detail SET looking_for=?, name_of_street_vendor=?, cov_no=?, residential_address=?, change_of_location=?, proposed_address=?, last_modified_by=?, last_modified_time=? WHERE  application_uuid=? and tenant_id=? and is_active=?;
+         basePath: $.NulmSusvRenewRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.lookingFor
+         -  jsonPath: $.NulmSusvRenewRequest.nameOfStreetVendor
+         -  jsonPath: $.NulmSusvRenewRequest.covNo   
+         -  jsonPath: $.NulmSusvRenewRequest.residentialAddress
+         -  jsonPath: $.NulmSusvRenewRequest.changeOfLocation
+         -  jsonPath: $.NulmSusvRenewRequest.proposedAddress
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime         
+         -  jsonPath: $.NulmSusvRenewRequest.applicationUuId
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.isActive 
+      -  query: DELETE FROM public.nulm_susv_renew_familiy_detail WHERE application_uuid=? and tenant_id=?;
+         basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId        
+      -  query: INSERT INTO public.nulm_susv_renew_familiy_detail(uuid, application_uuid, name, age, relation, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time)	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.susvApplicationFamilyDetails.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.uuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.name
+         -  jsonPath: $.NulmSusvRenewRequest.*.age
+         -  jsonPath: $.NulmSusvRenewRequest.*.relation
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime                
+      -  query: DELETE FROM public.nulm_susv_renew_application_document WHERE application_uuid=? and tenant_id=?;
+         basePath: $.NulmSusvRenewRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId 
+      -  query: INSERT INTO public.nulm_susv_renew_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSusvRenewRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.*.documnetUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.filestoreId
+         -  jsonPath: $.NulmSusvRenewRequest.*.applicationUuid
+         -  jsonPath: $.NulmSusvRenewRequest.*.documentType
+         -  jsonPath: $.NulmSusvRenewRequest.*.tenantId
+         -  jsonPath: $.NulmSusvRenewRequest.*.isActive
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.*.auditDetails.lastModifiedTime         
+   -  version: 1.0
+      name: Update SUSV Renew Application status
+      description: Update susv-renew-application-status
+      fromTopic: nulm-services-update-susvrenewapplication-status
+      isTransaction: true      
+      queryMaps:
+      -  query: UPDATE public.nulm_susv_renew_application_detail SET application_status=?, last_modified_by=?, last_modified_time=? WHERE application_id=? and tenant_id=?;
+         basePath: $.NulmSusvRenewRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSusvRenewRequest.applicationStatus
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSusvRenewRequest.applicationId
+         -  jsonPath: $.NulmSusvRenewRequest.tenantId
