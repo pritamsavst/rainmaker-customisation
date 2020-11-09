@@ -616,6 +616,10 @@
                         "variable": "modeOfTransfer",
                         "value": {
                             "path": "$.applicationDetails.modeOfTransfer"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {
