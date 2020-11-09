@@ -1043,7 +1043,6 @@
             "unbreakable": true
           },
           {
-            "pageBreak": "before",
             "stack": [
               {
                 "style": "noc-table2",
