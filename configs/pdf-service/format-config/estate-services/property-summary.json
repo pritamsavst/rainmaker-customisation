@@ -1044,6 +1044,56 @@
             "unbreakable": true
           },
           {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{OWNER_PARTNER_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body":[
+                        "{{#ownersArray}}[{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{ownerDetails.ownerName}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{ownerDetails.address}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{ownerDetails.guardianRelation}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{ownerDetails.mobileNumber}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]}],[{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{ownerDetails.tenantId}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{ownerDetails.allotmentNumber}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{share}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{\"stack\":[{\"text\":\"{{ES_NAME_LABEL}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"margin\":[0,0,0,20],\"text\":\"{{cpNumber}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]}]{{/ownersArray}}"                       
+                        ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
             "pageBreak": "before" ,
             "stack": [
               {

@@ -583,6 +583,12 @@
                         }
                     },
                     {
+                        "variable":"ownersArray",
+                        "value": {
+                            "path": "$.propertyDetails.owners.*"
+                        }
+                    },
+                    {
                         "variable": "ownerName",
                         "value": {
                             "path": "$.propertyDetails.owners[0].ownerDetails.ownerName"
