@@ -295,7 +295,7 @@
                         "bold":true
                     },
                     {
-                        "text": "Dated:",
+                        "text": "Dated: __________",
                         "style": "pdfContent",
                         "alignment": "right",
                         "bold":true

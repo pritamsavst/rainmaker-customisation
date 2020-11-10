@@ -88,13 +88,13 @@
                 "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
-                        "text": "             {{name}} ",
+                        "text": "             {{transferorName}} ",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "             {{address}} ",
+                        "text": "             {{transferorAddress}} ",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -142,7 +142,7 @@
                         "text":" was initially allotted to "
                     },
                     {
-                        "text":"{{name}} , {{fatherOrHusbandName}} ","bold":true
+                        "text":"{{transferorName}} , {{transferorFH}} ","bold":true
                     },
                     {
                         "text":" vide allotment letter No. "
