@@ -452,7 +452,7 @@
                     {
                         "variable": "OWNER_PARTNER_DETAILS_HEADER",
                         "value": {
-                            "path": "OWNER_PARTNER_DETAILS_HEADER"
+                            "path": "OWNER_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -589,70 +589,9 @@
                         }
                     },
                     {
-                        "variable": "ownerName",
+                        "variable":"purchaserArray",
                         "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.ownerName"
-                        }
-                    },
-                    {
-                        "variable": "guardianName",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.guardianName"
-                        }
-                    },
-                      {
-                        "variable": "guardianRelation",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.guardianRelation"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
-                          }
-                    },
-                    {
-                        "variable": "address",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.address"
-                        }
-                    },
-                    {
-                        "variable": "mobileNumber",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.mobileNumber"
-                        }
-                    },
-                    {
-                        "variable": "share",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].share"
-                        }
-                    },
-                    {
-                        "variable": "cpNumber",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].cpNumber"
-                        }
-                    },
-                   
-                    {
-                        "variable": "possesionDate",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.possesionDate"
-                        },
-                        "type":"date"
-                    },
-                    {
-                        "variable": "dateOfAllotment",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.dateOfAllotment"
-                        },
-                        "type":"date"
-                    },
-                    {
-                        "variable": "allotmentNumber",
-                        "value": {
-                            "path": "$.propertyDetails.owners[0].ownerDetails.allotmentNumber"
+                            "path": "$.propertyDetails.purchaser.*"
                         }
                     },
                     {
@@ -777,9 +716,9 @@
                         }
                     },
                     {
-                        "variable": "REGISTRATION_NUMBER_LABEL",
+                        "variable": "ES_DOB_LABEL",
                         "value": {
-                            "path": "REGISTRATION_NUMBER_LABEL"
+                            "path": "DOB_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -801,78 +740,6 @@
                         }
                     },
                 
-                    {
-                        "variable": "purchaserName",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.ownerName"
-                        }
-                    },
-                    {
-                        "variable": "purchaserguardianName",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.guardianName"
-                        }
-                    },
-                      {
-                        "variable": "purchaserguardianRelation",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.guardianRelation"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
-                          }
-                    },
-                    {
-                        "variable": "purchaseraddress",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.address"
-                        }
-                    },
-                    {
-                        "variable": "purchasermobileNumber",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.mobileNumber"
-                        }
-                    },
-                    {
-                        "variable": "purchasersellerName",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.sellerName"
-                        }
-                    },
-                    {
-                        "variable": "purchasersellerFatherName",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.sellerFatherName"
-                        }
-                    },
-                    {
-                        "variable": "purchaserpercentageOfShare",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.percentageOfShare"
-                        }
-                    },
-                   
-                    {
-                        "variable": "purchasermodeOfTransfer",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.modeOfTransfer"
-                        }
-                    },
-                    {
-                        "variable": "purchaserregistrationNumberField",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.registrationNumberField"
-                        }
-                    },
-                    {
-                        "variable": "purchaserdateOfRegistration",
-                        "value": {
-                            "path": "$.propertyDetails.purchaser[0].ownerDetails.dateOfRegistration"
-                        },
-                        "type":"date"
-                    },
                     {
                         "variable": "COURT_CASE_DETAILS_HEADER",
                         "value": {
