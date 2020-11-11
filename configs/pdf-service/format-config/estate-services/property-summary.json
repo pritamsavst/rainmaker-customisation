@@ -771,8 +771,8 @@
             ],
             "unbreakable": true
           },
+
           {
-            "pageBreak": "before" ,
             "stack": [
               {
             "style": "noc-table2",
@@ -781,34 +781,7 @@
                 "*"
               ],
               "body": [
-                [
-                      {
-                        "text":"{{documents_label}}",
-                        "border":[
-                          true,
-                          true,
-                          true,
-                          false
-                        ],
-                         "style": "receipt-table-value"
-                      }
-                ],
-                [
-                   {
-                      "table": {
-                       "widths":["25%", "25%", "25%", "25%"],
-                      "body": [
-                       "{{#ownerDocuments_documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/ownerDocuments_documents_array}}"
-                      ]
-                  },
-                  "border":[
-                    true,
-                    false,
-                    true,
-                    true
-                    ]
-                 }
-                    ]
+                "{{#ownersArray}}[{\"text\":\"{{documents_label}} - {{ownerDetails.ownerName}}\",\"border\":[true,true,true,false],\"style\": \"receipt-table-value\"}],[{\"table\": {\"widths\": [\"25%\",\"25%\",\"25%\",\"25%\"],\"body\":[\"{{#ownerDetails.ownerDocuments}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/ownerDetails.ownerDocuments}}\"]},\"border\":[true,false,true,true]}]{{/ownersArray}}"
                ],
                "unbreakable": true
             },
@@ -845,34 +818,7 @@
                 "*"
               ],
               "body": [
-                [
-                      {
-                        "text":"{{documents_label}}",
-                        "border":[
-                          true,
-                          true,
-                          true,
-                          false
-                        ],
-                         "style": "receipt-table-value"
-                      }
-                ],
-                [
-                   {
-                      "table": {
-                       "widths":["25%", "25%", "25%", "25%"],
-                      "body": [
-                       "{{#purchaser_documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/purchaser_documents_array}}"
-                      ]
-                  },
-                  "border":[
-                    true,
-                    false,
-                    true,
-                    true
-                    ]
-                 }
-                    ]
+                "{{#purchaserArray}}[{\"text\":\"{{documents_label}} - {{ownerDetails.ownerName}}\",\"border\":[true,true,true,false],\"style\": \"receipt-table-value\"}],[{\"table\": {\"widths\": [\"25%\",\"25%\",\"25%\",\"25%\"],\"body\":[\"{{#ownerDetails.ownerDocuments}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/ownerDetails.ownerDocuments}}\"]},\"border\":[true,false,true,true]}]{{/purchaserArray}}"
                ],
                "unbreakable": true
             },
