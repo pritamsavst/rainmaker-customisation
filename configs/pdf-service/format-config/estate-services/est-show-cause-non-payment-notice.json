@@ -145,7 +145,7 @@
                         "text":"Sector "
                     },
                     {
-                        "text":" {{sectorNumber}}","bold":true
+                        "text":" {{sectorNumber}} ","bold":true
                     },
                     {
                         "text":" was sub-leased/leased out to you for 99 years on the terms and conditions specified in Letter No. "

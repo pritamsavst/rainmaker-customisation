@@ -80,6 +80,18 @@
                 }
               },
               {
+                "variable":"transferorAddress",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
+                "variable":"transferorFH",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.guardianName"
+                }
+              },
+              {
                 "variable":"dateOfExecutionOfWill",
                 "value":{
                   "path":"$.applicationDetails.dateOfExecutionOfWill"
