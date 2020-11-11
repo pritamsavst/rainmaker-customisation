@@ -140,7 +140,7 @@
             {
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "Reference your application dated ________ for the allotment of transit site on licence hold basis in lieu of your Jhuggi No. _________"
+                "text": "Reference your application dated {{allotmentDate}} for the allotment of transit site on licence hold basis in lieu of your Jhuggi No. _________"
             },
             {
                 "text": [{
