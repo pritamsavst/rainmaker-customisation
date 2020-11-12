@@ -146,7 +146,11 @@
                 "variable":"propertyType",
                 "value":{
                   "path":"$.property.propertyDetails.propertyType"
-                }
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-es"
+              }
               },
               {
                 "variable":"dateOfAuction",

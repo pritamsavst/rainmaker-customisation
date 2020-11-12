@@ -365,7 +365,11 @@
                         "variable": "subCategoryValue",
                         "value": {
                             "path": "$.property.subCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {
@@ -385,6 +389,10 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
 
                     },
