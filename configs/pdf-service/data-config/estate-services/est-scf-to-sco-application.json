@@ -365,7 +365,11 @@
                         "variable": "subCategoryValue",
                         "value": {
                             "path": "$.property.subCategory"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
 
                     },
                     {
