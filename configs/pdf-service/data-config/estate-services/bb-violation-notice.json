@@ -45,23 +45,29 @@
                 }
               },
               {
-                "variable":"name",
+                "variable":"violationDetails",
                 "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                    "path":"$.applicationDetails.violationDetails"
                 }
-              },
-              {
-                "variable":"fatherOrHusbandName",
-                "value":{
-                  "path":"$.applicationDetails.transferee.fatherOrHusbandName"
-                }
-              },
-               {
-                "variable":"address",
-                "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.address"
-                }
-              },
+            },
+            {
+              "variable": "ownerName",
+              "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+              }
+          },
+          {
+              "variable": "guardianName",
+              "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+              }
+          },
+          {
+              "variable": "address",
+              "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.address"
+              }
+          },
               {
                 "variable":"share",
                 "value":{

@@ -50,11 +50,11 @@
                   "width":"auto",
                   "text": [
                     {
-                      "text": "MCC/JICMC/SDE (6)12010/",
+                      "text": "MCC/JICMC/SDE (6)12010/ ",
                       "bold": true
                     },
                     {
-                      "text": "______",
+                      "text": "{{applicationNumber}}",
                       "bold": false
                     }
                   ],
@@ -89,13 +89,13 @@
                 "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
-                        "text": "               _________",
+                        "text": "               {{ownerName}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               __________",
+                        "text": "               {{address}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -115,7 +115,7 @@
                     {
                         "margin": [20, 0, 0, 0],
                         "width": "*",
-                        "text": "Grant of No Objection Certificate for ___________ in respect of Shopping Complex on Plot No.___, Village Badhori, U.T, Chandigarh.",
+                        "text": "Grant of No Objection Certificate for {{typeOfNoc}} in respect of Shopping Complex on Plot No.{{siteNumber}}, {{village}},{{mohalla}} U.T, Chandigarh.",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -125,13 +125,13 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "              Reference: Your application dated 16.06.2008, on the subject noted above."
+                "text": "              Reference: Your application dated _________, on the subject noted above."
             },
             {          
                 "margin": [0, 20, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "              In view of the registered Sale Deed No. 4409, dated 09,01.2004 in respect of Shopping Complex on Plot No.___, Village Badheri, U.T,  Chandigarh. a copy of which was submitted by you in this office along with  affidavit, indemnity bond, site plan of the plot measuring (359 sq. yards). You  are hereby allotted New Shop Nos. 212/1, 212/2, 212/3, 212/4, 212/5, 212/6,  212/7, 212/8, 212/9, 212/10, 212/11 and 212/12 and granted N.O.C. for the  purpose of Electricity connections as per area mentioned in the sale deed  on the following terms and conditions:- "            
+                "text": "              In view of the registered Sale Deed No. 4409, dated 09,01.2004 in respect of Shopping Complex on Plot No.{{siteNumber}}, {{village}} {{mohalla}}, U.T,  Chandigarh. a copy of which was submitted by you in this office along with  affidavit, indemnity bond, site plan of the plot measuring (359 sq. yards). You  are hereby allotted New Shop Nos. 212/1, 212/2, 212/3, 212/4, 212/5, 212/6,  212/7, 212/8, 212/9, 212/10, 212/11 and 212/12 and granted N.O.C. for the  purpose of Electricity connections as per area mentioned in the sale deed  on the following terms and conditions:- "            
             },
             {          
                 "margin": [0, 20, 0, 0],
@@ -192,7 +192,7 @@
                         "bold":true
                     },
                     {
-                        "text": "Dated:",
+                        "text": "Dated:_____________",
                         "style": "pdfContent",
                         "alignment": "right",
                         "bold":true
