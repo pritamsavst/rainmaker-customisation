@@ -354,7 +354,7 @@
                         {
                             "variable": "transactionNumber",
                             "value": {
-                              "path": "$.Payments[0].transactionNumber"
+                              "path": "$.Properties[0].offlinePaymentDetails[0].transactionNumber"
                             }
                         },
                         {
