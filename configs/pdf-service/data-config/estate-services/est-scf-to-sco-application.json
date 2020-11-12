@@ -385,6 +385,10 @@
                         "variable": "propertyTypeValue",
                         "value": {
                             "path": "$.property.propertyDetails.propertyType"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
 
                     },
