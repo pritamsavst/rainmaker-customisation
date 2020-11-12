@@ -177,7 +177,32 @@
                             "prefix": "ES",
                             "module": "rainmaker-es"
                         }
-                    },  
+                    },
+                    {
+                        "variable": "ES_NOC_DETAILS_HEADER",
+                        "value": {
+                            "path": "NOC_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ES_NOC_LABEL",
+                        "value": {
+                            "path": "NOC_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                      
                     {
                         "variable": "APPLICANT_DETAILS_HEADER",
                         "value": {
@@ -380,6 +405,12 @@
                         "variable": "cpNumber",
                         "value": {
                             "path": "$.applicationDetails.owner.cpNumber"
+                        }
+                    },
+                    {
+                        "variable":"typeOfNoc",
+                        "value":{
+                            "path":"$.applicationDetails.typeOfNoc[0]"
                         }
                     },
                     {

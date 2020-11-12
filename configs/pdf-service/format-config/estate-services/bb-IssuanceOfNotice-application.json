@@ -1,5 +1,5 @@
 {
-    "key": "bb-noc-application-fresh",
+    "key": "bb-IssuanceOfNotice-application",
     "config": {
         "defaultStyle": {
             "font": "Cambay"
@@ -361,138 +361,6 @@
             ],
             "unbreakable": true
           },
-
-          {
-            "stack": [
-              {
-                "style": "noc-table2",
-                "table": {
-                  "widths": [
-                    "*"
-                  ],
-                  "body": [
-                    [
-                      {
-                        "text":"{{ES_NOC_DETAILS_HEADER}}",
-                        "border":[
-                          true,
-                          true,
-                          true,
-                          false
-                        ],
-                         "style": "receipt-table-value"
-                      }
-                ],
-                [
-                  {
-                    "table": {
-                      "widths": [
-                        "25%",
-                        "25%",
-                        "25%",
-                        "25%"
-                         ],
-                       "body": [
-                      [
-                        {
-                          "text":"{{ES_NOC_LABEL}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table-value-cont"
-                        },
-                      {
-                        "text":"",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      },{
-                        "text":"",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      },{
-                        "text":"",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      }
-                      ],
-                      [
-                        {
-                          "text":"{{typeOfNoc}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
-                          "text":"",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table2"
-                        },{
-                          "text":"",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table2"
-                        },{
-                          "text":"",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table2"
-                        }
-                      ]
-                     
-                       ]
-                    },
-                    "border":[
-                      true,
-                      false,
-                      true,
-                      true
-                    ]
-                  }
-                ]
-                  ],
-                  "unbreakable": true
-                },
-                "layout": {}
-              }
-            ],
-            "unbreakable": true
-          },
-
           {
             "stack": [
               {
@@ -702,7 +570,696 @@
             ],
             "unbreakable": true
           },
-       
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{VIOLATION_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{VIOLATION_DESCRIPTION_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{GROUND_COVERAGE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{GROUND_COVERAGE_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{GROUND_COVERAGE_SANCTIONABLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{violationDetails}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{groundCoverage}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{groundCoverageComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{groundCoverageSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{PLINTH_LEVEL_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{PLINTH_LEVEL_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{PLINTH_LEVEL_SANCTIONABLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{MAX_HEIGHT_MEASURED_FROM_PLINTH_LEVEL_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{plinthLevel}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{plinthLevelComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{plinthLevelSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{maximumHeight}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{MAX_HEIGHT_MEASURED_FROM_PLINTH_LEVEL_COMMENTS_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{PLINTH_LEVEL_COMMAX_HEIGHT_MEASURED_FROM_PLINTH_LEVEL_SANCTIONABLE_LABELMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{MAXIMUM_NUMBER_OF_FLOORS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{MAXIMUM_NUMBER_OF_FLOORS_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{maximumHeightComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{maximumHeightSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{maximumFloors}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{maximumFloorsComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{MAXIMUM_NUMBER_OF_FLOORS_SANCTIONABLE_LABE}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{MINIMUM_FLOOR_TO_CEILING_HEIGHT_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{MINIMUM_FLOOR_TO_CEILING_HEIGHT_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{MINIMUM_FLOOR_TO_CEILING_HEIGHT_SANCTIONABLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{maximumFloorsSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{minimumCeilingHeight}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{minimumCeilingHeightComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{minimumCeilingHeightSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{MINIMUM_SIZE_OF_HABITABLE_ROOMS_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{MINIMUM_SIZE_OF_HABITABLE_ROOMS_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{MINIMUM_SIZE_OF_HABITABLE_ROOMS_SANCTIONABLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{RARE_FRONT_SET_BACK_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{minimunRoomsSize}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{minimunRoomsSizeComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{minimunRoomsSizeSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{setBack}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{RARE_FRONT_SET_BACK_COMMENTS_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{RARE_FRONT_SET_BACK_SANCTIONABLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{STAIRCASE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{STAIRCASE_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{setBackComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{setBackSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{staircase}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{staircaseComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{STAIRCASE_SANCTIONABLE_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{PERMISSIBLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{PERMISSIBLE_COMMENTS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{PERMISSIBLE_SANCTIONABLE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{staircaseSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{permissible}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{permissibleComments}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{permissibleSanctionable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{DATE_OF_DEMOLITION_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{DATE_OF_HEARING_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{TIME_OF_HEARING_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{demolitionDate}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{dateOfHearing}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{timeOfhearing}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                     
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
           {
             "stack": [
               {
