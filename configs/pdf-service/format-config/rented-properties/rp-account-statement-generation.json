@@ -125,7 +125,7 @@
                               ]
                         },
                         {
-                            "text":"{{COMMON_TABLE_COL_AS_AMOUNT}} (in Rs)",
+                            "text":"{{COMMON_TABLE_COL_AS_AMOUNT}} (₹)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -155,7 +155,7 @@
                               ]
                         },  
                            {
-                            "text":"{{COMMON_TABLE_COL_AS_REMAINING_PRINCIPAL}}",
+                            "text":"{{COMMON_TABLE_COL_AS_REMAINING_PRINCIPAL}} (₹)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -165,7 +165,7 @@
                               ]
                         }, 
                         {
-                            "text":"{{COMMON_TABLE_COL_AS_REMAINING_INTEREST}}",
+                            "text":"{{COMMON_TABLE_COL_AS_REMAINING_INTEREST}} (₹)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -174,7 +174,7 @@
                                 false
                               ]
                         },  {
-                            "text":"{{COMMON_TABLE_COL_AS_TOTAL_DUE}}",
+                            "text":"{{COMMON_TABLE_COL_AS_TOTAL_DUE}} (₹)",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -184,7 +184,7 @@
                               ]
                         },   
                         {
-                            "text":"{{COMMON_TABLE_ACCOUNT_BALANCE}}",
+                            "text":"{{COMMON_TABLE_ACCOUNT_BALANCE}} (₹)",
                             "style":"table-header",
                             "border":[
                                 true,
