@@ -222,14 +222,14 @@
                         "alignment": "left"
                     },
                     {
-                        "text": "Dated:",
+                        "text": "Dated: ____________",
                         "style": "pdfContent",
                         "alignment": "right"
                     }
                 ]
             },
             {
-                "margin": [0, 20, 0, 0],
+                "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
                         "text": "        Copy is forwarded to following for information & necessary action please: -",
@@ -245,7 +245,7 @@
 
                     },
                     {
-                        "text": "3. Smt / Shri ----------",
+                        "text": "3. Smt / Shri ____________",
                         "style": "pdfContent"
 
                     }

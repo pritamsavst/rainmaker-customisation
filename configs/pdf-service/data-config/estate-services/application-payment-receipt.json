@@ -52,7 +52,7 @@
                           {
                             "variable": "gstPercentage",
                             "value": {
-                              "path": "ES_GST_PERCENT_LABEL"
+                              "path": "GST_PERCENT_LABEL"
                             },
                             "type": "label",
                             "localisation": {
