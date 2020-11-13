@@ -771,7 +771,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{REGISTRATION_NUMBER_LABEL}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -811,7 +811,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{registrationNumber}}",
+                          "text":"",
                           "border":[
                             false,
                             false,
@@ -820,10 +820,59 @@
                           ],
                           "style": "receipt-table2"
                         }
-                      ],
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{REGISTRATION_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
                       [
                         {
-                          "text":"{{DATE_OF_REGISTRATION_LABEL}}",
+                          "text":"{{REGISTRATION_NUMBER_LABEL}}",
                           "border":[
                             false,
                             false,
@@ -833,7 +882,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"",
+                        "text":"{{DATE_OF_REGISTRATION_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -863,26 +912,7 @@
                       ],
                       [
                         {
-                            "text":"{{dateOfRegistration}}",
-                            "border":[
-                              false,
-                              false,
-                              false,
-                              false
-                            ],
-                            "style": "receipt-table2"
-                          },{
-                            "text":"",
-                            "border":[
-                              false,
-                              false,
-                              false,
-                              false
-                            ],
-                            "style": "receipt-table2"
-                          },
-                        {
-                          "text":"",
+                          "text":"{{registrationNumber}}",
                           "border":[
                             false,
                             false,
@@ -892,6 +922,24 @@
                            "style": "receipt-table2"
                         },
                         {
+                          "text":"{{dateOfRegistration}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
                           "text":"",
                           "border":[
                             false,

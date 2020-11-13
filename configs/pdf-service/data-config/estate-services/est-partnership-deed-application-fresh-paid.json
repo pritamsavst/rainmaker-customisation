@@ -618,7 +618,11 @@
                         "variable": "modeOfTransfer",
                         "value": {
                             "path": "$.Applications[0].applicationDetails.ownerDetails.modeOfTransfer"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "applicationNumber",

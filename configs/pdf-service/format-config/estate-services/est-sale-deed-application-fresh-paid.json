@@ -854,7 +854,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{modeOfTransferLabel}}",
+                        "text":"{{DOB_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -863,7 +863,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{registrationNoOfPropertyLabel}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -894,87 +894,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{modeOfTransferValue}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table2"
-                        },{
-                          "text":"{{registrationNumberValue}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table2"
-                        }
-                      ],
-                      [
-                        {
-                          "text":"{{dateOfRegistratioLabel}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table-value-cont"
-                        },
-                      {
-                        "text":"{{DOB_LABEL}}",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      },{
-                        "text":"",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      },{
-                        "text":"",
-                        "border":[
-                          false,
-                          false,
-                          false,
-                          false
-                        ],
-                        "style": "receipt-table-value-cont"
-                      }
-                      ],
-                      [
-                        {
-                          "text":"{{dateOfRegistrationValue}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                           "style": "receipt-table2"
-                        },
-                        {
                           "text":"{{dobValue}}",
-                          "border":[
-                            false,
-                            false,
-                            false,
-                            false
-                          ],
-                          "style": "receipt-table2"
-                        },{
-                          "text":"",
                           "border":[
                             false,
                             false,
@@ -1011,7 +931,136 @@
             ],
             "unbreakable": true
           },
-        
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{REGISTRATION_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{modeOfTransferLabel}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{registrationNoOfPropertyLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{dateOfRegistratioLabel}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{modeOfTransferValue}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{registrationNumberValue}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{dateOfRegistrationValue}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                      
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
           {
             "stack": [
               {

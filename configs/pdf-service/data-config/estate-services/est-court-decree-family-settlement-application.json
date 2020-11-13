@@ -449,7 +449,19 @@
                             "module": "rainmaker-es"
                         }
                         
-                    },                   
+                    },  
+                    {
+                        "variable": "REGISTRATION_DETAILS_HEADER",
+                        "value": {
+                            "path": "REGISTRATION_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },                 
 
                     {
                         "variable": "fileNumberValue",

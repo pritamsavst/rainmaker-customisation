@@ -492,6 +492,18 @@
                         }
                     },
                     {
+                        "variable": "REGISTRATION_DETAILS_HEADER",
+                        "value": {
+                            "path": "REGISTRATION_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
                         "variable":"documents_label",
                         "value": {
                             "path": "DOCUMENT_DETAILS_HEADER"

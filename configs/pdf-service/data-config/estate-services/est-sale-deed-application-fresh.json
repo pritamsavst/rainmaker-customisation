@@ -266,6 +266,18 @@
                         }
                     },
                     {
+                        "variable": "REGISTRATION_DETAILS_HEADER",
+                        "value": {
+                            "path": "REGISTRATION_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
                         "variable": "purchaserTransfereeNameLabel",
                         "value": {
                             "path": "PURCHASER_TRANSFEREE_NAME_LABEL"
