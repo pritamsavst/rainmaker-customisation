@@ -1,0 +1,75 @@
+name: BillGeneration
+description: Insert Bill data from excel
+fromTopic: save-ws-waterbilldetails
+isTransaction: true
+queryMaps: 
+   
+    -query: INSERT INTO public.eg_ws_savebilling(id, cccode, divsdiv, consumercode, billcycle, billgroup, subgroup, billtype, name, address, add1, add2, add3, add4, add5, cesscharge, netamount, grossamount, surcharge, totalnetamount, totalsurcharge, totalgrossamount, fixchargecode, fixcharge, duedatecash, duedatecheque, status, billid, paymentid, paymentstatus, createdby, createdtime ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+     
+    basePath: $.billGeneration.*
+
+    jsonMaps:
+
+       - jsonPath: $.billGeneration.*.billGenerationId
+
+       - jsonPath: $.billGeneration.*.ccCode
+
+       - jsonPath: $.billGeneration.*.divSdiv
+
+       - jsonPath: $.billGeneration.*.consumerCode
+
+       - jsonPath: $.billGeneration.*.billCycle
+
+       - jsonPath: $.billGeneration.*.billGroup
+
+       - jsonPath: $.billGeneration.*.subGroup
+
+       - jsonPath: $.billGeneration.*.billType
+
+       - jsonPath: $.billGeneration.*.name
+
+       - jsonPath: $.billGeneration.*.address
+
+       - jsonPath: $.billGeneration.*.add1
+
+       - jsonPath: $.billGeneration.*.add2
+
+       - jsonPath: $.billGeneration.*.add3
+
+       - jsonPath: $.billGeneration.*.add4
+
+       - jsonPath: $.billGeneration.*.add5
+
+       - jsonPath: $.billGeneration.*.cessCharge
+
+       - jsonPath: $.billGeneration.*.netAmount
+
+       - jsonPath: $.billGeneration.*.grossAmount
+
+       - jsonPath: $.billGeneration.*.surcharge
+
+       - jsonPath: $.billGeneration.*.totalNetAmount
+
+       - jsonPath: $.billGeneration.*.totalSurcharge
+
+       - jsonPath: $.billGeneration.*.totalGrossAmount
+
+       - jsonPath: $.billGeneration.*.fixChargeCode
+
+       - jsonPath: $.billGeneration.*.fixCharge
+
+       - jsonPath: $.billGeneration.*.dueDateCash
+
+       - jsonPath: $.billGeneration.*.dueDateCheque
+
+       - jsonPath: $.billGeneration.*.status
+
+       - jsonPath: $.billGeneration.*.billId
+       
+       - jsonPath: $.billGeneration.*.paymentId 
+
+       - jsonPath: $.billGeneration.*.paymentStatus
+       
+       - jsonPath: $.billGeneration.*.auditDetails.createdBy 
+
+       - jsonPath: $.billGeneration.*.auditDetails.createdTime
