@@ -1,7 +1,7 @@
 {
     "key": "est-court-decree-family-settlement-application",
     "DataConfigs": {
-        "serviceName": "rainmaker-rp",
+        "serviceName": "rainmaker-es",
         "version": "1.0.0",
         "baseKeyPath": "$.Applications.*",
         "entityIdPath": "$.applicationNumber",
@@ -449,7 +449,19 @@
                             "module": "rainmaker-es"
                         }
                         
-                    },                   
+                    },  
+                    {
+                        "variable": "REGISTRATION_DETAILS_HEADER",
+                        "value": {
+                            "path": "REGISTRATION_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },                 
 
                     {
                         "variable": "fileNumberValue",
@@ -616,6 +628,10 @@
                         "variable": "modeOfTransfer",
                         "value": {
                             "path": "$.applicationDetails.modeOfTransfer"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {

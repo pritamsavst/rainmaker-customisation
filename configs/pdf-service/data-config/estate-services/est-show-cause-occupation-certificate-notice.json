@@ -1,7 +1,7 @@
 {
     "key": "est-show-cause-occupation-certificate-notice",
     "DataConfigs": {
-      "serviceName": "rainmaker-rp",
+      "serviceName": "rainmaker-es",
       "version": "1.0.0",
       "baseKeyPath": "$.Applications.*",
       "entityIdPath": "$.applicationNumber",
@@ -80,6 +80,18 @@
                 }
               },
               {
+                "variable":"transferorAddress",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
+                "variable":"transferorFH",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.guardianName"
+                }
+              },
+              {
                 "variable":"dateOfExecutionOfWill",
                 "value":{
                   "path":"$.applicationDetails.dateOfExecutionOfWill"
@@ -145,7 +157,11 @@
                 "variable":"propertyType",
                 "value":{
                   "path":"$.property.propertyDetails.propertyType"
-                }
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-es"
+              }
               },
               {
                 "variable":"dateOfAuction",

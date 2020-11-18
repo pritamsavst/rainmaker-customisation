@@ -1,7 +1,7 @@
 {
     "key": "bb-violation-notice",
     "DataConfigs": {
-      "serviceName": "rainmaker-rp",
+      "serviceName": "rainmaker-es",
       "version": "1.0.0",
       "baseKeyPath": "$.Applications.*",
       "entityIdPath": "$.applicationNumber",
@@ -45,23 +45,29 @@
                 }
               },
               {
-                "variable":"name",
+                "variable":"violationDetails",
                 "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
+                    "path":"$.applicationDetails.violationDetails"
                 }
-              },
-              {
-                "variable":"fatherOrHusbandName",
-                "value":{
-                  "path":"$.applicationDetails.transferee.fatherOrHusbandName"
-                }
-              },
-               {
-                "variable":"address",
-                "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.address"
-                }
-              },
+            },
+            {
+              "variable": "ownerName",
+              "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+              }
+          },
+          {
+              "variable": "guardianName",
+              "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+              }
+          },
+          {
+              "variable": "address",
+              "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.address"
+              }
+          },
               {
                 "variable":"share",
                 "value":{
@@ -146,7 +152,12 @@
                 "variable":"propertyType",
                 "value":{
                   "path":"$.property.propertyDetails.propertyType"
-                }
+                },
+                "localisation": {
+                  "required": true,
+                  "module": "rainmaker-es"
+              }
+
               },
               {
                 "variable":"dateOfAuction",

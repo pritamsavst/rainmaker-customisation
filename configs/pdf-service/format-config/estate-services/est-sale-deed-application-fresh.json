@@ -632,7 +632,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{modeOfTransferLabel}}",
+                        "text":"{{DOB_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -641,7 +641,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{registrationNoOfPropertyLabel}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -672,7 +672,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{modeOfTransferValue}}",
+                          "text":"{{dobValue}}",
                           "border":[
                             false,
                             false,
@@ -681,7 +681,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{registrationNumberValue}}",
+                          "text":"",
                           "border":[
                             false,
                             false,
@@ -690,10 +690,59 @@
                           ],
                           "style": "receipt-table2"
                         }
-                      ],
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{REGISTRATION_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
                       [
                         {
-                          "text":"{{dateOfRegistratioLabel}}",
+                          "text":"{{modeOfTransferLabel}}",
                           "border":[
                             false,
                             false,
@@ -703,7 +752,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{DOB_LABEL}}",
+                        "text":"{{registrationNoOfPropertyLabel}}",
                         "border":[
                           false,
                           false,
@@ -712,7 +761,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"",
+                        "text":"{{dateOfRegistratioLabel}}",
                         "border":[
                           false,
                           false,
@@ -733,7 +782,7 @@
                       ],
                       [
                         {
-                          "text":"{{dateOfRegistrationValue}}",
+                          "text":"{{modeOfTransferValue}}",
                           "border":[
                             false,
                             false,
@@ -743,7 +792,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{dobValue}}",
+                          "text":"{{registrationNumberValue}}",
                           "border":[
                             false,
                             false,
@@ -752,7 +801,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"",
+                          "text":"{{dateOfRegistrationValue}}",
                           "border":[
                             false,
                             false,
@@ -771,6 +820,7 @@
                           "style": "receipt-table2"
                         }
                       ]
+                      
                        ]
                     },
                     "border":[

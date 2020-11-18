@@ -334,7 +334,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.id
 
-        - query: INSERT INTO cs_ep_owner_details_v1 (id, owner_id, tenantid, owner_name, guardian_name, guardian_relation, mobile_number, allotment_number, date_of_allotment, possesion_date, is_approved, is_current_owner, is_master_entry, address, is_director, seller_name, seller_guardian_name, seller_relation, mode_of_transfer, dob, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET owner_name = ?, guardian_name = ?, guardian_relation = ?, mobile_number = ?, allotment_number = ?, date_of_allotment = ?, possesion_date = ?, is_approved = ?, is_current_owner = ?, is_master_entry = ?, address = ?, is_director = ?, seller_name = ?, seller_guardian_name = ?, seller_relation = ?, mode_of_transfer = ?, dob = ?, last_modified_by = ?, last_modified_time = ?;
+        - query: INSERT INTO cs_ep_owner_details_v1 (id, owner_id, tenantid, owner_name, guardian_name, guardian_relation, mobile_number, allotment_number, date_of_allotment, possesion_date, is_approved, is_current_owner, is_master_entry, address, is_director, seller_name, seller_guardian_name, seller_relation, mode_of_transfer, dob, is_previous_owner_required, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET owner_name = ?, guardian_name = ?, guardian_relation = ?, mobile_number = ?, allotment_number = ?, date_of_allotment = ?, possesion_date = ?, is_approved = ?, is_current_owner = ?, is_master_entry = ?, address = ?, is_director = ?, seller_name = ?, seller_guardian_name = ?, seller_relation = ?, mode_of_transfer = ?, dob = ?, is_previous_owner_required = ?, last_modified_by = ?, last_modified_time = ?;
           basePath: $.Properties.*.propertyDetails.owners.*.ownerDetails
           jsonMaps:
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.id
@@ -377,6 +377,8 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.dob
 
+            - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.isPreviousOwnerRequired
+
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.auditDetails.createdBy
 
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.auditDetails.lastModifiedBy
@@ -418,6 +420,8 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.modeOfTransfer
 
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.dob
+
+            - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.isPreviousOwnerRequired
 
             - jsonPath: $.Properties.*.propertyDetails.owners.*.ownerDetails.auditDetails.lastModifiedBy
 
@@ -558,20 +562,6 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingGST
 
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingRentPenalty
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingGSTPenalty
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingRent
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.collectedGSTPenalty
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.collectedRentPenalty
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.interestSince
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingGST
-
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.auditDetails.createdBy
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.auditDetails.lastModifiedBy
@@ -580,7 +570,7 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.auditDetails.lastModifiedTime
 
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.demandDate
+            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.generationDate
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.isPrevious
 
@@ -599,8 +589,6 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.noOfDays
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.paid
-
-            - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingRentPenalty
 
             - jsonPath: $.Properties.*.propertyDetails.estateDemands.*.remainingRentPenalty
 
@@ -625,7 +613,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.Properties.*.propertyDetails.inActiveEstatePayments.*.propertyDetailsId
 
-        - query: INSERT INTO cs_ep_payment (id, property_details_id, receipt_date, rent_received, receipt_no, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET receipt_date = ?, rent_received = ?, receipt_no = ?, last_modified_by = ?, last_modified_time = ?;
+        - query: INSERT INTO cs_ep_payment (id, property_details_id, receipt_date, rent_received, receipt_no, payment_date, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET receipt_date = ?, rent_received = ?, receipt_no = ?, payment_date = ?, last_modified_by = ?, last_modified_time = ?;
           basePath: $.Properties.*.propertyDetails.estatePayments.*
           jsonMaps:
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.id
@@ -637,6 +625,8 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.rentReceived
 
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.receiptNo
+
+            - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.paymentDate
 
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.auditDetails.createdBy
 
@@ -651,6 +641,8 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.rentReceived
 
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.receiptNo
+
+            - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.paymentDate
 
             - jsonPath: $.Properties.*.propertyDetails.estatePayments.*.auditDetails.lastModifiedBy
 
@@ -685,7 +677,7 @@ serviceMaps:
 
 
 
-        - query: INSERT INTO cs_ep_offline_payment_detail (id, property_details_id, demand_id, amount, bank_name, transaction_number, date_of_payment) VALUES (?,?,?,?,?,?,?)ON CONFLICT (id) DO UPDATE SET demand_id=?, amount=?, bank_name=?, transaction_number=?, date_of_payment=?;
+        - query: INSERT INTO cs_ep_offline_payment_detail (id, property_details_id, demand_id, amount, bank_name, transaction_number, date_of_payment, type) VALUES (?,?,?,?,?,?,?,?)ON CONFLICT (id) DO UPDATE SET demand_id=?, amount=?, bank_name=?, transaction_number=?, date_of_payment=?, type=?;
           basePath: $.Properties.*.propertyDetails.offlinePaymentDetails.*
           jsonMaps:
 
@@ -703,6 +695,8 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.dateOfPayment
 
+            - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
+
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.demandId
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.amount
@@ -712,6 +706,8 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.transactionNumber
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.dateOfPayment
+
+            - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
 
 
         - query: INSERT INTO cs_ep_collection(id, demand_id, interestCollected, principalCollected, collectedAt, created_by, modified_by, created_date, modified_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)ON CONFLICT (id) DO UPDATE SET interestCollected=?, principalCollected=?, modified_by=?, modified_date=?;
@@ -871,3 +867,61 @@ serviceMaps:
             - jsonPath: $.Applications.*.allDocuments.*.auditDetails.lastModifiedBy
 
             - jsonPath: $.Applications.*.allDocuments.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Persists Property Penalty details in cs_ep_property_penalty_v1 table
+      fromTopic: save-penalty-topic
+      isTransaction: true
+      queryMaps:
+        - query: INSERT INTO cs_ep_property_penalty_v1 (id, tenantid, property_id, branch_type, penalty_amount, violation_type, paid, generation_date, remaining_penalty_due, status, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: PropertyPenalties.*
+          jsonMaps:
+            - jsonPath: $.PropertyPenalties.*.id
+
+            - jsonPath: $.PropertyPenalties.*.tenantId
+
+            - jsonPath: $.PropertyPenalties.*.property.id
+
+            - jsonPath: $.PropertyPenalties.*.branchType
+
+            - jsonPath: $.PropertyPenalties.*.penaltyAmount
+
+            - jsonPath: $.PropertyPenalties.*.violationType
+
+            - jsonPath: $.PropertyPenalties.*.isPaid
+
+            - jsonPath: $.PropertyPenalties.*.generationDate
+
+            - jsonPath: $.PropertyPenalties.*.remainingPenaltyDue
+
+            - jsonPath: $.PropertyPenalties.*.status
+
+            - jsonPath: $.PropertyPenalties.*.auditDetails.createdBy
+
+            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.PropertyPenalties.*.auditDetails.createdTime
+
+            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update Property Penalty details in cs_ep_property_penalty_v1 table
+      fromTopic: update-penalty-topic
+      isTransaction: true
+      queryMaps:
+        - query: UPDATE cs_ep_property_penalty_v1 SET paid=?, remaining_penalty_due=?, status=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+          basePath: PropertyPenalties.*
+          jsonMaps:
+
+            - jsonPath: $.PropertyPenalties.*.isPaid
+
+            - jsonPath: $.PropertyPenalties.*.remainingPenaltyDue
+
+            - jsonPath: $.PropertyPenalties.*.status
+
+            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.PropertyPenalties.*.id
+

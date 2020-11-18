@@ -50,11 +50,11 @@
                   "width":"auto",
                   "text": [
                     {
-                      "text": "Notice No. ___ MC ,SDE (B)",
+                      "text": "Notice No. ",
                       "bold": true
                     },
                     {
-                      "text": "______",
+                      "text": "{{applicationNumber}}",
                       "bold": false
                     }
                   ],
@@ -89,13 +89,13 @@
                 "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
-                        "text": "               _________",
+                        "text": "               {{ownerName}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               __________",
+                        "text": "               {{address}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -131,17 +131,29 @@
                 "margin": [0, 20, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "              Whereas you are the owner/occupier of Premises i.e. Residence or Commercial Schools/Plots/SCF basement/Shop/ H.No ________ on which you have begun/erected/re-erected building in contravention of above section of the 'Chandigarh Rural Inhabitation (Area within Red Line of Revenue Estates. Abadi Area) Construction and Reconstruction Building Bye Lairs for villages both within and outside Municipal Limits) falling in Union Territory of Chandigarh. 2017' and as much as you haveraised the following unauthorized construction /encroachment: -"            
+                "text":[
+                  {
+                    "text": "              Whereas you are the owner/occupier of Premises i.e. Residence or Commercial Schools/Plots/SCF basement/Shop/ H.No "            
+                  },
+                  {
+                    "text":"{{siteNumber}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" on which you have begun/erected/re-erected building in contravention of above section of the 'Chandigarh Rural Inhabitation (Area within Red Line of Revenue Estates. Abadi Area) Construction and Reconstruction Building Bye Lairs for villages both within and outside Municipal Limits) falling in Union Territory of Chandigarh. 2017' and as much as you haveraised the following unauthorized construction /encroachment: -"
+                  }
+                ]
             }, 
             {          
                 "margin": [0, 20, 0, 0],
                 "style":"pdfContent",
                 "table":{
                     "widths": ["33.33%", "33.33%", "33.33%"],
+                    
                     "body":[
                          [
                         {
-                            "text":"S.NO",
+                            "text":"S.No",
                             "style":"pdfContent",
                             "bold":true
                         },
@@ -155,7 +167,16 @@
                             "style":"pdfContent",
                             "bold":true
                         }
-                    ],[{},{},{}]
+                    ],[{
+                      "text":"",
+                      "style":"pdfContent"
+                    },{
+                      "text":"{{violationDetails}}",
+                      "style":"pdfContent"
+                    },{
+                      "text":"",
+                      "style":"pdfContent"
+                    }]
                     ]
                    
                 }            
@@ -207,7 +228,7 @@
                         "bold":true
                     },
                     {
-                        "text": "Dated:",
+                        "text": "Dated: ___________",
                         "style": "pdfContent",
                         "alignment": "right",
                         "bold":true

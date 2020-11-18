@@ -1,7 +1,7 @@
 {
     "key": "est-partnership-deed-application-fresh",
     "DataConfigs": {
-        "serviceName": "rainmaker-rp",
+        "serviceName": "rainmaker-es",
         "version": "1.0.0",
         "baseKeyPath": "$.Applications.*",
         "entityIdPath": "$.applicationNumber",
@@ -564,8 +564,11 @@
                         "variable": "modeOfTransfer",
                         "value": {
                             "path": "$.applicationDetails.ownerDetails.modeOfTransfer"
-                        }
-                    },
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }                    },
                     {
                         "variable": "applicationNumber",
                         "value": {

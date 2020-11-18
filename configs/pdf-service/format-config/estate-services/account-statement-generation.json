@@ -23,7 +23,7 @@
                                
                             },
                             {
-                                "text": "{{address}}",
+                                "text": "",
                                 "alignment": "center",
                                 "style":"receipt-logo-header"
                             }
