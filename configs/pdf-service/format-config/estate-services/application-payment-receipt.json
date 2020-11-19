@@ -293,7 +293,7 @@
                                 
                               },
                               {
-                                "text":"",
+                                "text":"{{applicationCharges}}",
                                 "style":"receipt-table-key"
                               
                               }
@@ -305,7 +305,7 @@
                               
                               },
                               {
-                                "text":"",
+                                "text":"{{gstValue}}",
                                 "style":"receipt-table-key"
                               
                               }
@@ -317,7 +317,7 @@
                                
                             },
                             {
-                                "text":"",
+                                "text":"{{total}}",
                                 "style":"receipt-table-key"
                               
                               }

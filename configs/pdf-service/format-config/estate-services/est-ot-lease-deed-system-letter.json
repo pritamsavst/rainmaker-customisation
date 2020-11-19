@@ -53,7 +53,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2019/ ",
+                        "text": "No. MC/Estate/2020/ ",
                         "bold": true
                       },
                       {
@@ -124,7 +124,7 @@
                                 "text": "{{siteNumber}}","bold":true
                             },
                             {
-                                "text": " Manimajra ,UT Chandigarh"
+                                "text": " Manimajra, UT, Chandigarh"
                             }
                         ],
                         "style": "pdfContent",
@@ -136,7 +136,7 @@
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "             Enclosed please find herewith original deed with copy of thereof duly executed on _____. You are directed to get it Registered with Sub-Registrar , U.T Chandigarh  and submit the attested/notarized copy of same with this office for record"
+                "text": "             Enclosed please find herewith original deed with copy of thereof duly executed on _______________. You are directed to get it Registered with Sub-Registrar , U.T Chandigarh  and submit the attested/notarized copy of same with this office for record"
             },
             {
                 "style": "pdfContent",
