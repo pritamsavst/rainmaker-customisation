@@ -158,7 +158,16 @@
                   "path":"$.property.propertyDetails.dateOfAuction"
                 },
                 "type":"date"
-              }
+              },
+            
+            {
+              "variable":"dateOfAllotment",
+              "value":{
+                "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+              },
+              "type":"date"
+            }
+
 
             ]
           }

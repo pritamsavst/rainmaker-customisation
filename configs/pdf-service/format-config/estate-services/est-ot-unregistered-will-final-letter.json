@@ -74,7 +74,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{dateOfAllotment}}",
                         "bold": false
                       }
                     ],
@@ -159,7 +159,7 @@
                         "text":"        In view of the Registered/Un-Registered will dated "
                     },
                     {
-                        "text":"{{dateOfExecutionOfWill}} ","bold":true
+                        "text":"{{dateOfRegistration}} ","bold":true
                     },
                     {
                         "text":" Late Shri/Smt "
@@ -207,7 +207,7 @@
                         "text": " Chandigarh is hereby transferred in your name from the name of Late Shri/Smt"
                     },
                     {
-                        "text": "{{transferorName}} ",
+                        "text": " {{transferorName}} ",
                         "bold": true
                     },
                     {
