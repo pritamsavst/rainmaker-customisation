@@ -675,12 +675,9 @@ serviceMaps:
 
             - jsonPath: $.Properties.*.propertyDetails.estateAccount.auditDetails.lastModifiedTime
 
-
-
         - query: INSERT INTO cs_ep_offline_payment_detail (id, property_details_id, demand_id, amount, bank_name, transaction_number, date_of_payment, type) VALUES (?,?,?,?,?,?,?,?)ON CONFLICT (id) DO UPDATE SET demand_id=?, amount=?, bank_name=?, transaction_number=?, date_of_payment=?, type=?;
           basePath: $.Properties.*.propertyDetails.offlinePaymentDetails.*
           jsonMaps:
-
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.id
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.propertyDetailsId
@@ -708,7 +705,6 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.dateOfPayment
 
             - jsonPath: $.Properties.*.propertyDetails.offlinePaymentDetails.*.type
-
 
         - query: INSERT INTO cs_ep_collection(id, demand_id, interestCollected, principalCollected, collectedAt, created_by, modified_by, created_date, modified_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)ON CONFLICT (id) DO UPDATE SET interestCollected=?, principalCollected=?, modified_by=?, modified_date=?;
           basePath: $.Properties.*.propertyDetails.estateRentCollections.*
@@ -738,6 +734,113 @@ serviceMaps:
             - jsonPath: $.Properties.*.propertyDetails.estateRentCollections.*.auditDetails.lastModifiedBy
 
             - jsonPath: $.Properties.*.propertyDetails.estateRentCollections.*.auditDetails.lastModifiedTime
+
+        - query: INSERT INTO cs_ep_payment_config_v1(id, tenant_id, property_details_id, is_intrest_applicable, due_date_of_payment, no_of_months, rate_of_interest, security_amount, total_amount, is_ground_rent, ground_rent_generation_type, ground_rent_generate_demand, ground_rent_advance_rent, ground_rent_bill_start_date, ground_rent_advance_rent_date, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)ON CONFLICT (id) DO UPDATE SET is_intrest_applicable=?, due_date_of_payment=?, no_of_months=?, rate_of_interest=?, security_amount=?, total_amount=?, is_ground_rent=?, ground_rent_generation_type=?, ground_rent_generate_demand=?, ground_rent_advance_rent=?, ground_rent_bill_start_date=?, ground_rent_advance_rent_date=?, last_modified_by=?, last_modified_time=?;
+          basePath: $.Properties.*.propertyDetails.paymentConfig
+          jsonMaps:
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.id
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.tenantId
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.propertyDetailsId
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.isIntrestApplicable
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.dueDateOfPayment
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.noOfMonths
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.rateOfInterest
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.securityAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.totalAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.isGroundRent
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentGenerationType
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentGenerateDemand
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentAdvanceRent
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentBillStartDate
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentAdvanceRentDate
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.auditDetails.createdBy
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.auditDetails.lastModifiedBy
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.auditDetails.createdTime
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.auditDetails.lastModifiedTime
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.isIntrestApplicable
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.dueDateOfPayment
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.noOfMonths
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.rateOfInterest
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.securityAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.totalAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.isGroundRent
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentGenerationType
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentGenerateDemand
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentAdvanceRent
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentBillStartDate
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.groundRentAdvanceRentDate
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.auditDetails.lastModifiedBy
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.auditDetails.lastModifiedTime
+
+        - query: INSERT INTO cs_ep_payment_config_items_v1(id, tenant_id, payment_config_id, ground_rent_amount, ground_rent_start_month, ground_rent_end_month) VALUES (?, ?, ?, ?, ?, ?)ON CONFLICT (id) DO UPDATE SET ground_rent_amount=?, ground_rent_start_month=?, ground_rent_end_month=?;
+          basePath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*
+          jsonMaps:
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.id
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.tenantId
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.paymentConfigId
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.groundRentAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.groundRentStartMonth
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.groundRentEndMonth
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.groundRentAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.groundRentStartMonth
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.paymentConfigItems.*.groundRentEndMonth
+
+        - query: INSERT INTO cs_ep_premium_amount_config_items_v1(id, tenant_id, payment_config_id, premium_amount, premiumamountdate) VALUES (?, ?, ?, ?, ?)ON CONFLICT (id) DO UPDATE SET premium_amount=?, premiumamountdate=?;
+          basePath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*
+          jsonMaps:
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.id
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.tenantId
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.paymentConfigId
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.premiumAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.premiumAmountDate
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.premiumAmount
+
+            - jsonPath: $.Properties.*.propertyDetails.paymentConfig.premiumAmountConfigItems.*.premiumAmountDate
 
     - version: 1.0
       description: Persists Application details in cs_ep_application_v1 table
@@ -912,7 +1015,6 @@ serviceMaps:
         - query: UPDATE cs_ep_property_penalty_v1 SET paid=?, remaining_penalty_due=?, status=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: PropertyPenalties.*
           jsonMaps:
-
             - jsonPath: $.PropertyPenalties.*.isPaid
 
             - jsonPath: $.PropertyPenalties.*.remainingPenaltyDue
@@ -924,4 +1026,59 @@ serviceMaps:
             - jsonPath: $.PropertyPenalties.*.auditDetails.lastModifiedTime
 
             - jsonPath: $.PropertyPenalties.*.id
+            
+            
+    - version: 1.0
+      description: Persists Extension Fee details in cs_ep_extension_fee_v1 table
+      fromTopic: em-save-extensionfee-topic
+      isTransaction: true
+      queryMaps:
+        - query: INSERT INTO cs_ep_extension_fee_v1 (id, tenantid, property_id, branch_type, amount, remaining_due, paid, status, generation_date, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: ExtensionFees.*
+          jsonMaps:
+            - jsonPath: $.ExtensionFees.*.id
 
+            - jsonPath: $.ExtensionFees.*.tenantId
+
+            - jsonPath: $.ExtensionFees.*.property.id
+
+            - jsonPath: $.ExtensionFees.*.branchType
+
+            - jsonPath: $.ExtensionFees.*.amount
+
+            - jsonPath: $.ExtensionFees.*.remainingDue
+            
+            - jsonPath: $.ExtensionFees.*.isPaid
+
+            - jsonPath: $.ExtensionFees.*.status
+            
+            - jsonPath: $.ExtensionFees.*.generationDate
+
+            - jsonPath: $.ExtensionFees.*.auditDetails.createdBy
+
+            - jsonPath: $.ExtensionFees.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.ExtensionFees.*.auditDetails.createdTime
+
+            - jsonPath: $.ExtensionFees.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update Extension Fee details in cs_ep_extension_fee_v1 table
+      fromTopic: em-update-extensionfee-topic
+      isTransaction: true
+      queryMaps:
+        - query: UPDATE cs_ep_extension_fee_v1 SET remaining_due=?, paid=?, status=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+          basePath: ExtensionFees.*
+          jsonMaps:
+            - jsonPath: $.ExtensionFees.*.remainingDue
+            
+            - jsonPath: $.ExtensionFees.*.isPaid
+
+            - jsonPath: $.ExtensionFees.*.status
+
+            - jsonPath: $.ExtensionFees.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.ExtensionFees.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.ExtensionFees.*.id
+                        
