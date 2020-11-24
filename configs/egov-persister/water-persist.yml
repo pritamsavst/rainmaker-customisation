@@ -89,7 +89,7 @@ serviceMaps:
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
        
    
-    - query: INSERT INTO eg_ws_connectionholder(tenantid, connectionid, userid, status, isprimaryholder, connectionholdertype, holdershippercentage, relationship, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_ws_connectionholder(tenantid, connectionid, userid, status, isprimaryholder, connectionholdertype, holdershippercentage, relationship, name, mobile_No, gender, guardian_name, correspondance_address, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       basePath: $.WaterConnection.connectionHolders.*
       jsonMaps:      
 
@@ -108,6 +108,16 @@ serviceMaps:
        - jsonPath: $.WaterConnection.connectionHolders.*.ownerShipPercentage
 
        - jsonPath: $.WaterConnection.connectionHolders.*.relationship
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.name
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.mobileNumber
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.gender
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.fatherOrHusbandName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.correspondenceAddress
 
        - jsonPath: $.WaterConnection.auditDetails.createdBy
 
@@ -168,6 +178,20 @@ serviceMaps:
           - jsonPath: $.WaterConnection.auditDetails.createdTime
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+          
+    - query: INSERT INTO eg_ws_connection_mapping(id, user_Id, connection_Id, createdBy, createdTime) VALUES (?, ?, ?, ?, ?);
+      basePath: $.WaterConnection
+      jsonMaps:
+         
+          - jsonPath: $.WaterConnection.id 
+
+          - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+          - jsonPath: $.WaterConnection.connectionNo
+
+          - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+          - jsonPath: $.WaterConnection.auditDetails.createdTime
        
 
  - version: 1.0
@@ -357,7 +381,7 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.plumberInfo.*.auditDetails.lastModifiedTime
 
-    - query: INSERT INTO eg_ws_connectionholder(tenantid, connectionid, userid, status, isprimaryholder, connectionholdertype, holdershippercentage, relationship, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (connectionid) DO UPDATE SET tenantid =?, userid =?,status =?, isprimaryholder =?, connectionholdertype =?, holdershippercentage =?, relationship=?, lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_connectionholder(tenantid, connectionid, userid, status, isprimaryholder, connectionholdertype, holdershippercentage, relationship, name, mobile_No, gender, guardian_name, correspondance_address, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (connectionid) DO UPDATE SET tenantid =?, userid =?,status =?, isprimaryholder =?, connectionholdertype =?, holdershippercentage =?, relationship=?,  name=?, mobile_No=?, gender=?, guardian_name=?, correspondance_address=?, lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.connectionHolders.*
       jsonMaps:      
 
@@ -376,6 +400,16 @@ serviceMaps:
        - jsonPath: $.WaterConnection.connectionHolders.*.ownerShipPercentage
 
        - jsonPath: $.WaterConnection.connectionHolders.*.relationship
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.name
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.mobileNumber
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.gender
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.fatherOrHusbandName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.correspondenceAddress
 
        - jsonPath: $.WaterConnection.auditDetails.createdBy
 
@@ -398,6 +432,16 @@ serviceMaps:
        - jsonPath: $.WaterConnection.connectionHolders.*.ownerShipPercentage
 
        - jsonPath: $.WaterConnection.connectionHolders.*.relationship
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.name
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.mobileNumber
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.gender
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.fatherOrHusbandName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.correspondenceAddress
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -569,4 +613,40 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.createdTime
 
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime   
+   
+
+ - version: 1.0
+   name: add User connection mapping
+   description: add User connection mapping
+   fromTopic: add-ws-user-connection-mapping
+   isTransaction: true
+   queryMaps:
+   
+    - query: INSERT INTO eg_ws_connection_mapping(id, user_Id, connection_Id, createdBy, createdTime) VALUES (?, ?, ?, ?, ?);
+      basePath: $.WaterConnection.waterApplication
+      jsonMaps:
+         
+          - jsonPath: $.WaterConnection.id
+
+          - jsonPath: $.WaterConnection.auditDetails.createdBy
+          
+          - jsonPath: $.WaterConnection.connectionNo
+          
+          - jsonPath: $.WaterConnection.auditDetails.createdBy
+          
+          - jsonPath: $.WaterConnection.auditDetails.createdTime   
+   
+
+ - version: 1.0
+   name: delete User connection mapping
+   description: delete User connection mapping
+   fromTopic: delete-ws-user-connection-mapping
+   isTransaction: true
+   queryMaps:
+   
+    - query: delete from eg_ws_connection_mapping where connection_Id = ?;
+      basePath: $.WaterConnection.waterApplication
+      jsonMaps:
+         
+          - jsonPath: $.WaterConnection.connectionNo
