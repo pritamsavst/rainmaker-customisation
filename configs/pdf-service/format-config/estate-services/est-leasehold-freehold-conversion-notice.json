@@ -71,7 +71,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{dateOfAllotment}}",
                         "bold": false
                       }
                     ],
@@ -142,7 +142,7 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "             Reference your application dated ____________on the subject noted above. "
+                "text": "             Reference your application dated {{createdTime}} on the subject noted above. "
             },
             {
                 "margin": [0, 20, 0, 0],
@@ -159,13 +159,13 @@
                         "text": "in Modern Housing complex, Phase-Ili, Manimajra, U.T. Chandigarh was allotted to you on Hire Purchase/ under partial/ Fully Self Finance system Basis by the Chandigarh Housing Board, Chandigarh, vide Allotment letter No. "
                     },
                     {
-                        "text": " {{allotmentNumber}} "
+                        "text": " {{allotmentNumber}} ","bold":true
                     },
                     {
                         "text": "dated "
                     },
                     {
-                        "text": "{{dateOfAllotment}}"
+                        "text": "{{dateOfAllotment}}","bold":true
                     }
                 ]
             },
