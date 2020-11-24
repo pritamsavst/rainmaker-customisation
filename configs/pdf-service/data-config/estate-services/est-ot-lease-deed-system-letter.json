@@ -159,14 +159,20 @@
                 },
                 "type":"date"
               },
-            
-            {
-              "variable":"dateOfAllotment",
-              "value":{
-                "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+              {
+                "variable":"createdTime",
+                "value":{
+                  "path":"$.auditDetails.createdTime"
+                },
+                "type":"date"
               },
-              "type":"date"
-            }
+              {
+                "variable":"dateOfAllotment",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+                },
+                "type":"date"
+              }
 
 
             ]
