@@ -9,7 +9,6 @@
         "mappings": [{
             "mappings": [{
                 "direct": [
-
                     {
                         "variable": "header",
                         "value": {
@@ -909,9 +908,342 @@
                         "value": {
                             "path": "$.propertyDetails.purchaser[0].ownerDetails.ownerDocuments.*"
                         }
+                    },
+                    {
+                        "variable":"ES_GROUND_RENT_DETAILS_HEADER",
+                        "value": {
+                            "path": "GROUND_RENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_GROUND_RENT_GENERATION_TYPE_LABEL",
+                        "value": {
+                            "path": "GROUND_RENT_GENERATION_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }  
+                    },
+                    {
+                        "variable":"ES_DATE_TO_GENERATE_DEMAND_RENT_LABEL",
+                        "value": {
+                            "path": "DATE_TO_GENERATE_DEMAND_RENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }  
+                    },
+                    {
+                        "variable":"ES_BILLING_START_DATE_LABEL",
+                        "value": {
+                            "path": "BILLING_START_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }    
+                    },
+                    {
+                        "variable":"ES_LICENSE_FEE_DETAILS_HEADER",
+                        "value": {
+                            "path": "LICENSE_FEE_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        } 
+                    },
+                    {
+                        "variable":"ES_LICENSE_FEE_GENERATION_TYPE_LABEL",
+                        "value": {
+                            "path": "LICENSE_FEE_GENERATION_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }    
+                    },
+                    {
+                        "variable":"ES_DATE_TO_GENERATE_DEMAND_LICENSE_FEE_LABEL",
+                        "value": {
+                            "path": "DATE_TO_GENERATE_DEMAND_LICENSE_FEE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }   
+                    },
+                    {
+                        "variable":"ES_BILLING_START_DATE_LABEL",
+                        "value": {
+                            "path": "BILLING_START_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_ADVANCE_RENT_DETAILS_HEADER",
+                        "value": {
+                            "path": "ADVANCE_RENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_ADVANCED_RENT_LABEL",
+                        "value": {
+                            "path": "ADVANCED_RENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    }  ,
+                    {
+                        "variable":"ES_DATE_OF_PAYMENT_OF_ADVANCE_RENT_LABEL",
+                        "value": {
+                            "path": "DATE_OF_PAYMENT_OF_ADVANCE_RENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    }  ,
+                    {
+                        "variable":"ES_SECURITY_DETAILS_HEADER",
+                        "value": {
+                            "path": "SECURITY_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    }  ,
+                    {
+                        "variable":"ES_SECURITY_FEE_AMOUNT_LABEL",
+                        "value": {
+                            "path": "SECURITY_FEE_AMOUNT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    }  ,
+                    {
+                        "variable":"ES_DATE_OF_PAYMENT_LABEL",
+                        "value": {
+                            "path": "DATE_OF_PAYMENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    }  ,
+                    {
+                        "variable":"ES_CONSOLIDATED_PAYMENT_DETAILS",
+                        "value": {
+                            "path": "CONSOLIDATED_PAYMENT_DETAILS"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_CONSOLIDATED_RENT_LABEL",
+                        "value": {
+                            "path": "CONSOLIDATED_RENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_CONSOLIDATED_GST_LABEL",
+                        "value": {
+                            "path": "CONSOLIDATED_GST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_CONSOLIDATED_INTEREST_ON_RENT_LABEL",
+                        "value": {
+                            "path": "CONSOLIDATED_INTEREST_ON_RENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"ES_CONSOLIDATED_INTEREST_ON_GST_LABEL",
+                        "value": {
+                            "path": "CONSOLIDATED_INTEREST_ON_GST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    }  ,
+                    {
+                        "variable":"ES_CONSOLIDATED_TILL_LABEL",
+                        "value": {
+                            "path": "CONSOLIDATED_TILL_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable": "groundRentGenerationType",
+                        "value": {
+                            "path": "$.propertyDetails.groundRentDetails.groundRentGenerationType"
+                        }
+                    },
+                    {
+                        "variable": "groundRentGenerateDemand",
+                        "value": {
+                            "path": "$.propertyDetails.groundRentDetails.groundRentGenerateDemand"
+                        }
+                    },
+                     {
+                        "variable": "groundRentBillStartDate",
+                        "value": {
+                            "path": "$.propertyDetails.groundRentDetails.groundRentBillStartDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "groundRentGenerationTypeL",
+                        "value": {
+                            "path": "$.propertyDetails.licenceDetails.groundRentGenerationType"
+                        }
+                    },
+                    {
+                        "variable": "groundRentGenerateDemandL",
+                        "value": {
+                            "path": "$.propertyDetails.licenceDetails.groundRentGenerateDemand"
+                        }
+                    },
+                     {
+                        "variable": "groundRentBillStartDateL",
+                        "value": {
+                            "path": "$.propertyDetails.licenceDetails.groundRentBillStartDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "groundRentAdvanceRent",
+                        "value": {
+                            "path": "$.propertyDetails.paymentConfig.groundRentAdvanceRent"
+                        }
+                    },
+                    {
+                        "variable": "groundRentAdvanceRentDate",
+                        "value": {
+                            "path": "$.propertyDetails.paymentConfig.groundRentAdvanceRentDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "securityAmount",
+                        "value": {
+                            "path": "$.propertyDetails.paymentConfig.securityAmount"
+                        }
+                    },
+                    {
+                        "variable": "dueDateOfPayment",
+                        "value": {
+                            "path": "$.propertyDetails.paymentConfig.dueDateOfPayment"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "rent",
+                        "value": {
+                            "path": "$.propertyDetails.estateDemands[0].rent"
+                        }
+                    },
+                    {
+                        "variable": "gst",
+                        "value": {
+                            "path": "$.propertyDetails.estateDemands[0].gst"
+                        }
+                    },
+                    {
+                        "variable": "penaltyInterest",
+                        "value": {
+                            "path": "$.propertyDetails.estateDemands[0].penaltyInterest"
+                        }
+                    },
+                    {
+                        "variable": "gstInterest",
+                        "value": {
+                            "path": "$.propertyDetails.estateDemands[0].gstInterest"
+                        }
+                    },
+                    {
+                        "variable": "generationDate",
+                        "value": {
+                            "path": "$.propertyDetails.estateDemands[0].generationDate"
+                        },
+                        "type":"date"
                     }
-                    
-
                 ]
             }]
         }]
