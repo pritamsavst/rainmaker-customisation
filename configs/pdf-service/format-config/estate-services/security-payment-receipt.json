@@ -1,5 +1,5 @@
 {
-    "key": "extension-fee-payment-receipt",
+    "key": "security-payment-receipt",
     "config": {
        
            "content": [
@@ -188,21 +188,21 @@
             {
               "style":"pt-reciept-citizen-table",
                 "table":{
-                  "widths":["25%","25%","25%","25%"],
+                    "widths":["25%","25%","25%","25%"],
                     "body":[
                         [
                             {
-                                "text":"{{TOTALEXTENSIONFEE}}",
+                                "text":"{{ES_TOTALSECURITYDEPOSIT}}",
                                 "style": "receipt-table-key"
                               
                             },
                             {
-                                "text":"{{TOTALEXTENSIONFEEPAID}}",
+                                "text":"{{TOTALSECURITYDEPOSITPAID}}",
                                 "style": "receipt-table-key"
                                 
                               },
                               {
-                                "text":"{{TOTALEXTENSIONFEEDUE}}",
+                                "text":"{{TOTALSECURITYDEPOSITDUE}}",
                                 "style": "receipt-table-key"
                                
                               },
@@ -213,13 +213,13 @@
                         ],
                         [
                               {
-                                "text":"{{totalExtensionFee}}"
+                                "text":"{{totalSecurityDeposit}}"
                               },
                               {
-                                "text":"{{totalExtensionFeePaid}}"
+                                "text":"{{totalSecurityDepositPaid}}"
                               },
                               {
-                                "text":"{{totalExtensionFeeDue}}"
+                                "text":"{{totalSecurityDepositDue}}"
                               },
                               {
                                 "text":"{{dateOfPayment}} , {{time}}"
