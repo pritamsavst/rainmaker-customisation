@@ -31,7 +31,7 @@
                         {
                             "variable": "rentPayment",
                             "value": {
-                              "path": "RENT_PAYMENT_SUB_HEADER"
+                              "path": "SECURITY_PAYMENT_SUB_HEADER"
                             },
                             "type": "label",
                             "localisation":{
