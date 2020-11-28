@@ -709,7 +709,7 @@
                     {
                         "variable": "witnessPhoneValue",
                         "value": {
-                            "path": "$.applicationDetails.witness[0].phone"
+                            "path": "$.applicationDetails.witness[0].mobileNo"
                         }
                     },
                     {

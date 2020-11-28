@@ -1,5 +1,5 @@
 {
-    "key": "penalty-payment-receipt",
+    "key": "security-payment-receipt",
     "DataConfigs": {
         "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -31,7 +31,7 @@
                         {
                             "variable": "rentPayment",
                             "value": {
-                              "path": "PENALTY_PAYMENT_SUB_HEADER"
+                              "path": "SECURITY_PAYMENT_SUB_HEADER"
                             },
                             "type": "label",
                             "localisation":{
@@ -40,13 +40,6 @@
                                "module":"rainmaker-es"
                             } 
                           },
-                          {
-                            "variable": "dateOfPayment",
-                            "value": {
-                              "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].dateOfPayment"
-                            },
-                            "type":"date"
-                        },
                           {
                             "variable": "time",
                             "value": {
@@ -90,21 +83,21 @@
                             }
                           },
                           {
-                            "variable":"totalPenalty",
+                            "variable":"totalSecurityDeposit",
                             "value":{
-                              "path":"$.Properties[0].PenaltyStatementSummary.totalPenalty"
+                              "path":"$.Properties[0].SecurityDepositStatementSummary.totalSecurityDeposit"
                             }
                           },
                           {
-                            "variable":"totalPenaltyDue",
+                            "variable":"totalSecurityDepositDue",
                             "value":{
-                              "path":"$.Properties[0].PenaltyStatementSummary.totalPenaltyDue"
+                              "path":"$.Properties[0].SecurityDepositStatementSummary.totalSecurityDepositDue"
                             }
                           },
                           {
-                            "variable":"totalPenaltyPaid",
+                            "variable":"totalSecurityDepositPaid",
                             "value":{
-                              "path":"$.Properties[0].PenaltyStatementSummary.totalPenaltyPaid"
+                              "path":"$.Properties[0].SecurityDepositStatementSummary.totalSecurityDepositPaid"
                             }
                           },
                         {
@@ -198,11 +191,10 @@
                                "module":"rainmaker-es"
                             } 
                           },
-                    
                           {
-                            "variable": "ES_TOTALPENALTY",
+                            "variable": "ES_TOTALSECURITYDEPOSIT",
                             "value": {
-                              "path": "TOTALPENALTY"
+                              "path": "TOTALSECURITYDEPOSIT"
                             },
                             "type": "label",
                             "localisation":{
@@ -212,9 +204,9 @@
                             } 
                           },
                           {
-                            "variable": "TOTALPENALTYPAID",
+                            "variable": "TOTALSECURITYDEPOSITPAID",
                             "value": {
-                              "path": "TOTALPENALTYPAID"
+                              "path": "TOTALSECURITYDEPOSITPAID"
                             },
                             "type": "label",
                             "localisation":{
@@ -224,9 +216,9 @@
                             } 
                           },
                           {
-                            "variable": "TOTALPENALTYDUE",
+                            "variable": "TOTALSECURITYDEPOSITDUE",
                             "value": {
-                              "path": "TOTALPENALTYDUE"
+                              "path": "TOTALSECURITYDEPOSITDUE"
                             },
                             "type": "label",
                             "localisation":{
@@ -235,7 +227,7 @@
                                "module":"rainmaker-es"
                             } 
                           },
-                         
+                       
                         {
                             "variable": "paymentInformation",
                             "value": {
@@ -315,6 +307,13 @@
                             "value": {
                               "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].transactionNumber"
                             }
+                        },
+                        {
+                            "variable": "dateOfPayment",
+                            "value": {
+                              "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].dateOfPayment"
+                            },
+                            "type":"date"
                         },
                         {
                             "variable": "bankName",

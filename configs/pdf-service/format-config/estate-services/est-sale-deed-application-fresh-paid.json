@@ -269,7 +269,7 @@
             },
             "layout": {}
            },
-          {
+           {
             "stack": [
               {
                 "style": "noc-table2",
@@ -417,7 +417,7 @@
                                  "style": "receipt-table-value-cont"
                               },
                               {
-                                "text":"{{propertyApplicationNumberLabel}}",
+                                "text":"{{dueAmountLabel}}",
                                 "border":[
                                   false,
                                   false,
@@ -465,7 +465,7 @@
                                  "width":150
                               },
                               {
-                                "text":"{{proertyApplicationNumberValue}}",
+                                "text":"{{dueAmountValue}}",
                                 "border":[
                                   false,
                                   false,
@@ -475,106 +475,8 @@
                                  "style": "receipt-table2"
                               }
                            
-                          ],
-                          [
-                         
-                              {
-                                "text":"{{dueAmountLabel}}",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                 "style": "receipt-table-value-cont"
-                              }
-                           
-                          ],
-                          [
-                          
-                        
-                            {
-                              "text":"{{dueAmountValue}}",
-                              "border":[
-                                false,
-                                false,
-                                false,
-                                false
-                              ],
-                              
-                            "style": "receipt-table2"
-                           
-                            },
-                            {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              },
-                              {
-                                "text":"",
-                                "border":[
-                                  false,
-                                  false,
-                                  false,
-                                  false
-                                ],
-                                
-                              "style": "receipt-table2"
-                             
-                              }
-                           
-                           
                           ]
+                      
                            ]
                         },
                         "border":[

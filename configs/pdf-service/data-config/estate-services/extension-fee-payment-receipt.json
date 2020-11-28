@@ -31,7 +31,7 @@
                         {
                             "variable": "rentPayment",
                             "value": {
-                              "path": "RENT_PAYMENT_SUB_HEADER"
+                              "path": "EXTENSION_PAYMENT_SUB_HEADER"
                             },
                             "type": "label",
                             "localisation":{
@@ -39,13 +39,6 @@
                                "prefix":"ES",   
                                "module":"rainmaker-es"
                             } 
-                          },
-                          {
-                            "variable": "dateOfPayment",
-                            "value": {
-                              "path": "$.Payments[0].transactionDate"
-                            },
-                            "type":"date"
                           },
                           {
                             "variable": "time",
@@ -198,7 +191,13 @@
                                "module":"rainmaker-es"
                             } 
                           },
-                    
+                          {
+                            "variable": "dateOfPayment",
+                            "value": {
+                              "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].dateOfPayment"
+                            },
+                            "type":"date"
+                        },
                           {
                             "variable": "TOTALEXTENSIONFEE",
                             "value": {

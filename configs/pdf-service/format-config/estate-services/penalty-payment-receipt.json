@@ -188,7 +188,7 @@
             {
               "style":"pt-reciept-citizen-table",
                 "table":{
-                    "widths":["33.33%","33.33%","33.33%"],
+                  "widths":["25%","25%","25%","25%"],
                     "body":[
                         [
                             {
@@ -205,6 +205,10 @@
                                 "text":"{{TOTALPENALTYDUE}}",
                                 "style": "receipt-table-key"
                                
+                              },
+                              {
+                                "text":"{{payableAmountOn}}",
+                                "style": "receipt-table-key"
                               }
                         ],
                         [
@@ -216,6 +220,9 @@
                               },
                               {
                                 "text":"{{totalPenaltyDue}}"
+                              },
+                              {
+                                "text":"{{dateOfPayment}} , {{time}}"
                               }
                          ]
                     ]
