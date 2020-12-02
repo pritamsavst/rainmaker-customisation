@@ -32,10 +32,6 @@
                                   {
                                       "text":"{{colony_branch}}",
                                       "style": "receipt-logo-header"
-                                  },
-                                  {
-                                      "text": "{{payment_receipt}}",
-                                      "style": "receipt-table-value-cont"
                                   }
                             ],
                             "margin": [
