@@ -75,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{dateOfAllotment}}",
                         "bold": false
                       }
                     ],
@@ -91,14 +91,16 @@
                 "style": "pdfContent"
             },
             {
-                "margin": [40, 10, 0, 0],
+                "margin": [0, 10, 0, 0],
                 "stack": [{
-                        "text": " {{name}} ",
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{name}} ",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "{{address}}",
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{address}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -127,7 +129,7 @@
                                 "bold": true
                             },
                             {
-                                "text": "shares in respect of leasehold SCO Site No"
+                                "text": "shares in respect of leasehold SCO Site No "
                             },
                             {
                                 "text": "{{siteNumber}}  ",
@@ -148,8 +150,17 @@
             {
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "            Reference your letter dated ______ on the subject noted above. ",
-                "preserveLeadingSpaces": true
+                "text":[{
+                    "text": "             Reference your letter dated ",
+                    "preserveLeadingSpaces": true
+                },
+                {
+                    "text":"{{createdTime}}  ","bold":true
+                },
+                {
+                    "text":"on the subject noted above."
+                }]
+                
 
             },
             {
@@ -157,7 +168,7 @@
                 "style": "pdfContent",
                 "text": [{
                         "preserveLeadingSpaces": true,
-                        "text": "            In view of the indemnity bond and affidavit submitted by you along with liability affidavit of   "
+                        "text": "             In view of the indemnity bond and affidavit submitted by you along with liability affidavit of   "
                     },
                     {
                         "text": " {{transferorName}} S/o  {{transferorGuardianName}}, {{transferorAddress}}, ","bold":true

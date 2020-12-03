@@ -75,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{dateOfAllotment}}",
                         "bold": false
                       }
                     ],

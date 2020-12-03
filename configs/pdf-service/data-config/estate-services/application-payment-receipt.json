@@ -555,8 +555,28 @@
                             "module": "rainmaker-es"
                           }
 
-                    }
+                    },
+                    {
+                      "variable": "applicationCharges",
+                      "value": {
+                          "path": "$.feeEstimate[0].value"
+                      }
+                  },
+                  {
+                      "variable": "gstValue",
+                      "value": {
+                          "path": "$.feeEstimate[1].value"
+                      }
+                  }
                     ]
+                },
+                {
+                  "derived": [
+                    {
+                      "variable": "total",
+                      "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
+                    }
+                  ]
                 }
             ]
         }

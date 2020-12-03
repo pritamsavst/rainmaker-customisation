@@ -1,0 +1,23 @@
+{
+    "key": "mm-un-registeredWill-final-letter",
+    "DataConfigs": {
+      "serviceName": "rainmaker-es",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Applications.*",
+      "entityIdPath": "$.applicationNumber",
+      "isCommonTableBorderRequired": true,
+      "mappings": [{
+        "mappings": [{
+            "direct": [
+              {
+                "variable": "logo",
+                "url": "https://egov.transerve.com/media/logo.png",
+                "type": "image"
+              }
+              
+            ]
+          }
+        ]
+      }]
+    }
+  }  

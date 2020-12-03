@@ -74,7 +74,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": " {{dateOfAllotment}}",
                         "bold": false
                       }
                     ],
@@ -90,14 +90,16 @@
                 "style": "pdfContent"
             },
             {
-                "margin": [50, 10, 0, 0],
+                "margin": [0, 10, 0, 0],
                 "stack": [{
-                        "text": "{{transferorName}}",
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{transferorName}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
-                        "text": "{{transferorAddress}}",
+                        "preserveLeadingSpaces": true,
+                        "text": "             {{transferorAddress}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -114,7 +116,7 @@
 
                     },
                     {
-                        "margin": [20, 0, 0, 0],
+                        "margin": [10, 0, 0, 0],
                         "width": "*",
                         "text": [{
                                 "text": "Issuance of ownership certificate and No Due Certificate in r/o SCF/SCO/Booth/Residential Site No.  "
@@ -125,7 +127,7 @@
 
                             },
                             {
-                                "text": "Chandigarh"
+                                "text": "{{companyAddress}}"
                             }
                         ],
                         "style": "pdfContent"
@@ -190,7 +192,7 @@
                         "alignment": "left"
                     },
                     {
-                        "text": "Dated:",
+                        "text": "Dated:__________",
                         "style": "pdfContent",
                         "alignment": "right"
                     }

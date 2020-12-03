@@ -1,0 +1,393 @@
+{
+    "key": "extension-fee-payment-receipt",
+    "DataConfigs": {
+        "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$",
+    "entityIdPath":"$.Payments[0].paymentDetails[0].bill.consumerCode",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+        {
+            "mappings": [
+                {
+                    "direct": [
+                        {
+                            "variable": "logo",                        
+                            "url":"https://egov.transerve.com/media/logo.png",
+                            "type":"image"
+                          },
+                          {
+                            "variable": "header",
+                            "value": {
+                              "path": "PDF_HEADER"
+                            },
+                            "type": "label",
+                            "localisation": {
+                              "prefix": "ES",
+                              "module": "rainmaker-es"
+                            }
+                          },
+                       
+                        {
+                            "variable": "rentPayment",
+                            "value": {
+                              "path": "EXTENSION_PAYMENT_SUB_HEADER"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "time",
+                            "value": {
+                              "path": "$.Payments[0].paymentDetails[0].auditDetails.lastModifiedTime"
+                            }
+                          },
+                          {
+                            "variable": "fileNumberLabel",
+                            "value": {
+                              "path": "FILE_NUMBER_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "payableAmountOn",
+                            "value": {
+                              "path": "PAYABLE_AMOUNT_ON"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "generatedBy",
+                            "value": {
+                              "path": "$.generatedBy"
+                            }
+                        },
+                          {
+                            "variable": "fileNumber",
+                            "value": {
+                              "path": "$.Properties[0].fileNumber"
+                            }
+                          },
+                          {
+                            "variable":"totalExtensionFee",
+                            "value":{
+                              "path":"$.Properties[0].ExtensionFeeStatementSummary.totalExtensionFee"
+                            }
+                          },
+                          {
+                            "variable":"totalExtensionFeeDue",
+                            "value":{
+                              "path":"$.Properties[0].ExtensionFeeStatementSummary.totalExtensionFeeDue"
+                            }
+                          },
+                          {
+                            "variable":"totalExtensionFeePaid",
+                            "value":{
+                              "path":"$.Properties[0].ExtensionFeeStatementSummary.totalExtensionFeePaid"
+                            }
+                          },
+                        {
+                            "variable": "payment_receipt",
+                            "value": {
+                              "path": "PAYMENT_RECEIPT_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                           
+                        {
+                            "variable": "payer_information",
+                            "value": {
+                              "path": "PAYER_INFORMATION_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "receipt_number_label",
+                            "value": {
+                              "path": "RECEIPT_NO_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "receiptNumber",
+                            "value": {
+                              "path": "$.Payments[0].paymentDetails[0].receiptNumber"
+                            }
+                        },
+                        {
+                            "variable": "payer_name_label",
+                            "value": {
+                              "path": "PAYER_NAME_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "payerName",
+                            "value": {
+                              "path": "$.Payments[0].payerName"
+                            }
+                        },
+                        {
+                            "variable": "payer_mobile_no_label",
+                            "value": {
+                              "path": "PAYER_MOBILE_NO_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "mobileNumber",
+                            "value": {
+                              "path": "$.Payments[0].mobileNumber"
+                            }
+                        },
+                        {
+                            "variable": "payableAmount",
+                            "value": {
+                              "path": "PAYABLE_AMOUNT_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "dateOfPayment",
+                            "value": {
+                              "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].dateOfPayment"
+                            },
+                            "type":"date"
+                        },
+                          {
+                            "variable": "TOTALEXTENSIONFEE",
+                            "value": {
+                              "path": "TOTALEXTENSIONFEE"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "TOTALEXTENSIONFEEPAID",
+                            "value": {
+                              "path": "TOTALEXTENSIONFEEPAID"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "TOTALEXTENSIONFEEDUE",
+                            "value": {
+                              "path": "TOTALEXTENSIONFEEDUE"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "ES_BALANCERENTPENALTY",
+                            "value": {
+                              "path": "BALANCERENTPENALTY"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "ES_BALANCEAMOUNT",
+                            "value": {
+                              "path": "BALANCEAMOUNT"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "ES_TOTAL_DUE",
+                            "value": {
+                              "path": "TOTAL_DUE"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                       
+                        {
+                            "variable": "paymentInformation",
+                            "value": {
+                              "path": "PAYMENT_INFORMATION_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "amount_paid_label",
+                            "value": {
+                              "path": "AMOUNT_PAID_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "amountPaid",
+                            "value": {
+                              "path": "$..Payments[0].paymentDetails[0].totalAmountPaid"
+                            }
+                        },
+                       
+                        {
+                            "variable": "payment_mode_label",
+                            "value": {
+                              "path": "PAYMENT_MODE_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                         
+                          {
+                            "variable": "transaction_id_label",
+                            "value": {
+                              "path": "TRANSACTION_ID_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "bank_name_label",
+                            "value": {
+                              "path": "BANK_NAME_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "paymentMode",
+                            "value": {
+                              "path": "$.Payments[0].paymentMode"
+                            }
+                        },
+                        {
+                            "variable": "transactionNumber",
+                            "value": {
+                              "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].transactionNumber"
+                            }
+                        },
+                        {
+                            "variable": "bankName",
+                            "value": {
+                              "path": "$.Properties[0].propertyDetails.offlinePaymentDetails[0].bankName"
+                            }
+                        },
+                
+                        {
+                            "variable": "generated_by_label",
+                            "value": {
+                              "path": "GENERATED_BY_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          },
+                          {
+                            "variable": "system_label",
+                            "value": {
+                              "path": "SYSTEM_LABEL"
+                            },
+                            "type": "label",
+                            "localisation":{
+                               "required":true,
+                               "prefix":"ES",   
+                               "module":"rainmaker-es"
+                            } 
+                          }
+                          
+                    ]
+                    
+                }
+            ]
+        }
+    ]
+    }
+}

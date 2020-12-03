@@ -37,6 +37,13 @@
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
+              },
+              {
+                "variable":"dateOfAllotment",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+                },
+                "type":"date"
               }
 
             ]

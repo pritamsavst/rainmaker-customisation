@@ -1,0 +1,422 @@
+{
+    "key": "penalty-payment-receipt",
+    "config": {
+       
+           "content": [
+            { 
+              "style": "rp-head",
+              "margin":[ -41,-41,-41,0], 
+              "table": {      
+                "widths": ["100%"],
+              "body":[
+                [
+                  {
+                    "fillColor":"#F2F2F2",
+                    "margin":[8,10,0,10],
+                    "columns":
+                    [
+                         {
+                            "image": "{{logo}}",
+                            "margin":[ 45,
+                              10,
+                              10,
+                              10],
+                            "width": 50  
+                          },
+                          {
+                            "width":"*",
+                            "stack": [
+                                {
+                                    "text": "{{header}}",
+                                    "style": "receipt-logo-header"
+                                  },
+                                  {
+                                      "text": "{{rentPayment}}",
+                                      "style": "receipt-logo-sub-header"
+                                  }
+                            ],
+                            "margin": [
+                              0,
+                              10,
+                              10,
+                              0
+                            ],
+                            "alignment": "center"
+                          }
+                    ]
+                  }
+                ]
+              ]
+              },
+              "layout": "noBorders"
+                
+            },
+            {
+                "style": "pt-reciept-citizen-header",
+                "columns":[
+                    {
+                           
+                            "text":"{{fileNumberLabel}} :",
+                            "alignment": "left",
+                            "width":"auto",
+                            "bold":true
+                    },
+                    {
+                           
+                            "text":"{{fileNumber}}",
+                            "width":"auto",
+                            "lineHeight":"3",
+                            "bold":false
+                            
+                    },
+                    {
+                        "text":"",
+                        "width":"*"
+                    },
+                    {
+                                   
+                            "text":"{{receipt_number_label}}:",
+                            "width":"auto",
+                            "bold":true
+  
+                          },
+                          {
+                           
+                            "text":"{{receiptNumber}}",
+                            "width":"auto",
+                            "lineHeight":"3",
+                            "bold":false
+                          }
+                    
+                    
+                ]
+            },
+
+            {
+                "text":"{{payer_information}}",
+                "alignment":"left",
+                "style":"pt-reciept-citizen-subheader"
+            },
+            {
+              "style":"pt-reciept-citizen-table",
+                    "table": {
+                        "widths": [
+                            "33.33%",
+                            "33.33%",
+                            "33.33%"
+                             ],
+                             "body": [
+                                 [
+                                    {
+                                        "text":"{{payer_name_label}}",
+                                        "style": "receipt-table-key",
+                                        "border":[
+                                          true,
+                                          true,
+                                          false,
+                                          true
+                                        ]
+                                      },
+                                      {
+                                        "text":"{{payerName}}",
+                                        "border":[
+                                          false,
+                                          true,
+                                          false,
+                                          true
+                                        ]
+                                      },
+                                      {
+                                        "text":"",
+                                        "border":[
+                                          false,
+                                          true,
+                                          true,
+                                          true
+                                        ],
+                                         "style": "receipt-table-value-cont"
+                                      }
+                                 ],
+                                 [
+                                    {
+                                        "text":"{{payer_mobile_no_label}}",
+                                        "border":[
+                                          true,
+                                          false,
+                                          false,
+                                          true
+                                        ],
+                                        "style": "receipt-table-key"                                      },
+                                      {
+                                        "text":"{{mobileNumber}}",
+                                        "border":[
+                                          false,
+                                          false,
+                                          false,
+                                          true
+                                        ]
+                                      },
+                                      {
+                                        "text":"",
+                                        "border":[
+                                          false,
+                                          false,
+                                          true,
+                                          true
+                                        ],
+                                         "style": "receipt-table-value-cont"
+                                      }
+                                 ]
+                             ]
+                    },
+                    "lineHeight":"1",
+                    "border":[
+                        true,
+                        false,
+                        true,
+                        false
+                      ]
+            },
+            {
+                "text":"{{payableAmount}}",
+                "alignment":"left",
+                "style":"pt-reciept-citizen-subheader",
+                "bold":true,
+                "fontSize":10
+                
+            },
+            {
+              "style":"pt-reciept-citizen-table",
+                "table":{
+                  "widths":["25%","25%","25%","25%"],
+                    "body":[
+                        [
+                            {
+                                "text":"{{ES_TOTALPENALTY}}",
+                                "style": "receipt-table-key"
+                              
+                            },
+                            {
+                                "text":"{{TOTALPENALTYPAID}}",
+                                "style": "receipt-table-key"
+                                
+                              },
+                              {
+                                "text":"{{TOTALPENALTYDUE}}",
+                                "style": "receipt-table-key"
+                               
+                              },
+                              {
+                                "text":"{{payableAmountOn}}",
+                                "style": "receipt-table-key"
+                              }
+                        ],
+                        [
+                              {
+                                "text":"{{totalPenalty}}"
+                              },
+                              {
+                                "text":"{{totalPenaltyPaid}}"
+                              },
+                              {
+                                "text":"{{totalPenaltyDue}}"
+                              },
+                              {
+                                "text":"{{dateOfPayment}} , {{time}}"
+                              }
+                         ]
+                    ]
+                }
+            },
+            {
+                "text":"{{paymentInformation}}",
+                "style":"pt-reciept-citizen-subheader",
+                "alignment":"left",
+                "bold":true,
+                "fontSize":10
+            },
+            {
+              "style":"pt-reciept-citizen-table",
+                "table":{
+                    "widths": ["33.33%", "33.33%", "33.33%"],
+                    "body":[
+                        [{ 
+                            "colSpan":3,
+                            "columns":[
+                                {"text":"{{amount_paid_label}} :",
+                                  "style": "receipt-table-key"},
+                                {
+                                "text":"{{amountPaid}}"
+                                }
+                            ]
+                        },
+                        {},{}
+                      
+                        
+                    ],
+                    [
+                        { 
+                          "text":"{{payment_mode_label}}",
+                          "style": "receipt-table-key"},
+                          {
+                         
+                              "text":"{{transaction_id_label}}",
+                              "style": "receipt-table-key"
+                          },
+                          { "text":"{{bank_name_label}}",
+                            "style": "receipt-table-key"}
+                        
+                          
+                    ],
+                    [
+                        {"text":"{{paymentMode}}"
+                          },
+                          {
+                          "text":"{{transactionNumber}}"
+                          },{
+                            "text":"{{bankName}}"
+                          }
+                          
+                    ]
+                   
+                    ]
+                }
+            },
+            {
+              "style": "receipt-approver",
+              "table": {
+                "widths": ["*"],
+                "body": [
+                  [
+                    {
+                      "stack": [
+                        {
+                          "text": "{{generated_by_label}}",
+                          "margin": [0, 0, 0, 0],
+                          "bold": true
+                        },
+                        {
+                          "text": "System",
+                          "margin": [0, 0, 0, 0],
+                          "bold": false
+                        }
+                      ],
+                      "alignment": "left"
+                    }
+                  ]
+                ]
+              },
+              "layout": "noBorders"
+            }
+        
+              
+           ],
+           "styles": {
+            "receipt-approver": {
+              "fontSize": 10,
+              "bold": true,
+              "margin": [
+                0,
+                60,
+                0,
+                8
+              ],
+              "color": "#484848"
+            },
+            "rp-head": {
+              "fillColor": "#F2F2F2",
+              "margin": [
+                -41,
+                -41,
+                -41,
+                0
+              ]
+            },
+            "pt-reciept-citizen-header": {
+              "fontSize": 12,
+              "bold": true,
+              "margin": [
+                0,
+                8,
+                0,
+                0
+              ],
+              "color": "#484848"
+            },
+            "pt-reciept-citizen-subheader": {
+              "fontSize": 10,
+              "bold": true,
+              "margin": [
+                0,
+                16,
+                0,
+                8
+              ],
+              "color": "#484848"
+            },
+            "pt-reciept-citizen-table": {
+              "fontSize": 10,
+              "color": "#484848"
+            },
+            "receipt-assess-table": {
+              "fontSize": 10,
+              "color": "#484848",
+              "margin": [
+                0,
+                8,
+                0,
+                0
+              ]
+            },
+            "receipt-assess-table-header": {
+              "bold": true,
+              "fillColor": "#D8D8D8",
+              "color": "#484848"
+            },
+            "receipt-header-details": {
+              "fontSize": 9,
+              "margin": [
+                0,
+                0,
+                0,
+                8
+              ],
+              "color": "#484848"
+            },
+            "receipt-table-key": {
+              "color": "#484848",
+              "bold": true
+            },
+            "receipt-table-value": {
+              "color": "#484848"
+            },
+            "receipt-logo-header": {
+              "color": "#484848",
+              "fontFamily": "Roboto",
+              "fontSize": 16,
+              "bold": true,
+              "letterSpacing": 0.74
+            },
+            "receipt-logo-sub-header": {
+              "color": "#484848",
+              "fontFamily": "Roboto",
+              "fontSize": 13,
+              "letterSpacing": 1.6,
+              "margin": [
+                0,
+                6,
+                0,
+                0
+              ]
+            },
+            "receipt-footer": {
+              "color": "#484848",
+              "fontSize": 8
+            },
+            "receipt-no": {
+              "color": "#484848",
+              "fontSize": 10
+            }
+           }
+    }
+}

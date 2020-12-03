@@ -1,88 +1,108 @@
 {
-    "key": "est-ot-unregistered-will-final-letter",
-    "DataConfigs": {
-      "serviceName": "rainmaker-es",
-      "version": "1.0.0",
-      "baseKeyPath": "$.Applications.*",
-      "entityIdPath": "$.applicationNumber",
-      "isCommonTableBorderRequired": true,
+  "key": "est-ot-unregistered-will-final-letter",
+  "DataConfigs": {
+    "serviceName": "rainmaker-es",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Applications.*",
+    "entityIdPath": "$.applicationNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [{
       "mappings": [{
-        "mappings": [{
-            "direct": [
+        "direct": [
 
-              {
-                "variable": "header",
-                "value": {
-                  "path": "PDF_HEADER"
-                },
-                "type": "label",
-                "localisation": {
-                  "prefix": "ES",
-                  "module": "rainmaker-es"
-                }
-              },
-              {
-                "variable": "colony_branch",
-                "value": {
-                  "path": "ESTATE_BRANCH_HEADER"
-                },
-                "type": "label",
-                "localisation": {
-                  "prefix": "ES",
-                  "module": "rainmaker-es"
-                }
-              },
-              {
-                "variable": "logo",
-                "url": "https://egov.transerve.com/media/logo.png",
-                "type": "image"
-              },
-              {
-                "variable":"applicationNumber",
-                "value":{
-                  "path":"$.applicationNumber"
-                }
-              },
-              {
-                "variable":"name",
-                "value":{
-                  "path":"$.applicationDetails.transferee.name"
-                }
-              }, {
-                "variable":"address",
-                "value":{
-                  "path":"$.applicationDetails.transferee.address"
-                }
-              },
-              {
-                "variable":"share",
-                "value":{
-                  "path":"$.applicationDetails.transferor.share"
-                }
-              },
-              {
-                "variable":"siteNumber",
-                "value":{
-                  "path":"$.property.siteNumber"
-                }
-              },
-              {
-                "variable":"transferorName",
-                "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.ownerName"
-                }
-              },
-              {
-                "variable":"dateOfExecutionOfWill",
-                "value":{
-                  "path":"$.applicationDetails.dateOfExecutionOfWill"
-                },
-                "type":"date"
-              }
-              
-            ]
+          {
+            "variable": "header",
+            "value": {
+              "path": "PDF_HEADER"
+            },
+            "type": "label",
+            "localisation": {
+              "prefix": "ES",
+              "module": "rainmaker-es"
+            }
+          },
+          {
+            "variable": "colony_branch",
+            "value": {
+              "path": "ESTATE_BRANCH_HEADER"
+            },
+            "type": "label",
+            "localisation": {
+              "prefix": "ES",
+              "module": "rainmaker-es"
+            }
+          },
+          {
+            "variable": "logo",
+            "url": "https://egov.transerve.com/media/logo.png",
+            "type": "image"
+          },
+          {
+            "variable": "applicationNumber",
+            "value": {
+              "path": "$.applicationNumber"
+            }
+          },
+          {
+            "variable": "name",
+            "value": {
+              "path": "$.applicationDetails.transferee.name"
+            }
+          }, {
+            "variable": "address",
+            "value": {
+              "path": "$.applicationDetails.transferee.address"
+            }
+          },
+          {
+            "variable": "share",
+            "value": {
+              "path": "$.applicationDetails.transferor.share"
+            }
+          },
+          {
+            "variable": "siteNumber",
+            "value": {
+              "path": "$.property.siteNumber"
+            }
+          },
+          {
+            "variable": "transferorName",
+            "value": {
+              "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+            }
+          },
+          {
+            "variable": "dateOfExecutionOfWill",
+            "value": {
+              "path": "$.applicationDetails.dateOfExecutionOfWill"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "createdTime",
+            "value": {
+              "path": "$.auditDetails.createdTime"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "dateOfRegistration",
+            "value": {
+              "path": "$.applicationDetails.dateOfRegistration"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "dateOfAllotment",
+            "value": {
+              "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+            },
+            "type": "date"
           }
+
         ]
       }]
-    }
-  }  
+    }]
+  }
+}
