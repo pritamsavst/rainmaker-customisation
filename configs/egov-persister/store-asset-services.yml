@@ -388,10 +388,10 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedBy
          -  jsonPath: $.materialReceipt.*.auditDetails.lastModifiedTime
             type: LONG
-      -  query: INSERT INTO materialreceiptdetailaddnlinfo(id, receiptDetailId, tenantId, receivedDate, lotNo,oldReceiptNumber,
+      -  query: INSERT INTO materialreceiptdetailaddnlinfo(id, receiptDetailId, tenantId, receiveddate, lotNo,oldReceiptNumber,
             expiryDate,userquantity,quantity, serialno) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id,tenantid) DO
             UPDATE SET lotNo = EXCLUDED.lotNo, oldReceiptNumber = EXCLUDED.oldReceiptNumber,userquantity = EXCLUDED.userquantity,quantity
-            = EXCLUDED.quantity, expiryDate = EXCLUDED.expiryDate ;
+            = EXCLUDED.quantity, expiryDate = EXCLUDED.expiryDate,receiveddate = EXCLUDED.receivedDate ;
          basePath: $.materialReceipt.*.receiptDetails.*.receiptDetailsAddnInfo.*
          jsonMaps:
          -  jsonPath: $.materialReceipt.*.receiptDetails.*.receiptDetailsAddnInfo.*.id
