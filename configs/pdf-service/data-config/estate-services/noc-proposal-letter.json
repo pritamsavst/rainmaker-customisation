@@ -79,6 +79,13 @@
             "value": {
               "path": "$.applicationDetails.owner.ownerDetails.address"
             }
+          },
+          {
+            "variable":"createdTime",
+            "value":{
+              "path":"$.auditDetails.createdTime"
+            },
+            "type":"date"
           }
           
         ]

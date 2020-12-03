@@ -283,25 +283,25 @@
                     "body":[
                         [
                             {
-                                "text":"{{applicationChargesLabel}}",
+                                "text":"{{applicationFeeLabelLabel}}",
                                 "style":"receipt-table-key"
                                 
                                 
                               },
                               {
-                                "text":"{{applicationCharges}}",
+                                "text":"{{applicationFee}}",
                                 "style":"receipt-table-key"
                               
                               }
                         ],
                         [
                             {
-                                "text":"{{gstPercentage}}",
+                                "text":"{{applicationTaxLabel}}",
                                 "style":"receipt-table-key"
                               
                               },
                               {
-                                "text":"{{gstValue}}",
+                                "text":"{{applicationTax}}",
                                 "style":"receipt-table-key"
                               
                               }
