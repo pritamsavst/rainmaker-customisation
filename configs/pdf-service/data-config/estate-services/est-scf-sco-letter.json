@@ -159,9 +159,9 @@
                 "type":"date"
               },
               {
-                "variable":"companyAddress",
+                "variable":"sectorNumber",
                 "value":{
-                  "path":"$.applicationDetails.company.address"
+                  "path":"$.property.sectorNumber"
                 }
               },
               {
@@ -186,9 +186,9 @@
               "type":"date"
             },
             {
-              "variable":"companyAddress",
+              "variable":"sectorNumber",
               "value":{
-                "path":"$.property.propertyDetails.areaSqft"
+                "path":"$.property.sectorNumber"
               }
             }
 

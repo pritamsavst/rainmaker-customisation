@@ -114,7 +114,7 @@
                     {
                         "margin": [10, 0, 0, 0],
                         "width": "*",
-                        "text": "Show cause notice in respect of SCF No.{{siteNumber}}, {{companyAddress}}",
+                        "text": "Show cause notice in respect of SCF No.{{siteNumber}}, {{sectorNumber}}",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -136,7 +136,7 @@
                         "text": "                WHEREAS the SCF Site No  "
                     },
                     {
-                        "text":"{{siteNumber}} , {{companyAddress}}","bold":true
+                        "text":"{{siteNumber}} , {{sectorNumber}}","bold":true
                     },
                     {
                         "text":" was initially allotted to "
