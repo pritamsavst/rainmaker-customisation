@@ -714,7 +714,11 @@
                         "variable": "relation",
                         "value": {
                             "path": "$.Applications[0].applicationDetails.transferee.relation"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "dob",
@@ -733,7 +737,11 @@
                         "variable": "relationWithDeceased",
                         "value": {
                             "path": "$.Applications[0].applicationDetails.transferee.relationWithDeceased"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                     },
                     {
                         "variable": "percentageOfShareTransferred",
