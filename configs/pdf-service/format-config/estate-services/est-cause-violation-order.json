@@ -23,7 +23,7 @@
                         "text": "        The Booth Site No "
                     },
                     {
-                        "text": " {{siteNumber}}, {{companyAddress}}",
+                        "text": " {{siteNumber}}, {{sectorNumber}}",
                         "bold": true
                     },
                     {

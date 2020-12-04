@@ -129,7 +129,7 @@
                 "text": "situated in "
               },
               {
-                "text":"{{companyAddress}}",
+                "text":"{{sectorNumber}}",
                 "bold":true
               },
               {
@@ -194,7 +194,7 @@
             "text": "situated in "
           },
           {
-            "text":"{{companyAddress}}",
+            "text":"{{sectorNumber}}",
             "bold":true
           },
           {

@@ -125,7 +125,7 @@
                                 "text":"situated in "
                             },
                             {
-                                "text":" {{companyAddress}} ","bold":true
+                                "text":" {{sectorNumber}} ","bold":true
                             },
                             {
                                 "text":" into SCO"
