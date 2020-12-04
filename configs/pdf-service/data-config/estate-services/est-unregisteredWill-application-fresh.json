@@ -698,7 +698,8 @@
                         "variable": "witnessAgeValue",
                         "value": {
                             "path": "$.applicationDetails.witness[0].dob"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "witnessAddressValue",
