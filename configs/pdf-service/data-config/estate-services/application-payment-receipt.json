@@ -28,9 +28,9 @@
                             }
                           },
                         {
-                            "variable": "applicationFeeLabelLabel",
+                            "variable": "applicationFeeLabel",
                             "value": {
-                              "path": "ESTATE_SERVICE_BUILDING_BRANCH.NOC_APPLICATION_FEE"
+                              "path": "APPLICATION_FEE"
                             },
                             "type": "label",
                             "localisation": {
@@ -52,7 +52,7 @@
                           {
                             "variable": "applicationTaxLabel",
                             "value": {
-                              "path": "ESTATE_SERVICE_BUILDING_BRANCH.NOC_APPLICATION_TAX"
+                              "path": "APPLICATION_TAX"
                             },
                             "type": "label",
                             "localisation": {

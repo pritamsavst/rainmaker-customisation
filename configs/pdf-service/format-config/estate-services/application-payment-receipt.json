@@ -283,7 +283,7 @@
                     "body":[
                         [
                             {
-                                "text":"{{applicationFeeLabelLabel}}",
+                                "text":"{{applicationFeeLabel}}",
                                 "style":"receipt-table-key"
                                 
                                 
