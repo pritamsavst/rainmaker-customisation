@@ -385,6 +385,17 @@
                           
                     ]
                     
+                },
+                {
+                  "derived": [
+                    {
+                      "variable": "totalPaid",
+                      "formula": "({{totalExtensionFeePaid}}+{{amountPaid}}).toFixed(2)"
+                    },{
+                      "variable":"totalDue",
+                      "formula":"({{totalExtensionFee}}-{{totalPaid}}).toFixed(2)"
+                    }
+                  ]
                 }
             ]
         }

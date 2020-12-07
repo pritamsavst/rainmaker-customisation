@@ -216,10 +216,10 @@
                                 "text":"{{totalPenalty}}"
                               },
                               {
-                                "text":"{{totalPenaltyPaid}}"
+                                "text":"{{totalPaid}}"
                               },
                               {
-                                "text":"{{totalPenaltyDue}}"
+                                "text":"{{totalDue}}"
                               },
                               {
                                 "text":"{{dateOfPayment}} , {{time}}"

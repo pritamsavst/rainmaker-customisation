@@ -350,6 +350,17 @@
                           
                     ]
                     
+                },
+                {
+                  "derived": [
+                    {
+                      "variable": "totalPaid",
+                      "formula": "({{totalPenaltyPaid}}+{{amountPaid}}).toFixed(2)"
+                    },{
+                      "variable":"totalDue",
+                      "formula":"({{totalPenalty}}-{{totalPaid}}).toFixed(2)"
+                    }
+                  ]
                 }
             ]
         }

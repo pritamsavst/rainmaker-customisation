@@ -349,6 +349,17 @@
                           
                     ]
                     
+                },
+                {
+                  "derived": [
+                    {
+                      "variable": "totalPaid",
+                      "formula": "({{totalSecurityDepositPaid}}+{{amountPaid}}).toFixed(2)"
+                    },{
+                      "variable":"totalDue",
+                      "formula":"({{totalSecurityDeposit}}-{{totalPaid}}).toFixed(2)"
+                    }
+                  ]
                 }
             ]
         }
