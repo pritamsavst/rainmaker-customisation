@@ -1553,6 +1553,344 @@
             "unbreakable": true
           },
           {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{ES_INTEREST_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{INTEREST_FIXED_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{PERCENTAGE_OF_INTEREST_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{isIntrestApplicable}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{rateOfInterest}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{RENT_SUMMARY_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{TOTAL_DUE_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{AMOUNT_PAID_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{BALANCE_GST_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{BALANCE_GST_PENALTY_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{balanceRent}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{collectedRent}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{balanceGST}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{balanceGSTPenalty}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ],
+                      [
+                        {
+                          "text":"{{BALANCE_RENT_PENALTY_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{OUTSTANDING_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{balanceRentPenalty}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{outstanding}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
           "stack": [
             {
               "style": "noc-table2",
