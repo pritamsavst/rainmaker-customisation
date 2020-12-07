@@ -216,10 +216,10 @@
                                 "text":"{{totalSecurityDeposit}}"
                               },
                               {
-                                "text":"{{totalSecurityDepositPaid}}"
+                                "text":"{{totalPaid}}"
                               },
                               {
-                                "text":"{{totalSecurityDepositDue}}"
+                                "text":"{{totalDue}}"
                               },
                               {
                                 "text":"{{dateOfPayment}} , {{time}}"
