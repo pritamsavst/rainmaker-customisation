@@ -1,5 +1,5 @@
 {
-    "key": "mm-registeredWill-application",
+    "key": "mm-unregisteredWill-application",
     "DataConfigs": {
         "serviceName": "rainmaker-es",
         "version": "1.0.0",
@@ -39,7 +39,7 @@
                     {
                         "variable": "subHeader",
                         "value": {
-                            "path": "ES_MANIMAJRA_CITIZENSERVICE_REGISTEREDWILL"
+                            "path": "ES_MANIMAJRA_CITIZENSERVICE_UNREGISTEREDWILL"
                         },
                         "type": "label",
                         "localisation": {
@@ -288,7 +288,18 @@
                             "module": "rainmaker-es"
                         }
                     },
-                    
+                    {
+                        "variable":"ES_DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL",
+                        "value": {
+                            "path": "DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
                     {
                         "variable":"LEGAL_HEIR_DETAILS_HEADER",
                         "value": {
@@ -304,7 +315,7 @@
                     {
                         "variable":"LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL",
                         "value": {
-                            "path": "LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL"
+                            "path": "IS_LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -390,54 +401,6 @@
                         "variable":"PERCENTAGE_SHARED_LABEL",
                         "value": {
                             "path": "PERCENTAGE_SHARED_LABEL"
-                        },
-                        "type": "label",
-                        "localisation": {
-                            "required": true,
-                            "prefix": "ES",
-                            "module": "rainmaker-es"
-                        }
-                    },
-                    {
-                        "variable":"REGISTERED_WILL_DETAILS_HEADER",
-                        "value": {
-                            "path": "REGISTERED_WILL_DETAILS_HEADER"
-                        },
-                        "type": "label",
-                        "localisation": {
-                            "required": true,
-                            "prefix": "ES",
-                            "module": "rainmaker-es"
-                        }
-                    },
-                    {
-                        "variable":"DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL",
-                        "value": {
-                            "path": "DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL"
-                        },
-                        "type": "label",
-                        "localisation": {
-                            "required": true,
-                            "prefix": "ES",
-                            "module": "rainmaker-es"
-                        }
-                    },
-                    {
-                        "variable":"REGISTRATION_NUMBER_OF_WILL_LABEL",
-                        "value": {
-                            "path": "REGISTRATION_NUMBER_OF_WILL_LABEL"
-                        },
-                        "type": "label",
-                        "localisation": {
-                            "required": true,
-                            "prefix": "ES",
-                            "module": "rainmaker-es"
-                        }
-                    },
-                    {
-                        "variable":"DATE_OF_REGISTRATION_OF_WILL_LABEL",
-                        "value": {
-                            "path": "DATE_OF_REGISTRATION_OF_WILL_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -648,6 +611,14 @@
                         "type":"date"
                     },
                     {
+                        "variable": "dateOfExecution",
+                        "value": {
+                            "path": "$.applicationDetails.dateOfExecution"
+                        },
+                        "type":"date"
+                    },
+                    
+                    {
                         "variable": "legalHeirOrbeneficiary",
                         "value": {
                             "path": "$.applicationDetails.transferee.legalHeirOrbeneficiary"
@@ -708,26 +679,6 @@
                         "value": {
                             "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
                         }
-                    },
-                    {
-                        "variable": "dateOfExecution",
-                        "value": {
-                            "path": "$.applicationDetails.dateOfExecution"
-                        },
-                        "type":"date"
-                    },
-                    {
-                        "variable": "registrationNumber",
-                        "value": {
-                            "path": "$.applicationDetails.registrationNumber"
-                        }
-                    },
-                    {
-                        "variable": "dateOfRegistration",
-                        "value": {
-                            "path": "$.applicationDetails.dateOfRegistration"
-                        },
-                        "type":"date"
                     },
                     {
                         "variable": "witnessname",
