@@ -541,7 +541,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
 
-       - query: update egec_payment set payment_amount = (select sum(head_amount)+?::numeric from public.egec_challan_detail WHERE challan_uuid=ep.challan_uuid and budget_head <> 'PENALTY_AMOUNT') where challan_uuid = ?;
+       - query: update egec_payment ep set payment_amount = (select sum(head_amount)+?::numeric from public.egec_challan_detail WHERE challan_uuid=ep.challan_uuid and budget_head <> 'PENALTY_AMOUNT') where challan_uuid = ?;
 
          basePath: RequestBody.*
          jsonMaps:
@@ -549,7 +549,7 @@ serviceMaps:
 
           - jsonPath: $.RequestBody.*.challanUuid
        
-       - query: UPDATE public.egec_challan_master SET challan_amount=(select sum(head_amount)+?::numeric from public.egec_challan_detail WHERE challan_uuid=ep.challan_uuid and budget_head <> 'PENALTY_AMOUNT') WHERE challan_uuid=?;
+       - query: UPDATE public.egec_challan_master ep SET challan_amount=(select sum(head_amount)+?::numeric from public.egec_challan_detail WHERE challan_uuid=ep.challan_uuid and budget_head <> 'PENALTY_AMOUNT') WHERE challan_uuid=?;
 
          basePath: RequestBody.*
          jsonMaps:
