@@ -13,8 +13,62 @@
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
+              },
+            {
+                "variable": "houseNumber",
+                "value": {
+                    "path": "$.property.propertyDetails.houseNumber"
+                }
+            },
+            {
+                "variable": "mohalla",
+                "value": {
+                    "path": "$.property.propertyDetails.mohalla"
+                }
+            },
+            {
+                "variable": "areaSqft",
+                "value": {
+                    "path": "$.property.propertyDetails.areaSqft"
+                }
+            },
+            {
+                "variable": "name",
+                "value": {
+                    "path": "$.applicationDetails.owner.name"
+                }
+            },  
+            {
+                "variable": "address",
+                "value": {
+                    "path": "$.applicationDetails.owner.address"
+                }
+            },
+            {
+                "variable": "mobileNo",
+                "value": {
+                    "path": "$.applicationDetails.owner.mobileNo"
+                }
+            },
+            {
+              "variable":"dateOfRegistration",
+              "value":{
+                "path":"$.applicationDetails.dateOfRegistration"
+              },
+              "type":"date"
+            },
+            {
+              "variable":"registrationNumber",
+              "value":{
+                "path":"$.applicationDetails.registrationNumber"
               }
-              
+            },
+            {
+              "variable":"applicationNumber",
+              "value":{
+                "path":"$.applicationNumber"
+              }
+            }   
             ]
           }
         ]
