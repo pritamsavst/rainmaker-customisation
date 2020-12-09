@@ -1,23 +1,163 @@
 {
-    "key": "mm-noc-final-letter",
-    "DataConfigs": {
-      "serviceName": "rainmaker-es",
-      "version": "1.0.0",
-      "baseKeyPath": "$.Applications.*",
-      "entityIdPath": "$.applicationNumber",
-      "isCommonTableBorderRequired": true,
+  "key": "mm-noc-final-letter",
+  "DataConfigs": {
+    "serviceName": "rainmaker-es",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Applications.*",
+    "entityIdPath": "$.applicationNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [{
       "mappings": [{
-        "mappings": [{
-            "direct": [
-              {
-                "variable": "logo",
-                "url": "https://egov.transerve.com/media/logo.png",
-                "type": "image"
-              }
-              
-            ]
+        "direct": [{
+            "variable": "logo",
+            "url": "https://egov.transerve.com/media/logo.png",
+            "type": "image"
+          },
+          {
+            "variable": "fileNumber",
+            "value": {
+              "path": "$.property.fileNumber"
+            }
+          },
+          {
+            "variable": "houseNumber",
+            "value": {
+              "path": "$.property.propertyDetails.houseNumber"
+            }
+          },
+          {
+            "variable": "mohalla",
+            "value": {
+              "path": "$.property.propertyDetails.mohalla"
+            }
+          },
+          {
+            "variable": "street",
+            "value": {
+              "path": "$.property.propertyDetails.street"
+            }
+          },
+          {
+            "variable": "areaSqft",
+            "value": {
+              "path": "$.property.propertyDetails.areaSqft"
+            }
+          },
+          {
+            "variable": "propertyType",
+            "value": {
+              "path": "$.property.propertyDetails.propertyType"
+            },
+            "localisation": {
+              "module": "rainmaker-es",
+              "required": true
+            }
+          },
+          {
+            "variable": "category",
+            "value": {
+              "path": "$.property.category"
+            },
+            "localisation": {
+              "module": "rainmaker-es",
+              "required": true
+            }
+          },
+          {
+            "variable": "subCategory",
+            "value": {
+              "path": "$.property.subCategory"
+            },
+            "localisation": {
+              "module": "rainmaker-es",
+              "required": true
+            }
+          },
+          {
+            "variable": "siteNumber",
+            "value": {
+              "path": "$.property.siteNumber"
+            }
+          },
+          {
+            "variable": "sectorNumber",
+            "value": {
+              "path": "$.property.sectorNumber"
+            }
+          },
+          {
+            "variable": "lastNocDate",
+            "value": {
+              "path": "$.property.propertyDetails.lastNocDate"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "serviceCategory",
+            "value": {
+              "path": "$.property.propertyDetails.serviceCategory"
+            }
+          },
+          {
+            "variable": "ownerName",
+            "value": {
+              "path": "$.applicationDetails.owner.name"
+            }
+          },
+          {
+            "variable": "guardianName",
+            "value": {
+              "path": "$.applicationDetails.owner.ownerDetails.guardianName"
+            }
+          },
+          {
+            "variable": "address",
+            "value": {
+              "path": "$.applicationDetails.owner.ownerDetails.address"
+            }
+          },
+          {
+            "variable": "mobileNumber",
+            "value": {
+              "path": "$.applicationDetails.owner.ownerDetails.mobileNumber"
+            }
+          },
+          {
+            "variable": "share",
+            "value": {
+              "path": "$.applicationDetails.owner.share"
+            }
+          },
+          {
+            "variable": "areaToBeConverted",
+            "value": {
+              "path": "$.applicationDetails.areaToBeConverted"
+            }
+          },
+
+          {
+            "variable": "applicationNumber",
+            "value": {
+              "path": "$.applicationNumber"
+            }
+          },
+          {
+            "variable": "dateOfAllotment",
+            "value": {
+              "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "allotmentNumber",
+            "value": {
+              "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
+            }
           }
+
+
         ]
       }]
-    }
-  }  
+    }]
+  }
+}
