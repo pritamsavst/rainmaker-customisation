@@ -51,7 +51,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{applicationNumber}}",
+                      "text": "{{allotmentNumber}}",
                       "bold": false
                     }
                   ],

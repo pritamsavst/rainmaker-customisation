@@ -68,6 +68,19 @@
               "value":{
                 "path":"$.applicationNumber"
               }
+            },
+            {
+              "variable": "dateOfAllotment",
+              "value": {
+                "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+              },
+              "type": "date"
+            },
+            {
+              "variable": "allotmentNumber",
+              "value": {
+                "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
+              }
             }   
             ]
           }
