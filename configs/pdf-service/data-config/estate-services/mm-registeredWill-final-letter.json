@@ -13,6 +13,101 @@
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
+              },
+              {
+                "variable": "houseNumber",
+                "value": {
+                  "path": "$.property.propertyDetails.houseNumber"
+                }
+              },
+              {
+                "variable": "mohalla",
+                "value": {
+                  "path": "$.property.propertyDetails.mohalla"
+                }
+              },
+              
+              {
+                "variable": "areaSqft",
+                "value": {
+                  "path": "$.property.propertyDetails.areaSqft"
+                }
+              },
+              {
+                "variable": "ownerName",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+              },
+              {
+                "variable": "guardianName",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+                }
+              },
+              {
+                "variable": "address",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.address"
+                }
+              },
+              {
+                "variable": "dateOfDeath",
+                "value": {
+                  "path": "$.applicationDetails.transferor.dateOfDeath"
+                },
+                "type": "date"
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.applicationDetails.transferee.name"
+                }
+              },
+              {
+                "variable": "fatherOrHusbandName",
+                "value": {
+                  "path": "$.applicationDetails.transferee.fatherOrHusbandName"
+                }
+              },
+          
+              {
+                "variable": "transfereeaddress",
+                "value": {
+                  "path": "$.applicationDetails.transferee.address"
+                }
+              },
+              {
+                "variable": "registrationNumber",
+                "value": {
+                  "path": "$.applicationDetails.registrationNumber"
+                }
+              },
+              {
+                "variable": "dateOfRegistration",
+                "value": {
+                  "path": "$.applicationDetails.dateOfRegistration"
+                },
+                "type": "date"
+              },
+              {
+                "variable": "applicationNumber",
+                "value": {
+                  "path": "$.applicationNumber"
+                }
+              },
+              {
+                "variable": "dateOfAllotment",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+                },
+                "type": "date"
+              },
+              {
+                "variable": "allotmentNumber",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
+                }
               }
             ]
           }
