@@ -14,24 +14,7 @@
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
               },
-              {
-                "variable": "fileNumber",
-                "value": {
-                  "path": "$.property.fileNumber"
-                }
-              },
-              {
-                "variable": "houseNumber",
-                "value": {
-                  "path": "$.property.propertyDetails.houseNumber"
-                }
-              },
-              {
-                "variable": "mohalla",
-                "value": {
-                  "path": "$.property.propertyDetails.mohalla"
-                }
-              },
+
               {
                 "variable": "name",
                 "value": {
@@ -50,26 +33,6 @@
                   "path": "$.applicationDetails.transferee.fatherOrHusbandName"
                 }
               },
-              
-              {
-                "variable": "applicationNumber",
-                "value": {
-                  "path": "$.applicationNumber"
-                }
-              },
-              {
-                "variable": "dateOfAllotment",
-                "value": {
-                  "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
-                },
-                "type": "date"
-              },
-              {
-                "variable": "allotmentNumber",
-                "value": {
-                  "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
-                }
-              },
               {
                 "variable": "ownerName",
                 "value": {
@@ -86,12 +49,6 @@
                 "variable": "address",
                 "value": {
                     "path": "$.applicationDetails.transferor.transferorDetails.address"
-                }
-            },
-            {
-                "variable": "share",
-                "value": {
-                    "path": "$.applicationDetails.transferor.share"
                 }
             },
             {
@@ -124,47 +81,12 @@
                 }
             },
             {
-                "variable": "dob",
-                "value": {
-                    "path": "$.applicationDetails.transferee.dob"
-                },
-                "type":"date"
-            },
-            {
                 "variable": "transfereeaddress",
                 "value": {
                     "path": "$.applicationDetails.transferee.address"
                 }
-            },
-            {
-                "variable": "mobileNo",
-                "value": {
-                    "path": "$.applicationDetails.transferee.mobileNo"
-                }
-            },
-            {
-                "variable": "relationWithDeceased",
-                "value": {
-                    "path": "$.applicationDetails.transferee.relationWithDeceased"
-                },
-                "localisation":{
-                    "module":"rainmaker-es",
-                    "required":true
-                }
-            },
-            {
-              "variable":"dateOfRegistration",
-              "value":{
-                "path":"$.applicationDetails.dateOfRegistration"
-              },
-              "type":"date"
-            },
-            {
-                "variable": "percentageOfShareTransferred",
-                "value": {
-                    "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
-                }
             }
+        
             ]
           }
         ]
