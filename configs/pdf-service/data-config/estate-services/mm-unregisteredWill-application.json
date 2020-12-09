@@ -696,7 +696,8 @@
                         "variable": "witnessdob",
                         "value": {
                             "path": "$.applicationDetails.witness[0].dob"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "witnessAddress",
