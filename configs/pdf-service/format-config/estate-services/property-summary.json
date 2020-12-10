@@ -1625,7 +1625,7 @@
                       ],
                       [
                         {
-                          "text":"{{isIntrestApplicable}}",
+                          "text":"{{fixedInterest}}",
                           "border":[
                             false,
                             false,

@@ -46,9 +46,88 @@
            
             {
                 "margin": [0, 20, 0, 0],
-                "preserveLeadingSpaces": true,
+                
                 "style": "pdfContent",
-                "text": "                      It is notified for the general public and concerned with the property now known as House/ Shop No.______ Mohalla____________Manimajra, which as per record stands in the name of Sh/Smt._________________ S/o/ W/o Sh. ________________________________ , who expired on ___________ leaving behind regd. WILL dated________ in favour of Sh/Smt. _________________ S / o / W / o / D/ o Sh . ___________. Now Sh/Smt._____________________ S / o / W / o / D / o Sh. ________________ has /have applied for entry of ownership of above said property in his/her/their favour, being legal heirs of Sh.___________________"
+                "text":[
+                  {
+                    "preserveLeadingSpaces": true,
+                    "text": "                      It is notified for the general public and concerned with the property now known as House/ Shop No. "
+                  },
+                  {
+                    "text":"{{houseNumber}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" Mohalla "
+                  },
+                  {
+                    "text":"{{mohalla}} ",
+                    "bold":true
+                  },
+                  {
+                    "text":"Manimajra, which as per record stands in the name of Sh/Smt."
+                  },
+                  {
+                    "text":" {{ownerName}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" S/o/ W/o Sh."
+                  },
+                  {
+                    "text":" {{guardianName}}",
+                    "bold":true
+                  },
+                  {
+                    "text":", who expired on "
+                  },
+                  {
+                    "text":"{{dateOfDeath}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" leaving behind regd. WILL dated "
+                  },
+                  {
+                    "text":"{{dateOfRegistration}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" in favour of Sh/Smt. "
+                  },
+                  {
+                    "text":"{{name}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" S/o /W/o / D/o Sh. "
+                  },
+                  {
+                    "text":"{{transfereefatherOrHusbandName}. ",
+                    "bold":true
+                  },
+                  {
+                    "text":"Now Sh/Smt. "
+                  },
+                  {
+                    "text":"{{name}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" S/o /W/o /D/o Sh. "
+                  },
+                  {
+                    "text":"{{transfereefatherOrHusbandName}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" has /have applied for entry of ownership of above said property in his/her/their favour, being legal heirs of Sh. "
+                  },
+                  {
+                    "text":"{{ownerName}}",
+                    "bold":true
+                  }
+                ]
             },
             {
                 "margin": [0, 5, 0, 0],

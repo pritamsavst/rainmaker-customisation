@@ -1,5 +1,5 @@
 {
-    "key": "mm-sale-gift-application",
+    "key": "mm-registeredWill-application-paid",
     "DataConfigs": {
         "serviceName": "rainmaker-es",
         "version": "1.0.0",
@@ -39,13 +39,68 @@
                     {
                         "variable": "subHeader",
                         "value": {
-                            "path": "MANIMAJRA_CITIZENSERVICE_SALEGIFT"
+                            "path": "ES_MANIMAJRA_CITIZENSERVICE_REGISTEREDWILL"
                         },
                         "type": "label",
                         "localisation": {
                             "required": true,
                             "prefix": "ES",
                             "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "feeEstimateLabel",
+                        "value": {
+                          "path": "FEE_ESTIMATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "charges_due_label",
+                        "value": {
+                            "path": "$.feeEstimate[0].name.labelKey"
+                        },
+                        "localisation": {
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "gstLabel",
+                        "value": {
+                          "path": "$.feeEstimate[1].name.labelKey"
+                        },
+                        "localisation": {
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "total_amount_label",
+                        "value": {
+                          "path": "TOTAl_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                      {
+                        "variable": "applicationCharges",
+                        "value": {
+                            "path": "$.feeEstimate[0].value"
+                        }
+                    },
+                    {
+                        "variable": "gstValue",
+                        "value": {
+                            "path": "$.feeEstimate[1].value"
                         }
                     },
                     {
@@ -205,9 +260,9 @@
                         }
                     },
                     {
-                        "variable":"SELLER_TRANSFEROR_DETAILS_HEADER",
+                        "variable":"DECEASED_DETAILS_HEADER",
                         "value": {
-                            "path": "SELLER_TRANSFEROR_DETAILS_HEADER"
+                            "path": "DECEASED_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -217,9 +272,9 @@
                         }
                     },
                     {
-                        "variable":"SELLER_OR_TRANSFEROR_NAME_LABEL",
+                        "variable":"DECEASED_NAME_LABEL",
                         "value": {
-                            "path": "SELLER_OR_TRANSFEROR_NAME_LABEL"
+                            "path": "DECEASED_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -229,9 +284,9 @@
                         }
                     },
                     {
-                        "variable":"SELLER_TRANSFEROR_FATHER_HUSBAND_NAME_LABEL",
+                        "variable":"DECEASED_FATHER_HUSBAND_NAME_LABEL",
                         "value": {
-                            "path": "SELLER_TRANSFEROR_FATHER_HUSBAND_NAME_LABEL"
+                            "path": "DECEASED_FATHER_HUSBAND_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -240,11 +295,10 @@
                             "module": "rainmaker-es"
                         }
                     },
-                    
                     {
-                        "variable":"SELLER_TRANSFEROR_ADDRESS_LABEL",
+                        "variable":"DECEASED_ADDRESS_LABEL",
                         "value": {
-                            "path": "SELLER_TRANSFEROR_ADDRESS_LABEL"
+                            "path": "DECEASED_ADDRESS_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -266,9 +320,9 @@
                         }
                     },
                     {
-                        "variable":"PURCHASER_DETAILS_HEADER",
+                        "variable":"PERCENT_SHARE_LABEL",
                         "value": {
-                            "path": "PURCHASER_DETAILS_HEADER"
+                            "path": "PERCENT_SHARE_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -278,9 +332,22 @@
                         }
                     },
                     {
-                        "variable":"PURCHASER_TRANSFEREE_NAME_LABEL",
+                        "variable":"DATE_OF_DEATH_LABEL",
                         "value": {
-                            "path": "PURCHASER_TRANSFEREE_NAME_LABEL"
+                            "path": "DATE_OF_DEATH_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable":"LEGAL_HEIR_DETAILS_HEADER",
+                        "value": {
+                            "path": "LEGAL_HEIR_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -290,9 +357,9 @@
                         }
                     },
                     {
-                        "variable":"PURCHASER_TRANSFEREE_FATHER_HUSBAND_NAME_LABEL",
+                        "variable":"LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL",
                         "value": {
-                            "path": "PURCHASER_TRANSFEREE_FATHER_HUSBAND_NAME_LABEL"
+                            "path": "LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -301,6 +368,31 @@
                             "module": "rainmaker-es"
                         }
                     },
+                    {
+                        "variable":"LEGAL_HEIR_BENEFICIARY_NAME_LABEL",
+                        "value": {
+                            "path": "LEGAL_HEIR_BENEFICIARY_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
                     {
                         "variable":"RELATION_SHIP_LABEL",
                         "value": {
@@ -314,9 +406,9 @@
                         }
                     },
                     {
-                        "variable":"PURCHASER_TRANSFEREE_ADDRESS_LABEL",
+                        "variable":"DOB_LABEL",
                         "value": {
-                            "path": "PURCHASER_TRANSFEREE_ADDRESS_LABEL"
+                            "path": "DOB_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -326,9 +418,21 @@
                         }
                     },
                     {
-                        "variable":"PURCHASER_TRANSFEREE_MOBILENUMBER_LABEL",
+                        "variable":"ADDRESS_LABEL",
                         "value": {
-                            "path": "PURCHASER_TRANSFEREE_MOBILENUMBER_LABEL"
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"RELATION_WITH_DECEASED_RADIO_BTN_LABEL",
+                        "value": {
+                            "path": "RELATION_WITH_DECEASED_RADIO_BTN_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -350,9 +454,9 @@
                         }
                     },
                     {
-                        "variable":"REGISTRATION_DETAILS_HEADER",
+                        "variable":"REGISTERED_WILL_DETAILS_HEADER",
                         "value": {
-                            "path": "REGISTRATION_DETAILS_HEADER"
+                            "path": "REGISTERED_WILL_DETAILS_HEADER"
                         },
                         "type": "label",
                         "localisation": {
@@ -362,9 +466,9 @@
                         }
                     },
                     {
-                        "variable":"MODE_OF_TRANSFER_LABEL",
+                        "variable":"DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL",
                         "value": {
-                            "path": "MODE_OF_TRANSFER_LABEL"
+                            "path": "DATE_OF_EXECUTION_OF_UNREGISTERED_WILL_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -374,9 +478,9 @@
                         }
                     },
                     {
-                        "variable":"REGISTRATION_NUMBER_LABEL",
+                        "variable":"REGISTRATION_NUMBER_OF_WILL_LABEL",
                         "value": {
-                            "path": "REGISTRATION_NUMBER_LABEL"
+                            "path": "REGISTRATION_NUMBER_OF_WILL_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -386,9 +490,9 @@
                         }
                     },
                     {
-                        "variable":"DATE_OF_REGISTRATION_LABEL",
+                        "variable":"DATE_OF_REGISTRATION_OF_WILL_LABEL",
                         "value": {
-                            "path": "DATE_OF_REGISTRATION_LABEL"
+                            "path": "DATE_OF_REGISTRATION_OF_WILL_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -397,7 +501,79 @@
                             "module": "rainmaker-es"
                         }
                     },
-                   
+                    {
+                        "variable":"WITNESS_DETAILS_HEADER",
+                        "value": {
+                            "path": "WITNESS_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"WITNESS_NAME_LABEL",
+                        "value": {
+                            "path": "WITNESS_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DOB_LABEL",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"ADDRESS_LABEL",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"MOBILE_NUMBER_LABEL",
+                        "value": {
+                            "path": "MOBILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
                     {
                         "variable":"DOCUMENT_DETAILS_HEADER",
                         "value": {
@@ -516,11 +692,28 @@
                     {
                         "variable": "share",
                         "value": {
-                            "path": "$.applicationDetails.transferor.share"
+                            "path": "$.applicationDetails.transferor.percentageOfShare"
                         }
                     },
                     {
-                        "variable": "transfereeName",
+                        "variable": "dateOfDeath",
+                        "value": {
+                            "path": "$.applicationDetails.transferor.dateOfDeath"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "legalHeirOrbeneficiary",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.legalHeirOrbeneficiary"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "name",
                         "value": {
                             "path": "$.applicationDetails.transferee.name"
                         }
@@ -532,25 +725,37 @@
                         }
                     },
                     {
-                        "variable": "transfereeRelation",
+                        "variable": "relation",
                         "value": {
                             "path": "$.applicationDetails.transferee.relation"
                         },
                         "localisation":{
-                            "required":true,
-                            "module":"rainmaker-es"
+                            "module":"rainmaker-es",
+                            "required":true
                         }
                     },
                     {
-                        "variable": "transfereeAddress",
+                        "variable": "dob",
+                        "value": {
+                            "path": "$.applicationDetails.transferee.dob"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "transfereeaddress",
                         "value": {
                             "path": "$.applicationDetails.transferee.address"
                         }
                     },
+                  
                     {
-                        "variable": "transfereeMobileNo",
+                        "variable": "relationWithDeceased",
                         "value": {
-                            "path": "$.applicationDetails.transferee.mobileNo"
+                            "path": "$.applicationDetails.transferee.relationWithDeceased"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
                         }
                     },
                     {
@@ -560,14 +765,11 @@
                         }
                     },
                     {
-                        "variable": "modeOfTransfer",
+                        "variable": "dateOfExecution",
                         "value": {
-                            "path": "$.applicationDetails.modeOfTransfer"
+                            "path": "$.applicationDetails.dateOfExecution"
                         },
-                        "localisation":{
-                            "required":true,
-                            "module":"rainmaker-es"
-                        }
+                        "type":"date"
                     },
                     {
                         "variable": "registrationNumber",
@@ -583,6 +785,36 @@
                         "type":"date"
                     },
                     {
+                        "variable": "witnessname",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].name"
+                        }
+                    },
+                    {
+                        "variable": "witnessfatherOrHusbandName",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].fatherOrHusbandName"
+                        }
+                    },
+                    {
+                        "variable": "witnessdob",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].dob"
+                        }
+                    },
+                    {
+                        "variable": "witnessAddress",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].address"
+                        }
+                    },
+                    {
+                        "variable": "witnessMobile",
+                        "value": {
+                            "path": "$.applicationDetails.witness[0].mobileNo"
+                        }
+                    },
+                    {
                         "variable": "documents_array",
                         "value": {
                             "path": "$.applicationDocuments.*"
@@ -595,6 +827,12 @@
                         }
                     }
                 ]
+            },
+            {
+                "derived": [{
+                  "variable": "total",
+                  "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
+                }]
             }]
         }]
     }

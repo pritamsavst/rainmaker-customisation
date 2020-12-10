@@ -1,5 +1,5 @@
 {
-    "key": "mm-sale-gift-application",
+    "key": "mm-sale-gift-application-paid",
     "DataConfigs": {
         "serviceName": "rainmaker-es",
         "version": "1.0.0",
@@ -46,6 +46,61 @@
                             "required": true,
                             "prefix": "ES",
                             "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "feeEstimateLabel",
+                        "value": {
+                          "path": "FEE_ESTIMATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "charges_due_label",
+                        "value": {
+                            "path": "$.feeEstimate[0].name.labelKey"
+                        },
+                        "localisation": {
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "gstLabel",
+                        "value": {
+                          "path": "$.feeEstimate[1].name.labelKey"
+                        },
+                        "localisation": {
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "total_amount_label",
+                        "value": {
+                          "path": "TOTAl_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                      {
+                        "variable": "applicationCharges",
+                        "value": {
+                            "path": "$.feeEstimate[0].value"
+                        }
+                    },
+                    {
+                        "variable": "gstValue",
+                        "value": {
+                            "path": "$.feeEstimate[1].value"
                         }
                     },
                     {
@@ -582,6 +637,7 @@
                         },
                         "type":"date"
                     },
+                   
                     {
                         "variable": "documents_array",
                         "value": {
@@ -595,6 +651,12 @@
                         }
                     }
                 ]
+            },
+            {
+                "derived": [{
+                  "variable": "total",
+                  "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
+                }]
             }]
         }]
     }

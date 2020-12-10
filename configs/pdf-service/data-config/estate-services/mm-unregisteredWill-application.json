@@ -696,7 +696,8 @@
                         "variable": "witnessdob",
                         "value": {
                             "path": "$.applicationDetails.witness[0].dob"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "witnessAddress",
@@ -713,10 +714,9 @@
                     {
                         "variable": "documents_array",
                         "value": {
-                            "path": "$.applicationDetails.applicationDocumenst.*"
+                            "path": "$.applicationDocuments.*"
                         }
                     },
-
                     {
                         "variable": "applicationNumber",
                         "value": {

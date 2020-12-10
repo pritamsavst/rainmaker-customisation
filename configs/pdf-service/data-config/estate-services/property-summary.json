@@ -1414,6 +1414,10 @@
                   {
                     "variable": "outstanding",
                     "formula": "({{balanceRent}}+{{balanceGST}}+ {{balanceGSTPenalty}} + {{balanceRentPenalty}}).toFixed(2)"
+                  },
+                  {
+                      "variable":"fixedInterest",
+                      "formula": "{{isIntrestApplicable}} == true ? 'Yes' : 'No'"
                   }
                 ]
               }]

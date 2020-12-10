@@ -40,6 +40,7 @@
                 "layout": "noBorders"
             },
             {
+              "margin":[0,20,0,0],
               "style": "pt-reciept-citizen-header",
               "columns": [
                 {
@@ -50,7 +51,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{applicationNumber}}",
+                      "text": "{{allotmentNumber}}",
                       "bold": false
                     }
                   ],
@@ -67,7 +68,7 @@
                       "bold": true
                     },
                     {
-                      "text": "____________",
+                      "text": "{{dateOfAllotment}}",
                       "bold": false
                     }
                   ],
@@ -91,7 +92,7 @@
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               {{address}}",
+                        "text": "               {{ownerAddress}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -111,7 +112,7 @@
                     {
                         "margin": [20, 0, 0, 0],
                         "width": "*",
-                        "text": "Entry of House/shop No._____, Mohalla__________ Manimajra / on basis of court decree/family settlement",
+                        "text": "Entry of House/shop No. {{houseNumber}}, Mohalla {{mohalla}} Manimajra on basis of court decree/family settlement",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -126,7 +127,53 @@
             {
                 "margin": [0, 5, 0, 0],
                 "style": "pdfContent",
-                "text": "In view of attested copy of family settlement/Court Decree dated passed by the Hon'ble court of Sh.__________ death certificate of late Sh.__________. Indemnity Bond. Affidavits, Site Plan Report of Halqa Patwari duly authenticated by the Tehsildar, U.T , Chandigarh. No Due Certificate regarding water charges, etc. submitted by you. House/shop No.____ Mohalla__________,Manimajra area______sq. Yds is hereby entered in your names on the following terms and conditions -"
+                "text":[
+                  {
+                    "text":"In view of attested copy of family settlement/Court Decree dated "
+                  },
+                  {
+                    "text":"{{decreeDate}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" passed by the Hon'ble court of Sh. "
+                  },
+                  {
+                    "text":"{{court}} ",
+                    "bold":true
+                  },
+                  {
+                    "text":"death certificate of late Sh. "
+                  },
+                  {
+                    "text":"{{name}}",
+                    "bold":true
+                  },
+                  {
+                    "text":". Indemnity Bond. Affidavits, Site Plan Report of Halqa Patwari duly authenticated by the Tehsildar, U.T , Chandigarh. No Due Certificate regarding water charges, etc. submitted by you. House/shop No. "
+                  },
+                  {
+                    "text":"{{houseNumber}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" Mohalla "
+                  },
+                  {
+                    "text":"{{mohalla}}",
+                    "bold":true
+                  },
+                  {
+                    "text":", Manimajra area "
+                  },
+                  {
+                    "text":"{{areaSqft}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" sq. Yds is hereby entered in your names on the following terms and conditions -"
+                  }
+                ]
             },
             {          
                 "margin": [0, 20, 0, 0],
@@ -193,7 +240,7 @@
                         "style": "pdfContent"
                     },
                     {
-                        "text": "1.         1. The SDE, PH, Sub Div. No. 8, Manimajra, Municipal Corporation, Chandigarh",
+                        "text": "           1. The SDE, PH, Sub Div. No. 8, Manimajra, Municipal Corporation, Chandigarh",
                         "style": "pdfContent",
                         "preserveLeadingSpaces": true
                     }
