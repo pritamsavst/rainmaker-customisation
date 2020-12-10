@@ -582,11 +582,10 @@
                         },
                         "type":"date"
                     },
-                   
                     {
                         "variable": "documents_array",
                         "value": {
-                            "path": "$.applicationDetails.applicationDocumenst.*"
+                            "path": "$.applicationDocuments.*"
                         }
                     },
                     {
