@@ -3,7 +3,7 @@
     "DataConfigs": {
         "serviceName": "rainmaker-es",
         "version": "1.0.0",
-        "baseKeyPath": "$.Applications.*",
+        "baseKeyPath": "$",
         "entityIdPath": "$.applicationNumber",
         "isCommonTableBorderRequired": true,
         "mappings": [{
@@ -552,37 +552,37 @@
                     {
                         "variable": "fileNumber",
                         "value": {
-                            "path": "$.property.fileNumber"
+                            "path": "$.Applications[0].property.fileNumber"
                         }
                     },
                     {
                         "variable": "houseNumber",
                         "value": {
-                            "path": "$.property.propertyDetails.houseNumber"
+                            "path": "$.Applications[0].property.propertyDetails.houseNumber"
                         }
                     },
                     {
                         "variable": "mohalla",
                         "value": {
-                            "path": "$.property.propertyDetails.mohalla"
+                            "path": "$.Applications[0].property.propertyDetails.mohalla"
                         }
                     },
                     {
                         "variable": "street",
                         "value": {
-                            "path": "$.property.propertyDetails.street"
+                            "path": "$.Applications[0].property.propertyDetails.street"
                         }
                     },
                     {
                         "variable": "areaSqft",
                         "value": {
-                            "path": "$.property.propertyDetails.areaSqft"
+                            "path": "$.Applications[0].property.propertyDetails.areaSqft"
                         }
                     },
                     {
                         "variable": "propertyType",
                         "value": {
-                            "path": "$.property.propertyDetails.propertyType"
+                            "path": "$.Applications[0].property.propertyDetails.propertyType"
                         },
                         "localisation":{
                             "module":"rainmaker-es",
@@ -592,7 +592,7 @@
                     {
                         "variable": "category",
                         "value": {
-                            "path": "$.property.category"
+                            "path": "$.Applications[0].property.category"
                         },
                         "localisation":{
                             "module":"rainmaker-es",
@@ -602,7 +602,7 @@
                     {
                         "variable": "subCategory",
                         "value": {
-                            "path": "$.property.subCategory"
+                            "path": "$.Applications[0].property.subCategory"
                         },
                         "localisation":{
                             "module":"rainmaker-es",
@@ -612,63 +612,63 @@
                     {
                         "variable": "siteNumber",
                         "value": {
-                            "path": "$.property.siteNumber"
+                            "path": "$.Applications[0].property.siteNumber"
                         }
                     },
                     {
                         "variable": "sectorNumber",
                         "value": {
-                            "path": "$.property.sectorNumber"
+                            "path": "$.Applications[0].property.sectorNumber"
                         }
                     },
                     {
                         "variable": "lastNocDate",
                         "value": {
-                            "path": "$.property.propertyDetails.lastNocDate"
+                            "path": "$.Applications[0].property.propertyDetails.lastNocDate"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "serviceCategory",
                         "value": {
-                            "path": "$.property.propertyDetails.serviceCategory"
+                            "path": "$.Applications[0].property.propertyDetails.serviceCategory"
                         }
                     },
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                            "path": "$.Applications[0].applicationDetails.transferor.transferorDetails.ownerName"
                         }
                     },
                     {
                         "variable": "guardianName",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.guardianName"
+                            "path": "$.Applications[0].applicationDetails.transferor.transferorDetails.guardianName"
                         }
                     },
                     {
                         "variable": "address",
                         "value": {
-                            "path": "$.applicationDetails.transferor.transferorDetails.address"
+                            "path": "$.Applications[0].applicationDetails.transferor.transferorDetails.address"
                         }
                     },
                     {
                         "variable": "share",
                         "value": {
-                            "path": "$.applicationDetails.transferor.percentageOfShare"
+                            "path": "$.Applications[0].applicationDetails.transferor.percentageOfShare"
                         }
                     },
                     {
                         "variable": "dateOfDeath",
                         "value": {
-                            "path": "$.applicationDetails.transferor.dateOfDeath"
+                            "path": "$.Applications[0].applicationDetails.transferor.dateOfDeath"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "dateOfExecution",
                         "value": {
-                            "path": "$.applicationDetails.dateOfExecution"
+                            "path": "$.Applications[0].applicationDetails.dateOfExecution"
                         },
                         "type":"date"
                     },
@@ -676,7 +676,7 @@
                     {
                         "variable": "legalHeirOrbeneficiary",
                         "value": {
-                            "path": "$.applicationDetails.transferee.legalHeirOrbeneficiary"
+                            "path": "$.Applications[0].applicationDetails.transferee.legalHeirOrbeneficiary"
                         },
                         "localisation":{
                             "module":"rainmaker-es",
@@ -686,19 +686,19 @@
                     {
                         "variable": "name",
                         "value": {
-                            "path": "$.applicationDetails.transferee.name"
+                            "path": "$.Applications[0].applicationDetails.transferee.name"
                         }
                     },
                     {
                         "variable": "fatherOrHusbandName",
                         "value": {
-                            "path": "$.applicationDetails.transferee.fatherOrHusbandName"
+                            "path": "$.Applications[0].applicationDetails.transferee.fatherOrHusbandName"
                         }
                     },
                     {
                         "variable": "relation",
                         "value": {
-                            "path": "$.applicationDetails.transferee.relation"
+                            "path": "$.Applications[0].applicationDetails.transferee.relation"
                         },
                         "localisation":{
                             "module":"rainmaker-es",
@@ -708,21 +708,21 @@
                     {
                         "variable": "dob",
                         "value": {
-                            "path": "$.applicationDetails.transferee.dob"
+                            "path": "$.Applications[0].applicationDetails.transferee.dob"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "transfereeaddress",
                         "value": {
-                            "path": "$.applicationDetails.transferee.address"
+                            "path": "$.Applications[0].applicationDetails.transferee.address"
                         }
                     },
                   
                     {
                         "variable": "relationWithDeceased",
                         "value": {
-                            "path": "$.applicationDetails.transferee.relationWithDeceased"
+                            "path": "$.Applications[0].applicationDetails.transferee.relationWithDeceased"
                         },
                         "localisation":{
                             "module":"rainmaker-es",
@@ -732,50 +732,50 @@
                     {
                         "variable": "percentageOfShareTransferred",
                         "value": {
-                            "path": "$.applicationDetails.transferee.percentageOfShareTransferred"
+                            "path": "$.Applications[0].applicationDetails.transferee.percentageOfShareTransferred"
                         }
                     },
                     {
                         "variable": "witnessname",
                         "value": {
-                            "path": "$.applicationDetails.witness[0].name"
+                            "path": "$.Applications[0].applicationDetails.witness[0].name"
                         }
                     },
                     {
                         "variable": "witnessfatherOrHusbandName",
                         "value": {
-                            "path": "$.applicationDetails.witness[0].fatherOrHusbandName"
+                            "path": "$.Applications[0].applicationDetails.witness[0].fatherOrHusbandName"
                         }
                     },
                     {
                         "variable": "witnessdob",
                         "value": {
-                            "path": "$.applicationDetails.witness[0].dob"
+                            "path": "$.Applications[0].applicationDetails.witness[0].dob"
                         },
                         "type":"date"
                     },
                     {
                         "variable": "witnessAddress",
                         "value": {
-                            "path": "$.applicationDetails.witness[0].address"
+                            "path": "$.Applications[0].applicationDetails.witness[0].address"
                         }
                     },
                     {
                         "variable": "witnessMobile",
                         "value": {
-                            "path": "$.applicationDetails.witness[0].mobileNo"
+                            "path": "$.Applications[0].applicationDetails.witness[0].mobileNo"
                         }
                     },
                     {
                         "variable": "documents_array",
                         "value": {
-                            "path": "$.applicationDocuments.*"
+                            "path": "$.Applications[0].applicationDocuments.*"
                         }
                     },
                     {
                         "variable": "applicationNumber",
                         "value": {
-                            "path": "$.applicationNumber"
+                            "path": "$.Applications[0].applicationNumber"
                         }
                     }
                 ]
