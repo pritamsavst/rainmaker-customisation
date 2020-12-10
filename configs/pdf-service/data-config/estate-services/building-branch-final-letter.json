@@ -101,7 +101,28 @@
               "required": true,
               "module": "rainmaker-es"
             }
-        }
+        },
+        {
+          "variable":"createdTime",
+          "value":{
+            "path":"$.auditDetails.createdTime"
+          },
+          "type":"date"
+        },
+        {
+          "variable": "dateOfRegistration",
+          "value": {
+              "path": "$.applicationDetails.dateOfRegistration"
+          },
+          "type":"date"
+      },
+      {
+        "variable":"dateOfAllotment",
+        "value":{
+          "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+        },
+        "type":"date"
+      }
 
         ]
       }]

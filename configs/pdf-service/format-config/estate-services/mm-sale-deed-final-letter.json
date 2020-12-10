@@ -22,7 +22,7 @@
                      {
                        "stack": [
                          {
-                           "text": "OFFICE OF THE ADDITIONAL COMMISSIONER-I,SUB OFFICE, MANIMAJRA,MUNICIPAL CORPORATION, CHANDIGARH",
+                           "text": "OFFICE OF THE ADDITIONAL COMMISSIONER-I, SUB OFFICE, MANIMAJRA, MUNICIPAL CORPORATION, CHANDIGARH",
                            "style": "pt-reciept-citizen-header"
                          }
                        ],
@@ -40,6 +40,7 @@
                 "layout": "noBorders"
             },
             {
+              "margin":[0,20,0,0],
               "style": "pt-reciept-citizen-header",
               "columns": [
                 {
@@ -50,7 +51,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{applicationNumber}}",
+                      "text": "{{allotmentNumber}}",
                       "bold": false
                     }
                   ],
@@ -67,7 +68,7 @@
                       "bold": true
                     },
                     {
-                      "text": "____________",
+                      "text": "{{dateOfAllotment}}",
                       "bold": false
                     }
                   ],
@@ -85,13 +86,13 @@
                 "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
-                        "text": "               {{ownerName}}",
+                        "text": "               {{transfereeName}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               {{address}}",
+                        "text": "               {{transfereeAddress}}",
                         "style": "pdfContent",
                         "width": "*"
                     }
@@ -111,7 +112,7 @@
                     {
                         "margin": [20, 0, 0, 0],
                         "width": "*",
-                        "text": "Entry of House/Shop No. Mohalla _ Manimajra/ Grant of NOC for Electricity, Water and Sewerage Connections.",
+                        "text": "Entry of House/Shop No. {{houseNumber}} Mohalla {{mohalla}} Manimajra basis of sale/gift/exchange/family transfer deed.",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -126,7 +127,46 @@
             {
                 "margin": [0, 5, 0, 0],
                 "style": "pdfContent",
-                "text": "In view of attested copy of family settlement/Court Decree dated passed by the Hon'ble court of Sh.__________ death certificate of late Sh.__________. Indemnity Bond. Affidavits,Site Plan Report of Halqa Patwari duly authenticated by the Tehsildar, U.T , Chandigarh. No Due Certificate regarding water charges, etc. submitted by you. House/shop No.____ Mohalla__________,Manimajra area______sq. Yds is hereby entered in your names on the following terms and conditions -"
+                "text":[
+                  {
+                    "text":"In view of certified copy of sale deed Regd at Sr.No "
+                  },
+                  {
+                    "text":"{{registrationNumber}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" dated "
+                  },
+                  {
+                    "text":"{{dateOfRegistration}} ",
+                    "bold":true
+                  },
+                  {
+                    "text":"along with Indemnity Bond, affidavits, Site Plan Report of Halqa Patwari duly authenticated by the Tehsildar, U.T , Chandigarh. No Due Certificate regarding water charges, etc. submitted by you. House/shop No. "
+                  },
+                  {
+                    "text":"{{houseNumber}} ",
+                    "bold":true
+                  },
+                  {
+                    "text":"Mohalla "
+                  },
+                  {
+                    "text":"{{mohalla}}",
+                    "bold":true
+                  },
+                  {
+                    "text":", Manimajra area "
+                  },
+                  {
+                    "text":"{{areaSqft}}",
+                    "bold":true
+                  },
+                  {
+                    "text":". Yds is hereby entered in your names on the following terms and conditions -"
+                  }
+                ]
             },
             {          
                 "margin": [0, 20, 0, 0],

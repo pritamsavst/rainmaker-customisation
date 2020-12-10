@@ -1,0 +1,469 @@
+{
+    "key": "mm-noc-application-paid",
+    "DataConfigs": {
+        "serviceName": "rainmaker-es",
+        "version": "1.0.0",
+        "baseKeyPath": "$",
+        "entityIdPath": "$.applicationNumber",
+        "isCommonTableBorderRequired": true,
+        "mappings": [{
+            "mappings": [{
+                "direct": [{
+                        "variable": "logo",
+                        "url": "https://egov.transerve.com/media/logo.png",
+                        "type": "image"
+                    },
+                    {
+                        "variable": "application_label",
+                        "value": {
+                            "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "header",
+                        "value": {
+                            "path": "PDF_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "subHeader",
+                        "value": {
+                            "path": "MANIMAJRA_OTHERCITIZENSERVICE_NOC"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "feeEstimateLabel",
+                        "value": {
+                          "path": "FEE_ESTIMATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "charges_due_label",
+                        "value": {
+                            "path": "$.feeEstimate[0].name.labelKey"
+                        },
+                        "localisation": {
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "gstLabel",
+                        "value": {
+                          "path": "$.feeEstimate[1].name.labelKey"
+                        },
+                        "localisation": {
+                          "module": "rainmaker-es"
+                        }
+          
+                      },
+                      {
+                        "variable": "total_amount_label",
+                        "value": {
+                          "path": "TOTAl_AMOUNT"
+                        },
+                        "type": "label",
+                        "localisation": {
+                          "prefix": "ES",
+                          "module": "rainmaker-es"
+                        }
+                      },
+                      {
+                        "variable": "applicationCharges",
+                        "value": {
+                            "path": "$.feeEstimate[0].value"
+                        }
+                    },
+                    {
+                        "variable": "gstValue",
+                        "value": {
+                            "path": "$.feeEstimate[1].value"
+                        }
+                    },
+                    {
+                        "variable":"PROPERTY_DETAILS_HEADER",
+                        "value": {
+                            "path": "PROPERTY_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"FILE_NUMBER_LABEL",
+                        "value": {
+                            "path": "FILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"CATEGORY_LABEL",
+                        "value": {
+                            "path": "CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SUB_CATEGORY_LABEL",
+                        "value": {
+                            "path": "SUB_CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SITE_NO_LABEL",
+                        "value": {
+                            "path": "SITE_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SECTOR_NO_LABEL",
+                        "value": {
+                            "path": "SECTOR_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PROPERTY_TYPE_LABEL",
+                        "value": {
+                            "path": "PROPERTY_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                   
+                    {
+                        "variable":"LAST_NOC_DATE_LABEL",
+                        "value": {
+                            "path": "LAST_NOC_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DUE_AMOUNT_LABEL",
+                        "value": {
+                            "path": "DUE_AMOUNT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"OWNER_DETAILS_HEADER",
+                        "value": {
+                            "path": "APPLICANT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"OWNER_NAME_LABEL",
+                        "value": {
+                            "path": "OWNER_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable":"ADDRESS_LABEL",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"OWNER_MOBILE_NUMBER_LABEL",
+                        "value": {
+                            "path": "OWNER_MOBILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"OWNER_ADDRESS_LABEL",
+                        "value": {
+                            "path": "OWNER_ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SHARE_LABEL",
+                        "value": {
+                            "path": "SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"AREA_TO_BE_CONVERTED",
+                        "value": {
+                            "path": "AREA_TO_BE_CONVERTED"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                   
+                    {
+                        "variable":"DOCUMENT_DETAILS_HEADER",
+                        "value": {
+                            "path": "DOCUMENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "fileNumber",
+                        "value": {
+                            "path": "$.Applications[0].property.fileNumber"
+                        }
+                    },
+                    {
+                        "variable": "houseNumber",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.houseNumber"
+                        }
+                    },
+                    {
+                        "variable": "mohalla",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.mohalla"
+                        }
+                    },
+                    {
+                        "variable": "street",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.street"
+                        }
+                    },
+                    {
+                        "variable": "areaSqft",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.areaSqft"
+                        }
+                    },
+                    {
+                        "variable": "propertyType",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.propertyType"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "category",
+                        "value": {
+                            "path": "$.Applications[0].property.category"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "subCategory",
+                        "value": {
+                            "path": "$.Applications[0].property.subCategory"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "siteNumber",
+                        "value": {
+                            "path": "$.Applications[0].property.siteNumber"
+                        }
+                    },
+                    {
+                        "variable": "sectorNumber",
+                        "value": {
+                            "path": "$.Applications[0].property.sectorNumber"
+                        }
+                    },
+                    {
+                        "variable": "lastNocDate",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.lastNocDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "serviceCategory",
+                        "value": {
+                            "path": "$.Applications[0].property.propertyDetails.serviceCategory"
+                        }
+                    },
+                    {
+                        "variable": "ownerName",
+                        "value": {
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.ownerName"
+                        }
+                    },
+                    {
+                        "variable": "guardianName",
+                        "value": {
+                            "path": "$.applicationDetails.owner.ownerDetails.guardianName"
+                        }
+                    },
+                    {
+                        "variable": "address",
+                        "value": {
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.address"
+                        }
+                    },
+                    {
+                        "variable": "mobileNumber",
+                        "value": {
+                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.mobileNumber"
+                        }
+                    },
+                    {
+                        "variable": "share",
+                        "value": {
+                            "path": "$.Applications[0].applicationDetails.owner.share"
+                        }
+                    },
+                    {
+                        "variable": "areaToBeConverted",
+                        "value": {
+                            "path": "$.Applications[0].applicationDetails.areaToBeConverted"
+                        }
+                    },
+                    
+                    {
+                        "variable": "documents_array",
+                        "value": {
+                            "path": "$.Applications[0].applicationDocuments.*"
+                        }
+                    },
+                    {
+                        "variable": "applicationNumber",
+                        "value": {
+                            "path": "$.Applications[0].applicationNumber"
+                        }
+                    }
+                ]
+            },
+            {
+                "derived": [{
+                  "variable": "total",
+                  "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
+                }]
+            }]
+        }]
+    }
+}

@@ -140,7 +140,7 @@
                         "text":" the Booth Site No. "
                     },
                     {
-                        "text":" {{siteNumber}}, {{companyAddress}} . ","bold": true
+                        "text":" {{siteNumber}}, {{sectorNumber}} . ","bold": true
                     },
                     {
                         "text":" was allotted to "

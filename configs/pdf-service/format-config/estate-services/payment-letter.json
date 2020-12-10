@@ -54,27 +54,27 @@
                 "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
-                        "text": "               _________",
+                        "text": "                   {{ownerName}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               __________",
+                        "text": "                   {{address}}",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "margin":[0,10,0,0],
                         "preserveLeadingSpaces": true,
-                        "text": "               Memo No__________",
+                        "text": "                    Memo/Allotment No {{allotmentNumber}}",
                         "style": "pdfContent",
                         "width": "*",
                         "bold":true
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               Dated:-________",
+                        "text": "                   Dated:- {{dateOfAllotment}}",
                         "style": "pdfContent",
                         "width": "*",
                         "bold":true
@@ -95,7 +95,7 @@
                     {
                         "margin": [10, 0, 0, 0],
                         "width": "*",
-                        "text": "NOC for Electricity, Water and Sewerage connections in respect of H.No. ______, Village Attawa, Chandigarh.",
+                        "text": "NOC for Electricity, Water and Sewerage connections in respect of H.No. {{houseNumber}}, {{village}} {{mohalla}}, Chandigarh.",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -105,19 +105,19 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "              Reference to your application dated 19.2.2010, on the subject as cited above."
+                "text": "                  Reference to your application dated {{createdTime}}, on the subject as cited above."
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "              In this connection, it is intimated that this office has worked out total amount of Rs. ______________/- (Words)________________________________."            
+                "text": "                  In this connection, it is intimated that this office has worked out total amount of Rs. ______________/- (Words)________________________________."            
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "              Therefore, you are required to deposit the same by means of Demand Draft in favour of the Commissioner, Municipal Corporation, Chandigarh, at the earliest,so that NOC for the above said Connections can be considered."            
+                "text": "                  Therefore, you are required to deposit the same by means of Demand Draft in favour of the Commissioner, Municipal Corporation, Chandigarh, at the earliest,so that NOC for the above said Connections can be considered."            
             },
             {
                 "alignment":"right",

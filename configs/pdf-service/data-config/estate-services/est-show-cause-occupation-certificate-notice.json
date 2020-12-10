@@ -187,6 +187,12 @@
                 "value":{
                   "path":"$.property.propertyDetails.companyAddress"
                 }
+              },
+              {
+                "variable":"sectorNumber",
+                "value":{
+                  "path":"$.property.sectorNumber"
+                }
               }
 
             ]

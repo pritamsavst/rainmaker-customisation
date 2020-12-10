@@ -1,0 +1,910 @@
+{
+    "key": "mm-inestate-death-application",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+           },
+        "content": [
+            {
+             "style": "noc-head",
+             "table": {
+               "widths": [
+                50, "*"
+               ],
+               "body": [
+                 [
+                  {
+                    "image": "{{logo}}",
+                    "width": 50,
+                    "margin": [8, 10, 10, 0]
+                  },
+                  {
+                    "stack": [
+                      {
+                        "text": "{{header}}",
+                        "style": "receipt-logo-header"
+                      },
+                      {
+                        "text":"{{subHeader}}",
+                        "style":"receipt-logo-sub-header"
+                      },
+                      {
+                        "text": "{{application_label}} {{applicationNumber}}",
+                        "style": "receipt-logo-sub-header"
+                      }
+                    ],
+                    "alignment": "center",
+                      "margin": [
+                        0,
+                        12,
+                        0,
+                        0
+                      ]
+                  }
+                 ]
+               ]
+             },
+             "layout": "noBorders"
+           }, 
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{PROPERTY_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
+                          [
+                            {
+                              "text":"{{FILE_NUMBER_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{CATEGORY_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{SUB_CATEGORY_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{SITE_NO_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{fileNumber}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{category}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{subCategory}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{siteNumber}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{SECTOR_NO_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }, 
+                            {
+                                "text":"{{PROPERTY_TYPE_LABEL}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"{{LAST_NOC_DATE_LABEL}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"{{DUE_AMOUNT_LABEL}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                           
+                          ],
+                          [
+                            {
+                              "text":"{{sectorNumber}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              
+                            "style": "receipt-table2"
+                           
+                            },
+                            {
+                                "text":"{{propertyType}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              },
+                              {
+                                "text":"{{lastNocDate}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2",
+                                 "width":150
+                              },
+                              {
+                                "text":"{{dueAmount}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              }
+                           
+                          ]
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{DECEASED_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
+                          [
+                            {
+                              "text":"{{DECEASED_NAME_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{DECEASED_FATHER_HUSBAND_NAME_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{DECEASED_ADDRESS_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{PERCENT_SHARE_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{ownerName}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{guardianName}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{address}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{share}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{DATE_OF_DEATH_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }, 
+                            {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                           
+                          ],
+                          [
+                            {
+                              "text":"{{dateOfDeath}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              
+                            "style": "receipt-table2"
+                           
+                            },
+                            {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2",
+                                 "width":150
+                              },
+                              {
+                                "text":"",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              }
+                           
+                          ]
+                         
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{LEGAL_HEIR_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
+                          [
+                            {
+                              "text":"{{LEGAL_HEIR_NAME_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{LEGAL_FATHER_HUSBAND_NAME_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{RELATION_SHIP_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{LEGAL_HEIR_DOB_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{name}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{fatherOrHusbandName}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{relation}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{dob}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{LEGAL_HEIR_ADDRESS_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }, 
+                            {
+                                "text":"{{LEGAL_HEIR_MOBILE_NUMBER}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"{{LEGAL_RELATION_WITH_DECEASED_RADIO_BTN_LABEL}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              },
+                              {
+                                "text":"{{PERCENT_SHARE_LABEL}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table-value-cont"
+                              }
+                           
+                          ],
+                          [
+                            {
+                              "text":"{{transfereeaddress}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              
+                            "style": "receipt-table2"
+                           
+                            },
+                            {
+                                "text":"{{mobileNo}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              },
+                              {
+                                "text":"{{relationWithDeceased}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2",
+                                 "width":150
+                              },
+                              {
+                                "text":"{{percentageOfShareTransferred}}",
+                                "border":[
+                                  false,
+                                  false,
+                                  false,
+                                  false
+                                ],
+                                 "style": "receipt-table2"
+                              }
+                           
+                          ]
+                         
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+            "style": "noc-table2",
+            "table": {
+              "widths": [
+                "*"
+              ],
+              "body": [
+                [
+                      {
+                        "text":"{{DOCUMENT_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                   {
+                      "table": {
+                       "widths":["25%", "25%", "25%", "25%"],
+                      "body": [
+                       "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                      ]
+                  },
+                  "border":[
+                    true,
+                    false,
+                    true,
+                    true
+                    ]
+                 }
+                    ]
+               ],
+               "unbreakable": true
+            },
+            "layout": {}
+          }
+            ],
+            "unbreakable": true
+          }
+         ],
+         "styles": {
+         "receipt-logo-header": {
+          "color": "#484848",
+          "fontSize": 14,
+          "bold": true,
+          "letterSpacing": 0.74,
+          "margin": [
+            0,
+            0,
+            0,
+            5
+          ]
+        },
+        "receipt-logo-sub-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 13,
+          "letterSpacing": 1.6,
+          "margin": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+          "noc-table": {
+           "fontSize": 12,
+           "color": "#484848",
+           "margin": [
+             -25,
+             45,
+             -8,
+             -8
+           ]
+         },
+         "noc-table2": {
+           "fontSize": 12,
+           "color": "#484848",
+           "margin": [
+             -25,
+             10,
+             -25,
+             -8
+           ]
+         },
+          "receipt-table-value": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             5,
+             5,
+             0,
+             0
+           ]
+         },
+         "receipt-table-value-total": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "alignment": "right",
+           "margin": [
+             0,
+             5,
+             30,
+             0
+           ]
+         },
+         "receipt-table-value-down": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 12,
+           "fontWeight": 400,
+           "alignment": "left",
+           "margin": [
+             3,
+             5,
+             0,
+             5
+           ]
+         },
+         "receipt-table-value2": {
+           "color": "#000000",
+           "bold": false,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
+         },
+         "noc-head": {
+            "margin": [
+              -25,
+              -30,
+              0,
+              1
+            ]
+          },
+         "receipt-table-value-cont": {
+          "color": "#000000",
+          "bold": false,
+          "fontSize": 11,
+          "fontWeight": 400,
+          "margin": [
+            3,
+            0,
+            0,
+            0
+          ]
+        },
+         "receipt-table": {
+           "color": "#484848",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 400,
+           "margin": [
+             -30,
+             5,
+             0,
+             0
+           ]
+         },
+         "receipt-table2": {
+           "color": "#000000",
+           "bold": true,
+           "fontSize": 12,
+           "fontWeight": 500,
+           "margin": [
+             3,
+             0,
+             0,
+             0
+           ]
+         }
+         
+       }
+       
+    }
+  }
+

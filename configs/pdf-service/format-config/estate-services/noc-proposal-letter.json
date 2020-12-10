@@ -58,7 +58,7 @@
           {
             "margin": [20, 0, 0, 0],
             "width": "*",
-            "text": "Issue of NOC for water &amp; Sewerage connections in respect of House No {{houseNumber}},Chandigarh. ",
+            "text": "Issue of NOC for water & Sewerage connections in respect of House No {{houseNumber}}, Chandigarh. ",
             "style": "pdfContent",
             "bold": true
           }
@@ -78,11 +78,18 @@
             "text": " R/o "
           },
           {
-            "text": "{{address}} H.No. {{houseNumber}} {{village}} {{mohalla}} ",
+            "text": "{{address}} H.No. {{houseNumber}}, {{village}}, {{mohalla}}, ",
             "bold": true
           },
           {
-            "text": " Chandigarh vide this office diary No. _____dated ________ along with enclosures on the subject cited above."
+            "text": " Chandigarh vide this office diary No. _____dated "
+          },
+          {
+            "text":"{{createdTime}}",
+            "bold":true
+          },
+          {
+            "text":" along with enclosures on the subject cited above."
           }
         ]
       },

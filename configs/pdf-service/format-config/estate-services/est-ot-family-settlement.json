@@ -118,7 +118,7 @@
                     {
                         "margin": [10, 0, 0, 0],
                         "width": "*",
-                        "text": "Transfer of ownership of {{share}}% share of SCO/SCF/Booth/Residential Site No. {{siteNumber}} situated in {{companyAddress}} Chandigarh on the Court decree.",
+                        "text": "Transfer of ownership of {{share}}% share of SCO/SCF/Booth/Residential Site No. {{siteNumber}} situated in {{sectorNumber}} Chandigarh on the Court decree.",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -160,7 +160,7 @@
                         "text": "situated in"
                     },
                     {
-                        "text": "{{companyAddress}}",
+                        "text": "{{sectorNumber}}",
                         "bold": true
                     },
                     {

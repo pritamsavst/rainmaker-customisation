@@ -58,7 +58,7 @@
                       {
                         "variable": "subHeader",
                         "value": {
-                          "path": "APPLY_ESTATEBRANCH_OTHERCITIZENSERVICE_RESIDENTAILTOCOMMERCIAL"
+                          "path": "ES_ESTATEBRANCH_OTHERCITIZENSERVICE_SCFTOSCO"
                         },
                         "type": "label",
                         "localisation": {
@@ -358,7 +358,11 @@
                         "variable": "categoryValue",
                         "value": {
                             "path": "$.property.category"
-                        }
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
                       },
 
                     {
@@ -475,6 +479,10 @@
                         "variable": "letterType",
                         "value": {
                             "path": "$.applicationDetails.company.type"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
                         }
                     },
                     {

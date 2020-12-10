@@ -1150,6 +1150,126 @@
                         }     
                     },
                     {
+                        "variable":"ES_INTEREST_DETAILS_HEADER",
+                        "value": {
+                            "path": "INTEREST_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"INTEREST_FIXED_LABEL",
+                        "value": {
+                            "path": "INTEREST_FIXED_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"PERCENTAGE_OF_INTEREST_LABEL",
+                        "value": {
+                            "path": "PERCENTAGE_OF_INTEREST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"RENT_SUMMARY_HEADER",
+                        "value": {
+                            "path": "RENT_SUMMARY_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"TOTAL_DUE_LABEL",
+                        "value": {
+                            "path": "TOTAL_DUE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"AMOUNT_PAID_LABEL",
+                        "value": {
+                            "path": "AMOUNT_PAID_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"BALANCE_GST_LABEL",
+                        "value": {
+                            "path": "BALANCE_GST_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"BALANCE_GST_PENALTY_LABEL",
+                        "value": {
+                            "path": "BALANCE_GST_PENALTY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"BALANCE_RENT_PENALTY_LABEL",
+                        "value": {
+                            "path": "BALANCE_RENT_PENALTY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
+                        "variable":"OUTSTANDING_LABEL",
+                        "value": {
+                            "path": "OUTSTANDING_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }     
+                    },
+                    {
                         "variable": "groundRentGenerationType",
                         "value": {
                             "path": "$.propertyDetails.groundRentDetails.groundRentGenerationType"
@@ -1243,9 +1363,64 @@
                             "path": "$.propertyDetails.estateDemands[0].generationDate"
                         },
                         "type":"date"
+                    },
+                    {
+                        "variable": "isIntrestApplicable",
+                        "value": {
+                            "path": "$.propertyDetails.paymentConfig.isIntrestApplicable"
+                        }
+                    },
+                    {
+                        "variable": "rateOfInterest",
+                        "value": {
+                            "path": "$.propertyDetails.paymentConfig.rateOfInterest"
+                        }
+                    },
+                    {
+                        "variable": "balanceRent",
+                        "value": {
+                            "path": "$.estateRentSummary.balanceRent"
+                        }
+                    },
+                    {
+                        "variable": "collectedRent",
+                        "value": {
+                            "path": "$.estateRentSummary.collectedRent"
+                        }
+                    },
+                    {
+                        "variable": "balanceGST",
+                        "value": {
+                            "path": "$.estateRentSummary.balanceGST"
+                        }
+                    },
+                    {
+                        "variable": "balanceGSTPenalty",
+                        "value": {
+                            "path": "$.estateRentSummary.balanceGSTPenalty"
+                        }
+                    },
+                    {
+                        "variable": "balanceRentPenalty",
+                        "value": {
+                            "path": "$.estateRentSummary.balanceRentPenalty"
+                        }
                     }
+                    
                 ]
-            }]
+            },
+            {
+                "derived": [
+                  {
+                    "variable": "outstanding",
+                    "formula": "({{balanceRent}}+{{balanceGST}}+ {{balanceGSTPenalty}} + {{balanceRentPenalty}}).toFixed(2)"
+                  },
+                  {
+                      "variable":"fixedInterest",
+                      "formula": "{{isIntrestApplicable}} == true ? 'Yes' : 'No'"
+                  }
+                ]
+              }]
         }]
     }
 }

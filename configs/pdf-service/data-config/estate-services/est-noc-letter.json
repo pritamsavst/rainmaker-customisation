@@ -180,9 +180,9 @@
               "type":"date"
             },
             {
-              "variable":"companyAddress",
+              "variable":"sectorNumber",
               "value":{
-                "path":"$.property.propertyDetails.areaSqft"
+                "path":"$.property.sectorNumber"
               }
             }
      

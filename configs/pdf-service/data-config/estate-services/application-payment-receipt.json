@@ -28,9 +28,9 @@
                             }
                           },
                         {
-                            "variable": "applicationChargesLabel",
+                            "variable": "applicationFeeLabel",
                             "value": {
-                              "path": "APPLICATION_CHARGES"
+                              "path": "APPLICATION_FEE"
                             },
                             "type": "label",
                             "localisation": {
@@ -50,9 +50,9 @@
                             }
                           },
                           {
-                            "variable": "gstPercentage",
+                            "variable": "applicationTaxLabel",
                             "value": {
-                              "path": "GST_PERCENT_LABEL"
+                              "path": "APPLICATION_TAX"
                             },
                             "type": "label",
                             "localisation": {
@@ -253,15 +253,15 @@
                             }
                           },
                           {
-                            "variable": "totalDue",
+                            "variable": "applicationFee",
                             "value": {
-                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='RP_DUE')].amount"
+                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='ES_FEE')].amount"
                             }
                         },
                         {
-                            "variable": "publicationCharges",
+                            "variable": "applicationTax",
                             "value": {
-                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='RP_CHARGES')].amount"
+                              "path": "$..Payments[0].paymentDetails[0].bill.billDetails[0].billAccountDetails[?(@.taxHeadCode==='ES_TAX')].amount"
                             }
                         },
                         {
@@ -555,26 +555,15 @@
                             "module": "rainmaker-es"
                           }
 
-                    },
-                    {
-                      "variable": "applicationCharges",
-                      "value": {
-                          "path": "$.feeEstimate[0].value"
-                      }
-                  },
-                  {
-                      "variable": "gstValue",
-                      "value": {
-                          "path": "$.feeEstimate[1].value"
-                      }
-                  }
+                    }
+                    
                     ]
                 },
                 {
                   "derived": [
                     {
                       "variable": "total",
-                      "formula": "({{applicationCharges}}+{{gstValue}}).toFixed(2)"
+                      "formula": "({{applicationFee}}+{{applicationTax}}).toFixed(2)"
                     }
                   ]
                 }

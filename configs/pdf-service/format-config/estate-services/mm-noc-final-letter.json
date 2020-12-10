@@ -50,7 +50,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{applicationNumber}}",
+                      "text": "{{allotmentNumber}}",
                       "bold": false
                     }
                   ],
@@ -67,7 +67,7 @@
                       "bold": true
                     },
                     {
-                      "text": "____________",
+                      "text": "{{dateOfAllotment}}",
                       "bold": false
                     }
                   ],
@@ -111,7 +111,7 @@
                     {
                         "margin": [20, 0, 0, 0],
                         "width": "*",
-                        "text": "No objection Certificate for Water, Sewerage and electricity Ownership letter/Conversion of property in respect of House No. _______ Mohalla _________Manimajra, U.T., Chandigarh.",
+                        "text": "No objection Certificate for Water, Sewerage and electricity Ownership letter/Conversion of property in respect of House No. {{houseNumber}} Mohalla {{mohalla}} Manimajra, U.T., Chandigarh.",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -126,7 +126,53 @@
             {
                 "margin": [0, 10, 0, 0],
                 "style": "pdfContent",
-                "text": "It is to inform you that as per record of Municipal Corporation Chandigarh, the ownership of House No. ____________ Mohalla __________ Manimajra area measuring _________ Sq. Yds, stands in the name of Sh. ______________S/o Sh _____________________ out of total area _______ sq. yds. are hereby converted into commercial and also grant the No Objection Certificate regarding water, sewerage and electricity Connection on the following term and condition."
+                "text":[
+                  {
+                    "text": "It is to inform you that as per record of Municipal Corporation Chandigarh, the ownership of House No. "
+                  },
+                  {
+                    "text":"{{houseNumber}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" Mohalla "
+                  },
+                  {
+                    "text":"{{mohalla}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" Manimajra area measuring "
+                  },
+                  {
+                    "text":"{{areaToBeConverted}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" Sq. Yds, stands in the name of Sh. "
+                  },
+                  {
+                    "text":"{{ownerName}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" S/o Sh "
+                  },
+                  {
+                    "text":"{{guardianName}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" out of total area "
+                  },
+                  {
+                    "text":"{{areaSqft}}",
+                    "bold":true
+                  },
+                  {
+                    "text":" sq. yds. are hereby converted into commercial and also grant the No Objection Certificate regarding water, sewerage and electricity Connection on the following term and condition."
+                  }
+                ]
             },
             {
                 "margin": [0, 10, 0, 0],

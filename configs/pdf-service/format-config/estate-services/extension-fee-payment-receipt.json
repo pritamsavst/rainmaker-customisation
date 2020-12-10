@@ -216,10 +216,10 @@
                                 "text":"{{totalExtensionFee}}"
                               },
                               {
-                                "text":"{{totalExtensionFeePaid}}"
+                                "text":"{{totalPaid}}"
                               },
                               {
-                                "text":"{{totalExtensionFeeDue}}"
+                                "text":"{{totalDue}}"
                               },
                               {
                                 "text":"{{dateOfPayment}} , {{time}}"

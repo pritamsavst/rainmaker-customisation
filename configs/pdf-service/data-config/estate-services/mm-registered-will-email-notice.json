@@ -1,22 +1,58 @@
 {
-    "key": "mm-registered-will-email-notice",
-    "DataConfigs": {
-      "serviceName": "rainmaker-es",
-      "version": "1.0.0",
-      "baseKeyPath": "$.Applications.*",
-      "entityIdPath": "$.applicationNumber",
-      "isCommonTableBorderRequired": true,
+  "key": "mm-registered-will-email-notice",
+  "DataConfigs": {
+    "serviceName": "rainmaker-es",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Applications.*",
+    "entityIdPath": "$.applicationNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [{
       "mappings": [{
-        "mappings": [{
-            "direct": [  
-              {
-                "variable": "logo",
-                "url": "https://egov.transerve.com/media/logo.png",
-                "type": "image"
-              }
-            ]
+        "direct": [{
+            "variable": "logo",
+            "url": "https://egov.transerve.com/media/logo.png",
+            "type": "image"
+          },
+
+          {
+            "variable": "houseNumber",
+            "value": {
+              "path": "$.property.propertyDetails.houseNumber"
+            }
+          },
+          {
+            "variable": "mohalla",
+            "value": {
+              "path": "$.property.propertyDetails.mohalla"
+            }
+          },
+          {
+            "variable": "name",
+            "value": {
+              "path": "$.applicationDetails.transferee.name"
+            }
+          },
+          {
+            "variable": "transfereeaddress",
+            "value": {
+              "path": "$.applicationDetails.transferee.address"
+            }
+          },
+          {
+            "variable": "dateOfAllotment",
+            "value": {
+              "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+            },
+            "type": "date"
+          },
+          {
+            "variable": "allotmentNumber",
+            "value": {
+              "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
+            }
           }
         ]
       }]
-    }
-  }  
+    }]
+  }
+}

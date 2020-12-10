@@ -13,6 +13,87 @@
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
+              },
+            {
+                "variable": "houseNumber",
+                "value": {
+                    "path": "$.property.propertyDetails.houseNumber"
+                }
+            },
+            {
+                "variable": "mohalla",
+                "value": {
+                    "path": "$.property.propertyDetails.mohalla"
+                }
+            },
+            {
+                "variable": "areaSqft",
+                "value": {
+                    "path": "$.property.propertyDetails.areaSqft"
+                }
+            },
+            {
+                "variable": "name",
+                "value": {
+                    "path": "$.applicationDetails.transferor.transferorDetails.ownerName"
+                }
+            },
+            {
+                "variable": "address",
+                "value": {
+                    "path": "$.applicationDetails.transferor.transferorDetails.address"
+                }
+            },
+            {
+                "variable": "dateOfDeath",
+                "value": {
+                    "path": "$.applicationDetails.transferor.dateOfDeath"
+                },
+                "type":"date"
+            },
+            {
+                "variable": "ownerName",
+                "value": {
+                    "path": "$.applicationDetails.transferee.name"
+                }
+            },
+            {
+                "variable": "ownerAddress",
+                "value": {
+                    "path": "$.applicationDetails.transferee.address"
+                }
+            },
+            {
+                "variable": "decreeDate",
+                "value": {
+                    "path": "$.applicationDetails.decreeDate"
+                },
+                "type":"date"
+            },
+            {
+                "variable": "court",
+                "value": {
+                    "path": "$.applicationDetails.court"
+                }
+            },
+            {
+                "variable": "applicationNumber",
+                "value": {
+                    "path": "$.applicationNumber"
+                }
+            },
+            {
+                "variable": "dateOfAllotment",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
+                },
+                "type": "date"
+              },
+              {
+                "variable": "allotmentNumber",
+                "value": {
+                  "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
+                }
               }
               
             ]

@@ -516,7 +516,6 @@
                       "value": {
                           "path": "$.applicationDetails.typeOfNotice"
                       },
-                      "type": "label",
                       "localisation": {
                           "required": true,
                           "prefix": "ES",
