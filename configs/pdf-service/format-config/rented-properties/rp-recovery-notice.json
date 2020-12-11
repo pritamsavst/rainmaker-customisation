@@ -26,6 +26,17 @@
           },
         "watermark": { "text": "test watermark", "color": "blue", "opacity": 0.3, "bold": true, "italics": false },
         "content": [
+            {
+               
+                "image": "src/fonts/logo.jpg",
+                "width": 60,
+                "margin":[0,10,0,0],
+                "opacity":0.3,
+                "absolutePosition":{
+                    "x":300,
+                    "y":300
+                }
+            },
            {
             "style": "noc-head",
             "table": {
@@ -47,7 +58,6 @@
                                 "alignment":"center",
                                 "image": "src/fonts/logo.jpg",
                                 "width": 60,
-                                
                                 "margin":[0,10,0,0]
                             }
                         ],
