@@ -4,48 +4,98 @@
         "defaultStyle": {
             "font": "Cambay"
         },
+        "footer": {
+            "columns": [
+             {
+                "image": "src/fonts/footerLogo1.jpg",
+                "width": 50,
+                "margin":[20,0,0,20]
+                
+             },{
+                 "text":"नगर निगम चण्डीगढ़/MUNICIPAL CORPORATION, CHANDIGARH",
+                 "fontSize":11,
+                 "margin":[0,0,10,0],
+                 "alignment":"center",
+                 "width":"*"
+             },{
+                "image": "src/fonts/footerLogo2.jpg",
+                "width": 40,
+                "margin":[-20,0,0,-30]
+             }
+            ]
+          },
+        "watermark": { "text": "test watermark", "color": "blue", "opacity": 0.3, "bold": true, "italics": false },
         "content": [
-            {
-                "style": "noc-head",
-                "table": {
-                  "widths": [
-                   50, "*"
-                  ],
-                  "body": [
-                    [
-                     {
-                       "image": "{{logo}}",
-                       "width": 50,
-                       "margin": [8, 10, 10, 0]
-                     },
-                     {
-                       "stack": [
-                         {
-                           "text": "{{municipal_co_chandigarh}}",
-                           "style": "receipt-logo-header"
-                         },
-                         {
-                           "text":"{{colony_branch}}",
-                           "style": "receipt-logo-sub-header"
-                         },
-                         {
-                           "text": "{{cause_notice}} : {{noticeId}}",
-                           "style": "receipt-logo-sub-header"
-                         }
-                       ],
-                       "alignment": "center",
-                         "margin": [
-                           0,
-                           12,
-                           0,
-                           0
-                         ]
-                     }
+           {
+            "style": "noc-head",
+            "table": {
+                "widths": ["1%",  "90%",  "*"],
+                    "body": [
+                        [ 
+                            {
+                              "text":"" 
+                            },
+                            {
+                              "text": "नगर निगम चण्डीगढ़/MUNICIPAL CORPORATION, CHANDIGARH",
+                              "color": "#555555",
+                              "style":"receipt-logo-header",
+                              "alignment":"center",
+                              "fillColor": "#F8F9FA"
+                            },
+                            {
+                                "rowSpan":4,
+                                "alignment":"center",
+                                "image": "src/fonts/logo.jpg",
+                                "width": 60,
+                                
+                                "margin":[0,10,0,0]
+                            }
+                        ],
+                        [ 
+                            {
+                              "text":"" 
+                            },
+                            { 
+                              "alignment":"center",
+                              "color": "#484848",
+                              "fontSize": 11,
+                              "fontFamily": "Roboto",
+                              "text":[
+                                {
+                                    "text": "(New Delux Building, Sector-17, UT Chandigarh) ☎ 0172-5021503 Email: "
+                                },
+                                {
+                                    "text":"caomcc@gmail.com",
+                                    "underline":true,
+                                    "color":"blue"
+                                } 
+                              ]
+                            },
+                            {
+                            }
+                        ],
+                        [ 
+                            {
+                              "text":"" 
+                            },
+                            {
+                              "alignment":"center",
+                              "text": "(Colony Branch)",
+                              "italics":true,
+                              "bold":true,
+                              "fillColor": "#F8F9FA"
+                            },
+                            {
+                            }
+                        ],
+                        [
+                            {},{},{}
+                        ]
                     ]
-                  ]
                 },
                 "layout": "noBorders"
-              },
+           },
+
             {
                 "margin": [0, 10, 0, 0],
                 "text": "To",
@@ -235,6 +285,7 @@
                 ]
             },
             {
+                "pageBreak": "before",
                 "margin": [0, 10, 0, 0],
                 "text": [{
                         "text": "While going through the Provisional Accounts Statement it has been found that the following",
@@ -375,7 +426,7 @@
                   0,
                   0,
                   0,
-                  5
+                0
                 ]
               },
               "receipt-logo-sub-header": {
