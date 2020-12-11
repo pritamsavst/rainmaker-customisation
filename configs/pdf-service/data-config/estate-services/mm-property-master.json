@@ -1,0 +1,993 @@
+{
+    "key": "mm-property-master",
+    "DataConfigs": {
+        "serviceName": "rainmaker-es",
+        "version": "1.0.0",
+        "baseKeyPath": "$.Properties.*",
+        "entityIdPath": "$.applicationNumber",
+        "isCommonTableBorderRequired": true,
+        "mappings": [{
+            "mappings": [{
+                "direct": [{
+                        "variable": "logo",
+                        "url": "https://egov.transerve.com/media/logo.png",
+                        "type": "image"
+                    },
+                    {
+                        "variable": "application_label",
+                        "value": {
+                            "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "header",
+                        "value": {
+                            "path": "PDF_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "subHeader",
+                        "value": {
+                            "path": "COMMON_PROPERTY_MASTER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PROPERTY_DETAILS_HEADER",
+                        "value": {
+                            "path": "PROPERTY_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"FILE_NUMBER_LABEL",
+                        "value": {
+                            "path": "FILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"HOUSE_NUMBER_LABEL",
+                        "value": {
+                            "path": "HOUSE_SHOP_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"MOHALLA_LABEL",
+                        "value": {
+                            "path": "MOHALLA_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"STREET_LABEL",
+                        "value": {
+                            "path": "STREET_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"AREA_YDS_LABEL",
+                        "value": {
+                            "path": "AREA_YDS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PROPERTY_TYPE_LABEL",
+                        "value": {
+                            "path": "PROPERTY_TYPE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"CATEGORY_LABEL",
+                        "value": {
+                            "path": "CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SUB_CATEGORY_LABEL",
+                        "value": {
+                            "path": "SUB_CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SITE_NO_LABEL",
+                        "value": {
+                            "path": "SITE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SECTOR_NO_LABEL",
+                        "value": {
+                            "path": "SECTOR_NO_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"NOC_DETAILS_HEADER",
+                        "value": {
+                            "path": "NOC_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"LAST_NOC_DATE_LABEL",
+                        "value": {
+                            "path": "LAST_NOC_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"SERVICE_CATEGORY_LABEL",
+                        "value": {
+                            "path": "SERVICE_CATEGORY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DECEASED_DETAILS_HEADER",
+                        "value": {
+                            "path": "DECEASED_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DECEASED_NAME_LABEL",
+                        "value": {
+                            "path": "DECEASED_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DECEASED_FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "DECEASED_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DECEASED_ADDRESS_LABEL",
+                        "value": {
+                            "path": "DECEASED_ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PERCENT_SHARE_LABEL",
+                        "value": {
+                            "path": "PERCENT_SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PERCENT_SHARE_LABEL",
+                        "value": {
+                            "path": "PERCENT_SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DATE_OF_DEATH_LABEL",
+                        "value": {
+                            "path": "DATE_OF_DEATH_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable":"LEGAL_HEIR_DETAILS_HEADER",
+                        "value": {
+                            "path": "LEGAL_HEIR_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL",
+                        "value": {
+                            "path": "LEGAL_HEIR_OR_BENEFICIARY_RADIO_BTN_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"LEGAL_HEIR_BENEFICIARY_NAME_LABEL",
+                        "value": {
+                            "path": "LEGAL_HEIR_BENEFICIARY_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "LEGAL_BENIFICIARY_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable":"RELATION_SHIP_LABEL",
+                        "value": {
+                            "path": "RELATION_SHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DOB_LABEL",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"ADDRESS_LABEL",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"RELATION_WITH_DECEASED_RADIO_BTN_LABEL",
+                        "value": {
+                            "path": "RELATION_WITH_DECEASED_RADIO_BTN_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PERCENTAGE_SHARED_LABEL",
+                        "value": {
+                            "path": "PERCENTAGE_SHARED_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DOCUMENT_DETAILS_HEADER",
+                        "value": {
+                            "path": "DOCUMENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "OWNER_PARTNER_DETAILS_HEADER",
+                        "value": {
+                            "path": "OWNER_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ES_NAME_LABEL",
+                        "value": {
+                            "path": "NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "RELATIONSHIP_LABEL",
+                        "value": {
+                            "path": "RELATIONSHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ADDRESS_LABEL",
+                        "value": {
+                            "path": "ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable": "MOBILE_NUMBER_LABEL",
+                        "value": {
+                            "path": "MOBILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-rp"
+                        }
+                    },
+
+                    {
+                        "variable": "SHARE_LABEL",
+                        "value": {
+                            "path": "SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "IS_CURRENT_OWNER_LABEL",
+                        "value": {
+                            "path": "IS_CURRENT_OWNER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "POSSESSION_DATE_LABEL",
+                        "value": {
+                            "path": "POSSESSION_DATE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "DATE_OF_ALLOTMENT_LABEL",
+                        "value": {
+                            "path": "DATE_OF_ALLOTMENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ALLOTMENT_NUMBER_LABEL",
+                        "value": {
+                            "path": "ALLOTMENT_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"possesionDate",
+                        "value": {
+                            "path": "$.propertyDetails.owners[0].ownerDetails.possesionDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable":"isCurrentOwner",
+                        "value": {
+                            "path": "$.propertyDetails.owners[0].ownerDetails.isCurrentOwner"
+                        }
+                    },
+                    
+                    
+                    {
+                        "variable":"ownersArray",
+                        "value": {
+                            "path": "$.propertyDetails.owners.*"
+                        }
+                    },
+                    {
+                        "variable":"purchaserArray",
+                        "value": {
+                            "path": "$.propertyDetails.purchaser.*"
+                        }
+                    },
+                    {
+                        "variable": "PREVIOUS_OWNER_DETAILS_HEADER",
+                        "value": {
+                            "path": "PREVIOUS_OWNER_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "PREVIOUS_OWNER_NAME_LABEL",
+                        "value": {
+                            "path": "PREVIOUS_OWNER_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "PREVIOUS_OWNER_FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "PREVIOUS_OWNER_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "RELATIONSHIP_LABEL",
+                        "value": {
+                            "path": "RELATIONSHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "PREVIOUS_OWNER_ADDRESS_LABEL",
+                        "value": {
+                            "path": "PREVIOUS_OWNER_ADDRESS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "PREVIOUS_OWNER_MOBILE_NUMBER_LABEL",
+                        "value": {
+                            "path": "PREVIOUS_OWNER_MOBILE_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable": "SELLER_NAME_LABEL",
+                        "value": {
+                            "path": "SELLER_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-rp"
+                        }
+                    },
+
+                    {
+                        "variable": "SELLER_FATHER_HUSBAND_NAME_LABEL",
+                        "value": {
+                            "path": "SELLER_FATHER_HUSBAND_NAME_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "PERCENT_SHARE_LABEL",
+                        "value": {
+                            "path": "PERCENT_SHARE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "MODE_OF_TRANSFER_LABEL",
+                        "value": {
+                            "path": "MODE_OF_TRANSFER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ES_DOB_LABEL",
+                        "value": {
+                            "path": "DOB_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "DATE_OF_REGISTRATION_LABEL",
+                        "value": {
+                            "path": "DATE_OF_REGISTRATION_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                
+                    {
+                        "variable": "COURT_CASE_DETAILS_HEADER",
+                        "value": {
+                            "path": "COURT_CASE_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ESTATE_OFFICER_COURT_LABEL",
+                        "value": {
+                            "path": "ESTATE_OFFICER_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "COMMISSIONERS_COURT_LABEL",
+                        "value": {
+                            "path": "COMMISSIONERS_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "CHIEF_ADMINISTRATORS_COURT_LABEL",
+                        "value": {
+                            "path": "CHIEF_ADMINISTRATORS_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "ADVISOR_TO_ADMIN_COURT_LABEL",
+                        "value": {
+                            "path": "ADVISOR_TO_ADMIN_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "HONBLE_DISTRICT_COURT_LABEL",
+                        "value": {
+                            "path": "HONBLE_DISTRICT_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    
+                    {
+                        "variable": "HONBLE_HIGH_COURT_LABEL",
+                        "value": {
+                            "path": "HONBLE_HIGH_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-rp"
+                        }
+                    },
+
+                    {
+                        "variable": "HONBLE_SUPREME_COURT_LABEL",
+                        "value": {
+                            "path": "HONBLE_SUPREME_COURT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                   
+                    {
+                        "variable": "estateOfficerCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].estateOfficerCourt"
+                        }
+                    },
+                    {
+                        "variable": "commissionersCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].commissionersCourt"
+                        }
+                    },
+                    {
+                        "variable": "chiefAdministartorsCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].chiefAdministartorsCourt"
+                        }
+                    },
+                    {
+                        "variable": "advisorToAdminCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].advisorToAdminCourt"
+                        }
+                    },
+                    {
+                        "variable": "honorableDistrictCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].honorableDistrictCourt"
+                        }
+                    },
+                    {
+                        "variable": "honorableHighCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].honorableHighCourt"
+                        }
+                    },
+                   
+                    {
+                        "variable": "honorableSupremeCourt",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases[0].honorableSupremeCourt"
+                        }
+                    },
+                    {
+                        "variable":"documents_label",
+                        "value": {
+                            "path": "DOCUMENT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                        
+                    },
+                    {
+                        "variable": "ownerDocuments_documents_array",
+                        "value": {
+                            "path": "$.propertyDetails.owners[0].ownerDetails.ownerDocuments.*"
+                        }
+                    },
+                    {
+                        "variable": "purchaser_documents_array",
+                        "value": {
+                            "path": "$.propertyDetails.purchaser[0].ownerDetails.ownerDocuments.*"
+                        }
+                    },
+                    {
+                        "variable": "fileNumber",
+                        "value": {
+                            "path": "$.fileNumber"
+                        }
+                    },
+                    {
+                        "variable": "houseNumber",
+                        "value": {
+                            "path": "$.propertyDetails.houseNumber"
+                        }
+                    },
+                    {
+                        "variable": "mohalla",
+                        "value": {
+                            "path": "$.propertyDetails.mohalla"
+                        }
+                    },
+                    {
+                        "variable": "street",
+                        "value": {
+                            "path": "$.propertyDetails.street"
+                        }
+                    },
+                    {
+                        "variable": "areaSqft",
+                        "value": {
+                            "path": "$.propertyDetails.areaSqft"
+                        }
+                    },
+                    {
+                        "variable": "propertyType",
+                        "value": {
+                            "path": "$.propertyDetails.propertyType"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "category",
+                        "value": {
+                            "path": "$.category"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "subCategory",
+                        "value": {
+                            "path": "$.subCategory"
+                        },
+                        "localisation":{
+                            "module":"rainmaker-es",
+                            "required":true
+                        }
+                    },
+                    {
+                        "variable": "siteNumber",
+                        "value": {
+                            "path": "$.siteNumber"
+                        }
+                    },
+                    {
+                        "variable": "sectorNumber",
+                        "value": {
+                            "path": "$.sectorNumber"
+                        }
+                    },
+                    {
+                        "variable": "lastNocDate",
+                        "value": {
+                            "path": "$.propertyDetails.lastNocDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "serviceCategory",
+                        "value": {
+                            "path": "$.propertyDetails.serviceCategory"
+                        }
+                    },
+                    {
+                        "variable": "documents_array",
+                        "value": {
+                            "path": "$.applicationDocuments.*"
+                        }
+                    }
+                   
+                ]
+            }]
+        }]
+    }
+}
