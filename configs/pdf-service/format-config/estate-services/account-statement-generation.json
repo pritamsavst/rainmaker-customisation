@@ -51,7 +51,7 @@
                               ]
                         },
                         {
-                            "text":"Consolidated Demand",
+                            "text":"{{ES_COMMON_TABLE_CONSOLIDATED_DEMAND}}",
                             "style":"table-header",
                             "border":[
                                 true,
