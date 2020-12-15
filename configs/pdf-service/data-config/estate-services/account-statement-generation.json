@@ -22,6 +22,17 @@
                     "module": "rainmaker-es"
                   }
                 },
+                {
+                  "variable":"ES_COMMON_TABLE_CONSOLIDATED_DEMAND",
+                  "value": {
+                    "path": "COMMON_TABLE_CONSOLIDATED_DEMAND"
+                  },
+                  "type": "label",
+                  "localisation": {
+                    "prefix": "ES",
+                    "module": "rainmaker-es"
+                  }
+                },
   
                 {
                   "variable":"village",
