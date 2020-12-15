@@ -39,7 +39,7 @@
                     {
                         "variable": "subHeader",
                         "value": {
-                            "path": "ES_MANIMAJRA_CITIZENSERVICE_REGISTEREDWILL"
+                            "path": "MANIMAJRA_CITIZENSERVICE_REGISTEREDWILL"
                         },
                         "type": "label",
                         "localisation": {
@@ -800,7 +800,8 @@
                         "variable": "witnessdob",
                         "value": {
                             "path": "$.Applications[0].applicationDetails.witness[0].dob"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "witnessAddress",
