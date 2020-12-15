@@ -17,16 +17,13 @@
                     {
                         "stack": [
                             {
-                                "text": "{{header}}. {{siteNumber}}, ",
+                                "margin":[0,20,0,0],
+                                "text": "{{header}}. {{siteNumber}} ",
                                 "alignment": "center",
                                 "style":"receipt-logo-header"
                                
-                            },
-                            {
-                                "text": "",
-                                "alignment": "center",
-                                "style":"receipt-logo-header"
                             }
+                            
                         ]
         
                     }
@@ -40,11 +37,21 @@
                     -25,
                     -8],
                 "table":{
-                    "widths":["9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%"],
+                    "widths":["8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%"],
                     "body":[
                         [
                             {
                             "text":"{{date}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                        {
+                            "text":"Consolidated Demand",
                             "style":"table-header",
                             "border":[
                                 true,
@@ -165,9 +172,9 @@
                     -8],
                 "table": {
                  
-                    "widths":["9.09%%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%","9.09%"],
+                    "widths":["8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%","8.33%"],
                     "body": [
-                        "{{#account_statements}}[{{#.}}{\"text\":\"{{date}}\",\"style\": \"table-content\"},{\"text\":\"{{amount}}\",\"style\": \"table-content\"},{\"text\":\"{{typeP}}\",\"style\": \"table-content\"},{\"text\":\"{{typeR}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingPrincipal}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingGST}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingRentPenalty}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingGSTPenalty}}\",\"style\": \"table-content\"},{\"text\":\"{{dueAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingBalance}}\",\"style\": \"table-content\"},{\"text\":\"{{receiptNo}}\",\"style\": \"table-content\"}{{/.}}]{{/account_statements}}"
+                        "{{#account_statements}}[{{#.}}{\"text\":\"{{date}}\",\"style\": \"table-content\"},{\"text\":\"{{consolidatedAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{amount}}\",\"style\": \"table-content\"},{\"text\":\"{{typeP}}\",\"style\": \"table-content\"},{\"text\":\"{{typeR}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingPrincipal}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingGST}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingRentPenalty}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingGSTPenalty}}\",\"style\": \"table-content\"},{\"text\":\"{{dueAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingBalance}}\",\"style\": \"table-content\"},{\"text\":\"{{receiptNo}}\",\"style\": \"table-content\"}{{/.}}]{{/account_statements}}"
                     ]
                 }
             }
