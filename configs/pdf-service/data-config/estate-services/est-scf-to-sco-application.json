@@ -58,7 +58,7 @@
                       {
                         "variable": "subHeader",
                         "value": {
-                          "path": "ES_ESTATEBRANCH_OTHERCITIZENSERVICE_SCFTOSCO"
+                          "path": "ESTATEBRANCH_OTHERCITIZENSERVICE_SCFTOSCO"
                         },
                         "type": "label",
                         "localisation": {
