@@ -555,7 +555,19 @@
                             "module": "rainmaker-es"
                           }
 
-                    }
+                      },
+                      {
+                        "variable":"branchType",
+                        "value":{
+                          "path":"$.Applications[0].branchType"
+                        },
+                        "label":true,
+                        "localisation":{
+                          "module":"rainmaker-es",
+                          "required":true,
+                          "prefix":"ES"
+                        }
+                      }
                     
                     ]
                 },

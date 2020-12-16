@@ -39,7 +39,7 @@
                     {
                         "variable": "subHeader",
                         "value": {
-                            "path": "ES_MANIMAJRA_CITIZENSERVICE_INTESTATEDEATH"
+                            "path": "MANIMAJRA_CITIZENSERVICE_INTESTATEDEATH"
                         },
                         "type": "label",
                         "localisation": {
