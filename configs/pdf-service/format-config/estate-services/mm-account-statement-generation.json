@@ -1,0 +1,210 @@
+{
+    "key": "mm-account-statement-generation",
+    "config": {
+        "defaultStyle": {
+            "font": "Cambay"
+        },
+        "content": [
+            {
+                "style":"noc-head",
+                "columns":[
+                    {
+                        "image": "{{logo}}",
+                        "width": 50,
+                        "alignment": "left",
+                        "margin": [8, 10, 10, 0]
+                    },
+                    {
+                        "stack": [
+                            {
+                                "margin":[0,20,0,0],
+                                "text": "{{header}}. {{siteNumber}} ",
+                                "alignment": "center",
+                                "style":"receipt-logo-header"
+                               
+                            }
+                            
+                        ]
+        
+                    }
+
+                ]
+            },
+           
+            {
+                "margin":[  -25,
+                    20,
+                    -25,
+                    -8],
+                "table":{
+                    "widths":["10%","10%","10%","10%","10%","10%","10%","10%","10%","10%"],
+                    "body":[
+                        [
+                            {
+                            "text":"{{date}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                        {
+                            "text":"{{ES_RENT_LABEL}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                        {
+                            "text":"{{amount}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },  
+                        {
+                            "text":"{{typePayment}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                         {
+                            "text":"{{typeRent}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },  
+                           {
+                            "text":"{{principalDue}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        }, 
+                        {
+                            "text":"{{gstDue}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        }, 
+                        {
+                            "text":"{{totalDue}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                        {
+                            "text":"{{accountBalance}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        },
+                        {
+                            "text":"{{receiptNo}}",
+                            "style":"table-header",
+                            "border":[
+                                true,
+                                true,
+                                true,
+                                false
+                              ]
+                        }
+                       
+                    ]
+                    ]
+                 
+                }
+            },
+            {
+                "margin":[  -25,
+                    0,
+                    -25,
+                    -8],
+                "table": {
+                 
+                    "widths":["10%","10%","10%","10%","10%","10%","10%","10%","10%","10%"],
+                    "body": [
+                        "{{#account_statements}}[{{#.}}{\"text\":\"{{date}}\",\"style\": \"table-content\"},{\"text\":\"{{rent}}\",\"style\": \"table-content\"},{\"text\":\"{{amount}}\",\"style\": \"table-content\"},{\"text\":\"{{typeP}}\",\"style\": \"table-content\"},{\"text\":\"{{typeR}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingPrincipal}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingGST}}\",\"style\": \"table-content\"},{\"text\":\"{{dueAmount}}\",\"style\": \"table-content\"},{\"text\":\"{{remainingBalance}}\",\"style\": \"table-content\"},{\"text\":\"{{receiptNo}}\",\"style\": \"table-content\"}{{/.}}]{{/account_statements}}"                    ]
+                }
+            }
+        ],
+        "styles": {
+            "noc-head": {
+                "margin": [
+                  -25,
+                  -30,
+                  0,
+                  1
+                ]
+              },             
+            "receipt-logo-header": {
+                "color": "#484848",
+                "fontSize": 14,
+                "bold": true,
+                "letterSpacing": 0.74,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  5
+                ]
+              },
+              "table-content": {
+                "color": "#000000",
+                "bold": false,
+                "fontSize": 10,
+                "fontWeight": 400,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "table-header": {
+                "color": "#000000",
+                "bold": true,
+                "fontSize": 10,
+                "fontWeight": 500,
+                "margin": [
+                  3,
+                  0,
+                  0,
+                  0
+                ]
+              }
+
+        }
+    }
+}
