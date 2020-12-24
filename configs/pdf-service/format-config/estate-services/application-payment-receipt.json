@@ -30,7 +30,7 @@
                                     "style": "receipt-logo-header"
                                   },
                                   {
-                                      "text":"{{colony_branch}}",
+                                      "text":"{{branchType}}",
                                       "style": "receipt-logo-header"
                                   }
                             ],
