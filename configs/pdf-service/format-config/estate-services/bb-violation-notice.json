@@ -71,7 +71,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{dateOfAllotment}}",
+                      "text": "{{approvalDate}}",
                       "bold": false
                     }
                   ],
@@ -125,7 +125,7 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "              Reference: SDE Memorandum No._____________ Dated ____________"
+                "text": "              Reference: SDE Memorandum No.{{allotmentNumber}} Dated {{dateOfAllotment}}"
             },
             {          
                 "margin": [0, 20, 0, 0],
