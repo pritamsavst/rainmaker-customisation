@@ -206,7 +206,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
       
-    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=? WHERE id=?;
+    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=?, cccode=?,div=?,subdiv=?,ledger_no=? WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
 
@@ -248,7 +248,15 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.connectionUsagesType
        
-       - jsonPath: $.WaterConnection.inWorkflow      
+       - jsonPath: $.WaterConnection.inWorkflow
+       
+       - jsonPath: $.WaterConnection.ccCode
+       
+       - jsonPath: $.WaterConnection.div
+       
+       - jsonPath: $.WaterConnection.subdiv
+       
+       - jsonPath: $.WaterConnection.ledgerNo      
        
        - jsonPath: $.WaterConnection.id 
        
