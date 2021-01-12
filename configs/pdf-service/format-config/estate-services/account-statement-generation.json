@@ -202,7 +202,7 @@
               "table-content": {
                 "color": "#000000",
                 "bold": false,
-                "fontSize": 10,
+                "fontSize": 9,
                 "fontWeight": 400,
                 "margin": [
                   3,
