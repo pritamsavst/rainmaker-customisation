@@ -263,7 +263,28 @@
                         "text":"4.         Jr.Astt./Steno (Bldgs.Br.) to note down the proceedings and for follow up action into the matter."
                     }
                 ]
-            }
+            },
+
+            {
+              "alignment":"right",
+              "margin":[0,20,0,0],
+              "style":"pdfContent", 
+              "bold":true,
+              "stack":[
+                  {
+                      "text":" Sub Divisional Commissioner,"
+                  },
+                  {
+                      "text":"For Additional Commissioner"
+                  },
+                  {
+                      "text":"Municipal Corporation,"
+                  },
+                  {
+                      "text":"Chandigarh."
+                  }
+              ] 
+          }
 
 
         ],
