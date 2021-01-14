@@ -1,14 +1,16 @@
-name: BillGeneration
-description: Insert Bill data from excel
-fromTopic: save-ws-waterbilldetails
-isTransaction: true
-queryMaps: 
-   
-    -query: INSERT INTO public.eg_ws_savebilling(id, cccode, divsdiv, consumercode, billcycle, billgroup, subgroup, billtype, name, address, add1, add2, add3, add4, add5, cesscharge, netamount, grossamount, surcharge, totalnetamount, totalsurcharge, totalgrossamount, fixchargecode, fixcharge, duedatecash, duedatecheque, status, billid, paymentid, paymentstatus, createdby, createdtime,isFileGenerated ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?) ON CONFLICT (consumercode) DO UPDATE SET cccode=?, divsdiv=?, consumercode=?, billcycle=?, billgroup=?, subgroup=?, billtype=?, "name"=?, address=?, add1=?, add2=?, add3=?, add4=?, add5=?, cesscharge=?, netamount=?, grossamount=?, surcharge=?, totalnetamount=?, totalsurcharge=?, totalgrossamount=?, fixchargecode=?, fixcharge=?, duedatecash=?, duedatecheque=?, status=?, billid=?, paymentid=?, paymentstatus=?, totalAmount_paid=?, paymentMode=?,isFileGenerated=?, lastmodifiedby=?, lastmodifiedtime=?;
-     
-    basePath: $.billGeneration.*
+serviceMaps:
+ serviceName: ws-service
+ mappings:
+ - version: 1.0
+   name: BillGeneration
+   description: Insert Bill data from excel
+   fromTopic: save-ws-waterbilldetails
+   isTransaction: true
+   queryMaps:
+    - query: INSERT INTO public.eg_ws_savebilling(id, cccode, divsdiv, consumercode, billcycle, billgroup, subgroup, billtype, name, address, add1, add2, add3, add4, add5, cesscharge, netamount, grossamount, surcharge, totalnetamount, totalsurcharge, totalgrossamount, fixchargecode, fixcharge, duedatecash, duedatecheque, status, billid, paymentid, paymentstatus, createdby, createdtime,isFileGenerated ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?) ON CONFLICT (consumercode) DO UPDATE SET cccode=?, divsdiv=?, consumercode=?, billcycle=?, billgroup=?, subgroup=?, billtype=?, "name"=?, address=?, add1=?, add2=?, add3=?, add4=?, add5=?, cesscharge=?, netamount=?, grossamount=?, surcharge=?, totalnetamount=?, totalsurcharge=?, totalgrossamount=?, fixchargecode=?, fixcharge=?, duedatecash=?, duedatecheque=?, status=?, billid=?, paymentid=?, paymentstatus=?, totalAmount_paid=?, paymentMode=?,isFileGenerated=?, lastmodifiedby=?, lastmodifiedtime=?;
 
-    jsonMaps:
+      basePath: $.billGeneration.*
+      jsonMaps:
 
        - jsonPath: $.billGeneration.*.billGenerationId
 
@@ -143,64 +145,61 @@ queryMaps:
        - jsonPath: $.billGeneration.*.auditDetails.createdBy 
 
        - jsonPath: $.billGeneration.*.auditDetails.createdTime
-       
-name: WS billing file generation history
-description: Save File generation history of billing
-fromTopic: save-ws-billing-filestoreids
-isTransaction: true
-queryMaps: 
-   
-    -query: INSERT INTO public.eg_ws_billfile_history(id, filestore_url, filestore_id, filegeneration_time,) VALUES (?, ?, ?, ?);
-     
-    basePath: $.billGeneration
-
-    jsonMaps:
-
-       - jsonPath: $.billGeneration.billGenerationFileId
-
-       - jsonPath: $.billGeneration.billFileStoreUrl
-
-       - jsonPath: $.billGeneration.billFileStoreId
-
-       - jsonPath: $.billGeneration.fileGenerationTime
 
 
-name: update water billing status
-description: Update payment Status
-fromTopic: update-ws-bill-payment
-isTransaction: true
-queryMaps: 
-   
-    -query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=? where consumercode = ? ;
-     
-    basePath: $.billGeneration
 
-    jsonMaps:
+ - version: 1.0
+   name: WS billing file generation history
+   description: Save File generation history of billing
+   fromTopic: save-ws-billing-filestoreids
+   isTransaction: true
+   queryMaps:
 
-       - jsonPath: $.billGeneration.status
+    - query: INSERT INTO public.eg_ws_billfile_history(id, filestore_url, filestore_id, filegeneration_time) VALUES (?, ?, ?, ?);
 
-       - jsonPath: $.billGeneration.billId
+      basePath: $.billGenerationFile
+      jsonMaps:
 
-       - jsonPath: $.billGeneration.paymentId
+       - jsonPath: $.billGenerationFile.billGenerationFileId
 
-       - jsonPath: $.billGeneration.paymentMode
+       - jsonPath: $.billGenerationFile.billFileStoreUrl
 
-       - jsonPath: $.billGeneration.paymentStatus
+       - jsonPath: $.billGenerationFile.billFileStoreId
 
-       - jsonPath: $.billGeneration.totalAmountPaid
+       - jsonPath: $.billGenerationFile.fileGenerationTime
 
-       - jsonPath: $.billGeneration.consumerCode
-       
-name: update water billing status
-description: Update payment Status
-fromTopic: update-ws-bill-file-flag
-isTransaction: true
-queryMaps: 
-   
-    -query: UPDATE public.eg_ws_savebilling set isFileGenerated=false where consumercode = ? ;
-     
-    basePath: $.billGeneration.*
+ - version: 1.0
+   description: update water billing status
+   fromTopic: update-ws-bill-payment
+   isTransaction: true
+   queryMaps:
 
-    jsonMaps:
+        - query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=? where consumercode = ? ;
+          basePath: $.billGeneration
+          jsonMaps:
 
-       - jsonPath: $.billGeneration.*.consumerCode
+           - jsonPath: $.billGeneration.status
+    
+           - jsonPath: $.billGeneration.billId
+    
+           - jsonPath: $.billGeneration.paymentId
+    
+           - jsonPath: $.billGeneration.paymentMode
+    
+           - jsonPath: $.billGeneration.paymentStatus
+    
+           - jsonPath: $.billGeneration.totalAmountPaid
+    
+           - jsonPath: $.billGeneration.consumerCode
+
+ - version: 1.0
+   description: Update billing file Status
+   fromTopic: update-ws-bill-file-flag
+   isTransaction: true
+   queryMaps:
+
+        - query: UPDATE public.eg_ws_savebilling set isFileGenerated=true where consumercode = ? ;
+          basePath: $.billGeneration.*
+          jsonMaps:
+
+            - jsonPath: $.billGeneration.*.consumerCode
