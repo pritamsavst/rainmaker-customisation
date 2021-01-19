@@ -67,7 +67,7 @@
                     {
                         "margin":[0,10,0,0],
                         "preserveLeadingSpaces": true,
-                        "text": "                    Memo/Allotment No {{allotmentNumber}}",
+                        "text": "                    Memo/Application No {{applicationNumber}}",
                         "style": "pdfContent",
                         "width": "*",
                         "bold":true
