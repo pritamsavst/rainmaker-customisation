@@ -1,0 +1,184 @@
+---
+ReportDefinitions:
+- reportName: BookingsApplicationStatusReport
+  summary: Nummber of applications by there status
+  version: 1.0.0
+  moduleName: rainmaker-services
+  externalService:
+  - entity: $.messages[*]
+    apiURL: http://127.0.0.1:8087/localization/messages/v1/_search?locale=en_IN&tenantId=ch&module=rainmaker-services
+    keyOrder: code,message
+    tableName: tbl_localization
+  sourceColumns:
+  - name: status
+    label: report.bb.bk_application_status
+    type: string
+    source: bb
+    total: false
+  - name: total
+    label: report.bb.total
+    type: string
+    source: bb
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.bb.bk_date_created
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: WHERE bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+  - name: toDate
+    label: reports.bb.bk_date_created
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+  query: select MAX(message) as status, count(bb.bk_application_status) as total from bk_bookings bb LEFT OUTER JOIN message ON message.code = concat('RPT_BK_WF_', bb.bk_application_status) AND message.locale = 'en_IN' 
+  groupby: GROUP BY bb.bk_application_status
+  orderby: ORDER BY case bb.bk_application_status when 'INITIATED' then 1 when 'PENDINGASSIGNMENTDRIVER' then 2 when 'DELIVERED' then 3 when 'PENDINGUPDATE' then 4 when 'NOTDELIVERED' then 5 when 'APPLIED' then 6 when 'PENDINGPAYMENT' then 7 when 'PENDINGAPPROVAL' then 8 when 'APPROVED' then 9 when 'REJECTED' then 10 when 'OFFLINE_INITIATED' then 11 when 'OFFLINE_APPLIED' then 12 when 'RE_INITIATED' then 13 when 'PENDING_FOR_APPROVAL_CLEARK_DEO' then 14 when 'PENDING_FOR_APPROVAL_SENIOR_ASSISTANT' then 15 when 'PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT' then 16 when 'PENDING_FOR_APPROVAL_CAO' then 17 when 'PENDING_FOR_DISBURSEMENT' then 18 when 'PAYMENT_DISBURSED' then 19 when 'PENDING_FOR_APPROVAL_SUPERVISOR' then 20 when 'PENDING_FOR_APPROVAL_OSD' then 21 when 'OFFLINE_RE_INITIATED' then 22 when 'OFFLINE_MODIFIED' then 23 else 24 end
+
+
+- reportName: BookingWiseCollectionReport
+  summary: Collection according to BookingTypes
+  version: 1.0.0
+  moduleName: rainmaker-services
+  sourceColumns:
+  - name: bookingName
+    label: report.bb.bookingType
+    type: string
+    source: bb
+    total: false
+  - name: applicationNumber
+    label: report.bb.totalTransaction
+    type: string
+    source: bb
+    total: false
+  - name: total
+    label: report.bb.totalCollection
+    type: string
+    source: bb
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.bb.bk_date_created
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND payment.createdtime >= $fromDate
+  - name: toDate
+    label: reports.bb.bk_date_created
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND payment.createdtime <= $toDate
+  query: |
+    SELECT 
+      COUNT(bill.consumercode) as applicationNumber,
+      msg.message as bookingName,
+      SUM(payment.totalamountpaid) as total 
+    FROM bk_bookings bb 
+    INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','APPLIED','OFFLINE_APPLIED')
+  groupby: GROUP BY msg.message
+  
+- reportName: AllBookingsTransactionReport
+  summary: Bookings Receipt Register Report
+  version: 1.0.0
+  moduleName: rainmaker-services
+  sourceColumns:
+  - name: receiptnumber
+    label: report.tl.receiptnumber
+    type: string
+    source: tl
+    total: false
+  - name: receiptIssueDate
+    label: report.tl.receiptissuedate
+    type: string
+    source: tl
+    total: false
+  - name: applicationNumber
+    label: report.bb.bk_application_number
+    type: string
+    source: bb
+    total: false
+  - name: bookingDate
+    label: report.bb.bk_dateCreated
+    type: string
+    source: bb
+    total: false
+  - name: applicantName
+    label: report.bb.bk_applicant_name
+    type: string
+    source: bb
+    total: false
+  - name: transactionumber
+    label: report.bb.transactionumber
+    type: string
+    source: bb
+    total: false
+  - name: status
+    label: report.bb.bk_application_status
+    type: string
+    source: bb
+    total: false
+  - name: bookingName
+    label: report.bb.bk_booking_type
+    type: string
+    source: bb
+    total: false
+  - name: totalamountpaid
+    label: report.bb.receipt.totalamount
+    type: string
+    source: bb
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.bb.bk_date_created
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND payment.createdtime >= $fromDate
+  - name: toDate
+    label: reports.bb.bk_date_created
+    type: epoch
+    source: bb
+    isMandatory: false
+    searchClause: AND payment.createdtime  <= $toDate
+  - name: bookingType
+    label: reports.bb.bk_booking_type
+    type: string
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_booking_type LIKE $bookingType
+  - name: applicationStatus
+    label: reports.bb.bk_application_status
+    type: string
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_application_status LIKE $applicationStatus
+  - name: locality
+    label: reports.bb.bk_sector
+    type: string
+    source: bb
+    isMandatory: false
+    searchClause: AND bb.bk_sector LIKE $locality
+  query: |
+    SELECT 
+      bb.bk_application_number as applicationNumber,
+      to_char(bb.bk_date_created, 'DD/MM/YYYY') as bookingDate,
+      msg.message as bookingName,
+      initcap(bb.bk_application_status) as status,
+      to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate, 
+      pd.receiptnumber,
+      bb.bk_applicant_name as applicantName,
+      payment.transactionnumber as transactionumber,
+      totalamountpaid
+    FROM bk_bookings bb
+    INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
+    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','APPLIED','OFFLINE_APPLIED')

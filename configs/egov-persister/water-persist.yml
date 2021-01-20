@@ -179,15 +179,13 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_connection_mapping(id, user_Id, connection_Id, createdBy, createdTime) VALUES (?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_ws_connection_mapping(wsid, user_Id,  createdBy, createdTime) VALUES (?, ?, ?, ?);
       basePath: $.WaterConnection
       jsonMaps:
          
           - jsonPath: $.WaterConnection.id 
 
           - jsonPath: $.WaterConnection.auditDetails.createdBy
-
-          - jsonPath: $.WaterConnection.connectionNo
 
           - jsonPath: $.WaterConnection.auditDetails.createdBy
 
@@ -206,7 +204,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
       
-    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=? WHERE id=?;
+    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=? WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
 
@@ -248,7 +246,17 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.connectionUsagesType
        
-       - jsonPath: $.WaterConnection.inWorkflow      
+       - jsonPath: $.WaterConnection.inWorkflow
+       
+       - jsonPath: $.WaterConnection.ccCode
+       
+       - jsonPath: $.WaterConnection.div
+       
+       - jsonPath: $.WaterConnection.subdiv
+       
+       - jsonPath: $.WaterConnection.ledgerNo
+       
+       - jsonPath: $.WaterConnection.ledgerGroup      
        
        - jsonPath: $.WaterConnection.id 
        
@@ -257,7 +265,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
 
-    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
+    - query: UPDATE eg_ws_service SET connectionCategory=?,connectionType=?,waterSource=?,meterId=?,meterInstallationDate=?,pipeSize=?,noOfTaps=?,proposedPipeSize=?,proposedTaps=?, initialmeterreading = ?, connectionexecutiondate = ?, detailsprovidedby = ?, estimationfileStoreId = ?, sanctionfileStoreId = ?, estimationLetterDate = ?, meterCount =  ?, meterRentCode =  ?, mfrCode =  ?, meterDigits =  ?, meterUnit =  ?, sanctionedCapacity =  ?, lastModifiedBy=?, lastModifiedTime=? WHERE connection_id=?;
       basePath: $.WaterConnection
       jsonMaps:
        
@@ -290,6 +298,18 @@ serviceMaps:
        - jsonPath: $.WaterConnection.additionalDetails.sanctionFileStoreId
        
        - jsonPath: $.WaterConnection.additionalDetails.estimationLetterDate
+       
+       - jsonPath: $.WaterConnection.meterCount
+       
+       - jsonPath: $.WaterConnection.meterRentCode
+       
+       - jsonPath: $.WaterConnection.mfrCode
+       
+       - jsonPath: $.WaterConnection.meterDigits
+       
+       - jsonPath: $.WaterConnection.meterUnit
+       
+       - jsonPath: $.WaterConnection.sanctionedCapacity
        
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -614,39 +634,35 @@ serviceMaps:
           - jsonPath: $.WaterConnection.auditDetails.createdTime
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime   
-   
+ 
 
  - version: 1.0
-   name: add User connection mapping
+   name: WaterConnection
    description: add User connection mapping
    fromTopic: add-ws-user-connection-mapping
    isTransaction: true
-   queryMaps:
+   queryMaps: 
    
-    - query: INSERT INTO eg_ws_connection_mapping(id, user_Id, connection_Id, createdBy, createdTime) VALUES (?, ?, ?, ?, ?);
-      basePath: $.WaterConnection.waterApplication
+    - query: INSERT INTO eg_ws_connection_mapping(wsid, user_Id, createdBy, createdTime) VALUES (?, ?, ?, ?);
+      basePath: $.WaterConnection
       jsonMaps:
-         
-          - jsonPath: $.WaterConnection.id
+      - jsonPath: $.WaterConnection.id
 
-          - jsonPath: $.WaterConnection.auditDetails.createdBy
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
           
-          - jsonPath: $.WaterConnection.connectionNo
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
           
-          - jsonPath: $.WaterConnection.auditDetails.createdBy
-          
-          - jsonPath: $.WaterConnection.auditDetails.createdTime   
-   
+      - jsonPath: $.WaterConnection.auditDetails.createdTime
+       
 
  - version: 1.0
    name: delete User connection mapping
    description: delete User connection mapping
    fromTopic: delete-ws-user-connection-mapping
    isTransaction: true
-   queryMaps:
+   queryMaps: 
    
-    - query: delete from eg_ws_connection_mapping where connection_Id = ?;
-      basePath: $.WaterConnection.waterApplication
+    - query: delete from eg_ws_connection_mapping where wsid = ?;
+      basePath: $.WaterConnection
       jsonMaps:
-         
-          - jsonPath: $.WaterConnection.connectionNo
+      - jsonPath: $.WaterConnection.id 
