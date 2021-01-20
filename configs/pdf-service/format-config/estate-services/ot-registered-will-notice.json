@@ -21,16 +21,12 @@
                      {
                        "stack": [
                          {
-                           "text": "{{BEFORE SHRI ______________________________}}",
+                           "text": "BEFORE SHRI ______________________________",
                            "style": "receipt-logo-header"
                          },
                          {
-                           "text":"ADDITIONAL COMMISSIONER,",
+                           "text":"ADDITIONAL COMMISSIONER, MUNICIPAL CORPORATION, CHANDIGARH",
                            "style":"receipt-logo-header"
-                         },
-                         {
-                             "text":"{{header}}",
-                             "style":"receipt-logo-sub-header"
                          }
                        ],
                        "alignment": "center",
@@ -56,9 +52,9 @@
                         "alignment": "left"
 
                     },
-                    {
+                    { 
                         "margin": [20, 0, 0, 0],
-                        "width": "auto",
+                        "width": "70%",
                         "text": [{
                                 "text": "Transfer of ownership of "
                             }, {
@@ -89,13 +85,24 @@
                             }
                         ],
                         "style": "pdfContent"
-                    }
+                    },
+                    {
+                        "table": {
+                            "widths": [80],
+                            "heights": [80],
+                            "body": [
+                              [{
+                                "text":""
+                              }]
+                            ]
+                          }
+                     }
                 ]
             },
             {
                 "text": "*****",
                 "alignment": "center",
-                "margin": [0, 20, 0, 0]
+                "margin": [0, 0, 0, 0]
             },
             {   
                 "text": [

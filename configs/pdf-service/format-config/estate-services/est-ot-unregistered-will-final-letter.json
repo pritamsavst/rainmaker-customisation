@@ -172,28 +172,28 @@
                         "text":" which has submitted by you along with liability affidavit, Indemnity bond and publication of public notice in ,"
                     },
                     {
-                        "text": " --------",
+                        "text": " ___________ ",
                         "bold": true
                     },
                     {
                         "text": "(Hindi) "
                     },
                     {
-                        "text": " --------",
+                        "text": " ___________ ",
                         "bold": true
                     },
                     {
                         "text":"(Punjabi)"
                     },
                     {
-                        "text": " --------",
+                        "text": " ____________ ",
                         "bold": true
                     },
                     {
                         "text":"(English) dated"
                     },
                     {
-                        "text": " --------",
+                        "text": " ___________ ",
                         "bold": true
                     },
                     {
@@ -267,7 +267,7 @@
                         "alignment": "left"
                     },
                     {
-                        "text": "Dated: ______",
+                        "text": "Dated: _________",
                         "style": "pdfContent",
                         "alignment": "right"
                     }
