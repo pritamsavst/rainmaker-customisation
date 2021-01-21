@@ -284,6 +284,135 @@
                   "body": [
                     [
                       {
+                        "text":"{{ES_SELLER_TRANSFEROR_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                  {
+                    "table": {
+                      "widths": [
+                        "25%",
+                        "25%",
+                        "25%",
+                        "25%"
+                         ],
+                       "body": [
+                      [
+                        {
+                          "text":"{{SELECT_SELLER_OR_TRANSFEROR_LABEL}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table-value-cont"
+                        },
+                      {
+                        "text":"{{SELLER_TRANSFEROR_FATHER_HUSBAND_NAME_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{SELLER_TRANSFEROR_ADDRESS_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      },{
+                        "text":"{{PERCENT_SHARE_LABEL}}",
+                        "border":[
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "receipt-table-value-cont"
+                      }
+                      ],
+                      [
+                        {
+                          "text":"{{transferorid}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                           "style": "receipt-table2"
+                        },
+                        {
+                          "text":"{{transferorguardianName}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{transferoraddress}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        },{
+                          "text":"{{transferorshare}}",
+                          "border":[
+                            false,
+                            false,
+                            false,
+                            false
+                          ],
+                          "style": "receipt-table2"
+                        }
+                      ]
+                       ]
+                    },
+                    "border":[
+                      true,
+                      false,
+                      true,
+                      true
+                    ]
+                  }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
                         "text":"{{transfereeDetailsHeader}}",
                         "border":[
                           true,
@@ -306,7 +435,7 @@
                        "body": [
                       [
                         {
-                          "text":"{{transfereeTypeRatioLabel}}",
+                          "text":"{{TRANSFEREE_NAME_LABEL}}",
                           "border":[
                             false,
                             false,
@@ -316,7 +445,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{selectOwnerLabel}}",
+                        "text":"{{DOB_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -325,7 +454,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{sellerTransferorNameLabel}}",
+                        "text":"{{TRANSFEREE_FATHER_HUSBAND_NAME_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -334,7 +463,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{transfereeNameLabel}}",
+                        "text":"{{RELATION_SHIP_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -346,7 +475,7 @@
                       ],
                       [
                         {
-                          "text":"{{transfereeTypeValue}}",
+                          "text":"{{transfereename}}",
                           "border":[
                             false,
                             false,
@@ -356,7 +485,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{purchaserOwnerName}}",
+                          "text":"{{transfereedob}}",
                           "border":[
                             false,
                             false,
@@ -365,7 +494,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{sellerOrTransferor}}",
+                          "text":"{{transfereefatherOrHusbandName}}",
                           "border":[
                             false,
                             false,
@@ -374,7 +503,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{transfereename}}",
+                          "text":"{{transfereerelation}}",
                           "border":[
                             false,
                             false,
@@ -386,7 +515,7 @@
                       ],
                       [
                         {
-                          "text":"{{transfereeFatherHusbandNameLabel}}",
+                          "text":"{{TRANSFEREE_ADDRESS_LABEL}}",
                           "border":[
                             false,
                             false,
@@ -396,7 +525,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{transfereeAddressLabel}}",
+                        "text":"{{MOBILE_NUMBER_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -405,7 +534,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{mobileNumberLabel}}",
+                        "text":"{{PERCENT_SHARE_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -414,7 +543,7 @@
                         ],
                         "style": "receipt-table-value-cont"
                       },{
-                        "text":"{{percentShareLabel}}",
+                        "text":"",
                         "border":[
                           false,
                           false,
@@ -426,7 +555,7 @@
                       ],
                       [
                         {
-                          "text":"{{transfereefatherOrHusband}}",
+                          "text":"{{transfereeaddress}}",
                           "border":[
                             false,
                             false,
@@ -436,7 +565,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"{{transfereeAddress}}",
+                          "text":"{{transfereemobileNo}}",
                           "border":[
                             false,
                             false,
@@ -445,7 +574,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{phone}}",
+                          "text":"{{percentageOfShareTransferred}}",
                           "border":[
                             false,
                             false,
@@ -454,7 +583,7 @@
                           ],
                           "style": "receipt-table2"
                         },{
-                          "text":"{{percentShare}}",
+                          "text":"",
                           "border":[
                             false,
                             false,
@@ -605,7 +734,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"",
+                        "text":"{{ES_COMPANY_TYPE_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -645,7 +774,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"",
+                          "text":"{{companyType}}",
                           "border":[
                             false,
                             false,
@@ -734,7 +863,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"",
+                        "text":"{{TRADE_TYPE_LABEL}}",
                         "border":[
                           false,
                           false,
@@ -774,7 +903,7 @@
                            "style": "receipt-table2"
                         },
                         {
-                          "text":"",
+                          "text":"{{tradeType}}",
                           "border":[
                             false,
                             false,
