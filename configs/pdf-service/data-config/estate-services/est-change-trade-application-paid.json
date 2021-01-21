@@ -27,8 +27,9 @@
                             "path": "$.feeEstimate[0].name.labelKey"
                         },
                         "localisation": {
-                          "module": "rainmaker-es"
-                        }
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
           
                       },
                       {
@@ -37,8 +38,9 @@
                           "path": "$.feeEstimate[1].name.labelKey"
                         },
                         "localisation": {
-                          "module": "rainmaker-es"
-                        }
+                            "required": true,
+                            "module": "rainmaker-es"
+                          }
           
                       },
                       {
@@ -261,7 +263,7 @@
                     {
                         "variable": "OwnerLabel",
                         "value": {
-                            "path": "OWNERS_LABEL"
+                            "path": "OWNER_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
