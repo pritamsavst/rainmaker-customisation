@@ -773,7 +773,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ('4d3b6355-1abb-4591-ac6f-2bc063b75001e','en_IN','WS_DOCUMENT_DETAILS_HEADER_POPUP','Required Documents','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75002e','en_IN','WS_BILL_GENERATION_FILE_UPLOAD','Bill Generation File Upload','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75003e','en_IN','WS_DOCUMENT_TYPE_BII_UPLOAD','Bill Upload','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75004e','en_IN','COMMON_DOCUMENT_DETAILS_BUTTON_UPLOAD_FILE','UPLOAD FILE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75005e','en_IN','WS_DOCUMENT_DETAILS_SUBTEXT_POPUP','Only excel file can be uploaded','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75006e','en_IN','WS_UPLOAD_BILL_VALIDATION','Please upload valid file before submit','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75007e','en_IN','WS_UPLOAD_BILL_SUCCESS','Billing Information save successfully','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -820,7 +819,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75046e','en_IN','WS_OWN_DETAIL_OWN_NAME_LABEL_PLACEHOLDER','Enter Owner Name','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75047e','en_IN','WS_OWN_DETAIL_CROSADD_PLACEHOLDER','Enter Correspondence Address','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75048e','en_IN','WS_OWNER_DETAILS_EMAIL_LABEL_PLACEHOLDER','Enter Email','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75049e','en_IN','WS_OWN_DETAIL_FATHER_OR_HUSBAND_NAME_PLACEHOLDER','Enter Father's Name','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b75049e','en_IN','WS_OWN_DETAIL_FATHER_OR_HUSBAND_NAME_PLACEHOLDER','Enter Father''s Name','ch','rainmaker-ws',24226,now(),NULL,NULL)
 
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75050e','en_IN','WS_PROPERTY_USAGE_TYPE_TARRIF_LABEL_INPUT','Uses Tarif Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75051e','en_IN','WS_PROPERTY_USAGE_TYPE_TARRIF_LABEL_INPUT_PLACEHOLDER','Select Uses Tarif Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
