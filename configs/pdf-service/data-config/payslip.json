@@ -1,7 +1,7 @@
 {
   "key": "payslip",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "integration-services",
     "version": "1.0.0",
     "baseKeyPath": "$.PayslipRequest.*",
     "entityIdPath": "$.empCode",
