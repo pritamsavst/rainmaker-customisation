@@ -1,7 +1,7 @@
 {
   "key": "payslip",
   "DataConfigs": {
-    "serviceName": "integration-services",
+    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.PayslipRequest.*",
     "entityIdPath": "$.empCode",
@@ -18,106 +18,64 @@
                   "path": "$.indentNumber"
                 }
               },
-			  {
+              {
                 "variable": "empCode",
                 "value": {
-                  "path": "$.empCode"
+                  "path": "$.EmployeeCode"
                 }
               },
-			  {
+              {
                 "variable": "name",
                 "value": {
-                  "path": "$.name"
+                  "path": "$.Name"
                 }
               },
-			  {
+              {
                 "variable": "fatherName",
                 "value": {
-                  "path": "$.fatherName"
+                  "path": "$.FatherName"
                 }
               },
-			  {
+              {
                 "variable": "designation",
                 "value": {
-                  "path": "$.designation"
+                  "path": "$.Designation"
                 }
               },
-			  {
+              {
                 "variable": "department",
                 "value": {
-                  "path": "$.department"
+                  "path": "$.DDOName"
                 }
               },
-			  {
-                "variable": "basicPay",
+             
+             
+              {
+                "variable": "variable1",
                 "value": {
-                  "path": "$.basicPay"
-                }
-              },
-			  {
-                "variable": "dearnessAllowance",
-                "value": {
-                  "path": "$.dearnessAllowance"
-                }
-              },
-			  {
-                "variable": "gisUT",
-                "value": {
-                  "path": "$.gisUT"
-                }
-              },
-			  {
-                "variable": "incomeTax",
-                "value": {
-                  "path": "$.incomeTax"
-                }
-              },
-			  {
-                "variable": "cityCompensatoryAllowance",
-                "value": {
-                  "path": "$.cityCompensatoryAllowance"
-                }
-              },
-			  {
-                "variable": "licencesFee",
-                "value": {
-                  "path": "$.licencesFee"
-                }
-              },
-			  {
-                "variable": "medicalAllowance",
-                "value": {
-                  "path": "$.medicalAllowance"
-                }
-              },
-			  {
-                "variable": "specialAllowance",
-                "value": {
-                  "path": "$.specialAllowance"
-                }
-              },
-			  {
-                "variable": "IRUTPBHP",
-                "value": {
-                  "path": "$.IRUTPBHP"
-                }
-              },
-			  {
-                "variable": "totalAllowances",
-                "value": {
-                  "path": "$.totalAllowances"
-                }
-              },
-			  {
-                "variable": "totalDeductions",
-                "value": {
-                  "path": "$.totalDeductions"
-                }
-              },
-			  {
-                "variable": "netPay",
-                "value": {
-                  "path": "$.netPay"
+                  "path": "$.Allowances.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "variable": "Allowances_Text",
+                      "value": "Allowances_Text"
+                    },
+                    {
+                      "variable": "Allowances_Amount",
+                      "value": "Allowances_Amount"
+                    },
+                    {
+                      "variable": "Deductions_Text",
+                      "value": "Deductions_Text"
+                    },
+                    {
+                      "variable": "Deductions_Amount",
+                      "value": "Deductions_Amount"
+                    }
+                  ]
                 }
               }
             ]
