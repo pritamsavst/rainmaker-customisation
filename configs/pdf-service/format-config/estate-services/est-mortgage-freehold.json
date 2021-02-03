@@ -172,14 +172,16 @@
             {
                 "margin": [0, 20, 10, 10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. MC/Estate/2021/{{applicationNumber}}",
                         "style": "pdfContent",
-                        "alignment": "left"
+                        "alignment": "left",
+                        "width":"auto"
                     },
                     {
-                        "text": "Dated:",
+                        "text": "Dated:_____________",
                         "style": "pdfContent",
-                        "alignment": "right"
+                        "alignment": "right",
+                        "width":"*"
                     }
                 ]
             },
