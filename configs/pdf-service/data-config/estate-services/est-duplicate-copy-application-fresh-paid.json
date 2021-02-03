@@ -447,7 +447,7 @@
                     {
                         "variable": "duplicateOwnerName",
                         "value": {
-                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.ownerName"
+                            "path": "$.applicationDetails.owner.name"
                         }
                     },
                     {
