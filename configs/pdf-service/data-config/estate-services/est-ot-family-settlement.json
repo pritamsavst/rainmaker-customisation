@@ -80,6 +80,13 @@
                 }
               },
               {
+                "variable": "dateOfRegistration",
+                "value": {
+                    "path": "$.applicationDetails.dateOfRegistration"
+                },
+                "type":"date"
+              },
+              {
                 "variable":"dateOfExecutionOfWill",
                 "value":{
                   "path":"$.applicationDetails.dateOfExecutionOfWill"

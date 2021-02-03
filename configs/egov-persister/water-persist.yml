@@ -179,15 +179,13 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_connection_mapping(id, user_Id, connection_Id, createdBy, createdTime) VALUES (?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_ws_connection_mapping(wsid, user_Id,  createdBy, createdTime) VALUES (?, ?, ?, ?);
       basePath: $.WaterConnection
       jsonMaps:
          
           - jsonPath: $.WaterConnection.id 
 
           - jsonPath: $.WaterConnection.auditDetails.createdBy
-
-          - jsonPath: $.WaterConnection.connectionNo
 
           - jsonPath: $.WaterConnection.auditDetails.createdBy
 
@@ -636,39 +634,43 @@ serviceMaps:
           - jsonPath: $.WaterConnection.auditDetails.createdTime
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime   
-   
+ 
 
  - version: 1.0
-   name: add User connection mapping
+   name: WaterConnection
    description: add User connection mapping
    fromTopic: add-ws-user-connection-mapping
    isTransaction: true
-   queryMaps:
+   queryMaps: 
    
-    - query: INSERT INTO eg_ws_connection_mapping(id, user_Id, connection_Id, createdBy, createdTime) VALUES (?, ?, ?, ?, ?);
-      basePath: $.WaterConnection.waterApplication
+    - query: INSERT INTO eg_ws_connection_mapping(wsid, user_Id, createdBy, createdTime) VALUES (?, ?, ?, ?);
+      basePath: $.WaterConnection
       jsonMaps:
-         
-          - jsonPath: $.WaterConnection.id
+      - jsonPath: $.WaterConnection.id
 
-          - jsonPath: $.WaterConnection.auditDetails.createdBy
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
           
-          - jsonPath: $.WaterConnection.connectionNo
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
           
-          - jsonPath: $.WaterConnection.auditDetails.createdBy
-          
-          - jsonPath: $.WaterConnection.auditDetails.createdTime   
-   
+      - jsonPath: $.WaterConnection.auditDetails.createdTime
+      
+    - query: UPDATE public.eg_ws_connectionholder SET userid=? WHERE connectionid=?;
+      basePath: $.WaterConnection
+      jsonMaps:
+
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+      - jsonPath: $.WaterConnection.id
+       
 
  - version: 1.0
    name: delete User connection mapping
    description: delete User connection mapping
    fromTopic: delete-ws-user-connection-mapping
    isTransaction: true
-   queryMaps:
+   queryMaps: 
    
-    - query: delete from eg_ws_connection_mapping where connection_Id = ?;
-      basePath: $.WaterConnection.waterApplication
+    - query: delete from eg_ws_connection_mapping where wsid = ?;
+      basePath: $.WaterConnection
       jsonMaps:
-         
-          - jsonPath: $.WaterConnection.connectionNo
+      - jsonPath: $.WaterConnection.id 

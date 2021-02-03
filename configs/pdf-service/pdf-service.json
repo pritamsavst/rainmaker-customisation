@@ -162,6 +162,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-registeredWill-application-paid.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-registeredWill-application.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-registeredWill-final-letter.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-rent-payment-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-sale-deed-final-letter.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-sale-gift-application-paid.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/mm-sale-gift-application.json",
@@ -179,7 +180,8 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/private-limted-company-letter.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/property-summary.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/rent-payment-receipt.json",
-      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/security-payment-receipt.json"
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/estate-services/security-payment-receipt.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/payslip.json"
    ],
    "formatconfig":[
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/firenoc-receipt.json",
@@ -344,6 +346,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-registeredWill-application-paid.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-registeredWill-application.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-registeredWill-final-letter.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-rent-payment-receipt.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-sale-deed-final-letter.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-sale-gift-application-paid.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/mm-sale-gift-application.json",
@@ -361,6 +364,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/private-limted-company-letter.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/property-summary.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/rent-payment-receipt.json",
-      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/security-payment-receipt.json"
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/estate-services/security-payment-receipt.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/payslip.json"
    ]
 }

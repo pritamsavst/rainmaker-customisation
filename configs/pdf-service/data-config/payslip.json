@@ -1,0 +1,87 @@
+{
+  "key": "payslip",
+  "DataConfigs": {
+    "serviceName": "integration-services",
+    "version": "1.0.0",
+    "baseKeyPath": "$.PayslipRequest.*",
+    "entityIdPath": "$.empCode",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "indentNumber",
+                "value": {
+                  "path": "$.indentNumber"
+                }
+              },
+              {
+                "variable": "empCode",
+                "value": {
+                  "path": "$.EmployeeCode"
+                }
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.Name"
+                }
+              },
+              {
+                "variable": "fatherName",
+                "value": {
+                  "path": "$.FatherName"
+                }
+              },
+              {
+                "variable": "designation",
+                "value": {
+                  "path": "$.Designation"
+                }
+              },
+              {
+                "variable": "department",
+                "value": {
+                  "path": "$.DDOName"
+                }
+              },
+             
+             
+              {
+                "variable": "variable1",
+                "value": {
+                  "path": "$.Allowances.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "variable": "Allowances_Text",
+                      "value": "Allowances_Text"
+                    },
+                    {
+                      "variable": "Allowances_Amount",
+                      "value": "Allowances_Amount"
+                    },
+                    {
+                      "variable": "Deductions_Text",
+                      "value": "Deductions_Text"
+                    },
+                    {
+                      "variable": "Deductions_Amount",
+                      "value": "Deductions_Amount"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

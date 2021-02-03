@@ -434,9 +434,9 @@
                         }
                     },
                     {
-                        "variable": "MAXIMUM_NUMBER_OF_FLOORS_SANCTIONABLE_LABE",
+                        "variable": "MAXIMUM_NUMBER_OF_FLOORS_SANCTIONABLE_LABEL",
                         "value": {
-                            "path": "MAXIMUM_NUMBER_OF_FLOORS_SANCTIONABLE_LABE"
+                            "path": "MAXIMUM_NUMBER_OF_FLOORS_SANCTIONABLE_LABEL"
                         },
                         "type": "label",
                         "localisation": {

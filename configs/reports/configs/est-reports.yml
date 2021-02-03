@@ -1,7 +1,7 @@
 ---
 ReportDefinitions:
 - reportName: ESApplicationStatusReport
-  summary: Number of Estate brnach applications by their status
+  summary: Number of applications by their status based on branch
   version: 1.0.0
   moduleName: rainmaker-es
   sourceColumns:
@@ -44,17 +44,17 @@ ReportDefinitions:
   - name: applicationType
     label: report.es.applicationType
     type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=applicationTypes|$.MdmsRes.EstateServices.applicationTypes.*.type|$.MdmsRes.EstateServices.applicationTypes.*.name
+    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=applicationTypes|$.MdmsRes.EstateServices.applicationTypes.*.applicationType|$.MdmsRes.EstateServices.applicationTypes.*.applicationType| unique
     source: estate
     wrapper: true
     isMandatory: false
-    searchClause: AND application.application_type = split_part($applicationType,'_',3)
+    searchClause: AND application.application_type = $applicationType
   query: SELECT COUNT(application.application_number) as total,message.message as status,application.branch_type as branchType FROM cs_ep_application_v1 application LEFT OUTER JOIN message ON message.code = application.state AND message.locale = 'en_IN' WHERE application.tenantid LIKE $tenantid AND message.message is not null 
   groupby: GROUP BY message.message,application.branch_type
   
   
 - reportName: ESRegistryReport
-  summary: Estate Branch Registry Report
+  summary: Registry Report based on branch
   version: 1.0.0
   moduleName: rainmaker-es
   sourceColumns:
@@ -137,11 +137,11 @@ ReportDefinitions:
   - name: applicationType
     label: report.es.applicationType
     type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=applicationTypes|$.MdmsRes.EstateServices.applicationTypes.*.type|$.MdmsRes.EstateServices.applicationTypes.*.name
+    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=applicationTypes|$.MdmsRes.EstateServices.applicationTypes.*.applicationType|$.MdmsRes.EstateServices.applicationTypes.*.applicationType| unique
     source: estate
     wrapper: true
     isMandatory: false
-    searchClause: AND application.application_type = split_part($applicationType,'_',3)    
+    searchClause: AND application.application_type = $applicationType   
   query: |
     SELECT 
       application.application_number as applicationNumber,
@@ -166,7 +166,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     WHERE application.state in ('ES_PENDING_DA_PREPARE_LETTER', 'ES_PENDING_SO_APPROVAL','ES_PENDING_DA_PREPARE_LETTER',
     'ES_PENDING_SO_APPROVAL','ES_PENDING_CITIZEN_NOTICE_DOCUMENTS','ES_PENDING_DS_NOTICE_VERIFICATION','ES_PENDING_NOTICE_CLARIFICATION',
-    'ES_PENDING_DA_NOTICE_VERIFICATION','ES_PENDING_SRA_NOTICE_VERIFICATION','ES_PENDING_SO_NOTICE_VERIFICATION', 'ES_APPROVED') 
+    'ES_PENDING_DA_NOTICE_VERIFICATION','ES_PENDING_SRA_NOTICE_VERIFICATION','ES_PENDING_SO_NOTICE_VERIFICATION', 'ES_APPROVED','ES_MM_PENDING_DA_PREPARE_LETTER','ES_MM_PENDING_SRA_REVIEW_LETTER','ES_MM_PENDING_SO_APPROVAL','ES_MM_APPROVED') 
     AND application.state != 'null' 
     AND application.tenantId LIKE $tenantid
     
@@ -237,7 +237,7 @@ ReportDefinitions:
     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'CASH') AS offl ON pd.paymentid = offl.id
     WHERE application.state in ('ES_PENDING_DA_PREPARE_LETTER', 'ES_PENDING_SO_APPROVAL','ES_PENDING_DA_PREPARE_LETTER',
     'ES_PENDING_SO_APPROVAL','ES_PENDING_CITIZEN_NOTICE_DOCUMENTS','ES_PENDING_DS_NOTICE_VERIFICATION','ES_PENDING_NOTICE_CLARIFICATION',
-    'ES_PENDING_DA_NOTICE_VERIFICATION','ES_PENDING_SRA_NOTICE_VERIFICATION','ES_PENDING_SO_NOTICE_VERIFICATION', 'ES_APPROVED') AND application.tenantId LIKE $tenantid
+    'ES_PENDING_DA_NOTICE_VERIFICATION','ES_PENDING_SRA_NOTICE_VERIFICATION','ES_PENDING_SO_NOTICE_VERIFICATION', 'ES_APPROVED','ES_MM_PENDING_DA_PREPARE_LETTER','ES_MM_PENDING_SRA_REVIEW_LETTER','ES_MM_PENDING_SO_APPROVAL','ES_MM_APPROVED') AND application.tenantId LIKE $tenantid
   groupby: GROUP BY applicationtype
 
 
@@ -311,7 +311,7 @@ ReportDefinitions:
     source: estate
     wrapper: true
     isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
+    searchClause: AND (CASE WHEN $branchType = 'BRANCH_MANIMAJRA' THEN ptd.branch_type='MANI_MAJRA' ELSE ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1)) END)
   - name: file_number
     label: report.es.filenumber
     type: string
@@ -322,7 +322,7 @@ ReportDefinitions:
     SELECT 
       distinct payment.transactionnumber as transactionnumber,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       payment.payername as name,
@@ -395,14 +395,6 @@ ReportDefinitions:
     source: rent
     isMandatory: false
     searchClause: AND payment.createdtime  <= $toDate 
-  - name: branchType
-    label: report.es.branchType
-    type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
-    source: estate
-    wrapper: true
-    isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
   - name: file_number
     label: report.es.filenumber
     type: string
@@ -413,7 +405,7 @@ ReportDefinitions:
     SELECT 
       distinct payment.transactionnumber as transactionnumber,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       payment.payername as name,
@@ -425,7 +417,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('ES-PN-%s',pt.file_number), '%')
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-    WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null'
+    WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' AND ptd.branch_type='ESTATE_BRANCH'
     
 - reportName: EstateExtensionFeeRegistryReport
   summary: Estate Extension fee Registry Report
@@ -485,14 +477,6 @@ ReportDefinitions:
     source: rent
     isMandatory: false
     searchClause: AND payment.createdtime  <= $toDate 
-  - name: branchType
-    label: report.es.branchType
-    type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
-    source: estate
-    wrapper: true
-    isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
   - name: file_number
     label: report.es.filenumber
     type: string
@@ -503,7 +487,7 @@ ReportDefinitions:
     SELECT 
       distinct payment.transactionnumber as transactionnumber,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       payment.payername as name,
@@ -515,7 +499,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('ES-EF-%s',pt.file_number), '%')
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-    WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null'
+    WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' AND ptd.branch_type='ESTATE_BRANCH'
     
 - reportName: EstateSecurityDepositRegistryReport
   summary: Estate Security Deposit Registry Report
@@ -575,14 +559,6 @@ ReportDefinitions:
     source: rent
     isMandatory: false
     searchClause: AND payment.createdtime  <= $toDate 
-  - name: branchType
-    label: report.es.branchType
-    type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
-    source: estate
-    wrapper: true
-    isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
   - name: file_number
     label: report.es.filenumber
     type: string
@@ -593,7 +569,7 @@ ReportDefinitions:
     SELECT 
       distinct payment.transactionnumber as transactionnumber,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       payment.payername as name,
@@ -605,7 +581,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('ES-SD-%s',pt.file_number), '%')
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-    WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null'
+    WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' AND ptd.branch_type='ESTATE_BRANCH'
 
     
 - reportName: EstateRentCollectionReport
@@ -663,12 +639,12 @@ ReportDefinitions:
     source: estate
     wrapper: true
     isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
+    searchClause: AND (CASE WHEN $branchType = 'BRANCH_MANIMAJRA' THEN ptd.branch_type='MANI_MAJRA' ELSE ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1)) END)
   query: |
     SELECT 
       COUNT(bill.consumercode) as transactionCount,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       SUM(onl.totalamountpaid) as online,
       SUM(offl.totalamountpaid) as offline,
       COALESCE(SUM(onl.totalamountpaid),0)+ COALESCE(SUM(offl.totalamountpaid),0) as total
@@ -720,26 +696,18 @@ ReportDefinitions:
     source: rent
     isMandatory: false
     searchClause: AND payment.createdtime <= $toDate
-  - name: branchType
-    label: report.es.branchType
-    type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
-    source: estate
-    wrapper: true
-    isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
   query: |
     SELECT 
       COUNT(bill.consumercode) as transactionCount,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       SUM(payment.totalamountpaid) as total 
      FROM cs_ep_property_v1 pt
      INNER JOIN cs_ep_property_details_v1 ptd on ptd.property_id = pt.id
      LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('ES-PN-%s',pt.file_number), '%')
      LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
      LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-     WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' 
+     WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' AND ptd.branch_type='ESTATE_BRANCH'
   groupby: GROUP BY  pt.file_number,ptd.branch_type
   
 - reportName: EstateExtensionFeeCollectionReport
@@ -780,26 +748,18 @@ ReportDefinitions:
     source: rent
     isMandatory: false
     searchClause: AND payment.createdtime <= $toDate
-  - name: branchType
-    label: report.es.branchType
-    type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
-    source: estate
-    wrapper: true
-    isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
   query: |
     SELECT 
       COUNT(bill.consumercode) as transactionCount,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       SUM(payment.totalamountpaid) as total 
      FROM cs_ep_property_v1 pt
      INNER JOIN cs_ep_property_details_v1 ptd on ptd.property_id = pt.id
      LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('ES-EF-%s',pt.file_number), '%')
      LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
      LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-     WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' 
+     WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' AND ptd.branch_type='ESTATE_BRANCH'
   groupby: GROUP BY  pt.file_number,ptd.branch_type
   
 - reportName: EstateSecurityDepositCollectionReport
@@ -840,26 +800,18 @@ ReportDefinitions:
     source: rent
     isMandatory: false
     searchClause: AND payment.createdtime <= $toDate
-  - name: branchType
-    label: report.es.branchType
-    type: singlevaluelist
-    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
-    source: estate
-    wrapper: true
-    isMandatory: true
-    searchClause: AND ptd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
   query: |
     SELECT 
       COUNT(bill.consumercode) as transactionCount,
       pt.file_number,
-      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN ptd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN ptd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN ptd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       SUM(payment.totalamountpaid) as total 
      FROM cs_ep_property_v1 pt
      INNER JOIN cs_ep_property_details_v1 ptd on ptd.property_id = pt.id
      LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('ES-SD-%s',pt.file_number), '%')
      LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
      LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-     WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' 
+     WHERE pt.tenantId LIKE $tenantid AND payment.transactionnumber != 'null' AND ptd.branch_type='ESTATE_BRANCH'
   groupby: GROUP BY  pt.file_number,ptd.branch_type
   
 - reportName: EstateRentDueReport
@@ -941,7 +893,7 @@ ReportDefinitions:
     source: estate
     wrapper: true
     isMandatory: true
-    searchClause: AND due.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1))
+    searchClause: AND (CASE WHEN $branchType = 'BRANCH_MANIMAJRA' THEN due.branch_type='MANI_MAJRA' ELSE due.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1)) END)
   - name: sector
     label: report.es.sector
     type: singlevaluelist
@@ -953,7 +905,7 @@ ReportDefinitions:
   query: |
     SELECT 
       file_number,
-      CASE WHEN branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN branch_type = 'MANIMAJRA_BRANCH' THEN 'Manimajra Branch' ELSE '' END as branchType,
+      CASE WHEN branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
       property_type,
       sectorNumber,
       owner_name,
@@ -963,14 +915,156 @@ ReportDefinitions:
       balance_gst,
       balance_gst_penalty,
       balance_interest,
-      rent,
-      gst,
-      rent_penalty,
-      gst_penalty,
       COALESCE(SUM(balance_rent),0)+ COALESCE(SUM(balance_rent_penalty),0) + COALESCE(SUM(balance_gst),0)+ COALESCE(SUM(balance_gst_penalty),0)+ COALESCE(SUM(balance_interest),0) as total_due,
       balance_amount 
     FROM cs_ep_dueamount due
     WHERE due.tenantId LIKE $tenantid
-  groupby: GROUP BY file_number,branch_type,property_type,sectorNumber,owner_name,mobile_number,balance_rent,balance_rent_penalty,balance_gst,balance_gst_penalty,balance_interest,rent,gst,rent_penalty,gst_penalty,balance_amount 
+  groupby: GROUP BY file_number,branch_type,property_type,sectorNumber,owner_name,mobile_number,balance_rent,balance_rent_penalty,balance_gst,balance_gst_penalty,balance_interest,balance_amount 
 
-
+- reportName: EstateCourtCaseReport
+  summary: Estate property court case details Report
+  version: 1.0.0
+  moduleName: rainmaker-es
+  sourceColumns:
+  - name: file_number
+    label: report.es.filenumber
+    type: string
+    source: courtcase
+    total: false
+  - name: branchType
+    label: report.es.branchType
+    type: string
+    source: courtcase
+    total: false
+  - name: totalCase
+    label: report.es.courtcase.total
+    type: string
+    source: courtcase
+    total: true
+  searchParams:
+  - name: fromDate
+    label: reports.es.fromDate
+    type: epoch
+    source: courtcase
+    isMandatory: false
+    searchClause: AND courtcase.created_time >= $fromDate
+  - name: toDate
+    label: reports.es.toDate
+    type: epoch
+    source: courtcase
+    isMandatory: false
+    searchClause: AND courtcase.created_time  <= $toDate 
+  - name: branchType
+    label: report.es.branchType
+    type: singlevaluelist
+    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
+    source: courtcase
+    wrapper: true
+    isMandatory: true
+    searchClause: AND (CASE WHEN $branchType = 'BRANCH_MANIMAJRA' THEN pd.branch_type='MANI_MAJRA' ELSE pd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1)) END)
+  - name: file_number
+    label: report.es.filenumber
+    type: string
+    source: courtcase
+    isMandatory: false
+    searchClause: AND property.file_number  = $file_number 
+  query: | 
+    SELECT COUNT(courtcase.id) as totalCase,property.file_number,
+    CASE WHEN pd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN pd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN pd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType
+    FROM cs_ep_court_case_v1 courtcase 
+    LEFT OUTER JOIN cs_ep_property_details_v1 pd on  pd.id = courtcase.property_details_id
+    LEFT OUTER JOIN cs_ep_property_v1 property on property.id= pd.property_id
+    WHERE courtcase.tenantid LIKE $tenantid
+  groupby: GROUP BY property.file_number,pd.branch_type
+  
+- reportName: EstateCourtCaseDetailsReport
+  summary: Estate property court case details Report
+  version: 1.0.0
+  moduleName: rainmaker-es
+  sourceColumns:
+  - name: file_number
+    label: report.es.filenumber
+    type: string
+    source: courtcase
+    total: false
+  - name: branchType
+    label: report.es.branchType
+    type: string
+    source: courtcase
+    total: false
+  - name: estate_officer_court
+    label: report.es.courtcase.officerCourt
+    type: string
+    source: courtcase
+    total: false
+  - name: commissioners_court
+    label: report.es.courtcase.commissionerCourt
+    type: string
+    source: courtcase
+    total: false
+  - name: chief_administartors_court
+    label: report.es.courtcase.chiefAdministartorsCourt
+    type: string
+    source: courtcase
+    total: false
+  - name: advisor_to_admin_court
+    label: report.es.courtcase.advisorToAdminCourt
+    type: string
+    source: courtcase
+    total: false
+  - name: honorable_district_court
+    label: report.es.courtcase.honorableDistrictCourt
+    type: string
+    source: courtcase
+    total: false
+  - name: honorable_high_court
+    label: report.es.courtcase.honorableHighCourt
+    type: string
+    source: courtcase
+    total: false
+  - name: honorable_supreme_court
+    label: report.es.courtcase.honorableSupremeCourt
+    type: string
+    source: courtcase
+    total: false
+  searchParams:
+  - name: fromDate
+    label: reports.es.fromDate
+    type: epoch
+    source: courtcase
+    isMandatory: false
+    searchClause: AND courtcase.created_time >= $fromDate
+  - name: toDate
+    label: reports.es.toDate
+    type: epoch
+    source: courtcase
+    isMandatory: false
+    searchClause: AND courtcase.created_time  <= $toDate 
+  - name: branchType
+    label: report.es.branchType
+    type: singlevaluelist
+    pattern: http://localhost:8094/egov-mdms-service/v1/_get?tenantId=ch&moduleName=EstateServices&masterName=branchType|$.MdmsRes.EstateServices.branchType.*.code|$.MdmsRes.EstateServices.branchType.*.name
+    source: courtcase
+    wrapper: true
+    isMandatory: true
+    searchClause: AND (CASE WHEN $branchType = 'BRANCH_MANIMAJRA' THEN pd.branch_type='MANI_MAJRA' ELSE pd.branch_type=concat(split_part($branchType,'_',2),'_', split_part($branchType,'_',1)) END)
+  - name: file_number
+    label: report.es.filenumber
+    type: string
+    source: courtcase
+    isMandatory: false
+    searchClause: AND property.file_number  = $file_number 
+  query: | 
+    SELECT property.file_number,
+    CASE WHEN pd.branch_type = 'ESTATE_BRANCH' THEN 'Estate Branch' WHEN pd.branch_type = 'BUILDING_BRANCH' THEN 'Building Branch' WHEN pd.branch_type = 'MANI_MAJRA' THEN 'ManiMajra' ELSE '' END as branchType,
+    courtcase.estate_officer_court,
+    courtcase.commissioners_court,
+    courtcase.chief_administartors_court,
+    courtcase.advisor_to_admin_court,
+    courtcase.honorable_district_court,
+    courtcase.honorable_high_court,
+    courtcase.honorable_supreme_court
+    FROM cs_ep_court_case_v1 courtcase 
+    LEFT OUTER JOIN cs_ep_property_details_v1 pd on  pd.id = courtcase.property_details_id
+    LEFT OUTER JOIN cs_ep_property_v1 property on property.id= pd.property_id
+    WHERE courtcase.tenantid LIKE $tenantid

@@ -66,9 +66,9 @@
                             "path": "$.feeEstimate[0].name.labelKey"
                         },
                         "localisation": {
-                          "module": "rainmaker-es"
-                        }
-          
+                            "module": "rainmaker-es",
+                            "required": true
+                          }
                       },
                       {
                         "variable": "gstLabel",
@@ -76,8 +76,9 @@
                           "path": "$.feeEstimate[1].name.labelKey"
                         },
                         "localisation": {
-                          "module": "rainmaker-es"
-                        }
+                            "module": "rainmaker-es",
+                            "required": true
+                          }
           
                       },
                       {
