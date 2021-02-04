@@ -45,8 +45,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67058e','en_IN','ACTION_TEST_EAWASSTAT','E-Awas Stat','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 
-,('4d3b6355-1abb-4591-ac6f-2bc063b67059e','en_IN','INTIGRATION_EMP_NEW_EMPLOYEE_FORM_HEADER','E-Awas Stat','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b67060e','en_IN','INTIGRATION_EMP_SUMMARY_BASIC_DEATILS_SUBHEADER','E-Awas Stat','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67059e','en_IN','INTIGRATION_EMP_NEW_EMPLOYEE_FORM_HEADER','Employee Details','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67060e','en_IN','INTIGRATION_EMP_SUMMARY_BASIC_DEATILS_SUBHEADER','Employee Basic Details','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67061e','en_IN','INTIGRATION_EMP_EMPFULLNAME','Employee Name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67062e','en_IN','INTIGRATION_EMP_DATA_OF_BIRTH','Date Of Birth','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67063e','en_IN','INTIGRATION_EMP_DEPT_NAME','Department Name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
@@ -67,5 +67,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67078e','en_IN','INTIGRATION_EMP_DEGIGNATION_NAME_LABEL','Designation name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67079e','en_IN','INTIGRATION_EMP_JOINING_OFFICE_LABEL','Joining Office','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67080e','en_IN','INTIGRATION_EMP_SUMMARY_LEAVE_DEATILS_SUBHEADER','Leave Details','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b67081e','en_IN','INTIGRATION_HRMS_EMPLOYEE_CODE_VALIDATION','Please fill Employee code','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL);
-
+,('4d3b6355-1abb-4591-ac6f-2bc063b67081e','en_IN','INTIGRATION_HRMS_EMPLOYEE_CODE_VALIDATION','Please fill Employee code','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67082e','en_IN','INTIGRATION_SF_EMPLOYEE_CODE','Employee code','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67083e','en_IN','INTIGRATION_SF_EMPLOYEE_CODE_PLACEHOLDER','Enter Employee code','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67084e','en_IN','INTIGRATION_EMP_UPDATE_INFORMATION','Employee code update function is available only one time from UI, If Required need to raise ticket for the same','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,,('4d3b6355-1abb-4591-ac6f-2bc063b67085e','en_IN','INTIGRATION_EDIT_DETAILS_LABEL','EDIT DETAILS','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL);
