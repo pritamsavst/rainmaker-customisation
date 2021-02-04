@@ -1,5 +1,3 @@
-
-
 DELETE from public.message  WHERE  module='rainmaker-integration';
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -69,5 +67,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67078e','en_IN','INTIGRATION_EMP_DEGIGNATION_NAME_LABEL','Designation name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67079e','en_IN','INTIGRATION_EMP_JOINING_OFFICE_LABEL','Joining Office','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67080e','en_IN','INTIGRATION_EMP_SUMMARY_LEAVE_DEATILS_SUBHEADER','Leave Details','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b67081e','en_IN','INTIGRATION_HRMS_EMPLOYEE_CODE_VALIDATION','E-Awas Stat','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b67082e','en_IN','ACTION_TEST_EAWASSTAT','Please fill Employee code','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL);
+,('4d3b6355-1abb-4591-ac6f-2bc063b67081e','en_IN','INTIGRATION_HRMS_EMPLOYEE_CODE_VALIDATION','Please fill Employee code','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL);
+
