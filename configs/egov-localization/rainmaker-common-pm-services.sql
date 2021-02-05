@@ -28,8 +28,18 @@ DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMCE L2' and modul
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYDMCE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_PENDINGAPPROVAL' and module='rainmaker-common' and tenantId='ch';
 
-
-
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFJE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMEE L1' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMEE L2' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOHDMEE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYCHDSE L1' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYCHDSE L2' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOCHDSE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYCHDCE L1' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYCHDCE L2' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOCHDCE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFSDEHQ' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOSDEHQ' and module='rainmaker-common' and tenantId='ch';
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00001','en_IN', 'WF_ROADCUTNOC_REVIEWSDE L2','Review Of SDE L2','ch','rainmaker-common', '94');
@@ -55,8 +65,6 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00011','en_IN', 'WF_ROADCUTNOC_REVIEWOFSE L2','Review Approval Of SE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00012','en_IN', 'WF_ROADCUTNOC_REASSIGNTOSE L2','Reassign Of SE','ch','rainmaker-common', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e00013','en_IN', 'WF_ROADCUTNOC_VERIFYCHD','Verification Of CHD','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00014','en_IN', 'WF_ROADCUTNOC_VERIFYDMSE','Verification Of DMSE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
@@ -89,3 +97,27 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00028','en_IN', 'WF_ROADCUTNOC_VERIFY FOR COMPLETION','Verification For Completion','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00029','en_IN', 'WF_ROADCUTNOC_COMPLETE','Completed','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00030','en_IN', 'WF_ROADCUTNOC_REVIEWOFJE','Review Of JE','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00031','en_IN', 'WF_ROADCUTNOC_VERIFYHDMEE L1','Verification Of HDMEE L1','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00032','en_IN', 'WF_ROADCUTNOC_VERIFYHDMEE L2','Verification Of HDMEE L2','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00033','en_IN', 'WF_ROADCUTNOC_REASSIGNTOHDMEE','Reassign To HDMEE','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00034','en_IN', 'WF_ROADCUTNOC_VERIFYCHDSE L1','Verification Of CHDSE L1','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00035','en_IN', 'WF_ROADCUTNOC_VERIFYCHDSE L2','Verification Of CHDSE L2','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00036','en_IN', 'WF_ROADCUTNOC_REASSIGNTOCHDSE','Reassign To CHDSE','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00037','en_IN', 'WF_ROADCUTNOC_VERIFYCHDCE L1','Verification Of CHDCE L1','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00038','en_IN', 'WF_ROADCUTNOC_VERIFYCHDCE L2','Verification Of CHDCE L2','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00039','en_IN', 'WF_ROADCUTNOC_REASSIGNTOCHDCE','Reassign To CHDCE','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00040','en_IN', 'WF_ROADCUTNOC_REVIEWOFSDEHQ','Verification Of SDEHQ','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00041','en_IN', 'WF_ROADCUTNOC_REASSIGNTOSDEHQ','Reassign To SDEHQ','ch','rainmaker-common', '94');
