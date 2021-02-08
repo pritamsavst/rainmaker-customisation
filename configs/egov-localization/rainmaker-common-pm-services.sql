@@ -1,16 +1,14 @@
-DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWSDE' and module='rainmaker-common' and tenantId='ch';
-DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWSDE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWSDE L2' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWSDE L1' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOSDE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFEE L2' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFEE L3' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOEE L3' and module='rainmaker-common' and tenantId='ch';
-DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMEE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYDMEE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTODMEE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFSE L1' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFSE L2' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOSE L2' and module='rainmaker-common' and tenantId='ch';
-DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYCHD' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYDMSE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REASSIGNTOWD' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_APPROVED BY EE' and module='rainmaker-common' and tenantId='ch';
@@ -27,7 +25,6 @@ DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMCE L1' and modul
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMCE L2' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYDMCE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_PENDINGAPPROVAL' and module='rainmaker-common' and tenantId='ch';
-
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_REVIEWOFJE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMEE L1' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_ROADCUTNOC_VERIFYHDMEE L2' and module='rainmaker-common' and tenantId='ch';
@@ -53,8 +50,6 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00005','en_IN', 'WF_ROADCUTNOC_REVIEWOFEE L3','Review Approval Of EE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00006','en_IN', 'WF_ROADCUTNOC_REASSIGNTOEE L3','Reassign Of EE','ch','rainmaker-common', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e00007','en_IN', 'WF_ROADCUTNOC_VERIFYHDMEE','Verification Of HDMEE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00008','en_IN', 'WF_ROADCUTNOC_VERIFYDMEE','Verification Of DMEE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
