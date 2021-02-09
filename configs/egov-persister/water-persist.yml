@@ -653,6 +653,14 @@ serviceMaps:
       - jsonPath: $.WaterConnection.auditDetails.createdBy
           
       - jsonPath: $.WaterConnection.auditDetails.createdTime
+      
+    - query: UPDATE public.eg_ws_connectionholder SET userid=? WHERE connectionid=?;
+      basePath: $.WaterConnection
+      jsonMaps:
+
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+      - jsonPath: $.WaterConnection.id
        
 
  - version: 1.0

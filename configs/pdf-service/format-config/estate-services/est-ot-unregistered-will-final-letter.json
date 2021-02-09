@@ -53,7 +53,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2019/ ",
+                        "text": "No.MC/Estate/2021/ ",
                         "bold": true
                       },
                       {
@@ -172,28 +172,28 @@
                         "text":" which has submitted by you along with liability affidavit, Indemnity bond and publication of public notice in ,"
                     },
                     {
-                        "text": " --------",
+                        "text": " ___________ ",
                         "bold": true
                     },
                     {
                         "text": "(Hindi) "
                     },
                     {
-                        "text": " --------",
+                        "text": " ___________ ",
                         "bold": true
                     },
                     {
                         "text":"(Punjabi)"
                     },
                     {
-                        "text": " --------",
+                        "text": " ____________ ",
                         "bold": true
                     },
                     {
                         "text":"(English) dated"
                     },
                     {
-                        "text": " --------",
+                        "text": " ___________ ",
                         "bold": true
                     },
                     {
@@ -262,12 +262,12 @@
             {
                 "margin": [0, 20, 0, 0],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2019/",
+                        "text": "Endst. No. MC/Estate/2021/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
                     {
-                        "text": "Dated: ______",
+                        "text": "Dated: _________",
                         "style": "pdfContent",
                         "alignment": "right"
                     }

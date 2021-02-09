@@ -66,8 +66,9 @@
                             "path": "$.feeEstimate[0].name.labelKey"
                         },
                         "localisation": {
-                          "module": "rainmaker-es"
-                        }
+                            "module": "rainmaker-es",
+                            "required": true
+                          }
           
                       },
                       {
@@ -76,8 +77,9 @@
                           "path": "$.feeEstimate[1].name.labelKey"
                         },
                         "localisation": {
-                          "module": "rainmaker-es"
-                        }
+                            "module": "rainmaker-es",
+                            "required": true
+                          }
           
                       },
                       {

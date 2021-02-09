@@ -170,8 +170,14 @@
                 "value":{
                   "path":"$.property.propertyDetails.emdAmount"
                 }
+              },
+              {
+                "variable": "dateOfRegistration",
+                "value": {
+                    "path": "$.applicationDetails.dateOfRegistration"
+                },
+                "type":"date"
               }
-
             ]
           }
         ]

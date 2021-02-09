@@ -518,7 +518,6 @@
                       },
                       "localisation": {
                           "required": true,
-                          "prefix": "ES",
                           "module": "rainmaker-es"
                       }
                   },

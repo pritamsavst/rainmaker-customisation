@@ -53,7 +53,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2019/ ",
+                        "text": "No.MC/Estate/2021/ ",
                         "bold": true
                       },
                       {
@@ -128,7 +128,7 @@
                 "preserveLeadingSpaces": true,
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "             Reference your application dated _____________________ on the subject cited above."
+                "text": "             Reference your application dated {{dateOfRegistration}} on the subject cited above."
             },
             {
                 "preserveLeadingSpaces": true,
@@ -160,7 +160,7 @@
                         "text": "situated in"
                     },
                     {
-                        "text": "{{sectorNumber}}",
+                        "text": " {{sectorNumber}}",
                         "bold": true
                     },
                     {
@@ -226,7 +226,7 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2019/",
+                        "text": "Endst. No. MC/Estate/2021/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },

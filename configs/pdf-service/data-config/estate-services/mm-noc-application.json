@@ -355,25 +355,25 @@
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.ownerName"
+                            "path": "$.applicationDetails.owner.name"
                         }
                     },
                     {
                         "variable": "guardianName",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.guardianName"
+                            "path": "$.applicationDetails.owner.guardianName"
                         }
                     },
                     {
                         "variable": "address",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.address"
+                            "path": "$.applicationDetails.owner.address"
                         }
                     },
                     {
                         "variable": "mobileNumber",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.mobileNumber"
+                            "path": "$.applicationDetails.owner.mobileNumber"
                         }
                     },
                     {
