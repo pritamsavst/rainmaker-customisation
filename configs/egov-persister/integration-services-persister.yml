@@ -152,4 +152,4 @@ serviceMaps:
          -  jsonPath: $.fireNocRequest.auditDetails.createdBy
          -  jsonPath: $.fireNocRequest.auditDetails.createdTime
          -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime             
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime		 
