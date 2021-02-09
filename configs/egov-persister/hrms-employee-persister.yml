@@ -7,7 +7,7 @@ serviceMaps:
     fromTopic: save-hrms-employee
     isTransaction: true
     queryMaps:
-    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, dateofsuperannuation, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, dateofsuperannuation, employeestatus, employeetype, active, hrms_code, postdetailid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*
       jsonMaps:
@@ -30,6 +30,10 @@ serviceMaps:
       - jsonPath: $.Employees.*.employeeType
 
       - jsonPath: $.Employees.*.isActive
+
+      - jsonPath: $.Employees.*.hrmsCode
+
+      - jsonPath: $.Employees.*.postDetailId
 
       - jsonPath: $.Employees.*.auditDetails.createdBy
 
@@ -253,7 +257,7 @@ serviceMaps:
 
       - jsonPath:  $.Employees.*.uuid
 
-    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, dateofsuperannuation, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, dateofsuperannuation, employeestatus, employeetype, active, hrms_code, postdetailid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*
       jsonMaps:
@@ -276,6 +280,10 @@ serviceMaps:
       - jsonPath: $.Employees.*.employeeType
 
       - jsonPath: $.Employees.*.isActive
+
+      - jsonPath: $.Employees.*.hrmsCode
+
+      - jsonPath: $.Employees.*.postDetailId
 
       - jsonPath: $.Employees.*.auditDetails.createdBy
 

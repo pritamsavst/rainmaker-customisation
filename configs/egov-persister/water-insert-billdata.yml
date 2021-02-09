@@ -7,7 +7,7 @@ serviceMaps:
    fromTopic: save-ws-waterbilldetails
    isTransaction: true
    queryMaps:
-    - query: INSERT INTO public.eg_ws_savebilling(id, cccode, divsdiv, consumercode, billcycle, billgroup, subgroup, billtype, name, address, add1, add2, add3, add4, add5, cesscharge, netamount, grossamount, surcharge, totalnetamount, totalsurcharge, totalgrossamount, fixchargecode, fixcharge, duedatecash, duedatecheque, status, billid, paymentid, paymentstatus, createdby, createdtime,isFileGenerated ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?) ON CONFLICT (consumercode) DO UPDATE SET cccode=?, divsdiv=?, consumercode=?, billcycle=?, billgroup=?, subgroup=?, billtype=?, "name"=?, address=?, add1=?, add2=?, add3=?, add4=?, add5=?, cesscharge=?, netamount=?, grossamount=?, surcharge=?, totalnetamount=?, totalsurcharge=?, totalgrossamount=?, fixchargecode=?, fixcharge=?, duedatecash=?, duedatecheque=?, status=?, billid=?, paymentid=?, paymentstatus=?, totalAmount_paid=?, paymentMode=?,isFileGenerated=?, lastmodifiedby=?, lastmodifiedtime=?;
+    - query: INSERT INTO public.eg_ws_savebilling(id, cccode, divsdiv, consumercode, billcycle, billgroup, subgroup, billtype, name, address, add1, add2, add3, add4, add5, cesscharge, netamount, grossamount, surcharge, totalnetamount, totalsurcharge, totalgrossamount, fixchargecode, fixcharge, duedatecash, duedatecheque, status, billid, paymentid, paymentstatus, createdby, createdtime,isFileGenerated,fromDate,toDate ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?) ON CONFLICT (consumercode) DO UPDATE SET cccode=?, divsdiv=?, consumercode=?, billcycle=?, billgroup=?, subgroup=?, billtype=?, "name"=?, address=?, add1=?, add2=?, add3=?, add4=?, add5=?, cesscharge=?, netamount=?, grossamount=?, surcharge=?, totalnetamount=?, totalsurcharge=?, totalgrossamount=?, fixchargecode=?, fixcharge=?, duedatecash=?, duedatecheque=?, status=?, billid=?, paymentid=?, paymentstatus=?, totalAmount_paid=?, paymentMode=?,isFileGenerated=?,fromDate=?,toDate=?, lastmodifiedby=?, lastmodifiedtime=?;
 
       basePath: $.billGeneration.*
       jsonMaps:
@@ -76,7 +76,11 @@ serviceMaps:
 
        - jsonPath: $.billGeneration.*.auditDetails.createdTime 
 
-       - jsonPath: $.billGeneration.*.isFileGenerated
+       - jsonPath: $.billGeneration.*.isFileGenerated 
+
+       - jsonPath: $.billGeneration.*.fromDate 
+
+       - jsonPath: $.billGeneration.*.toDate
 
        - jsonPath: $.billGeneration.*.ccCode
 
@@ -140,7 +144,11 @@ serviceMaps:
 
        - jsonPath: $.billGeneration.*.paymentMode 
 
-       - jsonPath: $.billGeneration.*.isFileGenerated
+       - jsonPath: $.billGeneration.*.isFileGenerated 
+
+       - jsonPath: $.billGeneration.*.fromDate 
+
+       - jsonPath: $.billGeneration.*.toDate
        
        - jsonPath: $.billGeneration.*.auditDetails.createdBy 
 
@@ -174,7 +182,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
 
-        - query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=? where consumercode = ? ;
+        - query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=? where concat(divsdiv,consumercode) = ? ;
           basePath: $.billGeneration
           jsonMaps:
 

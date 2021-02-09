@@ -143,6 +143,13 @@
                 "type":"date"
               },
               {
+                "variable":"approvalDate",
+                "value":{
+                  "path":"$.applicationDetails.transferor.transferorDetails.approvalDate"
+                },
+                "type":"date"
+              },
+              {
                 "variable":"areaSqft",
                 "value":{
                   "path":"$.property.propertyDetails.areaSqft"

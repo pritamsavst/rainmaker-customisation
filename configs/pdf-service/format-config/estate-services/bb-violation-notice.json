@@ -54,7 +54,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{applicationNumber}}",
+                      "text": "{{applicationNumber}}/MC/SDE (B)",
                       "bold": false
                     }
                   ],
@@ -71,7 +71,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{dateOfAllotment}}",
+                      "text": "{{approvalDate}}",
                       "bold": false
                     }
                   ],
@@ -115,7 +115,7 @@
                     {
                         "margin": [20, 0, 0, 0],
                         "width": "*",
-                        "text": "Notice under section 11 of the ”Chandigarh Rural Inhabitation (Area within RedLine of Revenue Estates. Abadi Area) Construction and Reconstruction Building Bye Laws for villages (both within and outside Municipal Limits) falling in common Territory of Chandigarh. 2017”",
+                        "text": "Notice under section 11(f) of the ”Chandigarh Rural Inhabitation (Area within RedLine of Revenue Estates. Abadi Area) Construction and Reconstruction Building Bye Laws for villages (both within and outside Municipal Limits) falling in Union Territory of Chandigarh. 2017”",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -125,7 +125,7 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "              Reference: SDE Memorandum No._____________"
+                "text": "              Reference: SDE Memorandum No.{{allotmentNumber}} Dated {{dateOfAllotment}}"
             },
             {          
                 "margin": [0, 20, 0, 0],
@@ -185,7 +185,7 @@
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "              Now. therefore, take notice under section 11(f) of the Chandigarh Rural Inhabitation (Area within Red Line of Revenue Estates. Abadi Area) Construction and Reconstruction Building Bye Laws for villages (both within and outside Municipal Limits) falling in Union Territory of Chandigarh. 2017. for villages in the Municipal area of Municipal Corporation to elect or re-erect the building as these are not according to the sanctioned plan! without getting the plan sanctioned from Municipal Corporation. Chandigarh. As per rules. the above violations mentioned in the table are required to be demolished by dated. In case you wish to rebut the notice, you are provided with an opportunity to appear before the undersigned on _______________________ at____________ to submit your reply."
+                "text": "              Now. therefore, take notice under section 11(f) of the Chandigarh Rural Inhabitation (Area within Red Line of Revenue Estates. Abadi Area) Construction and Reconstruction Building Bye Laws for villages (both within and outside Municipal Limits) falling in Union Territory of Chandigarh. 2017. for villages in the Municipal area of Municipal Corporation to elect or re-erect the building as these are not according to the sanctioned plan! without getting the plan sanctioned from Municipal Corporation. Chandigarh. As per rules. the above violations mentioned in the table are required to be demolished by dated _____________. In case you wish to rebut the notice, you are provided with an opportunity to appear before the undersigned on _______________________ at____________ to submit your reply."
             },
             {          
                 "margin": [0, 10, 0, 0],
@@ -206,7 +206,7 @@
                 "bold":true,
                 "stack":[
                     {
-                        "text":" Sub Divisional Commissioner,"
+                        "text":" Sub Divisional Engineer,"
                     },
                     {
                         "text":"For Additional Commissioner"
@@ -222,7 +222,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Emit. No. /MCC SDE (13)",
+                        "text": "Endst. No. /MCC SDE (B)",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
@@ -243,27 +243,48 @@
                         "style": "pdfContent"
                     },
                     {
-                        "text": "1.         SDE. Roads Subdivision No, MCC for issuing challan.",
+                        "text": "1.         SDE. Roads Subdivision No. ___________, MCC for issuing challan.",
                         "style": "pdfContent",
                         "preserveLeadingSpaces": true
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "2.          SDE.MCPH Subdivision No..M.C Chandigarh. to impose commercial chat till the owner/applicant get the building plan sanctioned/completion NOC from the competent authority.",
+                        "text": "2.         SDE.MCPH Subdivision No. ____________, M.C Chandigarh. to impose commercial chat till the owner/applicant get the building plan sanctioned/completion NOC from the competent authority.",
                         "style": "pdfContent"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "3.          Junior Engineer to attend the hearing on stipulated date and time as stated above along with the defaulter/encroacher before the undersigned.",
+                        "text": "3.         Junior Engineer to attend the hearing on stipulated date and time as stated above along with the defaulter/encroacher before the undersigned.",
                         "style": "pdfContent"
                     },
                     {
                         "style":"pdfContent",
                         "preserveLeadingSpaces":true,
-                        "text":"Jr.Astt./Steno (Bldgs.Br.) to note down the proceedings and for follow up action into the matter."
+                        "text":"4.         Jr.Astt./Steno (Bldgs.Br.) to note down the proceedings and for follow up action into the matter."
                     }
                 ]
-            }
+            },
+
+            {
+              "alignment":"right",
+              "margin":[0,20,0,0],
+              "style":"pdfContent", 
+              "bold":true,
+              "stack":[
+                  {
+                      "text":" Sub Divisional Engineer,"
+                  },
+                  {
+                      "text":"For Additional Commissioner"
+                  },
+                  {
+                      "text":"Municipal Corporation,"
+                  },
+                  {
+                      "text":"Chandigarh."
+                  }
+              ] 
+          }
 
 
         ],

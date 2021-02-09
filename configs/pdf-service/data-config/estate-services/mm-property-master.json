@@ -583,6 +583,12 @@
                         }
                     },
                     {
+                        "variable":"courtCaseArray",
+                        "value": {
+                            "path": "$.propertyDetails.courtCases.*"
+                        }
+                    },
+                    {
                         "variable": "PREVIOUS_OWNER_DETAILS_HEADER",
                         "value": {
                             "path": "PREVIOUS_OWNER_DETAILS_HEADER"

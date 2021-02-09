@@ -22,7 +22,7 @@
                      {
                        "stack": [
                          {
-                           "text": "OFFICE OF THE ADDITIONAL COMMISSIONER-I,SUB OFFICE, MANIMAJRA,MUNICIPAL CORPORATION, CHANDIGARH",
+                           "text": "OFFICE OF THE ADDITIONAL COMMISSIONER-I, SUB OFFICE, MANIMAJRA, MUNICIPAL CORPORATION, CHANDIGARH",
                            "style": "pt-reciept-citizen-header"
                          }
                        ],
@@ -219,7 +219,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst No. MC/Addl.CMC/C-III/Manimajra/2020/",
+                        "text": "Endst No. MC/Addl.CMC/C-III/Manimajra/2021/",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true

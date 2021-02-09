@@ -6,7 +6,7 @@ ReportDefinitions:
   moduleName: rainmaker-services
   externalService:
   - entity: $.messages[*]
-    apiURL: http://127.0.0.1:8087/localization/messages/v1/_search?locale=en_IN&tenantId=ch&module=rainmaker-services
+    apiURL: http://egov-localization:8080/localization/messages/v1/_search?locale=en_IN&tenantId=ch&module=rainmaker-services
     keyOrder: code,message
     tableName: tbl_localization
   sourceColumns:
@@ -90,14 +90,14 @@ ReportDefinitions:
   moduleName: rainmaker-services
   sourceColumns:
   - name: receiptnumber
-    label: report.tl.receiptnumber
+    label: report.bb.receiptnumber
     type: string
-    source: tl
+    source: bb
     total: false
   - name: receiptIssueDate
-    label: report.tl.receiptissuedate
+    label: report.bb.receiptissuedate
     type: string
-    source: tl
+    source: bb
     total: false
   - name: applicationNumber
     label: report.bb.bk_application_number
@@ -149,20 +149,26 @@ ReportDefinitions:
     searchClause: AND payment.createdtime  <= $toDate
   - name: bookingType
     label: reports.bb.bk_booking_type
-    type: string
-    source: bb
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingType|$.MdmsRes.Booking.BookingType.*.code|$.MdmsRes.Booking.BookingType.*.name
+    source: bb 
+    wrapper: true
     isMandatory: false
     searchClause: AND bb.bk_booking_type LIKE $bookingType
   - name: applicationStatus
     label: reports.bb.bk_application_status
-    type: string
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=BookingStatus|$.MdmsRes.Booking.BookingStatus.*.code|$.MdmsRes.Booking.BookingStatus.*.name
     source: bb
+    wrapper: true
     isMandatory: false
     searchClause: AND bb.bk_application_status LIKE $applicationStatus
   - name: locality
     label: reports.bb.bk_sector
-    type: string
+    type: singlevaluelist
+    pattern: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?tenantId=ch&moduleName=Booking&masterName=Sector|$.MdmsRes.Booking.Sector.*.code|$.MdmsRes.Booking.Sector.*.name
     source: bb
+    wrapper: true
     isMandatory: false
     searchClause: AND bb.bk_sector LIKE $locality
   query: |
