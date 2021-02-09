@@ -13,7 +13,6 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 ('f08684e5-a005-4f8b-8c03-886a9522f035','en_IN','ACTION_TEST_DEATH_OF_PENSIONER','Death of a Pensioner','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('d9436842-2b54-4f39-ae37-d0fc528e55b8','en_IN','ACTION_TEST_PENSION_OBLIGATION_REPORT','Pension Obligation','ch','rainmaker-common',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('520a8edc-8c77-4291-818f-bcc7fa3fa750','en_IN','CS_COMMON_INBOX_RRP','Regular Retirement pension','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
-,('30460c4a-9cd6-41e0-a588-a9d7bb080da2','en_IN','CS_COMMON_INBOX_DOP','Death of a pensioner','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('6fbea50e-8d08-4ec2-a46b-7bceed457dea','en_IN','CS_COMMON_INBOX_RRP_SERVICE','Regular Retirement pension','ch','rainmaker-common',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('cf1849e2-71ca-4cb7-a410-8966e4876cfa','en_IN','CS_COMMON_INBOX_DOP_SERVICE','Death of a Pensioner','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ;
@@ -46,7 +45,6 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 ,('1258a5b5-d5a7-4ef5-9460-738964d60f79','en_IN','WF_DOP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_CLERK','Pending for contingent bill preparation with clerk','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('30460c4a-9cd6-41e0-a588-a9d7bb080da2','en_IN','CS_COMMON_INBOX_DOP','Death of a pensioner','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('fb2db9b4-8ea8-44ba-a979-c3755e427d62','en_IN','WF_DOP_SERVICE_PENDING_FOR_AUDIT','Pending for audit','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
-,('cf1849e2-71ca-4cb7-a410-8966e4876cfa','en_IN','CS_COMMON_INBOX_DOP_SERVICE','Death of a Pensioner','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('308b7c78-9b1a-40b3-a365-a5a4addf2ced','en_IN','WF_DOP_SERVICE_PENDING_FOR_CALCULATION_APPROVAL','Pending for calculation approval','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ;
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES 
@@ -64,9 +62,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 ,('81c2a3a4-4902-4fde-bef6-31014216f99f','en_IN','WF_RRP_SERVICE_PENDING_FOR_DETAILS_VERIFICATION','Pending for details verification','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('a8727cdb-b167-48a9-b7ad-6b8cb1c41b04','en_IN','WF_RRP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_CLERK','Pending for contingent bill preparation with clerk','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('e46391c2-5e6b-4266-b802-fcda4fdc91c5','en_IN','WF_RRP_SERVICE_INITIATED','Initiated','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
-,('520a8edc-8c77-4291-818f-bcc7fa3fa750','en_IN','CS_COMMON_INBOX_RRP','Regular Retirement pension','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('0c1834ca-83a4-4da8-9fc2-8f18b0c11e4c','en_IN','WF_RRP_SERVICE_PENDING_FOR_AUDIT','Pending for audit','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
-,('6fbea50e-8d08-4ec2-a46b-7bceed457dea','en_IN','CS_COMMON_INBOX_RRP_SERVICE','Regular Retirement pension','ch','rainmaker-common',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('7e7201d8-e92e-4e55-9edc-5e1437d52567','en_IN','WF_RRP_SERVICE_PENDING_FOR_CALCULATION','Pending for calculation','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ;
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES 
