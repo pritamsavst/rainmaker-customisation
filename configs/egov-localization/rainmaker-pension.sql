@@ -1,3 +1,4 @@
+delete from message where "module" = 'rainmaker-pension';
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES 
 ('6ac4dfb3-06aa-48dd-a448-d512bc051d3c','en_IN','PENSION_EMPLOYEE_CLAIMANT_NAME','Claimant Name','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('3f37cf1b-e536-4185-aba2-3490a424bd31','en_IN','PENSION_EMPLOYEE_CLAIMANT_DOB','Claimant Date of Birth','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
@@ -123,7 +124,6 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 ,('97420dbe-7e25-4d33-8254-0f7cf9e311c1','en_IN','PENSION_DOCUMENT_UPLOAD_HISTORY','View Document History','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('50fbf447-8124-428e-b8df-550ad7b1adea','en_IN','PENSION_EMPLOYEE_STATUS','Status','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('2f7fd916-1e0d-4a7e-8817-a0ee8c90ab1c','en_IN','PENSION_EMPLOYEE_GENDER','Gender','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
-,('815b0f38-42c2-4b01-90b7-e878d2bd127a','en_IN','PENSION_DOJ_EMPLOYEE','Appointment Date','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('7c415af3-24b6-4428-8c07-7406fbfe167e','en_IN','PENSION_EMPLOYEE_TYPE','Employee Type','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('895ed651-578f-4471-a450-2536d853d05a','en_IN','PENSION_EMPLOYEE_CONVICTED_SERVICE','Is convicted of serious crime or guilty of grave misconduct','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
 ,('b50350d4-cceb-4f10-bdb3-e004544f7edf','en_IN','PENSION_EMPLOYEE_CURRENT_ASSIGNMENT','Is current assignment','ch','rainmaker-pension',24226,'2021-03-01 16:54:00.000',NULL,NULL)
