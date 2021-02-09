@@ -19,3 +19,21 @@ serviceMaps:
          -  jsonPath: $.PtMappingRequest.auditDetails.createdTime
          -  jsonPath: $.PtMappingRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.PtMappingRequest.auditDetails.lastModifiedTime
+         
+   -  version: 1.0
+      name: Save Fire Data
+      description: Request -Fire Data
+      fromTopic: integration-services-save-fireData
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.fire_noc_dump(uuid, data, is_active, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?::jsonb, ?, ?, ?, ?, ?);      
+         basePath: $.fireNocRequest
+         jsonMaps:
+         -  jsonPath: $.fireNocRequest.uuid
+         -  jsonPath: $.fireNocRequest.data
+            dbType: JSONB 
+         -  jsonPath: $.fireNocRequest.isActive
+         -  jsonPath: $.fireNocRequest.auditDetails.createdBy
+         -  jsonPath: $.fireNocRequest.auditDetails.createdTime
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime   
