@@ -661,6 +661,14 @@ serviceMaps:
       - jsonPath: $.WaterConnection.auditDetails.createdBy
 
       - jsonPath: $.WaterConnection.id
+      
+    - query: UPDATE public.eg_pt_owner SET userid=? WHERE propertyid=?;
+      basePath: $.WaterConnection
+      jsonMaps:
+
+      - jsonPath: $.WaterConnection.auditDetails.createdBy
+
+      - jsonPath: $.WaterConnection.propertyId
        
 
  - version: 1.0
