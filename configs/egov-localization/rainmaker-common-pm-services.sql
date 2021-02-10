@@ -162,8 +162,6 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00052','en_IN', 'WF_ROADCUTNOC_REVIEWOFSE_L1','Review Of SE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e00052','en_IN', 'WF_ROADCUTNOC_REVIEWOFSE_L2','Review Approval Of SE','ch','rainmaker-common', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00053','en_IN', 'WF_ROADCUTNOC_REASSIGNTOSE_L2','Reassign Of SE','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00054','en_IN', 'WF_ROADCUTNOC_REASSIGNTOSDE_L2','Reassign To SDE L2','ch','rainmaker-common', '94');
@@ -189,3 +187,5 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00064','en_IN', 'WF_ROADCUTNOC_VERIFY_FOR_COMPLETION','Verification For Completion','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00065','en_IN', 'WF_ROADCUTNOC_REVIEWOFCE_L1','Review Of CE','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e00066','en_IN', 'WF_ROADCUTNOC_REVIEWOFSE_L2','Review Approval Of SE','ch','rainmaker-common', '94');
