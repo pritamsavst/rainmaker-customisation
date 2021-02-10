@@ -834,4 +834,4 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-4591-ac6f-2bc063b75062e','en_IN','WS_SUCCESS','Succcess','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75063e','en_IN','WS_LINK_CONNECTION_VALLIDATION','This connection is already assign to other user','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75064e','en_IN','WS_FILL_FROM_DATE_TO_DATE_VALIDATION','From date should not be less than from date','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b75064e','en_IN','WS_FILL_FROM_DATE_TO_DATE_VALIDATION','From date should not be less than from date','ch','rainmaker-ws',24226,now(),NULL,NULL);
