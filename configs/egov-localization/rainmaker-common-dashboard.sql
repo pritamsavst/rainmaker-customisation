@@ -83,3 +83,10 @@ WHERE
 NOT EXISTS (
 	select * from message where code='Challan_dashboard_1'
 );
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby)
+SELECT '79c6da71-2d67-49dashboardd5-bb32-375f7b96349b','en_IN', 'Sport&Culture_dashboard_1','Sport and Culture Dashboard','ch','rainmaker-common-dashboard', '94'
+WHERE
+NOT EXISTS (
+	select * from message where code='Sport&Culture_dashboard_1'
+);
