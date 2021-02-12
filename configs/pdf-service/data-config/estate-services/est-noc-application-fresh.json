@@ -503,7 +503,8 @@
                         "variable": "dob",
                         "value": {
                             "path": "$.applicationDetails.transferee.dob"
-                        }
+                        },
+                        "type":"date"
                     },
                     {
                         "variable": "applicationNumber",

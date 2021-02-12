@@ -37,3 +37,119 @@ serviceMaps:
          -  jsonPath: $.fireNocRequest.auditDetails.createdTime
          -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime   
+         
+   -  version: 1.0
+      name: Save Fire Data
+      description: Request -Fire Data
+      fromTopic: integration-services-fireDetails
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.fire_noc_data_details( department_id, department_name, kiosk_details, kiosk_registerid, no_of_attachment, offline_ref_no, payment_date, payment_mode, reference_no,  registration_id, service_id, service_name, sub_version, version_no, amount, appl_id, appl_ref_no, submission_date, submission_location, submission_mode, applied_by, base_service_id,  is_active, created_by, created_time, last_modified_by, last_modified_time,enclosure_details,attribute_details)     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)
+                ON CONFLICT (department_id) DO UPDATE  SET department_id=?, department_name=?, kiosk_details=?, kiosk_registerid=?, no_of_attachment=?, offline_ref_no=?, payment_date=?, payment_mode=?, reference_no=?, registration_id=?, service_id=?, service_name=?, sub_version=?, version_no=?, amount=?, appl_id=?, appl_ref_no=?, submission_date=?, submission_location=?, submission_mode=?, applied_by=?, base_service_id=?,  last_modified_by=?, last_modified_time=? , enclosure_details=?, attribute_details=? ;       
+         basePath: $.fireNocRequest
+         jsonMaps:
+         -  jsonPath: $.fireNocRequest.details.department_id
+         -  jsonPath: $.fireNocRequest.details.department_name
+         -  jsonPath: $.fireNocRequest.details.kiosk_details
+         -  jsonPath: $.fireNocRequest.details.kiosk_registerid
+         -  jsonPath: $.fireNocRequest.details.no_of_attachment
+         -  jsonPath: $.fireNocRequest.details.offline_ref_no
+         -  jsonPath: $.fireNocRequest.details.payment_date
+         -  jsonPath: $.fireNocRequest.details.payment_mode
+         -  jsonPath: $.fireNocRequest.details.reference_no
+         -  jsonPath: $.fireNocRequest.details.registration_id
+         -  jsonPath: $.fireNocRequest.details.service_id
+         -  jsonPath: $.fireNocRequest.details.service_name
+         -  jsonPath: $.fireNocRequest.details.sub_version
+         -  jsonPath: $.fireNocRequest.details.version_no
+         -  jsonPath: $.fireNocRequest.details.amount
+         -  jsonPath: $.fireNocRequest.details.appl_id
+         -  jsonPath: $.fireNocRequest.details.appl_ref_no
+         -  jsonPath: $.fireNocRequest.details.submission_date
+         -  jsonPath: $.fireNocRequest.details.submission_location
+         -  jsonPath: $.fireNocRequest.details.submission_mode
+         -  jsonPath: $.fireNocRequest.details.applied_by
+         -  jsonPath: $.fireNocRequest.details.base_service_id
+         -  jsonPath: $.fireNocRequest.isActive
+         -  jsonPath: $.fireNocRequest.auditDetails.createdBy
+         -  jsonPath: $.fireNocRequest.auditDetails.createdTime
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime 
+         -  jsonPath: $.fireNocRequest.details.enclosure_details
+            type: JSON
+            dbType: JSONB     
+         -  jsonPath: $.fireNocRequest.details.attribute_details
+            type: JSON
+            dbType: JSONB       
+         -  jsonPath: $.fireNocRequest.details.department_id
+         -  jsonPath: $.fireNocRequest.details.department_name
+         -  jsonPath: $.fireNocRequest.details.kiosk_details
+         -  jsonPath: $.fireNocRequest.details.kiosk_registerid
+         -  jsonPath: $.fireNocRequest.details.no_of_attachment
+         -  jsonPath: $.fireNocRequest.details.offline_ref_no
+         -  jsonPath: $.fireNocRequest.details.payment_date
+         -  jsonPath: $.fireNocRequest.details.payment_mode
+         -  jsonPath: $.fireNocRequest.details.reference_no
+         -  jsonPath: $.fireNocRequest.details.registration_id
+         -  jsonPath: $.fireNocRequest.details.service_id
+         -  jsonPath: $.fireNocRequest.details.service_name
+         -  jsonPath: $.fireNocRequest.details.sub_version
+         -  jsonPath: $.fireNocRequest.details.version_no
+         -  jsonPath: $.fireNocRequest.details.amount
+         -  jsonPath: $.fireNocRequest.details.appl_id
+         -  jsonPath: $.fireNocRequest.details.appl_ref_no
+         -  jsonPath: $.fireNocRequest.details.submission_date
+         -  jsonPath: $.fireNocRequest.details.submission_location
+         -  jsonPath: $.fireNocRequest.details.submission_mode
+         -  jsonPath: $.fireNocRequest.details.applied_by
+         -  jsonPath: $.fireNocRequest.details.base_service_id
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime 
+         -  jsonPath: $.fireNocRequest.details.enclosure_details
+            type: JSON
+            dbType: JSONB     
+         -  jsonPath: $.fireNocRequest.details.attribute_details
+            type: JSON
+            dbType: JSONB      
+            
+   -  version: 1.0
+      name: Save Fire Data
+      description: Request -Fire Data
+      fromTopic: integration-services-fireexeDetails
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.fire_noc_execution_data_details( service_id, appl_id, current_process_id, task_id, task_name, user_name, task_type, pull_user_id, action_taken, action_no, callback_curr_proc_id, executed_time, received_time, payment_mode, payment_ref_no, payment_date, amount, remarks, user_detail, official_form_details, applicant_task_details, is_active, created_by, created_time, last_modified_by, last_modified_time)     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);       
+         basePath: $.fireNocRequest
+         jsonMaps:
+         -  jsonPath: $.fireNocRequest.details.task_details.service_id
+         -  jsonPath: $.fireNocRequest.details.task_details.appl_id
+         -  jsonPath: $.fireNocRequest.details.task_details.current_process_id
+         -  jsonPath: $.fireNocRequest.details.task_details.task_id
+         -  jsonPath: $.fireNocRequest.details.task_details.task_name
+         -  jsonPath: $.fireNocRequest.details.task_details.user_name
+         -  jsonPath: $.fireNocRequest.details.task_details.task_type
+         -  jsonPath: $.fireNocRequest.details.task_details.pull_user_id
+         -  jsonPath: $.fireNocRequest.details.task_details.action_taken
+         -  jsonPath: $.fireNocRequest.details.task_details.action_no
+         -  jsonPath: $.fireNocRequest.details.task_details.callback_curr_proc_id
+         -  jsonPath: $.fireNocRequest.details.task_details.executed_time
+         -  jsonPath: $.fireNocRequest.details.task_details.received_time
+         -  jsonPath: $.fireNocRequest.details.task_details.payment_mode
+         -  jsonPath: $.fireNocRequest.details.task_details.payment_ref_no
+         -  jsonPath: $.fireNocRequest.details.task_details.payment_date
+         -  jsonPath: $.fireNocRequest.details.task_details.amount
+         -  jsonPath: $.fireNocRequest.details.task_details.remarks
+         -  jsonPath: $.fireNocRequest.details.task_details.user_detail
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.fireNocRequest.details.official_form_details
+            type: JSON
+            dbType: JSONB 
+         -  jsonPath: $.fireNocRequest.details.applicant_task_details
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.fireNocRequest.isActive
+         -  jsonPath: $.fireNocRequest.auditDetails.createdBy
+         -  jsonPath: $.fireNocRequest.auditDetails.createdTime
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime		 
