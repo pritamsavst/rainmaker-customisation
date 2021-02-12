@@ -301,7 +301,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069g7','en_IN','NOC_ADV_PHOTOCOPY_HOARDING','Photocopy of Hoarding','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h2','en_IN','NOC_ROADCUT_TYPE_OF_APPLICANT','Type Of Applicant','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
-	 ('ffd71afe-6ae0-4f49-b767-e324e65069h3','en_IN','NOC_ROADCUT_PURPOSE_OF_ROADCUTTING','Purpose Of RoadCutting','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
+	 ('ffd71afe-6ae0-4f49-b767-e324e65069h3','en_IN','NOC_ROADCUT_PURPOSE_OF_ROADCUTTING','Purpose Of Road Cutting','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h5','en_IN','IMMUNIZATION_RECORD_HEADER','Immunization Record','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h6','en_IN','PETNOC_CANCEL_BUTTON','CANCEL','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h7','en_IN','PETNOC_SAVE_AS_DRAFT','SAVE as DRAFT','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
