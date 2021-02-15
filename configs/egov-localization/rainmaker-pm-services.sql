@@ -301,7 +301,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069g7','en_IN','NOC_ADV_PHOTOCOPY_HOARDING','Photocopy of Hoarding','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h2','en_IN','NOC_ROADCUT_TYPE_OF_APPLICANT','Type Of Applicant','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
-	 ('ffd71afe-6ae0-4f49-b767-e324e65069h3','en_IN','NOC_ROADCUT_PURPOSE_OF_ROADCUTTING','Purpose Of RoadCutting','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
+	 ('ffd71afe-6ae0-4f49-b767-e324e65069h3','en_IN','NOC_ROADCUT_PURPOSE_OF_ROADCUTTING','Purpose Of Road Cutting','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h5','en_IN','IMMUNIZATION_RECORD_HEADER','Immunization Record','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h6','en_IN','PETNOC_CANCEL_BUTTON','CANCEL','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
 	 ('ffd71afe-6ae0-4f49-b767-e324e65069h7','en_IN','PETNOC_SAVE_AS_DRAFT','SAVE as DRAFT','ch','rainmaker-pm',24226,'2019-03-25 13:55:25.827',NULL,NULL),
@@ -1161,5 +1161,20 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('4b52e35c-e93a-42b7-bfpm-24bc461f9957','en_IN','NOC_COMMON_BUTTON_MAKE_PAYMENT','Make Payment','ch','rainmaker-pm',93,'2021-01-23 17:55:20.158749',NULL,NULL),
 	 ('4b52e35c-e93a-42b7-bfpm-24bc461f9958','en_IN','PETNOC_POSTAL_CHARGES','Postal Charges','ch','rainmaker-pm',93,'2021-01-23 17:55:20.158749',NULL,NULL);
 
+
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) values
 ( '42e17862-dbd8-4pm6-95f6-382ec3e00030','en_IN', 'PM_ASSIGNEE','Assignee','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10000','en_IN', 'GOVT_OR_SERVICE_AGENCY','Govt. or Service Agency','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10001','en_IN', 'PAVER_BLOCK','Paver Block','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10002','en_IN', 'KATCHA_BERM','Katcha Berm','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10003','en_IN', 'ROADCUT_GSTIN_NOC_PLACEHOLDER','Enter GST No.','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10004','en_IN', 'V3_V4_V5_ROAD','V-3,V-4,V-5 Road','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10005','en_IN', 'V5_PARKING_AND_INTERNAL_ROAD','V-5,Parking and Internal Road','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10006','en_IN', 'MAN_HOLE_OR_CHAMBER','Man Hole/Chamber','ch','rainmaker-pm', '94');

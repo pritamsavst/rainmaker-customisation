@@ -24,10 +24,12 @@
                       {
                         "variable": "charges_due_label",
                         "value": {
-                            "path": "$.feeEstimate[0].name.labelKey"
+                            "path": "APPLICATION_FEE"
                         },
+                        "type": "label",
                         "localisation": {
                             "module": "rainmaker-es",
+                            "prefix": "ES",
                             "required": true
                           }
           
@@ -35,11 +37,13 @@
                       {
                         "variable": "gstLabel",
                         "value": {
-                          "path": "$.feeEstimate[1].name.labelKey"
+                          "path": "APPLICATION_TAX"
                         },
+                        "type": "label",
                         "localisation": {
                           "module": "rainmaker-es",
-                          "required": true
+                          "required": true,
+                          "prefix": "ES"
                         }
           
                       },
