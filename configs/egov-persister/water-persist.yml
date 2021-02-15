@@ -7,7 +7,7 @@ serviceMaps:
    fromTopic: save-ws-connection
    isTransaction: true
    queryMaps: 
-    - query: INSERT INTO eg_ws_connection (id, tenantid, property_id, applicationno, applicationstatus, status, connectionno, oldconnectionno,roadcuttingarea,action,roadtype, createdby, lastmodifiedby, createdtime, lastmodifiedtime, applicationtype, dateEffectiveFrom, waterapplicationtype, securitycharge, connectionusagestype, inWorkflow) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?);
+    - query: INSERT INTO eg_ws_connection (id, tenantid, property_id, applicationno, applicationstatus, status, connectionno, oldconnectionno,roadcuttingarea,action,roadtype, createdby, lastmodifiedby, createdtime, lastmodifiedtime, applicationtype, dateEffectiveFrom, waterapplicationtype, securitycharge, connectionusagestype, inWorkflow, billGroup, contract_value) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?);
       basePath: $.WaterConnection
       jsonMaps:
        - jsonPath: $.WaterConnection.id 
@@ -51,6 +51,10 @@ serviceMaps:
        - jsonPath: $.WaterConnection.connectionUsagesType
        
        - jsonPath: $.WaterConnection.inWorkflow
+       
+       - jsonPath: $.WaterConnection.billGroup
+       
+       - jsonPath: $.WaterConnection.contractValue
 
        
     - query: INSERT INTO eg_ws_service(connection_id,connectionCategory,connectionType,waterSource,meterId,meterInstallationDate,pipeSize,noOfTaps,connectionexecutiondate,proposedPipeSize,proposedTaps, appCreatedDate, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
@@ -127,7 +131,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
        
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -146,6 +150,10 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.action
           
           - jsonPath: $.WaterConnection.waterApplication.comments
+          
+          - jsonPath: $.WaterConnection.waterApplication.isFerruleApplicable
+          
+          - jsonPath: $.WaterConnection.waterApplication.securityCharge
 
           - jsonPath: $.WaterConnection.auditDetails.createdBy
 
@@ -204,7 +212,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
       
-    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=? WHERE id=?;
+    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=?,billGroup=?,contract_value=? WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
 
@@ -256,7 +264,11 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.ledgerNo
        
-       - jsonPath: $.WaterConnection.ledgerGroup      
+       - jsonPath: $.WaterConnection.ledgerGroup    
+       
+       - jsonPath: $.WaterConnection.billGroup
+       
+       - jsonPath: $.WaterConnection.contractValue  
        
        - jsonPath: $.WaterConnection.id 
        
@@ -467,7 +479,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -486,6 +498,10 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.action
           
           - jsonPath: $.WaterConnection.waterApplication.comments
+          
+          - jsonPath: $.WaterConnection.waterApplication.isFerruleApplicable
+          
+          - jsonPath: $.WaterConnection.waterApplication.securityCharge
 
           - jsonPath: $.WaterConnection.waterApplication.auditDetails.createdBy
 
@@ -502,6 +518,10 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.action
           
           - jsonPath: $.WaterConnection.waterApplication.comments
+          
+          - jsonPath: $.WaterConnection.waterApplication.isFerruleApplicable
+          
+          - jsonPath: $.WaterConnection.waterApplication.securityCharge
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
