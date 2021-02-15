@@ -1,0 +1,123 @@
+{
+  "key": "store-asset-stock-report",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.stockDetails.*",
+    "entityIdPath": "$.storeName",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "storeName",
+                "value": {
+                  "path": "$.storeName"
+                }
+              },
+			  {
+                "variable": "asOnDate",
+                "value": {
+                  "path": "$.asOnDate"
+                }
+              },
+              {
+                "variable": "variable1",
+                "value":{
+                     "path":"$.stockDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "srNo",
+					  "value": "srNo"
+					},
+					{
+					  "variable": "materialCode",
+					  "value": "materialCode"
+					},
+					{
+					  "variable": "materialName",
+					  "value": "materialName"
+					},{
+					  "variable": "materialType",
+					  "value": "materialType"
+					},{
+					  "variable": "0-90daysQty",
+					  "value": "0-90daysQty"
+					},{
+					  "variable": "0-90daysStockvalue",
+					  "value": "0-90daysStockvalue"
+					},{
+					  "variable": "90-180daysQty",
+					  "value": "90-180daysQty"
+					},{
+					  "variable": "90-180daysStockvalue",
+					  "value": "90-180daysStockvalue"
+					},{
+					  "variable": "181 and aboveQty",
+					  "value": "181 and aboveQty"
+					},
+					{
+					  "variable": "181 and aboveStockvalue",
+					  "value": "181 and aboveStockvalue"
+					},
+					{
+					  "variable": "totalQty",
+					  "value": "totalQty"
+					},
+					{
+					  "variable": "totalStackValue",
+					  "value": "totalStackValue"
+					},
+					{
+					  "variable": "unitrate",
+					  "value": "unitrate"
+					}
+                  ]
+                }
+              },
+			  {
+                "variable": "variable2",
+                "value":{
+                     "path":"$.workflowDetails.*"
+                 },
+                 "type":"array",
+                 "format":{
+                  "type":"string",
+                  "scema":[
+                    {
+					  "variable": "ReviewApprovalDate",
+					  "value": "reviewApprovalDate"
+					},
+					{
+					  "variable": "ReviewerApproverName",
+					  "value": "reviewerApproverName"
+					},{
+					  "variable": "Designation",
+					  "value": "designation"
+					},{
+					  "variable": "Action",
+					  "value": "action"
+					},{
+					  "variable": "SendTo",
+					  "value": "sendTo"
+					},{
+					  "variable": "ApprovalStatus",
+					  "value": "approvalStatus"
+					}
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
