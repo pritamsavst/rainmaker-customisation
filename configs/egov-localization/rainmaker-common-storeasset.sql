@@ -57,8 +57,6 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00014','en_IN', 'WF_IT ISSUE NOTE_EDIT','Edit','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4sa6-95f6-382ec3e00015','en_IN', 'WF_IT ISSUE NOTE_CREATED','Created','ch','rainmaker-common', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00015','en_IN', 'WF_IT ISSUE NOTE_Approved','Approved','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00016','en_IN', 'WF_Caretaker ISSUE NOTE_APPROVE','Approve','ch','rainmaker-common', '94');
@@ -84,4 +82,5 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00026','en_IN', 'CS_COMMON_INBOX_MOH ISSUE NOTE','MOH Issue Note','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00027','en_IN', 'CS_COMMON_INBOX_IT ISSUE NOTE','IT Issue Note','ch','rainmaker-common', '94');
-
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00028','en_IN', 'WF_IT ISSUE NOTE_CREATED','Created','ch','rainmaker-common', '94');
