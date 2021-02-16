@@ -182,14 +182,12 @@ serviceMaps:
           
           
           
-       - query: INSERT INTO public.bk_timeslots (id, slot, slot2, application_number) VALUES(?, ?, ?, ?);
+       - query: INSERT INTO public.bk_timeslots (id, slot, application_number) VALUES(?, ?, ?);
          basePath: Booking.*.timeslots.*
          jsonMaps:
           - jsonPath: $.Booking.timeslots.*.id
 
           - jsonPath: $.Booking.timeslots.*.slot
-          
-          - jsonPath: $.Booking.timeslots.*.slot2
 
           - jsonPath: $.Booking.timeslots.*.applicationNumber
           
@@ -380,13 +378,11 @@ serviceMaps:
            
            
            
-       - query: UPDATE public.bk_timeslots SET slot=?, slot2=? WHERE id=?;
+       - query: UPDATE public.bk_timeslots SET slot=? WHERE id=?;
          basePath: Booking.*.timeslots.*
          jsonMaps:
 
           - jsonPath: $.Booking.timeslots.*.slot
-          
-          - jsonPath: $.Booking.timeslots.*.slot2
 
           - jsonPath: $.Booking.timeslots.*.id
            
