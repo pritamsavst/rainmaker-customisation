@@ -21,7 +21,7 @@
 			  ]
 			},
 			{
-			  "text": "Stock Opening Balance Report for as on Date {{asOnDate}}",
+			  "text": "Stock Closing Balance Report for as on Date {{asOnDate}}",
 			  "alignment": "center",
 			  "color": "#484848",
 			  "fontSize": 12,
@@ -40,7 +40,7 @@
 			  "fontSize": 10,
 			  "bold": true,
 			  "margin": [
-				9,
+				35,
 				3,
 				10,
 				0
@@ -53,7 +53,7 @@
 			  "fontSize": 10,
 			  "bold": true,
 			  "margin": [
-				9,
+				35,
 				3,
 				10,
 				10
@@ -64,20 +64,20 @@
                 "table": {
 					"headerRows": 1,
 					"widths": [
-						"11.11%",
-						"11.11%",
-						"11.11%",
-						"11.11%",
-						"11.11%",
-						"11.11%",
-						"11.11%",
-						"11.11%",
-						"11.11%"
+						"07.07%",
+						"10.07%",
+						"10.07%",
+						"10.07%",
+						"07.07%",
+						"07.07%",
+						"07.07%",
+						"07.07%",
+						"25.07%"
 					],									
 					"body":								
 						[
 						   [ "{ \"text\":\"Sr.No.\", \"border\":[ true, true, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, { \"text\":\"Material Code\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Material Name\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Material Type Name\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"UOM\", \"border\":[ true, true, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table\" }, { \"text\":\"Quantity\", \"alignment\": \"center\", \"border\":[ true, true, true, true ] , \"style\": \"tm-sub-table\"}, { \"text\":\"Rate\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ] , \"style\": \"tm-sub-table\"}, { \"text\":\"Total Amount\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Remarks\", \"alignment\": \"center\",  \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }" ],
-						   "{{#variable1}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{materialCode}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{materialName}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{materialType}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{uomName}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{quantity}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{unitRate}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{totalAmount}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{remarks}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
+						   "{{#variable1}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{materialCode}}\", \"border\":[ true, true, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{materialName}}\", \"border\":[ true, true, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{materialType}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{uomName}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{quantity}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{unitRate}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{totalAmount}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{remarks}}\", \"border\":[ true, true, true, true ] , \"alignment\": \"center\",\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
 						]								
 				},
                 "layout": {}
@@ -134,7 +134,7 @@
 				"fontFamily": "Cambay",
                 "color": "#484848",
                 "bold": false,
-                "fontSize": 8,
+                "fontSize": 13,
                 "fontWeight": 200,
                 "margin": [
                     3,
@@ -183,7 +183,7 @@
 				"fontFamily": "Cambay",
                 "fontSize": 10,
                 "margin": [
-                    0,
+                   35,
                     0,
                     0,
                     0
