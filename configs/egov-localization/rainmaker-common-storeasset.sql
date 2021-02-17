@@ -95,4 +95,4 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00029','en_IN', 'STORE_CB_ASON_DATE','As On Date','ch','rainmaker-common', '94');
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4sa6-95f6-382ec3e00001','en_IN', 'WF_ENGINEERING ISSUE NOTE_Review Of JE','Review Of JE','ch','rainmaker-common', '94');
+( '42e17862-dbd8-4sa6-95f6-382ec3e00030','en_IN', 'WF_ENGINEERING ISSUE NOTE_Review Of JE','Review Of JE','ch','rainmaker-common', '94');
