@@ -1997,7 +1997,7 @@ INSERT INTO public.message
 VALUES('a94b24e0-e7d9-45f1-8c6e-bc90596bba13', 'en_IN', 'PACC', 'Parks and Community Center', 'ch', 'rainmaker-services', 103, '2020-12-11 11:12:25.010', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('72495223-4874-414c-8f46-e2c7d9baa4d2', 'en_IN', 'RPT_BK_WF_PENDINGAPPROVAL', 'Panding Approval', 'ch', 'rainmaker-services', 103, '2020-12-29 09:40:26.621', NULL, NULL);
+VALUES('72495223-4874-414c-8f46-e2c7d9baa4d2', 'en_IN', 'RPT_BK_WF_PENDINGAPPROVAL', 'Pending Approval', 'ch', 'rainmaker-services', 103, '2020-12-29 09:40:26.621', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d023e3c-5f21-42c7-aff8-125a9967f1a8', 'en_IN', 'RPT_BK_WF_REJECTED', 'Rejected', 'ch', 'rainmaker-services', 103, '2020-12-29 09:41:26.385', NULL, NULL);
@@ -2006,7 +2006,7 @@ INSERT INTO public.message
 VALUES('6e029605-503f-4952-9502-9b19dc936af0', 'en_IN', 'RPT_BK_WF_APPROVED', 'Approved', 'ch', 'rainmaker-services', 103, '2020-12-29 09:41:52.689', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('6472625c-3fbf-456c-a4c6-a1844ca4f284', 'en_IN', 'RPT_BK_WF_PENDINGPAYMENT', 'Panding Payment', 'ch', 'rainmaker-services', 103, '2020-12-29 09:42:29.251', NULL, NULL);
+VALUES('6472625c-3fbf-456c-a4c6-a1844ca4f284', 'en_IN', 'RPT_BK_WF_PENDINGPAYMENT', 'Pending Payment', 'ch', 'rainmaker-services', 103, '2020-12-29 09:42:29.251', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('c2f4ca5f-6eea-4375-bf7e-92dc9c1baccc', 'en_IN', 'RPT_BK_WF_PENDINGASSIGNMENTDRIVER', 'Request Verification Pending', 'ch', 'rainmaker-services', 103, '2020-12-29 09:44:45.967', NULL, NULL);
