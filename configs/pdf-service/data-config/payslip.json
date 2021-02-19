@@ -30,6 +30,18 @@
                   "path": "$.Name"
                 }
               },
+			   {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+			   {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
               {
                 "variable": "fatherName",
                 "value": {
@@ -48,8 +60,102 @@
                   "path": "$.DDOName"
                 }
               },
-             
-             
+             {
+                "variable": "corporationName",
+                "value": {
+                  "path": "$.corporationName"
+                }
+              },
+			 
+			  {
+                "variable": "corporationAddress",
+                "value": {
+                  "path": "$.corporationAddress"
+                }
+              },
+			  {
+                "variable": "corporationContact",
+                "value": {
+                  "path": "$.corporationContact"
+                }
+              },
+			   {
+                "variable": "corporationWebsite",
+                "value": {
+                  "path": "$.corporationWebsite"
+                }
+              },
+			   {
+                "variable": "gpfNo",
+                "value": {
+                  "path": "$.gpfNo"
+                }
+              },
+			   {
+                "variable": "bankAccountNo",
+                "value": {
+                  "path": "$.bankAccountNo"
+                }
+              },
+			   {
+                "variable": "payBand",
+                "value": {
+                  "path": "$.payBand"
+                }
+              },
+			   {
+                "variable": "payInPB",
+                "value": {
+                  "path": "$.payInPB"
+                }
+              },
+			   {
+                "variable": "Total_Emolument",
+                "value": {
+                  "path": "$.Total_Emolument"
+                }
+              },{
+                "variable": "Total_Govt_Recoveries",
+                "value": {
+                  "path": "$.Total_Govt_Recoveries"
+                }
+              },
+             {
+                "variable": "Total_NG_Recoveries",
+                "value": {
+                  "path": "$.Total_NG_Recoveries"
+                }
+              },
+			   {
+                "variable": "Net_Pay",
+                "value": {
+                  "path": "$.Net_Pay"
+                }
+              },
+			   {
+                "variable": "Net_Pay_In_Word",
+                "value": {
+                  "path": "$.Net_Pay_In_Word"
+                }
+              },
+			   {
+                "variable": "Voucher_No",
+                "value": {
+                  "path": "$.Voucher_No"
+                }
+              },
+			   {
+                "variable": "Voucher_Date",
+                "value": {
+                  "path": "$.Voucher_Date"
+                }
+              },
+			   {
+                "variable": "Date_time",
+                "value": {
+                  "path": "$.Date_time"
+                }
+              },
               {
                 "variable": "variable1",
                 "value": {
@@ -74,6 +180,22 @@
                     {
                       "variable": "Deductions_Amount",
                       "value": "Deductions_Amount"
+                    },
+					{
+                      "variable": "Deductions_Inst_No",
+                      "value": "Deductions_Inst_No"
+                    },
+					 {
+                      "variable": "Non_Gov_Text",
+                      "value": "Non_Gov_Text"
+                    },
+                    {
+                      "variable": "Non_Gov_Amount",
+                      "value": "Non_Gov_Amount"
+                    },
+					{
+                      "variable": "Non_Gov_Inst_No",
+                      "value": "Non_Gov_Inst_No"
                     }
                   ]
                 }
