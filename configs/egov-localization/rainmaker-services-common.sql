@@ -1,5 +1,17 @@
 DELETE from public.message WHERE module='rainmaker-common' and code='CORE_COMMON_GOTOHOME' and locale ='en_IN';
 DELETE from public.message WHERE module='rainmaker-common' and code='COMMON_MAKE_PAYMENT' and locale ='en_IN';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c843';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c845';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c844';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c846';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c841';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c858';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c859';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c860';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c851';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c850';
+DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c849';
+
 
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
