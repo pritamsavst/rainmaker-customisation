@@ -18,6 +18,19 @@ DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST
 DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_OSUJMCC_MASTER' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_PACC_MASTER' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='CS_COMMON_INBOX_OSBM' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_application_status' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.total' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.receiptnumber' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.receiptissuedate' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_application_number' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_dateCreated' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_applicant_name' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.transactionumber' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_booking_type' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.receipt.totalamount' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bookingType' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.totalTransaction' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.totalCollection' and locale ='en_IN';
 
 
 
@@ -80,4 +93,43 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c857', 'en_IN', 'ACTION_TEST_PACC_MASTER
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c804', 'en_IN', 'CS_COMMON_INBOX_OSBM', 'Open Space Booking', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', 24226, '2019-03-25 16:45:37.581');
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c820', 'en_IN', 'report.bb.bk_application_status', 'Application Status', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c838', 'en_IN', 'report.bb.total', 'Number of Applications', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c824', 'en_IN', 'report.bb.receiptnumber', 'Receipt Number', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c825', 'en_IN', 'report.bb.receiptissuedate', 'Receipt Issue Date', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c831', 'en_IN', 'report.bb.bk_application_number', 'Booking Application Number', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c832', 'en_IN', 'report.bb.bk_dateCreated', 'Applied Date', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c833', 'en_IN', 'report.bb.bk_applicant_name', 'Name of Applicant', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c834', 'en_IN', 'report.bb.transactionumber', 'Transaction Number', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c821', 'en_IN', 'report.bb.bk_booking_type', 'Booking Type', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c822', 'en_IN', 'report.bb.receipt.totalamount', 'Booking Fee', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c828', 'en_IN', 'report.bb.bookingType', 'Booking Type', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c829', 'en_IN', 'report.bb.totalTransaction', 'Total Transactions', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c830', 'en_IN', 'report.bb.totalCollection', 'Total Collection from Booking', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 
