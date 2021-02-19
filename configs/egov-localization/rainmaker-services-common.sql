@@ -1,16 +1,16 @@
 DELETE from public.message WHERE module='rainmaker-common' and code='CORE_COMMON_GOTOHOME' and locale ='en_IN';
 DELETE from public.message WHERE module='rainmaker-common' and code='COMMON_MAKE_PAYMENT' and locale ='en_IN';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c843';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c845';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c844';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c846';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c841';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c858';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c859';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c860';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c851';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c850';
-DELETE FROM public.message WHERE id='fabc3ff6-70d8-4ae6-8ac7-00c9c714c849';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_date_created';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_booking_type';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_application_status';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_sector';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='REPORTS_SEARCHFORM_MODIFY_DATE_HEADER';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_APPLICATION_STATUS_REPORT';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_TRANSACTION_REPORT';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_COLLECTION_REPORT';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_MASTER_MANAGEMENT';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_ALL_APPLICATIONS';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_BOOKINGS_SERVICES';
 
 
 INSERT INTO public.message
