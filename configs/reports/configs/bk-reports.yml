@@ -81,7 +81,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
-    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','APPLIED','OFFLINE_APPLIED')
+    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED')
   groupby: GROUP BY msg.message
   
 - reportName: AllBookingsTransactionReport
@@ -176,7 +176,7 @@ ReportDefinitions:
       bb.bk_application_number as applicationNumber,
       to_char(bb.bk_date_created, 'DD/MM/YYYY') as bookingDate,
       msg.message as bookingName,
-      initcap(bb.bk_application_status) as status,
+      booking_status(concat('RPT_BK_WF_', bb.bk_application_status)) as status,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate, 
       pd.receiptnumber,
       bb.bk_applicant_name as applicantName,
@@ -187,4 +187,4 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
-    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','APPLIED','OFFLINE_APPLIED')
+    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED')
