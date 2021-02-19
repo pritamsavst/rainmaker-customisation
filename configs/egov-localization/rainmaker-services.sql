@@ -2197,3 +2197,7 @@ VALUES('fabc3ff6-70d8-4ae6-8ac8-00c9c714c108', 'en_IN', 'BK_WTB_COMPLETE_ADDRESS
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac8-00c9c714c478', 'en_IN', 'BK_MYBK_NAME_CITIZEN_ADDRESS_PLACEHOLDER', 'Place of delivery of water tanker', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c803', 'en_IN', 'BK_ADMIN_SEARCH_BUTTON', 'Search All Fields', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+
