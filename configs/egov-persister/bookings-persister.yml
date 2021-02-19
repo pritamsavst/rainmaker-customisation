@@ -497,7 +497,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
        
-       - query: INSERT INTO public.bk_commercial_ground_availability_lock (id, booking_venue, from_date, is_locked, to_date) VALUES(?, ?, ?::date, ?,  ?::date);
+       - query: INSERT INTO public.bk_commercial_ground_availability_lock (id, booking_venue, from_date, is_locked, to_date, created_date, last_modified_date, venue_type) VALUES(?, ?, ?::date, ?,  ?::date, ?, ?, ?);
          basePath: commercialGrndAvailabilityLock.*
          jsonMaps:
 
@@ -511,6 +511,12 @@ serviceMaps:
              
              - jsonPath: $.commercialGrndAvailabilityLock.*.toDate
              
+             - jsonPath: $.commercialGrndAvailabilityLock.*.createdDate
+             
+             - jsonPath: $.commercialGrndAvailabilityLock.*.lastModifiedDate
+             
+             - jsonPath: $.commercialGrndAvailabilityLock.*.venueType
+             
              
              
  - version: 1.0
@@ -520,7 +526,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
        
-       - query: UPDATE public.bk_commercial_ground_availability_lock SET booking_venue=?, from_date=?::date, is_locked=?, to_date=?::date WHERE id=?;
+       - query: UPDATE public.bk_commercial_ground_availability_lock SET booking_venue=?, from_date=?::date, is_locked=?, to_date=?::date, last_modified_date=?, venue_type=? WHERE id=?;
          basePath: commercialGrndAvailabilityLock.*
          jsonMaps:
              
@@ -530,7 +536,11 @@ serviceMaps:
              
              - jsonPath: $.commercialGrndAvailabilityLock.*.locked
              
-             - jsonPath: $.commercialGrndAvailabilityLock.*.toDate             
+             - jsonPath: $.commercialGrndAvailabilityLock.*.toDate
+
+             - jsonPath: $.commercialGrndAvailabilityLock.*.lastModifiedDate
+
+             - jsonPath: $.commercialGrndAvailabilityLock.*.venueType              
       
              - jsonPath: $.commercialGrndAvailabilityLock.*.id
              
