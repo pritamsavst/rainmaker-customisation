@@ -1,0 +1,599 @@
+{
+    "key": "pacc-payment-receipt-new-emp",
+    "config": {
+        "pageSize": "A4",
+        "content": [
+            {
+                "text": "Chandigarh Administration",
+                "bold": true,
+                "alignment": "center",
+                "fontSize": 15
+            },
+            {
+                "margin": [
+                    100,
+                    10,
+                    0,
+                    0
+                ],
+                "columns": [
+                    {
+                        "text": "(e-Smpark ",
+                        "width": 70
+                    },
+                    {
+                        "text": "Center : ",
+                        "width": 43
+                    },
+                    {
+                        "text": "{{samparkAdd}}",
+                        "alignment": "left",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "Operator Code : ",
+                        "width": "auto",
+                        "margin": [
+                            20,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "{{OpCode}}",
+                        "alignment": "left",
+                        "width": "auto"
+                    },
+                    {
+                        "text": ")",
+                        "alignment": "left",
+                        "width": "auto"
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                "columns": [
+                    {
+                        "text": "Receipt No. : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{receiptNo}}",
+                        "width": 300,
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "Date : ",
+                        "width": 50,
+                        "alignment": "right",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{paymentDate}}",
+                        "width": 85,
+                        "margin": [
+                            2,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Location : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{bkLocation}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Dept : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{bkDept}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Date of booking : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            5,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{bkFromTo}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            5,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Payment Type : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{paymentType}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Facilitation Charges : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{facilitationCharge}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Refundable Security : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{refundableCharges}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Discount Type : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{discType}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Customer GSTIN : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{custGSTN}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "MC GST No. : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{mcGSTN}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Place of Service : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{placeOfService}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    15,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Rent : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{baseCharge}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "    Cleaning Charges : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{clCharge}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "    UTGST : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{utgst}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "    CGST : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{cgst}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "    Total GST : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{tgst}}",
+                        "width": "auto"
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Bank Name : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{bankName}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Transaction No : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{transactionId}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "{{paymentType}}",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{totalPayment}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "(",
+                        "width": "auto",
+                        "margin": [
+                            2,
+                            15,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": "{{totalPaymentInWords}}",
+                        "width": "auto",
+                        "margin": [
+                            2,
+                            15,
+                            0,
+                            0
+                        ]
+                    },
+                    {
+                        "text": ")",
+                        "width": "auto",
+                        "margin": [
+                            2,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    15,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Bank Details for Refund : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "   Applicant Name :  ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{accountholderName}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "    Bank Name :  ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{rBankName}}",
+                        "width": "auto"
+                    }
+                ]
+            },
+            {
+                "text": [
+                    {
+                        "text": "    Bank A/C No. :  ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{rBankACNo}}",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "     IFSC Code : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{rIFSCCode}}",
+                        "width": "auto"
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    15,
+                    0,
+                    0
+                ],
+                "alignment": "justify",
+                "bold": true,
+                "text": [
+                    {
+                        "text": "Thanks for visiting e-Sampark. Before leaving the counter, please check receipt & the balance amount. Payment through cheque subject to realisation of cheque. This is receipt on thermal paper. Please keep a photocopy of this receipt for your future reference. If You are 18 years or above as on "
+                    },
+                    {
+                        "text": "{{currentDate}}"
+                    },
+                    {
+                        "text": " , a resident of Chandigarh and not enrolled yet as voter. Enroll Now"
+                    }
+                ]
+            }
+        ],
+        "defaultStyle": {
+            "fontSize": 11
+        }
+    }
+}
