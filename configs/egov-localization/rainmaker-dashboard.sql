@@ -14,4 +14,6 @@ VALUES('c0b628b9-8448-4e5d-82c9-656679dfc1a4','en_IN', 'DASHBOARD_WF_NAME_TITLE'
  ('73cc2719-7f18-49dashboardf0-b15b-907d30cbb519','en_IN', 'Hc_dashboard_1','Horticulture Dashboard','ch','rainmaker-dashboard', '94'),
  ('742796ed-9b0d-4ddashboard11-ad0b-256902e1a1b1','en_IN', 'Challan_dashboard_1','EChallan Dashboard','ch','rainmaker-dashboard', '94'),
  ('79c6da71-2d67-49dashboardd5-bb32-375f7b96349b','en_IN', 'Sport&Culture_dashboard_1','Sport and Culture Dashboard','ch','rainmaker-dashboard', '94'),
- ('7a7a0d4b-337f-4d7b-824f-4b3c2fe52101','en_IN', 'DASHBOARD_HOME_HEADER','Dashboard','ch','rainmaker-dashboard', '94');
+ ('7a7a0d4b-337f-4d7b-824f-4b3c2fe52101','en_IN', 'DASHBOARD_HOME_HEADER','Dashboard','ch','rainmaker-dashboard', '94'),
+ ('b5a8688c-ad71-425e-b4ee-c9ced971c545','en_IN', 'PublicRelation_dashboard_1','Public Relation Dashboard','ch','rainmaker-dashboard', '94'),
+ ('99e1bc17-b95d-4bab-b2ab-5a369344508b','en_IN', 'TradeLicense_dashboard_1','Trade License Dashboard','ch','rainmaker-dashboard', '94');
