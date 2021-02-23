@@ -831,7 +831,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75057e','en_IN','WS_OWN_DETAIL_MOBILE_NO_LABEL_INPUT_PLACEHOLDER','Enter Owner Mobile No. ','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75058e','en_IN','WS_OWN_DETAIL_FATHER_NAME','Father Name','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75059e','en_IN','WS_OWN_DETAIL_FATHER_NAME_PLACEHOLDER','Enter Father Name','ch','rainmaker-ws',24226,now(),NULL,NULL);
-INSERT 
 
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-5001-ac6f-2bc063b75064e','en_IN','PRIVATEHOUSESWITHINSECTORS_TRIPLICATE_FORM','Application on Prescribed Form duly filled in triplicate','ch','rainmaker-ws',24226,now(),NULL,NULL),
@@ -943,7 +942,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5272-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_CONTRACT_VALUE_PLACEHOLDER','Enter Contract Value','ch','rainmaker-ws',24226,now(),NULL,NULL)
 
 ,('4d3b6355-1abb-5273-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_EDUCATIONALINSTITUTES','Educational institutes','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5274-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_INDUSTRIAL','Industrial Use','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5275-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_PUBLIC','Public / Semi- Public Buildings','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5276-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_ITPARK','IT Park','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5277-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_ITPARK','IT Park','ch','rainmaker-ws',24226,now(),NULL,NULL)
