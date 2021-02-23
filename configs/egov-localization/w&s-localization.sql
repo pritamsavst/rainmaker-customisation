@@ -959,7 +959,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5289-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_SCF','SCO’S/ SCF’S / BAYSHOP’S/ SEMI INDUSTRIAL/ BOOTHS ETC.','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5290-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_HOTEL','HOTEL','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5291-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_MULTIPLEXMALLS','MULTIPLEX/MALLS (specifically earmarked sites)','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5292-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_INDUSTRIALCONVERTEDCOMMERCIAL','COMMERCIAL(converted from Industrial)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5420-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_INDUSTRIALCONVERTEDCOMMERCIAL','COMMERCIAL(converted from Industrial)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5292-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_BANQUET','Banquet hall/ marriage palaces','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5293-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_BULKBUILDING','Bulk building material','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5294-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_TIMBER','Timber site (single storey)','ch','rainmaker-ws',24226,now(),NULL,NULL)
