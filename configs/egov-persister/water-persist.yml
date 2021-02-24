@@ -212,7 +212,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
       
-    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=?,billGroup=?,contract_value=? WHERE id=?;
+    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastModifiedBy=?, lastModifiedTime=?, dateEffectiveFrom=?,waterapplicationtype=?, securitycharge=?, connectionusagestype=?, inWorkflow=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=?,billGroup=?,contract_value=?,proposedUsage_category=? WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
 
@@ -268,7 +268,9 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.billGroup
        
-       - jsonPath: $.WaterConnection.contractValue  
+       - jsonPath: $.WaterConnection.contractValue 
+       
+       - jsonPath: $.WaterConnection.proposedUsageCategory 
        
        - jsonPath: $.WaterConnection.id 
        
@@ -539,7 +541,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.WaterConnection.id
       
-    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?, action=?, lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
+    - query: UPDATE eg_ws_connection SET applicationstatus=?, status=?, connectionno=?,waterapplicationtype=?, action=?, inWorkflow=?, lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
 
@@ -549,13 +551,29 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.connectionNo
 
-       - jsonPath: $.WaterConnection.processInstance.action 
+       - jsonPath: $.WaterConnection.waterApplicationType
+
+       - jsonPath: $.WaterConnection.processInstance.action
+       
+       - jsonPath: $.WaterConnection.inWorkflow 
        
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
        - jsonPath: $.WaterConnection.id
+      
+    - query: UPDATE eg_ws_property SET usagecategory=? , lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
+      basePath: $.WaterConnection
+      jsonMaps:
+
+       - jsonPath: $.WaterConnection.waterProperty.usageCategory
+       
+       - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+
+       - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+
+       - jsonPath: $.WaterConnection.waterProperty.id
 
     - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
