@@ -81,7 +81,9 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
-    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED')
+    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED','RE_INITIATED',
+    'MODIFIED','PENDING_FOR_APPROVAL_CLEARK_DEO','PENDING_FOR_APPROVAL_SUPERVISOR','PENDING_FOR_APPROVAL_SENIOR_ASSISTANT','REJECTED','PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT',
+    'PENDING_FOR_APPROVAL_CAO','PENDING_FOR_DISBURSEMENT','PAYMENT_DISBURSED','PENDING_FOR_APPROVAL_OSD','OFFLINE_RE_INITIATED','OFFLINE_MODIFIED')
   groupby: GROUP BY msg.message
   
 - reportName: AllBookingsTransactionReport
@@ -154,7 +156,7 @@ ReportDefinitions:
     source: bb 
     wrapper: true
     isMandatory: false
-    searchClause: AND bb.bk_booking_type LIKE $bookingType
+    searchClause: AND CASE WHEN ($bookingType IS NOT NULL AND $bookingType = 'Parks and Community Center') THEN (bb.bk_booking_type = 'Parks' OR bb.bk_booking_type = 'Community Center') WHEN ($bookingType IS NOT NULL AND $bookingType != 'Parks and Community Center') THEN bb.bk_booking_type LIKE $bookingType END
   - name: applicationStatus
     label: reports.bb.bk_application_status
     type: singlevaluelist
@@ -187,4 +189,6 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
-    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED')
+    WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED','RE_INITIATED',
+    'MODIFIED','PENDING_FOR_APPROVAL_CLEARK_DEO','PENDING_FOR_APPROVAL_SUPERVISOR','PENDING_FOR_APPROVAL_SENIOR_ASSISTANT','REJECTED','PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT',
+    'PENDING_FOR_APPROVAL_CAO','PENDING_FOR_DISBURSEMENT','PAYMENT_DISBURSED','PENDING_FOR_APPROVAL_OSD','OFFLINE_RE_INITIATED','OFFLINE_MODIFIED')
