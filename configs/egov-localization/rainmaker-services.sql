@@ -2200,4 +2200,22 @@ VALUES('fabc3ff6-70d8-4ae6-8ac8-00c9c714c478', 'en_IN', 'BK_MYBK_NAME_CITIZEN_AD
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c803', 'en_IN', 'BK_ADMIN_SEARCH_BUTTON', 'Search All Fields', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('88f2f95b-ecf2-4027-8fec-84b75b900f69', 'en_IN', 'BK_MYBK_ADMIN_PACC_HOLD_DATES_HEADER', 'Reserved Dates', 'ch', 'rainmaker-services', 101, '2021-02-22 06:54:40.309', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('a6451433-cffc-4425-bb4b-fd8c675b1e77', 'en_IN', 'ACTION_TEST_RESERVE_DATES', 'Reserve Dates', 'ch', 'rainmaker-services', 101, '2021-02-22 08:13:16.206', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('a1c72f9e-a504-4e2b-90ed-0147eaf927a8', 'en_IN', 'BK_PARK_HOLD_DATES', 'Reserve', 'ch', 'rainmaker-services', 101, '2021-02-22 06:56:15.584', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('bd0823bb-2643-4a9d-a13b-252f69b3ce83', 'en_IN', 'BK_MYBK_EMP_CANCEL_BUTTON', 'Cancel', 'ch', 'rainmaker-services', 101, '2021-02-22 06:56:37.842', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c540', 'en_IN', 'BK_PCC_BOOKING_DETAILS', 'Venue Details', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('56978f2f-c894-430f-a9ab-bde64728cba3', 'en_IN', 'BK_MYBK_EMP_HOLD_DATES_TYPE', 'Booking Type', 'ch', 'rainmaker-services', 101, '2021-02-22 08:12:32.875', NULL, NULL);
 
