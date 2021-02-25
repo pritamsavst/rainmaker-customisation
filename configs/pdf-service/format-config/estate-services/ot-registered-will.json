@@ -75,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "{{dateOfAllotment}}",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -141,7 +141,7 @@
             {
                 "margin": [50, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "Reference your application dated on the subject cited above."
+                "text": "Reference your application dated {{approvalDate}} on the subject cited above."
             },
             {
                 "margin": [50, 0, 0, 0],

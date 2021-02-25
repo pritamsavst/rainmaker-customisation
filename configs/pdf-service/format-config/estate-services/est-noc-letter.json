@@ -75,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "{{dateOfAllotment}}",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -155,7 +155,7 @@
                     "preserveLeadingSpaces": true
                 },
                 {
-                    "text":"{{createdTime}}  ","bold":true
+                    "text":"{{submissionDate}}  ","bold":true
                 },
                 {
                     "text":"on the subject noted above."

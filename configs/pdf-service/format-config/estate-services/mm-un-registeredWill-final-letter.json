@@ -134,7 +134,7 @@
                     "text":" dated "
                   },
                   {
-                    "text":"{{dateOfRegistration}}",
+                    "text":"{{submissionDate}}",
                     "bold":true
                   },
                   {

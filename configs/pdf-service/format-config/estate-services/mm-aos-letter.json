@@ -61,7 +61,7 @@
                 "bold": true
               },
               {
-                "text": "{{dateOfAllotment}}",
+                "text": "{{approvalDate}}",
                 "bold": false
               }
             ],
@@ -131,7 +131,7 @@
             "text": " dated "
           },
           {
-            "text": "{{dateOfRegistration}}",
+            "text": "{{submissionDate}}",
             "bold": true
           },
           {

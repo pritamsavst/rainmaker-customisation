@@ -71,7 +71,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -123,7 +123,7 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "             Reference No. _________ dated ____________ allowing conversion of lease hold land tenure into freehold land tenure in respect of land under HIG (Ind.) Dwelling Unit No. ____________, Phase-111, Manimajra, UT, Chandigarh "
+                "text": "             Reference No. _________ dated {{submissionDate}} allowing conversion of lease hold land tenure into freehold land tenure in respect of land under HIG (Ind.) Dwelling Unit No. ____________, Phase-111, Manimajra, UT, Chandigarh "
             },
             {          
                 "margin": [0, 20, 0, 0],

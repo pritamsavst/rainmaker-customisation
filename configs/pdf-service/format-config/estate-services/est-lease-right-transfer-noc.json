@@ -79,7 +79,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],

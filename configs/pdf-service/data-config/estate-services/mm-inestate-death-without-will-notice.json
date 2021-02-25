@@ -85,6 +85,20 @@
                 "value": {
                     "path": "$.applicationDetails.transferee.address"
                 }
+            },
+            {
+              "variable":"submissionDate",
+              "value":{
+                "path":"$.applicationSubmissionDate"
+              },
+              "type":"date"
+            },
+            {
+              "variable":"approvalDate",
+              "value":{
+                "path":"$.auditDetails.lastModifiedTime"
+              },
+              "type":"date"
             }
         
             ]

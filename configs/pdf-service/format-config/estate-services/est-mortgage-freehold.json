@@ -76,7 +76,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -138,7 +138,7 @@
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "             Reference your request dated  on the subject cited above. "
+                "text": "             Reference your request dated  {{submissionDate}} on the subject cited above. "
             },
             {
                 "margin": [0, 20, 0, 0],

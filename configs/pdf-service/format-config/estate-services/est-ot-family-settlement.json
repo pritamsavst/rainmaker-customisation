@@ -74,7 +74,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -128,7 +128,7 @@
                 "preserveLeadingSpaces": true,
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "             Reference your application dated {{dateOfRegistration}} on the subject cited above."
+                "text": "             Reference your application dated {{submissionDate}} on the subject cited above."
             },
             {
                 "preserveLeadingSpaces": true,

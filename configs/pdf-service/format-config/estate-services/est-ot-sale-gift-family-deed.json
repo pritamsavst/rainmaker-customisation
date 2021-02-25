@@ -68,7 +68,7 @@
                 "bold": true
               },
               {
-                "text": "{{dateOfAllotment}}",
+                "text": "{{approvalDate}}",
                 "bold": false
               }
             ],
@@ -148,7 +148,7 @@
             "text": "             Reference your application dated "
           },
           {
-            "text": "{{createdTime}}",
+            "text": "{{submissionDate}}",
             "bold": true
           },
           {
