@@ -51,7 +51,7 @@
                 {
                   "variable":"siteNumber",
                   "value":{
-                    "path":"$.Properties[0].siteNumber"
+                    "path":"$.Properties[0].fileNumber"
                   }
                 },
                 {
