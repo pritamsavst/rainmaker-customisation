@@ -46,8 +46,6 @@
                     "path":"$.Properties[0].propertyDetails.mohalla"
                   }
                 },
-  
-  
                 {
                   "variable":"siteNumber",
                   "value":{
