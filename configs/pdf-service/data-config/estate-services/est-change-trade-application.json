@@ -206,7 +206,7 @@
                     {
                         "variable": "OwnerLabel",
                         "value": {
-                            "path": "OWNERS_LABEL"
+                            "path": "OWNER_NAME_LABEL"
                         },
                         "type": "label",
                         "localisation": {
@@ -389,7 +389,7 @@
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.applicationDetails.owner.ownerDetails.ownerName"
+                            "path": "$.applicationDetails.owner.name"
                         }
                     },
                     {
