@@ -107,13 +107,13 @@
           {
             "variable": "guardianName",
             "value": {
-              "path": "$.applicationDetails.owner.ownerDetails.guardianName"
+              "path": "$.applicationDetails.owner.guardianName"
             }
           },
           {
             "variable": "address",
             "value": {
-              "path": "$.applicationDetails.owner.ownerDetails.address"
+              "path": "$.applicationDetails.owner.address"
             }
           },
           {
