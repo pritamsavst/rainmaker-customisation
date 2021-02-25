@@ -46,7 +46,7 @@
                 "bold": true
               },
               {
-                "text": "{{allotmentNumber}}",
+                "text": "{{applicationNumber}}",
                 "bold": false
               }
             ],
@@ -62,7 +62,7 @@
                 "bold": true
               },
               {
-                "text": "{{dateOfAllotment}}",
+                "text": "{{approvalDate}}",
                 "bold": false
               }
             ],

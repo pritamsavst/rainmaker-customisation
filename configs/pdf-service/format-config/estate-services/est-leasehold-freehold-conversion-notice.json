@@ -177,13 +177,13 @@
                         "text": "             That the Chandigarh Housing Board, Chandigarh, has issued No Objection for conversion of above dwelling unit from lease-hold to free-hold system vide Memo No.  "
 
                     }, {
-                        "text": "_________ ","bold":true
+                        "text": "{{applicationNumber}} ","bold":true
                     },
                     {
                         "text": "dated  "
                     },
                     {
-                        "text": " ___________ ,","bold":true
+                        "text": " {{approvalDate}} ,","bold":true
                     },
                     {
                         "text": "and the site/plinth area of dwelling unit is mentioned as "
