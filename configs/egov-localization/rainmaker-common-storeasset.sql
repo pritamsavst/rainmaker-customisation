@@ -18,6 +18,8 @@ DELETE FROM public.message WHERE code = 'WF_IT ISSUE NOTE_CREATED' and module='r
 DELETE FROM public.message WHERE code = 'WF_IT ISSUE NOTE_Approved' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_Caretaker ISSUE NOTE_APPROVE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_Caretaker ISSUE NOTE_EDIT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_CARETAKER ISSUE NOTE_APPROVE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_CARETAKER ISSUE NOTE_EDIT' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_Caretaker ISSUE NOTE_CREATED' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_Caretaker ISSUE NOTE_Approved' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_MOH ISSUE NOTE_APPROVE' and module='rainmaker-common' and tenantId='ch';
@@ -39,7 +41,7 @@ DELETE FROM public.message WHERE code = 'STORE_APPLICATION_SUCCESS_WF_REJECT' an
 DELETE FROM public.message WHERE code = 'STORE_APPLICATION_SUCCESS_WF_APPROVE' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'STORE_CB_REPORT' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'STORE_AGING_REPORT' and module='rainmaker-common' and tenantId='ch';
-
+DELETE FROM public.message WHERE code = 'ACTION_TEST_STOCK_AGING_REPORT' and module='rainmaker-common' and tenantId='ch';
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00001','en_IN', 'WF_ENGINEERING ISSUE NOTE_REVIEWOFJE','Send For Review Of JE','ch','rainmaker-common', '94');
@@ -124,4 +126,9 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00039','en_IN', 'STORE_CB_REPORT','Closing Balance Report','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00040','en_IN', 'STORE_AGING_REPORT','Stock Aging Report','ch','rainmaker-common', '94');
-
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00041','en_IN', 'ACTION_TEST_STOCK_AGING_REPORT','Stock Aging Report','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00042','en_IN', 'WF_CARETAKER ISSUE NOTE_APPROVE','Approve','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00043','en_IN', 'WF_CARETAKER ISSUE NOTE_EDIT','Edit','ch','rainmaker-common', '94');
