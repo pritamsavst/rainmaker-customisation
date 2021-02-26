@@ -1,3 +1,4 @@
+DELETE from public.message  WHERE  module= 'rainmaker-store-asset';
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b64781e', 'en_IN', 'STORE_APPLICATION_SUCCESS_MATERIALMASTER_CREATE', 'Material master submitted successfully', 'ch', 'rainmaker-store-asset', 24226, '2020-07-20 11:54:58.217', NULL, NULL);
