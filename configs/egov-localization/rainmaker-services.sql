@@ -2160,9 +2160,9 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c794', 'en_IN', 'BK_ES_APPLICATION_COMMO
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c796', 'en_IN', 'BK_VIEW_DETAILS', 'View Details', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c797', 'en_IN', 'CS_COMMON_INBOX_OSBM', 'Inbox', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+--INSERT INTO public.message
+--(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+--VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c797', 'en_IN', 'CS_COMMON_INBOX_OSBM', 'Inbox', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
