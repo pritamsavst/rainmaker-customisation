@@ -309,7 +309,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. MC/Estate/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
@@ -382,6 +382,30 @@
                         "style": "pdfContent"
                     }
                 ]
+            },
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":" Additional Commissioner"
+
+                    },
+                    {
+                        "text":"(exercising the powers of Estate Officer),"
+                    },
+                    {
+                        "text":" Under the provision of Capital of Punjab"
+                    },
+                    {
+                        "text":"(Development & Regulation) Act, 1952,"
+                    },
+                    {
+                        "text":"Municipal Corporation, Chandigarh"
+                    }
+                ] 
             }
 
 

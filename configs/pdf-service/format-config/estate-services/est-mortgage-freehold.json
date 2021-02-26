@@ -54,7 +54,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -172,7 +172,7 @@
             {
                 "margin": [0, 20, 10, 10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/{{applicationNumber}}",
+                        "text": "Endst. No. MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "width":"auto"
@@ -190,7 +190,30 @@
                     "text": " Copy of the above is forwarded to_________ for information and necessary action please  ",
                     "style": "pdfContent"
                 }]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Section Officer (E).",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Municipal Corporation, ",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Chandigarh ",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
         ],

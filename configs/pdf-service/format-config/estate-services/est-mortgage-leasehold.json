@@ -49,7 +49,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -156,7 +156,7 @@
                         "text": "(i).  The Municipal Corporation. Chandigarh shall have 1 st and paramount charge and _____________________ Limited, _________________shall have 2 nd charge over it."
                     },
                     {
-                        "text": "(ii). The aforesaid ____________________ will not selll/dispose off the property in any way for recovering outstanding amount of loan without the prior permission in writing from the Additional Commissioner/Joint Commissioner, MCC and in case the financial institution proceeds to auction the property, they shall deposit the outstanding dues of the M.C. to Additional Commissioner/Joint Commissioner prior to adjusting their own outstanding dues."
+                        "text": "(ii). The aforesaid ____________________ will not sell/dispose off the property in any way for recovering outstanding amount of loan without the prior permission in writing from the Additional Commissioner/Joint Commissioner, MCC and in case the financial institution proceeds to auction the property, they shall deposit the outstanding dues of the M.C. to Additional Commissioner/Joint Commissioner prior to adjusting their own outstanding dues."
                     },
                     {
                         "text": "(iii).In case in the enhancement of the cost of land paid by the Corporation shall to be paid by you within 30 days of its paid."
@@ -200,11 +200,17 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "width":"auto",
+                        "text": "Endst. No. MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
                     {
+                      "text":"",
+                      "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated:____________",
                         "style": "pdfContent",
                         "alignment": "right"
@@ -217,7 +223,36 @@
                     "text": "             Copy is forwarded to the bank {{bankName}} for information & necessary action ",
                     "style": "pdfContent"
                 }]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Section Officer,",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Addl. Commissioner-I,",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Municipal Corporation,",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Chandigarh.",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
         ],

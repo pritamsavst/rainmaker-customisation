@@ -215,7 +215,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst No. MC/Addl.CMC/C-III/Manimajra/2021/",
+                        "text": "Endst No. MC/Addl.CMC/C-III/Manimajra/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
@@ -241,7 +241,24 @@
                         "preserveLeadingSpaces": true
                     }
                 ]
-            }
+            },
+            {
+              "alignment":"right",
+              "margin":[0,20,0,0],
+              "style":"pdfContent", 
+              "bold":true,
+              "stack":[
+                  {
+                      "text":" AC (F&A),"
+                  },
+                  {
+                      "text":"For Additional Commissioner-I, "
+                  },
+                  {
+                      "text":"Municipal Corporation, Chandigarh. "
+                  }
+              ] 
+          }
 
 
         ],

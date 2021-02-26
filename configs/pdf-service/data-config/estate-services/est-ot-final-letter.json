@@ -200,6 +200,12 @@
                 "path":"$.auditDetails.lastModifiedTime"
               },
               "type":"date"
+            },
+            {
+              "variable":"year",
+              "value":{
+                "path":"$.year"
+              }
             }
             ]
           }

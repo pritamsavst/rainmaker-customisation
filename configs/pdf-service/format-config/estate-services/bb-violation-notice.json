@@ -61,7 +61,8 @@
                   "alignment": "left"
                 },
                 {
-                  "text": ""
+                  "text": "",
+                  "width":"*"
                 },
                 {
                   "width":"auto",
@@ -125,7 +126,7 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "              Reference: SDE Memorandum No.{{allotmentNumber}} Dated {{dateOfAllotment}}"
+                "text": "              Reference: SDE Memorandum No.{{applicationNumber}} Dated {{approvalDate}}"
             },
             {          
                 "margin": [0, 20, 0, 0],

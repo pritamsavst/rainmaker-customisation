@@ -53,7 +53,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -217,7 +217,7 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. MC/Estate/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
@@ -244,7 +244,30 @@
                         "text": "3.The AWHO, South Hutments, Kashmir House, Rajaji Marg, New Delhi-110011 with the advice to compliedthe orders passed in CWP No. 12259 of 2015 titled as &quot;Khushal Chand Malhotra v/s Commissioner, Municipal Corporation, Chandigarh and take care of issues i.e. violations, sale of property before the lock in period and GPA/will etc, as this office has only to issue NDC as per the Chandigarh Administration notification dated 14.11.2018 in respect of one time charges on account of unearned increase only."
                     }
                 ]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Section Officer  ",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Additional Commissioner ",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Municipal Corporation,Chandigarh",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
         ],

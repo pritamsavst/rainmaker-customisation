@@ -49,7 +49,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -281,7 +281,7 @@
             {
                 "margin": [0, 20, 0, 0],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. MC/Estate/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
@@ -298,6 +298,34 @@
                     "text": "             A copy is forwarded to the Chairman, Chandigarh Housing Board, Chandigarh, for information w.r.t his Memo No. CHB-AO-IV/2019/1558 dated 20.02.2018 in respect of Sh. Jasbir Singh & ors, H.No.5617. Modern Housing Complex, Manimajra, UT, Chandigarh ",
                     "style": "pdfContent"
                 }]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Section Officer,",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Additional Commissioner-I",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "Municipal Corporation,",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
+                ]
             }
 
 

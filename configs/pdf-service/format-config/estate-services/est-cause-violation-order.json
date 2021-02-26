@@ -187,7 +187,7 @@
                 "margin": [0, 20, 10, 10],
                 "columns": [{
                         "preserveLeadingSpaces": true,
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. MC/Estate/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
@@ -212,6 +212,32 @@
                     {
                         "text": "3.        The SDO (8). Estate Office, UT, Chandigarh for information and necessary action please. ",
                         "style": "pdfContent"
+                    }
+                ]
+            },
+            {
+                "alignment": "right",
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "bold": true,
+                "stack": [{
+                        "text": " Additional Commissioner-cum-Estate Officer"
+
+                    },
+                    {
+                        "text": "MUNICIPAL CORPORATION, "
+                    },
+                    {
+                        "text": " CHANDIGARH (Exercising the powers of"
+                    },
+                    {
+                        "text": "the Estate Officer under the provisions of"
+                    },
+                    {
+                        "text": "Capital of Punjab (Development & "
+                    },
+                    {
+                        "text": "Regulation) Act, 1952)"
                     }
                 ]
             }
