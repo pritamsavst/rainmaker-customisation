@@ -225,7 +225,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst No. MC/Addl.CMC-1/JA-2/Manimajra/2021/",
+                        "text": "Endst No. MC/Addl.CMC-1/JA-2/Manimajra/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true

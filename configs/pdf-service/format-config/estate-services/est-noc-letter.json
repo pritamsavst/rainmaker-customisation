@@ -54,7 +54,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -301,7 +301,7 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. MC/Estate/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold": true
