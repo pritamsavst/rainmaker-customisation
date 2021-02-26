@@ -88,7 +88,7 @@
                     "text":" leaving behind regd. WILL dated "
                   },
                   {
-                    "text":"{{dateOfRegistration}}",
+                    "text":"{{submissionDate}}",
                     "bold":true
                   },
                   {

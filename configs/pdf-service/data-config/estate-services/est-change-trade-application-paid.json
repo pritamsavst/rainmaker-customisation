@@ -450,7 +450,7 @@
                     {
                         "variable": "ownerName",
                         "value": {
-                            "path": "$.Applications[0].applicationDetails.owner.ownerDetails.ownerName"
+                            "path": "$.Applications[0].applicationDetails.owner.name"
                         }
                     },
                     {

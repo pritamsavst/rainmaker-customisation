@@ -64,7 +64,8 @@
                     "alignment": "left"
                   },
                   {
-                    "text": ""
+                    "text": "",
+                    "width":"*"
                   },
                   {
                     "width":"auto",
@@ -74,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],

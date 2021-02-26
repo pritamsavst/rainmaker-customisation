@@ -27,6 +27,12 @@
             }
           },
           {
+            "variable": "applicationNumber",
+            "value": {
+              "path": "$.applicationNumber"
+            }
+          },
+          {
             "variable": "name",
             "value": {
               "path": "$.applicationDetails.transferee.name"
@@ -50,6 +56,20 @@
             "value": {
               "path": "$.applicationDetails.transferor.transferorDetails.allotmentNumber"
             }
+          },
+          {
+            "variable":"submissionDate",
+            "value":{
+              "path":"$.applicationSubmissionDate"
+            },
+            "type":"date"
+          },
+          {
+            "variable":"approvalDate",
+            "value":{
+              "path":"$.auditDetails.lastModifiedTime"
+            },
+            "type":"date"
           }
         ]
       }]

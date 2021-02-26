@@ -50,14 +50,15 @@
                       "bold": true
                     },
                     {
-                      "text": "{{allotmentNumber}}",
+                      "text": "{{applicationNumber}}",
                       "bold": false
                     }
                   ],
                   "alignment": "left"
                 },
                 {
-                  "text": ""
+                  "text": "",
+                  "width":"*"
                 },
                 {
                   "width":"auto",
@@ -67,7 +68,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{dateOfAllotment}}",
+                      "text": "{{approvalDate}}",
                       "bold": false
                     }
                   ],

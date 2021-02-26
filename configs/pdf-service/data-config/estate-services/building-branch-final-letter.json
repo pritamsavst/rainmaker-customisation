@@ -122,6 +122,20 @@
           "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
         },
         "type":"date"
+      },
+      {
+        "variable":"submissionDate",
+        "value":{
+          "path":"$.applicationSubmissionDate"
+        },
+        "type":"date"
+      },
+      {
+        "variable":"approvalDate",
+        "value":{
+          "path":"$.auditDetails.lastModifiedTime"
+        },
+        "type":"date"
       }
 
         ]

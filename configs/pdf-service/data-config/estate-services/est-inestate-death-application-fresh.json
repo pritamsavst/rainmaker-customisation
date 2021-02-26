@@ -553,6 +553,10 @@
                         "variable": "relationWithDeceased",
                         "value": {
                             "path": "$.applicationDetails.transferee.relationWithDeceased"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {

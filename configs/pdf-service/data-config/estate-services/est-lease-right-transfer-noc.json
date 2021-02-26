@@ -36,6 +36,20 @@
                 "variable": "logo",
                 "url": "https://egov.transerve.com/media/logo.png",
                 "type": "image"
+              },
+              {
+                "variable":"submissionDate",
+                "value":{
+                  "path":"$.applicationSubmissionDate"
+                },
+                "type":"date"
+              },
+              {
+                "variable":"approvalDate",
+                "value":{
+                  "path":"$.auditDetails.lastModifiedTime"
+                },
+                "type":"date"
               }
             ]
           }

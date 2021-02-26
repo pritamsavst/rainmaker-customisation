@@ -234,6 +234,20 @@
             "value": {
               "path": "$.applicationDetails.owner.ownerDetails.address"
             }
+          },
+          {
+            "variable":"submissionDate",
+            "value":{
+              "path":"$.applicationSubmissionDate"
+            },
+            "type":"date"
+          },
+          {
+            "variable":"approvalDate",
+            "value":{
+              "path":"$.auditDetails.lastModifiedTime"
+            },
+            "type":"date"
           }
 
         ]
