@@ -320,6 +320,30 @@
                         "style": "pdfContent"
                     }
                 ]
+            },
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":" ADDITIONAL COMMISSIONER-I"
+
+                    },
+                    {
+                        "text":"(Exercising the powers of the Estate Officer "
+                    },
+                    {
+                        "text":" under the provisions of Capital of Punjab"
+                    },
+                    {
+                        "text":"Development & Regulation) Act, 1952) "
+                    },
+                    {
+                        "text":"MUNICIPAL CORPORATION, CHANDIGARH "
+                    }
+                ] 
             }
 
 

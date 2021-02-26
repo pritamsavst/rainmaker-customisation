@@ -214,6 +214,32 @@
                         "style": "pdfContent"
                     }
                 ]
+            },
+            {
+                "alignment": "right",
+                "margin": [0, 20, 0, 0],
+                "style": "pdfContent",
+                "bold": true,
+                "stack": [{
+                        "text": " Additional Commissioner-cum-Estate Officer"
+
+                    },
+                    {
+                        "text": "MUNICIPAL CORPORATION, "
+                    },
+                    {
+                        "text": " CHANDIGARH (Exercising the powers of"
+                    },
+                    {
+                        "text": "the Estate Officer under the provisions of"
+                    },
+                    {
+                        "text": "Capital of Punjab (Development & "
+                    },
+                    {
+                        "text": "Regulation) Act, 1952)"
+                    }
+                ]
             }
 
 

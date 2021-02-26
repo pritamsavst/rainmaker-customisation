@@ -238,7 +238,35 @@
                         "text":"2..The Asstt. Collector Tax, Municipal Corporation, Chandigarh "
                     }
                 ]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Section Officer,",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text":"Additional Commissioner-I",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Municipal Corporation,",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Chandigarh.",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
 

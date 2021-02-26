@@ -277,7 +277,44 @@
                         "style": "pdfContent"
                     } 
                 ]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Additional Commissioner",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "(Exercising the powers of the Estate Officer",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "under the provisions of Capital of Punjab ",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "(Development & Regulation) Act, 1952).",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Municipal Corporation,",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Chandigarh",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
         
 
         ],

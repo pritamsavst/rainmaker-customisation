@@ -239,7 +239,24 @@
                         "preserveLeadingSpaces": true
                     }
                 ]
-            }
+            },
+            {
+              "alignment":"right",
+              "margin":[0,20,0,0],
+              "style":"pdfContent", 
+              "bold":true,
+              "stack":[
+                  {
+                      "text":" AC (F&A),"
+                  },
+                  {
+                      "text":"For Additional Commissioner-I, "
+                  },
+                  {
+                      "text":"Municipal Corporation, Chandigarh. "
+                  }
+              ] 
+          }
 
 
         ],

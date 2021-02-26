@@ -486,7 +486,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/{{year}}/",
+                        "text": "Endst. No. MC/Estate/{{year}}/11739",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
@@ -517,6 +517,92 @@
                         "style": "pdfContent"
                     }
                 ]
+            },
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":"UMA SHANKAR GUPTA, PCS"
+                    },
+                    {
+                        "text":" Additional Commissioner-cum-Estate Officer"
+
+                    },
+                    {
+                        "text":"(Exercising the power of Estate Hicar under the"
+                    },
+                    {
+                        "text":"provisions of Capital of Punjab (Development &"
+                    },
+                    {
+                        "text":"Regulation) Act, 1952)"
+                    },
+                    {
+                        "text":"Municipal Corporation"
+                    },
+                    {
+                        "text":"Chandigarh."
+                    }
+                ] 
+            },
+            {
+                "margin":[0,20,10,10],
+                "columns": [{
+                        "text": "Endst. No. MC/Estate/{{year}}/11801",
+                        "style": "pdfContent",
+                        "alignment": "left",
+                        "bold":true
+                    },
+                    {
+                        "text": "Dated: ________",
+                        "style": "pdfContent",
+                        "alignment": "right",
+                        "bold":true
+                    }
+                ]
+            },
+            {
+                "style": "pdfContent",
+                "stack": [
+                    {
+                        "preserveLeadingSpaces": true,
+                        "text": "            A copy of the order is forwarded to the Sub Divisional Magistrate (South)-cum-Estate Officer under P. P. Act, 1971, Chandigarh. He is requested to start the eviction proceedings against the above said occupant for recovery of outstanding amount through Collector. U.T., Chandigarh through arrears of Land Revenue.",
+                        "style": "pdfContent"
+                    }
+                ]
+            },
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":"UMA SHANKAR GUPTA, PCS"
+                    },
+                    {
+                        "text":" Additional Commissioner-cum-Estate Officer"
+
+                    },
+                    {
+                        "text":"(Exercising the power of Estate Hicar under the"
+                    },
+                    {
+                        "text":"provisions of Capital of Punjab (Development &"
+                    },
+                    {
+                        "text":"Regulation) Act, 1952)"
+                    },
+                    {
+                        "text":"Municipal Corporation"
+                    },
+                    {
+                        "text":"Chandigarh."
+                    }
+                ] 
             }
 
 

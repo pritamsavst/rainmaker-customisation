@@ -185,7 +185,36 @@
                         "style": "pdfContent"
                     }
                 ]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Assistant Controller (F&A)",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "For Additional Commissioner-1",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Municipal Corporation,",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Chandigarh.",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
         ],
