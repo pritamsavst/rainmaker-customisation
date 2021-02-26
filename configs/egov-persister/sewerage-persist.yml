@@ -7,7 +7,7 @@ serviceMaps:
    fromTopic: save-sw-connection
    isTransaction: true
    queryMaps: 
-    - query: INSERT INTO eg_sw_connection (id, tenantid, property_id, applicationno, applicationstatus, status, connectionno, oldconnectionno,roadcuttingarea,action,roadtype, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?);
+    - query: INSERT INTO eg_sw_connection (id, tenantid, property_id, applicationno, applicationstatus, status, connectionno, oldconnectionno,roadcuttingarea,action,roadtype,aadharNo, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?);
       basePath: $.SewerageConnection
       jsonMaps:
        - jsonPath: $.SewerageConnection.id 
@@ -31,6 +31,8 @@ serviceMaps:
        - jsonPath: $.SewerageConnection.processInstance.action
 
        - jsonPath: $.SewerageConnection.roadType 
+
+       - jsonPath: $.SewerageConnection.aadharNo
        
        - jsonPath: $.SewerageConnection.auditDetails.createdBy
 
@@ -144,7 +146,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.SewerageConnection.id
 
-    - query: UPDATE eg_sw_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastmodifiedby=?, lastmodifiedtime=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=?,billGroup=?,contract_value=? WHERE id=?;
+    - query: UPDATE eg_sw_connection SET applicationstatus=?, status=?, connectionno=?, oldconnectionno=?, action=?, roadCuttingArea=?, roadType=?, adhocpenalty=?, adhocrebate=?, adhocpenaltyreason=?, adhocpenaltycomment=?, adhocrebatereason=?, adhocrebatecomment=?, lastmodifiedby=?, lastmodifiedtime=?, cccode=?,div=?,subdiv=?,ledger_no=?,ledgerGroup=?,billGroup=?,contract_value=?,aadharNo=?,ferruleSize=? WHERE id=?;
       basePath: $.SewerageConnection
       jsonMaps:
         
@@ -190,7 +192,11 @@ serviceMaps:
        
        - jsonPath: $.SewerageConnection.billGroup
        
-       - jsonPath: $.SewerageConnection.contractValue 
+       - jsonPath: $.SewerageConnection.contractValue     
+       
+       - jsonPath: $.SewerageConnection.aadharNo
+       
+       - jsonPath: $.SewerageConnection.ferruleSize
 
        - jsonPath: $.SewerageConnection.id   
        
