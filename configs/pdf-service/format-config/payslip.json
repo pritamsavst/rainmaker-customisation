@@ -8,108 +8,82 @@
     },
     "content": [
       {
-        "text": "Employee Code",
+        "text":"{{corporationName}}",
         "alignment": "center",
-        "color": "#484848",
-        "fontSize": 13,
+        "color": "#1E1E1E",
+        "fontSize": 14,
         "bold": true,
-        "margin": [
-          0,
-          1,
-          0,
-          0
-        ]
+        "letterSpacing": 0.74
       },
-      {
-        "style": "payslip-data-2",
-        "columns": [
-          {
-            "width": "*",
-            "text": "{{empCode}}"
-          }
-        ]
+	  {
+        "text":"{{corporationAddress}}",
+        "alignment": "center",
+        "color": "#656565",
+        "fontSize": 12,
+        "letterSpacing": 0.74
       },
-      {
-        "style": "payslip-data-1",
-        "columns": [
-          {
-            "bold": true,
-            "width": 130,
-            "text": "Name",
-            "margin": [
-              5,
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "width": "*",
-            "text": "{{name}}"
-          }
-        ]
+	  {
+        "text":"{{corporationContact}}",
+        "alignment": "center",
+        "color": "#656565",
+        "fontSize": 12,
+        "letterSpacing": 0.74
       },
-      {
-        "style": "payslip-data-1",
-        "columns": [
-          {
-            "bold": true,
-            "width": 130,
-            "text": "FatherName",
-            "margin": [
-              5,
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "width": "*",
-            "text": "{{fatherName}}"
-          }
-        ]
+	  {
+        "text":"{{corporationWebsite}}",
+        "alignment": "center",
+        "color": "#656565",
+        "fontSize": 12,
+        "letterSpacing": 0.74
       },
-      {
-        "style": "payslip-data-1",
-        "columns": [
-          {
-            "bold": true,
-            "width": 130,
-            "text": "Designation",
-            "margin": [
-              5,
-              0,
-              0,
-              0
-            ]
-          },
-          {
-            "width": "*",
-            "text": "{{designation}}"
-          }
-        ]
+	   {
+        "text":"Pay Slip for the month of - {{month}},{{year}}",
+        "alignment": "center",
+        "color": "#1E1E1E",
+		 "bold": true,
+        "fontSize": 12,
+        "letterSpacing": 0.74
       },
-      {
-        "style": "payslip-data-1",
-        "columns": [
-          {
-            "bold": true,
-            "width": 130,
-            "text": "Department",
-            "margin": [
-              5,
-              0,
-              10,
-              10
-            ]
-          },
-          {
-            "width": "*",
-            "text": "{{department}}"
-          }
-        ]
-      },
+     
       {},
+	   {
+        "style": "payslip-table",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                    "13.08%",
+                     "40%",
+                      "10.08%",
+                      "13%",
+					  "15%",
+                     "13%"
+                  ],
+                  "body": [
+                    [
+                      "{ \"text\":\"Employee Name :\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-3\"},{ \"text\":\"({{empCode}}) {{name}}\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-4\"},{ \"text\":\"Designation :\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-3\"},{ \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-4\"},{ \"text\":\"Salary Month :\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-3\"},{ \"text\":\"{{month}}-{{year}}\", \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-4\"}"
+                    ]
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+	  
       {
         "style": "payslip-table",
         "table": {
@@ -122,16 +96,137 @@
                 "table": {
                   "headerRows": 1,
                   "widths": [
-                    "30%",
-                    "20%",
-                    "30%",
-                    "20%"
+						
+						"19.05%",
+						"11.05%",
+						"19.05%",
+						"11.05%",
+						"07.05%",
+						"19.05%",
+						"11.05%",
+						"07.05%"
                   ],
+                  "body": 
+				  [
+						
+						 [ "{ \"text\":\"Emoluments\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"colSpan\":2,\"style\": \"tm-sub-table\" }, { \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"},{ \"text\":\"Govt. Recoveries\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"colSpan\":3,\"style\": \"tm-sub-table\" },{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"},{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, { \"text\":\"Non Govt. Recoveries \", \"alignment\": \"center\", \"colSpan\":3, \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" },{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"},{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}" ],
+						 
+						     [ "{ \"text\":\"Particulars\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table\" }, { \"text\":\"Amount (Rs.)\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table\" },{ \"text\":\"Particulars\", \"border\":[ true, true, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table\" },{ \"text\":\"Amount (Rs.)\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table\" },{ \"text\":\"Inst No.\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table\" }, { \"text\":\"Particulars\", \"border\":[ true, true, true, true ], \"alignment\": \"center\", \"style\": \"tm-sub-table\" },{ \"text\":\"Amount (Rs.)\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table\" },{ \"text\":\"Inst No.\", \"border\":[ true, true, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table\" }" ],
+							 
+							    "{{#variable1}}[ \"{ \"text\":\"{{Allowances_Text}}\", \"border\":[ true, false, false, false ], \"style\": \"tm-sub-table-value\" },{ \"text\":\"{{Allowances_Amount}}\", \"border\":[ false, false, false, false ], \"style\": \"tm-sub-table-value1\" } ,{ \"text\":\"{{Deductions_Text}}\", \"border\":[ true, false, false, false ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{Deductions_Amount}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table-value1\"}, { \"text\":\"{{Deductions_Inst_No}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table-value2\"}, { \"text\":\"{{Non_Gov_Text}}\", \"border\":[ true, false, false, false ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{Non_Gov_Amount}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-sub-table-value1\"}, { \"text\":\"{{Non_Gov_Inst_No}}\", \"border\":[ false, false, true, false ] ,\"style\": \"tm-sub-table-value2\"}\" ]{{/variable1}}",
+								
+								[ "{ \"text\":\"Total Emolument (Rs.)\", \"border\":[true, true, false, true ],  \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{Total_Emolument}}\", \"border\":[ false, true, true, true ], \"style\": \"tm-sub-table-value1\" },{ \"text\":\"Total Govt. Recoveries(Rs.)\", \"border\":[ true, true, false, true],  \"style\": \"tm-sub-table-value\" },{ \"text\":\"{{Total_Govt_Recoveries}}\", \"border\":[  false, true, false, true  ],  \"style\": \"tm-sub-table-value1\" },{ \"text\":{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, \"border\":[  false, true, true, true  ],  \"style\": \"tm-sub-table\" }, { \"text\":\"Total NG Recoveries (Rs.)\", \"border\":[true, true, false, true], \"style\": \"tm-sub-table-value\" },{ \"text\":\"{{Total_NG_Recoveries}}\", \"border\":[  false, true, false, true  ],  \"style\": \"tm-sub-table-value1\" },{ \"text\":{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, \"border\":[  false, true, true, true  ],  \"style\": \"tm-sub-table\" }" ]
+								
+						]		
+				 
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+	   {
+        "style": "payslip-table1",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+						 "67.23%",                      
+                     "36.86%"
+                  ],
+
                   "body": [
                     [
-                      "{ \"text\":\"Allowances\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"},{ \"text\":\"Amount\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Deductions\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Amount\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}"
+                      "{ \"text\":\"Net Pay (Rs.) : {{Net_Pay}} ({{Net_Pay_In_Word}})\", \"border\":[true, false, false, true ],  \"style\": \"tm-sub-table-value6\" },{ \"text\":{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, \"border\":[true, false, true, false ],  \"style\": \"tm-sub-table-value4\" }"
                     ],
-                    "{{#variable1}}[ \"{ \"text\":\"{{Allowances_Text}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table1\"},{ \"text\":\"{{Allowances_Amount}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table2\"}, { \"text\":\"{{Deductions_Text}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table1\" }, { \"text\":\"{{Deductions_Amount}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table2\"}\" ]{{/variable1}}"
+					[
+                      "{ \"text\":\"Voucher No : {{Voucher_No}}                Voucher Date : {{Voucher_Date}}\", \"border\":[true, false, false, true ],  \"style\": \"tm-sub-table-value4\" },{ \"text\":\"office not known\", \"border\":[true, false, true, true ], \"alignment\": \"center\",  \"style\": \"tm-sub-table-value4\" }"
+                    ]
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+	    {
+        "style": "payslip-table1",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                    "67.22%",
+					 "37%"
+                     
+                  ],
+                  "body": [
+				  [
+                      "{ \"text\":\"Accounts Division\", \"border\":[ false, false, false, true ] ,\"style\": \"payslip-data-4\" },{ \"text\":\"{{Date_time}}\", \"border\":[false, false, false, true ],  \"style\": \"tm-sub-table-value1\" }"
+                    ]
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+	  {
+	  },
+	  {
+        "style": "payslip-table1",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+						 "10%",                      
+                     "92.05%"
+                  ],
+                  "body": [
+				    [
+                      "{ \"text\":{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-4\" },{ \"text\":{ \"text\":\"\", \"border\":[ true, true, true, false ], \"alignment\": \"center\", \"style\": \"tm-sub-table\"}, \"border\":[ false, false, false, false ] ,\"style\": \"payslip-data-4\" }"
+                    ],
+                    [
+                      "{ \"text\":\"Disclaimer : \", \"border\":[false, false, false, false ],\"bold\": \"true\",  \"style\": \"tm-sub-table-value4\" },{ \"text\":\"NIC disclaims any responsibility for the correctness of the data uploaded on this website by various ODOs/Pay and Account Offices.In case of any discrepancy in data,visitors are requested to contact the respective DDOs/Pay and Account Offices of Ministry/ Department/Organization.This report is to be authenticated by appropriate signing authority.\", \"border\":[true, false, false, false ],  \"style\": \"tm-sub-table-value4\" }"
+                    ]
                   ]
                 },
                 "border": [
@@ -157,8 +252,24 @@
           0
         ]
       },
+	   "payslip-data-3": {
+		 "alignment": "left",
+		 "letterSpacing": 1.2,
+        "color": "#1E1E1E",
+        "fontSize": 12,
+        "bold": false
+      },
+	   "payslip-data-4": {
+		"alignment": "left",
+		"letterSpacing": 1.2,
+        "color": "#1E1E1E",
+        "fontSize": 12,
+        "bold": false
+           },
+		 
       "payslip-data-2": {
         "alignment": "center",
+		"letterSpacing": 1.2,
         "color": "#484848",
         "fontSize": 14,
         "bold": false,
@@ -183,13 +294,87 @@
           -10
         ]
       },
-      "tm-sub-table": {
-        "color": "#484848",
+      "tm-sub-table-value": {
+        "color": "#1E1E1E",
         "backgroundColor": "grey",
-        "bold": true,
+       
+        "alignment": "left",
+        "fontFamily": "Cambay",
+        "fontSize": 10,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+	   "tm-sub-table-value1": {
+        "color": "#1E1E1E",
+        "backgroundColor": "grey",
+       
+        "alignment": "right",
+        "fontFamily": "Cambay",
+        "fontSize": 13,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+          0
+        ]
+      }, "tm-sub-table-value2": {
+        "color": "#1E1E1E",
+        "backgroundColor": "grey",
+       
         "alignment": "center",
         "fontFamily": "Cambay",
-        "fontSize": 12,
+        "fontSize": 11,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+	  "tm-sub-table-value6": {
+        "color": "#1E1E1E",
+        "backgroundColor": "grey",
+        "bold": true,
+        "alignment": "left",
+        "fontFamily": "Cambay",
+        "fontSize": 11,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+         0
+        ]
+      },
+	   "tm-sub-table-value4": {
+        "color": "#1E1E1E",
+        "backgroundColor": "grey",
+       
+        "alignment": "left",
+        "fontFamily": "Cambay",
+        "fontSize": 11,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+         0
+        ]
+      },
+	   "tm-sub-table": {
+        "color": "#1E1E1E",
+        "backgroundColor": "grey",
+       
+        "alignment": "center",
+        "fontFamily": "Cambay",
+        "fontSize": 10,
         "fontWeight": 200,
         "margin": [
           3,
@@ -228,15 +413,27 @@
           10
         ]
       },
-      "payslip-table": {
+	   "payslip-table1": {
         "color": "#8c8b8b",
         "fontFamily": "Cambay",
         "fontSize": 10,
         "margin": [
-          -10,
+           -30,
+          -5,
           0,
-          20,
-          10
+          0
+        ]
+      },
+	  
+      "payslip-table": {
+        "color": "#8c8b8b",
+        "fontFamily": "Cambay",
+        "fontSize": 8,
+        "margin": [
+          -30,
+         -5,
+          0,
+          0
         ]
       }
     }

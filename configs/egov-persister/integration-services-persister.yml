@@ -152,4 +152,34 @@ serviceMaps:
          -  jsonPath: $.fireNocRequest.auditDetails.createdBy
          -  jsonPath: $.fireNocRequest.auditDetails.createdTime
          -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime		 
+         -  jsonPath: $.fireNocRequest.auditDetails.lastModifiedTime     
+        
+   -  version: 1.0
+      name: Save Fire Data
+      description: Request -Fire Data
+      fromTopic: integration-services-save-eofficeData
+      isTransaction: true
+      queryMaps:
+      -  query: INSERT INTO public.employee_post_detail_map(uuid, employee_id,employee_code, post_detail_id, post,employee_name, employee_designation,employee_email, is_active, created_by, created_time, last_modified_by,last_modified_time)     VALUES (?, ?,?,?, ?, ?, ?,?, ?, ?, ?, ?,?)
+                 ON CONFLICT (employee_code,post_detail_id) DO UPDATE set post=? ,employee_name=?, employee_designation=?, employee_email=?,last_modified_by=?, last_modified_time=? ;        
+         basePath: $.employeePostDetailMap
+         jsonMaps:
+         -  jsonPath: $.employeePostDetailMap.uuid
+         -  jsonPath: $.employeePostDetailMap.employeeId
+         -  jsonPath: $.employeePostDetailMap.employeeCode
+         -  jsonPath: $.employeePostDetailMap.postDetailId
+         -  jsonPath: $.employeePostDetailMap.post
+         -  jsonPath: $.employeePostDetailMap.employeeName
+         -  jsonPath: $.employeePostDetailMap.employeeDesignation
+         -  jsonPath: $.employeePostDetailMap.employeeEmail
+         -  jsonPath: $.employeePostDetailMap.isActive
+         -  jsonPath: $.employeePostDetailMap.auditDetails.createdBy
+         -  jsonPath: $.employeePostDetailMap.auditDetails.createdTime
+         -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedBy
+         -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedTime 
+         -  jsonPath: $.employeePostDetailMap.post   
+         -  jsonPath: $.employeePostDetailMap.employeeName
+         -  jsonPath: $.employeePostDetailMap.employeeDesignation
+         -  jsonPath: $.employeePostDetailMap.employeeEmail   
+         -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedBy
+         -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedTime     
