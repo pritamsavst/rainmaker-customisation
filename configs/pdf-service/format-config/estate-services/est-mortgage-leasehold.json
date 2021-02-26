@@ -200,11 +200,17 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "width":"auto",
+                        "text": "Endst. No. MC/Estate/2021/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
                     {
+                      "text":"",
+                      "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated:____________",
                         "style": "pdfContent",
                         "alignment": "right"
