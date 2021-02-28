@@ -280,4 +280,61 @@ serviceMaps:
        - jsonPath: $.autoroutingmap.id
        
        - jsonPath: $.autoroutingmap.tenantId
+       
+ - version: 1.0
+   name: Discription Report data Dump
+   description: Discription Report data Dump
+   fromTopic: dump-discription-data
+   isTransaction: true
+   queryMaps:
+
+    - query: INSERT INTO public.eg_pgr_discription_report(   lastassignedto, servicecode, locality, complaintno, date, name,   phone, landmark, address, description, complaintraisedby, slahours,   lastactiondate, status, autoescalated, createdtime,department,servicerequestid,tenantid,slaendtime,source)     VALUES (?, ?, ?, ?, ?, ?,   ?, ?, ?, ?, ?, ?,   ?, ?, ?, ?,?,?,?,?,?)
+              ON CONFLICT (servicerequestid,tenantid) DO UPDATE SET lastassignedto=?, servicecode=?, locality=?, complaintno=?, date=?, name=?, phone=?, landmark=?, address=?, description=?, complaintraisedby=?, slahours=?, lastactiondate=?, status=?, autoescalated=?, department=?, 
+       servicerequestid=?, tenantid=?, createdtime=? ,slaendtime=?,source=?
+
+      basePath: discriptionReport
+      jsonMaps:
+
+       - jsonPath: $.discriptionReport.lastassignedto
+       - jsonPath: $.discriptionReport.servicecode
+       - jsonPath: $.discriptionReport.locality       
+       - jsonPath: $.discriptionReport.complaintNo       
+       - jsonPath: $.discriptionReport.date       
+       - jsonPath: $.discriptionReport.name        
+       - jsonPath: $.discriptionReport.phone
+       - jsonPath: $.discriptionReport.landmark
+       - jsonPath: $.discriptionReport.address       
+       - jsonPath: $.discriptionReport.description       
+       - jsonPath: $.discriptionReport.complaintraisedby       
+       - jsonPath: $.discriptionReport.slaHours       
+       - jsonPath: $.discriptionReport.lastactiondate       
+       - jsonPath: $.discriptionReport.status       
+       - jsonPath: $.discriptionReport.autoescalated       
+       - jsonPath: $.discriptionReport.createdtime       
+       - jsonPath: $.discriptionReport.department       
+       - jsonPath: $.discriptionReport.servicerequestid       
+       - jsonPath: $.discriptionReport.tenantid   
+       - jsonPath: $.discriptionReport.slaendtime
+       - jsonPath: $.discriptionReport.source      
+       - jsonPath: $.discriptionReport.lastassignedto
+       - jsonPath: $.discriptionReport.servicecode
+       - jsonPath: $.discriptionReport.locality       
+       - jsonPath: $.discriptionReport.complaintNo       
+       - jsonPath: $.discriptionReport.date       
+       - jsonPath: $.discriptionReport.name        
+       - jsonPath: $.discriptionReport.phone
+       - jsonPath: $.discriptionReport.landmark
+       - jsonPath: $.discriptionReport.address       
+       - jsonPath: $.discriptionReport.description       
+       - jsonPath: $.discriptionReport.complaintraisedby       
+       - jsonPath: $.discriptionReport.slaHours       
+       - jsonPath: $.discriptionReport.lastactiondate       
+       - jsonPath: $.discriptionReport.status       
+       - jsonPath: $.discriptionReport.autoescalated              
+       - jsonPath: $.discriptionReport.department       
+       - jsonPath: $.discriptionReport.servicerequestid       
+       - jsonPath: $.discriptionReport.tenantid      
+       - jsonPath: $.discriptionReport.createdtime
+       - jsonPath: $.discriptionReport.slaendtime
+       - jsonPath: $.discriptionReport.source
    
