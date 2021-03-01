@@ -50,8 +50,15 @@ ReportDefinitions:
         label: Year
         name: Year
         pattern: "list://2020:2020,2021:2021,2022:2022,2023:2023,2024:2024,2025:2025"
-        searchClause: "and cast(concat($Year, lpad($Month,2,'0')) as integer)>=
-cast(concat(cast(pr.effective_start_year as varchar), lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)"
+        searchClause: "and ((cast(concat($Year, lpad($Month,2,'0')) as integer)>=
+cast(concat(cast(pr.effective_start_year as varchar)
+, lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)
+and pr.effective_end_year is not null 
+and pr.effective_end_month is not null
+and cast(concat($Year, lpad($Month,2,'0')) as integer)<=
+cast(concat(cast(pr.effective_end_year 
+as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer
+))"
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
@@ -60,13 +67,10 @@ cast(concat(cast(pr.effective_start_year as varchar), lpad(cast(pr.effective_sta
         label: Month
         name: Month
         pattern: "list://1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12"
-        searchClause: "and (
-pr.effective_end_year is not null and pr.effective_end_month is not null
-and cast(concat($Year, lpad($Month,2,'0')) as integer)<
-cast(concat(cast(pr.effective_end_year as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer)
-or
-(pr.effective_end_year is null and pr.effective_end_month is null)
-)"
+        searchClause: "or (cast(concat($Year, lpad($Month,2,'0')) as integer)>=
+cast(concat(cast(pr.effective_start_year as varchar)
+, lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)
+and pr.effective_end_year is null and pr.effective_end_month is null))"
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
@@ -234,6 +238,12 @@ or
         total: false
         type: string
       - 
+        label: "Net Pension"
+        name: final_calculated_pension
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
         label: "Bank Name"
         name: bank_details
         source: eg_pension_revision
@@ -256,12 +266,6 @@ or
         name: bank_account_number
         source: eg_pension_revision
         total: false
-        type: string
-      - 
-        label: "Net Pension"
-        name: final_calculated_pension
-        source: eg_pension_revision
-        total: true
         type: string
 
 
