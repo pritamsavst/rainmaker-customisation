@@ -450,9 +450,9 @@ serviceMaps:
    description: Persists the new location details into db
    fromTopic: update-new-location-details
    isTransaction: true
-   queryMaps:
-       
-       - query: UPDATE public.bk_osujm_new_location SET "action"=?, applicant_address=?, applicant_name=?, application_status=?, area_requirement=?, business_service=?, contact=?, date_created=?::date, id_proof=?, landmark=?, locality_address=?, "location"=?, mail_address=?, sector=?, tenant_id=?, uuid=?, remarks=?, last_modified_date WHERE application_number=?;
+   queryMaps:       
+
+       - query: UPDATE public.bk_osujm_new_location SET "action"=?, applicant_address=?, applicant_name=?, application_status=?, area_requirement=?, business_service=?, contact=?, date_created=?::date, id_proof=?, landmark=?, locality_address=?, "location"=?, mail_address=?, sector=?, tenant_id=?, uuid=?, remarks=?, last_modified_date=? WHERE application_number=?;
          basePath: NewLocationDetails.*
          jsonMaps:
 
