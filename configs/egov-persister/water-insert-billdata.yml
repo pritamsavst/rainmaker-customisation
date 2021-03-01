@@ -182,7 +182,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
 
-        - query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=? where concat(divsdiv,consumercode) = ? ;
+        - query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=?,receiptDate=? where concat(divsdiv,consumercode) = ? ;
           basePath: $.billGeneration
           jsonMaps:
 
@@ -197,6 +197,8 @@ serviceMaps:
            - jsonPath: $.billGeneration.paymentStatus
     
            - jsonPath: $.billGeneration.totalAmountPaid
+    
+           - jsonPath: $.billGeneration.receiptDate
     
            - jsonPath: $.billGeneration.consumerCode
 
