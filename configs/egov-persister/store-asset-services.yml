@@ -931,7 +931,7 @@ serviceMaps:
       -  query: INSERT INTO PurchaseOrderDetail(id, tenantId,material, purchaseOrder, orderNumber, uom, priceList,userQuantity,
             orderQuantity, receivedQuantity, unitPrice, description, tenderquantity, usedquantity)VALUES ( ?, ?, ?, ?, ?,
             ?, ?, ?, ?, ?, ?, ?, ?, ? ) ON CONFLICT(id, tenantId) DO UPDATE SET material=EXCLUDED.material, purchaseOrder=EXCLUDED.purchaseOrder,
-            orderNumber=EXCLUDED.orderNumber, uom=EXCLUDED.uom, pricelist=EXCLUDED.pricelist, orderQuantity=EXCLUDED.orderQuantity,
+            orderNumber=EXCLUDED.orderNumber, uom=EXCLUDED.uom, pricelist=EXCLUDED.pricelist,userQuantity=EXCLUDED.userQuantity, orderQuantity=EXCLUDED.orderQuantity,
             receivedQuantity=EXCLUDED.receivedQuantity, unitPrice=EXCLUDED.unitPrice, description=EXCLUDED.description, tenderquantity=EXCLUDED.tenderquantity,
             usedquantity=EXCLUDED.usedquantity;
          basePath: $.purchaseOrders.*.purchaseOrderDetails.*
