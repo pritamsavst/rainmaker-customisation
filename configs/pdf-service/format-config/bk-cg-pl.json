@@ -202,41 +202,6 @@
                     0,
                     0
                 ]
-            },
-            {
-                "text": "Approved by",
-                "alignment": "left",
-                "fontSize": "10",
-                "bold": true,
-                "margin": [
-                    0,
-                    50,
-                    0,
-                    5
-                ]
-            },
-            {
-                "text": "Renil Commissioner",
-                "alignment": "left",
-                "fontSize": "10",
-                "margin": [
-                    0,
-                    0,
-                    0,
-                    0
-                ]
-            },
-            {
-                "text": "Additional Commissioner",
-                "alignment": "left",
-                "fontSize": "10",
-                "bold": true,
-                "margin": [
-                    0,
-                    0,
-                    0,
-                    0
-                ]
             }
         ],
         "styles": {
