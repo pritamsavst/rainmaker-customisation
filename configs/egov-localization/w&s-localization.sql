@@ -1089,7 +1089,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5417-ac6f-2bc063b75064e','en_IN','NEW_TUBEWELL_CONNECTION_PREVIOUS_BILL_COPY','Previous Bill Copy','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5418-ac6f-2bc063b75064e','en_IN','NEW_TUBEWELL_CONNECTION_BUILDING_PLAN','Building Plan and  Plot location','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5419-ac6f-2bc063b75064e','en_IN','NEW_TUBEWELL_CONNECTION_LETTER_WITH_JUSTIFICATION','Letter with justification of tubewell requirement','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5420-ac6f-2bc063b75064e','en_IN','WS_PROPERTY_USAGE_TYPE_TARRIF_LABEL_INPUT_PROPOSED','Proposed Tarif Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5900-ac6f-2bc063b75064e','en_IN','WS_PROPERTY_USAGE_TYPE_TARRIF_LABEL_INPUT_PROPOSED','Proposed Tarif Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5421-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_FERRULE_INPUT','Ferrule Size','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5422-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_FERRULE_INPUT_PLACEHOLDER','Enter Ferrule Size','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5423-ac6f-2bc063b75064e','en_IN','WS_PROPERTY_USAGE_TYPE_TARRIF_LABEL_INPUT_PROPOSED_PLACEHOLDER','Select Proposed Tarif Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
