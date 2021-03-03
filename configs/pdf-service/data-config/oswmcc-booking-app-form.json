@@ -19,6 +19,12 @@
                                 }
                             },
                             {
+                                "variable": "applicationStatus",
+                                "value": {
+                                    "path": "$.bookingDetail.status"
+                                }
+                            },
+                            {
                                 "variable": "applicantMobile",
                                 "value": {
                                     "path": "$.applicantDetail.mobileNumber"
