@@ -186,12 +186,18 @@
             {
                 "margin": [0, 20, 10, 10],
                 "columns": [{
+                        "width":"auto",
                         "preserveLeadingSpaces": true,
-                        "text": "Endst. No. MC/Estate/{{year}}/",
+                        "text": "Endst. No. MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left"
                     },
                     {
+                        "width":"*",
+                        "text":""
+                    },
+                    {
+                        "width":"auto",
                         "preserveLeadingSpaces": true,
                         "text": "Dated:_________",
                         "style": "pdfContent",

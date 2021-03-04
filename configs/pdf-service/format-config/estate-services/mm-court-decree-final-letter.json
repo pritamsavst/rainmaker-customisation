@@ -220,12 +220,18 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst No. MC/Addl.CMC/C-III/Manimajra/{{year}}/",
+                        "text": "Endst No. MC/Addl.CMC/C-III/Manimajra/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
+                        "width":"auto",
                         "bold":true
                     },
                     {
+                      "width":"*",
+                      "text":""
+                    },
+                    {
+                      "width":"auto",
                         "text": "Dated: ___________",
                         "style": "pdfContent",
                         "alignment": "right",

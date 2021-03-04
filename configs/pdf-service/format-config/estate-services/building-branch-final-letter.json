@@ -61,7 +61,8 @@
                   "alignment": "left"
                 },
                 {
-                  "text": ""
+                  "text": "",
+                  "width":"*"
                 },
                 {
                   "width":"auto",
@@ -209,12 +210,18 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. MCC/JtCMC/SDE (B)/2010",
+                        "width":"auto",
+                        "text": "Endst. MCC/JtCMC/SDE (B)/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
                     },
                     {
+                      "text": "",
+                      "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated:_____________",
                         "style": "pdfContent",
                         "alignment": "right",

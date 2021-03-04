@@ -538,6 +538,12 @@
                         "value": {
                             "path": "$.Applications[0].applicationDocuments.*"
                         }
+                    },
+                    {
+                        "variable": "applicationHeader",
+                        "value": {
+                            "path": "$.applicationHeader"
+                        }
                     }
                    
                 ]

@@ -457,6 +457,414 @@
                         "value": {
                             "path": "$.applicationNumber"
                         }
+                    },
+                    {
+                        "variable":"SITE_REPORT_DETAILS_HEADER",
+                        "value": {
+                            "path": "SITE_REPORT_DETAILS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"PARTICULARS_OF_HOUSE_OR_SHOP_LABEL",
+                        "value": {
+                            "path": "PARTICULARS_OF_HOUSE_OR_SHOP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"HOUSE_AREA_LABEL",
+                        "value": {
+                            "path": "HOUSE_AREA_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"OWNERSHIP_LABEL",
+                        "value": {
+                            "path": "OWNERSHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"POSSESSION_LABEL",
+                        "value": {
+                            "path": "POSSESSION_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"MODE_OF_OWNERSHIP_LABEL",
+                        "value": {
+                            "path": "MODE_OF_OWNERSHIP_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"HEIGHT_LABEL",
+                        "value": {
+                            "path": "HEIGHT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"CANTILEVER_LABEL",
+                        "value": {
+                            "path": "CANTILEVER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"NUMBER_OF_FLOORS_LABEL",
+                        "value": {
+                            "path": "NUMBER_OF_FLOORS_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"ENCROACHMENT_LABEL",
+                        "value": {
+                            "path": "ENCROACHMENT_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"VIOLATION_LABEL",
+                        "value": {
+                            "path": "VIOLATION_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DIMENSION_OF_BUILDING_LABEL",
+                        "value": {
+                            "path": "DIMENSION_OF_BUILDING_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"AREA_PLACEHOLDER",
+                        "value": {
+                            "path": "AREA_PLACEHOLDER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"EXCESS_AREA_LABEL",
+                        "value": {
+                            "path": "EXCESS_AREA_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"IS_COMMERCIAL_ACTIVITY_LABEL",
+                        "value": {
+                            "path": "IS_COMMERCIAL_ACTIVITY_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"COMMERCIAL_ACTIVITY_AREA_LABEL",
+                        "value": {
+                            "path": "COMMERCIAL_ACTIVITY_AREA_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DAIRY_OR_KEEPING_CATTLE_LABEL",
+                        "value": {
+                            "path": "DAIRY_OR_KEEPING_CATTLE_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DEVELOPMENT_CHARGES_LABEL",
+                        "value": {
+                            "path": "DEVELOPMENT_CHARGES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"COMPOSITION_FEES_LABEL",
+                        "value": {
+                            "path": "COMPOSITION_FEES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"COMPOSITION_FEES_UNAUTHORIZED_LABEL",
+                        "value": {
+                            "path": "COMPOSITION_FEES_UNAUTHORIZED_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"CONVERSION_CHARGES_LABEL",
+                        "value": {
+                            "path": "CONVERSION_CHARGES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"TOTAL_CHARGES_LABEL",
+                        "value": {
+                            "path": "TOTAL_CHARGES_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"DATE_OF_INSPECTION_LABEL",
+                        "value": {
+                            "path": "DATE_OF_INSPECTION_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "particularsOfHouse",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.particularsOfHouse"
+                        }
+                    },
+                    {
+                        "variable": "houseArea",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.houseArea"
+                        }
+                    },
+                    {
+                        "variable": "ownership",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.ownership"
+                        }
+                    },
+                    {
+                        "variable": "possession",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.possession"
+                        }
+                    },
+                    {
+                        "variable": "modeOfOwnership",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.modeOfOwnership"
+                        }
+                    },
+                    {
+                        "variable": "height",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.height"
+                        }
+                    },
+                    {
+                        "variable": "cantilever",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.cantilever"
+                        }
+                    },
+                    {
+                        "variable": "noOfFloors",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.noOfFloors"
+                        }
+                    },
+                    {
+                        "variable": "encroachment",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.encroachment"
+                        }
+                    },
+                    {
+                        "variable": "violation",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.violation"
+                        }
+                    },
+                    {
+                        "variable": "dimensionOfBuilding",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.dimensionOfBuilding"
+                        }
+                    },
+                    {
+                        "variable": "area",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.area"
+                        }
+                    },
+                    {
+                        "variable": "excessArea",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.excessArea"
+                        }
+                    },
+                    {
+                        "variable": "isCommercialActivity",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.isCommercialActivity"
+                        }
+                    },
+                    {
+                        "variable": "commercialActivityArea",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.commercialActivityArea"
+                        }
+                    },
+                    {
+                        "variable": "runningDairy",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.runningDairy"
+                        }
+                    },
+                    {
+                        "variable": "developmentCharges",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.developmentCharges"
+                        }
+                    },
+                    {
+                        "variable": "compositionFees",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.compositionFees"
+                        }
+                    },
+                    {
+                        "variable": "compositionFeeUnauthorized",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.compositionFeeUnauthorized"
+                        }
+                    },
+                    {
+                        "variable": "conversionCharges",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.conversionCharges"
+                        }
+                    },
+                    {
+                        "variable": "totalChanges",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.totalChanges"
+                        }
+                    },
+                    {
+                        "variable": "dateOfInspection",
+                        "value": {
+                            "path": "$.applicationDetails.siteReport.dateOfInspection"
+                        }
                     }
                 ]
             }]

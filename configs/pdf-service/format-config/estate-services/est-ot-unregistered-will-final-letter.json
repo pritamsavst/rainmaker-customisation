@@ -263,11 +263,17 @@
             {
                 "margin": [0, 20, 0, 0],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/{{year}}/",
+                        "text": "Endst. No. MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
-                        "alignment": "left"
+                        "alignment": "left",
+                        "width":"auto"
                     },
                     {
+                        "width":"*",
+                        "text":""
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated: _________",
                         "style": "pdfContent",
                         "alignment": "right"

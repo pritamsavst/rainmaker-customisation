@@ -474,6 +474,12 @@
                         }
                     },
                     {
+                        "variable": "applicationHeader",
+                        "value": {
+                            "path": "$.applicationHeader"
+                        }
+                    },
+                    {
                         "variable": "documents_array",
                         "value": {
                             "path": "$.applicationDocuments.*"

@@ -261,14 +261,20 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/{{year}}/",
+                        "text": "Endst. No. MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
-                        "alignment": "left"
+                        "alignment": "left",
+                        "width":"auto"
+                    },
+                    {
+                        "width":"*",
+                        "text":""
                     },
                     {
                         "text": "Dated:____________",
                         "style": "pdfContent",
-                        "alignment": "right"
+                        "alignment": "right",
+                        "width":"auto"
                     }
                 ]
             },

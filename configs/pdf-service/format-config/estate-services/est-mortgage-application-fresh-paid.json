@@ -25,7 +25,7 @@
                         "style": "receipt-logo-header"
                       },
                       {
-                        "text":"{{subHeader}}",
+                        "text":"{{applicationHeader}}",
                         "style":"receipt-logo-sub-header"
                       },
                       {

@@ -178,10 +178,14 @@
                         "width":"auto"
                     },
                     {
+                      "text":"",
+                       "width":"*"
+                    },
+                    {
                         "text": "Dated:_____________",
                         "style": "pdfContent",
                         "alignment": "right",
-                        "width":"*"
+                        "width":"auto"
                     }
                 ]
             },

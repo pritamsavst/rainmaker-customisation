@@ -1393,6 +1393,561 @@
           {
             "stack": [
               {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{SITE_REPORT_DETAILS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
+                          [
+                            {
+                              "text":"{{PARTICULARS_OF_HOUSE_OR_SHOP_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{HOUSE_AREA_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{OWNERSHIP_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{POSSESSION_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{particularsOfHouse}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{houseArea}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{ownership}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{possession}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{MODE_OF_OWNERSHIP_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{HEIGHT_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{CANTILEVER_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{NUMBER_OF_FLOORS_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{modeOfOwnership}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{height}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{cantilever}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{noOfFloors}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{ENCROACHMENT_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{VIOLATION_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{DIMENSION_OF_BUILDING_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{AREA_PLACEHOLDER}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{encroachment}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{violation}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{dimensionOfBuilding}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{area}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{EXCESS_AREA_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{IS_COMMERCIAL_ACTIVITY_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{COMMERCIAL_ACTIVITY_AREA_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{DAIRY_OR_KEEPING_CATTLE_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{excessArea}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{isCommercialActivity}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{commercialActivityArea}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{runningDairy}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{DEVELOPMENT_CHARGES_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{COMPOSITION_FEES_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{COMPOSITION_FEES_UNAUTHORIZED_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{CONVERSION_CHARGES_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{developmentCharges}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{compositionFees}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{compositionFeeUnauthorized}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{conversionCharges}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{TOTAL_CHARGES_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"{{DATE_OF_INSPECTION_LABEL}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{totalChanges}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"{{dateOfInspection}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ]
+                         
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
             "style": "noc-table2",
             "table": {
               "widths": [

@@ -223,10 +223,14 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. No. /MCC SDE (B)",
+                        "text": "Endst. No. /MCC SDE (B)/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
+                    },
+                    {
+                      "text": "",
+                      "width":"*"
                     },
                     {
                         "text": "Dated: ___________",

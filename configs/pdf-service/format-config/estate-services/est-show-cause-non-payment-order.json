@@ -551,12 +551,18 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/{{year}}/11801",
+                        "text": "Endst. No. MC/Estate/{{year}}/11801/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
-                        "bold":true
+                        "bold":true,
+                        "width":"auto"
                     },
                     {
+                        "text":"",
+                        "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated: ________",
                         "style": "pdfContent",
                         "alignment": "right",
