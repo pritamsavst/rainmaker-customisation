@@ -17,5 +17,5 @@ VALUES('c0b628b9-8448-4e5d-82c9-656679dfc1a4','en_IN', 'DASHBOARD_WF_NAME_TITLE'
  ('7a7a0d4b-337f-4d7b-824f-4b3c2fe52101','en_IN', 'DASHBOARD_HOME_HEADER','Dashboard','ch','rainmaker-dashboard', '94'),
  ('b5a8688c-ad71-425e-b4ee-c9ced971c545','en_IN', 'PublicRelation_dashboard_1','Public Relation Dashboard','ch','rainmaker-dashboard', '94'),
  ('99e1bc17-b95d-4bab-b2ab-5a369344508b','en_IN', 'TradeLicense_dashboard_1','Trade License Dashboard','ch','rainmaker-dashboard', '94'),
-('9eb2161c-889a-4566-bd35-93a9250464c2','en_IN', 'WNS_dashboard_1','Water And Sewerage Dashboard','ch','rainmaker-dashboard', '94')
+('9eb2161c-889a-4566-bd35-93a9250464c2','en_IN', 'WNS_dashboard_1','Water And Sewerage Dashboard','ch','rainmaker-dashboard', '94'),
 ('8cb9f402-405d-4c84-904b-ec6d6acbe876','en_IN', 'Work_dashboard_1','Work Management Dashboard','ch','rainmaker-dashboard', '94');
