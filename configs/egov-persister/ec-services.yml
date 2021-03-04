@@ -792,3 +792,83 @@ serviceMaps:
          -  jsonPath: $.RequestBody.createdBy
          -  jsonPath: $.RequestBody.createdTime
             type: LONG
+
+ - version: 1.0
+   description: Update payment Data
+   fromTopic: ec-services-update-payemnt-emp
+   isTransaction: true
+   queryMaps:
+      -  query: UPDATE public.egec_payment SET  payment_mode=?,payment_gateway=?, transaction_id=?,pg_status=?,payment_status=?,last_modified_by=?, last_modified_time=?  WHERE challan_uuid in (select challan_uuid from egec_challan_master ecm where challan_id = ?);
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.paymentMode
+         -  jsonPath: $.RequestBody.paymentGateway
+         -  jsonPath: $.RequestBody.transactionId
+         -  jsonPath: $.RequestBody.pgStatus
+         -  jsonPath: $.RequestBody.paymentStatus
+         -  jsonPath: $.RequestBody.lastModifiedBy
+         -  jsonPath: $.RequestBody.lastModifiedTime
+         -  jsonPath: $.RequestBody.challanId
+         
+ - version: 1.0
+   description: Insert Delete challan data
+   fromTopic: ec-services-challan-delete-bckup
+   isTransaction: true
+   queryMaps:
+      -  query: INSERT INTO public.egec_delete_challan_bckup(  challan_id, eg_wf_processinstance_v2, egec_document, egec_store_item_register,  egec_payment, egec_challan_detail, egec_challan_master, egec_violation_detail,  egec_violation_master)  VALUES (?, ?, ?, ?,  ?, ?, ?, ?, ?); 
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId
+         -  jsonPath: $.RequestBody.egWfProcessinstanceV2
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.RequestBody.egecDocument
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.RequestBody.egecStoreItemRegister
+            type: JSON
+            dbType: JSONB   
+         -  jsonPath: $.RequestBody.egecPayment
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.RequestBody.egecChallanDetail
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.RequestBody.egecChallanMaster
+            type: JSON
+            dbType: JSONB  
+         -  jsonPath: $.RequestBody.egecViolationDetail
+            type: JSON
+            dbType: JSONB
+         -  jsonPath: $.RequestBody.egecViolationMaster
+            type: JSON
+            dbType: JSONB      
+      -  query: delete from eg_wf_processinstance_v2 ewpv where businessid in ( select challan_uuid from egec_challan_master ecm where challan_id in (?) union select challan_id from egec_challan_master ecm where challan_id in (?) ); 
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId
+         -  jsonPath: $.RequestBody.challanId
+      -  query: delete from egec_document where challan_uuid in (select challan_uuid from egec_challan_master ecm where challan_id in ( ?));  
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId      
+      -  query: delete from egec_store_item_register where challan_uuid in (select challan_uuid from egec_challan_master ecm where challan_id in ( ?));   
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId        
+      -  query: delete from public.egec_payment ep where ep.challan_uuid in (select challan_uuid from egec_challan_master ecm where challan_id in (?));    
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId        
+      -  query: delete from public.egec_challan_detail where challan_uuid in (select challan_uuid from egec_challan_master ecm where challan_id in (?));     
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId        
+      -  query: delete from egec_challan_master ecm where challan_id in ( ?);     
+         basePath: $.RequestBody
+         jsonMaps:
+         -  jsonPath: $.RequestBody.challanId   
+      -  query: delete from egec_violation_detail evd where violation_uuid in (select violation_uuid from egec_violation_master evd where not exists (select 1 from egec_challan_master ecm where ecm.violation_uuid =evd.violation_uuid ));   
+         basePath: $.RequestBody
+      -  query: delete from egec_violation_master evd where not exists (select 1 from egec_challan_master ecm where ecm.violation_uuid =evd.violation_uuid );  
+         basePath: $.RequestBody                          
