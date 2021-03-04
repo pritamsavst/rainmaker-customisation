@@ -843,9 +843,10 @@ serviceMaps:
          -  jsonPath: $.RequestBody.egecViolationMaster
             type: JSON
             dbType: JSONB      
-      -  query: delete from eg_wf_processinstance_v2 ewpv where businessid in ( select challan_uuid from egec_challan_master ecm where challan_id in (?) union select challan_id from egec_challan_master ecm where challan_id in ( 'MCC-EC-002623') ); 
+      -  query: delete from eg_wf_processinstance_v2 ewpv where businessid in ( select challan_uuid from egec_challan_master ecm where challan_id in (?) union select challan_id from egec_challan_master ecm where challan_id in (?) ); 
          basePath: $.RequestBody
          jsonMaps:
+         -  jsonPath: $.RequestBody.challanId
          -  jsonPath: $.RequestBody.challanId
       -  query: delete from egec_document where challan_uuid in (select challan_uuid from egec_challan_master ecm where challan_id in ( ?));  
          basePath: $.RequestBody
