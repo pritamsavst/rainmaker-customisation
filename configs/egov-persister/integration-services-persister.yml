@@ -160,8 +160,8 @@ serviceMaps:
       fromTopic: integration-services-save-eofficeData
       isTransaction: true
       queryMaps:
-      -  query: INSERT INTO public.employee_post_detail_map(uuid, employee_id,employee_code, post_detail_id, post,employee_name, employee_designation,employee_email, is_active, created_by, created_time, last_modified_by,last_modified_time)     VALUES (?, ?,?,?, ?, ?, ?,?, ?, ?, ?, ?,?)
-                 ON CONFLICT (employee_code,post_detail_id) DO UPDATE set post=? ,employee_name=?, employee_designation=?, employee_email=?,last_modified_by=?, last_modified_time=? ;        
+      -  query: INSERT INTO public.employee_post_detail_map(uuid, employee_id,employee_code, post_detail_id, post,employee_name, employee_designation,employee_email, is_active, created_by, created_time, last_modified_by,last_modified_time,org_unit_id)     VALUES (?, ?,?,?, ?, ?, ?,?, ?, ?, ?, ?,?,?)
+                 ON CONFLICT (employee_code,post_detail_id) DO UPDATE set post=? ,employee_name=?, employee_designation=?, employee_email=?,last_modified_by=?, last_modified_time=? ,org_unit_id=?;        
          basePath: $.employeePostDetailMap
          jsonMaps:
          -  jsonPath: $.employeePostDetailMap.uuid
@@ -177,9 +177,11 @@ serviceMaps:
          -  jsonPath: $.employeePostDetailMap.auditDetails.createdTime
          -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedBy
          -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedTime 
+         -  jsonPath: $.employeePostDetailMap.orgUnitId
          -  jsonPath: $.employeePostDetailMap.post   
          -  jsonPath: $.employeePostDetailMap.employeeName
          -  jsonPath: $.employeePostDetailMap.employeeDesignation
          -  jsonPath: $.employeePostDetailMap.employeeEmail   
          -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedBy
-         -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedTime     
+         -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedTime
+         -  jsonPath: $.employeePostDetailMap.orgUnitId     
