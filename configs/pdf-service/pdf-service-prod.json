@@ -99,7 +99,8 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/pacc-payment-receipt-new.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/room-booking-app-form.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/room-payment-receipt-emp.json",
-      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/room-payment-receipt.json"
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/room-payment-receipt.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/bk-oswmcc-newloc-app-form.json"
    ],
    "formatconfig":[
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/firenoc-receipt.json",
@@ -202,6 +203,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/pacc-payment-receipt-new.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/room-booking-app-form.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/room-payment-receipt-emp.json",
-      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/room-payment-receipt.json"
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/room-payment-receipt.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/bk-oswmcc-newloc-app-form.json"
    ]
 }
