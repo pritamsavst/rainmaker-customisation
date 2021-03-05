@@ -1,10 +1,10 @@
 {
-    "key": "oswmcc-booking-app-form",
+    "key": "bk-oswmcc-newloc-app-form",
     "DataConfigs": {
         "serviceName": "rainmaker-bk",
         "version": "1.0.0",
         "baseKeyPath": "$.BookingInfo.*",
-        "entityIdPath": "$.bookingDetail.applicationNumber",
+        "entityIdPath": "$.locationDetail.applicationNumber",
         "isCommonTableBorderRequired": true,
         "mappings": [
             {
@@ -16,12 +16,6 @@
                                 "variable": "applicantName",
                                 "value": {
                                     "path": "$.applicantDetail.name"
-                                }
-                            },
-                            {
-                                "variable": "applicationStatus",
-                                "value": {
-                                    "path": "$.bookingDetail.status"
                                 }
                             },
                             {
@@ -37,75 +31,39 @@
                                 }
                             },
                             {
-                                "variable": "applicantSector",
-                                "value": {
-                                    "path": "$.applicantDetail.sector"
-                                }
-                            },
-                            {
-                                "variable": "applicantFather",
-                                "value": {
-                                    "path": "$.applicantDetail.fatherName"
-                                }
-                            },
-                            {
                                 "variable": "applicantEmail",
                                 "value": {
                                     "path": "$.applicantDetail.email"
                                 }
                             },
                             {
-                                "variable": "applicantCity",
-                                "value": {
-                                    "path": "$.applicantDetail.permanentCity"
-                                }
-                            },
-                            {
                                 "variable": "bookingNo",
                                 "value": {
-                                    "path": "$.bookingDetail.applicationNumber"
+                                    "path": "$.locationDetail.applicationNumber"
                                 }
                             },
                             {
-                                "variable": "bookingVenue",
+                                "variable": "locationLocality",
                                 "value": {
-                                    "path": "$.bookingDetail.venueName"
+                                    "path": "$.locationDetail.locality"
                                 }
                             },
                             {
-                                "variable": "sector",
+                                "variable": "locationAddress",
                                 "value": {
-                                    "path": "$.bookingDetail.sector"
+                                    "path": "$.locationDetail.address"
                                 }
                             },
                             {
-                                "variable": "bookingPeriod",
+                                "variable": "locationLandmark",
                                 "value": {
-                                    "path": "$.bookingDetail.bookingPeriod"
+                                    "path": "$.locationDetail.landmark"
                                 }
                             },
                             {
-                                "variable": "bookingPurpose",
+                                "variable": "locationAreaReq",
                                 "value": {
-                                    "path": "$.bookingDetail.bookingPurpose"
-                                }
-                            },
-                            {
-                                "variable": "baseCharge",
-                                "value": {
-                                    "path": "$.feeDetail.baseCharge"
-                                }
-                            },
-                            {
-                                "variable": "taxes",
-                                "value": {
-                                    "path": "$.feeDetail.taxes"
-                                }
-                            },
-                            {
-                                "variable": "totalAmount",
-                                "value": {
-                                    "path": "$.feeDetail.totalAmount"
+                                    "path": "$.locationDetail.areaReq"
                                 }
                             },
                             {

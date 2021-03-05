@@ -1,5 +1,5 @@
 {
-    "key": "oswmcc-booking-app-form",
+    "key": "bk-oswmcc-newloc-app-form",
     "config": {
         "content": [
             {
@@ -24,16 +24,6 @@
                 ]
             },
             {
-                "text": "Open Space within MCC jurisdiction",
-                "style": "pdfsubheader",
-                "margin": [
-                    0,
-                    20,
-                    0,
-                    0
-                ]
-            },
-            {
                 "text": "Application No. {{bookingNo}}",
                 "style": "pdfsubheader",
                 "margin": [
@@ -47,17 +37,16 @@
                 "style": "table-gap",
                 "table": {
                     "widths": [
-                        180,
-                        150,
-                        150
+                        245,
+                        245
                     ],
                     "body": [
                         [
                             {
-                                "text": "Applicant Details",
+                                "text": "New Location Details",
                                 "style": "app-table-value",
                                 "alignment": "left",
-                                "colSpan": 3,
+                                "colSpan": 2,
                                 "border": [
                                     true,
                                     true,
@@ -65,7 +54,128 @@
                                     false
                                 ]
                             },
-                            {},
+                            {}
+                        ],
+                        [
+                            {
+                                "text": "Locality",
+                                "style": "app-table-label",
+                                "alignment": "left",
+                                "border": [
+                                    true,
+                                    false,
+                                    false,
+                                    false
+                                ]
+                            },
+                            {
+                                "text": "Address",
+                                "style": "app-table-label",
+                                "alignment": "left",
+                                "border": [
+                                    false,
+                                    false,
+                                    true,
+                                    false
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "text": "{{locationLocality}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
+                                "border": [
+                                    true,
+                                    false,
+                                    false,
+                                    false
+                                ]
+                            },
+                            {
+                                "text": "{{locationAddress}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
+                                "border": [
+                                    false,
+                                    false,
+                                    true,
+                                    false
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "text": "Landmark",
+                                "style": "app-table-label",
+                                "alignment": "left",
+                                "border": [
+                                    true,
+                                    false,
+                                    false,
+                                    false
+                                ]
+                            },
+                            {
+                                "text": "Area Requirment in Feet",
+                                "style": "app-table-label",
+                                "alignment": "left",
+                                "border": [
+                                    false,
+                                    false,
+                                    true,
+                                    false
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "text": "{{locationLandmark}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
+                                "border": [
+                                    true,
+                                    false,
+                                    false,
+                                    true
+                                ]
+                            },
+                            {
+                                "text": "{{locationAreaReq}}",
+                                "style": "app-table-value",
+                                "alignment": "left",
+                                "border": [
+                                    false,
+                                    false,
+                                    true,
+                                    true
+                                ]
+                            }
+                        ]
+                    ]
+                }
+            },
+            {
+                "style": "table-gap",
+                "table": {
+                    "widths": [
+                        245,
+                        245
+                    ],
+                    "body": [
+                        [
+                            {
+                                "text": "Applicant Details",
+                                "style": "app-table-value",
+                                "alignment": "left",
+                                "colSpan": 2,
+                                "border": [
+                                    true,
+                                    true,
+                                    true,
+                                    false
+                                ]
+                            },
                             {}
                         ],
                         [
@@ -82,17 +192,6 @@
                             },
                             {
                                 "text": "Applicant Contact",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "Father/ Husbands Name",
                                 "style": "app-table-label",
                                 "alignment": "left",
                                 "border": [
@@ -122,17 +221,6 @@
                                 "border": [
                                     false,
                                     false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "{{applicantFather}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
                                     true,
                                     false
                                 ]
@@ -157,17 +245,6 @@
                                 "border": [
                                     false,
                                     false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "City",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
                                     true,
                                     false
                                 ]
@@ -187,265 +264,6 @@
                             },
                             {
                                 "text": "{{applicantAddress}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    true
-                                ]
-                            },
-                            {
-                                "text": "{{applicantCity}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    true,
-                                    true
-                                ]
-                            }
-                        ]
-                    ]
-                }
-            },
-            {
-                "style": "table-gap",
-                "table": {
-                    "widths": [
-                        180,
-                        150,
-                        150
-                    ],
-                    "body": [
-                        [
-                            {
-                                "text": "Application Details",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "colSpan": 3,
-                                "border": [
-                                    true,
-                                    true,
-                                    true,
-                                    false
-                                ]
-                            },
-                            {},
-                            {}
-                        ],
-                        [
-                            {
-                                "text": "Venue",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    true,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "Locality",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "Status",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    true,
-                                    false
-                                ]
-                            }
-                        ],
-                        [
-                            {
-                                "text": "{{bookingVenue}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    true,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "{{sector}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "{{applicationStatus}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    true,
-                                    false
-                                ]
-                            }
-                        ],
-                        [
-                            {
-                                "text": "Booking Period",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    true,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "Booking Purpose",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "colSpan": 2,
-                                "border": [
-                                    false,
-                                    false,
-                                    true,
-                                    false
-                                ]
-                            },
-                            {}
-                        ],
-                        [
-                            {
-                                "text": "{{bookingPeriod}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    true,
-                                    false,
-                                    false,
-                                    true
-                                ]
-                            },
-                            {
-                                "text": "{{bookingPurpose}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "colSpan": 2,
-                                "border": [
-                                    false,
-                                    false,
-                                    true,
-                                    true
-                                ]
-                            },
-                            {}
-                        ]
-                    ]
-                }
-            },
-            {
-                "style": "table-gap",
-                "table": {
-                    "widths": [
-                        180,
-                        150,
-                        150
-                    ],
-                    "body": [
-                        [
-                            {
-                                "text": "Fee Details",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "colSpan": 3,
-                                "border": [
-                                    true,
-                                    true,
-                                    true,
-                                    false
-                                ]
-                            },
-                            {},
-                            {}
-                        ],
-                        [
-                            {
-                                "text": "Base Charges",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    true,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "Taxes",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            },
-                            {
-                                "text": "Total Amount (Rs.)",
-                                "style": "app-table-label",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    true,
-                                    false
-                                ]
-                            }
-                        ],
-                        [
-                            {
-                                "text": "{{baseCharge}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    true,
-                                    false,
-                                    false,
-                                    true
-                                ]
-                            },
-                            {
-                                "text": "{{taxes}}",
-                                "style": "app-table-value",
-                                "alignment": "left",
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    true
-                                ]
-                            },
-                            {
-                                "text": "{{totalAmount}}",
                                 "style": "app-table-value",
                                 "alignment": "left",
                                 "border": [
