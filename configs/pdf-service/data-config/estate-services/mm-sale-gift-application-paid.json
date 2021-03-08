@@ -1063,6 +1063,43 @@
                         "value": {
                             "path": "$.Applications[0].applicationDetails.siteReport.dateOfInspection"
                         }
+                    },
+                    {
+                        "variable":"HARD_COPY_DATE",
+                        "value": {
+                            "path": "HARD_COPY_DATE"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"WORKFLOW_DOCUMENTS_HEADER",
+                        "value": {
+                            "path": "WORKFLOW_DOCUMENTS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "hardcopyReceivedDate",
+                        "value": {
+                            "path": "$.Applications[0].hardcopyReceivedDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "wfDocuments",
+                        "value": {
+                            "path": "$.Applications[0].wfDocuments.*"
+                        }
                     }
                 ]
             },
