@@ -1812,6 +1812,141 @@
           {
             "stack": [
               {
+                "style": "noc-table2",
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text":"{{HARD_COPY_DATE}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                    {
+                       
+                        "table": {
+                            "widths": [
+                                "30%",
+                                "30%",
+                                "20%",
+                                "20%"
+                                 ],
+                           "body": [
+                          [
+                            {
+                              "text":"{{HARD_COPY_DATE}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                              "style": "receipt-table-value-cont"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table-value-cont"
+                            }
+                          ],
+                          [
+                            {
+                              "text":"{{hardcopyReceivedDate}}",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            },
+                            {
+                              "text":"",
+                              "border":[
+                                false,
+                                false,
+                                false,
+                                false
+                              ],
+                               "style": "receipt-table2"
+                            }
+                          ]
+                         
+                           ]
+                        },
+                        "border":[
+                          true,
+                          false,
+                          true,
+                          true
+                        ]
+                      }
+                ]
+                  ],
+                  "unbreakable": true
+                },
+                "layout": {}
+              }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
             "style": "noc-table2",
             "table": {
               "widths": [
@@ -1836,6 +1971,51 @@
                        "widths":["25%", "25%", "25%", "25%"],
                       "body": [
                        "{{#documents_array}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/documents_array}}"
+                      ]
+                  },
+                  "border":[
+                    true,
+                    false,
+                    true,
+                    true
+                    ]
+                 }
+                    ]
+               ],
+               "unbreakable": true
+            },
+            "layout": {}
+          }
+            ],
+            "unbreakable": true
+          },
+          {
+            "stack": [
+              {
+            "style": "noc-table2",
+            "table": {
+              "widths": [
+                "*"
+              ],
+              "body": [
+                [
+                      {
+                        "text":"{{WORKFLOW_DOCUMENTS_HEADER}}",
+                        "border":[
+                          true,
+                          true,
+                          true,
+                          false
+                        ],
+                         "style": "receipt-table-value"
+                      }
+                ],
+                [
+                   {
+                      "table": {
+                       "widths":["25%", "25%", "25%", "25%"],
+                      "body": [
+                       "{{#wfDocuments}}[{{#.}}{\"stack\":[{\"text\":\"{{title}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table-value-cont\"},{\"text\":\"{{name}}\",\"border\":[false,false,false,false],\"style\": \"receipt-table2\"}],\"border\":[false,false,false,false]},{{/.}}]{{/wfDocuments}}"
                       ]
                   },
                   "border":[

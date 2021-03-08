@@ -256,7 +256,7 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/{{year}}/",
+                        "text": "Endst. No. ___________ MC/Estate/{{year}}/",
                         "style": "pdfContent",
                         "alignment": "left"
                     },

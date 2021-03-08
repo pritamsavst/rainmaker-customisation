@@ -291,7 +291,7 @@
                 "margin":[0,20,10,10],
                 "columns": [{
                         "width":"auto",
-                        "text": "Endst. No. MC/Estate/{{year}}/{{applicationNumber}}",
+                        "text": "Endst. No. ___________ MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true

@@ -223,7 +223,7 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. No. /MCC SDE (B)/{{applicationNumber}}",
+                        "text": "Endst. No. ___________/MCC SDE (B)/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true

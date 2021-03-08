@@ -63,20 +63,22 @@
                       {
                         "variable": "charges_due_label",
                         "value": {
-                            "path": "$.feeEstimate[0].name.labelKey"
+                            "path": "APPLICATION_FEE"
                         },
                         "localisation": {
                             "module": "rainmaker-es",
+                            "prefix": "ES",
                             "required": true
                           }
                       },
                       {
                         "variable": "gstLabel",
                         "value": {
-                          "path": "$.feeEstimate[1].name.labelKey"
+                          "path": "APPLICATION_TAX"
                         },
                         "localisation": {
                             "module": "rainmaker-es",
+                            "prefix": "ES",
                             "required": true
                           }
           
@@ -900,6 +902,43 @@
                         "variable": "dateOfInspection",
                         "value": {
                             "path": "$.Applications[0].applicationDetails.siteReport.dateOfInspection"
+                        }
+                    },
+                    {
+                        "variable":"HARD_COPY_DATE",
+                        "value": {
+                            "path": "HARD_COPY_DATE"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"WORKFLOW_DOCUMENTS_HEADER",
+                        "value": {
+                            "path": "WORKFLOW_DOCUMENTS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "hardcopyReceivedDate",
+                        "value": {
+                            "path": "$.Applications[0].hardcopyReceivedDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "wfDocuments",
+                        "value": {
+                            "path": "$.Applications[0].wfDocuments.*"
                         }
                     }
                 ]
