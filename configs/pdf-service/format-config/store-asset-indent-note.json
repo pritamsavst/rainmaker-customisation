@@ -1,311 +1,366 @@
 {
-    "key": "store-asset-indent-note",
-    "config": {
-	    "pageSize": "A4", 
-	    "pageOrientation": "landscape",
-		"defaultStyle": {
-            "font": "Cambay"
-        },
-        "content": [
-			{
-			  "text": "MUNICIPAL CORPORATION CHANDIGARH",
-			  "alignment": "center",
-			  "color": "#484848",
-			  "fontSize": 12,
-			  "bold": true,
-			  "margin": [
-				0,
-				1,
-				0,
-				0
-			  ]
-			},
-			{
-			  "text": "New Deluxe Building, Sector 17, Chandigarh",
-			  "alignment": "center",
-			  "color": "#484848",
-			  "fontSize": 11,
-			  "bold": false,
-			  "margin": [
-				0,
-				2,
-				0,
-				0
-			  ]
-			},
-			{
-			  "text": "Material Indent Note",
-			  "alignment": "center",
-			  "color": "#484848",
-			  "fontSize": 12,
-			  "bold": true,
-			  "margin": [
-				0,
-				3,
-				0,
-				0
-			  ]
-			},
-			{
-                "style": "store-staus-table",
-                "table": {
-                    "widths": [
-                        "100%"
-                    ],
-                    "body": [
-                        [
-                            {
-								"style": "store-table-cols",
-                                "table": {
-									"headerRows": 1,
-                                    "widths": [
-                                        "20%",
-                                        "30%",
-                                        "20%",
-                                        "30%"
-                                    ],
-									"heights":["2%"],
-                                    "body":								
-										[		
-										   	[ "{ \"text\":\"Indent Number : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentNumber}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Indent Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
-											[ "{ \"text\":\"Indenting Store Name : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{storeName}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Indent Status : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentStatus}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
-											[ "{ \"text\":\"Indent Purpose : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentPurpose}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Inventory Type : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{inventoryType}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],
-											[ "{ \"text\":\"Narration : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{narration}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}" ],
-											[ "{ \"text\":\"Expected Delivery Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{deliveryDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ],											
-											[ "{ \"text\":\"Created By Employee : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{createdBy}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Created By Employee Designation : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}" ]
-										]								
-                                },
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            }
-                        ]
+  "key": "store-asset-indent-note",
+  "config": {
+    "pageSize": "A4",
+    "pageOrientation": "landscape",
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "content": [
+      {
+        "table": {
+          "widths": [
+            80,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "image": "{{ulbLogo}}",
+                "width": 80,
+                "margin": [
+                  10,
+                  0,
+                  0,
+                  0
+                ]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "MUNICIPAL CORPORATION CHANDIGARH",
+                    "alignment": "center",
+                    "color": "#484848",
+                    "fontSize": 12,
+                    "bold": true,
+                    "margin": [
+                      -70,
+                      1,
+                      0,
+                      0
                     ]
-                },
-                "layout": {}
-            },
-			{
-			  "text": "Material Indent Details : ",
-			  "alignment": "left",
-			  "color": "#484848",
-			  "fontSize": 10,
-			  "bold": true,
-			  "margin": [
-				9,
-				2,
-				15,
-				0
-			  ]
-			},
-            {
-                "style": "store-material-table",
-                "table": {
-                    "widths": [
-                        "100%"
-                    ],
-                    "body": [
-                        [
-                            {
-                                "table": {
-									"headerRows": 1,
-                                    "widths": [
-                                        "5%",
-                                        "15%",
-                                        "16%",
-                                        "16%",
-                                        "16%",
-                                        "16%",
-                                        "16%"
-                                    ],									
-                                    "body":								
-										[
-										   [ "{ \"text\":\"Sr.No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Material Name\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Material Description\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"UOM Name\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Indent Purpose\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Work Details/Remark\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Required Quantity\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
-										   "{{#variable1}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{materialName}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{materialDescription}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{uomName}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{indentPurpose}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{workDetailsRemark}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{requiredQuantity}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
-										]								
-                                },
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            }
-                        ]
+                  },
+                  {
+                    "text": "New Deluxe Building, Sector 17, Chandigarh",
+                    "alignment": "center",
+                    "color": "#484848",
+                    "fontSize": 11,
+                    "bold": false,
+                    "margin": [
+                      -70,
+                      2,
+                      0,
+                      0
                     ]
-                },
-                "layout": {}
-            },
-			{
-			  "text": "Review/Approval Information : ",
-			  "alignment": "left",
-			  "color": "#484848",
-			  "fontSize": 10,
-			  "bold": true,
-			  "margin": [
-				9,
-				10,
-				10,
-				0
-			  ]
-			},
-			{
-                "style": "store-staus-table",
-                "table": {
-                    "widths": [
-                        "100%"
-                    ],
-                    "body": [
-                        [
-                            {
-                                "table": {
-									"headerRows": 1,
-                                    "widths": [
-                                        "5%",
-                                        "15%",
-                                        "20%",
-                                        "20%",
-                                        "20%",
-										"20%"
-                                    ],
-                                    "body":								
-										[		
-										   [ "{ \"text\":\"Sr. No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"},{ \"text\":\"Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Updated By\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Status\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Current Assignee\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Comments\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}" ],
-										   "{{#variable2}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"},{ \"text\":\"{{date}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{updatedBy}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{status}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{currentAssignee}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{comments}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable2}}"
-										]								
-                                },
-                                "border": [
-                                    false,
-                                    false,
-                                    false,
-                                    false
-                                ]
-                            }
-                        ]
+                  },
+                  {
+                    "text": "Material Indent Note",
+                    "alignment": "center",
+                    "color": "#484848",
+                    "fontSize": 12,
+                    "bold": true,
+                    "margin": [
+                      -70,
+                      3,
+                      0,
+                      0
                     ]
-                },
-                "layout": {}
-            }
-        ],
-        "styles": {
-            "tm-head": {
-                "margin": [
-                    -39,
-                    -38,
-                    -38,
-                    0
-                ]
-            },
-            "tm-table": {
-				"fontFamily": "Cambay",
-                "fontSize": 8,
-                "color": "#484848",
-                "margin": [
-                    -25,
-                    18,
-                    -8,
-                    10
-                ]
-            },
-            "header": {
-                "color": "#000000",
-                "textTransform": "uppercase",
-                "bold": true,
-                "fontFamily": "Cambay",
-				"fontSize": 8,
-                "fontWeight": 500,
-                "margin": [
-                    -25,
-                    15,
-                    0,
-                    -10
-                ]
-            },
-			"tm-cols-table": {
-				"fontFamily": "Cambay",
-                "color": "#484848",   
-				"bold": true,			
-                "fontSize": 10,
-				"alignment": "left",
-                "margin": [
-                    3,
-                    0,
-                    0,
-                    10
-                ]
-            },
-            "tm-sub-table-value": {
-				"fontFamily": "Cambay",
-                "color": "#484848",
-                "bold": false,
-                "fontSize": 8,
-                "fontWeight": 200,
-                "margin": [
-                    3,
-                    0,
-                    0,
-                    10
-                ]
-            },
-            "tm-sub-table": {
-                "color": "#484848",
-				"backgroundColor":"grey",
-                "bold": true,
-				"fontFamily": "Cambay",
-                "fontSize": 10,
-                "fontWeight": 200,
-                "margin": [
-                    3,
-                    0,
-                    0,
-                    10
-                ]
-            },
-			"store-staus-table": {
-				"fontFamily": "Cambay",
-                "fontSize": 10,
-                "margin": [
-                    0,
-                    0,
-                    0,
-                    0
-                ]
-            },
-			"store-table-cols": {
-                "color": "#484848",
-				"fontFamily": "Cambay",
-                "fontSize": 10,				
-                "margin": [
-                    0,
-                    0,
-                    0,
-                    0
-                ]
-            },
-			"store-material-table": {
-                "color": "#484848",
-				"fontFamily": "Cambay",
-                "fontSize": 10,
-                "margin": [
-                    0,
-                    0,
-                    0,
-                    0
-                ]
-            },
-            "qr-image": {
-                "margin": [
-                    -40,
-                    -1,
-                    -3,
-                    0
+                  }
                 ],
-                "color": "#484848",
-                "alignment": "right",
-                "backgroundColor": "#dddddd"
-            }
-        }
+                "alignment": "center",
+                "margin": [
+                  -20,
+                  0,
+                  0,
+                  0
+                ]
+              }
+            ]
+          ]
+        },
+        "margin": [
+          0,
+          -25,
+          0,
+          0
+        ],
+        "layout": "noBorders"
+      },
+      {
+        "style": "store-staus-table",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "style": "store-table-cols",
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                    "20%",
+                    "30%",
+                    "20%",
+                    "30%"
+                  ],
+                  "heights": [
+                    "2%"
+                  ],
+                  "body": [
+                    [
+                      "{ \"text\":\"Indent Number : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentNumber}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Indent Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}"
+                    ],
+                    [
+                      "{ \"text\":\"Indenting Store Name : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{storeName}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Indent Status : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentStatus}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}"
+                    ],
+                    [
+                      "{ \"text\":\"Indent Purpose : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{indentPurpose}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Inventory Type : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{inventoryType}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}"
+                    ],
+                    [
+                      "{ \"text\":\"Narration : \", \"border\":[ false, false, false, false ] , \"style\": \"tm-cols-table\"}, { \"text\":\"{{narration}}\", \"border\":[ false, false, false, false ] ,\"colSpan\":3, \"style\": \"tm-cols-table\"}"
+                    ],
+                    [
+                      "{ \"text\":\"Expected Delivery Date : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{deliveryDate}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}"
+                    ],
+                    [
+                      "{ \"text\":\"Created By Employee : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{createdBy}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"Created By Employee Designation : \", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}, { \"text\":\"{{designation}}\", \"border\":[ false, false, false, false ] ,\"style\": \"tm-cols-table\"}"
+                    ]
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+      {
+        "text": "Material Indent Details : ",
+        "alignment": "left",
+        "color": "#484848",
+        "fontSize": 10,
+        "bold": true,
+        "margin": [
+          9,
+          2,
+          15,
+          0
+        ]
+      },
+      {
+        "style": "store-material-table",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                    "5%",
+                    "15%",
+                    "16%",
+                    "16%",
+                    "16%",
+                    "16%",
+                    "16%"
+                  ],
+                  "body": [
+                    [
+                      "{ \"text\":\"Sr.No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Material Name\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Material Description\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"UOM Name\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Indent Purpose\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Work Details/Remark\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Required Quantity\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}"
+                    ],
+                    "{{#variable1}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{materialName}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{materialDescription}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{uomName}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{indentPurpose}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{workDetailsRemark}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{requiredQuantity}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable1}}"
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      },
+      {
+        "text": "Review/Approval Information : ",
+        "alignment": "left",
+        "color": "#484848",
+        "fontSize": 10,
+        "bold": true,
+        "margin": [
+          9,
+          10,
+          10,
+          0
+        ]
+      },
+      {
+        "style": "store-staus-table",
+        "table": {
+          "widths": [
+            "100%"
+          ],
+          "body": [
+            [
+              {
+                "table": {
+                  "headerRows": 1,
+                  "widths": [
+                    "5%",
+                    "15%",
+                    "20%",
+                    "20%",
+                    "20%",
+                    "20%"
+                  ],
+                  "body": [
+                    [
+                      "{ \"text\":\"Sr. No.\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"},{ \"text\":\"Date\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Updated By\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table\" }, { \"text\":\"Status\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Current Assignee\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}, { \"text\":\"Comments\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table\"}"
+                    ],
+                    "{{#variable2}}[ \"{ \"text\":\"{{srNo}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"},{ \"text\":\"{{date}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{updatedBy}}\", \"border\":[ true, true, true, true ], \"style\": \"tm-sub-table-value\" }, { \"text\":\"{{status}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{currentAssignee}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}, { \"text\":\"{{comments}}\", \"border\":[ true, true, true, true ] ,\"style\": \"tm-sub-table-value\"}\" ]{{/variable2}}"
+                  ]
+                },
+                "border": [
+                  false,
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": {}
+      }
+    ],
+    "styles": {
+      "tm-head": {
+        "margin": [
+          -39,
+          -38,
+          -38,
+          0
+        ]
+      },
+      "tm-table": {
+        "fontFamily": "Cambay",
+        "fontSize": 8,
+        "color": "#484848",
+        "margin": [
+          -25,
+          18,
+          -8,
+          10
+        ]
+      },
+      "header": {
+        "color": "#000000",
+        "textTransform": "uppercase",
+        "bold": true,
+        "fontFamily": "Cambay",
+        "fontSize": 8,
+        "fontWeight": 500,
+        "margin": [
+          -25,
+          15,
+          0,
+          -10
+        ]
+      },
+      "tm-cols-table": {
+        "fontFamily": "Cambay",
+        "color": "#484848",
+        "bold": true,
+        "fontSize": 10,
+        "alignment": "left",
+        "margin": [
+          3,
+          0,
+          0,
+          10
+        ]
+      },
+      "tm-sub-table-value": {
+        "fontFamily": "Cambay",
+        "color": "#484848",
+        "bold": false,
+        "fontSize": 8,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+          10
+        ]
+      },
+      "tm-sub-table": {
+        "color": "#484848",
+        "backgroundColor": "grey",
+        "bold": true,
+        "fontFamily": "Cambay",
+        "fontSize": 10,
+        "fontWeight": 200,
+        "margin": [
+          3,
+          0,
+          0,
+          10
+        ]
+      },
+      "store-staus-table": {
+        "fontFamily": "Cambay",
+        "fontSize": 10,
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "store-table-cols": {
+        "color": "#484848",
+        "fontFamily": "Cambay",
+        "fontSize": 10,
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "store-material-table": {
+        "color": "#484848",
+        "fontFamily": "Cambay",
+        "fontSize": 10,
+        "margin": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "qr-image": {
+        "margin": [
+          -40,
+          -1,
+          -3,
+          0
+        ],
+        "color": "#484848",
+        "alignment": "right",
+        "backgroundColor": "#dddddd"
+      }
     }
+  }
 }
