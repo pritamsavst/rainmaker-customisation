@@ -119,7 +119,7 @@
                       {
                         "variable": "subHeader",
                         "value": {
-                          "path": "APPLY_ESTATEBRANCH_OWNERSHIPTRANSFER_REGISTEREDWILL"
+                          "path": "APPLY_ESTATEBRANCH_OWNERSHIPTRANSFER_UNREGISTEREDWILL"
                         },
                         "type": "label",
                         "localisation": {
