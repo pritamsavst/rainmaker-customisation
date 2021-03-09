@@ -155,6 +155,130 @@ serviceMaps:
        - jsonPath: $.billGeneration.*.auditDetails.createdBy 
 
        - jsonPath: $.billGeneration.*.auditDetails.createdTime
+      
+    - query: INSERT INTO public.eg_ws_monthlyBill_history(id, cccode, divsdiv, consumercode, billcycle, billgroup, subgroup, billtype, name, address, cesscharge, netamount, grossamount, surcharge, totalnetamount, totalsurcharge, totalgrossamount, fixchargecode, fixcharge, duedatecash, duedatecheque, status, billid, paymentid, paymentstatus, createdby, createdtime,fromDate,toDate ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (consumercode,billcycle) DO UPDATE SET id = ?,cccode=?, divsdiv=?, consumercode=?, billcycle=?, billgroup=?, subgroup=?, billtype=?, name=?, address=?, cesscharge=?, netamount=?, grossamount=?, surcharge=?, totalnetamount=?, totalsurcharge=?, totalgrossamount=?, fixchargecode=?, fixcharge=?, duedatecash=?, duedatecheque=?, status=?, billid=?, paymentid=?, paymentstatus=?, totalAmount_paid=?, paymentMode=?,fromDate=?,toDate=?, lastmodifiedby=?, lastmodifiedtime=?;
+      basePath: $.billGeneration.*
+      jsonMaps:
+
+       - jsonPath: $.billGeneration.*.billGenerationId
+
+       - jsonPath: $.billGeneration.*.ccCode
+
+       - jsonPath: $.billGeneration.*.divSdiv
+
+       - jsonPath: $.billGeneration.*.consumerCode
+
+       - jsonPath: $.billGeneration.*.billCycle
+
+       - jsonPath: $.billGeneration.*.billGroup
+
+       - jsonPath: $.billGeneration.*.subGroup
+
+       - jsonPath: $.billGeneration.*.billType
+
+       - jsonPath: $.billGeneration.*.name
+
+       - jsonPath: $.billGeneration.*.address
+
+       - jsonPath: $.billGeneration.*.cessCharge
+
+       - jsonPath: $.billGeneration.*.netAmount
+
+       - jsonPath: $.billGeneration.*.grossAmount
+
+       - jsonPath: $.billGeneration.*.surcharge
+
+       - jsonPath: $.billGeneration.*.totalNetAmount
+
+       - jsonPath: $.billGeneration.*.totalSurcharge
+
+       - jsonPath: $.billGeneration.*.totalGrossAmount
+
+       - jsonPath: $.billGeneration.*.fixChargeCode
+
+       - jsonPath: $.billGeneration.*.fixCharge
+
+       - jsonPath: $.billGeneration.*.dueDateCash
+
+       - jsonPath: $.billGeneration.*.dueDateCheque
+
+       - jsonPath: $.billGeneration.*.status
+
+       - jsonPath: $.billGeneration.*.billId
+       
+       - jsonPath: $.billGeneration.*.paymentId 
+
+       - jsonPath: $.billGeneration.*.paymentStatus
+       
+       - jsonPath: $.billGeneration.*.auditDetails.createdBy 
+
+       - jsonPath: $.billGeneration.*.auditDetails.createdTime 
+
+       - jsonPath: $.billGeneration.*.fromDate 
+
+       - jsonPath: $.billGeneration.*.toDate 
+
+       - jsonPath: $.billGeneration.*.billGenerationId
+
+       - jsonPath: $.billGeneration.*.ccCode
+
+       - jsonPath: $.billGeneration.*.divSdiv
+
+       - jsonPath: $.billGeneration.*.consumerCode
+
+       - jsonPath: $.billGeneration.*.billCycle
+
+       - jsonPath: $.billGeneration.*.billGroup
+
+       - jsonPath: $.billGeneration.*.subGroup
+
+       - jsonPath: $.billGeneration.*.billType
+
+       - jsonPath: $.billGeneration.*.name
+
+       - jsonPath: $.billGeneration.*.address
+
+       - jsonPath: $.billGeneration.*.cessCharge
+
+       - jsonPath: $.billGeneration.*.netAmount
+
+       - jsonPath: $.billGeneration.*.grossAmount
+
+       - jsonPath: $.billGeneration.*.surcharge
+
+       - jsonPath: $.billGeneration.*.totalNetAmount
+
+       - jsonPath: $.billGeneration.*.totalSurcharge
+
+       - jsonPath: $.billGeneration.*.totalGrossAmount
+
+       - jsonPath: $.billGeneration.*.fixChargeCode
+
+       - jsonPath: $.billGeneration.*.fixCharge
+
+       - jsonPath: $.billGeneration.*.dueDateCash
+
+       - jsonPath: $.billGeneration.*.dueDateCheque
+
+       - jsonPath: $.billGeneration.*.status
+
+       - jsonPath: $.billGeneration.*.billId
+       
+       - jsonPath: $.billGeneration.*.paymentId 
+
+       - jsonPath: $.billGeneration.*.paymentStatus 
+
+       - jsonPath: $.billGeneration.*.totalAmountPaid 
+
+       - jsonPath: $.billGeneration.*.paymentMode
+
+       - jsonPath: $.billGeneration.*.fromDate 
+
+       - jsonPath: $.billGeneration.*.toDate
+       
+       - jsonPath: $.billGeneration.*.auditDetails.createdBy 
+
+       - jsonPath: $.billGeneration.*.auditDetails.createdTime
 
 
 
@@ -185,6 +309,26 @@ serviceMaps:
    queryMaps:
 
         - query: UPDATE public.eg_ws_savebilling set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=?,receiptDate=? where id = ? ;
+          basePath: $.billGeneration
+          jsonMaps:
+
+           - jsonPath: $.billGeneration.status
+    
+           - jsonPath: $.billGeneration.billId
+    
+           - jsonPath: $.billGeneration.paymentId
+    
+           - jsonPath: $.billGeneration.paymentMode
+    
+           - jsonPath: $.billGeneration.paymentStatus
+    
+           - jsonPath: $.billGeneration.totalAmountPaid
+    
+           - jsonPath: $.billGeneration.receiptDate
+    
+           - jsonPath: $.billGeneration.billGenerationId
+
+        - query: UPDATE public.eg_ws_monthlyBill_history set status=?, billid=?, paymentid=?,paymentMode=?, paymentstatus=?,totalAmount_paid=?,receiptDate=? where id = ? ;
           basePath: $.billGeneration
           jsonMaps:
 
