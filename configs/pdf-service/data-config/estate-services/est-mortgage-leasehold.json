@@ -87,7 +87,13 @@
             "value":{
               "path":"$.year"
             }
-          }
+          },
+          {
+            "variable": "reasonForMortgage",
+            "value": {
+                "path": "$.applicationDetails.reasonForMortgage"
+            }
+        }
 
         ]
       }]
