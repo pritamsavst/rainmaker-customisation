@@ -413,6 +413,10 @@
                         "variable": "reasonForNdc",
                         "value": {
                             "path": "$.applicationDetails.reasonForNdc"
+                        },
+                        "localisation": {
+                            "required": true,
+                            "module": "rainmaker-es"
                         }
                     },
                     {
