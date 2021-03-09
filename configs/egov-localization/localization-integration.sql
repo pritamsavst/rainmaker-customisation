@@ -70,4 +70,19 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67084e','en_IN','INTIGRATION_EMP_UPDATE_INFORMATION','HRMS code update function is available only one time from UI, If Required need to raise ticket for the same','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67085e','en_IN','INTIGRATION_EDIT_DETAILS_LABEL','EDIT DETAILS','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b67086e','en_IN','INTIGRATION_EOFFICE_POST_DETAIL_NAME_HEADING','Post Detail ID','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b67087e','en_IN','INTIGRATION_EOFFICE_POST_DETAIL_DATAS_HEADING','No records found','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL);
+,('4d3b6355-1abb-4591-ac6f-2bc063b67087e','en_IN','INTIGRATION_EOFFICE_POST_DETAIL_DATAS_HEADING','No records found','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67088e','en_IN','INTIGRATION_EOFFICE_POST_DETAIL_SELECTION','Please select post','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67089e','en_IN','INTIGRATION_EOFFICE_HEADING','E-Office Stat','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67090e','en_IN','INTIGRATION_EOFFICE_GET','GET','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67091e','en_IN','INTIGRATION_ORG_NAME_LABEL','Organisation Name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67092e','en_IN','INTIGRATION_EMPLOYEE_NAME_LABEL','Employee Name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67093e','en_IN','INTIGRATION_DEPARTMENT_NAME_LABLE','Department Name','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67094e','en_IN','INTIGRATION_EOFFICE_OPER_TYPE','File Operation Type','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67095e','en_IN','INTIGRATION_EOFFICE_ELECTRONIC_FILE_TYPE_COUNT','Electronic File','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67096e','en_IN','INTIGRATION_EOFFICE_PHYSICAL_FILE_TYPE_COUNT','Physical File','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67097e','en_IN','INTIGRATION_EOFFICE_OPER_TYPE_FILEPENDING_HEADING','File Pending','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67098e','en_IN','INTIGRATION_EOFFICE_OPER_TYPE_FILECLOSED_HEADING','File Closed','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67099e','en_IN','INTIGRATION_EOFFICE_OPER_TYPE_RECEIPT_PENDING_HEADING','Receipt Pending','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67100e','en_IN','INTIGRATION_EOFFICE_OPER_TYPE_RECEIPT_CLOSED_HEADING','Receipt Closed','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b67101e','en_IN','INTIGRATION_EOFFICE_OPER_TYPE_VIP_RECEIPT_PENDING_HEADING','VIP Receipts','ch','rainmaker-integration',24226,'2019-03-25 16:54:25.000',NULL,NULL);
+
