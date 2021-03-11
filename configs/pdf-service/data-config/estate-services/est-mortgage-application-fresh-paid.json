@@ -542,7 +542,7 @@
                     {
                         "variable": "applicationHeader",
                         "value": {
-                            "path": "$.applicationHeader"
+                            "path": "$.Applications[0].applicationHeader"
                         }
                     },
                     {
