@@ -133,6 +133,16 @@ DELETE FROM public.message WHERE code = 'WF_WS_RENAME_PENDING_FOR_SDE_APPROVAL_A
 DELETE FROM public.message WHERE code = 'WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_WS_REACTIVATE_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_WS_RENAME_PENDING_FOR_CONNECTION_HOLDER_CHANGE'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_WS_DISCONNECTION_PENDING_FOR_SDE_APPROVAL'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_TEMP_TEMP'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_TEMP_REGULAR'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_TEMP_DISCONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_DISCONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_RENAME'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_CONVERSION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_EE_REVIEW_APPLICATION'and module='rainmaker-common' and tenantId='ch';
 
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
