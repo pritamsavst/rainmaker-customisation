@@ -1128,7 +1128,7 @@ serviceMaps:
             insert into indentdetail (material, uom, parentIndentLine, orderNumber, projectCode, indentNumber, asset,userQuantity, indentQuantity, totalProcessedQuantity, indentIssuedQuantity, poOrderedQuantity, interstoreRequestQuantity, deliveryTerms, remarks, id, tenantId)
              values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?) on CONFLICT (id,tenantid) DO UPDATE SET
              material=EXCLUDED.material , uom=EXCLUDED.uom ,parentIndentLine=EXCLUDED.parentIndentLine,orderNumber=EXCLUDED.orderNumber,projectCode=EXCLUDED.projectCode ,indentNumber=EXCLUDED.indentNumber,asset=EXCLUDED.asset,
-             indentQuantity=EXCLUDED.indentQuantity, totalProcessedQuantity= EXCLUDED.totalProcessedQuantity, indentIssuedQuantity= EXCLUDED.indentIssuedQuantity, poOrderedQuantity= EXCLUDED.poOrderedQuantity, interstoreRequestQuantity= EXCLUDED.interstoreRequestQuantity;
+             userquantity=EXCLUDED.userquantity,indentQuantity=EXCLUDED.indentQuantity, totalProcessedQuantity= EXCLUDED.totalProcessedQuantity, indentIssuedQuantity= EXCLUDED.indentIssuedQuantity, poOrderedQuantity= EXCLUDED.poOrderedQuantity, interstoreRequestQuantity= EXCLUDED.interstoreRequestQuantity;
          basePath: $.indents.*.indentDetails.*
          jsonMaps:
          -  jsonPath: $.indents.*.indentDetails.*.material.code
