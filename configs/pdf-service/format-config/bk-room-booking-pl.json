@@ -55,12 +55,23 @@
                     0,
                     0,
                     0,
-                    50
+                    30
                 ]
             },
             {
-                "text": "To,",
-                "fontSize": 12
+                "text": "Permission letter for booking of Room",
+                "alignment": "center",
+                "fontSize": 10,
+                "bold": true,
+                "margin": [
+                    0,
+                    0,
+                    0,
+                    30
+                ]
+            },
+            {
+                "text": "To,"
             },
             {
                 "margin": [
@@ -69,7 +80,6 @@
                     0,
                     0
                 ],
-                "fontSize": 12,
                 "stack": [
                     {
                         "text": "{{applicantName}}"
@@ -98,9 +108,9 @@
                 "bold": true,
                 "margin": [
                     0,
-                    7,
+                    20,
                     0,
-                    7
+                    0
                 ],
                 "text": [
                     {
@@ -115,9 +125,9 @@
                 "bold": true,
                 "margin": [
                     0,
-                    7,
+                    10,
                     0,
-                    7
+                    0
                 ],
                 "text": [
                     {
@@ -164,9 +174,9 @@
             {
                 "margin": [
                     0,
-                    7,
+                    10,
                     0,
-                    7
+                    0
                 ],
                 "text": [
                     {
@@ -210,7 +220,7 @@
             {
                 "margin": [
                     0,
-                    5,
+                    10,
                     0,
                     0
                 ],
@@ -265,9 +275,9 @@
             {
                 "margin": [
                     0,
-                    15,
+                    10,
                     0,
-                    10
+                    0
                 ],
                 "columns": [
                     {
@@ -302,9 +312,9 @@
             {
                 "margin": [
                     0,
-                    7,
+                    10,
                     0,
-                    7
+                    0
                 ],
                 "text": [
                     {
@@ -333,9 +343,9 @@
             {
                 "margin": [
                     0,
-                    7,
+                    10,
                     0,
-                    7
+                    0
                 ],
                 "text": [
                     {
@@ -350,7 +360,7 @@
             {
                 "margin": [
                     0,
-                    7,
+                    10,
                     0,
                     0
                 ],
@@ -377,12 +387,7 @@
                     {
                         "text": "{{rBankName}}",
                         "width": "auto"
-                    }
-                ]
-            },
-            {
-                "margin":[121,0,0,0],
-                "text": [
+                    },
                     {
                         "text": "    Bank A/C No. :  ",
                         "width": "auto",
@@ -406,9 +411,9 @@
             {
                 "margin": [
                     0,
-                    7,
+                    10,
                     0,
-                    7
+                    0
                 ],
                 "ol": [
                     {
@@ -655,7 +660,7 @@
             }
         ],
         "defaultStyle": {
-            "fontSize": 10
+            "fontSize": 11
         }
     }
 }
