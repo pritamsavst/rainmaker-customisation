@@ -49,7 +49,7 @@
                   "width":"auto",
                   "text": [
                     {
-                      "text": "No.MC/Estate/2021/ ",
+                      "text": "No.MC/Estate/{{year}}/ ",
                       "bold": true
                     },
                     {
@@ -60,7 +60,8 @@
                   "alignment": "left"
                 },
                 {
-                  "text": ""
+                  "text": "",
+                  "width":"*"
                 },
                 {
                   "width":"auto",
@@ -70,7 +71,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{dateOfAllotment}}",
+                      "text": "{{approvalDate}}",
                       "bold": false
                     }
                   ],
@@ -163,7 +164,7 @@
                 "style": "pdfContent",
                 "stack": [{
                     
-                        "text": "1) That the first and second floor of the building constructed on the site shali be allowed to be used for the purpose of offices subject to payment of conversion charges as may be fixed from time to time in this behalf. "
+                        "text": "1) That the first and second floor of the building constructed on the site shall be allowed to be used for the purpose of offices subject to payment of conversion charges as may be fixed from time to time in this behalf. "
                     },
                     {
                         "text": " 2) That the stairs for the first and second floor of the building shall be provided from the shop in accordance with the prescribed architectural controls for Shop-cum-Offices and they have to submit revised plans indicating the purposed position of the staircase and other internal changes"
@@ -213,11 +214,17 @@
             { 
                 "margin": [0, 20, 0, 0],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. ___________ MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
-                        "alignment": "left"
+                        "alignment": "left",
+                        "width":"auto"
                     },
                     {
+                      "text":"",
+                      "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated:_________",
                         "style": "pdfContent",
                         "alignment": "right"
@@ -237,7 +244,35 @@
                         "text":"2..The Asstt. Collector Tax, Municipal Corporation, Chandigarh "
                     }
                 ]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Section Officer,",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text":"Additional Commissioner-I",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Municipal Corporation,",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Chandigarh.",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
 

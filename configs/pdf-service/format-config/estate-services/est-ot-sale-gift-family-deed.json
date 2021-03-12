@@ -48,7 +48,7 @@
         "columns": [{
             "width": "auto",
             "text": [{
-                "text": "No.MC/Estate/2021/ ",
+                "text": "No.MC/Estate/{{year}}/ ",
                 "bold": true
               },
               {
@@ -59,7 +59,8 @@
             "alignment": "left"
           },
           {
-            "text": ""
+            "text": "",
+            "width":"*"
           },
           {
             "width": "auto",
@@ -68,7 +69,7 @@
                 "bold": true
               },
               {
-                "text": "{{dateOfAllotment}}",
+                "text": "{{approvalDate}}",
                 "bold": false
               }
             ],
@@ -148,7 +149,7 @@
             "text": "             Reference your application dated "
           },
           {
-            "text": "{{createdTime}}",
+            "text": "{{submissionDate}}",
             "bold": true
           },
           {
@@ -255,11 +256,17 @@
       {
         "margin": [0, 20, 0, 0],
         "columns": [{
-            "text": "Endst. No. MC/Estate/2021/",
+            "text": "Endst. No. ___________ MC/Estate/{{year}}/{{applicationNumber}}",
             "style": "pdfContent",
-            "alignment": "left"
+            "alignment": "left",
+            "width":"auto"
           },
           {
+            "width":"*",
+            "text":""
+          },
+          {
+            "width":"auto",
             "text": "Dated: ____________",
             "style": "pdfContent",
             "alignment": "right"
@@ -287,6 +294,35 @@
             "style": "pdfContent"
 
           }
+        ]
+      },
+      {
+        "margin": [0, 20, 0, 0],
+        "alignment": "right",
+        "stack": [{
+            "text": "Section Officer (E),",
+            "style": "pdfContent",
+            "bold": true
+          },
+          {
+            "text": "Addl. Commissioner-I,",
+            "style": "pdfContent",
+            "bold": true
+
+          },
+          {
+            "text": "Municipal Corporation,",
+            "style": "pdfContent",
+            "bold": true
+
+          },
+          {
+            "text": "Chandigarh.",
+            "style": "pdfContent",
+            "bold": true
+
+          }
+
         ]
       }
 
