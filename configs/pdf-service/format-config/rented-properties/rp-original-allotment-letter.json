@@ -8,41 +8,54 @@
             {
                 "style": "noc-head",
                 "table": {
-                  "widths": [
-                   50, "*"
-                  ],
-                  "body": [
-                    [
-                     {
-                       "image": "{{logo}}",
-                       "width": 50,
-                       "margin": [8, 10, 10, 0]
-                     },
-                     {
-                       "stack": [
-                         {
-                           "text": "{{header}}",
-                           "style": "receipt-logo-header"
-                         },
-                         {
-                           "text": "{{colony_branch}}",
-                           "style": "receipt-logo-sub-header"
-                         }
-                       ],
-                       "alignment": "center",
-                         "margin": [
-                           0,
-                           12,
-                           0,
-                           0
-                         ]
-                     }
+                    "widths": ["3%", "90%", "*"],
+                    "body": [
+                        [{
+                                "text": ""
+                            },
+                            {
+                                "text": "नगर निगम चण्डीगढ़/MUNICIPAL CORPORATION, CHANDIGARH",
+                                "style": "receipt-logo-header",
+                                "alignment": "center",
+                                "fillColor": "#F8F9FA"
+                            },
+                            {
+                                "rowSpan": 4,
+                                "alignment": "center",
+                                "image": "{{watermark}}",
+                                "width": 60,
+                                "margin": [0, 10, 0, 0]
+                            }
+                        ],
+                        [{
+                                "text": ""
+                            },
+                            {
+                                "alignment": "center",
+                                "styles": "receipt-logo-sub-header",
+                                "text": [{
+                                    "text": "(New Delux Building, Sector-17, UT Chandigarh) ☎ 0172-5021503 "
+                                }]
+                            },
+                            {}
+                        ],
+                        [{
+                                "text": ""
+                            },
+                            {
+                                "alignment": "center",
+                                "text": "(Colony Branch)",
+                                "italics": true,
+                                "bold": true,
+                                "fillColor": "#F8F9FA"
+                            },
+                            {}
+                        ],
+                        [{}, {}, {}]
                     ]
-                  ]
                 },
                 "layout": "noBorders"
-              },
-          
+            },
             {
                 "stack": [{
                         "margin": [0, 20, 0, 0],
@@ -198,14 +211,26 @@
                 "style": "pdfContent"
             },
             {
-                "text": "5.The licensee shall not sublet, assign or otherwise part with possession of the transit site or any part thereof in favour of any person whatsoever.",
-                "style": "pdfContent"
+                "margin":[0,90,0,0],
+                "columns": [{
+                    "image": "{{footerLeft}}",
+                    "width": 50,
+                    "margin": [20, 0, 0, 20]
+      
+                }, {
+                    "text": "नगर निगम चण्डीगढ़/MUNICIPAL CORPORATION, CHANDIGARH",
+                    "styles": "receipt-logo-sub-header",
+                    "alignment": "center",
+                    "width": "*"
+                }, {
+                    "image": "{{footerRight}}",
+                    "width": 40,
+                    "margin": [-20, 0, 0, -30]
+                }]
             },
+         
             {
-                "text": "5.The licensee shall not sublet, assign or otherwise part with possession of the transit site or any part thereof in favour of any person whatsoever.",
-                "style": "pdfContent"
-            },
-            {
+                "pageBreak":"before",
                 "text": [{
                         "text": "6. (i) The licence in respect of the transit site shall be liable to be terminated in case of breach/non-compliance of the terms and conditions of .Tenements and sites and Services Chandigarh scheme, 1979,n as amended from time to time. The licensee shall be bound by the provisions of Capital of Punjab (Development and Regulations) Act, 1952 and Rule. made thereunder. from time to time.",
                         "style": "pdfContent"
