@@ -1186,7 +1186,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5615-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_SEND_BACK_TO_CITIZEN_FOR_ROADCUT_NOC','Send Back to Citizen For Roadcut NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5616-ac6f-2bc063b75064e','en_IN','WF_PENDING_FOR_SE_REVIEW_APPLICATION','SE Review Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5617-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_VERIFY_AND_FORWARD_FOR_PAYMENT','Verify and Forword','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5621-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_FOR_PAYMENT_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5690-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_FOR_PAYMENT_APPLICATION','Verify and Forword Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5622-ac6f-2bc063b75064e','en_IN','WF_EXTEND_TEMPORARY_CONNECTION_APPLICATION','Extend Temporary Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5623-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_TEMP_EXTEND_TEMPORARY_CONNECTION','Extend Temporary Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5624-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_CLOSE_CONNECTION_APPLICATION','Close Connection Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1205,4 +1205,3 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5637-ac6f-2bc063b75064e','en_IN','WF_APPROVE_APPLICATION_APPLICATION','Approve Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5638-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_APPROVE_APPLICATION','Approve','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5639-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_REACTIVATE_CONNECTION','Reactivate Connection','ch','rainmaker-ws',24226,now(),NULL,NULL);
-
