@@ -164,7 +164,7 @@
             {
                 "columns": [
                     {
-                        "text": "Dept : ",
+                        "text": "Booking Type : ",
                         "width": "auto",
                         "margin": [
                             0,
@@ -630,11 +630,7 @@
                     {
                         "text": "{{rBankName}}",
                         "width": "auto"
-                    }
-                ]
-            },
-            {
-                "text": [
+                    },
                     {
                         "text": "    Bank A/C No. :  ",
                         "width": "auto",
