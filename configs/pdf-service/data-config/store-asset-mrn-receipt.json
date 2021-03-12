@@ -12,6 +12,11 @@
         "mappings": [
           {
             "direct": [
+			 {
+                "variable": "ulbLogo",                        
+                "url":"https://egov.transerve.com/media/logo.png",
+                "type":"image"
+                },
 			  {
                 "variable": "receiptDate",
                 "value": {

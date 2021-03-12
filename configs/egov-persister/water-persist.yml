@@ -581,7 +581,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.waterProperty.id
 
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, total_amount_paid, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, total_amount_paid=?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -597,7 +597,9 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
-          - jsonPath: $.WaterConnection.waterApplication.action
+          - jsonPath: $.WaterConnection.waterApplication.action          
+
+          - jsonPath: $.WaterConnection.waterApplication.totalAmountPaid
           
           - jsonPath: $.WaterConnection.waterApplication.comments
 
@@ -613,7 +615,9 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
-          - jsonPath: $.WaterConnection.waterApplication.action
+          - jsonPath: $.WaterConnection.waterApplication.action          
+
+          - jsonPath: $.WaterConnection.waterApplication.totalAmountPaid
           
           - jsonPath: $.WaterConnection.waterApplication.comments
 
