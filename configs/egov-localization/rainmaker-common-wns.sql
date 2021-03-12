@@ -265,5 +265,15 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6126-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT','Pending for SDE Approval After Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6127-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT','Pending for SDE Approval After SuperintendentPending for SDE Approval After Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6128-ac6f-2bc063b75064e','en_IN','WF_WS_REACTIVATE_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT','Pending for SDE Approval After Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6129-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT','Pending for SDE Approval After Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6129-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT','Pending for SDE Approval After Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6130-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_PENDING_FOR_CONNECTION_HOLDER_CHANGE','Pending for Connection Holder Change','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6131-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6132-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_TEMP_TEMP','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6133-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_TEMP_REGULAR','Temporary to Regular Conversion','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6134-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_TEMP_DISCONNECTION','Temporary Disconnection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6135-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_DISCONNECTION','Permanent Disconnection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6136-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_RENAME','Update Connection Holder Information','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6137-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_CONVERSION','Tariff Change','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6138-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE','Pending for Close Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6139-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_EE_REVIEW_APPLICATION','Pending for EE Review','ch','rainmaker-common',24226,now(),NULL,NULL);
 
