@@ -55,7 +55,7 @@
                     0,
                     0,
                     0,
-                    30
+                    20
                 ]
             },
             {
@@ -229,6 +229,23 @@
                                 "bold": true
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Date/Venue Change Charges : "
+                    },
+                    {
+                        "text": "{{dateVenueChangeCharges}}",
+                        "bold": true
                     }
                 ]
             },
