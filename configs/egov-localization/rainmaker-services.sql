@@ -764,7 +764,7 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c239', 'en_IN', 'BK_MY_BK_APPLICANT_DETAILS_HEADER', 'Applicant Details', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c240', 'en_IN', 'BK_MY_BK_APPLICATION_DOWNLOAD', 'Application', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+VALUES('fabc3fz6-70d8-4ae6-8ac7-00c9c714c240', 'en_IN', 'BK_MY_BK_APPLICATION_DOWNLOAD', 'Application', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c241', 'en_IN', 'BK_MY_BK_APPLICATION_PRINT', 'Application', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
