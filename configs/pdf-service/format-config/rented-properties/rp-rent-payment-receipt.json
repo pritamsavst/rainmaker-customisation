@@ -11,12 +11,12 @@
               "body":[
                 [
                   {
-                    "fillColor":"#F2F2F2",
+                    "fillColor":"#ffffff",
                     "margin":[8,10,0,10],
                     "columns":
                     [
                          {
-                            "image": "{{logo}}",
+                            "image": "{{watermark}}",
                             "margin":[ 45,
                               10,
                               10,

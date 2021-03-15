@@ -4,35 +4,57 @@
         "defaultStyle": {
             "font": "Cambay"
         },
-        "content": [{
-                "columns": [{
-                        "image": "{{logo}}",
-                        "width": 50,
-                        "alignment": "left"
-                    },
-                    {
-
-                        "alignment": "center",
-                        "stack": [{
-                                "text": "{{header}}",
-                                "color": "#17202A",
-                                "fontSize": 14,
-                                "bold": true,
-                                "underline":true
-                            },
-                            {
-                                "text": "{{colony_branch}}",
-                                "color": "#17202A",
-                                "fontSize": 12,
-                                "bold": true,
-                                "lineHeight": "2"
-                            }
-                        ]
-                    }
-
+        "content": [  {
+            "style": "noc-head",
+            "table": {
+                "widths": ["3%", "90%", "*"],
+                "body": [
+                    [{
+                            "text": ""
+                        },
+                        {
+                            "text": "नगर निगम चण्डीगढ़/MUNICIPAL CORPORATION, CHANDIGARH",
+                            "style": "receipt-logo-header",
+                            "alignment": "center",
+                            "fillColor": "#F8F9FA"
+                        },
+                        {
+                            "rowSpan": 4,
+                            "alignment": "center",
+                            "image": "{{watermark}}",
+                            "width": 60,
+                            "margin": [0, 10, 0, 0]
+                        }
+                    ],
+                    [{
+                            "text": ""
+                        },
+                        {
+                            "alignment": "center",
+                            "styles": "receipt-logo-sub-header",
+                            "text": [{
+                                "text": "(New Delux Building, Sector-17, UT Chandigarh) ☎ 0172-5021503 "
+                            }]
+                        },
+                        {}
+                    ],
+                    [{
+                            "text": ""
+                        },
+                        {
+                            "alignment": "center",
+                            "text": "(Colony Branch)",
+                            "italics": true,
+                            "bold": true,
+                            "fillColor": "#F8F9FA"
+                        },
+                        {}
+                    ],
+                    [{}, {}, {}]
                 ]
-
             },
+            "layout": "noBorders"
+        },
             {
                 "margin": [0, 20, 0, 0],
                 "columns":[{
@@ -226,6 +248,24 @@
                         "style": "pdfContent"
                     }
                 ]     
+            },
+            {
+                "margin":[0,330,0,0],
+                "columns": [{
+                    "image": "{{footerLeft}}",
+                    "width": 50,
+                    "margin": [20, 0, 0, 20]
+      
+                }, {
+                    "text": "नगर निगम चण्डीगढ़/MUNICIPAL CORPORATION, CHANDIGARH",
+                    "styles": "receipt-logo-sub-header",
+                    "alignment": "center",
+                    "width": "*"
+                }, {
+                    "image": "{{footerRight}}",
+                    "width": 40,
+                    "margin": [-20, 0, 0, -30]
+                }]
             }
 
         ],
