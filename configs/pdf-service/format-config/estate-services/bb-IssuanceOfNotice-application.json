@@ -773,7 +773,7 @@
                           "style": "receipt-table-value-cont"
                         },
                       {
-                        "text":"{{PLINTH_LEVEL_COMMAX_HEIGHT_MEASURED_FROM_PLINTH_LEVEL_SANCTIONABLE_LABELMENTS_LABEL}}",
+                        "text":"{{MAX_HEIGHT_MEASURED_FROM_PLINTH_LEVEL_SANCTIONABLE_LABEL}}",
                         "border":[
                           false,
                           false,

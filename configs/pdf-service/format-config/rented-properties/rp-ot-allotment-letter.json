@@ -254,7 +254,7 @@
                 "pageBreak":"before",
                 "margin": [50, 20, 0, 0],
                 "columns":[{
-                    "text":"Endst. No.",
+                    "text":"Endst. No. ___________",
                     "style": "pdfContent",
                     "alignment":"left",
                     "width":"auto"

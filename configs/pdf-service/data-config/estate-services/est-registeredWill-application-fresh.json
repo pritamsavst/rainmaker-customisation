@@ -59,7 +59,7 @@
                       {
                         "variable": "subHeader",
                         "value": {
-                          "path": "APPLY_ESTATEBRANCH_OWNERSHIPTRANSFER_REGISTEREDWILL"
+                          "path": "APPLY_ESTATEBRANCH_OWNERSHIPTRANSFER_UNREGISTEREDWILL"
                         },
                         "type": "label",
                         "localisation": {
@@ -728,6 +728,43 @@
                         "variable": "applicationNumber",
                         "value": {
                             "path": "$.applicationNumber"
+                        }
+                    },
+                    {
+                        "variable":"HARD_COPY_DATE",
+                        "value": {
+                            "path": "HARD_COPY_DATE"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable":"WORKFLOW_DOCUMENTS_HEADER",
+                        "value": {
+                            "path": "WORKFLOW_DOCUMENTS_HEADER"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
+                        "variable": "hardcopyReceivedDate",
+                        "value": {
+                            "path": "$.hardcopyReceivedDate"
+                        },
+                        "type":"date"
+                    },
+                    {
+                        "variable": "wfDocuments",
+                        "value": {
+                            "path": "$.wfDocuments.*"
                         }
                     }
                    

@@ -53,7 +53,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/",
+                        "text": "No.MC/Estate/{{year}}/",
                         "bold": true
                       },
                       {
@@ -64,7 +64,8 @@
                     "alignment": "left"
                   },
                   {
-                    "text": ""
+                    "text": "",
+                    "width":"*"
                   },
                   {
                     "width":"auto",
@@ -74,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -125,7 +126,7 @@
             {
                 "margin": [50, 20, 0, 0],
                 "style": "pdfContent",
-                "text": "Reference your application dated on the subject cited above."
+                "text": "Reference your application dated {{submissionDate}} on the subject cited above."
             },
             {
                 "margin": [0, 0, 0, 0],

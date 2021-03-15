@@ -67,7 +67,33 @@
             "value": {
               "path": "$.applicationDetails.loanAmount"
             }
-          }
+          },
+          {
+            "variable":"submissionDate",
+            "value":{
+              "path":"$.applicationSubmissionDate"
+            },
+            "type":"date"
+          },
+          {
+            "variable":"approvalDate",
+            "value":{
+              "path":"$.auditDetails.lastModifiedTime"
+            },
+            "type":"date"
+          },
+          {
+            "variable":"year",
+            "value":{
+              "path":"$.year"
+            }
+          },
+          {
+            "variable": "reasonForMortgage",
+            "value": {
+                "path": "$.applicationDetails.reasonForMortgage"
+            }
+        }
 
         ]
       }]
