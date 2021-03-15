@@ -85,7 +85,7 @@
             "text": " Chandigarh vide this office diary No. _____dated "
           },
           {
-            "text":"{{createdTime}}",
+            "text":"{{submissionDate}}",
             "bold":true
           },
           {

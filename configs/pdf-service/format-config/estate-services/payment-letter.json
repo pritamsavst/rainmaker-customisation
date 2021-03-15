@@ -74,7 +74,7 @@
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "                   Dated:- {{dateOfAllotment}}",
+                        "text": "                   Dated:- {{approvalDate}}",
                         "style": "pdfContent",
                         "width": "*",
                         "bold":true
