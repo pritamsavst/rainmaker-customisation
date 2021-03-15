@@ -218,16 +218,16 @@
                         ],
                         [
                             {
-                                "text":"{{balancePrincipal}}"
+                                "text":"{{balancePrincipalDerived}}"
                               },
                               {
-                                "text":"{{balanceInterest}}"
+                                "text":"{{balanceInterestDerived}}"
                               },
                               {
                                 "text":"{{totalAmount}}"
                               },
                               {
-                                "text":"{{balanceAmount}}"
+                                "text":"{{balanceAmountDerived}}"
                               },
                               {
                                 "text":"{{dateOfPayment}} , {{time}}"
