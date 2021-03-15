@@ -411,7 +411,20 @@
                   "derived": [{
                     "variable": "totalAmount",
                     "formula": "({{balancePrincipal}}+{{balanceInterest}}).toFixed(2)"
-                  }]
+                  },
+                  {
+                    "variable": "balancePrincipalDerived",
+                    "formula": "({{balancePrincipal}}).toFixed(2)"
+                  },
+                  {
+                    "variable": "balanceInterestDerived",
+                    "formula": "({{balanceInterest}}).toFixed(2)"
+                  },
+                  {
+                    "variable": "balanceAmountDerived",
+                    "formula": "({{balanceAmount}}).toFixed(2)"
+                  }
+                ]
                 }
             ]
         }
