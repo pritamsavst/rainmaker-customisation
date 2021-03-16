@@ -143,13 +143,6 @@
                 "type":"date"
               },
               {
-                "variable":"approvalDate",
-                "value":{
-                  "path":"$.applicationDetails.transferor.transferorDetails.approvalDate"
-                },
-                "type":"date"
-              },
-              {
                 "variable":"areaSqft",
                 "value":{
                   "path":"$.property.propertyDetails.areaSqft"
@@ -205,8 +198,27 @@
                 "path":"$.applicationDetails.transferor.transferorDetails.dateOfAllotment"
               },
               "type":"date"
+            },
+            {
+              "variable":"submissionDate",
+              "value":{
+                "path":"$.applicationSubmissionDate"
+              },
+              "type":"date"
+            },
+            {
+              "variable":"approvalDate",
+              "value":{
+                "path":"$.auditDetails.lastModifiedTime"
+              },
+              "type":"date"
+            },
+            {
+              "variable":"year",
+              "value":{
+                "path":"$.year"
+              }
             }
-
             ]
           }
         ]

@@ -144,6 +144,12 @@
                                 }
                             },
                             {
+                                "variable": "dateVenueChangeCharges",
+                                "value": {
+                                    "path": "$.paymentInfo.dateVenueChangeCharges"
+                                }
+                            },
+                            {
                                 "variable": "custGSTN",
                                 "value": {
                                     "path": "$.applicantDetail.custGSTN"

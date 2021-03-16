@@ -12,6 +12,21 @@
                 {
                     "direct": [
                         {
+                          "variable": "footerLeft",
+                          "url": "https://egov.transerve.com/media/footer_left.png",
+                          "type": "image"
+                        },
+                        {
+                          "variable": "footerRight",
+                          "url": "https://egov.transerve.com/media/footer_right.png",
+                          "type": "image"
+                        },
+                        {
+                          "variable": "watermark",
+                          "url": "https://egov.transerve.com/media/logo_watermark.png",
+                          "type": "image"
+                        },
+                        {
                             "variable": "logo",                        
                             "url":"https://egov.transerve.com/media/logo.png",
                             "type":"image"
@@ -396,7 +411,20 @@
                   "derived": [{
                     "variable": "totalAmount",
                     "formula": "({{balancePrincipal}}+{{balanceInterest}}).toFixed(2)"
-                  }]
+                  },
+                  {
+                    "variable": "balancePrincipalDerived",
+                    "formula": "({{balancePrincipal}}).toFixed(2)"
+                  },
+                  {
+                    "variable": "balanceInterestDerived",
+                    "formula": "({{balanceInterest}}).toFixed(2)"
+                  },
+                  {
+                    "variable": "balanceAmountDerived",
+                    "formula": "({{balanceAmount}}).toFixed(2)"
+                  }
+                ]
                 }
             ]
         }

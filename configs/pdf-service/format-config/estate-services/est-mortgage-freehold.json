@@ -54,7 +54,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -76,7 +76,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -138,7 +138,7 @@
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "             Reference your request dated  on the subject cited above. "
+                "text": "             Reference your request dated  {{submissionDate}} on the subject cited above. "
             },
             {
                 "margin": [0, 20, 0, 0],
@@ -172,16 +172,20 @@
             {
                 "margin": [0, 20, 10, 10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/{{applicationNumber}}",
+                        "text": "Endst. No. ___________ MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "width":"auto"
                     },
                     {
+                      "text":"",
+                       "width":"*"
+                    },
+                    {
                         "text": "Dated:_____________",
                         "style": "pdfContent",
                         "alignment": "right",
-                        "width":"*"
+                        "width":"auto"
                     }
                 ]
             },
@@ -190,7 +194,30 @@
                     "text": " Copy of the above is forwarded to_________ for information and necessary action please  ",
                     "style": "pdfContent"
                 }]
-            }
+            },
+            {
+              "margin": [0, 20, 0, 0],
+              "alignment": "right",
+              "stack": [{
+                      "text": "Section Officer (E).",
+                      "style": "pdfContent",
+                      "bold": true
+                  },
+                  {
+                      "text": "Municipal Corporation, ",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  },
+                  {
+                      "text": "Chandigarh ",
+                      "style": "pdfContent",
+                      "bold": true
+
+                  }
+
+              ]
+          }
 
 
         ],
