@@ -801,8 +801,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75029e','en_IN','WS_PROPERTY_USAGE_TYPE_LABEL_INPUT_PLACEHOLDER','Select Property Usage Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75030e','en_IN','WS_PROPERTY_SUB_USAGE_TYPE_LABEL_INPUT','Property Sub Usage Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75031e','en_IN','WS_PROPERTY_SUB_USAGE_TYPE_LABEL_INPUT_PLACEHOLDER','Select Sub Property Usage Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75032e','en_IN','WS_PROP_DETAIL_PLOT_SIZE_LABEL_INPUT','Plot Size','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b75033e','en_IN','WS_PROP_DETAIL_PLOT_SIZE_LABEL_INPUT_PLACEHOLDER','Enter Plot Size','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b75032e','en_IN','WS_PROP_DETAIL_PLOT_SIZE_LABEL_INPUT','Plot Area (sq ft)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-4591-ac6f-2bc063b75033e','en_IN','WS_PROP_DETAIL_PLOT_SIZE_LABEL_INPUT_PLACEHOLDER','Enter Plot Area (sq ft)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75034e','en_IN','WS_PROP_DETAIL_CITY_INPUT','City','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75035e','en_IN','WS_PROP_DETAIL_CITY_INPUT_PLACEHOLDER','Select City','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-4591-ac6f-2bc063b75036e','en_IN','WS_PROP_DETAIL_DHNO_INPUT','Plot No.','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -935,8 +935,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5267-ac6f-2bc063b75064e','en_IN','WS_SERV_DETAIL_BILL_GROUP','Bill Group','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5268-ac6f-2bc063b75064e','en_IN','WS_SERV_DETAIL_BILL_GROUP_PLACEHOLDER','Enter Bill Group','ch','rainmaker-ws',24226,now(),NULL,NULL)
 
-,('4d3b6355-1abb-5269-ac6f-2bc063b75064e','en_IN','WS_PROP_DETAIL_BUILD_UP_AREA_LABEL_INPUT','Covered Area','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5270-ac6f-2bc063b75064e','en_IN','WS_PROP_DETAIL_BUILD_UP_AREA_LABEL_INPUT_PLACEHOLDER','Enter Covered area','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5269-ac6f-2bc063b75064e','en_IN','WS_PROP_DETAIL_BUILD_UP_AREA_LABEL_INPUT','Covered Area (sq ft)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5270-ac6f-2bc063b75064e','en_IN','WS_PROP_DETAIL_BUILD_UP_AREA_LABEL_INPUT_PLACEHOLDER','Enter Covered Area (sq ft)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5271-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_CONTRACT_VALUE','Contract Value','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5272-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_CONTRACT_VALUE_PLACEHOLDER','Enter Contract Value','ch','rainmaker-ws',24226,now(),NULL,NULL)
 
