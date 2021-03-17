@@ -1,7 +1,8 @@
--- new localization code 
 DELETE FROM public.message WHERE code = 'PENSION_EMPLOYEE_ARREAL_PENSION_INFORMATION' and module='rainmaker-pension' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'PENSION_ARREAR_VIEW' and module='rainmaker-pension' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'PENSION_POPUP_HEAD_ARREAR' and module='rainmaker-pension' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'PENSION_TOTAL_ARREAR_S' and module='rainmaker-pension' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'PENSION_TOTAL_ARREAR_V' and module='rainmaker-pension' and tenantId='ch';
 
 
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
