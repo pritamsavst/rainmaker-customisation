@@ -1,0 +1,59 @@
+ReportDefinitions:
+- reportName: HorticultureReport
+  summary: HC Report
+  version: 1.0.0
+  moduleName: rainmaker-hc
+  sourceColumns:
+  - name: service_request_id
+    label: report.hc.service_request_id
+    type: string
+    source: hc
+    total: false
+  - name: requestDate
+    label: report.hc.requestDate
+    type: string
+    source: hc
+    total: false
+  - name: owner_name
+    label: report.hc.owner_name
+    type: string
+    source: hc
+    total: false
+  - name: service_type
+    label: report.hc.service_type
+    type: string
+    source: hc
+    total: false
+  - name: servicerequestsubtype
+    label: report.hc.servicerequestsubtype
+    type: string
+    source: hc
+    total: false
+  - name: locality
+    label: report.hc.locality
+    type: string
+    source: hc
+    total: false
+  - name: status
+    label: report.hc.status
+    type: string
+    source: hc
+    total: false
+  - name: description
+    label: report.hc.description
+    type: string
+    source: hc
+    total: true
+  - name: current_assignee
+    label: report.hc.current_assignee
+    type: string
+    source: hc
+    total: true	
+  query: |
+    SELECT service_request_id,createdtime as requestDate, owner_name, service_type, replace(cast(servicerequestsubtype -> 'subservicetype' as VARCHAR),'"','') as servicerequestsubtype, locality,  service_request_status as status, description,(case when current_assignee ~ '^[0-9\.]' then (SELECT username as name
+      FROM eg_user  where id::varchar=current_assignee) else current_assignee end )  FROM public.eg_hc_service_request 
+    WHERE  eg_hc_service_request.createdtime >= $fromDate AND eg_hc_service_request.createdtime <= $toDate	AND service_request_id=(case when $serviceRequestId  <>'' then $serviceRequestId  else service_request_id end)  
+    and service_type=(case when $serviceType  <>'' then $serviceType  else service_type end) and      COALESCE( replace(cast(servicerequestsubtype -> 'subservicetype' as VARCHAR),'"','')::varchar, '')= 
+    (case when $serviceRequestSubType  <>'' then $serviceRequestSubType  else  COALESCE( replace(cast(servicerequestsubtype ->     'subservicetype' as VARCHAR),'"','')::varchar, '') 	end) and owner_name=(case when $ownerName  <>'' then $ownerName  else owner_name end) 
+    and service_request_status=(case when $serviceRequestStatus  <>'' then $serviceRequestStatus  else service_request_status end)  and locality=(case when $locality  <>'' then $locality 
+    else locality end) AND  service_request_id in( select DISTINCT(businessid) from eg_wf_processinstance_v2 where assigner=(case when $assigner  <>'' then $assigner  else assigner end) and modulename='HORTICULTURE') ;
