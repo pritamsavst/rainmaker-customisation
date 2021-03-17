@@ -10,6 +10,21 @@
         "mappings": [{
           "direct": [
             {
+              "variable": "footerLeft",
+              "url": "https://egov.transerve.com/media/footer_left.png",
+              "type": "image"
+            },
+            {
+              "variable": "footerRight",
+              "url": "https://egov.transerve.com/media/footer_right.png",
+              "type": "image"
+            },
+            {
+              "variable": "watermark",
+              "url": "https://egov.transerve.com/media/logo_watermark.png",
+              "type": "image"
+            },
+            {
               "variable": "application_label",
               "value": {
                 "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"

@@ -50,7 +50,7 @@
                   "width":"auto",
                   "text": [
                     {
-                      "text": "No. MC/Estate/2021/ ",
+                      "text": "No. MC/Estate/{{year}}/ ",
                       "bold": true
                     },
                     {
@@ -61,7 +61,8 @@
                   "alignment": "left"
                 },
                 {
-                  "text": ""
+                  "text": "",
+                  "width":"*"
                 },
                 {
                   "width":"auto",
@@ -71,7 +72,7 @@
                       "bold": true
                     },
                     {
-                      "text": "____________",
+                      "text": "{{approvalDate}}",
                       "bold": false
                     }
                   ],
@@ -125,7 +126,7 @@
                 "margin": [0, 20, 0, 0],
                 "preserveLeadingSpaces": true,
                 "style": "pdfContent",
-                "text": "1             Reference memo no. MC-Estate/2021/ {{applicationNumber}}  dated allowing the conversion of Leasehold Land Tenure in respect of land under the dwelling unit no. 5832, Phase-III, Manimajra, U.T., Chandigarh. "
+                "text": "1             Reference memo no. MC-Estate/{{year}}/ {{applicationNumber}}  dated {{approvalDate}} allowing the conversion of Leasehold Land Tenure in respect of land under the dwelling unit no. 5832, Phase-III, Manimajra, U.T., Chandigarh. "
             },
             {          
                 "margin": [0, 20, 0, 0],

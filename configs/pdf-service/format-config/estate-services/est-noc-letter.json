@@ -54,7 +54,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No.MC/Estate/2021/ ",
+                        "text": "No.MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -65,7 +65,8 @@
                     "alignment": "left"
                   },
                   {
-                    "text": ""
+                    "text": "",
+                    "width":"*"
                   },
                   {
                     "width":"auto",
@@ -75,7 +76,7 @@
                         "bold": true
                       },
                       {
-                        "text": "{{dateOfAllotment}}",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -155,7 +156,7 @@
                     "preserveLeadingSpaces": true
                 },
                 {
-                    "text":"{{createdTime}}  ","bold":true
+                    "text":"{{submissionDate}}  ","bold":true
                 },
                 {
                     "text":"on the subject noted above."
@@ -300,12 +301,18 @@
             },
             {
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "text": "Endst. No. ___________ MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
-                        "bold": true
+                        "bold": true,
+                        "width":"auto"
                     },
                     {
+                        "width":"*",
+                        "text":""
+                      },
+                    {
+                        "width":"auto",
                         "text": "Dated:",
                         "style": "pdfContent",
                         "alignment": "right",
@@ -327,6 +334,29 @@
                         "style": "pdfContent"
 
                     }
+                ]
+            },
+            {
+                "margin": [0, 20, 0, 0],
+                "alignment": "right",
+                "stack": [{
+                        "text": "Assistant Controller (F&A) ",
+                        "style": "pdfContent",
+                        "bold": true
+                    },
+                    {
+                        "text": "For Municipal Corporation ",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    },
+                    {
+                        "text": "Chandigarh.",
+                        "style": "pdfContent",
+                        "bold": true
+
+                    }
+
                 ]
             }
 

@@ -133,7 +133,19 @@ DELETE FROM public.message WHERE code = 'WF_WS_RENAME_PENDING_FOR_SDE_APPROVAL_A
 DELETE FROM public.message WHERE code = 'WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_WS_REACTIVATE_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_SUPERINTENDENT'and module='rainmaker-common' and tenantId='ch';
-
+DELETE FROM public.message WHERE code = 'WF_WS_RENAME_PENDING_FOR_CONNECTION_HOLDER_CHANGE'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_WS_DISCONNECTION_PENDING_FOR_SDE_APPROVAL'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_TEMP_TEMP'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_TEMP_REGULAR'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_TEMP_DISCONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_DISCONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_RENAME'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_WS_CONVERSION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_EE_REVIEW_APPLICATION'and module='rainmaker-common' and tenantId='ch';
+--missing code for menu
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DOWNLOAD'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_UPLOAD'and module='rainmaker-common' and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -275,5 +287,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6136-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_RENAME','Update Connection Holder Information','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6137-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_CONVERSION','Tariff Change','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6138-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE','Pending for Close Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6139-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_EE_REVIEW_APPLICATION','Pending for EE Review','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6139-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_EE_REVIEW_APPLICATION','Pending for EE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6140-ac6f-2bc063b75064e','en_IN','ACTION_TEST_DOWNLOAD','Download','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6141-ac6f-2bc063b75064e','en_IN','ACTION_TEST_UPLOAD','Upload','ch','rainmaker-common',24226,now(),NULL,NULL);
+
 

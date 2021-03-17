@@ -170,10 +170,27 @@
                 "value":{
                   "path":"$.property.propertyDetails.emdAmount"
                 }
+              },
+              {
+                "variable":"submissionDate",
+                "value":{
+                  "path":"$.applicationSubmissionDate"
+                },
+                "type":"date"
+              },
+              {
+                "variable":"approvalDate",
+                "value":{
+                  "path":"$.auditDetails.lastModifiedTime"
+                },
+                "type":"date"
+              },
+              {
+                "variable":"year",
+                "value":{
+                  "path":"$.year"
+                }
               }
-             
-              
-
             ]
           }
         ]
