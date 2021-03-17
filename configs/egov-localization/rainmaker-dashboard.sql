@@ -18,4 +18,7 @@ VALUES('c0b628b9-8448-4e5d-82c9-656679dfc1a4','en_IN', 'DASHBOARD_WF_NAME_TITLE'
  ('b5a8688c-ad71-425e-b4ee-c9ced971c545','en_IN', 'PublicRelation_dashboard_1','Public Relation Dashboard','ch','rainmaker-dashboard', '94'),
  ('99e1bc17-b95d-4bab-b2ab-5a369344508b','en_IN', 'TradeLicense_dashboard_1','Trade License Dashboard','ch','rainmaker-dashboard', '94'),
 ('9eb2161c-889a-4566-bd35-93a9250464c2','en_IN', 'WNS_dashboard_1','Water And Sewerage Dashboard','ch','rainmaker-dashboard', '94'),
-('8cb9f402-405d-4c84-904b-ec6d6acbe876','en_IN', 'Work_dashboard_1','Work Management Dashboard','ch','rainmaker-dashboard', '94');
+('8cb9f402-405d-4c84-904b-ec6d6acbe876','en_IN', 'Work_dashboard_1','Work Management Dashboard','ch','rainmaker-dashboard', '94'),
+('b65a9f65-34ab-4ed9-ae2d-423db8d12f8e','en_IN', 'OPMS_dashboard_1','OPMS Dashboard','ch','rainmaker-dashboard', '94'),
+('48cf61ab-acbf-46d1-b9b6-ff5005f06fa5','en_IN', 'RentedProperty_dashboard_1','Rented Property Dashboard','ch','rainmaker-dashboard', '94'),
+('05a41943-a166-485e-8f90-fef9cd131202','en_IN', 'EState_dashboard_1','Estate Management Dashboard','ch','rainmaker-dashboard', '94');

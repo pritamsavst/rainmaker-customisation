@@ -49,7 +49,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No. MC/Estate/2021/ ",
+                        "text": "No. MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -60,7 +60,8 @@
                     "alignment": "left"
                   },
                   {
-                    "text": ""
+                    "text": "",
+                    "width":"*"
                   },
                   {
                     "width":"auto",
@@ -70,7 +71,7 @@
                         "bold": true
                       },
                       {
-                        "text": "____________",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -289,12 +290,18 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. No. MC/Estate/2021/",
+                        "width":"auto",
+                        "text": "Endst. No. ___________ MC/Estate/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
                     },
                     {
+                        "text": "",
+                        "width":"*"
+                      },
+                    {
+                        "width":"auto",
                         "text": "Dated: __________",
                         "style": "pdfContent",
                         "alignment": "right",
@@ -320,6 +327,30 @@
                         "style": "pdfContent"
                     }
                 ]
+            },
+            {
+                "alignment":"right",
+                "margin":[0,20,0,0],
+                "style":"pdfContent", 
+                "bold":true,
+                "stack":[
+                    {
+                        "text":" ADDITIONAL COMMISSIONER-I"
+
+                    },
+                    {
+                        "text":"(Exercising the powers of the Estate Officer "
+                    },
+                    {
+                        "text":" under the provisions of Capital of Punjab"
+                    },
+                    {
+                        "text":"Development & Regulation) Act, 1952) "
+                    },
+                    {
+                        "text":"MUNICIPAL CORPORATION, CHANDIGARH "
+                    }
+                ] 
             }
 
 

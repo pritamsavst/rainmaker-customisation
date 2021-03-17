@@ -411,7 +411,7 @@ serviceMaps:
       jsonMaps:
       - jsonPath: $.SewerageConnection.id
       
-    - query: UPDATE eg_sw_connection SET applicationstatus=?, status=?, connectionno=?, action=?, lastModifiedBy=?, lastModifiedTime=? WHERE id=?;
+    - query: UPDATE eg_sw_connection SET applicationstatus=?, status=?, connectionno=?, action=?,total_amount_paid=?, lastModifiedBy=?, lastModifiedTime=? WHERE id=?;
       basePath: $.SewerageConnection
       jsonMaps:
         
@@ -422,6 +422,8 @@ serviceMaps:
        - jsonPath: $.SewerageConnection.connectionNo
 
        - jsonPath: $.SewerageConnection.processInstance.action
+
+       - jsonPath: $.SewerageConnection.totalAmountPaid
        
        - jsonPath: $.SewerageConnection.auditDetails.lastModifiedBy
 

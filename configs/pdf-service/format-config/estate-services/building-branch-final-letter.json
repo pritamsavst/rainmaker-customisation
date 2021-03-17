@@ -61,7 +61,8 @@
                   "alignment": "left"
                 },
                 {
-                  "text": ""
+                  "text": "",
+                  "width":"*"
                 },
                 {
                   "width":"auto",
@@ -71,7 +72,7 @@
                       "bold": true
                     },
                     {
-                      "text": "{{dateOfAllotment}}",
+                      "text": "{{approvalDate}}",
                       "bold": false
                     }
                   ],
@@ -131,7 +132,7 @@
 
                   },
                   {
-                    "text":"{{createdTime}}",
+                    "text":"{{submissionDate}}",
                     "bold":true
                   },
                   {
@@ -209,12 +210,18 @@
             {
                 "margin":[0,20,10,10],
                 "columns": [{
-                        "text": "Endst. MCC/JtCMC/SDE (B)/2010",
+                        "width":"auto",
+                        "text": "Endst. MCC/JtCMC/SDE (B)/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
                         "bold":true
                     },
                     {
+                      "text": "",
+                      "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated:_____________",
                         "style": "pdfContent",
                         "alignment": "right",
@@ -240,7 +247,21 @@
                         "style": "pdfContent"
                     }
                 ]
-            }
+            },
+            {
+              "alignment":"right",
+              "margin":[0,20,0,0],
+              "style":"pdfContent", 
+              "bold":true,
+              "stack":[
+                  {
+                      "text":" Joint Commissioner,"
+                  },
+                  {
+                      "text":"Municipal Corporation Chandigarh "
+                  }
+              ] 
+          }
 
 
         ],

@@ -13,6 +13,18 @@
                     {
                         "direct": [
                             {
+                                "variable": "dateVenueChangeCharges",
+                                "value": {
+                                    "path": "$.paymentInfo.dateVenueChangeCharges"
+                                }
+                            },
+                            {
+                                "variable": "cardNumberLast4",
+                                "value": {
+                                    "path": "$.paymentInfo.cardNumberLast4"
+                                }
+                            },
+                            {
                                 "variable": "accountholderName",
                                 "value": {
                                     "path": "$.bankInfo.accountholderName"
@@ -88,6 +100,12 @@
                                 "variable": "venueSector",
                                 "value": {
                                     "path": "$.bookingDetail.sector"
+                                }
+                            },
+                            {
+                                "variable": "applicationNumber",
+                                "value": {
+                                    "path": "$.bookingDetail.applicationNumber"
                                 }
                             },
                             {
@@ -184,24 +202,6 @@
                                 "variable": "bookingType",
                                 "value": {
                                     "path": "$.bookingDetail.bookingType"
-                                }
-                            },
-                            {
-                                "variable": "clchargeforwest",
-                                "value": {
-                                    "path": "$.OtherDetails.clchargeforwest"
-                                }
-                            },
-                            {
-                                "variable": "westaddress",
-                                "value": {
-                                    "path": "$.OtherDetails.westaddress"
-                                }
-                            },
-                            {
-                                "variable": "clchargeforother",
-                                "value": {
-                                    "path": "$.OtherDetails.clchargeforother"
                                 }
                             },
                             {

@@ -24,6 +24,21 @@
                   } 
                 },
                 {
+                  "variable": "footerLeft",
+                  "url": "https://egov.transerve.com/media/footer_left.png",
+                  "type": "image"
+                },
+                {
+                  "variable": "footerRight",
+                  "url": "https://egov.transerve.com/media/footer_right.png",
+                  "type": "image"
+                },
+                {
+                  "variable": "watermark",
+                  "url": "https://egov.transerve.com/media/logo_watermark.png",
+                  "type": "image"
+                },
+                {
                   "variable": "header",
                   "value": {
                     "path": "PDF_HEADER"

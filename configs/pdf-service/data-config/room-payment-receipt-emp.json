@@ -14,6 +14,24 @@
                     {
                         "direct": [
                             {
+                                "variable": "dateVenueChangeCharges",
+                                "value": {
+                                    "path": "$.paymentInfo.dateVenueChangeCharges"
+                                }
+                            },
+                            {
+                                "variable": "cardNumberLast4",
+                                "value": {
+                                    "path": "$.paymentInfo.cardNumberLast4"
+                                }
+                            },
+                            {
+                                "variable": "bookedRooms",
+                                "value": {
+                                    "path": "$.booking.bookedRooms"
+                                }
+                            },
+                            {
                                 "variable": "accountholderName",
                                 "value": {
                                     "path": "$.bankInfo.accountholderName"
@@ -145,6 +163,12 @@
                                 }
                             },
                             {
+                                "variable": "applicationNumber",
+                                "value": {
+                                    "path": "$.booking.applicationNumber"
+                                }
+                            },
+                            {
                                 "variable": "baseCharge",
                                 "value": {
                                     "path": "$.paymentInfo.baseCharge"
@@ -214,6 +238,30 @@
                                 "variable": "OpCode",
                                 "value": {
                                     "path": "$.emp.OpCode"
+                                }
+                            },
+                            {
+                                "variable": "municipalityName",
+                                "value": {
+                                    "path": "$.tenantInfo.municipalityName"
+                                }
+                            },
+                            {
+                                "variable": "municipalityAddress",
+                                "value": {
+                                    "path": "$.tenantInfo.address"
+                                }
+                            },
+                            {
+                                "variable": "municipalityContact",
+                                "value": {
+                                    "path": "$.tenantInfo.contactNumber"
+                                }
+                            },
+                            {
+                                "variable": "municipalityWebSite",
+                                "value": {
+                                    "path": "$.tenantInfo.webSite"
                                 }
                             }
                         ]

@@ -66,7 +66,6 @@
             },
             {
                 "text": "To,",
-                "fontSize": 12,
                 "margin": [
                     0,
                     20,
@@ -77,11 +76,10 @@
             {
                 "margin": [
                     20,
-                    10,
+                    0,
                     0,
                     10
                 ],
-                "fontSize": 12,
                 "stack": [
                     {
                         "text": "{{applicantName}}"
@@ -114,7 +112,6 @@
                     0,
                     7
                 ],
-                "fontSize": 12,
                 "text": [
                     {
                         "text": "Receipt No : "
@@ -132,7 +129,23 @@
                     0,
                     7
                 ],
-                "fontSize": 12,
+                "text": [
+                    {
+                        "text": "Application No : "
+                    },
+                    {
+                        "text": "{{applicationNumber}}"
+                    }
+                ]
+            },
+            {
+                "bold": true,
+                "margin": [
+                    0,
+                    0,
+                    0,
+                    7
+                ],
                 "text": [
                     {
                         "text": "Subject : "
@@ -163,7 +176,6 @@
                     0,
                     7
                 ],
-                "fontSize": 12,
                 "text": [
                     {
                         "text": "Ref : Permission is herby accorded to use the "
@@ -191,7 +203,6 @@
                     0,
                     7
                 ],
-                "fontSize": 12,
                 "text": [
                     {
                         "text": "Detailed Amount :- "
@@ -245,9 +256,25 @@
                     0,
                     10,
                     0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Date/Venue Change Charges : "
+                    },
+                    {
+                        "text": "{{dateVenueChangeCharges}}",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    10,
+                    0,
                     10
                 ],
-                "fontSize": 12,
                 "columns": [
                     {
                         "text": [
@@ -285,7 +312,6 @@
                     0,
                     7
                 ],
-                "fontSize": 12,
                 "text": [
                     {
                         "text": "Place of Service : "
@@ -317,7 +343,6 @@
                     0,
                     7
                 ],
-                "fontSize": 12,
                 "text": [
                     {
                         "text": "Total Amount :- "
@@ -335,7 +360,6 @@
                     0,
                     0
                 ],
-                "fontSize": 12,
                 "text": [
                     {
                         "text": "Bank Details for Refund : ",
@@ -359,12 +383,7 @@
                     {
                         "text": "{{rBankName}}",
                         "width": "auto"
-                    }
-                ]
-            },
-            {
-                "fontSize": 12,
-                "text": [
+                    },
                     {
                         "text": "    Bank A/C No. :  ",
                         "width": "auto",
@@ -392,7 +411,6 @@
                     0,
                     0
                 ],
-                "fontSize": 12,
                 "ol": [
                     {
                         "margin": [
@@ -655,18 +673,10 @@
                         "text": "The Commissioner Municipal Corporation Chandigarh reserve the right to cancel the booking at any time. If the accommodation is required for isolation home & quarantine center of any other purpose pertaining to COVID-19."
                     }
                 ]
-            },
-            {
-                "text": "Authorized Signatory",
-                "alignment": "right",
-                "margin": [
-                    0,
-                    10
-                ]
             }
         ],
         "defaultStyle": {
-            "fontSize": 10
+            "fontSize": 11
         }
     }
 }

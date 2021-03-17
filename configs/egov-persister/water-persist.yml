@@ -421,7 +421,7 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.plumberInfo.*.auditDetails.lastModifiedTime
 
-    - query: INSERT INTO eg_ws_connectionholder(tenantid, connectionid, userid, status, isprimaryholder, connectionholdertype, holdershippercentage, relationship, name, mobile_No, gender, guardian_name, correspondance_address, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?) ON CONFLICT (connectionid) DO UPDATE SET tenantid =?, userid =?,status =?, isprimaryholder =?, connectionholdertype =?, holdershippercentage =?, relationship=?,  name=?, mobile_No=?, gender=?, guardian_name=?, correspondance_address=?, lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_connectionholder(tenantid, connectionid, userid, status, isprimaryholder, connectionholdertype, holdershippercentage, relationship, name, mobile_No, gender, guardian_name, correspondance_address,proposed_name,proposed_mobile_no,proposed_gender,proposed_guardian_name,proposed_correspondance_address, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?) ON CONFLICT (connectionid) DO UPDATE SET tenantid =?, userid =?,status =?, isprimaryholder =?, connectionholdertype =?, holdershippercentage =?, relationship=?,  name=?, mobile_No=?, gender=?, guardian_name=?, correspondance_address=?,proposed_name=?,proposed_mobile_no=?,proposed_gender=?,proposed_guardian_name=?,proposed_correspondance_address=?, lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.connectionHolders.*
       jsonMaps:      
 
@@ -450,6 +450,16 @@ serviceMaps:
        - jsonPath: $.WaterConnection.connectionHolders.*.fatherOrHusbandName
 
        - jsonPath: $.WaterConnection.connectionHolders.*.correspondenceAddress
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedMobileNo
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedGender
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedGuardianName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedCorrespondanceAddress
 
        - jsonPath: $.WaterConnection.auditDetails.createdBy
 
@@ -482,6 +492,16 @@ serviceMaps:
        - jsonPath: $.WaterConnection.connectionHolders.*.fatherOrHusbandName
 
        - jsonPath: $.WaterConnection.connectionHolders.*.correspondenceAddress
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedMobileNo
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedGender
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedGuardianName
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.proposedCorrespondanceAddress
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -580,8 +600,26 @@ serviceMaps:
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
        - jsonPath: $.WaterConnection.waterProperty.id
+      
+    - query: UPDATE eg_ws_connectionholder SET   lastmodifiedby=?, lastmodifiedtime=?, mobile_no=?, "name"=?, gender=?, correspondance_address=? WHERE connectionid=?;
+      basePath: $.WaterConnection.connectionHolders.*
+      jsonMaps:
 
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
+       - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+       
+       - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.mobileNumber
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.name
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.gender
+
+       - jsonPath: $.WaterConnection.connectionHolders.*.correspondenceAddress
+
+       - jsonPath: $.WaterConnection.id
+
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, total_amount_paid, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, total_amount_paid=?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -597,7 +635,9 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
-          - jsonPath: $.WaterConnection.waterApplication.action
+          - jsonPath: $.WaterConnection.waterApplication.action          
+
+          - jsonPath: $.WaterConnection.waterApplication.totalAmountPaid
           
           - jsonPath: $.WaterConnection.waterApplication.comments
 
@@ -613,7 +653,9 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.waterApplication.applicationStatus          
 
-          - jsonPath: $.WaterConnection.waterApplication.action
+          - jsonPath: $.WaterConnection.waterApplication.action          
+
+          - jsonPath: $.WaterConnection.waterApplication.totalAmountPaid
           
           - jsonPath: $.WaterConnection.waterApplication.comments
 

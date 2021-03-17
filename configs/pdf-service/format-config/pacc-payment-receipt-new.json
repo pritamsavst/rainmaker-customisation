@@ -55,7 +55,7 @@
                     0,
                     0,
                     0,
-                    50
+                    20
                 ]
             },
             {
@@ -114,6 +114,31 @@
             {
                 "columns": [
                     {
+                        "text": "Application No. : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{applicationNumber}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
                         "text": "Location : ",
                         "width": "auto",
                         "margin": [
@@ -139,7 +164,7 @@
             {
                 "columns": [
                     {
-                        "text": "Dept : ",
+                        "text": "Booking Type : ",
                         "width": "auto",
                         "margin": [
                             0,
@@ -254,6 +279,31 @@
                         "width": "auto",
                         "margin": [
                             15,
+                            15,
+                            0,
+                            0
+                        ]
+                    }
+                ]
+            },
+            {
+                "columns": [
+                    {
+                        "text": "Date/Venue Change Charges : ",
+                        "width": "auto",
+                        "margin": [
+                            0,
+                            15,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "{{dateVenueChangeCharges}}",
+                        "width": "auto",
+                        "margin": [
+                            5,
                             15,
                             0,
                             0
@@ -605,11 +655,7 @@
                     {
                         "text": "{{rBankName}}",
                         "width": "auto"
-                    }
-                ]
-            },
-            {
-                "text": [
+                    },
                     {
                         "text": "    Bank A/C No. :  ",
                         "width": "auto",

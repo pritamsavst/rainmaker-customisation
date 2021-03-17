@@ -53,7 +53,7 @@
                     "width":"auto",
                     "text": [
                       {
-                        "text": "No. MC/Estate/2021/ ",
+                        "text": "No. MC/Estate/{{year}}/ ",
                         "bold": true
                       },
                       {
@@ -64,7 +64,8 @@
                     "alignment": "left"
                   },
                   {
-                    "text": ""
+                    "text": "",
+                    "width":"*"
                   },
                   {
                     "width":"auto",
@@ -74,7 +75,7 @@
                         "bold": true
                       },
                       {
-                        "text": "{{dateOfAllotment}}",
+                        "text": "{{approvalDate}}",
                         "bold": false
                       }
                     ],
@@ -136,7 +137,7 @@
                 "margin": [0, 20, 0, 0],
                 "style": "pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "             Enclosed please find herewith original deed with copy of thereof duly executed on {{createdTime}}. You are directed to get it Registered with Sub-Registrar, U.T Chandigarh  and submit the attested/notarized copy of same with this office for record"
+                "text": "             Enclosed please find herewith original deed with copy of thereof duly executed on {{submissionDate}}. You are directed to get it Registered with Sub-Registrar, U.T Chandigarh  and submit the attested/notarized copy of same with this office for record"
             },
             {
                 "style": "pdfContent",
