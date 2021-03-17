@@ -91,6 +91,12 @@
                                 }
                             },
                             {
+                                "variable": "applicationNumber",
+                                "value": {
+                                    "path": "$.bookingDetail.applicationNumber"
+                                }
+                            },
+                            {
                                 "variable": "clCharge",
                                 "value": {
                                     "path": "$.paymentInfo.cleaningCharges"
@@ -163,27 +169,21 @@
                                 }
                             },
                             {
+                                "variable": "dateVenueChangeCharges",
+                                "value": {
+                                    "path": "$.paymentInfo.dateVenueChangeCharges"
+                                }
+                            },
+                            {
+                                "variable": "cardNumberLast4",
+                                "value": {
+                                    "path": "$.paymentInfo.cardNumberLast4"
+                                }
+                            },
+                            {
                                 "variable": "paymentDate",
                                 "value": {
                                     "path": "$.paymentInfo.paymentDate"
-                                }
-                            },
-                            {
-                                "variable": "clchargeforwest",
-                                "value": {
-                                    "path": "$.OtherDetails.clchargeforwest"
-                                }
-                            },
-                            {
-                                "variable": "westaddress",
-                                "value": {
-                                    "path": "$.OtherDetails.westaddress"
-                                }
-                            },
-                            {
-                                "variable": "clchargeforother",
-                                "value": {
-                                    "path": "$.OtherDetails.clchargeforother"
                                 }
                             },
                             {
