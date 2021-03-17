@@ -13,6 +13,18 @@
                     {
                         "direct": [
                             {
+                                "variable": "dateVenueChangeCharges",
+                                "value": {
+                                    "path": "$.paymentInfo.dateVenueChangeCharges"
+                                }
+                            },
+                            {
+                                "variable": "bookedRooms",
+                                "value": {
+                                    "path": "$.bookingDetails.bookedRooms"
+                                }
+                            },
+                            {
                                 "variable": "pdfLogo",
                                 "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
                                 "type": "image"
@@ -93,6 +105,12 @@
                                 "variable": "venueSector",
                                 "value": {
                                     "path": "$.bookingDetails.sector"
+                                }
+                            },
+                            {
+                                "variable": "applicationNumber",
+                                "value": {
+                                    "path": "$.bookingDetails.applicationNumber"
                                 }
                             },
                             {
