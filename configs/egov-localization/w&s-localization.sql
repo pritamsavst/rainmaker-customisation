@@ -1231,6 +1231,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5663-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_VERIFY_AND_FORWARD_TO_SUPERINTENDENT','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5664-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_VERIFY_AND_FORWARD_TO_SDE_APPROVAL','Verify and Forword to SDE Roads','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5665-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_VERIFY_AND_FORWARD_TO_SDE','Verify and Forword to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5666-ac6f-2bc063b75064e','en_IN',,'WF_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_APPLICATION','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5667-ac6f-2bc063b75064e','en_IN',,'WF_VERIFY_AND_FORWARD_TO_SDE_ROADS_APPLICATION','Verify and Forword to SDE Roads','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5668-ac6f-2bc063b75064e','en_IN',,'WF_VERIFY_AND_FORWARD_TO_SDER_ROADS_APPLICATION','Verify and Forword to SDER Roads','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5666-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_APPLICATION','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5667-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDE_ROADS_APPLICATION','Verify and Forword to SDE Roads','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5668-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDER_ROADS_APPLICATION','Verify and Forword to SDER Roads','ch','rainmaker-ws',24226,now(),NULL,NULL);
