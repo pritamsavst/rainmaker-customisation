@@ -1233,4 +1233,11 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5665-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_VERIFY_AND_FORWARD_TO_SDE','Verify and Forword to SDE','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5666-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SUPERINTENDENT_APPLICATION','Verify and Forword to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5667-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDE_ROADS_APPLICATION','Verify and Forword to SDE Roads','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5668-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDER_ROADS_APPLICATION','Verify and Forword to SDER Roads','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5668-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDER_ROADS_APPLICATION','Verify and Forword to SDER Roads','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5669-ac6f-2bc063b75064e','en_IN','WS_BILL_DOWNLOAD','Bill Download','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5670-ac6f-2bc063b75064e','en_IN','WS_OTHERS','Others','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5671-ac6f-2bc063b75064e','en_IN','SEWERAGE_GPA_DOCUMENT','GPA Document','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5672-ac6f-2bc063b75064e','en_IN','SEWERAGE_APPLICANT_PHOTO','Applicant photo','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5673-ac6f-2bc063b75064e','en_IN','SEWERAGE_SELF_ATTESTED_ID_PROOF','Self-attested ID Proof','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5674-ac6f-2bc063b75064e','en_IN','SEWERAGE_REGISTERED_PLUMBER_CERTIFICATE','Registered plumber certificate','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5675-ac6f-2bc063b75064e','en_IN','SEWERAGE_UNDERTAKING_FROM_APPLICANT','Undertaking from applicant','ch','rainmaker-ws',24226,now(),NULL,NULL);
