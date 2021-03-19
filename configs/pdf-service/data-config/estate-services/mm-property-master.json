@@ -14,6 +14,18 @@
                         "type": "image"
                     },
                     {
+                        "variable": "ES_NP_NUMBER_LABEL",
+                        "value": {
+                            "path": "NP_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
                         "variable": "application_label",
                         "value": {
                             "path": "HOME_SEARCH_RESULTS_APP_NO_LABEL"
