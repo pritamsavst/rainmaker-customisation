@@ -132,4 +132,7 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c829', 'en_IN', 'report.bb.totalTransact
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c830', 'en_IN', 'report.bb.totalCollection', 'Total Collection from Booking', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('12d12528-4677-43e8-a828-d29484201202', 'en_IN', 'CORE_COMMON_GOTOHOME', 'Home', 'ch', 'rainmaker-common', 103, '2021-02-08 16:14:22.376', NULL, NULL);
 
