@@ -178,6 +178,7 @@ serviceMaps:
          -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedBy
          -  jsonPath: $.employeePostDetailMap.auditDetails.lastModifiedTime 
          -  jsonPath: $.employeePostDetailMap.orgUnitId
+         -  jsonPath: $.employeePostDetailMap.orgUnitName
          -  jsonPath: $.employeePostDetailMap.post   
          -  jsonPath: $.employeePostDetailMap.employeeName
          -  jsonPath: $.employeePostDetailMap.employeeDesignation
