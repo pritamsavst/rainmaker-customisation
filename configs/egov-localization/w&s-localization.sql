@@ -1244,4 +1244,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5676-ac6f-2bc063b75064e','en_IN','WS_BILL_PAYMENT_STATUS_LABEL','Payment Status','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5677-ac6f-2bc063b75064e','en_IN','WS_BILL_PAYMENT_DUE_AMOUNT_LABEL','Amount Due','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5678-ac6f-2bc063b75064e','en_IN','WS_BILL_PAYMENT_DUE_DATE_LABEL','Due Date','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5679-ac6f-2bc063b75064e','en_IN','WS_COMMON_CONNECTION_BILL_INFO_HEADER','Connection Bill Information','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5679-ac6f-2bc063b75064e','en_IN','WS_COMMON_CONNECTION_BILL_INFO_HEADER','Connection Bill Information','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5680-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_PAY','Pay','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5681-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_VERIFY_AND_FORWARD','Verify and Forward','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5682-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_SEND_BACK_TO_CITIZEN','Send Back to Citizen','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5683-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_REJECT','Reject','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5684-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_EDIT','Edit','ch','rainmaker-ws',24226,now(),NULL,NULL);
