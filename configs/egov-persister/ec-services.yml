@@ -871,4 +871,16 @@ serviceMaps:
       -  query: delete from egec_violation_detail evd where violation_uuid in (select violation_uuid from egec_violation_master evd where not exists (select 1 from egec_challan_master ecm where ecm.violation_uuid =evd.violation_uuid ));   
          basePath: $.RequestBody
       -  query: delete from egec_violation_master evd where not exists (select 1 from egec_challan_master ecm where ecm.violation_uuid =evd.violation_uuid );  
-         basePath: $.RequestBody                          
+         basePath: $.RequestBody
+ - version: 1.0
+   description: Persists challan edit 
+   fromTopic: ec-services-edit-challan
+   isTransaction: true
+   queryMaps:
+
+       - query: UPDATE egec_violation_master SET contact_number=? WHERE violation_uuid=? and tenant_id=?;
+         basePath: RequestBody
+         jsonMaps:
+          - jsonPath: $.RequestBody.contactNumber
+          - jsonPath: $.RequestBody.violationUuid
+          - jsonPath: $.RequestBody.tenantId         

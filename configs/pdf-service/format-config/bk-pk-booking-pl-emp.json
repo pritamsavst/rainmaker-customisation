@@ -55,7 +55,7 @@
                     0,
                     0,
                     0,
-                    30
+                    20
                 ]
             },
             {
@@ -74,7 +74,7 @@
                 "text": "FROM",
                 "margin": [
                     0,
-                    20,
+                    0,
                     0,
                     0
                 ]
@@ -150,6 +150,23 @@
                     },
                     {
                         "text": "{{receiptNo}}"
+                    }
+                ]
+            },
+            {
+                "bold": true,
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Application No : "
+                    },
+                    {
+                        "text": "{{applicationNumber}}"
                     }
                 ]
             },
@@ -271,6 +288,23 @@
                     0,
                     0
                 ],
+                "text": [
+                    {
+                        "text": "Date/Venue Change Charges : "
+                    },
+                    {
+                        "text": "{{dateVenueChangeCharges}}",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
                 "columns": [
                     {
                         "text": [
@@ -345,6 +379,23 @@
                     },
                     {
                         "text": "{{totalPayment}}",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Card No. :- "
+                    },
+                    {
+                        "text": "{{cardNumberLast4}}",
                         "bold": true
                     }
                 ]

@@ -55,7 +55,7 @@
                     0,
                     0,
                     0,
-                    30
+                    20
                 ]
             },
             {
@@ -156,6 +156,23 @@
                 ],
                 "text": [
                     {
+                        "text": "Application No : "
+                    },
+                    {
+                        "text": "{{applicationNumber}}"
+                    }
+                ]
+            },
+            {
+                "bold": true,
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
                         "text": "Subject : "
                     },
                     {
@@ -165,19 +182,7 @@
                         "text": " "
                     },
                     {
-                        "text": "{{noOfACRooms}}"
-                    },
-                    {
-                        "text": " AC "
-                    },
-                    {
-                        "text": " and "
-                    },
-                    {
-                        "text": "{{noOfNonACRooms}}"
-                    },
-                    {
-                        "text": " Non AC rooms"
+                        "text": "{{bookedRooms}}"
                     },
                     {
                         "text": " at "
@@ -211,19 +216,7 @@
                         "text": " "
                     },
                     {
-                        "text": "{{noOfACRooms}}"
-                    },
-                    {
-                        "text": " AC "
-                    },
-                    {
-                        "text": " and "
-                    },
-                    {
-                        "text": "{{noOfNonACRooms}}"
-                    },
-                    {
-                        "text": " Non AC rooms"
+                        "text": "{{bookedRooms}}"
                     },
                     {
                         "text": " at "
@@ -378,6 +371,23 @@
                     },
                     {
                         "text": "{{totalPayment}}",
+                        "bold": true
+                    }
+                ]
+            },
+            {
+                "margin": [
+                    0,
+                    10,
+                    0,
+                    0
+                ],
+                "text": [
+                    {
+                        "text": "Card No. :- "
+                    },
+                    {
+                        "text": "{{cardNumberLast4}}",
                         "bold": true
                     }
                 ]

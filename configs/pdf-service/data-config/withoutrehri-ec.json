@@ -1,0 +1,64 @@
+{
+
+	"key": "withoutrehri-ec",
+	"DataConfigs": {
+		"serviceName": "egov-ec",
+		"version": "1.0.0",
+		"baseKeyPath": "$.withoutrehri.*",
+		"entityIdPath": "$.applicationId",
+		"isCommonTableBorderRequired": true,
+		"mappings": [{
+			"mappings": [{
+				"direct": [{
+						"variable": "variable1",
+						"value": {
+							"path": "$.serialNo"
+						}
+					},
+					{
+						"variable": "variable2",
+						"value": {
+							"path": "$.violatorName"
+						}
+					},
+					{
+						"variable": "variable3",
+						"value": {
+							"path": "$.fatherName"
+						}
+					},
+					{
+						"variable": "variable4",
+						"value": {
+							"path": "$.address"
+						}
+					},
+					{
+						"variable": "variable5",
+						"value": {
+							"path": "$.placeTime"
+						}
+					},
+					{
+						"variable": "article",
+						"value": {
+							"path": "$.article"
+						}
+					},					
+					{
+						"variable": "variable16",
+						"value": {
+							"path": "$.date"
+						}
+					},
+					{
+						"variable": "variable17",
+						"value": {
+							"path": "$.siName"
+						}
+					}
+				]
+			}]
+		}]
+	}
+}

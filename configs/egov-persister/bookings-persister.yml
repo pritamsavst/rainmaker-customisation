@@ -656,5 +656,25 @@ serviceMaps:
 
           - jsonPath: $.Booking.roomsModel.*.id  
           
+
+
+
+
+
+
              
-             
+ - version: 1.0
+   name: bookings
+   description: Persists the Room Details For Community Booking
+   fromTopic: update-room-status
+   isTransaction: true
+   queryMaps:
+       
+       - query: UPDATE public.bk_rooms_model SET room_status=? WHERE community_application_number=?;
+
+         basePath: Booking.*.roomsModel.*
+         jsonMaps:
+          - jsonPath: $.Booking.roomsModel.*.roomStatus
+
+          - jsonPath: $.Booking.roomsModel.*.communityApplicationNumber
+                       
