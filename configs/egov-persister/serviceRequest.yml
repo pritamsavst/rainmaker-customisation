@@ -187,7 +187,24 @@ serviceMaps:
          -  jsonPath: $.RequestBody.reference_uuid
          -  jsonPath: $.RequestBody.createdBy
          -  jsonPath: $.RequestBody.createdTime
-            type: LONG                      
-  
+            type: LONG          
+                        
+  - version: 1.0
+    description: "delete document eg_hc_service_request"
+    fromTopic: hc-service-delete-doc
+    isTransaction: true 
+    queryMaps:
+    - query: UPDATE eg_hc_service_request SET  service_request_document=to_json(?::json), lastmodifiedby=?, lastmodifiedtime=? WHERE service_request_id=?;
+      basePath: RequestBody
+      jsonMaps:
+       -  jsonPath: $.RequestBody.serviceMedia
+       -  jsonPath: $.RequestBody.lastModifiedBy
+       -  jsonPath: $.RequestBody.lastModifiedTime
+       -  jsonPath: $.RequestBody.service_request_id  
+    - query: DELETE FROM eg_wf_document_v2 WHERE filestoreid=? and tenantid=?;
+      basePath: RequestBody
+      jsonMaps:
+       -  jsonPath: $.RequestBody.fileStoreId
+       -  jsonPath: $.RequestBody.tenantId       
       
   
