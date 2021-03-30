@@ -761,7 +761,7 @@ serviceMaps:
          -  jsonPath: $.materialReceipt.*.receivedBy
          -  jsonPath: $.materialReceipt.*.designation
          -  jsonPath: $.materialReceipt.*.mrnStatus
-         -  jsonPath: $.materialReceipt.*.inspectedByexternalPoNumber
+         -  jsonPath: $.materialReceipt.*.inspectedBy
          -  jsonPath: $.materialReceipt.*.inspectionDate
             dbType: LONG
          -  jsonPath: $.materialReceipt.*.inspectionRemarks

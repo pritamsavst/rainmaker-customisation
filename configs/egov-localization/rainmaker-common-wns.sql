@@ -146,6 +146,17 @@ DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_EE_R
 --missing code for menu
 DELETE FROM public.message WHERE code = 'ACTION_TEST_DOWNLOAD'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'ACTION_TEST_UPLOAD'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_PAYMENT'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_INITIATED'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_DOCUMENT_VERIFICATION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SDE_ROADS_APPROVAL'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SDE_APPROVAL'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_EE_APPROVAL'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SUPERINTENDENT_APPROVAL'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_EE_REVIEW'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SDE_APPROVAL_AFTER_EE'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_DOCUMENT_VERIFICATION_BY_SDO'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_SW_SEWERAGE'and module='rainmaker-common' and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -289,6 +300,18 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6138-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_CONNECTION_CLOSE','Pending for Close Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6139-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PENDING_FOR_EE_REVIEW_APPLICATION','Pending for EE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6140-ac6f-2bc063b75064e','en_IN','ACTION_TEST_DOWNLOAD','Download','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6141-ac6f-2bc063b75064e','en_IN','ACTION_TEST_UPLOAD','Upload','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6141-ac6f-2bc063b75064e','en_IN','ACTION_TEST_UPLOAD','Upload','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6142-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6143-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6144-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_DOCUMENT_VERIFICATION','Pending For Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6145-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SDE_ROADS_APPROVAL','Pending For SDE Roads Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6146-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SDE_APPROVAL','Pending For SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6147-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_EE_APPROVAL','Pending For EE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6149-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SUPERINTENDENT_APPROVAL','Pending For Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6150-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_EE_REVIEW','Pending For EE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6151-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SDE_APPROVAL_AFTER_EE','Pending For SDE Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6152-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_DOCUMENT_VERIFICATION_BY_SDO','Pending For Document Verification by SDO','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6153-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_SW_SEWERAGE','Sewarage Connection','ch','rainmaker-common',24226,now(),NULL,NULL);
+
 
 
