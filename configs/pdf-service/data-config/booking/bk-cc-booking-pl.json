@@ -1,36 +1,17 @@
 {
-    "key": "room-payment-receipt-emp",
+    "key": "bk-cc-booking-pl",
     "DataConfigs": {
-        "serviceName": "rainmaker-tl",
+        "serviceName": "rainmaker-bk",
         "version": "1.0.0",
         "baseKeyPath": "$.BookingInfo.*",
-        "entityIdPath": "$.booking.bkApplicationNumber",
+        "entityIdPath": "$.bookingDetail.applicationNumber",
         "isCommonTableBorderRequired": true,
         "mappings": [
             {
-                "topic": "tl-pdf-generation",
-                "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
+                "topic": "bk-pdf-generation",
                 "mappings": [
                     {
                         "direct": [
-                            {
-                                "variable": "dateVenueChangeCharges",
-                                "value": {
-                                    "path": "$.paymentInfo.dateVenueChangeCharges"
-                                }
-                            },
-                            {
-                                "variable": "cardNumberLast4",
-                                "value": {
-                                    "path": "$.paymentInfo.cardNumberLast4"
-                                }
-                            },
-                            {
-                                "variable": "bookedRooms",
-                                "value": {
-                                    "path": "$.booking.bookedRooms"
-                                }
-                            },
                             {
                                 "variable": "accountholderName",
                                 "value": {
@@ -57,8 +38,50 @@
                             },
                             {
                                 "variable": "pdfLogo",
-                                "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"
+                            },
+                            {
+                                "variable": "municipalityName",
+                                "value": {
+                                    "path": "$.tenantInfo.municipalityName"
+                                }
+                            },
+                            {
+                                "variable": "municipalityAddress",
+                                "value": {
+                                    "path": "$.tenantInfo.address"
+                                }
+                            },
+                            {
+                                "variable": "municipalityContact",
+                                "value": {
+                                    "path": "$.tenantInfo.contactNumber"
+                                }
+                            },
+                            {
+                                "variable": "municipalityWebSite",
+                                "value": {
+                                    "path": "$.tenantInfo.webSite"
+                                }
+                            },
+                            {
+                                "variable": "applicantName",
+                                "value": {
+                                    "path": "$.applicantDetail.name"
+                                }
+                            },
+                            {
+                                "variable": "applicantAddress1",
+                                "value": {
+                                    "path": "$.applicantDetail.permanentAddress"
+                                }
+                            },
+                            {
+                                "variable": "applicantAddress2",
+                                "value": {
+                                    "path": "$.applicantDetail.permanentCity"
+                                }
                             },
                             {
                                 "variable": "receiptNo",
@@ -67,117 +90,39 @@
                                 }
                             },
                             {
-                                "variable": "paymentDate",
+                                "variable": "venueName",
                                 "value": {
-                                    "path": "$.paymentInfo.paymentDate"
-                                }
-                            },
-                            {
-                                "variable": "applicantName",
-                                "value": {
-                                    "path": "$.applicantDetails.name"
-                                }
-                            },
-                            {
-                                "variable": "bkLocation",
-                                "value": {
-                                    "path": "$.booking.bkLocation"
-                                }
-                            },
-                            {
-                                "variable": "bkDept",
-                                "value": {
-                                    "path": "$.booking.bkDept"
-                                }
-                            },
-                            {
-                                "variable": "noOfAcRooms",
-                                "value": {
-                                    "path": "$.booking.noOfAcRooms"
-                                }
-                            },
-                            {
-                                "variable": "noOfNonAcRooms",
-                                "value": {
-                                    "path": "$.booking.noOfNonAcRooms"
+                                    "path": "$.bookingDetail.venueName"
                                 }
                             },
                             {
                                 "variable": "bookingPurpose",
                                 "value": {
-                                    "path": "$.booking.bookingPurpose"
+                                    "path": "$.bookingDetail.bookingPurpose"
                                 }
                             },
                             {
-                                "variable": "bkStartDate",
+                                "variable": "venueSector",
                                 "value": {
-                                    "path": "$.booking.bkStartDate"
-                                }
-                            },
-                            {
-                                "variable": "bkEndDate",
-                                "value": {
-                                    "path": "$.booking.bkEndDate"
-                                }
-                            },
-                            {
-                                "variable": "paymentType",
-                                "value": {
-                                    "path": "$.paymentInfo.paymentType"
-                                }
-                            },
-                            {
-                                "variable": "facilitationCharge",
-                                "value": {
-                                    "path": "$.paymentInfo.facilitationCharge"
-                                }
-                            },
-                            {
-                                "variable": "refundableCharges",
-                                "value": {
-                                    "path": "$.paymentInfo.refundableCharges"
-                                }
-                            },
-                            {
-                                "variable": "bkDiscountType",
-                                "value": {
-                                    "path": "$.paymentInfo.discType"
-                                }
-                            },
-                            {
-                                "variable": "custGSTN",
-                                "value": {
-                                    "path": "$.paymentInfo.custGSTN"
-                                }
-                            },
-                            {
-                                "variable": "mcGSTN",
-                                "value": {
-                                    "path": "$.paymentInfo.mcGSTN"
-                                }
-                            },
-                            {
-                                "variable": "placeOfService",
-                                "value": {
-                                    "path": "$.booking.placeOfService"
+                                    "path": "$.bookingDetail.sector"
                                 }
                             },
                             {
                                 "variable": "applicationNumber",
                                 "value": {
-                                    "path": "$.booking.applicationNumber"
-                                }
-                            },
-                            {
-                                "variable": "baseCharge",
-                                "value": {
-                                    "path": "$.paymentInfo.baseCharge"
+                                    "path": "$.bookingDetail.applicationNumber"
                                 }
                             },
                             {
                                 "variable": "clCharge",
                                 "value": {
                                     "path": "$.paymentInfo.cleaningCharges"
+                                }
+                            },
+                            {
+                                "variable": "baseCharge",
+                                "value": {
+                                    "path": "$.paymentInfo.baseCharge"
                                 }
                             },
                             {
@@ -199,15 +144,45 @@
                                 }
                             },
                             {
-                                "variable": "bankName",
+                                "variable": "refundableCharges",
                                 "value": {
-                                    "path": "$.paymentInfo.bankName"
+                                    "path": "$.paymentInfo.refundableCharges"
                                 }
                             },
                             {
-                                "variable": "transactionId",
+                                "variable": "dateVenueChangeCharges",
                                 "value": {
-                                    "path": "$.paymentInfo.transactionId"
+                                    "path": "$.paymentInfo.dateVenueChangeCharges"
+                                }
+                            },
+                            {
+                                "variable": "custGSTN",
+                                "value": {
+                                    "path": "$.applicantDetail.custGSTN"
+                                }
+                            },
+                            {
+                                "variable": "mcGSTN",
+                                "value": {
+                                    "path": "$.tenantInfo.mcGSTN"
+                                }
+                            },
+                            {
+                                "variable": "placeOfService",
+                                "value": {
+                                    "path": "$.applicantDetail.placeOfService"
+                                }
+                            },
+                            {
+                                "variable": "stateCode",
+                                "value": {
+                                    "path": "$.tenantInfo.statecode"
+                                }
+                            },
+                            {
+                                "variable": "hsnCode",
+                                "value": {
+                                    "path": "$.tenantInfo.hsncode"
                                 }
                             },
                             {
@@ -217,27 +192,57 @@
                                 }
                             },
                             {
-                                "variable": "totalPaymentInWords",
+                                "variable": "paymentDate",
                                 "value": {
-                                    "path": "$.paymentInfo.totalPaymentInWords"
+                                    "path": "$.paymentInfo.paymentDate"
                                 }
                             },
                             {
-                                "variable": "currentDate",
+                                "variable": "clchargeforwest",
                                 "value": {
-                                    "path": "$.paymentInfo.currentDate"
+                                    "path": "$.OtherDetails.clchargeforwest"
                                 }
                             },
                             {
-                                "variable": "samparkAdd",
+                                "variable": "westaddress",
                                 "value": {
-                                    "path": "$.emp.samparkAdd"
+                                    "path": "$.OtherDetails.westaddress"
                                 }
                             },
                             {
-                                "variable": "OpCode",
+                                "variable": "clchargeforother",
                                 "value": {
-                                    "path": "$.emp.OpCode"
+                                    "path": "$.OtherDetails.clchargeforother"
+                                }
+                            },
+                            {
+                                "variable": "bookingPeriod",
+                                "value": {
+                                    "path": "$.bookingDetail.bookingPeriod"
+                                }
+                            },
+                            {
+                                "variable": "bookingType",
+                                "value": {
+                                    "path": "$.bookingDetail.bookingType"
+                                }
+                            },
+                            {
+                                "variable": "generatedBy",
+                                "value": {
+                                    "path": "$.generatedBy.generatedBy"
+                                }
+                            },
+                            {
+                                "variable": "approvedBy",
+                                "value": {
+                                    "path": "$.approvedBy.approvedBy"
+                                }
+                            },
+                            {
+                                "variable": "approvedByRole",
+                                "value": {
+                                    "path": "$.approvedBy.role"
                                 }
                             },
                             {

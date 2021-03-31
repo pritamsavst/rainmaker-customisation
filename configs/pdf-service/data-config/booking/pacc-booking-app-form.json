@@ -1,5 +1,5 @@
 {
-    "key": "oswmcc-booking-app-form",
+    "key": "pacc-booking-app-form",
     "DataConfigs": {
         "serviceName": "rainmaker-bk",
         "version": "1.0.0",
@@ -16,12 +16,6 @@
                                 "variable": "applicantName",
                                 "value": {
                                     "path": "$.applicantDetail.name"
-                                }
-                            },
-                            {
-                                "variable": "applicationStatus",
-                                "value": {
-                                    "path": "$.bookingDetail.status"
                                 }
                             },
                             {
@@ -91,15 +85,51 @@
                                 }
                             },
                             {
+                                "variable": "bookingParkDim",
+                                "value": {
+                                    "path": "$.bookingDetail.parkDim"
+                                }
+                            },
+                            {
                                 "variable": "baseCharge",
                                 "value": {
                                     "path": "$.feeDetail.baseCharge"
                                 }
                             },
                             {
-                                "variable": "taxes",
+                                "variable": "cleaningCharge",
                                 "value": {
-                                    "path": "$.feeDetail.taxes"
+                                    "path": "$.feeDetail.cleaningCharge"
+                                }
+                            },
+                            {
+                                "variable": "surcharges",
+                                "value": {
+                                    "path": "$.feeDetail.surcharges"
+                                }
+                            },
+                            {
+                                "variable": "facilitationCharge",
+                                "value": {
+                                    "path": "$.feeDetail.facilitationCharge"
+                                }
+                            },
+                            {
+                                "variable": "utgst",
+                                "value": {
+                                    "path": "$.feeDetail.utgst"
+                                }
+                            },
+                            {
+                                "variable": "cgst",
+                                "value": {
+                                    "path": "$.feeDetail.cgst"
+                                }
+                            },
+                            {
+                                "variable": "gst",
+                                "value": {
+                                    "path": "$.feeDetail.gst"
                                 }
                             },
                             {
@@ -115,9 +145,21 @@
                                 }
                             },
                             {
+                                "variable": "generatedDateTime",
+                                "value": {
+                                    "path": "$.generatedBy.generatedDateTime"
+                                }
+                            },
+                            {
                                 "variable": "pdfLogo",
-                                "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"
+                            },
+                            {
+                                "variable": "documentName",
+                                "value": {
+                                    "path": "$.documentDetail.documentName"
+                                }
                             }
                         ]
                     }

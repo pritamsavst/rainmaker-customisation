@@ -1,5 +1,5 @@
 {
-    "key": "room-booking-app-form",
+    "key": "oswmcc-booking-app-form",
     "DataConfigs": {
         "serviceName": "rainmaker-bk",
         "version": "1.0.0",
@@ -16,6 +16,12 @@
                                 "variable": "applicantName",
                                 "value": {
                                     "path": "$.applicantDetail.name"
+                                }
+                            },
+                            {
+                                "variable": "applicationStatus",
+                                "value": {
+                                    "path": "$.bookingDetail.status"
                                 }
                             },
                             {
@@ -85,69 +91,15 @@
                                 }
                             },
                             {
-                                "variable": "noOfACRooms",
-                                "value": {
-                                    "path": "$.bookingDetail.noOfACRooms"
-                                }
-                            },
-                            {
-                                "variable": "noOfNonACRooms",
-                                "value": {
-                                    "path": "$.bookingDetail.noOfNonACRooms"
-                                }
-                            },
-                            {
-                                "variable": "bookingPeriodOfACRooms",
-                                "value": {
-                                    "path": "$.bookingDetail.bkPeriodOfACRooms"
-                                }
-                            },
-                            {
-                                "variable": "bookingPeriodOfNonACRooms",
-                                "value": {
-                                    "path": "$.bookingDetail.bkPeriodOfNonACRooms"
-                                }
-                            },
-                            {
                                 "variable": "baseCharge",
                                 "value": {
                                     "path": "$.feeDetail.baseCharge"
                                 }
                             },
                             {
-                                "variable": "cleaningCharge",
+                                "variable": "taxes",
                                 "value": {
-                                    "path": "$.feeDetail.cleaningCharge"
-                                }
-                            },
-                            {
-                                "variable": "surcharges",
-                                "value": {
-                                    "path": "$.feeDetail.surcharges"
-                                }
-                            },
-                            {
-                                "variable": "facilitationCharge",
-                                "value": {
-                                    "path": "$.feeDetail.facilitationCharge"
-                                }
-                            },
-                            {
-                                "variable": "utgst",
-                                "value": {
-                                    "path": "$.feeDetail.utgst"
-                                }
-                            },
-                            {
-                                "variable": "cgst",
-                                "value": {
-                                    "path": "$.feeDetail.cgst"
-                                }
-                            },
-                            {
-                                "variable": "gst",
-                                "value": {
-                                    "path": "$.feeDetail.gst"
+                                    "path": "$.feeDetail.taxes"
                                 }
                             },
                             {
@@ -163,21 +115,9 @@
                                 }
                             },
                             {
-                                "variable": "generatedDateTime",
-                                "value": {
-                                    "path": "$.generatedBy.generatedDateTime"
-                                }
-                            },
-                            {
                                 "variable": "pdfLogo",
-                                "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"
-                            },
-                            {
-                                "variable": "documentName",
-                                "value": {
-                                    "path": "$.documentDetail.documentName"
-                                }
                             }
                         ]
                     }

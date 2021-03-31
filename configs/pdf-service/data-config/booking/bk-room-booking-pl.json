@@ -1,5 +1,5 @@
 {
-    "key": "bk-pk-booking-pl",
+    "key": "bk-room-booking-pl",
     "DataConfigs": {
         "serviceName": "rainmaker-bk",
         "version": "1.0.0",
@@ -19,9 +19,10 @@
                                 }
                             },
                             {
-                                "variable": "pdfLogo",
-                                "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
-                                "type": "image"
+                                "variable": "bookedRooms",
+                                "value": {
+                                    "path": "$.bookingDetails.bookedRooms"
+                                }
                             },
                             {
                                 "variable": "municipalityName",
@@ -50,19 +51,19 @@
                             {
                                 "variable": "applicantName",
                                 "value": {
-                                    "path": "$.applicantDetail.name"
+                                    "path": "$.applicantDetails.name"
                                 }
                             },
                             {
                                 "variable": "applicantAddress1",
                                 "value": {
-                                    "path": "$.applicantDetail.permanentAddress"
+                                    "path": "$.applicantDetails.permanentAddress"
                                 }
                             },
                             {
                                 "variable": "applicantAddress2",
                                 "value": {
-                                    "path": "$.applicantDetail.permanentCity"
+                                    "path": "$.applicantDetails.permanentCity"
                                 }
                             },
                             {
@@ -72,27 +73,39 @@
                                 }
                             },
                             {
+                                "variable": "noOfACRooms",
+                                "value": {
+                                    "path": "$.bookingDetails.noOfACRooms"
+                                }
+                            },
+                            {
+                                "variable": "noOfNonACRooms",
+                                "value": {
+                                    "path": "$.bookingDetails.noOfNonACRooms"
+                                }
+                            },
+                            {
                                 "variable": "venueName",
                                 "value": {
-                                    "path": "$.bookingDetail.venueName"
+                                    "path": "$.bookingDetails.venueName"
                                 }
                             },
                             {
                                 "variable": "bookingPurpose",
                                 "value": {
-                                    "path": "$.bookingDetail.bookingPurpose"
+                                    "path": "$.bookingDetails.bookingPurpose"
                                 }
                             },
                             {
                                 "variable": "venueSector",
                                 "value": {
-                                    "path": "$.bookingDetail.sector"
+                                    "path": "$.bookingDetails.sector"
                                 }
                             },
                             {
                                 "variable": "applicationNumber",
                                 "value": {
-                                    "path": "$.bookingDetail.applicationNumber"
+                                    "path": "$.bookingDetails.applicationNumber"
                                 }
                             },
                             {
@@ -146,19 +159,19 @@
                             {
                                 "variable": "placeOfService",
                                 "value": {
-                                    "path": "$.applicantDetail.placeOfService"
+                                    "path": "$.applicantDetails.placeOfService"
                                 }
                             },
                             {
                                 "variable": "stateCode",
                                 "value": {
-                                    "path": "$.bookingDetail.statecode"
+                                    "path": "$.tenantInfo.statecode"
                                 }
                             },
                             {
                                 "variable": "hsnCode",
                                 "value": {
-                                    "path": "$.bookingDetail.hsncode"
+                                    "path": "$.tenantInfo.hsncode"
                                 }
                             },
                             {
@@ -176,19 +189,19 @@
                             {
                                 "variable": "applicationDate",
                                 "value": {
-                                    "path": "$.bookingDetail.applicationDate"
+                                    "path": "$.bookingDetails.applicationDate"
                                 }
                             },
                             {
                                 "variable": "bookingPeriod",
                                 "value": {
-                                    "path": "$.bookingDetail.bookingPeriod"
+                                    "path": "$.bookingDetails.bookingPeriod"
                                 }
                             },
                             {
                                 "variable": "bookingType",
                                 "value": {
-                                    "path": "$.bookingDetail.bookingType"
+                                    "path": "$.bookingDetails.bookingType"
                                 }
                             },
                             {
@@ -199,7 +212,7 @@
                             },
                             {
                                 "variable": "pdfLogo",
-                                "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"
                             },
                             {
