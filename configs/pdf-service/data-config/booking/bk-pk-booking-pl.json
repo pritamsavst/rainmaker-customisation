@@ -1,5 +1,5 @@
 {
-    "key": "bk-pk-booking-pl-emp",
+    "key": "bk-pk-booking-pl",
     "DataConfigs": {
         "serviceName": "rainmaker-bk",
         "version": "1.0.0",
@@ -19,45 +19,27 @@
                                 }
                             },
                             {
-                                "variable": "cardNumberLast4",
+                                "variable": "municipalityName",
                                 "value": {
-                                    "path": "$.paymentInfo.cardNumberLast4"
+                                    "path": "$.tenantInfo.municipalityName"
                                 }
                             },
                             {
-                                "variable": "accountholderName",
+                                "variable": "municipalityAddress",
                                 "value": {
-                                    "path": "$.bankInfo.accountholderName"
+                                    "path": "$.tenantInfo.address"
                                 }
                             },
                             {
-                                "variable": "rBankName",
+                                "variable": "municipalityContact",
                                 "value": {
-                                    "path": "$.bankInfo.rBankName"
+                                    "path": "$.tenantInfo.contactNumber"
                                 }
                             },
                             {
-                                "variable": "rBankACNo",
+                                "variable": "municipalityWebSite",
                                 "value": {
-                                    "path": "$.bankInfo.rBankACNo"
-                                }
-                            },
-                            {
-                                "variable": "rIFSCCode",
-                                "value": {
-                                    "path": "$.bankInfo.rIFSCCode"
-                                }
-                            },
-                            {
-                                "variable": "samparkName",
-                                "value": {
-                                    "path": "$.emp.samparkName"
-                                }
-                            },
-                            {
-                                "variable": "samparkaddress",
-                                "value": {
-                                    "path": "$.emp.samparkaddress"
+                                    "path": "$.tenantInfo.webSite"
                                 }
                             },
                             {
@@ -147,13 +129,13 @@
                             {
                                 "variable": "custGSTN",
                                 "value": {
-                                    "path": "$.applicantDetail.custGSTN"
+                                    "path": "$.paymentInfo.custGSTN"
                                 }
                             },
                             {
                                 "variable": "mcGSTN",
                                 "value": {
-                                    "path": "$.tenantInfo.mcGSTN"
+                                    "path": "$.paymentInfo.mcGSTN"
                                 }
                             },
                             {
@@ -165,13 +147,13 @@
                             {
                                 "variable": "stateCode",
                                 "value": {
-                                    "path": "$.tenantInfo.statecode"
+                                    "path": "$.bookingDetail.statecode"
                                 }
                             },
                             {
                                 "variable": "hsnCode",
                                 "value": {
-                                    "path": "$.tenantInfo.hsncode"
+                                    "path": "$.bookingDetail.hsncode"
                                 }
                             },
                             {
@@ -212,7 +194,7 @@
                             },
                             {
                                 "variable": "pdfLogo",
-                                "url": "http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                                "url": "https://egov.chandigarhsmartcity.in/employee/static/media/pblogo.2feffb62.png",
                                 "type": "image"
                             },
                             {
@@ -228,27 +210,27 @@
                                 }
                             },
                             {
-                                "variable": "municipalityName",
+                                "variable": "accountholderName",
                                 "value": {
-                                    "path": "$.tenantInfo.municipalityName"
+                                    "path": "$.bankInfo.accountholderName"
                                 }
                             },
                             {
-                                "variable": "municipalityAddress",
+                                "variable": "rBankName",
                                 "value": {
-                                    "path": "$.tenantInfo.address"
+                                    "path": "$.bankInfo.rBankName"
                                 }
                             },
                             {
-                                "variable": "municipalityContact",
+                                "variable": "rBankACNo",
                                 "value": {
-                                    "path": "$.tenantInfo.contactNumber"
+                                    "path": "$.bankInfo.rBankACNo"
                                 }
                             },
                             {
-                                "variable": "municipalityWebSite",
+                                "variable": "rIFSCCode",
                                 "value": {
-                                    "path": "$.tenantInfo.webSite"
+                                    "path": "$.bankInfo.rIFSCCode"
                                 }
                             }
                         ]
