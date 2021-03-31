@@ -1,0 +1,640 @@
+{
+  "key":"ws-bill-receipt",
+  "config":{
+      "content": [
+        {
+          "style": "tl-head",
+          "table": {
+            "widths": [
+              50,
+              "*",
+              100
+            ],
+            "body": [
+              [
+                {
+                  "image": "{{variable33}}",
+                  "width": 50,
+                  "margin": [
+                    45,
+                    20,
+                    10,
+                    10
+                  ]
+                },
+                {
+                  "stack": [
+                    {
+                      "text": "Municipal Corporation Chandigarh",
+                      "style": "receipt-logo-header"
+                    },
+                    {
+                      "text": "Water And Sewerage Bill Receipt",
+                      "style": "receipt-logo-sub-header"
+                    }
+                  ],
+                  "alignment": "center",
+                  "margin": [
+                    56,
+                    23,
+                    0,
+                    0
+                  ]
+                },
+				{
+                  "stack": [
+                    {
+                      "text": "PH - {{div}} SD - {{subDiv}}",
+                      "style": "receipt-logo-sub-header"
+                    }
+                  ],
+                  "alignment": "center",
+                  "margin": [
+                    -90,
+                    70,
+                    10,
+                    0
+                  ]
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders"
+        },
+        {
+          "style": "pt-reciept-citizen-header",
+          "columns": [
+            {
+              "text": [
+                {
+                  "text": " ",
+                  "bold": true
+                },
+                {
+                  "text": " ",
+                  "bold": false
+                }
+              ],
+              "alignment": "left"
+            },
+            {
+              "text": [
+                {
+                  "text": " ",
+                  "bold": true
+                },
+                {
+                  "text": " ",
+                  "bold": false
+                }
+              ],
+              "alignment": "right"
+            }
+          ]
+        },
+        {
+          "text": "",
+          "style": "pt-reciept-citizen-subheader"
+        },
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Application Number",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{applicationNumber}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Receipt Number",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{receiptNumber}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        }  ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Activity Type",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{activityType}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "GST No.",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{gstNumber}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Applicant Name",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{applicantName}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Applicant Address",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{applicantAddress}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Payment Receipt Date",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{paymentReceiptDate}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Due Amount",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{dueAmount}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Paid Amount",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{paidAmount}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
+                  "text": "Status",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{status}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+		{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": " ",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+		{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": " ",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+		{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "Notes :",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 13,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+			{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "1. The provisional connections can be disconnected and cancel in case of any litigation / irregularities found at any  time  without any notice and no claim will be entertained by MC Chandigarh in any court case (Ref. Water Bye-Laws amendments 2020). ",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 11,
+					"bold": false,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } 
+		,{
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["100%"],
+            "body": [
+              [
+                {
+                  "text": "2.This is computerized generated Receipt and need no signature.",
+                  "border": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+				    "fontSize": 11,
+					"bold": false,
+                  "style": "receipt-table-key"
+                }
+              ]
+            ]
+          },
+          "layout": {}
+        } 
+		
+      ],
+      "styles": {
+        "tl-head": {
+          "fillColor": "#F2F2F2",
+          "margin": [
+            -41,
+            -41,
+            -41,
+            0
+          ]
+        },
+        "pt-reciept-citizen-header": {
+          "fontSize": 12,
+          "bold": true,
+          "margin": [
+            0,
+            8,
+            0,
+            0
+          ],
+          "color": "#484848"
+        },
+        "pt-reciept-citizen-subheader": {
+          "fontSize": 10,
+          "bold": true,
+          "margin": [
+            0,
+            16,
+            0,
+            8
+          ],
+          "color": "#484848"
+        },
+        "pt-reciept-citizen-table": {
+          "fontSize": 10,
+          "color": "#484848"
+        },
+        "receipt-assess-table": {
+          "fontSize": 10,
+          "color": "#484848",
+          "margin": [
+            0,
+            8,
+            0,
+            0
+          ]
+        },
+        "receipt-assess-table-header": {
+          "bold": true,
+          "fillColor": "#D8D8D8",
+          "color": "#484848"
+        },
+        "receipt-header-details": {
+          "fontSize": 9,
+          "margin": [
+            0,
+            0,
+            0,
+            8
+          ],
+          "color": "#484848"
+        },
+        "receipt-table-key": {
+          "color": "#484848",
+          "bold": true
+        },
+        "receipt-table-value": {
+          "color": "#484848"
+        },
+        "receipt-logo-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 16,
+          "bold": true,
+          "letterSpacing": 0.74
+        },
+        "receipt-logo-sub-header": {
+          "color": "#484848",
+          "fontFamily": "Roboto",
+          "fontSize": 13,
+          "letterSpacing": 1.6,
+          "margin": [
+            0,
+            6,
+            0,
+            0
+          ]
+        },
+        "receipt-footer": {
+          "color": "#484848",
+          "fontSize": 8
+        },
+        "receipt-no": {
+          "color": "#484848",
+          "fontSize": 10
+        },
+        "receipt-approver": {
+          "fontSize": 10,
+          "bold": true,
+          "margin": [
+            0,
+            60,
+            0,
+            8
+          ],
+          "color": "#484848"
+        }
+      }
+    }
+}
+  
