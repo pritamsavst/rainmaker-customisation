@@ -203,8 +203,7 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/payslip.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/store-asset-report-closing-balance.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/store-asset-stock-report.json",
-	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/withoutrehri-ec.json",
-	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/ws-bill-receipt.json"
+	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/withoutrehri-ec.json"
    ],
    "formatconfig": [
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/firenoc-receipt.json",
@@ -410,7 +409,6 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/payslip.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/store-asset-report-closing-balance.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/store-asset-stock-report.json",
-	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/withoutrehri-ec.json",
-	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/ws-bill-receipt.json"
+	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/withoutrehri-ec.json"
    ]
 }
