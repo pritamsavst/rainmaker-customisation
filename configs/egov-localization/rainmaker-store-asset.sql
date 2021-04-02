@@ -2365,4 +2365,4 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66915e', 'en_IN', 'STORE_VALIDATION_EXTERNAL_PO_NUMBER', 'Enter valid external PO number', 'ch', 'rainmaker-store-asset', 24226, '2020-11-04 12:05:20.409', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66916e', 'en_IN', 'STORE_MATERIAL_INDENT_NOTE_QTY_ISSUED_EDIT', 'Balence Indent Quantity', 'ch', 'rainmaker-store-asset', 24226, '2020-11-04 12:05:20.409', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-st6f-2bc063b66916e', 'en_IN', 'STORE_MATERIAL_INDENT_NOTE_QTY_ISSUED_EDIT', 'Balence Indent Quantity', 'ch', 'rainmaker-store-asset', 24226, '2020-11-04 12:05:20.409', NULL, NULL);
