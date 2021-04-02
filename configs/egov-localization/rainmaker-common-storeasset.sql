@@ -136,8 +136,8 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00043','en_IN', 'WF_CARETAKER ISSUE NOTE_EDIT','Edit','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4sa6-95f6-382ec3e00044','en_IN', 'ACTION_TEST_INDENT_TRANSFER_OUTWARD','Material Transfer Inword','ch','rainmaker-common', '94');
+( '42e17862-dbd8-4sa6-95f6-382ec3e00044','en_IN', 'ACTION_TEST_INDENT_TRANSFER_OUTWARD','Material Transfer Inward','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4sa6-95f6-382ec3e00045','en_IN', 'ACTION_TEST_INDENT_TRANSFER_INWARD','Material Transfer Outword','ch','rainmaker-common', '94');
+( '42e17862-dbd8-4sa6-95f6-382ec3e00045','en_IN', 'ACTION_TEST_INDENT_TRANSFER_INWARD','Material Transfer Outward','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4sa6-95f6-382ec3e00046','en_IN', 'ACTION_TEST_OPENNING_BALENCE_REPORT','Openning Balence Report','ch','rainmaker-common', '94');
+( '42e17862-dbd8-4sa6-95f6-382ec3e00046','en_IN', 'ACTION_TEST_OPENNING_BALENCE_REPORT','Openning Balance Report','ch','rainmaker-common', '94');
