@@ -489,9 +489,15 @@
                         "text": "Endst. No. ___________ MC/Estate/{{year}}/11739",
                         "style": "pdfContent",
                         "alignment": "left",
-                        "bold":true
+                        "bold":true,
+                        "width":"auto"
                     },
                     {
+                        "text":"",
+                        "width":"*"
+                    },
+                    {
+                        "width":"auto",
                         "text": "Dated: ________",
                         "style": "pdfContent",
                         "alignment": "right",

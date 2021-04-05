@@ -42,6 +42,9 @@ DELETE FROM public.message WHERE code = 'STORE_APPLICATION_SUCCESS_WF_APPROVE' a
 DELETE FROM public.message WHERE code = 'STORE_CB_REPORT' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'STORE_AGING_REPORT' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'ACTION_TEST_STOCK_AGING_REPORT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_INDENT_TRANSFER_OUTWARD'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_INDENT_TRANSFER_INWARD'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_OPENNING_BALENCE_REPORT'and module='rainmaker-common' and tenantId='ch';
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00001','en_IN', 'WF_ENGINEERING ISSUE NOTE_REVIEWOFJE','Send For Review Of JE','ch','rainmaker-common', '94');
@@ -132,3 +135,9 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00042','en_IN', 'WF_CARETAKER ISSUE NOTE_APPROVE','Approve','ch','rainmaker-common', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4sa6-95f6-382ec3e00043','en_IN', 'WF_CARETAKER ISSUE NOTE_EDIT','Edit','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00044','en_IN', 'ACTION_TEST_INDENT_TRANSFER_OUTWARD','Material Transfer Inward','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00045','en_IN', 'ACTION_TEST_INDENT_TRANSFER_INWARD','Material Transfer Outward','ch','rainmaker-common', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4sa6-95f6-382ec3e00046','en_IN', 'ACTION_TEST_OPENNING_BALENCE_REPORT','Openning Balance Report','ch','rainmaker-common', '94');

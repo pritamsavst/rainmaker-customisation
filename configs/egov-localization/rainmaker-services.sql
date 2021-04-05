@@ -410,9 +410,6 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c121', 'en_IN', 'BK_WTB_EMAIL_LABEL', 'Email Address', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c122', 'en_IN', 'BK_CORE_COMMON_APPLICATION_STATUS_PLACEHOLDER', 'Citizen Application Status', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c123', 'en_IN', 'BK_WTB_EMAIL_PLACEHOLDER', 'Email Address', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -428,13 +425,7 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c127', 'en_IN', 'BK_DOC_DOC_PICTURE', 'Sketch plan of plot and the area for storage of material', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c128', 'en_IN', 'BK_MYBK_APPLICATION_APPLICATION_NO', 'Citizen Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c129', 'en_IN', 'BK_MYBK_APPLICATION_COUNT', 'All Applications(200)', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c130', 'en_IN', 'BK_MYBK_APPLICATION_SUBMITTED_APPLICATION_NO', 'Citizen Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c131', 'en_IN', 'BK_MYBK_BOOKING', 'MY BOOKINGS', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -485,10 +476,13 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c146', 'en_IN', 'BK_MY_BK_PROPERTY_TYPE_LABEL', 'Property Type', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c147', 'en_IN', 'BK_MY_BK_APPLICATION_NUMBER_PLACEHOLDER', 'Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c148', 'en_IN', 'BK_MYBK_MOBILE_NUMBER_PLACEHOLDER', 'Contact', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c148', 'en_IN', 'BK_MYBK_MOBILE_NUMBER_PLACEHOLDER', 'Contact', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c130', 'en_IN', 'BK_MYBK_APPLICATION_SUBMITTED_APPLICATION_NO', 'Citizen Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c147', 'en_IN', 'BK_MY_BK_APPLICATION_NUMBER_PLACEHOLDER', 'Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c149', 'en_IN', 'BK_MYBK_APPLICATION_NO_PLACEHOLDER', 'Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -503,13 +497,13 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c152', 'en_IN', 'BK_CS_HEADER_APPLICATION_SUMMARY', 'Application Details', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c128', 'en_IN', 'BK_MYBK_APPLICATION_APPLICATION_NO', 'Citizen Application Status', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c153', 'en_IN', 'BK_MY_BK_STORAGE_AREA_LABEL', 'Storage Area', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c155', 'en_IN', 'BK_MYBK_APPLICATION_CLEAR_SEARCH_BUTTON', 'RESET', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c156', 'en_IN', 'BK_MYBK_APPLICATION_STATUS_PLACEHOLDER', 'Citizen Application Status', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c157', 'en_IN', 'BK_MYBK_COMMON_APPLICATION_NO', 'Application Number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -962,9 +956,6 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c309', 'en_IN', 'BK_CGB_EMAIL_PLACEHOLDER', 'Email Address', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c310', 'en_IN', 'BK_APPLICATION_SUCCESS_MESSAGE_MAIN', 'Application Submitted Successfully', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c312', 'en_IN', 'BK_MYBK_DELIVERED_ACTION_BUTTON', 'Delivered', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -1086,6 +1077,9 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c353', 'en_IN', 'BK_CGB_RESET_LABEL', 'R
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c354', 'en_IN', 'BK_CGB_SEARCH_LABEL', 'Search', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c310', 'en_IN', 'BK_APPLICATION_SUCCESS_MESSAGE_MAIN', 'Application submitted successfully', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c355', 'en_IN', 'BK_CGB_BOOK_LABEL', 'Book', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -1721,12 +1715,6 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c567', 'en_IN', 'BK_PCC_FACILITATION_CHARGES_PLACEHOLDER', 'Facilitation Charges', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c568', 'en_IN', 'BK_PCC_SURCHARGE_RENT_LABEL', 'Surcharge on Rent', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c569', 'en_IN', 'BK_PCC_SURCHARGE_RENT_PLACEHOLDER', 'Surcharge on Rent', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c570', 'en_IN', 'BK_PCC_UTGST_LABEL', 'UTGST', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -1790,6 +1778,9 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c589', 'en_IN', 'BK_COMMON_TABLE_COL_STATUS', 'Status', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c569', 'en_IN', 'BK_PCC_SURCHARGE_RENT_PLACEHOLDER', 'Surcharge on rent', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c590', 'en_IN', 'BK_UPDATED_BY_LABEL', 'Update By', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -1827,9 +1818,6 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c604', 'en_IN', 'BK_PCC_LOCATION_LABEL',
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c605', 'en_IN', 'bk.en.counter.rejected', 'Dear <1>, We are sorry to inform you that your application for <2> has been rejected. You can re-apply for your booking.', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c606', 'en_IN', 'bk.en.counter.pay', 'Dear <1>, You have made the successful payment of Application no. <2> for booking of <3>.', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c607', 'en_IN', 'bk.en.counter.paidapply', 'Dear <1>, You have booked <2>(<3>) successfully. Your application no. is <4>.', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -1907,6 +1895,9 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c609', 'en_IN', 'bk.en.counter.update', 'Dear <1>, Your application no. <2> for <3> has been updated with status <4>.', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c606', 'en_IN', 'bk.en.counter.pay', 'Dear <1>, You have made the successful payment of application no. <2> for booking of <3>.', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c631', 'en_IN', 'BK_MYBK_CLEANING_CHARGES_PLACEHOLDER', 'Cleaning Charges', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -1925,16 +1916,7 @@ INSERT INTO public.message
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c636', 'en_IN', 'BK_MYBK_CREATE_FCHARGES', 'Facilitation Charges', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c637', 'en_IN', 'BK_MYBK_NAME_SURCHARGE_PLACEHOLDER', 'Surcharge on Rent?', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c638', 'en_IN', 'BK_MYBK_CREATE_SURCHARGE', 'Surcharge on Rent?', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c639', 'en_IN', 'BK_MYBK_UTGST_PLACEHOLDER', 'UTGST?', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c640', 'en_IN', 'BK_MYBK_CREATE_UTGST', 'UTGST?', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c641', 'en_IN', 'BK_MYBK_CGST_PLACEHOLDER', 'CGST', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -2055,6 +2037,9 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c650', 'en_IN', 'BK_MYBK_CREATE_DIMENSIO
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c651', 'en_IN', 'BK_MYBK_BANK_NAME_PLACEHOLDER', 'Bank Name', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c640', 'en_IN', 'BK_MYBK_CREATE_UTGST', 'UTGST', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c652', 'en_IN', 'BK_MYBK_CREATE_BANK_NAME', 'Bank Name', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
@@ -2543,9 +2528,6 @@ INSERT INTO public.message
 VALUES('58d099f6-ebf9-4342-bdd5-cdcdbc5a4d1c', 'en_IN', 'From_Date_Is_Greater_Than_To_Date', 'To date should be grater than from date', 'ch', 'rainmaker-services', 101, '2021-03-03 04:53:13.137', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('eaad2743-040c-4100-a225-8a8203ef26d1', 'en_IN', 'BK_PACC_APPLICATION_REFUND_MESSAGE', 'Refund Initiated Successfully', 'ch', 'rainmaker-services', 101, '2021-03-09 14:24:37.729', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('c1c9aa8a-ceeb-40a2-88fd-e2323169ffbb', 'en_IN', 'BK_PACC_APPLICATION_REFUND_MESSAGE_SUB', 'You have requested successfully for security refund of booking.', 'ch', 'rainmaker-services', 101, '2021-03-09 14:25:58.436', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -2645,6 +2627,9 @@ INSERT INTO public.message
 VALUES('5552cc62-55d8-482b-b32a-f194d30c3f3f', 'en_IN', 'bk.m.counter.room.apply', '<html><body><b>Dear <1></b>,<br/><br/> You have booked AC and NON-AC rooms successfully. Your application no. is <2>.<br/><br/><br/><b>Regards,<br/>Municipal Corporation Chandigarh</b></body></html>', 'ch', 'rainmaker-services', 101, '2021-03-16 19:01:35.025', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('eaad2743-040c-4100-a225-8a8203ef26d1', 'en_IN', 'BK_PACC_APPLICATION_REFUND_MESSAGE', 'Refund initiated successfully', 'ch', 'rainmaker-services', 101, '2021-03-09 14:24:37.729', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c489', 'en_IN', 'BK_CS_COMMON_SEND_MESSAGE_REJECTED', 'A notification regarding application rejetion has been sent to the applicant registered mobile no.', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -2666,9 +2651,6 @@ INSERT INTO public.message
 VALUES('9ff6f3c2-92e0-4528-bad7-e944d82a694f', 'en_IN', 'BK_PENDINGAPPROVALOSD', 'Pending for approval at OSD', 'ch', 'rainmaker-services', 101, '2021-03-17 13:07:14.123', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('2a6f4b9b-ccb1-4dcd-a685-7e94102a8628', 'en_IN', 'CS_COMMON_COMMENTS_PLACEHOLDER', 'Enter comment', 'ch', 'rainmaker-services', 101, '2021-03-17 13:07:53.763', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c237', 'en_IN', 'BK_ERR_APPLICATION_NUMBER_SEARCH', 'Enter valid application number', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
@@ -2688,3 +2670,42 @@ VALUES('ab0b87df-e613-4838-9971-4c74c02afe6f', 'en_IN', 'BK_ERR_VALUE_HOLDING_DA
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('3802b7b7-4a39-407b-ad13-8f827293dfa3', 'en_IN', 'BK_ERR_VALUE_HOLDING_DATES_ALREADY_BOOKED', 'Selected dates already booked', 'ch', 'rainmaker-services', 101, '2021-03-19 07:45:53.850', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('b447e79e-8704-4138-b678-dce796ab638d', 'en_IN', 'BK_CORE_PACC_EMP_COMMON_GOTOHOME', 'Go To Home', 'ch', 'rainmaker-services', 101, '2021-03-23 07:28:19.903', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('2c905fe3-36db-45ec-966d-d71396b21571', 'en_IN', 'ERR_NOT_FOUND_FOR_IFSC_PACC_EMP', 'No bank details found for entered IFSC code', 'ch', 'rainmaker-services', 101, '2021-03-23 07:28:19.903', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('5718d5b3-8ee0-4fcb-a680-51739fedc799', 'en_IN', 'NEW_LOCATION_ENTER_COMMENT_LABEL', 'Enter comment', 'ch', 'rainmaker-services', 101, '2021-03-23 09:20:32.889', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('cd474463-9c1d-4102-a82c-c4b74413cb6b', 'en_IN', 'BK_WF_PACC_MODIFIED', 'Modified/Booked', 'ch', 'rainmaker-services', 101, '2021-03-24 09:49:22.158', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('b773fd4b-24a4-4466-a6d6-4384818ce7e2', 'en_IN', 'BK_WF_PACC_REJECTED', 'Rejected', 'ch', 'rainmaker-services', 101, '2021-03-24 09:49:22.158', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('02bc62bf-3fa5-4664-be12-d3426e4afd19', 'en_IN', 'BK_WF_PACC_RE_INITIATED', 'Reinitiated/Booked', 'ch', 'rainmaker-services', 101, '2021-03-24 09:49:22.158', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('49858b8d-1ab3-4d2e-ba49-0ca53c05be4b', 'en_IN', 'BK_OSWMCC_BOOKING_VENUE_DETAILS', 'Venue Details', 'ch', 'rainmaker-services', 101, '2021-03-24 11:38:11.320', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c122', 'en_IN', 'BK_CORE_COMMON_APPLICATION_STATUS_PLACEHOLDER', 'Citizen Application Status', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c156', 'en_IN', 'BK_MYBK_APPLICATION_STATUS_PLACEHOLDER', 'Citizen Application Status', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c568', 'en_IN', 'BK_PCC_SURCHARGE_RENT_LABEL', 'Surcharge on rent', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c638', 'en_IN', 'BK_MYBK_CREATE_SURCHARGE', 'Surcharge on rent', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c637', 'en_IN', 'BK_MYBK_NAME_SURCHARGE_PLACEHOLDER', 'Surcharge on rent', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('1015a763-bf8e-4f8d-b068-7b2d6f36e187', 'en_IN', 'BK_PCC_DISCOUNT_DOCUMENT', 'Discount document', 'ch', 'rainmaker-services', 101, '2021-03-25 18:21:26.491', NULL, NULL);

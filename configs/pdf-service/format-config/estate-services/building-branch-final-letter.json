@@ -90,16 +90,22 @@
                 "margin": [0, 10, 0, 0],
                 "stack": [{
                         "preserveLeadingSpaces": true,
-                        "text": "               {{ownerName}}",
+                        "text": "               Sh. {{ownerName}} S/o {{guardianName}}(Applicant)",
                         "style": "pdfContent",
                         "width": "*"
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "               {{address}}",
+                        "text": "               R/o H.No {{houseNumber}} Village {{village}}",
                         "style": "pdfContent",
                         "width": "*"
-                    }
+                    },
+                    {
+                      "preserveLeadingSpaces": true,
+                      "text": "               U.T. Chandigarh",
+                      "style": "pdfContent",
+                      "width": "*"
+                   }
 
                 ]
             },
@@ -116,7 +122,7 @@
                     {
                         "margin": [20, 0, 0, 0],
                         "width": "*",
-                        "text": "Grant of No Objection Certificate for {{typeOfNoc}} in respect of Shopping Complex on Plot No.{{siteNumber}}, {{village}}, {{mohalla}} U.T, Chandigarh.",
+                        "text": "Grant of No Objection Certificate for {{typeOfNoc}} in respect of H.No. {{houseNumber}} situated in Village {{village}} U.T., Chandigarh.",
                         "style": "pdfContent",
                         "bold": true
                     }
@@ -146,64 +152,85 @@
                 "preserveLeadingSpaces": true,
                 "text":[
                   {
-                    "text": "              In view of the registered Sale Deed No. 4409, dated 09,01.2004 in respect of Shopping Complex on Plot No. "
+                    "text": "              In this regard, on the basis of documents submitted by you in this office.You are hereby granted N.O.C for the purpose of "
                   },
                   {
-                    "text":" {{siteNumber}}",
+                    "text":" {{typeOfNoc}} ",
                     "bold":true
                   },
                   {
-                    "text":", Village Badheri, U.T, Chandigarh. a copy of which was submitted by you in this office along with  affidavit, indemnity bond, site plan of the plot measuring (359 sq. yards). You  are hereby allotted New Shop Nos. 212/1, 212/2, 212/3, 212/4, 212/5, 212/6,  212/7, 212/8, 212/9, 212/10, 212/11 and 212/12 and granted N.O.C. for the  purpose of Electricity connections as per area mentioned in the sale deed  on the following terms and conditions:- "
+                    "text":"of H.No. "
+                  },
+                  {
+                    "text":"{{houseNumber}} ","bold":true
+                  },
+                  {
+                    "text":"Village "
+                  },
+                  {
+                    "text":"{{village}} ","bold":true
+                  },
+                  {
+                    "text":"U.T., Chandigarh on the following terms and conditions."
                   }
                 ]
             },
             {          
+              "margin": [0, 20, 0, 0],
+              "style":"pdfContent",
+              "preserveLeadingSpaces": true,
+              "text": "1.            This NOC for {{typeOfNoc}} cannot be used as a proof of ownership or proof of residence by you. "            
+          },
+            {          
                 "margin": [0, 20, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "1.            That you will abide by the provisions of The Chandigarh  Administration (erection and re-erection of Buildings) Rules. 2006 for village in the Municipal Area of Municipal Corporation of  Chandigarh' as notified on 27.12.2006 and as amended from time to time"            
+                "text": "2.            That you will abide by the provisions of the 'Chandigarh Rural Inhabitations(Area within Red Line of Revenue Estates, Abadi Areas) construction and reconstruction building bye laws for villages (both within and outside Municipal Limits) falling in Union Territory of Chandigarh 2017'."            
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "2.            If you want to make any alternation/modification/change in the  existing super structure/building in the house, you shall require  getting the Building Plan Sanctioned prior to the  commencement of the construction/modification/alteration in the  building"            
+                "text": "3.            If you want to make any alteration/modification/change in the existing superstructure/building in the house, you shall require getting the Building Plan Sanctioned prior to the commencement of the construction/modification/alteration in the building."            
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "3.            In case there is a cantilever, any projection which does not conform to the provision of order dated 8.11.2006 issued on 16.11.2006 regarding minimum clear height or maximum allowed width or projection/encroachment upon government land, the same shall be rectified by the owner. Otherwise any encroachment on public/Municipal land is liable to be removed/demolished at any time at the cost of owner and the NOC granted   will be withdrawn."            
+                "text": "4.            In case there is a cantilever, any projection which does not conform to the provision of as per new Building Bye Laws dated 23 1.2017 regarding minimum clear height or maximum allowed width or projection/encroachment upon government land, the same shall be rectified by the owner. Otherwise any encroachment on public/Municipal land is liable to be removed /demolished at any time at the cost of the owner and the NOC granted will be withdrawn."            
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "4.            In case any construction/encroachment is done upon government land during erection/re-erection of building, which is in violation to Building Bye-Laws, the NOC for electricity connection so granted by the Corporation would be liable to be cancelled."            
+                "text": "5.            In case any construction/encroachment is done upon government land during erection/re-erection of building, which is in violation to Building Bye-Laws, the NOC for electricity, water and Sewerage connections so granted by the Corporation would be liable to be cancelled."            
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "5.             Any financial liability or government dues payable to any department or agency or organization shall be paid by you as and when it is due."            
+                "text": "6.             Any financial liability or government dues payable to any department or agency or organization shall be paid by you as and when it is due."            
             },
             {          
                 "margin": [0, 10, 0, 0],
                 "style":"pdfContent",
                 "preserveLeadingSpaces": true,
-                "text": "6.             This NOC can not be used as a proof of ownership or proof of  residence by you."            
+                "text": "7.             The Municipal Corporation , Chandigarh shall not be responsible for any dispute/court case, if any, with regard to above said property/plot, at any time and sole responsibility in this regard shall rest upon you being owner/applicant."            
             },
             {
                 "alignment":"right",
                 "margin":[0,20,0,0],
                 "style":"pdfContent", 
-                "bold":true,
+               
                 "stack":[
                     {
-                        "text":" Joint Commissioner,"
+                        "text":" SDE(Buildings),"
                     },
                     {
-                        "text":"Municipal Corporation Chandigarh "
+                      "text":"For Additional Commissioner"
+                    },
+                    {
+                        "text":"Municipal Corporation, Chandigarh "
                     }
                 ] 
             },
@@ -211,10 +238,10 @@
                 "margin":[0,20,10,10],
                 "columns": [{
                         "width":"auto",
-                        "text": "Endst. MCC/JtCMC/SDE (B)/{{year}}/{{applicationNumber}}",
+                        "text":"Endst. MCC/Addl CMC/SDF (B)/NOC/{{year}}/{{applicationNumber}}",
                         "style": "pdfContent",
-                        "alignment": "left",
-                        "bold":true
+                        "alignment": "left"
+                       
                     },
                     {
                       "text": "",
@@ -224,26 +251,74 @@
                         "width":"auto",
                         "text": "Dated:_____________",
                         "style": "pdfContent",
-                        "alignment": "right",
-                        "bold":true
+                        "alignment": "right"
+                       
                     }
                 ]
             },
             {
+              "stack": [
+                  {
+                      "preserveLeadingSpaces": true,
+                      "text": "           A copy is forwarded to the Concerned J E., Building Branch. M.0 . Chandigarh for periodical inspection of the house/building and ensure that there is no misuse/violation at any stage",
+                      "style": "pdfContent"
+                  }
+              ]
+          },
+          {
+            "alignment":"right",
+            "margin":[0,20,0,0],
+            "style":"pdfContent", 
+            
+            "stack":[
+                {
+                    "text":" SDE(Buildings),"
+                },
+                {
+                  "text":"For Additional Commissioner"
+                },
+                {
+                    "text":"Municipal Corporation, Chandigarh "
+                }
+            ] 
+        },
+        {
+            "margin":[0,20,10,10],
+            "columns": [{
+                    "width":"auto",
+                    "text":"Endst. MCC/Addl CMC/SDF (B)/NOC/{{year}}/{{applicationNumber}}",
+                    "style": "pdfContent",
+                    "alignment": "left"
+                   
+                },
+                {
+                  "text": "",
+                  "width":"*"
+                },
+                {
+                    "width":"auto",
+                    "text": "Dated:_____________",
+                    "style": "pdfContent",
+                    "alignment": "right"
+                   
+                }
+            ]
+        },
+            {
                 "stack": [
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "           A copy is also forwarded to the following for information and necessary action ",
+                        "text": "           A copy of the above is forwarded to the following for information and necessary action -",
                         "style": "pdfContent"
                     },
                     {
-                        "text": "1.         Concerned J.E. of Building Branch, M.C., Chandigarh for periodical inspection of  the house/building and ensure that there is no misuse/violation at any stage.",
+                        "text": "1.         The Executive Engineer, MCPH Div No Chandigarh The and Sewerage connections are allowed to the applicant immediately",
                         "style": "pdfContent",
                         "preserveLeadingSpaces": true
                     },
                     {
                         "preserveLeadingSpaces": true,
-                        "text": "2.          Assistant Controller, Tax Branch, M.C., Chandigarh. for information and necessary action. ",
+                        "text": "2.         The Executive Engineer, Electricity, --'OP', Division No 4 Back Side of Gurdwara Sec-34-C, Chandigarh.",
                         "style": "pdfContent"
                     }
                 ]
@@ -252,13 +327,15 @@
               "alignment":"right",
               "margin":[0,20,0,0],
               "style":"pdfContent", 
-              "bold":true,
               "stack":[
                   {
-                      "text":" Joint Commissioner,"
+                      "text":" SDE(Buildings),"
                   },
                   {
-                      "text":"Municipal Corporation Chandigarh "
+                    "text":"For Additional Commissioner"
+                  },
+                  {
+                      "text":"Municipal Corporation, Chandigarh "
                   }
               ] 
           }
