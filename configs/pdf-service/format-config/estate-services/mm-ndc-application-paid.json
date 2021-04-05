@@ -77,7 +77,7 @@
                          "body": [
                           [
                             {
-                              "text":"{{charges_due_label}}",
+                              "text":"{{APPLICATION_FEE}}",
                               "border":[
                                 false,
                                 false,
@@ -125,7 +125,7 @@
                           [
                             {
                               "color": "#484848",
-                              "text":"{{gstLabel}}",
+                              "text":"{{APPLICATION_TAX}}",
                               "border":[
                                 false,
                                 false,

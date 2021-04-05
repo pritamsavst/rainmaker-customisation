@@ -803,7 +803,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('4d3b6355-1abb-4591-ac6f-2bc063b65689e','en_IN','STORE_MATERIAL_BALANCE_VALIDATION','No balance or all quantity is used for','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL),
 	 ('4d3b6355-1abb-4591-ac6f-2bc063b65688e','en_IN','STORE_MATERIAL_PO_ISSUED','PO Ordered Quantity(Issued)','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL);
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
-	 ('4d3b6355-1abb-4591-ac6f-2bc063b65687e','en_IN','STORE_OB_REPORT','Openning Balence Report','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL),
+	 ('4d3b6355-1abb-4591-ac6f-2bc063b65687e','en_IN','STORE_OB_REPORT','Openning Balance Report','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL),
 	 ('4d3b6355-1abb-4591-ac6f-2bc063b65686e','en_IN','STORE_INVENTORY_REGISTER','Inventory Register Report','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL),
 	 ('4d3b6355-1abb-4591-ac6f-2bc063b65685e','en_IN','STORE_DOCUMENT_DETAILS_BUTTON_UPLOAD_FILE','UPLOAD FILE','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL),
 	 ('4d3b6355-1abb-4591-ac6f-2bc063b65684e','en_IN','STORE_DOCUMENT_DETAILS_SUBTEXT_POPUP','Only one file can be uploaded for one document. If multiple files need to be uploaded then please combine all files in a pdf and then upload','ch','rainmaker-store-asset',24226,'2020-09-01 19:31:13.209',NULL,NULL),
@@ -868,4 +868,4 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('4d3b6355-1abb-4591-ac6f-2bc063b66915e','en_IN','STORE_VALIDATION_EXTERNAL_PO_NUMBER','Enter valid external PO number','ch','rainmaker-store-asset',24226,'2020-11-04 12:05:20.409331',NULL,NULL);
 --missing and new localization code
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
-('4d3b6355-1rsa-0001-ac6f-2bc063b66915e','en_IN','STORE_MATERIAL_INDENT_NOTE_QTY_ISSUED_EDIT','Indent Issued Quantity','ch','rainmaker-store-asset',24226,now(),NULL,NULL);
+('4d3b6355-1rsa-0001-ac6f-2bc063b66916e','en_IN','STORE_MATERIAL_INDENT_NOTE_QTY_ISSUED_EDIT','Balence Indent Quantity','ch','rainmaker-store-asset',24226,now(),NULL,NULL);

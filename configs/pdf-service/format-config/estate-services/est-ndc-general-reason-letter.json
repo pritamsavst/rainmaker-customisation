@@ -126,9 +126,6 @@
                                 "text": "{{siteNumber}} ",
                                 "bold": true
 
-                            },
-                            {
-                                "text": "{{sectorNumber}}"
                             }
                         ],
                         "style": "pdfContent"

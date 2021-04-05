@@ -1,3 +1,80 @@
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION_REPORTS' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_REGULAR_NORMAL_PENSION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DEATH_OF_A_PENSIONER_REPORT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION_REVISION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION_REGSTER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION_NOTIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_MONTHLY_DRAWN_REPORT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DEATH_OF_A_PENSIONER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DEATH_OF_PENSIONER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_PENSION_OBLIGATION_REPORT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_RRP' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_RRP_SERVICE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_DOP_SERVICE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_INITIATED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CALCULATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CALCULATION_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CALCULATION_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CALCULATION_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_ACCOUNTS_OFFICER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_SENIOR_ASSISTANT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_CLERK' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_AUDIT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_DOE_SERVICE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_DOE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_CLOSED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_REJECTED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_DETAILS_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOE_SERVICE_PENDING_FOR_DETAILS_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_INITIATED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CALCULATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CALCULATION_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_ACCOUNTS_OFFICER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_SENIOR_ASSISTANT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_CLERK' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_DOP' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_AUDIT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CALCULATION_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_CALCULATION_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_CLOSED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_REJECTED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_DETAILS_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_DOP_SERVICE_PENDING_FOR_DETAILS_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CALCULATION_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CALCULATION_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_DETAILS_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_CLERK' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_INITIATED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_AUDIT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CALCULATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CALCULATION_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_CLOSED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_REJECTED' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_DETAILS_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_ACCOUNTS_OFFICER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_RRP_SERVICE_PENDING_FOR_CONTINGENT_BILL_PREPARATION_WITH_SENIOR_ASSISTANT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_EMPLOYEE_TO_BE_RETIRED_REPORT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DEATH_OF_AN_EMPLOYEE_REPORT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_SEARCH_APPLICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_MANUAL_REGISTER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DISABILITY_REGISTER' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_DEATH_OF_AN_EMPLOYEE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'ACTION_TEST_RE_COMPUTATION' and module='rainmaker-common' and tenantId='ch';
+
+INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES 
+('42a6bc08-09e1-46d4-89db-96d2fec5cf94','en_IN','ACTION_TEST_EMPLOYEE_TO_BE_RETIRED_REPORT','Employee to be Retired','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+,('5ac58514-36c7-4def-afec-4e1650d94cf2','en_IN','ACTION_TEST_DEATH_OF_AN_EMPLOYEE_REPORT','Death of an Employee','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+,('f2327fc0-dd81-492d-8046-98b69e83fcb2','en_IN','ACTION_TEST_SEARCH_APPLICATION','Search Application','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+,('beb38cfe-5600-44f2-833f-b640d7a540b6','en_IN','ACTION_TEST_MANUAL_REGISTER','Manual Register','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+,('8fcd4900-b040-4eef-acad-228402b4fc92','en_IN','ACTION_TEST_DISABILITY_REGISTER','Disability Register','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+,('4df9afbe-32de-46c2-9a93-bc296e150a7b','en_IN','ACTION_TEST_DEATH_OF_AN_EMPLOYEE','Death of an Employee','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+,('44d3d60e-c7a6-453e-8ae4-ac05545590c4','en_IN','ACTION_TEST_RE_COMPUTATION','Re-Computation','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
+;
+
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES 
 ('8cd027e2-c26e-4017-91b9-d38dc4d434fb','en_IN','ACTION_TEST_PENSION_REPORTS','Pension Report','ch','rainmaker-common',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('8c0abc20-40d7-4b3b-ba0f-3c6e3cd7337e','en_IN','ACTION_TEST_PENSION','Pension','ch','rainmaker-common',24226,'2021-03-01 16:54:00.000',NULL,NULL)
