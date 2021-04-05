@@ -1496,11 +1496,11 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66131e', 'en_IN', 'NULM_APPLICATION_FOR_SMID_DETAILS', 'SMID Details', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66132e', 'en_IN', 'NULM_APPLICATION_SUCCESS_MESSAGE_SUB', 'A notification regarding Application Submission has been sent to the applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66132e', 'en_IN', 'NULM_APPLICATION_SUCCESS_MESSAGE_SUB', 'A notification regarding Application Submission has been sent to the applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66133e', 'en_IN', 'ERR_NULM_SELECT_CAST_APPLICANT', 'Please select cast of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66133e', 'en_IN', 'ERR_NULM_SELECT_CAST_APPLICANT', 'Please select cast of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)VALUES
-('4d3b6355-1abb-4591-ac6f-2bc063b66134e', 'en_IN', 'ERR_NULM_SELECT_GENDER_APPLICANT', 'Please select gender of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-ac6f-2bc063b66135e', 'en_IN','ERR_NULM_SELECT_CATEGORY_APPLICANT','Please select category of an applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+('4d3b6355-1abb-4591-nu6f-2bc063b66134e', 'en_IN', 'ERR_NULM_SELECT_GENDER_APPLICANT', 'Please select gender of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66135e', 'en_IN','ERR_NULM_SELECT_CATEGORY_APPLICANT','Please select category of an applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
