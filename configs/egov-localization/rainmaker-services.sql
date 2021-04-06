@@ -2174,12 +2174,6 @@ INSERT INTO public.message
 VALUES('294bff16-6d56-436e-b350-48a75e0e47c8', 'en_IN', 'BK_EMP_ADMIN_LOCKED_DATE', 'Reserved Date', 'ch', 'rainmaker-services', 101, '2021-02-25 05:14:12.672', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c785', 'en_IN', 'WF_BWT_PENDINGASSIGNMENTDRIVER', 'Request Verification Pending', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c784', 'en_IN', 'WF_BWT_PENDINGUPDATE', 'Out for Delivery', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
-INSERT INTO public.message
-(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('402bf34b-9e62-43c0-a100-3d4f7ed37e96', 'en_IN', 'BK_CORE_ROOM_DOWNLOAD_PAYMENT_BUTTON', 'Download Payment Receipt', 'ch', 'rainmaker-services', 101, '2021-02-25 09:43:43.373', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)

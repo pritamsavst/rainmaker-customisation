@@ -36,6 +36,8 @@ DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_INIT
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_PENDINGUPDATE' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_DELIVERED' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_NOTDELIVERED' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='CS_COMMON_INBOX_BWT' and locale ='en_IN';
+
 
 
 
@@ -158,5 +160,8 @@ VALUES('0cc41bb0-3e23-4183-840f-b001c93a8bca', 'en_IN', 'WF_BWT_DELIVERED', 'Pro
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('36dfdcc7-0996-4a64-b449-4ae6289175fe', 'en_IN', 'WF_BWT_NOTDELIVERED', 'Closed', 'ch', 'rainmaker-common', 101, '2021-04-05 12:17:06.035', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c808', 'en_IN', 'CS_COMMON_INBOX_BWT', 'Water Tanker Booking', 'ch', 'rainmaker-common', 24226, '2019-03-25 16:45:37.581', 24226, '2019-03-25 16:45:37.581');
 
 
