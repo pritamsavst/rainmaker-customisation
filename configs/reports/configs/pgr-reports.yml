@@ -141,7 +141,7 @@ ReportDefinitions:
     searchClause: AND eg_pgr_discription_report.createdtime <= $toDate  
   - name: complaintNo
     label: reports.rainmaker-pgr.complaintno
-    type: String
+    type: string
     source: eg_pgr_discription_report
     isMandatory: false
     searchClause: AND eg_pgr_discription_report.complaintno LIKE concat('%',$complaintNo,'%')   
