@@ -1178,3 +1178,16 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10005','en_IN', 'V5_PARKING_AND_INTERNAL_ROAD','V-5,Parking and Internal Road','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10006','en_IN', 'MAN_HOLE_OR_CHAMBER','Man Hole/Chamber','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10007','en_IN', 'PM_APPLICATION_HEADER','Online Permission','ch','rainmaker-pm', '94');INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10008','en_IN', 'PM_FORWARD_SUCCESS_MESSAGE_MAIN','Application Forwarded Successfully','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10009','en_IN', 'PM_APP_NO_LABEL','Application ID','ch','rainmaker-pm', '94');INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10010','en_IN', 'PM_REASSIGN_SUCCESS_MESSAGE_MAIN','Application Reassigned Successfully','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10011','en_IN', 'PM_APPROVE_SUCCESS_MESSAGE_MAIN','Application Approved','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10012','en_IN', 'PM_COMPLETE_SUCCESS_MESSAGE_MAIN','Application Completed','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10013','en_IN', 'PM_REJECT_SUCCESS_MESSAGE_MAIN','Application Rejected','ch','rainmaker-pm', '94');
