@@ -1293,7 +1293,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5724-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_INTEGRATEDPROJECTS_RESIDENTIAL','Integrated projects','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5725-ac6f-2bc063b75064e','en_IN','WS_PROPUSGTYPE_INTEGRATEDPROJECTS_COMMERCIAL','Integrated projects','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5726-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_ACTIVATE_REGULAR_CONNECTION','Activate Regular Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5727-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_ACTIVATED','Regular Connection Activated','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5728-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_ACTIVATED','Temporary Connection Activated','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5729-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_CONVERSION','Change in Tariff Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5730-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_UPDATE_CONNECTION_HOLDER_INFO','Update Connection Holder Information','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1310,5 +1309,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5741-ac6f-2bc063b75064e','en_IN','WF_CONVERT_INTO_REGULAR_CONNECTION_APPLICATION','Convert into Regular Connection Applicatio','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5742-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_REGULAR_CONVERT_INTO_REGULAR_CONNECTION','Convert into Regular Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5743-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_REGULAR_CONNECTION_TYPE_CHANGED','Connection Changed','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5744-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_REJECTED','Rejectedcted','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5744-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_REJECTED','Rejected','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5745-ac6f-2bc063b75064e','en_IN','WS_APPLICATION_TYPE_CHANGGED_VALIDATION','Please select usage caregory','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5746-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_INITIATED','Initiated','ch','rainmaker-ws',24226,now(),NULL,NULL);
 
