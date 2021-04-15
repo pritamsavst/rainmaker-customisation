@@ -1204,3 +1204,10 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10018','en_IN', 'PET_NOC_PAYMENT_FAILURE_MESSAGE_SUB','A notification regarding payment failure has been sent to the applicant.','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10019','en_IN', 'NOC_PAYMENT_RETRY','Retry','ch','rainmaker-pm', '94');
+
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10020','en_IN', 'PET_PET_OWNER_ID_PROOF','Owner Id Proof','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10021','en_IN', 'ownerIdProof','Owner Id Proof','ch','rainmaker-pm', '94');
+INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
+( '42e17862-dbd8-4pm6-95f6-382ec3e10022','en_IN', 'PET_OWNER_ID_PROOF','Owner Id Proof','ch','rainmaker-pm', '94');
