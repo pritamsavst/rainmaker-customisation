@@ -377,10 +377,10 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66023e', 'en_IN', 'NULM_SMID_DOCUMENT_UPLOAD', 'Upload Relevent Document', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66028e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT', 'Caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66028e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT', 'Cast of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66029e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT_PLACEHOLDER', 'Enter Caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66029e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT_PLACEHOLDER', 'Enter Cast of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66030e', 'en_IN', 'NULM_SMID_URBAN_POOR', 'Urban Poor', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:58.525', NULL, NULL);
