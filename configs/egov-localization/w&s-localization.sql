@@ -1311,4 +1311,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5743-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_REGULAR_CONNECTION_TYPE_CHANGED','Connection Changed','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5744-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_REJECTED','Rejected','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5745-ac6f-2bc063b75064e','en_IN','WS_APPLICATION_TYPE_CHANGGED_VALIDATION','Please select usage caregory','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5746-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_INITIATED','Initiated','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5746-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_INITIATED','Initiated','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5747-ac6f-2bc063b75064e','en_IN','WS_FILL_MULTIPLEOWNERS_FIELDS','Please add multilple ownner data','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5748-ac6f-2bc063b75064e','en_IN','WS_FILL_MULTIPLEOWNERS_NAME_FIELDS','Duplicate name added','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5749-ac6f-2bc063b75064e','en_IN','WS_FILL_MULTIPLEOWNERS_EMAIL_FIELDS','Duplicate email id added','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5750-ac6f-2bc063b75064e','en_IN','WS_FILL_MULTIPLEOWNERS_MOBILE_FIELDS','Duplicate mobile number added','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5751-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_SEWERAGE_CONNECTION_ACTIVATED','Sewerage Connection Activated','ch','rainmaker-ws',24226,now(),NULL,NULL);
