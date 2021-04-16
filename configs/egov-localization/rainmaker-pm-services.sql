@@ -1197,12 +1197,6 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10015','en_IN', 'NOC_PAYMENT_FAILURE_MESSAGE_MAIN','Payment has failed.','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e10016','en_IN', 'ADV_NOC_PAYMENT_FAILURE_MESSAGE_SUB','A notification regarding payment failure has been sent to the applicant.','ch','rainmaker-pm', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e10017','en_IN', 'ROADCUT_NOC_PAYMENT_FAILURE_MESSAGE_SUB','A notification regarding payment failure has been sent to the applicant.','ch','rainmaker-pm', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e10018','en_IN', 'PET_NOC_PAYMENT_FAILURE_MESSAGE_SUB','A notification regarding payment failure has been sent to the applicant.','ch','rainmaker-pm', '94');
-INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10019','en_IN', 'NOC_PAYMENT_RETRY','Retry','ch','rainmaker-pm', '94');
 
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
