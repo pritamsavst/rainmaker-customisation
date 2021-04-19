@@ -1178,7 +1178,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65044e', 'en_IN', 'NULM_SEP_JAIN', 'Jain', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65050e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED ', 'Type of Business/Industry/Service/Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65050e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED ', 'Type of Business/Industry/Service/ Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65051e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED_PLACEHOLDER', 'Enter Type of Business/Industry/Service/Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
