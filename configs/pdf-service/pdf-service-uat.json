@@ -196,7 +196,8 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/bk-oswmcc-newloc-app-form.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/withoutrehri-ec.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rented-properties/rp-payment-history-receipt.json",
-      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/ws-bill-receipt.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/ws-bill-receipt.json"
+	  ,
 	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-sep.json",
 	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-smid.json",
 	  "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-susv.json",
@@ -400,7 +401,8 @@
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/bk-oswmcc-newloc-app-form.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/withoutrehri-ec.json",
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rented-properties/rp-payment-history-receipt.json",
-      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/ws-bill-receipt.json",
+      "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/ws-bill-receipt.json"
+	  ,
 	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-sep.json",
 	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-smid.json",
 	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-susv.json",
