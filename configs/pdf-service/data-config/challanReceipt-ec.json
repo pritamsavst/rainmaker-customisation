@@ -50,7 +50,27 @@
 						"value": {
 							"path": "$.memoNo"
 						}
-					}
+					},
+					{
+                "variable": "variable8",
+                "value": {
+                  "path": "$.itemDetails.*"
+                },
+                "type": "array",
+                "format": {
+                  "type": "string",
+                  "scema": [
+                    {
+                      "variable": "itemName",
+                      "value": "itemName"
+                    },
+					{
+                      "variable": "quantity",
+                      "value": "quantity"
+                    }
+                  ]
+                }
+              }
 				]
 			}]
 		}]
