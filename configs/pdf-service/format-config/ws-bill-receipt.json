@@ -210,7 +210,7 @@
                   "style": "receipt-table-key"
                 },
                 {
-                  "text": "{{gstNumber}}",
+                  "text": "GSTIN04AAALM0758K1Z1",
                   "alignment": "left",
                   "border": [
                     true,

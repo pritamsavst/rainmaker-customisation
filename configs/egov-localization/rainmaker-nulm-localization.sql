@@ -377,10 +377,10 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66023e', 'en_IN', 'NULM_SMID_DOCUMENT_UPLOAD', 'Upload Relevent Document', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66028e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT', 'Caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66028e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT', 'Cast of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66029e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT_PLACEHOLDER', 'Enter Caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66029e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT_PLACEHOLDER', 'Enter Cast of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66030e', 'en_IN', 'NULM_SMID_URBAN_POOR', 'Urban Poor', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:58.525', NULL, NULL);
@@ -1178,7 +1178,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65044e', 'en_IN', 'NULM_SEP_JAIN', 'Jain', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65050e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED ', 'Type of Business/Industry/Service/Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65050e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED ', 'Type of Business/Industry/Service/ Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65051e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED_PLACEHOLDER', 'Enter Type of Business/Industry/Service/Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
@@ -1503,4 +1503,10 @@ VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66133e', 'en_IN', 'ERR_NULM_SELECT_CAST_A
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)VALUES
 ('4d3b6355-1abb-4591-nu6f-2bc063b66134e', 'en_IN', 'ERR_NULM_SELECT_GENDER_APPLICANT', 'Please select gender of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66135e', 'en_IN','ERR_NULM_SELECT_CATEGORY_APPLICANT','Please select category of an applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('4d3b6355-1abb-4591-nu6f-2bc063b66135e', 'en_IN','ERR_NULM_SELECT_CATEGORY_APPLICANT','Please select category of an applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66136e', 'en_IN','SCORE_YES','Yes','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66137e', 'en_IN','SCORE_NO','No','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66138e', 'en_IN','ERR_NULM_CURRENT_DATE_VALIDATION','Date of birth can not be currrent date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66139e', 'en_IN','ERR_NULM_FROM_DATE_SELECTION_VALIDATION','Please select from date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66140e', 'en_IN','ERR_NULM_TO_DATE_SELECTION_VALIDATION','Please select to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66141e', 'en_IN','ERR_NULM_FROM_DATE_TO_DATE_SELECTION_VALIDATION','From date should be less then to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
