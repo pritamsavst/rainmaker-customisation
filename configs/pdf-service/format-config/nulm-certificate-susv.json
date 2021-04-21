@@ -37,117 +37,106 @@
         "margin": [0, -25, 0, 0],
         "layout": "noBorders"
       },
-      {
-        "table": {
-          "widths": ["80%", "20%"],
-          "body": [
-            [
-              {
-                "stack": [
-                 
-                  {
-                    "style": "nulm-certificate-data-2",
-                    "columns": [
-                      {
-                        "width": 200,
-                        "text": "Application No"
-                      },
-                      {
-                        "width": "*",
-                        "text": "{{applicationId}}"
-                      }
-                    ]
-                  },
-                  {
-                    "style": "nulm-certificate-data-2",
-                    "columns": [
-                      {
-                        "width": 200,
-                        "text": "Application Status"
-                      },
-                      {
-                        "width": "*",
-                        "text": "{{applicationStatus}}"
-                      }
-                    ]
-                  },
-                  {
-                    "style": "nulm-certificate-data-2",
-                    "columns": [
-                      {
-                        "width": 200,
-                        "text": "Name of Applicant"
-                      },
-                      {
-                        "width": "*",
-                        "text": "{{nameOfApplicant}}"
-                      }
-                    ]
-                  },
-                  {
-                    "style": "nulm-certificate-data-2",
-                    "columns": [
-                      {
-                        "width": 200,
-                        "text": "Father/Spouse Name"
-                      },
-                      {
-                        "width": "*",
-                        "text": "{{fatherName}}"
-                      }
-                    ]
-                  },
-                  {
-                    "style": "nulm-certificate-data-2",
-                    "columns": [
-                      {
-                        "width": 200,
-                        "text": "Mother Name"
-                      },
-                      {
-                        "width": "*",
-                        "text": "{{motherName}}"
-                      }
-                    ]
-                  },
-				  {
-					"style": "nulm-certificate-data-2",
-					"columns": [
-					  {
-						"width": 200,
-						"text": "Age"
-					  },
-					  {
-						"width": "*",
-						"text": "{{age}}"
-					  }
-					]
-				  },
-				  {
-					"style": "nulm-certificate-data-2",
-					"columns": [
-					  {
-						"width": 200,
-						"text": "Date of Birth"
-					  },
-					  {
-						"width": "*",
-						"text": "{{dob}}"
-					  }
-					]
-				  }
-                ]
-              },
-              {
-                "image": "{{ownerPhoto}}",
-                "width": 100,
-                "margin": [25, 12, 25, 0]
-              }
-            ]
-          ]
-        },
-        "margin": [0,0,0,0],
-        "layout": "noBorders"
+      
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Application No"
+          },
+          {
+            "width": 100,
+			"text": "{{applicationId}}"
+          }
+        ]
+      },
+	  {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Application Status"
+          },
+          {
+            "width": 100,
+			"text": "{{applicationStatus}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text": "Name of Applicant"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{nameOfApplicant}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Father/Spouse Name"
+          },
+          {
+            "width": 100,
+			"text":"{{fatherName}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Mother Name"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{motherName}}"
+          }
+        ]
+      },
+	   {
+        "style": "nulm-certificate-data-2",
+        "columns": [
+          {
+            "width": 200,
+            "text": "Age" 
+          },
+          {
+            "width": 100,
+			"text":"{{age}}"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Date of Birth"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{dob}}"
+          }
+        ]
       },
 	  {
         "style": "nulm-certificate-data-2",
