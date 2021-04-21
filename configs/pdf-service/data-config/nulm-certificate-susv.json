@@ -16,13 +16,6 @@
                 "url":"https://egov.transerve.com/media/logo.png",
                 "type":"image"
                 },
-               {
-                  "variable": "ownerPhoto",
-                  "value": {
-                    "path": "$.applicantPhoto"
-                  },
-                  "type": "image"
-               },
                  {
                     "variable": "corporation_name",
                     "value": {
@@ -106,9 +99,9 @@
                 }
               },
 			   {
-                "variable": "Qualification",
+                "variable": "qualification",
                 "value": {
-                  "path": "$.Qualification"
+                  "path": "$.qualification"
                 }
               },
 			   {
