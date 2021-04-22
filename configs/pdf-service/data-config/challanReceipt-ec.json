@@ -9,7 +9,13 @@
 		"isCommonTableBorderRequired": true,
 		"mappings": [{			
 			"mappings": [{
-				"direct": [{
+				"direct": [
+					{
+					"variable": "ulbLogo",                        
+					"url":"https://egov.transerve.com/media/logo.png",
+					"type":"image"
+					},
+					{
 						"variable": "variable1",
 						"value": {
 							"path": "$.receiptNo"
