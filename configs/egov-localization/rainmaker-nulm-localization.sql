@@ -1509,4 +1509,8 @@ INSERT INTO public.message
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66138e', 'en_IN','ERR_NULM_CURRENT_DATE_VALIDATION','Date of birth can not be currrent date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66139e', 'en_IN','ERR_NULM_FROM_DATE_SELECTION_VALIDATION','Please select from date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66140e', 'en_IN','ERR_NULM_TO_DATE_SELECTION_VALIDATION','Please select to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66141e', 'en_IN','ERR_NULM_FROM_DATE_TO_DATE_SELECTION_VALIDATION','From date should be less then to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('4d3b6355-1abb-4591-nu6f-2bc063b66141e', 'en_IN','ERR_NULM_FROM_DATE_TO_DATE_SELECTION_VALIDATION','From date should be less then to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66142e', 'en_IN','NULM_PRINT_SUH','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66143e', 'en_IN','NULM_PRINT_SMID','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66144e', 'en_IN','NULM_PRINT_SUSV','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66145e', 'en_IN','NULM_PRINT_SVRU','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
