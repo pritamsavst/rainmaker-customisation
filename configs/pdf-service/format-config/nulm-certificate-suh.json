@@ -554,10 +554,6 @@
             "width": 150,
             "text": "First Aid Kit & Training to Staff" 
           },
-		  {
-            "width": 5,
-            "text": ""
-          },
           {
             "width": 100,
 			"text": "{{isFirstAidKitAndTrainingToStaff}}" 
@@ -681,8 +677,12 @@
         "style": "nulm-certificate-data-2",
         "columns": [
           {
-            "width": 150,
+            "width": 145,
             "text": "Account Register/Cash Book of Receipts" 
+          },
+		  {
+            "width": 5,
+            "text": "" 
           },
           {
             "width": 100,
@@ -710,8 +710,12 @@
         "style": "nulm-certificate-data-2",
         "columns": [
           {
-            "width": 150,
+            "width": 145,
             "text": "Attendance Register of Staff" 
+          },
+		  {
+            "width": 5,
+            "text": "" 
           },
           {
             "width": 100,
@@ -987,9 +991,26 @@
           {
             "width": 100,
 			"text": "{{isCleaner}}" 
+          },
+		    {
+            "width": 10,
+            "text": ""
+          },
+		  {
+            "width": 100,
+            "text":  "Remarks"
+          },
+          {
+            "width": 10,
+            "text": ""
+          },
+          {
+            "width": 150,
+            "text": "{{cleanerRemark}}"
           }
         ]
       },
+	  
 	   {
         "style": "nulm-certificate-data-2",
         "columns": [
@@ -1149,8 +1170,12 @@
         "style": "nulm-certificate-data-2",
         "columns": [
           {
-            "width": 150,
+            "width": 145,
             "text": "Linkage to Local Community" 
+          },
+		  {
+            "width": 5,
+            "text": "" 
           },
           {
             "width": 100,

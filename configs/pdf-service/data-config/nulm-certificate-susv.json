@@ -49,7 +49,7 @@
 			  {
                 "variable": "fatherName",
                 "value": {
-                  "path": "$.fatherName"
+                  "path": "$.fatherOrHusbandName"
                 }
               },
                  {
@@ -72,7 +72,7 @@
 			  {
                 "variable": "casteofApplicant",
                 "value": {
-                  "path": "$.casteofApplicant"
+                  "path": "$.category"
                 }
               },
 			  {
@@ -84,18 +84,18 @@
 			   {
                 "variable": "presentAddressofStreetVendor",
                 "value": {
-                  "path": "$.presentAddressofStreetVendor"
+                  "path": "$.presentAddress"
                 }
               }, {
                 "variable": "permanentAddressofStreetVendor",
                 "value": {
-                  "path": "$.permanentAddressofStreetVendor"
+                  "path": "$.permanentAddress"
                 }
               },
 			  {
                 "variable": "mobileNumber",
                 "value": {
-                  "path": "$.mobileNumber"
+                  "path": "$.mobileNo"
                 }
               },
 			   {
@@ -113,7 +113,7 @@
 			  {
                 "variable": "isDisable",
                 "value": {
-                  "path": "$.isDisable"
+                  "path": "$.isDisability"
                 }
               },
 			  {
@@ -125,30 +125,30 @@
 			  {
                 "variable": "proposedCategoryofVending",
                 "value": {
-                  "path": "$.proposedCategoryofVending"
+                  "path": "$.categoryOfVending"
                 }
               }, {
                 "variable": "proposedZone",
                 "value": {
-                  "path": "$.proposedZone"
+                  "path": "$.proposedLocationOfVending"
                 }
               },
 			  {
                 "variable": "proposedTimeofVending",
                 "value": {
-                  "path": "$.proposedTimeofVending"
+                  "path": "$.proposedTimeOfVending"
                 }
               },
 			  {
                 "variable": "governmentScheme",
                 "value": {
-                  "path": "$.governmentScheme"
+                  "path": "$.govermentScheme"
                 }
               },
 			  {
                 "variable": "nameofNomineeofStreetVendor",
                 "value": {
-                  "path": "$.nameofNomineeofStreetVendor"
+                  "path": "$.nameOfNominee"
                 }
               },
 			  {
@@ -172,7 +172,7 @@
 			  {
                 "variable": "variable1",
                 "value": {
-                  "path": "$.NomineeDetails.*"
+                  "path": "$.susvApplicationFamilyDetails.*"
                 },
                 "type": "array",
                 "format": {
@@ -180,15 +180,15 @@
                   "scema": [
                     {
                       "variable": "nominee_name",
-                      "value": "nominee_name"
+                      "value": "name"
                     },
 					{
                       "variable": "nominee_age",
-                      "value": "nominee_age"
+                      "value": "age"
                     },
 					{
                       "variable": "nominee_relation",
-                      "value": "nominee_relation"
+                      "value": "relation"
                     }
                   ]
                 }
