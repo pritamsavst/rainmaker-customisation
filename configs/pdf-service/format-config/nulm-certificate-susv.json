@@ -46,7 +46,7 @@
             "text": "Application No"
           },
           {
-            "width": 100,
+            "width": 200,
 			"text": "{{applicationId}}"
           }
         ]
@@ -364,8 +364,8 @@
                 "table": {
                   "headerRows": 1,
                   "widths": [
-                  "30%",
-                  "30.5%",
+                  "40%",
+                  "20%",
 				  "30.5%"
                   ],
                   "body": [
@@ -404,7 +404,7 @@
 		
           {
             "width": 500,
-            "text": "{{undertakingText}}"
+            "text": "I undertake that in the event of any of the information furnished above being found to be false or incorrect in any respect,the certificate is liable to be cancelled."
           }
           
         ]

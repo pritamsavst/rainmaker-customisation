@@ -62,7 +62,7 @@
                  {
                 "variable": "nameOfApplicant",
                 "value": {
-                  "path": "$.nameOfApplicant"
+                  "path": "$.name"
                 }
               },
 			  {
@@ -85,7 +85,7 @@
 			  {
                 "variable": "sector",
                 "value": {
-                  "path": "$.sector"
+                  "path": "$.wardNo"
                 }
               },
 			   {
@@ -108,19 +108,19 @@
 			   {
                 "variable": "email",
                 "value": {
-                  "path": "$.email"
+                  "path": "$.emailId"
                 }
               },
 			   {
                 "variable": "mobileNumber",
                 "value": {
-                  "path": "$.mobileNumber"
+                  "path": "$.mobileNo"
                 }
               },
 			  {
                 "variable": "mobileNumber2",
                 "value": {
-                  "path": "$.mobileNumber2"
+                  "path": "$.phoneNo"
                 }
               },
 			  {
@@ -137,13 +137,13 @@
               }, {
                 "variable": "casteofApplicant",
                 "value": {
-                  "path": "$.casteofApplicant"
+                  "path": "$.caste"
                 }
               },
 			  {
                 "variable": "PWD",
                 "value": {
-                  "path": "$.PWD"
+                  "path": "$.isPwd"
                 }
               },
 			  {
@@ -155,7 +155,7 @@
 			  {
                 "variable": "rationCardNo",
                 "value": {
-                  "path": "$.rationCardNo"
+                  "path": "$.bplNo"
                 }
               },
 			  {
@@ -173,19 +173,19 @@
 			  {
                 "variable": "insurance",
                 "value": {
-                  "path": "$.insurance"
+                  "path": "$.isInsurance"
                 }
               },
 			  {
                 "variable": "streetVendor",
                 "value": {
-                  "path": "$.streetVendor"
+                  "path": "$.isStreetVendor"
                 }
               },
 			  {
                 "variable": "homeLess",
                 "value": {
-                  "path": "$.homeLess"
+                  "path": "$.isHomeless"
                 }
               },
 			  {

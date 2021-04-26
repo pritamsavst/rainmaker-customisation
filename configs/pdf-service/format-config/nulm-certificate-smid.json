@@ -141,7 +141,7 @@
               {
                 "image": "{{ownerPhoto}}",
                 "width": 100,
-                "margin": [25, 12, 25, 0]
+                "margin": [-20, 25, 10, -10]
               }
             ]
           ]
