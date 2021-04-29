@@ -278,7 +278,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66708e', 'en_IN', 'NULM_SUSV_GOVT_SCHEME_PLACEHOLDER', 'Select Scheme', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66717e', 'en_IN', 'NULM_SUSV_TICK_UNDERTAKING', 'Please Tick the undertaking', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66717e', 'en_IN', 'NULM_SUSV_TICK_UNDERTAKING', 'Please tick the undertaking', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66729e', 'en_IN', 'NULM_SUSV_TRANSACTION_AMOUNT', 'Amount', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
@@ -377,10 +377,10 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66023e', 'en_IN', 'NULM_SMID_DOCUMENT_UPLOAD', 'Upload Relevent Document', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66028e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT', 'Caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66028e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT', 'caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66029e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT_PLACEHOLDER', 'Enter Caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66029e', 'en_IN', 'NULM_SMID_CASTE_OF_APPLICANT_PLACEHOLDER', 'Enter caste of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:41.875', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66030e', 'en_IN', 'NULM_SMID_URBAN_POOR', 'Urban Poor', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:04:58.525', NULL, NULL);
@@ -503,13 +503,13 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66845e', 'en_IN', 'NULM_SMID_CMC_INPUT', 'Are You Registered with Chandigarh Municipal Corporation?', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66846e', 'en_IN', 'NULM_SEP_COB_NUMBER_INPUT', 'Please Provide The COB Number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66846e', 'en_IN', 'NULM_SEP_COB_NUMBER_INPUT', 'Please provide the COB number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66847e', 'en_IN', 'NULM_SEP_COB_NUMBER_INPUT_PLACEHOLDER', 'Enter COB Number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66848e', 'en_IN', 'NULM_SEP_COB_NUMBER_INPUT_VALIDATION', 'Please Provide a Valid COB Number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66848e', 'en_IN', 'NULM_SEP_COB_NUMBER_INPUT_VALIDATION', 'Please provide a valid COB number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66849e', 'en_IN', 'NULM_SMID_DOCUMENT_GOVT_ID', 'Govt ID & Address Proof', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
@@ -536,7 +536,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66003e', 'en_IN', 'ERR_NULM_MINORTY', 'Please select the minority', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:03:20.025', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66004e', 'en_IN', 'ERR_NULM_FILL_BPL_NUMBER', 'Please fill BPL Number', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:03:20.025', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66004e', 'en_IN', 'ERR_NULM_FILL_BPL_NUMBER', 'Please fill BPL number', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:03:20.025', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66005e', 'en_IN', 'NULM_ADD_NEW_SEP_BUTTON', 'Add SEP', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:03:20.025', NULL, NULL);
@@ -971,7 +971,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66866e', 'en_IN', 'NULM_SUH_SUBMIT_BUTTON', 'Submit', 'ch', 'rainmaker-nulm', 24226, '2020-09-26 18:13:12.006', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66867e', 'en_IN', 'NILM_SUH_CITIZEN_FILL_NOMINEE', 'Please fill Nominee Details', 'ch', 'rainmaker-nulm', 24226, '2020-09-26 18:13:12.006', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66867e', 'en_IN', 'NILM_SUH_CITIZEN_FILL_NOMINEE', 'Please fill nominee Details', 'ch', 'rainmaker-nulm', 24226, '2020-09-26 18:13:12.006', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66883e', 'en_IN', 'NULM_SUH_CITIZEN_SELTER_REQUEST', 'Request for Shelter', 'ch', 'rainmaker-nulm', 24226, '2020-09-26 18:18:33.508', NULL, NULL);
@@ -1100,7 +1100,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65047e', 'en_IN', 'NULM_SEP_HANDICAPPED', 'Status of Disability', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66821', 'en_IN', 'NULM_SEP_MINORITY_RELIGION_INPUT', 'Please Mention Your Minority Religion', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66821', 'en_IN', 'NULM_SEP_MINORITY_RELIGION_INPUT', 'Please mention your minority religion', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66884e', 'en_IN', 'NILM_SUH_CITIZEN_SEARCH_HEADER', 'Shelter Profile Request List', 'ch', 'rainmaker-nulm', 24226, '2020-09-26 18:18:33.508', NULL, NULL);
@@ -1112,7 +1112,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66822', 'en_IN', 'NULM_SEP_ADHAR_NUMBER_INPUT', 'Adhar Number (Last Four Digits only)', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66823', 'en_IN', 'NULM_SEP_ADHAR_NUMBER_INPUT_VALIDATION', 'Please enter last four digits only of Adhar Number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66823', 'en_IN', 'NULM_SEP_ADHAR_NUMBER_INPUT_VALIDATION', 'Please enter last four digits only of adhar number', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66824', 'en_IN', 'NULM_SEP_AMOUNT_OF_LOAN_REQUIRED_VALIDATION', 'Amount of Loan should not be more than 2 Lacs', 'ch', 'rainmaker-nulm', 24226, '2019-03-25 16:54:25.000', NULL, NULL);
@@ -1142,7 +1142,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65022e', 'en_IN', 'NULM_SEP_CONTACT_NUMBER_PLACEHOLDER', 'Enter Contact Number', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65024e', 'en_IN', 'NULM_SEP_SINCE_HOW_LONG_IN_CHANDIGARH_PLACEHOLDER', 'Please Enter Since How long in Chandigarh', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65024e', 'en_IN', 'NULM_SEP_SINCE_HOW_LONG_IN_CHANDIGARH_PLACEHOLDER', 'Please enter since how long in chandigarh', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65025e', 'en_IN', 'NULM_SEP_QUALIFACATION', 'Qualification', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
@@ -1178,7 +1178,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65044e', 'en_IN', 'NULM_SEP_JAIN', 'Jain', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65050e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED ', 'Type of Business/Industry/Service/Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65050e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED ', 'Type of Business/Industry/Service/ Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65051e', 'en_IN', 'NULM_SEP_TYPE_OF_BUSINESS/INDUSTRY/SERVICE/ACTIVITY_PROPOSED_TO_BE_STARTED_PLACEHOLDER', 'Enter Type of Business/Industry/Service/Activity Proposed to be Started ', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
@@ -1499,8 +1499,18 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66132e', 'en_IN', 'NULM_APPLICATION_SUCCESS_MESSAGE_SUB', 'A notification regarding Application Submission has been sent to the applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66133e', 'en_IN', 'ERR_NULM_SELECT_CAST_APPLICANT', 'Please select cast of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-nu6f-2bc063b66133e', 'en_IN', 'ERR_NULM_SELECT_CAST_APPLICANT', 'Please select caste of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)VALUES
 ('4d3b6355-1abb-4591-nu6f-2bc063b66134e', 'en_IN', 'ERR_NULM_SELECT_GENDER_APPLICANT', 'Please select gender of an applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66135e', 'en_IN','ERR_NULM_SELECT_CATEGORY_APPLICANT','Please select category of an applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('4d3b6355-1abb-4591-nu6f-2bc063b66135e', 'en_IN','ERR_NULM_SELECT_CATEGORY_APPLICANT','Please select category of an applicant','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66136e', 'en_IN','SCORE_YES','Yes','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66137e', 'en_IN','SCORE_NO','No','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66138e', 'en_IN','ERR_NULM_CURRENT_DATE_VALIDATION','Date of birth can not be currrent date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66139e', 'en_IN','ERR_NULM_FROM_DATE_SELECTION_VALIDATION','Please select from date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66140e', 'en_IN','ERR_NULM_TO_DATE_SELECTION_VALIDATION','Please select to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66141e', 'en_IN','ERR_NULM_FROM_DATE_TO_DATE_SELECTION_VALIDATION','From date should be less then to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66142e', 'en_IN','NULM_PRINT_SUH','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66143e', 'en_IN','NULM_PRINT_SMID','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66144e', 'en_IN','NULM_PRINT_SUSV','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66145e', 'en_IN','NULM_PRINT_SVRU','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
