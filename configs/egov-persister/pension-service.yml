@@ -3265,18 +3265,18 @@ serviceMaps:
     isTransaction: true
     queryMaps: 
       
-    - query: UPDATE eg_pension_register SET active=false, last_modified_by=?, last_modified_date=? WHERE effective_year=? AND effective_month=?;
+    # - query: UPDATE eg_pension_register SET active=false, last_modified_by=?, last_modified_date=? WHERE effective_year=? AND effective_month=?;
 
-      basePath: ProcessInstances.*.pensionRegister.*
-      jsonMaps:            
+    #   basePath: ProcessInstances.*.pensionRegister.*
+    #   jsonMaps:            
 
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdBy            
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdBy            
 
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdDate 
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.auditDetails.createdDate 
       
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveYear                  
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveYear                  
 
-      - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveMonth      
+    #   - jsonPath: $.ProcessInstances.*.pensionRegister.*.effectiveMonth      
         
     - query: INSERT INTO eg_pension_register(uuid, tenantid, pensioner_id, effective_year, effective_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, active, created_by, last_modified_by, created_date, last_modified_date, wound_extraordinary_pension, attendant_allowance) SELECT ?, tenantid, pensioner_id, ?, ?, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, interim_relief, da, total_pension, pension_deductions, true, ?, ?, ?, ?, wound_extraordinary_pension, attendant_allowance FROM eg_pension_revision WHERE uuid=?; 
 
@@ -3822,14 +3822,14 @@ serviceMaps:
     isTransaction: true
     queryMaps:   
 
-    - query: DELETE from eg_pension_revision where effective_start_year>=? and effective_start_month>=?;
+    # - query: DELETE from eg_pension_revision where effective_start_year>=? and effective_start_month>=?;
 
-      basePath: Parameters
-      jsonMaps:      
+    #   basePath: Parameters
+    #   jsonMaps:      
 
-      - jsonPath: $.Parameters.effectiveYear      
+    #   - jsonPath: $.Parameters.effectiveYear      
 
-      - jsonPath: $.Parameters.effectiveMonth
+    #   - jsonPath: $.Parameters.effectiveMonth
         
     - query: UPDATE eg_pension_revision SET effective_end_year=?, effective_end_month=?, last_modified_by=?, last_modified_date=? WHERE uuid =?;
 

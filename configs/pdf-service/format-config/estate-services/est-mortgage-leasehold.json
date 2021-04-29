@@ -140,7 +140,7 @@
                         "text": "Limited, on the following terms & conditions as earlier imposed while granting permission to mortgage in respect of "
                     },
                     {
-                        "text": "{{reasonForMortgage}}",
+                        "text": "{{reasonForMortgage}} ",
                         "bold":true
                     },
                     {

@@ -106,10 +106,22 @@
                         "localisation": {
                             "required": true,
                             "prefix": "ES",
-                            "module": "rainmaker-rs"
+                            "module": "rainmaker-es"
                         }
                     },
-
+                        
+                    {
+                        "variable": "ES_NP_NUMBER_LABEL",
+                        "value": {
+                            "path": "NP_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
                     {
                         "variable": "HOUSE_NUMBER_LABEL",
                         "value": {

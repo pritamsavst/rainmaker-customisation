@@ -474,11 +474,7 @@
                         "variable":"typeOfNoc",
                         "value":{
                             "path":"$.Applications[0].applicationDetails.typeOfNoc[0]"
-                        },
-                        "localisation": {
-                            "required": true,
-                            "module": "rainmaker-es"
-                          }
+                        }
                     },
                     
                     {
