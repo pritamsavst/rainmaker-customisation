@@ -339,6 +339,8 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.proposedMeterRentCode
        
+       - jsonPath: $.WaterConnection.proposedMeterCount
+       
        - jsonPath: $.WaterConnection.proposedMfrCode
        
        - jsonPath: $.WaterConnection.proposedMeterDigits
@@ -693,6 +695,8 @@ serviceMaps:
        - jsonPath: $.WaterConnection.proposedInitialMeterReading
        
        - jsonPath: $.WaterConnection.proposedMeterRentCode
+       
+       - jsonPath: $.WaterConnection.proposedMeterCount
        
        - jsonPath: $.WaterConnection.proposedMfrCode
        
