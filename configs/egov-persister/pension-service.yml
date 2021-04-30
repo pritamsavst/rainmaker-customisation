@@ -3439,6 +3439,36 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
 
   - version: 1.0
+    name: Continue Pensioner Pension
+    description: Continue Pensioner Pension 
+    fromTopic: PENSIONER_PENSION_CONTINUATION
+    isTransaction: true
+    queryMaps:
+  
+    - query: UPDATE eg_pension_pensioner SET active=true, last_modified_by=?, last_modified_date=? WHERE pensioner_number=?;
+  
+      basePath: ProcessInstances.*.pensioner
+      jsonMaps:                 
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+        
+    - query: UPDATE eg_pension_revision SET active=true, last_modified_by=?, last_modified_date=? WHERE pensioner_id=(SELECT uuid FROM eg_pension_pensioner WHERE pensioner_number=?) AND active=false;
+  
+      basePath: ProcessInstances.*.pensioner
+      jsonMaps:     
+        
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy             
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.pensioner.pensionerNumber
+  
+
+  - version: 1.0
     name: Update Workflow State
     description: Update Workflow State 
     fromTopic: UPDATE_PENSION_WORKFLOW_STATE
