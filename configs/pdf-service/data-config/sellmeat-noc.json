@@ -57,10 +57,6 @@
                        "variable": "variable7",
                        "value":{
                             "path":"$.licenseType"                           
-                        },
-						"localisation":{
-                           "required":true,
-                           "module":"rainmaker-pm"
                         }						
                      },
 					 {
