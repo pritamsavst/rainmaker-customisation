@@ -2630,6 +2630,15 @@ INSERT INTO public.message
 VALUES('dd60cd49-a755-476a-93e3-52dca60e913a', 'en_IN', 'ACTION_TEST_COMMUNITY_CENTER_ROOM_MASTER', 'Community Center Room Master', 'ch', 'rainmaker-services', 268, '2021-04-30 09:21:37.107', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('7fb66dd0-ad54-4aca-87ef-9c80ce6bca26', 'en_IN', 'reports.bb.bk_booking_type', 'Booking Type', 'ch', 'rainmaker-services', 268, '2021-04-30 12:03:38.319', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('df3843b5-4937-47cf-befb-d62dfed2f13d', 'en_IN', 'reports.bb.bk_application_status', 'Application Status', 'ch', 'rainmaker-services', 268, '2021-04-30 12:04:46.936', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('636d8b79-d573-4334-8562-e59cf0685113', 'en_IN', 'reports.bb.bk_sector', 'Sector', 'ch', 'rainmaker-services', 268, '2021-04-30 12:05:50.293', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('3f9ad0e8-0288-492a-9f71-8cf1c0d4f03e', 'en_IN', 'bk.en.counter.security_refund', 'Dear <1>, You have requested successfully for security refund of <2> booking. Your application no. <3> for <2> has been updated with status <4>. Rgds,', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
