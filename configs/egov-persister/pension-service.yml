@@ -2706,6 +2706,64 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate  
 
       - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
+
+    - query: INSERT INTO eg_pension_employee_other_details(uuid, tenantid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, bank_code, bank_ifsc) select ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? where not exists (select uuid from eg_pension_workflow_header where workflow_type='RRP_SERVICE' and workflow_state='CLOSED' and pension_employee_id=? order by last_modified_date desc limit 1);
+        
+      basePath: ProcessInstances.*.employeeOtherDetails
+      jsonMaps:
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.employeeOtherDetailsId
+
+      - jsonPath: $.ProcessInstances.*.tenantId      
+
+      - jsonPath: $.ProcessInstances.*.workflowHeader.workflowHeaderId  
+      
+      - jsonPath: $.ProcessInstances.*.state.state 
+      
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.ltc
+      
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.lpd      
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.pensionArrear      
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.isDaMedicalAdmissible
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.fma
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.medicalRelief
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.miscellaneous
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.overPayment
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.incomeTax
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.cess
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankAddress
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.accountNumber
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.claimant
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.wef      
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.active      
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedBy
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate  
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankCode  
+
+      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankIfsc
+
+      - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
+    
     
     - query: INSERT INTO eg_pension_employee_other_details_audit(uuid, tenantid, employee_other_details_id, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, total_no_pay_leaves_days, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, total_no_pay_leaves_months, total_no_pay_leaves_years, no_dues_for_avail_govt_accomodation, employee_group, date_of_contingent, bank_code, bank_ifsc) SELECT ?, tenantid, uuid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, ?, ?, ?, ?, total_no_pay_leaves_days, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, total_no_pay_leaves_months, total_no_pay_leaves_years, no_dues_for_avail_govt_accomodation, employee_group, date_of_contingent, bank_code, bank_ifsc FROM eg_pension_employee_other_details WHERE uuid=?; 
         
