@@ -1347,13 +1347,15 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5781-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_REJECT','REJECT','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5782-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_INITIATE_SITE_INSPECTION','Initiate Site Inspection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5783-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_EDIT','Edit','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5784-ac6f-2bc063b75064e','en_IN','WF_WS_METER_VERIFY_AND_FORWARD_TO_SUPERINTENDENT','Forward to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5785-ac6f-2bc063b75064e','en_IN','WF_WS_METER_SEND_BACK_TO_CITIZEN_FOR_ROADCUT_NOC','Send Back to Citizen For Roadcut NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5786-ac6f-2bc063b75064e','en_IN','WF_WS_METER_SUBMIT_ROADCUT_NOC','Submit Roadcut for NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5787-ac6f-2bc063b75064e','en_IN','WF_WS_METER_VERIFY_AND_FORWARD','Verify and Forward','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5788-ac6f-2bc063b75064e','en_IN','WF_WS_METER_VERIFY_AND_FORWARD_FOR_PAYMENT','Forward for Payment','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5789-ac6f-2bc063b75064e','en_IN','WF_WS_METER_VERIFY_AND_FORWARD_TO_JE','Forward to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5790-ac6f-2bc063b75064e','en_IN','WF_WS_METER_PAY','PAY','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5784-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_VERIFY_AND_FORWARD_TO_SUPERINTENDENT','Forward to Superintendent','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5785-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_SEND_BACK_TO_CITIZEN_FOR_ROADCUT_NOC','Send Back to Citizen For Roadcut NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5786-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_SUBMIT_ROADCUT_NOC','Submit Roadcut for NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5787-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_VERIFY_AND_FORWARD','Verify and Forward','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5788-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_VERIFY_AND_FORWARD_FOR_PAYMENT','Forward for Payment','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5789-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_VERIFY_AND_FORWARD_TO_JE','Forward to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5790-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_PAY','PAY','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5791-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_METER_INFORMATION','Update Metrer Information','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5792-ac6f-2bc063b75064e','en_IN','WS_DEACTIVATE_SUCCESS','Connection deactivated successfully!','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5793-ac6f-2bc063b75064e','en_IN','WS_COMMON_DEACTIVE_LABEL','Deactivate','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5794-ac6f-2bc063b75064e','en_IN','WS_GROUP_NUMBER_INPUT','Group Number','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5795-ac6f-2bc063b75064e','en_IN','WS_GROUP_NUMBER_INPUT_PLACEHOLDER','Enter Group Number','ch','rainmaker-ws',24226,now(),NULL,NULL);
