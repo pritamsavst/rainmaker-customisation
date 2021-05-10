@@ -619,4 +619,6 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 ,('8d4763d2-8e4a-467c-b10e-10f2a17ba143','en_IN','PENSION_REGISTER_DOJ_VALIDATION','Employee employed on or after 01/01/2004 are not eligible for Pension benefits.','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('ad928033-e6b3-4cda-b46a-d3b888da7bec','en_IN','PENSION_BANK_CODE','Bank Code','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
 ,('167e2ab4-cab8-4605-9bfa-324c58fd1071','en_IN','PENSION_BANK_IFSC','Bank IFSC','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
-;
+,('167e2ab4-cab8-4605-9bfa-324c58fd1072','en_IN','PENSION_CONTINUATION','Continue Pension','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
+,('167e2ab4-cab8-4605-9bfa-324c58fd1073','en_IN','PENSION_ACTIVE','Active','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL)
+,('167e2ab4-cab8-4605-9bfa-324c58fd1074','en_IN','PENSION_REVIEW_PENSIONER_CONTINUATION_SUCCESS_MESSAGE','Pension is continue of this pensioner from next month!','ch','rainmaker-pension',24226,'2021-01-03 16:54:00.000',NULL,NULL);
