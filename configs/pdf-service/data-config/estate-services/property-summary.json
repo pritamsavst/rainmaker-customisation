@@ -21,6 +21,18 @@
                         }
                     },
                     {
+                        "variable": "ES_NP_NUMBER_LABEL",
+                        "value": {
+                            "path": "NP_NUMBER_LABEL"
+                        },
+                        "type": "label",
+                        "localisation": {
+                            "required": true,
+                            "prefix": "ES",
+                            "module": "rainmaker-es"
+                        }
+                    },
+                    {
                         "variable": "subHeader",
                         "value": {
                             "path": "PDF_SUMMARY"

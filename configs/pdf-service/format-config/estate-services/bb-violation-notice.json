@@ -226,13 +226,15 @@
                         "text": "Endst. No. ___________/MCC SDE (B)/{{applicationNumber}}",
                         "style": "pdfContent",
                         "alignment": "left",
-                        "bold":true
+                        "bold":true,
+                        "width":"auto"
                     },
                     {
                       "text": "",
                       "width":"*"
                     },
                     {
+                        "width":"auto",
                         "text": "Dated: ___________",
                         "style": "pdfContent",
                         "alignment": "right",

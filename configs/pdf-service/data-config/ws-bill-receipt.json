@@ -1,0 +1,110 @@
+{
+    "key":"ws-bill-receipt",
+    "DataConfigs": {
+       "serviceName": "rainmaker-ws",
+       "version": "1.0.0",
+      "baseKeyPath": "$.WSReceiptRequest.*",
+       "entityIdPath":"$",
+       "isCommonTableBorderRequired":true,
+       "mappings": [
+          {
+             "topic": "tl-pdf-generation",
+             "staticConfigPath": "https://raw.githubusercontent.com/egovernments/egov-services/vishal-feature-filestore/core/egov-indexer/src/main/resources/rainmaker-pgr-indexer.yml",
+             "mappings": [
+                {
+                   "direct": [ 
+                     {
+                        "variable": "variable33",                        
+                        "url":"http://mcchandigarh.gov.in/sites/default/files/mc-chandigardh-logo.png",
+                        "type":"image"
+                     },
+                     {
+                        "variable": "div",
+                        "value": {
+                             "path":"$.div"                              
+                        }
+                     }, 
+                     {
+                        "variable": "subDiv",
+                        "value": {
+                             "path":"$.subDiv"                              
+                        }
+                     } , 					 
+                     {
+                        "variable": "applicationNumber",
+                        "value": {
+                             "path":"$.applicationNumber"                              
+                        }
+                     }, 
+                     {
+                        "variable": "receiptNumber",
+                        "value": {
+                             "path":"$.receiptNumber"                              
+                        }
+                     } , 
+                     {
+                        "variable": "activityType",
+                        "value": {
+                             "path":"$.activityType"                              
+                        } ,
+								"localisation":{
+                           "required":true,
+                           "module":"rainmaker-common"
+                        }
+                     },  
+                     {
+                        "variable": "gstNumber",
+                        "value": {
+                             "path":"$.gstNumber"                              
+                        }
+                     }, 
+                     {
+                        "variable": "applicantName",
+                        "value": {
+                             "path":"$.applicantName"                              
+                        }
+                     }, 
+                     {
+                        "variable": "applicantAddress",
+                        "value": {
+                             "path":"$.applicantAddress"                              
+                        }
+                     }, 
+                     {
+                        "variable": "paymentReceiptDate",
+                        "value": {
+                             "path":"$.paymentReceiptDate"                              
+                        }
+                     }, 
+                     {
+                        "variable": "dueAmount",
+                        "value": {
+                             "path":"$.dueAmount"                              
+                        }
+                     }, 
+                     {
+                        "variable": "paidAmount",
+                        "value": {
+                             "path":"$.paidAmount"                              
+                        }
+                     }, 
+                     {
+                        "variable": "status",
+                        "value": {
+                             "path":"$.status"                              
+                        }
+                     }, 
+                     {
+                        "variable": "statusValue",
+                        "value": {
+                             "path":"$.paymentStatus"                              
+                        }
+                     } 
+                   ]
+                }
+               
+             ]
+          }
+       ]
+    }
+ }
