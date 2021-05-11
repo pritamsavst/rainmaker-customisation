@@ -21,4 +21,8 @@ VALUES('c0b628b9-8448-4e5d-82c9-656679dfc1a4','en_IN', 'DASHBOARD_WF_NAME_TITLE'
 ('8cb9f402-405d-4c84-904b-ec6d6acbe876','en_IN', 'Work_dashboard_1','Work Management Dashboard','ch','rainmaker-dashboard', '94'),
 ('b65a9f65-34ab-4ed9-ae2d-423db8d12f8e','en_IN', 'OPMS_dashboard_1','OPMS Dashboard','ch','rainmaker-dashboard', '94'),
 ('48cf61ab-acbf-46d1-b9b6-ff5005f06fa5','en_IN', 'RentedProperty_dashboard_1','Rented Property Dashboard','ch','rainmaker-dashboard', '94'),
-('05a41943-a166-485e-8f90-fef9cd131202','en_IN', 'EState_dashboard_1','Estate Management Dashboard','ch','rainmaker-dashboard', '94');
+('05a41943-a166-485e-8f90-fef9cd131202','en_IN', 'EState_dashboard_1','Estate Management Dashboard','ch','rainmaker-dashboard', '94'),
+('831cf9b0-f681-4c94-b148-4f4f85715298','en_IN', 'OSBM_dashboard_1','OSBM Dashboard','ch','rainmaker-dashboard', '94'),
+('0b584e8a-57ae-456e-883b-a58790a230b8','en_IN', 'NULM_dashboard_1','NULM Dashboard','ch','rainmaker-dashboard', '94'),
+('7fc6b81f-de92-495a-82e4-180e96143b7a','en_IN', 'Store_dashboard_1','Store Dashboard 1','ch','rainmaker-dashboard', '94'),
+('8489287a-b2bd-472f-8368-b829469e66f6','en_IN', 'Store_dashboard_2','Store Dashboard 2','ch','rainmaker-dashboard', '94');
