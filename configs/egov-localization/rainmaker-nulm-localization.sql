@@ -1510,7 +1510,20 @@ INSERT INTO public.message
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66139e', 'en_IN','ERR_NULM_FROM_DATE_SELECTION_VALIDATION','Please select from date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66140e', 'en_IN','ERR_NULM_TO_DATE_SELECTION_VALIDATION','Please select to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66141e', 'en_IN','ERR_NULM_FROM_DATE_TO_DATE_SELECTION_VALIDATION','From date should be less then to date','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66142e', 'en_IN','NULM_PRINT_SUH','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66143e', 'en_IN','NULM_PRINT_SMID','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66144e', 'en_IN','NULM_PRINT_SUSV','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66145e', 'en_IN','NULM_PRINT_SVRU','application','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('4d3b6355-1abb-4591-nu6f-2bc063b66142e', 'en_IN','NULM_PRINT_SUH','Download','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66143e', 'en_IN','NULM_PRINT_SMID','Download','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66144e', 'en_IN','NULM_PRINT_SUSV','Download','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66145e', 'en_IN','NULM_PRINT_SVRU','Download','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66146e', 'en_IN','ACTION_TEST_NULM_TITLE','National Urban Livelihood Mission','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66147e', 'en_IN','NULM_SEP_CARD_TITLE','Self-Employment Program','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66148e', 'en_IN','NULM_SMID_CARD_TITLE','Social Mobilization Institution Development','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66149e', 'en_IN','NULM_SUSV_CARD_TITLE','Support to Urban Street Vendors','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66150e', 'en_IN','NULM_SVRU_CARD_TITLE','Street Vendor Registration Update','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66151e', 'en_IN','NULM_SUHC_CARD_TITLE','Shelter Profile Request','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66152e', 'en_IN','NULM_NGOR_CARD_TITLE','Non-governmental Organization','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66153e', 'en_IN','NULM_SMIDNGO_CARD_TITLE','Social Mobilization Institution Development for Non-governmental Organization','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66154e', 'en_IN','NULM_SUHP_CARD_TITLE','Shelters for Urban Homeless','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66155e', 'en_IN','NULM_SUHLOG_CARD_TITLE','Shelters for Urban Homeless Log Maintenance','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66156e', 'en_IN','NULM_SUSVT_CARD_TITLE','Support to Urban Street Vendors Transaction','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+
+
