@@ -27,4 +27,5 @@ VALUES('c0b628b9-8448-4e5d-82c9-656679dfc1a4','en_IN', 'DASHBOARD_WF_NAME_TITLE'
 ('7fc6b81f-de92-495a-82e4-180e96143b7a','en_IN', 'Store_dashboard_1','Store Dashboard','ch','rainmaker-dashboard', '94'),
 ('8489287a-b2bd-472f-8368-b829469e66f6','en_IN', 'Store_dashboard_2','Store Dashboard','ch','rainmaker-dashboard', '94'),
 ('acb93d1f-4d99-4eeb-84d1-2b8ab875284b','en_IN', 'StoreIndent_dashboard_1','Store Dashboard 1','ch','rainmaker-dashboard', '94'),
-('6ea295d5-d65b-4502-b33f-91cd35f16653','en_IN', 'StoreIndent_dashboard_2','Store Dashboard 2','ch','rainmaker-dashboard', '94');
+('6ea295d5-d65b-4502-b33f-91cd35f16653','en_IN', 'StoreIndent_dashboard_2','Store Dashboard 2','ch','rainmaker-dashboard', '94')
+('be71959c-3e28-4da3-b4e4-02c724c4e902','en_IN', 'Audit_dashboard_1','Audit Dashboard','ch','rainmaker-dashboard', '94');
