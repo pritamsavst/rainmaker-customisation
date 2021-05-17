@@ -323,6 +323,11 @@ ReportDefinitions:
     type: string
     source: rent
     total: false
+  - name: colony
+    label: report.rp.colony
+    type: string
+    source: rent
+    total: false
   - name: name
     label: report.rp.user.name
     type: string
@@ -370,6 +375,7 @@ ReportDefinitions:
   query: |
     SELECT 
       rent.transit_number,
+      colonymsg.message as colony,
       to_char(To_timestamp(pd.receiptdate / 1000), 'DD/MM/YYYY') as receiptIssueDate , 
       pd.receiptnumber,
       od.name as name,
@@ -377,7 +383,8 @@ ReportDefinitions:
       payment.transactionnumber as transactionnumber,
       payment.totalamountpaid as totalamount,
       payment.paymentmode as paymenttype
-    FROM cs_pt_property_v1 rent 
+    FROM cs_pt_property_v1 rent
+    INNER JOIN  message colonymsg ON  colonymsg.code = rent.colony AND colonymsg.locale = 'en_IN'
     LEFT OUTER JOIN cs_pt_ownership_v1 ot ON rent.id = ot.property_id and ot.active_state = true
     LEFT OUTER JOIN cs_pt_ownershipdetails_v1 od ON ot.id = od.owner_id
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('SITE-%s',rent.transit_number), '%')
