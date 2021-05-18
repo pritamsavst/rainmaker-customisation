@@ -3,6 +3,36 @@ DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_TEMPORARY_WSCONNECTION'
 DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_TEMP_TEMP' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_TEMP_DISCONNECTION' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_REACTIVATE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_NEW_WS_CONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_REACTIVATE_CONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_CONNECTION_CONVERSION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_REGULAR_CONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_TEMPORARY_DISCONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_PERMANENT_DISCONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_UPDATE_CONNECTION_HOLDER_INFO'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_CONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_UPDATE_METER_INFO'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_NEW_TUBEWELL_CONNECTION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION'and module='rainmaker-common' and tenantId='ch';
+-- Workflow states
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_CITIZEN_ACTION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_ROADCUT_NOC_BY_CITIZEN' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_DOCUMENT_VERIFICATION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SDE_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_ROADCUT_NOC_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SITE_INSPECTION' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SECURITY_DEPOSIT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_EE_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SDE_APPROVAL_FOR_SUPERINTENDENT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SE_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SUPERINTENDENT_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SDE_APPROVAL_FOR_JE' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_CHD_REVIEW' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_HDM_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_CHD_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_SE_APPROVAL' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_PAYMENT' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_CONNECTION_ACTIVATION' and module='rainmaker-common' and tenantId='ch';
 -- Workflow states
 DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_FOR_CITIZEN_ACTION' and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_REGULARWSCONNECTION_PENDING_ROADCUT_NOC_BY_CITIZEN' and module='rainmaker-common' and tenantId='ch';
@@ -457,5 +487,18 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6221-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SITE_INSPECTION','Pending for Site Inspection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6223-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_ROADCUT_NOC_BY_CITIZEN','Pending Roadcut NOC By Citizen','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6224-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_ROADCUT_NOC_APPROVAL','Pending for Roadcut NOC Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6225-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SEWERAGE_CONNECTION_ACTIVATION','Pending for Sewerage Connection Activation','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6225-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SEWERAGE_CONNECTION_ACTIVATION','Pending for Sewerage Connection Activation','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6226-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_REACTIVATE','Reactivate Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6227-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_NEW_WS_CONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6228-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REACTIVATE_CONNECTION','Reactivate Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6229-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_CONNECTION_CONVERSION','Tariff Change','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6230-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_REGULAR_CONNECTION','Temporary to Regular Conversion','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6231-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_TEMPORARY_DISCONNECTION','Temporary Disconnection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6232-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_PERMANENT_DISCONNECTION','Permanent Disconnection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6233-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_UPDATE_CONNECTION_HOLDER_INFO','Update Connection Holder Information','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6234-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_CONNECTION','Temporary Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6235-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_UPDATE_METER_INFO','Meter Update','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6236-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_NEW_TUBEWELL_CONNECTION','New Tubewell Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6237-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL);
+
 
