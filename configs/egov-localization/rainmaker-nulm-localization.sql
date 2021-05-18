@@ -1521,7 +1521,7 @@ INSERT INTO public.message
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66150e', 'en_IN','NULM_SVRU_CARD_TITLE','Street Vendor Registration Update','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66151e', 'en_IN','NULM_SUHC_CARD_TITLE','Shelter Profile Request','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66152e', 'en_IN','NULM_NGOR_CARD_TITLE','Non-governmental Organization','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66153e', 'en_IN','NULM_SMIDNGO_CARD_TITLE','Social Mobilization Institution Development for Non-governmental Organization','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66153e', 'en_IN','NULM_SMIDNGO_CARD_TITLE','Social Mobilization Institution Development for NGO','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66154e', 'en_IN','NULM_SUHP_CARD_TITLE','Shelters for Urban Homeless','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66155e', 'en_IN','NULM_SUHLOG_CARD_TITLE','Shelters for Urban Homeless Log Maintenance','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66156e', 'en_IN','NULM_SUSVT_CARD_TITLE','Support to Urban Street Vendors Transaction','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
