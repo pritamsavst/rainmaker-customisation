@@ -472,7 +472,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6206-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_ROADCUT_NOC_BY_CITIZEN','Pending Roadcut NOC By Citizen','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6207-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_ROADCUT_NOC_APPROVAL','Pending for Roadcut NOC Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6208-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL_AFTER_EE','Pending for SDE Approval After EE','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6200-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SE_REVIEW','Pending for SE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6200-ac6f-2bc063b75094e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SE_REVIEW','Pending for SE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6210-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_CHD_REVIEW','Pending for CHD Review','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6211-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_HDM_APPROVAL','Pending for HDM Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6212-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_CHD_APPROVAL','Pending for CHD Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -500,5 +500,3 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6235-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_UPDATE_METER_INFO','Meter Update','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6236-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_NEW_TUBEWELL_CONNECTION','New Tubewell Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6237-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL);
-
-
