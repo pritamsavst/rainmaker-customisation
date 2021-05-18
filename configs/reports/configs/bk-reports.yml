@@ -26,13 +26,13 @@ ReportDefinitions:
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: WHERE bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: WHERE bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: toDate
     label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   query: select MAX(message) as status, count(bb.bk_application_status) as total from bk_bookings bb LEFT OUTER JOIN message ON message.code = concat('RPT_BK_WF_', bb.bk_application_status) AND message.locale = 'en_IN' 
   groupby: GROUP BY bb.bk_application_status
   orderby: ORDER BY case bb.bk_application_status when 'INITIATED' then 1 when 'PENDINGASSIGNMENTDRIVER' then 2 when 'DELIVERED' then 3 when 'PENDINGUPDATE' then 4 when 'NOTDELIVERED' then 5 when 'APPLIED' then 6 when 'PENDINGPAYMENT' then 7 when 'PENDINGAPPROVAL' then 8 when 'APPROVED' then 9 when 'REJECTED' then 10 when 'OFFLINE_INITIATED' then 11 when 'OFFLINE_APPLIED' then 12 when 'RE_INITIATED' then 13 when 'PENDING_FOR_APPROVAL_CLEARK_DEO' then 14 when 'PENDING_FOR_APPROVAL_SENIOR_ASSISTANT' then 15 when 'PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT' then 16 when 'PENDING_FOR_APPROVAL_CAO' then 17 when 'PENDING_FOR_DISBURSEMENT' then 18 when 'PAYMENT_DISBURSED' then 19 when 'PENDING_FOR_APPROVAL_SUPERVISOR' then 20 when 'PENDING_FOR_APPROVAL_OSD' then 21 when 'OFFLINE_RE_INITIATED' then 22 when 'OFFLINE_MODIFIED' then 23 else 24 end
@@ -186,9 +186,9 @@ ReportDefinitions:
       totalamountpaid
     FROM bk_bookings bb
     INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
-    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
-    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
-    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    INNER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    INNER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    INNER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     WHERE bb.bk_application_status IN ('APPROVED','PENDINGASSIGNMENTDRIVER','PENDINGUPDATE','REJECTED','DELIVERED','NOTDELIVERED','APPLIED','OFFLINE_APPLIED','RE_INITIATED',
     'MODIFIED','PENDING_FOR_APPROVAL_CLEARK_DEO','PENDING_FOR_APPROVAL_SUPERVISOR','PENDING_FOR_APPROVAL_SENIOR_ASSISTANT','REJECTED','PENDING_FOR_APPROVAL_AUDIT_DEPARTMENT',
     'PENDING_FOR_APPROVAL_CAO','PENDING_FOR_DISBURSEMENT','PAYMENT_DISBURSED','PENDING_FOR_APPROVAL_OSD','OFFLINE_RE_INITIATED','OFFLINE_MODIFIED')
@@ -261,13 +261,13 @@ ReportDefinitions:
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: toDate
     label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: bookingType
     label: reports.bb.bk_booking_type
     type: singlevaluelist
@@ -514,13 +514,13 @@ ReportDefinitions:
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: toDate
     label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: bookingType
     label: reports.bb.bk_booking_type
     type: singlevaluelist
@@ -693,13 +693,13 @@ ReportDefinitions:
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: toDate
     label: reports.bb.bk_to_date
     type: epoch
     source: bb
     isMandatory: false
-    searchClause: AND bb.bk_date_created >= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bb.bk_date_created <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: bookingType
     label: reports.bb.bk_booking_type
     type: singlevaluelist
@@ -766,9 +766,9 @@ ReportDefinitions:
       bb.bk_customer_gst_no as gst
     FROM bk_bookings bb
     INNER JOIN  message msg ON  msg.code = bb.business_service AND msg.locale = 'en_IN'
-    LEFT OUTER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
-    LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
-    LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
+    INNER JOIN egcl_bill bill ON bill.consumercode = bb.bk_application_number 
+    INNER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
+    INNER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     INNER JOIN eg_user as eu on eu.uuid = bb.uuid
     INNER JOIN eg_userrole_v1 as euv on euv.user_id = eu.id
     WHERE bb.bk_application_number IS NOT NULL 
@@ -819,13 +819,13 @@ ReportDefinitions:
     type: epoch
     source: bcgal
     isMandatory: false
-    searchClause: AND bcgal.created_date >= to_date(to_char(to_timestamp($fromDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bcgal.created_date >= to_date(to_char(to_timestamp($fromDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: toDate
     label: reports.bcgal.bk_to_date
     type: epoch
     source: bcgal
     isMandatory: false
-    searchClause: AND bcgal.created_date >= to_date(to_char(to_timestamp($toDate/1000)+ interval '5:30','YYYY-MM-DD'),'YYYY-MM-DD')
+    searchClause: AND bcgal.created_date <= to_date(to_char(to_timestamp($toDate/1000),'YYYY-MM-DD'),'YYYY-MM-DD')
   - name: bookingType
     label: reports.bb.bk_booking_type
     type: singlevaluelist
