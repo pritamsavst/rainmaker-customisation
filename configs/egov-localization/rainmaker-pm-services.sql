@@ -1324,9 +1324,9 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10076','en_IN', 'ERR_NOC_ADV_SPACE','Please enter a valid Space(In Sq.ft.)','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10077','en_IN', 'ERR_NOC_ADV_ADVERTISEMENT_MATTER_DESCRIPTION','Please enter a valid Advertisement Matter Description','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10078','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN','Payment has been collected successfully!','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10079','en_IN','PET_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant at registered Mobile No.','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10080','en_IN','NOC_PMT_RCPT_NO','Receipt No.','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10078','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN','Payment has been collected successfully!','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10079','en_IN','PET_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant at registered Mobile No.','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10080','en_IN','NOC_PMT_RCPT_NO','Receipt No.','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','Sell Meat ID Proof','ch','rainmaker-pm', '94');
