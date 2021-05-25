@@ -185,7 +185,7 @@ ReportDefinitions:
       od.phone as mobileno,
       payment.transactionnumber as transactionnumber,
       payment.totalamountpaid as totalamount,
-      payment.paymentmode as paymenttype,
+      CASE WHEN payment.paymentmode = 'OFFLINE_NEFT' THEN 'DIRECT BANK'  ELSE payment.paymentmode END as paymenttype,
       colonymsg.message as colony
     FROM cs_pt_ownership_v1 ot 
     INNER JOIN cs_pt_ownershipdetails_v1 od ON od.owner_id = ot.id 
@@ -288,7 +288,7 @@ ReportDefinitions:
       da.mobileno as mobileno,
       payment.transactionnumber as transactionnumber,
       payment.totalamountpaid as totalamount,
-      payment.paymentmode as paymenttype,
+      CASE WHEN payment.paymentmode = 'OFFLINE_NEFT' THEN 'DIRECT BANK'  ELSE payment.paymentmode END as paymenttype,
       colonymsg.message as colony
     FROM cs_pt_duplicate_ownership_application dc 
     INNER JOIN cs_pt_duplicatecopy_applicant da ON da.application_id = dc.id 
@@ -382,7 +382,7 @@ ReportDefinitions:
       od.phone as mobileno,
       payment.transactionnumber as transactionnumber,
       payment.totalamountpaid as totalamount,
-      payment.paymentmode as paymenttype
+      CASE WHEN payment.paymentmode = 'OFFLINE_NEFT' THEN 'DIRECT BANK'  ELSE payment.paymentmode END as paymenttype
     FROM cs_pt_property_v1 rent
     INNER JOIN  message colonymsg ON  colonymsg.code = rent.colony AND colonymsg.locale = 'en_IN'
     LEFT OUTER JOIN cs_pt_ownership_v1 ot ON rent.id = ot.property_id and ot.active_state = true
@@ -390,7 +390,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_bill bill ON bill.consumercode like concat(FORMAT('SITE-%s',rent.transit_number), '%')
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
-    WHERE rent.tenantId LIKE $tenantid and payment.transactionnumber != 'null' 
+    WHERE rent.tenantId LIKE $tenantid and payment.transactionnumber != 'null'  
     
 - reportName: OTCollectionReport
   summary: Ownership transfer Collection Report
@@ -448,7 +448,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
-    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD')) AS offl ON pd.paymentid = offl.id
+    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD','OFFLINE_NEFT')) AS offl ON pd.paymentid = offl.id
     WHERE ot.application_state in ('OT_APPROVED', 'OT_PAID', 'OT_REJECTEDPAID','OT_PENDINGCLAPPROVAL','OT_PENDINGSAREJECTION') AND ot.application_state != 'null' AND ot.tenantId LIKE $tenantid
   groupby: GROUP BY applicationtype
   
@@ -507,7 +507,7 @@ ReportDefinitions:
     LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
     LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id
     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
-    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD')) AS offl ON pd.paymentid = offl.id
+    LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD','OFFLINE_NEFT')) AS offl ON pd.paymentid = offl.id
     WHERE dc.State in ('DC_APPROVED', 'DC_PAID', 'DC_REJECTEDPAID','DC_PENDINGCLAPPROVAL','DC_PENDINGSAREJECTION') AND dc.tenantId LIKE $tenantid
   groupby: GROUP BY applicationtype
   
@@ -566,7 +566,7 @@ ReportDefinitions:
      LEFT OUTER JOIN egcl_paymentdetail as pd ON pd.billid = bill.id
      LEFT OUTER JOIN egcl_payment as payment ON pd.paymentid = payment.id 
      LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode = 'ONLINE') AS onl ON  pd.paymentid = onl.id 
-     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD')) AS offl ON pd.paymentid = offl.id
+     LEFT OUTER JOIN (SELECT * FROM egcl_payment WHERE paymentmode IN ('CASH','CHEQUE','DD','OFFLINE_NEFT')) AS offl ON pd.paymentid = offl.id
      WHERE rp.tenantId LIKE $tenantid and payment.transactionnumber != 'null' 
   groupby: GROUP BY rp.transit_number
   
