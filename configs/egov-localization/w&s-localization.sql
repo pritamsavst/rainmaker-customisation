@@ -1358,4 +1358,10 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5793-ac6f-2bc063b75064e','en_IN','WS_COMMON_DEACTIVE_LABEL','Deactivate','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5794-ac6f-2bc063b75064e','en_IN','WS_GROUP_NUMBER_INPUT','Group Number','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5795-ac6f-2bc063b75064e','en_IN','WS_GROUP_NUMBER_INPUT_PLACEHOLDER','Enter Group Number','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5796-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_UPDATE_METER_INFO','Update Meter Infirmation','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5796-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_UPDATE_METER_INFO','Update Meter Infirmation','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5797-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary To Temporary Conversion','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5798-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_APPLY_FOR_TEMPORARY_REGULAR_CONNECTION','Temporary To Regular Conversion','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5799-ac6f-2bc063b75064e','WF_SW_SEWERAGE_RESUBMIT_APPLICATION','Resubmit','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5800-ac6f-2bc063b75064e','WF_SW_SEWERAGE_INITIATE_SITE_INSPECTION','Initiate Site Inspection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5801-ac6f-2bc063b75064e','WF_SW_SEWERAGE_SUBMIT_APPLICATION','Sunmit Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
+
