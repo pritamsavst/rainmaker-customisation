@@ -573,13 +573,13 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
 
-    - query: UPDATE eg_ws_property SET usagecategory=? ,subusageCategory=?, lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
+    - query: UPDATE eg_ws_property SET usagecategory=? ,usagesubcategory=?, lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
          
           - jsonPath: $.WaterConnection.waterProperty.usageCategory
 
-          - jsonPath: $.WaterConnection.waterProperty.subusageCategory
+          - jsonPath: $.WaterConnection.waterProperty.usageSubCategory
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
