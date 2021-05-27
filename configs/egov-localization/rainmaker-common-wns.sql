@@ -262,6 +262,7 @@ DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SITE_INSPECT
 DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_ROADCUT_NOC_BY_CITIZEN'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_ROADCUT_NOC_APPROVAL'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SEWERAGE_CONNECTION_ACTIVATION'and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code ='PAYMENT_MESSAGE_CITIZEN' and module='rainmaker-common' and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -499,4 +500,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6234-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_CONNECTION','Temporary Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6235-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_UPDATE_METER_INFO','Meter Update','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6236-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_NEW_TUBEWELL_CONNECTION','New Tubewell Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6237-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6237-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL);
