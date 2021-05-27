@@ -339,6 +339,8 @@ serviceMaps:
        
        - jsonPath: $.WaterConnection.proposedMeterRentCode
        
+       - jsonPath: $.WaterConnection.proposedMeterCount
+       
        - jsonPath: $.WaterConnection.proposedMfrCode
        
        - jsonPath: $.WaterConnection.proposedMeterDigits
@@ -569,7 +571,21 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
-          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime  
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+
+    - query: UPDATE eg_ws_property SET usagecategory=? ,usagesubcategory=?, lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
+      basePath: $.WaterConnection
+      jsonMaps:
+         
+          - jsonPath: $.WaterConnection.waterProperty.usageCategory
+
+          - jsonPath: $.WaterConnection.waterProperty.usageSubCategory
+
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
+
+          - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
+
+          - jsonPath: $.WaterConnection.waterProperty.id
       
  - version: 1.0
    name: WaterConnection
@@ -605,11 +621,13 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.id
       
-    - query: UPDATE eg_ws_property SET usagecategory=? , lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
+    - query: UPDATE eg_ws_property SET usagecategory=? ,usagesubcategory =?, lastModifiedBy=?, lastModifiedTime=?  WHERE id=?;
       basePath: $.WaterConnection
       jsonMaps:
 
        - jsonPath: $.WaterConnection.waterProperty.usageCategory
+
+       - jsonPath: $.WaterConnection.waterProperty.usageSubCategory 
        
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -693,6 +711,8 @@ serviceMaps:
        - jsonPath: $.WaterConnection.proposedInitialMeterReading
        
        - jsonPath: $.WaterConnection.proposedMeterRentCode
+       
+       - jsonPath: $.WaterConnection.proposedMeterCount
        
        - jsonPath: $.WaterConnection.proposedMfrCode
        

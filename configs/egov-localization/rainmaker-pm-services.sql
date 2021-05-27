@@ -1323,4 +1323,26 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
 ( '42e17862-dbd8-4pm6-95f6-382ec3e10076','en_IN', 'ERR_NOC_ADV_SPACE','Please enter a valid Space(In Sq.ft.)','ch','rainmaker-pm', '94');
 INSERT INTO public.message(id, locale, code, message, tenantid, module, createdby) VALUES
-( '42e17862-dbd8-4pm6-95f6-382ec3e10077','en_IN', 'ERR_NOC_ADV_ADVERTISEMENT_MATTER_DESCRIPTION','Please enter a valid Advertisement Matter Description','ch','rainmaker-pm', '94');
+( '42e17862-dbd8-4pm6-95f6-382ec3e10077','en_IN', 'ERR_NOC_ADV_ADVERTISEMENT_MATTER_DESCRIPTION','Please enter a valid Advertisement Matter Description','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10078','en_IN','NOC_PAYMENT_COLLECTION_SUCCESS_MESSAGE_MAIN','Payment has been collected successfully!','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10079','en_IN','PET_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','A notification regarding Payment Collection has been sent to the applicant at registered Mobile No.','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10080','en_IN','NOC_PMT_RCPT_NO','Receipt No.','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
+--,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','Sell Meat ID Proof','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10084','en_IN','SELLMEATNOC_FEE','Fee','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10085','en_IN','SELLMEATNOC_UNDERTAKING_HEADING','No premises shall be issued NOC to obtain license for sale of meat, fsh and poultry unless:-','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10086','en_IN','SELLMEATNOC_UNDERTAKING_POINT1',' It has a foor made of impervious and non-slippery material.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10087','en_IN','SELLMEATNOC_UNDERTAKINGPOINT2','Its walls upto a height of minimum 5 feet from the foor level shall be made of Impervious concrete material (e.g.glazed tiles or hygienic panels etc.)and ceiling is properly plasted and lime washed.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10088','en_IN','SELLMEATNOC_UNDERTAKINGPOINT3',' It is provided with adequate light and ventillation.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10089','en_IN','SELLMEATNOC_UNDERTAKINGPOINT4',' Except in the case of packed or frozen meat, fsh and poultry,it is provided vith a drain and the whole foor is so sloped to allow all liquids to fow of by the drain to the city sewer.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10090','en_IN','SELLMEATNOC_UNDERTAKINGPOINT5','There should be provision of continous supply of potable water inside premises.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10091','en_IN','SELLMEATNOC_UNDERTAKINGPOINT6',' It has no direct communication between premises and any place used as a living or sleeping room.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10092','en_IN','SELLMEATNOC_UNDERTAKINGPOINT7','The minimum distance between the meat shop and any place of worship should not be less than 50mtrs.The condition of 100 rosters distance will apply in case the premises situated directly opposite to the entry gate of religious place of any community.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10093','en_IN','SELLMEATNOC_UNDERTAKINGPOINT8','All the fttings in the shop shall be non-corroding and non -rusting type.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10094','en_IN','SELLMEATNOC_UNDERTAKINGPOINT9','Washbasin made of stainless steel/porcelain shall be provided.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10095','en_IN','SELLMEATNOC_UNDERTAKINGPOINT10','The premises shall be air conditioned.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10096','en_IN','SELLMEATNOC_UNDERTAKINGPOINT11','A sign board indicating the type of meat sold shall be displayed prominently i.e.JhatkaMalal.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10097','en_IN','SELLMEATNOC_UNDERTAKINGPOINT12','Proof of possession (rent agreement to be submitted with application for NOC.','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10100','en_IN','SELLMEATNOC_UNDERTAKINGPOINT13','Failure to comply with any of these conditions or any other condition laid down by Licensing Authority may result in cancellation of NOC by the appropriate authority', 'ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10101','en_IN','SELLMEATNOC_UNDERTAKINGPOINT14','Grant of NOC shall not protect the licensee for violation of provisions of the capital of Punjab Development and regulation Act, 1952 and rules framed thereunder or any other law.','ch','rainmaker-pm', '94');
