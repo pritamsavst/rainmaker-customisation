@@ -46,11 +46,7 @@
                         "variable": "activityType",
                         "value": {
                              "path":"$.activityType"                              
-                        } ,
-								"localisation":{
-                           "required":true,
-                           "module":"rainmaker-common"
-                        }
+                        } 
                      },  
                      {
                         "variable": "gstNumber",
