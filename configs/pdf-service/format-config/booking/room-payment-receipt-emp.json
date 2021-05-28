@@ -67,7 +67,7 @@
                 ],
                 "columns": [
                     {
-                        "text": "(e-Smpark ",
+                        "text": "(e-Sampark ",
                         "width": 70
                     },
                     {
@@ -144,7 +144,7 @@
                     },
                     {
                         "text": "{{paymentDate}}",
-                        "width": 85,
+                        "width": "auto",
                         "margin": [
                             2,
                             15,
@@ -801,7 +801,16 @@
                     {
                         "text": "{{rIFSCCode}}",
                         "width": "auto"
-                    }
+                    },
+                    {
+                       "text": "     Nominee Name : ",
+                       "width": "auto",
+                       "bold": true
+                   },
+                   {
+                       "text": "{{NomName}}",
+                       "width": "auto"
+                   }
                 ]
             },
             {
