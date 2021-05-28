@@ -75,14 +75,6 @@
                     {
                         "text": "To,",
                         "width": 350
-                    },
-                    {
-                        "text": "Date : ",
-                        "width": "auto"
-                    },
-                    {
-                        "text": "{{paymentDate}}",
-                        "width": "auto"
                     }
                 ]
             },
