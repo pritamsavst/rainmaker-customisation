@@ -65,18 +65,23 @@
                 "bold": true
             },
             {
-                "text": "To,",
                 "margin": [
                     0,
                     20,
                     0,
                     0
+                ],
+                "columns": [
+                    {
+                        "text": "To,",
+                        "width": 350
+                    }
                 ]
             },
             {
                 "margin": [
                     20,
-                    10,
+                    0,
                     0,
                     10
                 ],
@@ -399,7 +404,16 @@
                     {
                         "text": "{{rIFSCCode}}",
                         "width": "auto"
-                    }
+                    },
+                    {
+                       "text": "     Nominee Name : ",
+                       "width": "auto",
+                       "bold": true
+                   },
+                   {
+                       "text": "{{NomName}}",
+                       "width": "auto"
+                   }
                 ]
             },
             {

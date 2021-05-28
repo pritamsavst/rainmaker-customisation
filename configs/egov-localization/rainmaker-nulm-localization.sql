@@ -311,7 +311,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65023e', 'en_IN', 'NULM_SEP_SINCE_HOW_LONG_IN_CHANDIGARH', 'Since How long in Chandigarh (In Yrs)', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65000e', 'en_IN', 'NULM_APPLICATION_FOR_SEP_PROGRAM', 'Application for SEP program', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65000e', 'en_IN', 'NULM_APPLICATION_FOR_SEP_PROGRAM', 'Application for Self-Employment Program(SEP)', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b65001e', 'en_IN', 'NULM_SEP_NAME_OF_APPLICANT', 'Name of Applicant', 'ch', 'rainmaker-nulm', 24226, '2020-08-02 13:01:48.830', NULL, NULL);
@@ -938,7 +938,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66684e', 'en_IN', 'NULM_APPLICATION_SUCCESS_SUHLOG_DELETE', 'SUH Log deleted Successfully', 'ch', 'rainmaker-nulm', 24226, '2020-09-04 20:02:44.019', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66685e', 'en_IN', 'NULM_SUH_LOG_SEARCH', 'SUH Log Maintenance Search', 'ch', 'rainmaker-nulm', 24226, '2020-09-04 20:02:44.019', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66685e', 'en_IN', 'NULM_SUH_LOG_SEARCH', 'Shelters for Urban Homeless(SUH) Log Maintenance Search', 'ch', 'rainmaker-nulm', 24226, '2020-09-04 20:02:44.019', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66686e', 'en_IN', 'NULM_SUH_LOG_ADD_BUTTON', 'Add SUH Log', 'ch', 'rainmaker-nulm', 24226, '2020-09-04 20:02:44.019', NULL, NULL);
@@ -977,7 +977,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66883e', 'en_IN', 'NULM_SUH_CITIZEN_SELTER_REQUEST', 'Request for Shelter', 'ch', 'rainmaker-nulm', 24226, '2020-09-26 18:18:33.508', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66751e', 'en_IN', 'NULM_APPLICATION_FOR_SUSV_PROGRAM', 'SUSV Program', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66751e', 'en_IN', 'NULM_APPLICATION_FOR_SUSV_PROGRAM', 'Support to Urban Street Vendors(SUSV) Program', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66752e', 'en_IN', 'NULM_SUSV_DETAILS', 'SUSV Details', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
@@ -1037,7 +1037,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66724e', 'en_IN', 'NULM_DISABILITY_PROOF', 'Disability Proof', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66725e', 'en_IN', 'NULM_SUSV_TRANSACTION_HEADER', 'SUSV Transaction', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66725e', 'en_IN', 'NULM_SUSV_TRANSACTION_HEADER', 'Support to Urban Street Vendors(SUSV) Transaction', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66726e', 'en_IN', 'NULM_SUSV_TRANSACTION_DETAILS', 'Transaction Details', 'ch', 'rainmaker-nulm', 24226, '2020-09-10 14:04:59.661', NULL, NULL);
@@ -1436,7 +1436,7 @@ INSERT INTO public.message
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66110e', 'en_IN', 'NULM_SHG_MEMBER_POSITION_SELECT', 'Select Position', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
-VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66111e', 'en_IN', 'NULM_APPLICATION_FOR_SMID_PROGRAM', 'Application for SMID program', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66111e', 'en_IN', 'NULM_APPLICATION_FOR_SMID_PROGRAM', 'Application for Social Mobilization Institution Development(SMID)', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('4d3b6355-1abb-4591-ac6f-2bc063b66112e', 'en_IN', 'NULM_SHG_MEMBER_HEADER', 'SHG Member', 'ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
@@ -1521,9 +1521,7 @@ INSERT INTO public.message
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66150e', 'en_IN','NULM_SVRU_CARD_TITLE','Street Vendor Registration Update','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66151e', 'en_IN','NULM_SUHC_CARD_TITLE','Shelter Profile Request','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66152e', 'en_IN','NULM_NGOR_CARD_TITLE','Non-governmental Organization','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('4d3b6355-1abb-4591-nu6f-2bc063b66153e', 'en_IN','NULM_SMIDNGO_CARD_TITLE','Social Mobilization Institution Development for Non-governmental Organization','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
+,('4d3b6355-1abb-4591-nu6f-2bc063b66153e', 'en_IN','NULM_SMIDNGO_CARD_TITLE','Social Mobilization Institution Development for NGO','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66154e', 'en_IN','NULM_SUHP_CARD_TITLE','Shelters for Urban Homeless','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66155e', 'en_IN','NULM_SUHLOG_CARD_TITLE','Shelters for Urban Homeless Log Maintenance','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('4d3b6355-1abb-4591-nu6f-2bc063b66156e', 'en_IN','NULM_SUSVT_CARD_TITLE','Support to Urban Street Vendors Transaction','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
-
-
