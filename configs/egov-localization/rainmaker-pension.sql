@@ -644,5 +644,5 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 --,('167e2ab4-cab8-4605-9bfa-324c58fd1094','en_IN','PENSION_ERR_FILL_PENSION_MANDATORY_FIELDS','Please fill all mandatory fields for Pension  Details, then save !','ch','rainmaker-pension',24226,now(),NULL,NULL)
 ,('167e2ab4-cab8-4605-9bfa-324c58fd1095','en_IN','PENSION_CURRENT_DATE_VALIDATION_CDOB','Pensioner claimant date of birth can not be greater than the current date','ch','rainmaker-pension',24226,now(),NULL,NULL)
 ,('167e2ab4-cab8-4606-9bfa-324c58fd1096','en_IN','PENSION_CURRENT_DATE_VALIDATION_DOB','Pensioner date of birth can not be greater than the current date','ch','rainmaker-pension',24226,now(),NULL,NULL)
-,('167e2ab4-cab8-4607-9bfa-324c58fd1096','en_IN','PENSION_DEPENDENT_ADDRESS_P','Address','Pensioner date of birth can not be greater than the current date','ch','rainmaker-pension',24226,now(),NULL,NULL)
-,('167e2ab4-cab8-4605-9bfa-324c58fd1096','en_IN','PENSION_PENSIONER_UPDATE_DETAILS','Pensioner Update Details''Pensioner date of birth can not be greater than the current date','ch','rainmaker-pension',24226,now(),NULL,NULL);
+,('167e2ab4-cab8-4607-9bfa-324c58fd1096','en_IN','PENSION_DEPENDENT_ADDRESS_P','Address','ch','rainmaker-pension',24226,now(),NULL,NULL)
+,('167e2ab4-cab8-4605-9bfa-324c58fd1096','en_IN','PENSION_PENSIONER_UPDATE_DETAILS','Pensioner Update Details','ch','rainmaker-pension',24226,now(),NULL,NULL);
