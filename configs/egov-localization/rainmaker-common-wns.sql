@@ -285,6 +285,10 @@ DELETE FROM public.message WHERE code ='WS_METER_TESTING_CHARGE'and tenantId='ch
 DELETE FROM public.message WHERE code ='WS_METER_CHARGE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WS_FERRULE_CHARGE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WS_SECURITY_CHARGE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_DOCUMENT_VERIFICATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_INITIATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_VERIFY_AND_FORWARD_APPLICATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='ACTION_TEST_WATER_&_SEWERAGE'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -547,4 +551,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6258-ac6f-2bc063b75064e','en_IN','WS_METER_CHARGE','Meter Fitting Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6259-ac6f-2bc063b75064e','en_IN','WS_METER_TESTING_CHARGE','Meter Testing Fee','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6260-ac6f-2bc063b75064e','en_IN','WS_FERRULE_CHARGE','Ferrule Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6261-ac6f-2bc063b75064e','en_IN','WS_SECURITY_CHARGE','Security Charge','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6261-ac6f-2bc063b75064e','en_IN','WS_SECURITY_CHARGE','Security Charge','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6262-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6263-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6264-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_APPLICATION','Verify and Forward','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6265-ac6f-2bc063b75064e','en_IN','ACTION_TEST_WATER_&_SEWERAGE','ch','rainmaker-common',24226,now(),NULL,NULL);
