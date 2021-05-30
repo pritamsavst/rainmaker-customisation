@@ -1394,4 +1394,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5828-ac6f-2bc063b75064e','en_IN','VILLAGEHOUSES_ROADCUT','Receipt of road cut restoration charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5829-ac6f-2bc063b75064e','en_IN','VILLAGEHOUSES_POWER_ATTORNEY','Power of Attorney in case of GPA (Attested by Notary Public/ Magistrate).','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5830-ac6f-2bc063b75064e','en_IN','VILLAGEHOUSES_PLUMBER_CERTIFICATE','Certificate from licensed Plumber on Application Form.','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5831-ac6f-2bc063b75064e','en_IN','WS_FILL_SINGLEOWNERS_FIELDS','Please remove multilple ownner data','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5831-ac6f-2bc063b75064e','en_IN','WS_FILL_SINGLEOWNERS_FIELDS','Please remove multilple ownner data','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5832-ac6f-2bc063b75064e','en_IN','WF_CHANGE_TARIFF_APPLICATION','Tariff Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5833-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_CHANGE_TARIFF','Chnage Tariff','ch','rainmaker-ws',24226,now(),NULL,NULL)
