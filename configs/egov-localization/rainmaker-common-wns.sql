@@ -523,11 +523,11 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6235-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_UPDATE_METER_INFO','Meter Update','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6236-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_NEW_TUBEWELL_CONNECTION','New Tubewell Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6237-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL)
+--,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6238-ac6f-2bc063b75064f','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6239-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_NAME_LABEL','Payer Name','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6240-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_MOB_LABEL','Payer Mobile No.','ch','rainmaker-common',24226,now(),NULL,NULL);
-,('4d3b6355-1abb-6241-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_MOB_PLACEHOLDER','Enter Payer Mobile No.','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6240-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_MOB_LABEL','Payer Mobile No.','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6241-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_MOB_PLACEHOLDER','Enter Payer Mobile No.','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6242-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_DD_NO_LABEL','DD No.','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6243-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_DD_NO_PLACEHOLDER','Enter DD  no.','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6244-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_DD_DATE_LABEL','DD Date','ch','rainmaker-common',24226,now(),NULL,NULL)
