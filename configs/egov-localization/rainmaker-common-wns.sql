@@ -263,6 +263,28 @@ DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_ROADCUT_NOC_BY_C
 DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_ROADCUT_NOC_APPROVAL'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code = 'WF_SW_SEWERAGE_PENDING_FOR_SEWERAGE_CONNECTION_ACTIVATION'and module='rainmaker-common' and tenantId='ch';
 DELETE FROM public.message WHERE code ='PAYMENT_MESSAGE_CITIZEN' and module='rainmaker-common' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAYER_NAME_LABEL'  and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAYER_MOB_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAYER_MOB_PLACEHOLDER' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_DD_NO_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_DD_NO_PLACEHOLDER' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_DD_DATE_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_IFSC_CODE_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_IFSC_CODE_PLACEHOLDER' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_BANK_NAME_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_BANK_NAME_PLACEHOLDER' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_BANK_BRANCH_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_BANK_BRANCH_PLACEHOLDER' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_RCPT_DETAILS' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_RCPT_NO_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_RECEIPT_ISSUE_DATE_LABEL' and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_CAP_PMT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='SCORE_YES'and tenantId='ch';
+DELETE FROM public.message WHERE code ='SCORE_NO'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WS_METER_TESTING_CHARGE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WS_METER_CHARGE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WS_FERRULE_CHARGE'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WS_SECURITY_CHARGE'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -501,4 +523,28 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6235-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_UPDATE_METER_INFO','Meter Update','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6236-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_NEW_TUBEWELL_CONNECTION','New Tubewell Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6237-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary to Temporary Conversion','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6238-ac6f-2bc063b75064e','en_IN','PAYMENT_MESSAGE_CITIZEN','Payment has been made successfully!','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6239-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_NAME_LABEL','Payer Name','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6240-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_MOB_LABEL','Payer Mobile No.','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6241-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_MOB_PLACEHOLDER','Enter Payer Mobile No.','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6242-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_DD_NO_LABEL','DD No.','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6243-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_DD_NO_PLACEHOLDER','Enter DD  no.','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6244-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_DD_DATE_LABEL','DD Date','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6245-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_IFSC_CODE_LABEL','IFSC Code','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6246-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_IFSC_CODE_PLACEHOLDER','Enter IFSC Code','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6247-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_BANK_NAME_LABEL','Bank Name','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6248-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_BANK_NAME_PLACEHOLDER','Enter Bank Name','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6249-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_BANK_BRANCH_LABEL','Bank Branch','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6250-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_BANK_BRANCH_PLACEHOLDER','Enter Bank Branch','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6251-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RCPT_DETAILS','Receipt Details (Optional)','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6252-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RCPT_NO_LABEL','Receipt No.','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6253-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RECEIPT_ISSUE_DATE_LABEL','Receipt Issue Date','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6254-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_CAP_PMT','Capture Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6255-ac6f-2bc063b75064e','en_IN','SCORE_YES','Yes','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6256-ac6f-2bc063b75064e','en_IN','SCORE_NO','No','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6257-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6258-ac6f-2bc063b75064e','en_IN','WS_METER_CHARGE','Meter Fitting Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6259-ac6f-2bc063b75064e','en_IN','WS_METER_TESTING_CHARGE','Meter Testing Fee','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6260-ac6f-2bc063b75064e','en_IN','WS_FERRULE_CHARGE','Ferrule Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6261-ac6f-2bc063b75064e','en_IN','WS_SECURITY_CHARGE','Security Charge','ch','rainmaker-common',24226,now(),NULL,NULL);
