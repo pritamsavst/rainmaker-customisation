@@ -290,6 +290,11 @@ DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_INITIATED'and tenantId=
 DELETE FROM public.message WHERE code ='WF_VERIFY_AND_FORWARD_APPLICATION'and tenantId='ch';
 DELETE FROM public.message WHERE code ='ACTION_TEST_WATER_&_SEWERAGE'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_REGULARWSCONNECTION_INITIATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_COMMON_COMMENTS'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_APPROVAL_UPLOAD_HEAD'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_APPROVAL_UPLOAD_SUBHEAD'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_ADD_HOC_CHARGES_POPUP_COMMENT_LABEL'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -443,7 +448,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6149-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SUPERINTENDENT_APPROVAL','Pending for Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6150-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_EE_REVIEW','Pending for EE Review','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6151-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_SDE_APPROVAL_AFTER_EE','Pending for SDE Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6152-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_DOCUMENT_VERIFICATION_BY_SDO','Pending for Document Verification by SDO','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6152-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PENDING_FOR_DOCUMENT_VERIFICATION_BY_SDO','Pending for Document Verification by SDE','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6153-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_SW_SEWERAGE','Sewarage Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6154-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_WS_METER_UPDATE','Meter Update','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6155-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -556,4 +561,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6262-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6263-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6264-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_APPLICATION','Verify and Forward','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6265-ac6f-2bc063b75064e','en_IN','ACTION_TEST_WATER_&_SEWERAGE','Water & Sewerage','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6265-ac6f-2bc063b75064e','en_IN','ACTION_TEST_WATER_&_SEWERAGE','Water & Sewerage','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6266-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6267-ac6f-2bc063b75064e','en_IN','WF_COMMON_COMMENTS','Comments','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6268-ac6f-2bc063b75064e','en_IN','WF_APPROVAL_UPLOAD_HEAD','Requirement Document','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6269-ac6f-2bc063b75064e','en_IN','WF_APPROVAL_UPLOAD_SUBHEAD','Document Details','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6270-ac6f-2bc063b75064e','en_IN','WF_ADD_HOC_CHARGES_POPUP_COMMENT_LABEL','Type Here','ch','rainmaker-common',24226,now(),NULL,NULL);
