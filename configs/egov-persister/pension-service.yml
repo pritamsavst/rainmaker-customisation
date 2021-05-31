@@ -3001,6 +3001,17 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.workflowHeaderId
 
+    - query: UPDATE eg_pension_pensioner_final_calculated_benefit set active = false, last_modified_by = ?, last_modified_date = ? WHERE uuid=?;
+
+      basePath: ProcessInstances.*
+      jsonMaps:
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+  
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+  
+      - jsonPath: $.ProcessInstances.*.oldPensionerFinalCalculatedBenefitId    
+
     - query: INSERT INTO eg_pension_pensioner_application_details(uuid, tenantid, pensioner_id, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, active, created_by, last_modified_by, created_date, last_modified_date, date_of_contingent, bank_code, bank_ifsc) SELECT ?, ?, ?, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, total_no_pay_leaves_days, total_no_pay_leaves_months, total_no_pay_leaves_years, dues, is_employment_active, is_convicted_serious_crime_or_grave_misconduct, is_any_judicial_proceeding_is_continuing, is_any_misconduct_insolvency_inefficiency, is_employee_dies_in_terrorist_attack, is_employee_dies_in_accidental_death, is_commutation_opted, reason_for_retirement, is_eligible_for_pension, is_dues_present, is_dues_amount_decided, is_taken_monthly_pension_and_gratuity, is_taken_gratuity_commutation_terminal_benefit, is_taken_compensation_pension_and_gratuity, dies_in_extremists_dacoits_smuggler_antisocial_attack, is_compassionate_pension_granted, no_dues_for_avail_govt_accomodation, employee_group, true, ?, ?, ?, ?, date_of_contingent, bank_code, bank_ifsc FROM eg_pension_employee_other_details WHERE workflow_header_id=?;
 
       basePath: ProcessInstances.*
@@ -3021,6 +3032,17 @@ serviceMaps:
       - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate
 
       - jsonPath: $.ProcessInstances.*.workflowHeaderId
+
+    - query: UPDATE eg_pension_pensioner_application_details set active = false, last_modified_by = ?, last_modified_date = ? WHERE uuid=?;
+
+      basePath: ProcessInstances.*
+      jsonMaps:
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
+
+      - jsonPath: $.ProcessInstances.*.auditDetails.createdDate
+
+      - jsonPath: $.ProcessInstances.*.oldPensionerApplicationDetailsId
 
     - query: INSERT INTO eg_pension_revision(uuid, tenantid, pensioner_id, effective_start_year, effective_start_month, effective_end_year, effective_end_month, pension_arrear, fma, miscellaneous, over_payment, income_tax, cess, basic_pension, additional_pension, commuted_pension, net_deductions, final_calculated_pension, active, created_by, last_modified_by, created_date, last_modified_date, interim_relief, da, total_pension, pension_deductions, pensioner_final_calculated_benefit_id, wound_extraordinary_pension, attendant_allowance) SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, additional_pension, commuted_pension, net_deductions, final_calculated_pension, true, ?, ?, ? ,?, interim_relief, da, total_pension, pension_deductions, uuid, wound_extraordinary_pension, attendant_allowance FROM eg_pension_pensioner_final_calculated_benefit WHERE uuid = ?;  
 
