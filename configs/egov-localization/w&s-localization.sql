@@ -435,7 +435,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('495d771f-1923-415e-82d0-2f4e1954a595','en_IN','WS_OWN_DETAIL_DOB_LABEL','Date Of Birth','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('c5b25800-3538-4a4f-9658-10d01d342bcc','en_IN','WS_OWN_DETAIL_MOBILE_NO_LABEL','Mobile No.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('b6b085b8-119c-4840-b1ee-86c9768d03e7','en_IN','WS_OWN_DETAIL_HEADER_INFO','Owner Information','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
-	 ('0490b9b1-72eb-4007-a4d3-31276a619f24','en_IN','WS_PROP_DETAIL_DHNO','Door / House No','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
+	 ('0490b9b1-72eb-4007-a4d3-31276a619f24','en_IN','WS_PROP_DETAIL_DHNO','Plot No.','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('f89d0854-fe89-4b22-8763-651b1c4b09c8','en_IN','WS_PROPERTY_NO_OF_FLOOR_LABEL','No. of Floors','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('0f3eb494-3c06-4133-89ea-230d35cabb35','en_IN','WS_PROPERTY_SUB_USAGE_TYPE_LABEL','Property Sub Usage Type','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18'),
 	 ('07e40994-b81a-4a26-ba09-fdbdb27b4f4a','en_IN','WS_SELECT_DOC_DD_LABEL','Select Documents','ch','rainmaker-ws',1,'2020-07-23 13:29:02.9',1,'2020-07-23 13:39:18');
