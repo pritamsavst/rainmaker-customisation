@@ -82,6 +82,14 @@
                         "text": "FROM,",
                         "width": 350,
                         "fontSize": 12
+                    },
+                    {
+                        "text": "Date : ",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "{{paymentDate}}",
+                        "width": "auto"
                     }
                 ]
             },
