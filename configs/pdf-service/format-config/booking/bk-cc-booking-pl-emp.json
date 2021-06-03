@@ -75,6 +75,14 @@
                     {
                         "text": "FROM,",
                         "width": 350
+                    },
+                    {
+                        "text": "Date : ",
+                        "width": "auto"
+                    },
+                    {
+                        "text": "{{paymentDate}}",
+                        "width": "auto"
                     }
                 ]
             },
@@ -448,14 +456,14 @@
                         "width": "auto"
                     },
                     {
-                       "text": "     Nominee Name : ",
-                       "width": "auto",
-                       "bold": true
-                   },
-                   {
-                       "text": "{{NomName}}",
-                       "width": "auto"
-                   }
+                        "text": "     Nominee Name : ",
+                        "width": "auto",
+                        "bold": true
+                    },
+                    {
+                        "text": "{{NomName}}",
+                        "width": "auto"
+                    }
                 ]
             },
             {
