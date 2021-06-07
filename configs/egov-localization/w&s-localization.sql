@@ -1401,4 +1401,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5835-ac6f-2bc063b75064e','en_IN','WF_CHANGE_TARIFF_APPLICATION','Chnage Tariff Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5836-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PAY','Pay','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5837-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER','Receipt Letter','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5838-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER_LAVEL','Receipt Letter','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5838-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER_LAVEL','Receipt Letter','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5838-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER_LAVEL1','Receipt Letter 1','ch','rainmaker-ws',24226,now(),NULL,NULL);
