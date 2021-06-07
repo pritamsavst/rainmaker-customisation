@@ -295,6 +295,7 @@ DELETE FROM public.message WHERE code ='WF_COMMON_COMMENTS'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_APPROVAL_UPLOAD_HEAD'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_APPROVAL_UPLOAD_SUBHEAD'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_ADD_HOC_CHARGES_POPUP_COMMENT_LABEL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_DISCONNECTION_PENDING_FOR_CITIZEN_ACTION'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -566,4 +567,5 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6267-ac6f-2bc063b75064e','en_IN','WF_COMMON_COMMENTS','Comments','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6268-ac6f-2bc063b75064e','en_IN','WF_APPROVAL_UPLOAD_HEAD','Requirement Document','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6269-ac6f-2bc063b75064e','en_IN','WF_APPROVAL_UPLOAD_SUBHEAD','Document Details','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6270-ac6f-2bc063b75064e','en_IN','WF_ADD_HOC_CHARGES_POPUP_COMMENT_LABEL','Type Here','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6270-ac6f-2bc063b75064e','en_IN','WF_ADD_HOC_CHARGES_POPUP_COMMENT_LABEL','Type Here','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6271-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_CITIZEN_ACTION','Pending for Citizen Action','ch','rainmaker-common',24226,now(),NULL,NULL);
