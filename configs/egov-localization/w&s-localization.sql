@@ -1400,4 +1400,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5835-ac6f-2bc063b75064e','en_IN','WF_CHANGE_TARIFF_APPLICATION','Chnage Tariff Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5836-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PAY','Pay','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5837-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER','Receipt Letter','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5838-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER_LABEL','Receipt Letter','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5839-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_READING_LAST','Last Meter Reading (KL)','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5840-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_READING_LAST_PLACEHOLDER','Enter Last Meter Reading (KL)','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5841-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_LAST_METER_READING','Proposed Last Meter Reading (KL)','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5842-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_LAST_METER_READING_PLACEHOLDER','Enter Proposed Last Meter Reading (KL)','rainmaker-ws',24226,now(),NULL,NULL);
