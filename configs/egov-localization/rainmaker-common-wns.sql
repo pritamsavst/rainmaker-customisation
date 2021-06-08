@@ -562,7 +562,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6262-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6263-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6264-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_APPLICATION','Verify and Forward','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6265-ac6f-2bc063b75064e','en_IN','ACTION_TEST_WATER_&_SEWERAGE','Water & Sewerage','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6265-ac6f-2bc063b75064e','en_IN','ACTION_TEST_WATER_&_SEWERAGE','Water and Sewerage connection Services','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6266-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6267-ac6f-2bc063b75064e','en_IN','WF_COMMON_COMMENTS','Comments','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6268-ac6f-2bc063b75064e','en_IN','WF_APPROVAL_UPLOAD_HEAD','Requirement Document','ch','rainmaker-common',24226,now(),NULL,NULL)
