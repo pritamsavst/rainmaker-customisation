@@ -981,7 +981,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5311-ac6f-2bc063b75064e','en_IN','TEMPORARY_WSCONNECTION_DETAIL_HEADER','Apply for Temporary Water Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5312-ac6f-2bc063b75064e','en_IN','WS_TEMP_TEMP_DETAIL_HEADER','Apply for Temporary to Temporary Conversion','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5313-ac6f-2bc063b75064e','en_IN','WS_TEMP_REGULAR_DETAIL_HEADER',' Apply for Temporary to Regular Conversion','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5314-ac6f-2bc063b75064e','en_IN','WS_TEMP_DISCONNECTION_DETAIL_HEADER','Apply for Temporary Disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5314-ac6f-2bc063b75064e','en_IN','WS_TEMP_DISCONNECTION_DETAIL_HEADER','Apply for Temporary Disconnection / NDC for Government Houses','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5315-ac6f-2bc063b75064e','en_IN','WS_REACTIVATE_DETAIL_HEADER','Apply for Reactivation','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5316-ac6f-2bc063b75064e','en_IN','WF_SEND_BACK_TO_CITIZEN_FOR_ROADCUT_NOC_APPLICATION','Send Back to Citizen For Roadcut NOC','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5317-ac6f-2bc063b75064e','en_IN','WF_INITIATE_SITE_INSPECTION_APPLICATION','Initiate Site Inspection','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1158,7 +1158,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5487-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_ACTIVATED','Temporary Connection Activated','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5488-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_CONNECTION_CONVERSION','Change in Tariff Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5489-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_UPDATE_CONNECTION_HOLDER_INFO','Update Connection Holder Information','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5490-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_TEMPORARY_DISCONNECTION','Temporary Disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5490-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_TEMPORARY_DISCONNECTION','Temporary Disconnection / NDC for Government Houses','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5491-ac6f-2bc063b75064e','en_IN','WF_REGULARWSCONNECTION_PERMANENT_DISCONNECTION','Permanent Disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5492-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_APPLY_FOR_TEMPORARY_TEMPORARY_CONNECTION','Temporary To Temporary Conversion','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5593-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_APPLY_FOR_TEMPORARY_REGULAR_CONNECTION','Temporary To Regular Conversion','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1295,7 +1295,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 
 ,('4d3b6355-1abb-5729-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_CONNECTION_CONVERSION','Change in Tariff Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5730-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_UPDATE_CONNECTION_HOLDER_INFO','Update Connection Holder Information','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5731-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_TEMPORARY_DISCONNECTION','Temporary Disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5731-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_TEMPORARY_DISCONNECTION','Temporary Disconnection / NDC for Government Houses','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5732-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_PERMANENT_DISCONNECTION','Permanent Disconnection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5733-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SUPERINTEDENT_APPLICATION','Verify and Forward Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5734-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_JE_APPLICATION','Verify and Forward Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1403,4 +1403,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5839-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_READING_LAST','Last Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5840-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_READING_LAST_PLACEHOLDER','Enter Last Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5841-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_LAST_METER_READING','Proposed Last Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5842-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_LAST_METER_READING_PLACEHOLDER','Enter Proposed Last Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5842-ac6f-2bc063b75064e','en_IN','WS_PROP_ADDN_DETAILS_LAST_METER_READING_PLACEHOLDER','Enter Proposed Last Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5843-ac6f-2bc063b75064e','en_IN','WS_METER_UPDATE_DETAIL_HEADER','Apply for Meter Update','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5844-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_UPDATE_METER_INFORMATION','Update Meter Information','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5845-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_VALIDATION','Please enter valid data in activation details','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5846-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_PROP_VALIDATION','Please enter proposed connection execution details','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5847-ac6f-2bc063b75064e','en_IN','WF_VERIFY_AND_FORWARD_TO_SDE_APPROVAL_APPLICATION','Verify and Forward Application','ch','rainmaker-ws',24226,now(),NULL,NULL);
