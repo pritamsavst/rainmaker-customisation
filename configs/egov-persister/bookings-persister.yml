@@ -574,7 +574,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:
        
-       - query: INSERT INTO public.bk_rooms_model (id, room_application_number, "action", community_application_number, remarks, room_application_status, room_business_service, total_no_of_rooms, type_of_room,last_modified_date, created_date, from_date, to_date, discount, facilation_charge, room_payment_status) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?::date, ?::date, ?::date, ?::date, ?, ?, ?);
+       - query: INSERT INTO public.bk_rooms_model (id, room_application_number, "action", community_application_number, remarks, room_application_status, room_business_service, total_no_of_rooms, type_of_room,last_modified_date, created_date, from_date, to_date, discount, facilation_charge, room_payment_status, room_created_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?::date, ?::date, ?::date, ?::date, ?, ?, ?, ?);
          basePath: Booking.*.roomsModel.*
          jsonMaps:
           - jsonPath: $.Booking.roomsModel.*.id
@@ -608,6 +608,8 @@ serviceMaps:
           - jsonPath: $.Booking.roomsModel.*.facilationCharge
           
           - jsonPath: $.Booking.roomsModel.*.roomPaymentStatus
+          
+          - jsonPath: $.Booking.roomsModel.*.roomCreatedDate
           
           
              
@@ -677,4 +679,58 @@ serviceMaps:
           - jsonPath: $.Booking.roomsModel.*.roomStatus
 
           - jsonPath: $.Booking.roomsModel.*.communityApplicationNumber
+          
+          
+          
+          
+          
+          
+          
+ - version: 1.0
+   description: Persists the booking card details into db
+   fromTopic: save-booking-card-details
+   isTransaction: true
+   queryMaps:  
+   
+       - query: UPDATE public.bk_bookings SET last_modified_date=?, card_number=?, transaction_number=? WHERE bk_application_number=?; 
+         basePath: Booking.*
+         jsonMaps:
+           
+           - jsonPath: $.Booking.*.lastModifiedDate
+           
+           - jsonPath: $.Booking.*.cardNumber
+           
+           - jsonPath: $.Booking.*.transactionNumber
+         
+           - jsonPath: $.Booking.*.bkApplicationNumber          
+           
+           
+           
+           
+           
+ - version: 1.0
+   description: Persists the booking lock dates into db
+   fromTopic: save-booking-lock-dates
+   isTransaction: true
+   queryMaps:  
+   
+       - query: INSERT INTO public.bk_booking_lock_dates(id, application_number, booking_type, booking_venue, created_date, last_modified_date, sector) VALUES(?, ?, ?, ?, ?, ?, ?);
+ 
+         basePath: BookingLock.*
+         jsonMaps:
+           
+           - jsonPath: $.BookingLock.*.id
+           
+           - jsonPath: $.BookingLock.*.applicationNumber
+           
+           - jsonPath: $.BookingLock.*.bookingType
+         
+           - jsonPath: $.BookingLock.*.bookingVenue  
+           
+           - jsonPath: $.BookingLock.*.createdDate
+           
+           - jsonPath: $.BookingLock.*.lastModifiedDate
+         
+           - jsonPath: $.BookingLock.*.sector
+          
                        

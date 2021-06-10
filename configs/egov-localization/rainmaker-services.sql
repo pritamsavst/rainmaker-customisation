@@ -2639,6 +2639,9 @@ INSERT INTO public.message
 VALUES('636d8b79-d573-4334-8562-e59cf0685113', 'en_IN', 'reports.bb.bk_sector', 'Sector', 'ch', 'rainmaker-services', 268, '2021-04-30 12:05:50.293', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
+VALUES('caa1bf94-5240-4b3c-acf7-9554b6225fa5', 'en_IN', 'BK_FEE_HEAD_PARK_LOCATION_AND_VENUE_CHANGE_AMOUNT', 'Date/Venue change charge', 'ch', 'rainmaker-services', 268, '2021-05-05 10:01:21.499', NULL, NULL);
+INSERT INTO public.message
+(id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('3f9ad0e8-0288-492a-9f71-8cf1c0d4f03e', 'en_IN', 'bk.en.counter.security_refund', 'Dear <1>, You have requested successfully for security refund of <2> booking. Your application no. <3> for <2> has been updated with status <4>. Rgds,', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
