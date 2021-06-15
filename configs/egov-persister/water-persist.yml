@@ -529,7 +529,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, additionalcharges, constructioncharges, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, additionalcharges=?, constructioncharges=?, lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -552,6 +552,10 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.isFerruleApplicable
           
           - jsonPath: $.WaterConnection.waterApplication.securityCharge
+          
+          - jsonPath: $.WaterConnection.waterApplication.additionalCharges
+          
+          - jsonPath: $.WaterConnection.waterApplication.constructionCharges 
 
           - jsonPath: $.WaterConnection.waterApplication.auditDetails.createdBy
 
@@ -572,6 +576,10 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.isFerruleApplicable
           
           - jsonPath: $.WaterConnection.waterApplication.securityCharge
+          
+          - jsonPath: $.WaterConnection.waterApplication.additionalCharges
+          
+          - jsonPath: $.WaterConnection.waterApplication.constructionCharges 
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
@@ -736,7 +744,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.id
 
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, total_amount_paid, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, total_amount_paid=?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, total_amount_paid, paymentmode, comments, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, total_amount_paid=?, paymentmode=?, comments =?,lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -754,7 +762,9 @@ serviceMaps:
 
           - jsonPath: $.WaterConnection.waterApplication.action          
 
-          - jsonPath: $.WaterConnection.waterApplication.totalAmountPaid
+          - jsonPath: $.WaterConnection.waterApplication.totalAmountPaid          
+
+          - jsonPath: $.WaterConnection.waterApplication.paymentMode
           
           - jsonPath: $.WaterConnection.waterApplication.comments
 
