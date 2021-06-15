@@ -2707,7 +2707,8 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
 
-    - query: INSERT INTO eg_pension_employee_other_details(uuid, tenantid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, bank_code, bank_ifsc) select ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? where not exists (select uuid from eg_pension_workflow_header where workflow_type='RRP_SERVICE' and workflow_state='CLOSED' and pension_employee_id=? order by last_modified_date desc limit 1);
+    # - query: INSERT INTO eg_pension_employee_other_details(uuid, tenantid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, bank_code, bank_ifsc) select ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? where not exists (select uuid from eg_pension_workflow_header where workflow_type='RRP_SERVICE' and workflow_state='CLOSED' and pension_employee_id=? order by last_modified_date desc limit 1);
+    - query: INSERT INTO eg_pension_employee_other_details(uuid, tenantid, workflow_header_id, workflow_state, ltc, lpd, pension_arrear, is_da_medical_admissible, fma, medical_relief, miscellaneous, over_payment, income_tax, cess, bank_address, account_number, claimant, wef, active, created_by, last_modified_by, created_date, last_modified_date, bank_code, bank_ifsc, total_no_pay_leaves_years, total_no_pay_leaves_months, total_no_pay_leaves_days) select ?, ?, ?, ?, eppad.ltc, eppad.lpd, eppad.pension_arrear, eppad.is_da_medical_admissible, eppad.fma, eppad.medical_relief, eppad.miscellaneous, eppad.over_payment, eppad.income_tax, eppad.cess, eppad.bank_address, eppad.account_number, eppad.claimant, eppad.wef, true, ?, ?, ?, ?, eppad.bank_code, eppad.bank_ifsc, eppad.total_no_pay_leaves_years, eppad.total_no_pay_leaves_months, eppad.total_no_pay_leaves_days from eg_pension_pensioner_application_details eppad join eg_pension_pensioner epp on epp.uuid = eppad.pensioner_id where epp.pension_employee_id = ? and not exists (select uuid from eg_pension_workflow_header where workflow_type='RRP_SERVICE' and workflow_state='CLOSED' and pension_employee_id=? order by last_modified_date desc limit 1);
         
       basePath: ProcessInstances.*.employeeOtherDetails
       jsonMaps:
@@ -2720,35 +2721,35 @@ serviceMaps:
       
       - jsonPath: $.ProcessInstances.*.state.state 
       
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.ltc
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.ltc
       
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.lpd      
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.lpd      
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.pensionArrear      
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.pensionArrear      
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.isDaMedicalAdmissible
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.isDaMedicalAdmissible
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.fma
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.fma
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.medicalRelief
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.medicalRelief
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.miscellaneous
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.miscellaneous
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.overPayment
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.overPayment
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.incomeTax
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.incomeTax
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.cess
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.cess
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankAddress
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankAddress
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.accountNumber
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.accountNumber
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.claimant
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.claimant
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.wef      
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.wef      
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.active      
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.active      
 
       - jsonPath: $.ProcessInstances.*.auditDetails.createdBy
 
@@ -2758,9 +2759,11 @@ serviceMaps:
 
       - jsonPath: $.ProcessInstances.*.auditDetails.lastModifiedDate  
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankCode  
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankCode  
 
-      - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankIfsc
+      # - jsonPath: $.ProcessInstances.*.employeeOtherDetails.bankIfsc
+
+      - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
 
       - jsonPath: $.ProcessInstances.*.employee.pensionEmployeeId
     
