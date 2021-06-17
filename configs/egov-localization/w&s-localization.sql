@@ -744,7 +744,7 @@ INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createdd
 	 ('4b906873-def9-4b2b-989f-dc04cf677921','en_IN','PT_FORM4_TOTAL','Total','ch','rainmaker-ws',23444,'2018-08-08 15:06:33.414',NULL,NULL),
 	 --('c32cb1fa-2851-4a16-9d25-2cb86a725faf','en_IN','WS_FERRULE_CHARGE','Ferrule Charges','ch','rainmaker-ws',94,'2020-09-25 13:55:37.284',NULL,NULL),
 	--('dea9a4ff-a570-48f2-b471-44ddfda68eff','en_IN','WS_METER_TESTING_CHARGE','Meter Testing Fee','ch','rainmaker-ws',94,'2020-09-25 13:55:37.284',NULL,NULL),
-	 ('c32cb1fa-2851-4a16-9d25-3cb86a725faf','en_IN','WS_CONVERSION_DETAIL_HEADER','Apply for Tariff Chnage','ch','rainmaker-ws',94,'2020-09-25 13:55:37.284',NULL,NULL),
+	 ('c32cb1fa-2851-4a16-9d25-3cb86a725faf','en_IN','WS_CONVERSION_DETAIL_HEADER','Apply for Tariff change','ch','rainmaker-ws',94,'2020-09-25 13:55:37.284',NULL,NULL),
 	 ('dea9a4ff-a570-48f2-b471-54ddfda68eff','en_IN','WS_DISCONNECTION_DETAIL_HEADER','Apply for Water Disconnection','ch','rainmaker-ws',94,'2020-09-25 13:55:37.284',NULL,NULL);
 INSERT INTO message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 	 ('79c5b461-5aec-582a-b43f-13236e0c4bc5','en_IN','WS_RENAME_DETAIL_HEADER','Apply for Water Connection Rename','ch','rainmaker-ws',24226,'2020-10-13 17:18:32.365678',24226,'2020-10-13 17:18:32.365678'),
@@ -1395,9 +1395,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5830-ac6f-2bc063b75064e','en_IN','VILLAGEHOUSES_PLUMBER_CERTIFICATE','Certificate from licensed Plumber on Application Form.','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5831-ac6f-2bc063b75064e','en_IN','WS_FILL_SINGLEOWNERS_FIELDS','Please remove multilple ownner data','ch','rainmaker-ws',24226,now(),NULL,NULL)
 --,('4d3b6355-1abb-5832-ac6f-2bc063b75064e','en_IN','WF_CHANGE_TARIFF_APPLICATION','Tariff Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5833-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_CHANGE_TARIFF','Chnage Tariff','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5833-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_CHANGE_TARIFF','change Tariff','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5834-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_VERIFY_AND_FORWARDTO_SDC','Verify and Forward to SDC','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5835-ac6f-2bc063b75064e','en_IN','WF_CHANGE_TARIFF_APPLICATION','Chnage Tariff Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5835-ac6f-2bc063b75064e','en_IN','WF_CHANGE_TARIFF_APPLICATION','Change Tariff Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5836-ac6f-2bc063b75064e','en_IN','WF_SW_SEWERAGE_PAY','Pay','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5837-ac6f-2bc063b75064e','en_IN','WS_RECEIPT_LETTER','Receipt Letter','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5839-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_INITIAL_METER_READING_LAST','Last Meter Reading (KL)','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1425,4 +1425,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5861-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_BOOTHS','BOOTHS','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5862-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_CONSTRUCTION_CHARGES_LABEL','Construction Charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5863-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_ADDITIONAL_CHARGES_LABEL','Additional Charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5864-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_OTHER_CHARGES_VALIDATION','Please enter valid other charges details','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5864-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_OTHER_CHARGES_VALIDATION','Please enter valid Other Charges Details','ch','rainmaker-ws',24226,now(),NULL,NULL);
+
+
+'
