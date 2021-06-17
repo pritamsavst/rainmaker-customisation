@@ -1421,4 +1421,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5857-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_VERIFY_AND_FORWARD_TO_CHD','Verify and Forward to CHD','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5858-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_VERIFY_AND_FORWARD_TO_HDM','Verify and Forward to HDM','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5859-ac6f-2bc063b75064e','en_IN','WF_ACTIVATE_TUBEWELL_CONNECTION_APPLICATION','Activate Tubewell Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5860-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_REGULAR_VERIFY_AND_FORWARD_TO_JE','Verify and Forward to JE','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5860-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_REGULAR_VERIFY_AND_FORWARD_TO_JE','Verify and Forward to JE','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5861-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_BOOTHS','BOOTHS','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5862-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_CONSTRUCTION_CHARGES_LABEL','Construction Charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5863-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_ADDITIONAL_CHARGES_LABEL','Additional Charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5864-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_OTHER_CHARGES_VALIDATION','Please enter valid other charges details','ch','rainmaker-ws',24226,now(),NULL,NULL);
