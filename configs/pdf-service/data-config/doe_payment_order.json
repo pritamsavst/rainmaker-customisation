@@ -82,7 +82,7 @@
 							{
                                 "variable": "claimant_name",
                                 "value": {
-                                    "path": "$.fatherOrHusbandName"
+                                    "path": "$.pensionEligibleDependentName"
                                 }
                             },
 							{
