@@ -591,7 +591,29 @@
                         "width": "auto",
                         "margin": [
                             0,
-                            15,
+                            10,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": " : ",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            10,
+                            0,
+                            0
+                        ],
+                        "bold": true
+                    },
+                    {
+                        "text": "Rs. ",
+                        "width": "auto",
+                        "margin": [
+                            5,
+                            10,
                             0,
                             0
                         ],
@@ -601,8 +623,8 @@
                         "text": "{{totalPayment}}",
                         "width": "auto",
                         "margin": [
-                            5,
-                            15,
+                            3,
+                            10,
                             0,
                             0
                         ]
@@ -612,7 +634,7 @@
                         "width": "auto",
                         "margin": [
                             2,
-                            15,
+                            10,
                             0,
                             0
                         ]
@@ -621,8 +643,8 @@
                         "text": "{{totalPaymentInWords}}",
                         "width": "auto",
                         "margin": [
-                            2,
-                            15,
+                            0,
+                            10,
                             0,
                             0
                         ]
@@ -631,8 +653,8 @@
                         "text": ")",
                         "width": "auto",
                         "margin": [
-                            2,
-                            15,
+                            0,
+                            10,
                             0,
                             0
                         ]
