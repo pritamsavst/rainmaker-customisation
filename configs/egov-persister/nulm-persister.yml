@@ -1314,3 +1314,29 @@ serviceMaps:
          -  jsonPath: $.NulmSusvRenewRequest.auditDetails.lastModifiedTime
          -  jsonPath: $.NulmSusvRenewRequest.applicationId
          -  jsonPath: $.NulmSusvRenewRequest.tenantId
+   -  version: 1.0
+      name: Save alf Application
+      description: Request -save alf application
+      fromTopic: nulm-services-save-alfapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: INSERT INTO nulm_smid_alf_details(uuid, id, date_of_formation, name, registeration_date, address, account_number, bank_name, branch_name, contact_number, tenant_id, 
+                is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?);
+         basePath: $.NulmSmidAlfRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSmidAlfRequest.uuid
+         -  jsonPath: $.NulmSmidAlfRequest.id
+         -  jsonPath: $.NulmSmidAlfRequest.dateOfFormation
+         -  jsonPath: $.NulmSmidAlfRequest.name
+         -  jsonPath: $.NulmSmidAlfRequest.registerationDate
+         -  jsonPath: $.NulmSmidAlfRequest.address
+         -  jsonPath: $.NulmSmidAlfRequest.accountNumber
+         -  jsonPath: $.NulmSmidAlfRequest.bankName
+         -  jsonPath: $.NulmSmidAlfRequest.branchName
+         -  jsonPath: $.NulmSmidAlfRequest.contactNumber
+         -  jsonPath: $.NulmSmidAlfRequest.tenantId         
+         -  jsonPath: $.NulmSmidAlfRequest.isActive
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.createdBy
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.createdTime
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime        
