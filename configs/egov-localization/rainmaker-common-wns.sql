@@ -336,6 +336,9 @@ DELETE FROM public.message WHERE code ='WATER_CHARGES_PHD4'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WATER_RELATED_MISC_PHD4'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WATER_RELATED_RTI_PHD4'and tenantId='ch';
 DELETE FROM public.message WHERE code ='MOBILE_TOILET_VAN_RENT_PHD4'and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAYER_NAME_PLACEHOLDER'and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAID_BY_LABEL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='NOC_PAYMENT_RCPT_NO_PLACEHOLDER'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -648,4 +651,9 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6308-ac6f-2bc063b75064e','en_IN','WATER_CHARGES_PHD4','Water Charges','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6309-ac6f-2bc063b75064e','en_IN','WATER_RELATED_MISC_PHD4','Miscellaneous Receipt','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6310-ac6f-2bc063b75064e','en_IN','WATER_RELATED_RTI_PHD4','RTI Fees','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6311-ac6f-2bc063b75064e','en_IN','MOBILE_TOILET_VAN_RENT_PHD4','Mobile Toilet Van Rent','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6311-ac6f-2bc063b75064e','en_IN','MOBILE_TOILET_VAN_RENT_PHD4','Mobile Toilet Van Rent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6312-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_NAME_PLACEHOLDER','Payer Name','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6313-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAID_BY_LABEL','Paid By','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6314-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RCPT_NO_PLACEHOLDER','Receipt Number','ch','rainmaker-common',24226,now(),NULL,NULL);
+
+
