@@ -1425,5 +1425,20 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5861-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_BOOTHS','BOOTHS','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5862-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_CONSTRUCTION_CHARGES_LABEL','Construction Charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5863-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_ADDITIONAL_CHARGES_LABEL','Additional Charges','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5864-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_OTHER_CHARGES_VALIDATION','Please enter valid other charges details','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5864-ac6f-2bc063b75064e','en_IN','WS_ACTIVATION_DETAILS_OTHER_CHARGES_VALIDATION','Please enter valid other charges details','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5865-ac6f-2bc063b75064e','en_IN','WS_DEACTIVATION_VALIDATIONM_MESSAGE','Please reject active application related to this connection,then deactivate the connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5866-ac6f-2bc063b75064e','en_IN','SOCIETYFLATS_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5867-ac6f-2bc063b75064e','en_IN','VILLAGEHOUSES_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5868-ac6f-2bc063b75064e','en_IN','PRIVATEHOUSESWITHINSECTORS_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5869-ac6f-2bc063b75064e','en_IN','GOVERNMENTHOUSES_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5870-ac6f-2bc063b75064e','en_IN','CHBDWELLINGUNITS_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5871-ac6f-2bc063b75064e','en_IN','REHABILITATIONCOLONIES_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5872-ac6f-2bc063b75064e','en_IN','UPPERFLOORCONNECTION_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5873-ac6f-2bc063b75064e','en_IN','COMMERCIAL_INDUSTRIAL_OTHERS_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5874-ac6f-2bc063b75064e','en_IN','GOVT_PREMISES_OFFICES_INSTITUTIONAL_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5875-ac6f-2bc063b75064e','en_IN','TEMPORARY_FOR_ALLSITES_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5876-ac6f-2bc063b75064e','en_IN','TEMPORARY_FOR_UNLIMITED_PERIOD_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5877-ac6f-2bc063b75064e','en_IN','TEMPORARY_FOR_CONTRACTORS_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5878-ac6f-2bc063b75064e','en_IN','NEW_TUBEWELL_CONNECTION_IDPROOF','ID proof of all the owners','ch','rainmaker-ws',24226,now(),NULL,NULL);
+
 
