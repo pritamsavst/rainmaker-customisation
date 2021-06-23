@@ -1,9 +1,5 @@
 DELETE from public.message WHERE module='rainmaker-common' and code='CORE_COMMON_GOTOHOME' and locale ='en_IN';
 DELETE from public.message WHERE module='rainmaker-common' and code='COMMON_MAKE_PAYMENT' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_date_created' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_booking_type' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_application_status' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_sector' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='REPORTS_SEARCHFORM_MODIFY_DATE_HEADER' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_APPLICATION_STATUS_REPORT' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_TRANSACTION_REPORT' and locale ='en_IN';
@@ -18,34 +14,21 @@ DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST
 DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_OSUJMCC_MASTER' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_PACC_MASTER' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='CS_COMMON_INBOX_OSBM' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_application_status' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.total' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.receiptnumber' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.receiptissuedate' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_application_number' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_dateCreated' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_applicant_name' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.transactionumber' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bk_booking_type' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.receipt.totalamount' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.bookingType' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.totalTransaction' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='report.bb.totalCollection' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_PENDINGASSIGNMENTDRIVER' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_INITIATED' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_PENDINGUPDATE' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_DELIVERED' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_BWT_NOTDELIVERED' and locale ='en_IN';
 DELETE FROM public.message WHERE module='rainmaker-common' and code='CS_COMMON_INBOX_BWT' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_date_created' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_booking_type' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_application_status' and locale ='en_IN';
-DELETE FROM public.message WHERE module='rainmaker-common' and code='reports.bb.bk_sector' and locale ='en_IN';
-
-
-
-
-
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_REPORTS' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='COMMON_ALL' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='WF_OSBM_PENDINGAPPROVAL' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='REPORTS_SEARCH_APPLY_LABEL' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='REPORTS_SEARCH_RESET_LABEL' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_ALL_BOOKINGS_REPORT' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_PAYMENT_REPORT' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_BLOCKING_VENUE_REPORT' and locale ='en_IN';
+DELETE FROM public.message WHERE module='rainmaker-common' and code='ACTION_TEST_DESCRIPTION_REPORT' and locale ='en_IN';
 
 
 

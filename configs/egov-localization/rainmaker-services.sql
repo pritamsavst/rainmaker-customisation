@@ -2880,3 +2880,4 @@ VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c742', 'en_IN', 'BK_MYBK_FACILITATION_CH
 INSERT INTO public.message
 (id, locale, code, message, tenantid, "module", createdby, createddate, lastmodifiedby, lastmodifieddate)
 VALUES('fabc3ff6-70d8-4ae6-8ac7-00c9c714c743', 'en_IN', 'BK_MY_BK_APPLICATION_DETAILS_HEADER', 'Booking Details', 'ch', 'rainmaker-services', 24226, '2019-03-25 16:45:37.581', NULL, NULL);
+

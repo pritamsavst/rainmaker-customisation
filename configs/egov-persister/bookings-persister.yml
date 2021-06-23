@@ -714,7 +714,7 @@ serviceMaps:
    isTransaction: true
    queryMaps:  
    
-       - query: INSERT INTO public.bk_booking_lock_dates(id, application_number, booking_type, booking_venue, created_date, last_modified_date, sector) VALUES(?, ?, ?, ?, ?, ?, ?);
+       - query: INSERT INTO public.bk_booking_lock_dates(id, application_number, booking_type, booking_venue, created_date, last_modified_date, sector, from_date, to_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?::date, ?::date);
  
          basePath: BookingLock.*
          jsonMaps:
@@ -732,5 +732,9 @@ serviceMaps:
            - jsonPath: $.BookingLock.*.lastModifiedDate
          
            - jsonPath: $.BookingLock.*.sector
+           
+           - jsonPath: $.BookingLock.*.fromDate
+           
+           - jsonPath: $.BookingLock.*.toDate
           
                        
