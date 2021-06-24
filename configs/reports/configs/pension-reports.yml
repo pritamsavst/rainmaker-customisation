@@ -2,7 +2,7 @@
 ReportDefinitions: 
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement , workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='RRP_SERVICE'"
+    query: "select application_number,pe.name as applicantName, pe.date_of_retirement , workflow_state, 'Regular Retirement Pension' as application_type, ewav.roles, pe1."name" as assigned_with from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid join eg_wf_state_v2 ewsv on ewsv.state = pwr.workflow_state join eg_wf_businessservice_v2 ewbv on ewbv.uuid = ewsv.businessserviceid and ewbv.businessservice = pwr.workflow_type join eg_wf_action_v2 ewav on ewav.currentstate = ewsv.uuid left join eg_pension_employee pe1 on pe1.uuid = pwr.assignee where pwr.workflow_type='RRP_SERVICE'"
     reportName: RegularNormalPension
     searchParams: 
       - 
@@ -70,7 +70,7 @@ as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer
         searchClause: "or (cast(concat($Year, lpad($Month,2,'0')) as integer)>=
 cast(concat(cast(pr.effective_start_year as varchar)
 , lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)
-and pr.effective_end_year is null and pr.effective_end_month is null)) order by pp.pensioner_number"
+and pr.effective_end_year is null and pr.effective_end_month is null)) order by cast(pp.pensioner_number as integer) "
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
@@ -271,7 +271,7 @@ or
 
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement, workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOE_SERVICE'"
+    query: "select application_number,pe.name as applicantName, pe.date_of_retirement , workflow_state, 'Death of an Employee' as application_type, ewav.roles, pe1."name" as assigned_with from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid join eg_wf_state_v2 ewsv on ewsv.state = pwr.workflow_state join eg_wf_businessservice_v2 ewbv on ewbv.uuid = ewsv.businessserviceid and ewbv.businessservice = pwr.workflow_type join eg_wf_action_v2 ewav on ewav.currentstate = ewsv.uuid left join eg_pension_employee pe1 on pe1.uuid = pwr.assignee where pwr.workflow_type='DOE_SERVICE'"
     reportName: DeathOfAnEmployee
     searchParams: 
       - 
@@ -311,7 +311,7 @@ or
         type: string
   - 
     moduleName: rainmaker-pension
-    query: "select application_number,name as applicantName, date_of_retirement, workflow_state from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid where 1=1 AND pwr.workflow_type='DOP_SERVICE'"
+    query: "select application_number,pe.name as applicantName, pe.date_of_retirement , workflow_state, 'Death of a Pensioner' as application_type, ewav.roles, pe1."name" as assigned_with from eg_pension_workflow_header pwr join public.eg_pension_employee pe on pwr.pension_employee_id=pe.uuid join eg_wf_state_v2 ewsv on ewsv.state = pwr.workflow_state join eg_wf_businessservice_v2 ewbv on ewbv.uuid = ewsv.businessserviceid and ewbv.businessservice = pwr.workflow_type join eg_wf_action_v2 ewav on ewav.currentstate = ewsv.uuid left join eg_pension_employee pe1 on pe1.uuid = pwr.assignee where pwr.workflow_type='DOE_SERVICE'"
     reportName: DeathOfPensioner
     searchParams: 
       - 
@@ -401,4 +401,3 @@ or
         source: eg_hrms_employee
         total: false
         type: epoch
-
