@@ -408,7 +408,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6062-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6063-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_PENDING_FOR_SECURITY_DEPOSIT','Pending for Security Deposit','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6064-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6065-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_PENDING_FOR_TEMPORARY_CONNECTION_CLOSE','Penging for Temporary Close','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6065-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_PENDING_FOR_TEMPORARY_CONNECTION_CLOSE','Pending for Temporary Close','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6066-ac6f-2bc063b75064e','en_IN','WS_REACTIVATE_DISCONNECTION_INITIATE','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6067-ac6f-2bc063b75064e','en_IN','WS_REACTIVATE_DISCONNECTION_PENDING_FOR_CITIZEN_ACTION','Pending for Citizen Action','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6068-ac6f-2bc063b75064e','en_IN','WS_REACTIVATE_DISCONNECTION_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -655,5 +655,3 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6312-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_NAME_PLACEHOLDER','Payer Name','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6313-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAID_BY_LABEL','Paid By','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6314-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RCPT_NO_PLACEHOLDER','Receipt Number','ch','rainmaker-common',24226,now(),NULL,NULL);
-
-
