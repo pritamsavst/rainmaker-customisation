@@ -1190,7 +1190,7 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5622-ac6f-2bc063b75064e','en_IN','WF_EXTEND_TEMPORARY_CONNECTION_APPLICATION','Extend Temporary Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5623-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_TEMP_EXTEND_TEMPORARY_CONNECTION','Extend Temporary Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5624-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_CLOSE_CONNECTION_APPLICATION','Close Connection Application','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5625-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_TEMPORARY_CLOSE_CONNECTION','Close Conection','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5625-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_TEMPORARY_CLOSE_CONNECTION','Close Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5626-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_TEMPORARY_CONNECTION_CLOSED','Temporary Connection Close','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5627-ac6f-2bc063b75064e','en_IN','WS_LINK_WATER_COMNNECTION','Link Water Connection','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5628-ac6f-2bc063b75064e','en_IN','WF_WS_TEMP_DISCONNECTION_INITIATED','Initiated','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1441,4 +1441,10 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5877-ac6f-2bc063b75064e','en_IN','TEMPORARY_FOR_CONTRACTORS_IDPROOF','ID proof of all the owners(Mandatory to be upload)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5878-ac6f-2bc063b75064e','en_IN','NEW_TUBEWELL_CONNECTION_IDPROOF','ID proof of all the owners(Mandatory to be upload)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5879-ac6f-2bc063b75064e','en_IN','WS_ADDN_DETAILS_IS_METER_STOLEN','Is this a case of theft of meter','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5880-ac6f-2bc063b75064e','en_IN','SEWERAGE_IDPROOF','ID proof of all the owners(Mandatory to be upload)','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5880-ac6f-2bc063b75064e','en_IN','SEWERAGE_IDPROOF','ID proof of all the owners(Mandatory to be upload)','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5881-ac6f-2bc063b75064e','en_IN','WF_WS_METER_UPDATE_SUBMIT_APPLICATION','Re-Submit','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5882-ac6f-2bc063b75064e','en_IN','TEMPORARY_FOR_SHORT_PERIOD_IDPROOF','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5883-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_SCO','SCO','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5884-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_SCF','SCF''ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5885-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_BAYSHOP','BAYSHOP','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5886-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_SEMIINDUSTRY','SEMI INDUSTRIAL','ch','rainmaker-ws',24226,now(),NULL,NULL);
