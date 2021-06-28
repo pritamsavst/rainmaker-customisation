@@ -529,7 +529,7 @@ serviceMaps:
 
        - jsonPath: $.WaterConnection.auditDetails.lastModifiedTime
           
-    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, additionalcharges, constructioncharges, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, additionalcharges=?, constructioncharges=?, lastmodifiedby =?, lastmodifiedtime =?;
+    - query: INSERT INTO eg_ws_application(id, tenantId, wsid, applicationno, activitytype, applicationstatus, action, comments, is_ferrule_applicable, security_charges, additionalcharges, constructioncharges,ismeterstolen, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET activitytype = ?, applicationstatus =?, action =?, comments =?,is_ferrule_applicable=?, security_charges=?, additionalcharges=?, constructioncharges=?, ismeterstolen=?, lastmodifiedby =?, lastmodifiedtime =?;
       basePath: $.WaterConnection.waterApplication
       jsonMaps:
          
@@ -556,6 +556,8 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.additionalCharges
           
           - jsonPath: $.WaterConnection.waterApplication.constructionCharges 
+          
+          - jsonPath: $.WaterConnection.waterApplication.isMeterStolen
 
           - jsonPath: $.WaterConnection.waterApplication.auditDetails.createdBy
 
@@ -580,6 +582,8 @@ serviceMaps:
           - jsonPath: $.WaterConnection.waterApplication.additionalCharges
           
           - jsonPath: $.WaterConnection.waterApplication.constructionCharges 
+          
+          - jsonPath: $.WaterConnection.waterApplication.isMeterStolen 
 
           - jsonPath: $.WaterConnection.auditDetails.lastModifiedBy
 
