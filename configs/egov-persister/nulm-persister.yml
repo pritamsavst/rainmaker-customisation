@@ -1339,4 +1339,26 @@ serviceMaps:
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.createdBy
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.createdTime
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime        
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime 
+   -  version: 1.0
+      name: Save alf Application
+      description: Request -update alf application
+      fromTopic: nulm-services-update-alfapplication
+      isTransaction: true      
+      queryMaps:
+      -  query: UPDATE nulm_smid_alf_details SET  date_of_formation=?, name=?, registeration_date=?, address=?, account_number=?, bank_name=?, branch_name=?, contact_number=?, 
+                     last_modified_by=?,  last_modified_time=? WHERE uuid=? and id=?  ;
+         basePath: $.NulmSmidAlfRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSmidAlfRequest.dateOfFormation
+         -  jsonPath: $.NulmSmidAlfRequest.name
+         -  jsonPath: $.NulmSmidAlfRequest.registerationDate
+         -  jsonPath: $.NulmSmidAlfRequest.address
+         -  jsonPath: $.NulmSmidAlfRequest.accountNumber
+         -  jsonPath: $.NulmSmidAlfRequest.bankName
+         -  jsonPath: $.NulmSmidAlfRequest.branchName
+         -  jsonPath: $.NulmSmidAlfRequest.contactNumber
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime       
+         -  jsonPath: $.NulmSmidAlfRequest.uuid
+         -  jsonPath: $.NulmSmidAlfRequest.id            
