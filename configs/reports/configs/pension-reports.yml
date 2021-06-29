@@ -106,7 +106,7 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: "Additional Pension"
+        label: "Addl Pension"
         name: additional_pension
         source: eg_pension_revision
         total: true
@@ -124,13 +124,13 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: Miscellaneous
+        label: Misc
         name: miscellaneous
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: Overpayment
+        label: Over Payment
         name: over_payment
         source: eg_pension_revision
         total: true
@@ -148,7 +148,7 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: "Pension Deductions"
+        label: "Other Deductions"
         name: pension_deductions
         source: eg_pension_revision
         total: true
