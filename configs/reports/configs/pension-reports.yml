@@ -130,18 +130,6 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: "Wound Pension"
-        name: wound_extraordinary_pension
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Attendant Allowance"
-        name: attendant_allowance
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
         label: Overpayment
         name: over_payment
         source: eg_pension_revision
