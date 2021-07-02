@@ -126,6 +126,21 @@ ReportDefinitions:
     type: string
     source: eg_pgr_discription_report
     total: false
+  - name: feedback
+    label: reports.rainmaker-pgr.feedback
+    type: string
+    source: eg_pgr_discription_report
+    total: false
+  - name: rating
+    label: reports.rainmaker-pgr.rating
+    type: string
+    source: eg_pgr_discription_report
+    total: false
+  - name: comments
+    label: reports.rainmaker-pgr.comments
+    type: string
+    source: eg_pgr_discription_report
+    total: false  
   searchParams: 
   - name: fromDate
     label: reports.rainmaker-pgr.datefrom
@@ -326,11 +341,11 @@ ReportDefinitions:
   moduleName: rainmaker-pgr
   externalService:
   - entity: $.MdmsRes.RAINMAKER-PGR.ServiceDefs
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
+    apiURL: https://egov-uat.chandigarhsmartcity.in/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=ServiceDefs&tenantId=$tenantId
     keyOrder: serviceCode,department,slaHours
     tableName: tbl_dept
   - entity: $.MdmsRes.RAINMAKER-PGR.Sector
-    apiURL: http://egov-mdms-service:8080/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
+    apiURL: https://egov-uat.chandigarhsmartcity.in/egov-mdms-service/v1/_get?moduleName=RAINMAKER-PGR&masterName=Sector&tenantId=$tenantId
     keyOrder: name,code
     tableName: tbl_sector
   sourceColumns:
