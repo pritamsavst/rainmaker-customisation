@@ -43,6 +43,12 @@
                         }
                      } , 
                      {
+                        "variable": "plotNo",
+                        "value": {
+                             "path":"$.plotNo"                              
+                        }
+                     } , 
+                     {
                         "variable": "sector",
                         "value": {
                              "path":"$.sector"                              
