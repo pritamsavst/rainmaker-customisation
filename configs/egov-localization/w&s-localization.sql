@@ -955,7 +955,6 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5286-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_RESIDENTIAL_CHBDWELLINGUNITS','CHB Dwelling Units','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5287-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_RESIDENTIAL_REHABILITATION','Rehabilitation colonies','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5288-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_RESIDENTIAL_INTEPENDENTFLOOR','Independent floor in Plotted House','ch','rainmaker-ws',24226,now(),NULL,NULL)
---,('4d3b6355-1abb-5289-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_SCF','SCO’S/ SCF’S / BAYSHOP’S/ SEMI INDUSTRIAL/ BOOTHS ETC.','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5290-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_HOTEL','HOTEL','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5291-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_MULTIPLEXMALLS','MULTIPLEX/MALLS (specifically earmarked sites)','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5420-ac6f-2bc063b75064e','en_IN','WS_PROPSUBUSGTYPE_COMMERCIAL_INDUSTRIALCONVERTEDCOMMERCIAL','COMMERCIAL(converted from Industrial)','ch','rainmaker-ws',24226,now(),NULL,NULL)
@@ -1451,4 +1450,14 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5887-ac6f-2bc063b75064e','en_IN','WS_METER_INSTALATION_DATE_VALIDATION','Meter installation date must be greater then connection execution date','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5888-ac6f-2bc063b75064e','en_IN','WS_PROP_METER_INSTALATION_DATE_VALIDATION','Proposed meter installation date must be greater then connection execution date','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5889-ac6f-2bc063b75064e','en_IN','WS_DATA_TRASFER_TYPE_INPUT','Data Transfer Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5890-ac6f-2bc063b75064e','en_IN','WS_DATA_TRASFER_TYPE_PLACEHOLDER','Select Data Transfer Type','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5890-ac6f-2bc063b75064e','en_IN','WS_DATA_TRASFER_TYPE_PLACEHOLDER','Select Data Transfer Type','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5891-ac6f-2bc063b75064e','en_IN','WS_FLOOR_0','All Floors/Floor Zero','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5892-ac6f-2bc063b75064e','en_IN','WS_FLOOR_1','Floor 1','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5893-ac6f-2bc063b75064e','en_IN','WS_FLOOR_2','Floor 2','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5894-ac6f-2bc063b75064e','en_IN','WS_FLOOR_3','Floor 3','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5895-ac6f-2bc063b75064e','en_IN','WS_FLOOR_4','Floor 4','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5896-ac6f-2bc063b75064e','en_IN','WS_FLOOR_5','Floor 5','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5897-ac6f-2bc063b75064e','en_IN','WS_FLOOR_6','Floor 6','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5898-ac6f-2bc063b75064e','en_IN','WS_FLOOR_7','Floor 7','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5899-ac6f-2bc063b75064e','en_IN','WS_FLOOR_8','Floor 8','ch','rainmaker-ws',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-5900-ac6f-2bc063b75064e','en_IN','WS_FLOOR_9','Floor 9','ch','rainmaker-ws',24226,now(),NULL,NULL);
