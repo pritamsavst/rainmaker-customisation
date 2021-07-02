@@ -136,6 +136,38 @@
             "body": [
               [
                 {
+                  "text": "Consumer Account Number",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ],
+                  "style": "receipt-table-key"
+                },
+                {
+                  "text": "{{connectionNumber}}",
+                  "alignment": "left",
+                  "border": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                } 
+              ]
+            ]
+          },
+          "layout": {}
+        } ,
+        
+        {
+          "style": "pt-reciept-citizen-table",
+          "table": {
+            "widths": ["50%", "50%"],
+            "body": [
+              [
+                {
                   "text": "Receipt Number",
                   "border": [
                     true,
