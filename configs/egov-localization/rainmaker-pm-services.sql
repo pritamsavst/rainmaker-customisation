@@ -1330,7 +1330,7 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10081','en_IN','NOC_CONFIRMATION_BUTTON_DOWNLOAD_RECEIPT','Download Receipt','ch','rainmaker-pm', '94')
 --,( '42e17862-dbd8-4pm6-95f6-382ec3e10082','en_IN','SELLMEAT_NOC_PAYMENT_SUCCESS_MESSAGE_SUB','Payment has been collected successfully!','ch','rainmaker-pm', '94');
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10083','en_IN','SELLMEAT_ID_PROOF','Sell Meat ID Proof','ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10084','en_IN','SELLMEATNOC_FEE','Fee','ch','rainmaker-pm', '94')
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10084','en_IN','SELLMEATNOC_FEE','Sellmeat Fees (Non refundable)','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10085','en_IN','SELLMEATNOC_UNDERTAKING_HEADING','No premises shall be issued NOC to obtain license for sale of meat, fsh and poultry unless:-','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10086','en_IN','SELLMEATNOC_UNDERTAKING_POINT1',' It has a foor made of impervious and non-slippery material.','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10087','en_IN','SELLMEATNOC_UNDERTAKINGPOINT2','Its walls upto a height of minimum 5 feet from the foor level shall be made of Impervious concrete material (e.g.glazed tiles or hygienic panels etc.)and ceiling is properly plasted and lime washed.','ch','rainmaker-pm', '94')
@@ -1345,4 +1345,10 @@ INSERT INTO public.message(id, locale, code, message, tenantid, module, createdb
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10096','en_IN','SELLMEATNOC_UNDERTAKINGPOINT11','A sign board indicating the type of meat sold shall be displayed prominently i.e.JhatkaMalal.','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10097','en_IN','SELLMEATNOC_UNDERTAKINGPOINT12','Proof of possession (rent agreement to be submitted with application for NOC.','ch','rainmaker-pm', '94')
 ,( '42e17862-dbd8-4pm6-95f6-382ec3e10100','en_IN','SELLMEATNOC_UNDERTAKINGPOINT13','Failure to comply with any of these conditions or any other condition laid down by Licensing Authority may result in cancellation of NOC by the appropriate authority', 'ch','rainmaker-pm', '94')
-,( '42e17862-dbd8-4pm6-95f6-382ec3e10101','en_IN','SELLMEATNOC_UNDERTAKINGPOINT14','Grant of NOC shall not protect the licensee for violation of provisions of the capital of Punjab Development and regulation Act, 1952 and rules framed thereunder or any other law.','ch','rainmaker-pm', '94');
+,( '42e17862-dbd8-4pm6-95f6-382ec3e10101','en_IN','SELLMEATNOC_UNDERTAKINGPOINT14','Grant of NOC shall not protect the licensee for violation of provisions of the capital of Punjab Development and regulation Act, 1952 and rules framed thereunder or any other law.','ch','rainmaker-pm', '94')
+,('4532fde7-e11a-48d6-b47e-1ce369d515af','en_IN','SELLMEAT.ID_PROOF','Sellmeat Id Proof','ch','rainmaker-pm', '94')
+,('f32cbbf3-d850-4615-80ef-792271ea5c2a','en_IN','PET-NOC_NEW_APPLICATION','Pet New Application','ch','rainmaker-pm', '94')
+,('cd812082-8fd3-44ab-a427-1ca46cc6ef86','en_IN','SELL-MEAT-NOC_NEW_APPLICATION','Sellmeat New Application','ch','rainmaker-pm', '94')
+,('a5a6f4c5-7e2b-483c-ad83-5fc76cd5ab0f','en_IN','ADVERTISEMENT-NOC_NEW_APPLICATION','Advertisement New Application','ch','rainmaker-pm', '94')
+,('02343e6b-a2a0-4d0b-a5e3-3782efa90423','en_IN','ROADCUT-NOC_NEW_APPLICATION','Roadcut New Application','ch','rainmaker-pm', '94')
+,('e91098de-7662-41cc-8fc8-31fa9b4e3934','en_IN','NOC_HOME_SEARCH_RESULTS_NEW_APP_BUTTON','Home Search Results New App','ch','rainmaker-pm', '94');
