@@ -1321,7 +1321,7 @@ serviceMaps:
       isTransaction: true      
       queryMaps:
       -  query: INSERT INTO nulm_smid_alf_details(uuid, id, date_of_formation, name, registeration_date, address, account_number, bank_name, branch_name, contact_number, tenant_id, 
-                is_active, created_by, created_time, last_modified_by, last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?);
+                is_active, created_by, created_time, last_modified_by, last_modified_time,adhaar_number,date_of_opening_account,alf_formated_through)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?,?, ?, ?);
          basePath: $.NulmSmidAlfRequest
          jsonMaps:
          -  jsonPath: $.NulmSmidAlfRequest.uuid
@@ -1340,6 +1340,22 @@ serviceMaps:
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.createdTime
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedBy
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime 
+         -  jsonPath: $.NulmSmidAlfRequest.adhaarNumber
+         -  jsonPath: $.NulmSmidAlfRequest.dateOfOpeningAccount         
+         -  jsonPath: $.NulmSmidAlfRequest.alfFormatedThrough         
+      -  query: INSERT INTO public.nulm_alf_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+         basePath: $.NulmSmidAlfRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSmidAlfRequest.*.documnetUuid
+         -  jsonPath: $.NulmSmidAlfRequest.*.filestoreId
+         -  jsonPath: $.NulmSmidAlfRequest.*.applicationUuid
+         -  jsonPath: $.NulmSmidAlfRequest.*.documentType
+         -  jsonPath: $.NulmSmidAlfRequest.*.tenantId
+         -  jsonPath: $.NulmSmidAlfRequest.*.isActive
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedTime
    -  version: 1.0
       name: Save alf Application
       description: Request -update alf application
@@ -1347,7 +1363,7 @@ serviceMaps:
       isTransaction: true      
       queryMaps:
       -  query: UPDATE nulm_smid_alf_details SET  date_of_formation=?, name=?, registeration_date=?, address=?, account_number=?, bank_name=?, branch_name=?, contact_number=?, 
-                     last_modified_by=?,  last_modified_time=? WHERE uuid=? and id=?  ;
+                     last_modified_by=?,  last_modified_time=? ,adhaar_number=?,date_of_opening_account=?,alf_formated_through=? WHERE uuid=? and id=?  ;
          basePath: $.NulmSmidAlfRequest
          jsonMaps:
          -  jsonPath: $.NulmSmidAlfRequest.dateOfFormation
@@ -1359,6 +1375,33 @@ serviceMaps:
          -  jsonPath: $.NulmSmidAlfRequest.branchName
          -  jsonPath: $.NulmSmidAlfRequest.contactNumber
          -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedBy
-         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime       
+         -  jsonPath: $.NulmSmidAlfRequest.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSmidAlfRequest.adhaarNumber
+         -  jsonPath: $.NulmSmidAlfRequest.dateOfOpeningAccount         
+         -  jsonPath: $.NulmSmidAlfRequest.alfFormatedThrough       
          -  jsonPath: $.NulmSmidAlfRequest.uuid
          -  jsonPath: $.NulmSmidAlfRequest.id            
+      -  query: UPDATE public.nulm_alf_application_document  SET is_active='false', last_modified_by=?,last_modified_time=? WHERE  application_uuid=? and tenant_id=? ;
+         basePath: $.NulmSmidAlfRequest
+         jsonMaps:
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedTime
+         -  jsonPath: $.NulmSmidAlfRequest.uuid
+         -  jsonPath: $.NulmSmidAlfRequest.tenantId 
+      -  query: INSERT INTO public.nulm_alf_application_document(document_uuid, filestore_id, application_uuid, document_type, tenant_id, is_active, created_by, created_time, last_modified_by,last_modified_time)VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (application_uuid,document_type,tenant_id) DO UPDATE SET filestore_id=?,document_type=?,last_modified_by=?,last_modified_time=?,is_active='true' ;
+         basePath: $.NulmSmidAlfRequest.applicationDocument.*
+         jsonMaps:
+         -  jsonPath: $.NulmSmidAlfRequest.*.documnetUuid
+         -  jsonPath: $.NulmSmidAlfRequest.*.filestoreId
+         -  jsonPath: $.NulmSmidAlfRequest.*.applicationUuid
+         -  jsonPath: $.NulmSmidAlfRequest.*.documentType
+         -  jsonPath: $.NulmSmidAlfRequest.*.tenantId
+         -  jsonPath: $.NulmSmidAlfRequest.*.isActive
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.createdBy        
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.createdTime
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedTime       
+         -  jsonPath: $.NulmSmidAlfRequest.*.filestoreId
+         -  jsonPath: $.NulmSmidAlfRequest.*.documentType
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedBy
+         -  jsonPath: $.NulmSmidAlfRequest.*.auditDetails.lastModifiedTime   
