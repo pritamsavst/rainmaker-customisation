@@ -1461,4 +1461,4 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-5898-ac6f-2bc063b75064e','en_IN','WS_FLOOR_7','Floor 7','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5899-ac6f-2bc063b75064e','en_IN','WS_FLOOR_8','Floor 8','ch','rainmaker-ws',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-5900-ac6f-2bc063b75064e','en_IN','WS_FLOOR_9','Floor 9','ch','rainmaker-ws',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-5901-ac6f-2bc063b75064e','WF_TEMPORARY_WSCONNECTION_REACTIVATE_CONNECTION','Reactivate Connection','ch','rainmaker-ws',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-5901-ac6f-2bc063b75064e','en_IN','WF_TEMPORARY_WSCONNECTION_REACTIVATE_CONNECTION','Reactivate Connection','ch','rainmaker-ws',24226,now(),NULL,NULL);
