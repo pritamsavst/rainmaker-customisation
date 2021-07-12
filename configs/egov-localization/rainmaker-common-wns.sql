@@ -352,6 +352,9 @@ DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_DOCUMENT_VERI
 DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_PAYMENT'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL'and tenantId='ch';
 DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_DIV_SUPERITENDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT_APPROVAL_AFTER_EE'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -680,4 +683,8 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6324-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6325-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6326-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6327-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL','Pending for EE Approval','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6327-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL','Pending for EE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6328-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT','Pending for DIV Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6329-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_DIV_SUPERITENDENT','Pending for SDE Approval after DIV Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6330-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT_APPROVAL_AFTER_EE','Pending for DIV Superintendent Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL);
+
