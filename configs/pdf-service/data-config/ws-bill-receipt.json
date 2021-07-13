@@ -35,6 +35,12 @@
                         "value": {
                              "path":"$.applicationNumber"                              
                         }
+                     }, 					 
+                     {
+                        "variable": "connectionNumber",
+                        "value": {
+                             "path":"$.connectionNumber"                              
+                        }
                      }, 
                      {
                         "variable": "receiptNumber",
