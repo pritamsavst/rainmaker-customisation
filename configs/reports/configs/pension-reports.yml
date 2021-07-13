@@ -76,97 +76,73 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         wrapper: true
     sourceColumns: 
       - 
-        label: "Pensioner Number"
+        label: "PPO"
         name: pensioner_number
         source: eg_pension_pensioner
         total: false
         type: string
       - 
-        label: "Pensioner Name"
+        label: "Name"
         name: name
         source: eg_pension_employee
         total: false
         type: string
       - 
-        label: "Basic Pension"
+        label: "BP"
         name: basic_pension
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: DA
-        name: da
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Commuted Pension"
-        name: commuted_pension
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Addl Pension"
+        label: "Adl_Pen"
         name: additional_pension
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: IR
+        label: "IR"
         name: interim_relief
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: "Medical Relief"
+        label: "-CP"
+        name: commuted_pension
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "DA"
+        name: da
+        source: eg_pension_revision
+        total: true
+        type: string
+      - 
+        label: "MA"
         name: fma
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: Misc
+        label: "MISC"
         name: miscellaneous
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: Over Payment
+        label: "-OVP"
         name: over_payment
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: "Income Tax"
-        name: income_tax
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: Cess
-        name: cess
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Other Deductions"
-        name: pension_deductions
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Total Pension"
+        label: "TOTAL"
         name: total_pension
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: "Net Deductions"
-        name: net_deductions
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Net Pension"
+        label: "NETPAY"
         name: final_calculated_pension
         source: eg_pension_revision
         total: true
