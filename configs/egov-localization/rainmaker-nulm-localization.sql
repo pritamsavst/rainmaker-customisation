@@ -1553,7 +1553,7 @@ INSERT INTO public.message
 ,('2af026fb-64e9-45bc-8550-8bdf6766ca48', 'en_IN','NULM_ALF_VIEW','ALF View','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('f2ef2cc5-9bc6-47cc-b684-9026d439bbd6', 'en_IN','NULM_ALF_ADDRESS','Address','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('30b233ca-642e-42c3-a61d-78422c0a9f74', 'en_IN','NULM_ALF_CONTACT_NUMBER','Contact Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
-,('d22443cb-099f-411f-8bc1-f90a84d3b3da', 'en_IN','NULM_ALF_AADHAR_NUMBER','Aadhar Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL);
+,('d22443cb-099f-411f-8bc1-f90a84d3b3da', 'en_IN','NULM_ALF_AADHAR_NUMBER','Aadhar Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('1051fce9-4c23-4b0c-9bf6-0a34d3af8125', 'en_IN','NULM_ALF_FORMATTED_THROUGH','ALF Formatted Through','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('aa798b35-a903-41f2-b1cb-f17588112a5c', 'en_IN','NULM_ALF_BANK_NAME','Bank Name','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
 ,('817601cf-9fb7-4a2d-9bc6-bad1cbd4be7e', 'en_IN','NULM_ALF_AC_NO','Account Number','ch', 'rainmaker-nulm', 24226, '2020-08-19 16:05:18.445', NULL, NULL)
