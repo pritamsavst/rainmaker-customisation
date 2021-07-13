@@ -218,7 +218,8 @@
 	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/doe_payment_order_without_details.json",
 	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/dop_payment_order_without_details.json",
 	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rrp_payment_order_without_details.json",
-	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rrp_payment_order_daily_wager_without_details.json"
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/rrp_payment_order_daily_wager_without_details.json",
+	   "file:///work-dir/rainmaker-customisation/configs/pdf-service/data-config/nulm-certificate-alf.json"
    ],
    "formatconfig": [
       "file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/firenoc-receipt.json",
@@ -439,6 +440,7 @@
 	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/doe_payment_order_without_details.json",
 	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/dop_payment_order_without_details.json",
 	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rrp_payment_order_without_details.json",
-	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rrp_payment_order_daily_wager_without_details.json"
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/rrp_payment_order_daily_wager_without_details.json",
+	"file:///work-dir/rainmaker-customisation/configs/pdf-service/format-config/nulm-certificate-alf.json"
    ]
 }
