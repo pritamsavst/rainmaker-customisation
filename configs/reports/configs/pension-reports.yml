@@ -70,7 +70,7 @@ as varchar), lpad(cast(pr.effective_end_month as varchar),2,'0')) as integer
         searchClause: "or (cast(concat($Year, lpad($Month,2,'0')) as integer)>=
 cast(concat(cast(pr.effective_start_year as varchar)
 , lpad(cast(pr.effective_start_month as varchar),2,'0')) as integer)
-and pr.effective_end_year is null and pr.effective_end_month is null)) order by pp.pensioner_number"
+and pr.effective_end_year is null and pr.effective_end_month is null)) order by cast(pp.pensioner_number as integer)"
         source: eg_pension_revision
         type: singlevaluelist
         wrapper: true
@@ -106,7 +106,7 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: "Additional Pension"
+        label: "Addl Pension"
         name: additional_pension
         source: eg_pension_revision
         total: true
@@ -124,25 +124,13 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: Miscellaneous
+        label: Misc
         name: miscellaneous
         source: eg_pension_revision
         total: true
         type: string
       - 
-        label: "Wound Pension"
-        name: wound_extraordinary_pension
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: "Attendant Allowance"
-        name: attendant_allowance
-        source: eg_pension_revision
-        total: true
-        type: string
-      - 
-        label: Overpayment
+        label: Over Payment
         name: over_payment
         source: eg_pension_revision
         total: true
@@ -160,7 +148,7 @@ and pr.effective_end_year is null and pr.effective_end_month is null)) order by 
         total: true
         type: string
       - 
-        label: "Pension Deductions"
+        label: "Other Deductions"
         name: pension_deductions
         source: eg_pension_revision
         total: true

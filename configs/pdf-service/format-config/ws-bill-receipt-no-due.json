@@ -95,7 +95,7 @@
         "layout": {}
       },
 	{
-      "text": "Nothing is out standing against Smt./ Sh. {{applicantName}} Ex-Occupant of House no. {{houseNo}} ,Sector/ Locality {{sector}} Chandigarh (UT) up to {{upto}} , Final payment of A/C No. {{accountNo}} Rs {{rs}} , vide Receipt No. {{receiptNo}} .Date {{date}} ",
+      "text": "Nothing is out standing against Smt./ Sh. {{applicantName}} Ex-Occupant of House no. {{houseNo}} , Plot no. {{plotNo}} , Sector/ Locality {{sector}} Chandigarh (UT) up to {{upto}} , Final payment of A/C No. {{accountNo}} Rs {{rs}} , vide Receipt No. {{receiptNo}} .Date {{date}} ",
       "alignment": "left",
 	   "color": "#484848",
 	   "fontSize": 11,

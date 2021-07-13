@@ -339,6 +339,22 @@ DELETE FROM public.message WHERE code ='MOBILE_TOILET_VAN_RENT_PHD4'and tenantId
 DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAYER_NAME_PLACEHOLDER'and tenantId='ch';
 DELETE FROM public.message WHERE code ='NOC_PAYMENT_PAID_BY_LABEL'and tenantId='ch';
 DELETE FROM public.message WHERE code ='NOC_PAYMENT_RCPT_NO_PLACEHOLDER'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_RENAME_INITIATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_RENAME_PENDING_FOR_DOCUMENT_VERIFICATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_RENAME_PENDING_FOR_CITIZEN_ACTION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_CITIZEN_ACTION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_PAYMENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_DISCONNECTION_INITIATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_DISCONNECTION_PENDING_FOR_DOCUMENT_VERIFICATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_DISCONNECTION_PENDING_FOR_PAYMENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_INITIATED'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_DOCUMENT_VERIFICATION'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_PAYMENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_DIV_SUPERITENDENT'and tenantId='ch';
+DELETE FROM public.message WHERE code ='WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT_APPROVAL_AFTER_EE'and tenantId='ch';
 --insert
 INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,createddate,lastmodifiedby,lastmodifieddate) VALUES
 ('4d3b6355-1abb-6000-ac6f-2bc063b75064e','en_IN','CS_COMMON_INBOX_REGULARWSCONNECTION','Regular Water Connection','ch','rainmaker-common',24226,now(),NULL,NULL)
@@ -654,4 +670,21 @@ INSERT INTO public.message (id,locale,code,message,tenantid,"module",createdby,c
 ,('4d3b6355-1abb-6311-ac6f-2bc063b75064e','en_IN','MOBILE_TOILET_VAN_RENT_PHD4','Mobile Toilet Van Rent','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6312-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAYER_NAME_PLACEHOLDER','Payer Name','ch','rainmaker-common',24226,now(),NULL,NULL)
 ,('4d3b6355-1abb-6313-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_PAID_BY_LABEL','Paid By','ch','rainmaker-common',24226,now(),NULL,NULL)
-,('4d3b6355-1abb-6314-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RCPT_NO_PLACEHOLDER','Receipt Number','ch','rainmaker-common',24226,now(),NULL,NULL);
+,('4d3b6355-1abb-6314-ac6f-2bc063b75064e','en_IN','NOC_PAYMENT_RCPT_NO_PLACEHOLDER','Receipt Number','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6315-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6316-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6317-ac6f-2bc063b75064e','en_IN','WF_WS_RENAME_PENDING_FOR_CITIZEN_ACTION','Pending for Citizen Action','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6318-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_CITIZEN_ACTION','Pending for Citizen Action','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6319-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6320-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6321-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6322-ac6f-2bc063b75064e','en_IN','WF_WS_DISCONNECTION_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6323-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_INITIATED','Initiated','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6324-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_DOCUMENT_VERIFICATION','Pending for Document Verification','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6325-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_PAYMENT','Pending for Payment','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6326-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_SDE_APPROVAL','Pending for SDE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6327-ac6f-2bc063b75064e','en_IN','WF_WS_TUBEWELL_PENDING_FOR_EE_APPROVAL','Pending for EE Approval','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6328-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT','Pending for DIV Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6329-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_SDE_APPROVAL_AFTER_DIV_SUPERITENDENT','Pending for SDE Approval after DIV Superintendent','ch','rainmaker-common',24226,now(),NULL,NULL)
+,('4d3b6355-1abb-6330-ac6f-2bc063b75064e','en_IN','WF_WS_CONVERSION_PENDING_FOR_DIV_SUPERITENDENT_APPROVAL_AFTER_EE','Pending for DIV Superintendent Approval after EE','ch','rainmaker-common',24226,now(),NULL,NULL);
+
